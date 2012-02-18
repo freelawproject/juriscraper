@@ -76,6 +76,7 @@ class Site(UserDict):
         self['neutral_citations'] = self._get_neutral_citations()
         self['precedential_statuses'] = self._get_precedential_statuses()
         self._post_clean()
+        return self
 
     def _post_clean(self):
         '''TODO: Iterate over all attribute values and clean them'''
