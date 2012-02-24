@@ -80,6 +80,13 @@ Scraper:
  - Precedential status should be normalized across courts. E.g., published and
    precedential are the same.
  - Returns utf-8 text, dammit
+ - Meta data cleanup is located in the scraper, and includes:
+    - Conversion of private IDs (like social security numbers) to X's.
+    - Harmonization of variations on United States
+    - Harmonization of vs. v, versus, etc. 
+    - Title-casing of uppercase case names
+    - Removal of all variations on 'et al'
+    - Removal of plaintiff, appellee, defendant and the like
 
 Caller:
  - Daemon mode: In this mode, the caller will run non-stop, hitting each court
@@ -103,10 +110,3 @@ Caller:
    as fallback.
  - Content extraction is not part of the caller, but it should be considered as
    part of the solution and in the reference caller.
- - Meta data cleanup is located in the caller, and includes:
-    - Conversion of private IDs (like social security numbers) to X's.
-    - Harmonization of variations on United States
-    - Harmonization of vs. v, versus, etc. 
-    - Title-casing of uppercase case names
-    - Removal of all variations on 'et al'
-    - Removal of plaintiff, appellee, defendant and the like
