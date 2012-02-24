@@ -15,31 +15,27 @@ class GenericSite(object):
         self.neutral_citations = self._get_neutral_citations()
         self.precedential_statuses = self._get_precedential_statuses()
 
-    def _get_download_links(self):
-        pass
-
-    def _get_case_names(self):
-        pass
-
-    def _get_case_dates(self):
-        pass
-
-    def _get_docket_numbers(self):
-        pass
-
-    def _get_neutral_citations(self):
-        pass
-
-    def _get_precedential_statuses(self):
-        pass
-
     def parse(self):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
-            self.download_latest()
+            self._download_latest()
         self._post_clean()
         return self
 
+    def _text_clean(self, text):
+        # this function provides the opportunity to clean text before it's made
+        # into an HTML tree.
+        text = re.sub(r'<!\[CDATA\[', '', text)
+        text = re.sub(r'\]\]>', '', text)
+        return text
+
+    def _pre_clean(self, dirty_html):
+        '''Any cleanup code that is needed for the court lives here, for example
+        in the case of ca1, we need to flip the sort order of the item elements.
+        '''
+        clean_html = dirty_html
+
+        return clean_html
     def _post_clean(self):
         '''TODO: Iterate over all attribute values and clean them'''
         pass
@@ -61,8 +57,8 @@ class GenericSite(object):
             text = self._text_clean(r.content)
             html_tree = lxml.html.fromstring(text)
             html_tree.make_links_absolute(url)
-            html = self._pre_clean(html_tree)
-            return html
+            cleaned_html = self._pre_clean(html_tree)
+            return cleaned_html
 
     def download_backwards(self):
         # generally recursive methods for the entire Site

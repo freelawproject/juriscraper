@@ -46,7 +46,6 @@ class Site(GenericSite):
                 statuses.append("Unknown")
         return statuses
 
-
     def _text_clean(self, text):
         # this function provides the opportunity to clean text before it's made
         # into an HTML tree.
