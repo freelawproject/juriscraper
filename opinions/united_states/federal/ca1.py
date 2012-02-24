@@ -45,18 +45,3 @@ class Site(GenericSite):
             else:
                 statuses.append("Unknown")
         return statuses
-
-    def _text_clean(self, text):
-        # this function provides the opportunity to clean text before it's made
-        # into an HTML tree.
-        text = re.sub(r'<!\[CDATA\[', '', text)
-        text = re.sub(r'\]\]>', '', text)
-        return text
-
-    def _pre_clean(self, dirty_html):
-        '''Any cleanup code that is needed for the court lives here, for example
-        in the case of ca1, we need to flip the sort order of the item elements.
-        '''
-        clean_html = dirty_html
-
-        return clean_html
