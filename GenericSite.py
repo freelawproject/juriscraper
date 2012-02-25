@@ -31,6 +31,7 @@ class GenericSite(object):
         self.html = None
         self.status = None
         self.method = 'GET'
+        self.hash = None
         self.download_links = None
         self.case_names = None
         self.case_dates = None
@@ -67,6 +68,7 @@ class GenericSite(object):
         self._clean_attributes()
         self._check_sanity()
         self._date_sort()
+        self._make_hash()
         return self
 
     def _clean_text(self, text):
@@ -75,12 +77,6 @@ class GenericSite(object):
         text = re.sub(r'<!\[CDATA\[', '', text)
         text = re.sub(r'\]\]>', '', text)
         return text
-
-    def _clean_tree(self, html_tree):
-        '''Any cleanup code that is needed for the court lives here, for example
-        in the case of ca1, we need to flip the sort order of the item elements.
-        '''
-        return html_tree
 
     def _clean_attributes(self):
         '''Iterate over attribute values and clean them'''
@@ -119,6 +115,15 @@ class GenericSite(object):
         # TODO: Sort all parsed results by date
         pass
 
+    def _make_hash(self):
+        # Make a unique ID. Use ETag, Date Modified or make a hash
+        if self.headers.get('etag'):
+            self.hash = self.headers.get('ETag')
+        elif self.headers.get('last-modified'):
+            self.hash = self.headers.get('Last-Modified')
+        else:
+            self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
+
     def _download_latest(self):
         # methods for downloading the latest version of Site
         logger.debug("Now scraping: %s" % self.url)
@@ -146,17 +151,8 @@ class GenericSite(object):
             # Some courts have anchors on their links that must be stripped.
             return href.split('#')[0]
         html_tree.rewrite_links(remove_anchors)
-        cleaned_tree = self._clean_tree(html_tree)
 
-        # Make a unique ID. Use ETag, Date Modified or make a hash
-        if self.headers.get('etag'):
-            self.hash = self.headers.get('ETag')
-        elif self.headers.get('last-modified'):
-            self.hash = self.headers.get('Last-Modified')
-        else:
-            self.hash = hashlib.sha1(text).hexdigest()
-
-        return cleaned_tree
+        return html_tree
 
     def _download_backwards(self):
         # generally recursive methods for the entire Site

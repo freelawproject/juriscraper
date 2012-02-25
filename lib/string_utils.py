@@ -1,4 +1,108 @@
+# -*- coding: utf-8 -*-
 import re
+
+# For use in titlecase
+BIG = '3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|NLRB|UPS|RSS|SEC|UMG|USA|USC|USPS|WTO'
+SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
+NUMS = '0|1|2|3|4|5|6|7|8|9'
+PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
+WEIRD_CHARS = r"""¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ"""
+BIG_WORDS = re.compile(r'^(%s)$' % BIG, re.I)
+SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
+INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
+UC_ELSEWHERE = re.compile(r'[%s]*?[a-zA-Z]+[A-Z]+?' % PUNCT)
+CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
+SMALL_FIRST = re.compile(r'^([%s]*)(%s)\b' % (PUNCT, SMALL), re.I)
+SMALL_LAST = re.compile(r'\b(%s)[%s]?$' % (SMALL, PUNCT), re.I)
+SUBPHRASE = re.compile(r'([:.;?!][ ])(%s)' % SMALL)
+APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
+ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
+UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
+MAC_MC = re.compile(r"^([Mm]a?c)(\w+)")
+def titlecase(text, DEBUG=False):
+    '''Titlecases input text
+
+    This filter changes all words to Title Caps, and attempts to be clever
+    about *un*capitalizing SMALL words like a/an/the in the input.
+
+    The list of "SMALL words" which are not capped comes from
+    the New York Times Manual of Style, plus 'vs' and 'v'.
+    '''
+
+    # make all input uppercase.
+    text = text.upper()
+
+    lines = re.split('[\r\n]+', text)
+    processed = []
+    for line in lines:
+        all_caps = ALL_CAPS.match(line)
+        words = re.split('[\t ]', line)
+        tc_line = []
+        for word in words:
+            if DEBUG:
+                print "Word: " + word
+            if all_caps:
+                if UC_INITIALS.match(word):
+                    if DEBUG:
+                        print "UC_INITIALS match for: " + word
+                    tc_line.append(word)
+                    continue
+                else:
+                    if DEBUG:
+                        print "Not initials. Lowercasing: " + word
+                    word = word.lower()
+
+            if APOS_SECOND.match(word):
+                word = word.replace(word[0], word[0].upper())
+                word = word.replace(word[2], word[2].upper())
+                tc_line.append(word)
+                continue
+
+            if INLINE_PERIOD.search(word) or UC_ELSEWHERE.match(word):
+                tc_line.append(word)
+                continue
+
+            if SMALL_WORDS.match(word):
+                tc_line.append(word.lower())
+                continue
+
+            if BIG_WORDS.match(word):
+                tc_line.append(word.upper())
+                continue
+
+            match = MAC_MC.match(word)
+            if match and (word != 'mack'):
+                tc_line.append("%s%s" % (match.group(1).capitalize(),
+                                      match.group(2).capitalize()))
+                continue
+
+            hyphenated = []
+            for item in word.split('-'):
+                hyphenated.append(CAPFIRST.sub(lambda m: m.group(0).upper(),
+                    item))
+            tc_line.append("-".join(hyphenated))
+
+        result = " ".join(tc_line)
+
+        result = SMALL_FIRST.sub(lambda m: '%s%s' % (
+            m.group(1),
+            m.group(2).capitalize()), result)
+
+        result = SMALL_LAST.sub(lambda m: m.group(0).capitalize(), result)
+        result = SUBPHRASE.sub(lambda m: '%s%s' % (
+            m.group(1),
+            m.group(2).capitalize()), result)
+
+        processed.append(result)
+        text = "\n".join(processed)
+
+    # replace V. with v.
+    text = re.sub(re.compile(r'\WV\.\W'), ' v. ', text)
+
+    # replace Llc. with LLC
+    text = text.replace('Llc.', 'LLC')
+
+    return text
 
 # For use in harmonize function
 US = 'USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States'
