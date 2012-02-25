@@ -30,6 +30,7 @@ class GenericSite(object):
         super(GenericSite, self).__init__()
         self.html = None
         self.status = None
+        self.method = 'GET'
         self.download_links = None
         self.case_names = None
         self.case_dates = None
@@ -37,6 +38,9 @@ class GenericSite(object):
         self.neutral_citations = None
         self.precedential_statuses = None
         self.lower_courts = None
+        self.lower_court_judges = None
+        self.dispositions = None
+        self.judges = None
 
     def __str__(self):
         out = []
@@ -55,6 +59,9 @@ class GenericSite(object):
         self.neutral_citations = self._get_neutral_citations()
         self.precedential_statuses = self._get_precedential_statuses()
         self.lower_courts = self._get_lower_courts()
+        self.lower_court_judges = self._get_lower_court_judges()
+        self.dispositions = self._get_dispositions()
+        self.judges = self._get_judges()
         self._clean_attributes()
         self._check_sanity()
         return self
@@ -74,7 +81,9 @@ class GenericSite(object):
 
     def _clean_attributes(self):
         '''Iterate over attribute values and clean them'''
-        self.case_names = [harmonize(clean_string(case_name)) for case_name in self.case_names]
+        if self.case_names is not None:
+            self.case_names = [harmonize(clean_string(case_name))
+                                    for case_name in self.case_names]
 
     def _check_sanity(self):
         '''Check that the objects attributes make sense:
@@ -86,20 +95,29 @@ class GenericSite(object):
         lengths = []
         for item in [self.download_links, self.case_names, self.case_dates,
                      self.docket_numbers, self.neutral_citations,
-                     self.precedential_statuses, self.lower_courts]:
+                     self.precedential_statuses, self.lower_courts,
+                     self.lower_court_judges, self.dispositions,
+                     self.judges]:
             if item is not None:
                 lengths.append(len(item))
         if lengths.count(lengths[0]) != len(lengths):
             # Are all elements equal?
             raise InsanityException("%s: Scraped meta data fields have unequal lengths: %s"
                                     % (self.court_id, lengths))
+        logger.debug("%s: Successfully found %s items." % (self.court_id,
+                                                           len(self.case_names)))
 
     def _download_latest(self):
         # methods for downloading the latest version of Site
         logger.debug("Now scraping: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
-        r = requests.get(self.url, allow_redirects=False,
-                         headers={'User-Agent':'Juriscraper'})
+        if self.method == 'GET':
+            r = requests.get(self.url, allow_redirects=False,
+                             headers={'User-Agent':'Juriscraper'})
+        elif self.method == 'POST':
+            r = requests.post(self.url, allow_redirects=False,
+                             headers={'User-Agent':'Juriscraper'},
+                             data=self.parameters)
 
         # Throw an error if a bad status code is returned.
         self.status = r.status_code
@@ -153,4 +171,12 @@ class GenericSite(object):
     def _get_lower_courts(self):
         return None
 
+    def _get_lower_court_judges(self):
+        return None
+
+    def _get_dispositions(self):
+        return None
+
+    def _get_judges(self):
+        return None
 

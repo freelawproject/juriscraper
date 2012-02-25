@@ -45,9 +45,9 @@ def harmonize(text):
         if UNITED_STATES.match(frag):
             if i == len(text):
                 # it's the last iteration don't append v.
-                result = result + "United States"
+                result = result + 'United States'
             else:
-                result = result + "United States v. "
+                result = result + 'United States v. '
         else:
             #needed here, because case sensitive
             frag = re.sub(re.compile(r'^US$'), 'United States', frag)
@@ -55,7 +55,7 @@ def harmonize(text):
             if i == len(text):
                 result = result + frag
             else:
-                result = result + frag + " v. "
+                result = result + frag + ' v. '
         i += 1
 
     # Remove the ET_AL words.
@@ -73,8 +73,8 @@ def clean_string(string):
      - removes weird white space and replaces with spaces.
     '''
     # Get rid of HTML encoded chars
-    string = string.replace('&rsquo;', '\'').replace('&rdquo;', "\"")\
-        .replace('&ldquo;', "\"").replace('&nbsp;', ' ')\
+    string = string.replace('&rsquo;', '\'').replace('&rdquo;', '\"')\
+        .replace('&ldquo;', '\"').replace('&nbsp;', ' ')\
         .replace('&amp;', '&').replace('%20', ' ').replace('&#160;', ' ')
 
     # Get rid of weird punctuation
@@ -101,7 +101,7 @@ def clean_string(string):
     string = force_unicode(string, errors='ignore')
 
     # get rid of '\t\n\x0b\x0c\r ', and replace them with a single space.
-    string = " ".join(string.split())
+    string = ' '.join(string.split())
 
     # return something vaguely sane
     return string
