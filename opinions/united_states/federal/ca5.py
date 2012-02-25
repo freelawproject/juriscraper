@@ -1,5 +1,3 @@
-# TODO: Flip the sort order of this case!
-
 from GenericSite import GenericSite
 import time
 from datetime import date

@@ -25,7 +25,9 @@ class InsanityException(Exception):
 
 class GenericSite(object):
     '''Contains generic methods for scraping data. Should be extended by all
-    scrapers.'''
+    scrapers. 
+    
+    Should not contain lists that can't be sorted by the _date_sort function.'''
     def __init__(self):
         super(GenericSite, self).__init__()
         self.html = None
@@ -112,8 +114,29 @@ class GenericSite(object):
                                                            len(self.case_names)))
 
     def _date_sort(self):
-        # TODO: Sort all parsed results by date
-        pass
+        ''' This function sorts the object by date. It's a good candidate for
+        re-coding due to violating DRY and because it works by checking for 
+        lists.
+        '''
+        # Note that case_dates must be first for sorting to work.
+        obj_list_attrs = [item for item in [self.case_dates, self.download_links,
+                                            self.case_names, self.docket_numbers,
+                                            self.neutral_citations, self.precedential_statuses,
+                                            self.lower_courts, self.lower_court_judges,
+                                            self.dispositions, self.judges]
+                                            if isinstance(item, list)]
+        zipped = zip(*obj_list_attrs)
+        zipped.sort(reverse=True)
+        i = 0
+        obj_list_attrs = zip(*zipped)
+        for item in [self.case_dates, self.download_links,
+                     self.case_names, self.docket_numbers,
+                     self.neutral_citations, self.precedential_statuses,
+                     self.lower_courts, self.lower_court_judges,
+                     self.dispositions, self.judges]:
+            if isinstance(item, list):
+                item[:] = obj_list_attrs[i][:]
+                i += 1
 
     def _make_hash(self):
         # Make a unique ID. Use ETag, Date Modified or make a hash

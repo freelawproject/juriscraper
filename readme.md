@@ -1,32 +1,52 @@
-What is this
-============
-Juriscrape is a scraper library that is used to scrape the American court system. 
-It currently is able to scrape most state courts and all appellate Federal 
-courts. 
+What is this?
+=============
+Juriscraper is a scraper library that is used to scrape the American court system. 
+It is currently able to scrape all appellate Federal courts, and state courts
+are planned soon.
 
-Juriscrape is part of a two-part system. The second part is the 'caller', which
-you can see a reference implementation of at [CourtListener.com][1]. While the 
-caller is responsible for calling Juriscrape, and for processing its output, 
-Juriscrape is responsible for the minimal amount of work possible that will 
-return the meta data for a court.
+Juriscraper is part of a two-part system. The second part is the 'caller', which 
+should be developed by the system using Juriscraper. The caller is responsible 
+for calling a scraper, downloading and saving its results. A reference 
+implementation of the caller is being developed at [CourtListener.com][1].
+
 
 Installation & dependencies
 ===========================
     pip install chardet==1.0.1
     pip install requests==0.10.2
 
+
 Usage
 ======
-Will document this soon.
+The caller written in Python can can scrape a court as follows:
 
-Output
-=========
-Output from Juriscrape is available as XML if called with the to_xml() method. 
-If this method is used, there is a schema available describing the output you 
-can expect.
+    from opinions.united_states.federal import ca1
+    
+    # Create a site object 
+    site = ca1.Site()
+    
+    # Populate it with data
+    site.parse()
+    
+    # Print out the object
+    print str(site)
 
-If Juriscrape is called from a Python function, it will return a Site object, 
-which can be inspected and then manipulated by the caller.
+Development of a `to_xml()` or `to_json` method has not yet been completed, as 
+all callers have thus far been able to work directly with the Python objects.
+
+Version History
+===============
+**Current**<br>
+0.1 - Supports all common Federal Appeals courts
+
+**Roadmap**<br>
+0.2 - Support for all possible Federal District courts and small Federal Appeals courts<br>
+0.3 - Support for all state appeals courts<br>
+
+**Beyond**<br>
+ - add oral arguments<br>
+ - add video<br>
+ - add other countries
 
 License
 ========
