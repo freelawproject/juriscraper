@@ -31,25 +31,25 @@ The caller written in Python can can scrape a court as follows:
     # Print out the object
     print str(site)
 
-Development of a `to_xml()` or `to_json` method has not yet been completed, as 
+Development of a `to_xml()` or `to_json()` method has not yet been completed, as 
 all callers have thus far been able to work directly with the Python objects.
 
 Version History
 ===============
-**Current**<br>
+**Current**  
 0.1 - Supports all common Federal Appeals courts
 
-**Roadmap**<br>
-0.2 - Support for all possible Federal District courts and small Federal Appeals courts<br>
-0.3 - Support for all state appeals courts<br>
+**Roadmap**  
+0.2 - Support for all possible Federal District courts and small Federal Appeals courts  
+0.3 - Support for all state appeals courts
 
-**Beyond**<br>
- - add oral arguments<br>
- - add video<br>
+**Beyond**  
+ - add oral arguments  
+ - add video  
  - add other countries
 
 License
 ========
-Juriscrape is licensed under the permissive BSD license.
+Juriscraper is licensed under the permissive BSD license.
 
 [1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/overview
