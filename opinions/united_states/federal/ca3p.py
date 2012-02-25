@@ -1,7 +1,6 @@
 from GenericSite import GenericSite
 import time
 from datetime import date
-from lxml import html
 
 class Site(GenericSite):
     '''This site is pretty bad. Very little HTML; everything is separated by 

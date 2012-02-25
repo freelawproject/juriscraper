@@ -41,6 +41,7 @@ class GenericSite(object):
         self.lower_court_judges = None
         self.dispositions = None
         self.judges = None
+        self.nature_of_suit = None
 
     def __str__(self):
         out = []
@@ -62,8 +63,10 @@ class GenericSite(object):
         self.lower_court_judges = self._get_lower_court_judges()
         self.dispositions = self._get_dispositions()
         self.judges = self._get_judges()
+        self.nature_of_suit = self._get_nature_of_suit()
         self._clean_attributes()
         self._check_sanity()
+        self._date_sort()
         return self
 
     def _clean_text(self, text):
@@ -81,6 +84,11 @@ class GenericSite(object):
 
     def _clean_attributes(self):
         '''Iterate over attribute values and clean them'''
+        for item in [self.docket_numbers, self.neutral_citations,
+                     self.lower_courts, self.lower_court_judges,
+                     self.dispositions, self.judges, self.nature_of_suit]:
+            if item is not None:
+                item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
             self.case_names = [harmonize(clean_string(case_name))
                                     for case_name in self.case_names]
@@ -106,6 +114,10 @@ class GenericSite(object):
                                     % (self.court_id, lengths))
         logger.debug("%s: Successfully found %s items." % (self.court_id,
                                                            len(self.case_names)))
+
+    def _date_sort(self):
+        # TODO: Sort all parsed results by date
+        pass
 
     def _download_latest(self):
         # methods for downloading the latest version of Site
@@ -178,5 +190,8 @@ class GenericSite(object):
         return None
 
     def _get_judges(self):
+        return None
+
+    def _get_nature_of_suit(self):
         return None
 

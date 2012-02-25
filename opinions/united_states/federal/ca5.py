@@ -1,10 +1,8 @@
 # TODO: Flip the sort order of this case!
 
 from GenericSite import GenericSite
-import re
 import time
 from datetime import date
-from lxml import html
 
 class Site(GenericSite):
     def __init__(self):
