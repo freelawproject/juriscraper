@@ -18,7 +18,7 @@ Installation & dependencies
 
 Usage
 ======
-The caller written in Python can can scrape a court as follows:
+The caller is written in Python, and can can scrape a court as follows:
 
     from opinions.united_states.federal import ca1
     
