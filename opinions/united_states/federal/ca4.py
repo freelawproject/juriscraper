@@ -15,7 +15,7 @@ class Site(GenericSite):
             case_names.append(text.split('(')[0].strip())
         return case_names
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/@href')]
 
     def _get_case_dates(self):
@@ -33,8 +33,8 @@ class Site(GenericSite):
     def _get_docket_numbers(self):
         docket_numbers = []
         # using download link, we can get the docket numbers
-        for download_link in self.download_links:
-            fileName = download_link.split('/')[-1]
+        for download_url in self.download_urls:
+            fileName = download_url.split('/')[-1]
             docket_number = fileName.split('.')[0]
             # the docket number needs a hyphen inserted after the second digit
             docket_number = docket_number[0:2] + "-" + docket_number[2:]
@@ -44,8 +44,8 @@ class Site(GenericSite):
     def _get_precedential_statuses(self):
         statuses = []
         # using download link, we can get the statuses
-        for download_link in self.download_links:
-            fileName = download_link.split('/')[-1]
+        for download_url in self.download_urls:
+            fileName = download_url.split('/')[-1]
             status = fileName.split('.')[1]
             if status.lower() == 'u':
                 statuses.append('Unpublished')

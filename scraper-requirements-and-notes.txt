@@ -89,11 +89,11 @@ Scraper:
     - Removal of plaintiff, appellee, defendant and the like
 
 Caller:
- - Daemon mode: In this mode, the caller will run non-stop, hitting each court
+ + Daemon mode: In this mode, the caller will run non-stop, hitting each court
    at a configurable rate.
  - Non-synchronous: The Caller should not have to wait for HTTP requests to 
    return before proceeding to its next task.
- - Killable: It's vital that the caller be killable in a safe manner, without
+ + Killable: It's vital that the caller be killable in a safe manner, without
    risk to data that it may be in the middle of scraping.
  - Re-spawning: If the caller dies for whatever reason, it should respawn 
    automatically.

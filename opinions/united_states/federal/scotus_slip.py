@@ -12,7 +12,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         return [titlecase(text) for text in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td/a/text()')]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td/a/@href')]
 
     def _get_case_dates(self):

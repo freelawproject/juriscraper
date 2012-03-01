@@ -16,7 +16,7 @@ class Site(GenericSite):
             case_names.append(case_name_regex.search(text).group(2))
         return case_names
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//a[contains(@href, ".pdf")]/@href')]
 
     def _get_case_dates(self):

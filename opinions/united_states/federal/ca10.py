@@ -12,7 +12,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         return [e for e in self.html.xpath('//item/title/text()')]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [html.tostring(e, method='text') for e in self.html.xpath('//item/link')]
 
     def _get_case_dates(self):

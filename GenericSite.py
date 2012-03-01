@@ -34,7 +34,7 @@ class GenericSite(object):
         self.status = None
         self.method = 'GET'
         self.hash = None
-        self.download_links = None
+        self.download_urls = None
         self.case_names = None
         self.case_dates = None
         self.docket_numbers = None
@@ -56,7 +56,7 @@ class GenericSite(object):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
             self.html = self._download_latest()
-        self.download_links = self._get_download_links()
+        self.download_urls = self._get_download_urls()
         self.case_names = self._get_case_names()
         self.case_dates = self._get_case_dates()
         self.docket_numbers = self._get_docket_numbers()
@@ -99,7 +99,7 @@ class GenericSite(object):
         If sanity is OK, no return value. If not, throw InsanityException  
         '''
         lengths = []
-        for item in [self.download_links, self.case_names, self.case_dates,
+        for item in [self.download_urls, self.case_names, self.case_dates,
                      self.docket_numbers, self.neutral_citations,
                      self.precedential_statuses, self.lower_courts,
                      self.lower_court_judges, self.dispositions,
@@ -116,10 +116,10 @@ class GenericSite(object):
     def _date_sort(self):
         ''' This function sorts the object by date. It's a good candidate for
         re-coding due to violating DRY and because it works by checking for 
-        lists.
+        lists, limiting the kinds of attributes we can add to the object.
         '''
         # Note that case_dates must be first for sorting to work.
-        obj_list_attrs = [item for item in [self.case_dates, self.download_links,
+        obj_list_attrs = [item for item in [self.case_dates, self.download_urls,
                                             self.case_names, self.docket_numbers,
                                             self.neutral_citations, self.precedential_statuses,
                                             self.lower_courts, self.lower_court_judges,
@@ -129,7 +129,7 @@ class GenericSite(object):
         zipped.sort(reverse=True)
         i = 0
         obj_list_attrs = zip(*zipped)
-        for item in [self.case_dates, self.download_links,
+        for item in [self.case_dates, self.download_urls,
                      self.case_names, self.docket_numbers,
                      self.neutral_citations, self.precedential_statuses,
                      self.lower_courts, self.lower_court_judges,
@@ -149,7 +149,7 @@ class GenericSite(object):
 
     def _download_latest(self):
         # methods for downloading the latest version of Site
-        logger.debug("Now scraping: %s" % self.url)
+        logger.debug("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         if self.method == 'GET':
             r = requests.get(self.url, allow_redirects=False,
@@ -181,7 +181,7 @@ class GenericSite(object):
         # generally recursive methods for the entire Site
         pass
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return None
 
     def _get_case_names(self):
