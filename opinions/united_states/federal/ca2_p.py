@@ -1,7 +1,7 @@
-from GenericSite import GenericSite
-import time
+from juriscraper.GenericSite import GenericSite
 from datetime import date
 from lxml import html
+import time
 
 class Site(GenericSite):
     def __init__(self):
