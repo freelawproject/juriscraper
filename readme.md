@@ -1,26 +1,40 @@
 What is this?
 =============
 Juriscraper is a scraper library that is used to scrape the American court system. 
-It is currently able to scrape all appellate Federal courts, and state courts
+It is currently able to scrape all major appellate Federal courts, and state courts
 are planned soon.
 
 Juriscraper is part of a two-part system. The second part is the 'caller', which 
 should be developed by the system using Juriscraper. The caller is responsible 
 for calling a scraper, downloading and saving its results. A reference 
-implementation of the caller is being developed at [CourtListener.com][1].
+implementation of the caller has been developed and is in use at [CourtListener.com][2]. 
+The code for that caller can be [found here][1].
+
+Some of the design goals for this project are:  
+
+ - extensibility to support video, oral arguments, etc.
+ - extensibility to support geographies (US, Cuba, Mexico, California) 
+ - Mime type identification through magic numbers
+ - Generalized architecture with no code repetition
+ - Xpath-based scraping powered by lxml's html parser
+ - return all meta data available on court websites (caller can pick what it needs)
+ - no need for a database
+ - clear log levels (DEBUG, INFO, WARN, CRITICAL)
+ - friendly to court websites
 
 
 Installation & dependencies
 ===========================
     pip install chardet==1.0.1
     pip install requests==0.10.2
+    mkdir /var/log/juriscraper/
 
 
 Usage
 ======
-The caller is written in Python, and can can scrape a court as follows:
+The scrapers is written in Python, and can can scrape a court as follows:
 
-    from opinions.united_states.federal import ca1
+    from juriscraper.opinions.united_states.federal import ca1
     
     # Create a site object 
     site = ca1.Site()
@@ -30,6 +44,24 @@ The caller is written in Python, and can can scrape a court as follows:
     
     # Print out the object
     print str(site)
+
+It's also possible to iterate over all courts in a Python package, even if 
+they're not known before starting the scraper. For example:
+
+    court_id = 'juriscraper.opinions.united_states.federal'
+    scrapers = __import__(court_id,
+                          globals(),
+                          locals(),
+                          ['*']).__all__
+    for scraper in scrapers:
+        mod = __import__('%s.%s' % (court_id, scraper),
+                         globals(),
+                         locals(),
+                         [scraper])
+        site = mod.Site()
+
+This can be useful if you wish to create a command line scraper that iterates 
+over all courts of a certain jurisdiction that is provided by a script or a user.
 
 Development of a `to_xml()` or `to_json()` method has not yet been completed, as 
 all callers have thus far been able to work directly with the Python objects.
@@ -52,4 +84,5 @@ License
 ========
 Juriscraper is licensed under the permissive BSD license.
 
-[1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/overview
+[1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/scrape_and_extract.py
+[2]: http://courtlistener.com
