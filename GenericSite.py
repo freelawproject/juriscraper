@@ -62,7 +62,7 @@ class GenericSite(object):
     def parse(self):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
-            self.html = self._download_latest()
+            self.html = self._download()
         self.download_urls = self._get_download_urls()
         self.case_names = self._get_case_names()
         self.case_dates = self._get_case_dates()
@@ -150,7 +150,7 @@ class GenericSite(object):
         # Make a unique ID. ETag and Last-Modified from courts cannot be trusted
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
-    def _download_latest(self):
+    def _download(self):
         # methods for downloading the latest version of Site
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error

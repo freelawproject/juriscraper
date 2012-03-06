@@ -41,3 +41,13 @@ class Site(GenericSite):
             else:
                 statuses.append('Unknown')
         return statuses
+
+    def _download_backwards(self, page):
+        # Sample URLs for page 2 and 3 (as of 2011-02-09)
+        # http://www.cafc.uscourts.gov/opinions-orders/0/50/all/page-11-5.html
+        # http://www.cafc.uscourts.gov/opinions-orders/0/100/all/page-21-5.html
+        if page == 0:
+            self.url = "http://www.cafc.uscourts.gov/opinions-orders/0/all"
+        else:
+            self.url = "http://www.cafc.uscourts.gov/opinions-orders/0/%s/all/page-%s1-5.html" % ((page * 50), page)
+        self.html = self._download()
