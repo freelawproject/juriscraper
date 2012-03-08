@@ -133,6 +133,9 @@ def harmonize(text):
     # replace V. with v.
     text = re.sub(re.compile(r'\WV\.\W'), ' v. ', text)
 
+    # replace v with v.
+    text = re.sub(re.compile(r' v '), ' v. ', text)
+
     # Remove the BAD_WORDS.
     text = text.split()
     cleaned_text = []
