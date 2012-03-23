@@ -114,7 +114,7 @@ BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)ap
      '|devisee|executor|executrix|petitioners?|petitioners?(--?|/)appell(ee|ant)s?' + \
      '|petitioners?(--?|/)defendants?|plaintiffs?|plaintiffs?(--?|/)appell(ee|ant)s?|respond(e|a)nts?' + \
      '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?' + \
-     '|cross(--?|/)appellees?'
+     '|cross(--?|/)appell(ees|ant)s?'
 BAD_WORDS = re.compile(r'^(%s)(,|\.)?$' % BW, re.I)
 def harmonize(text):
     '''Fixes case names so they are cleaner.
