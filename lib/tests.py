@@ -83,6 +83,10 @@ def test_strings():
     u'United States v. Lissner'
     >>> harmonize(clean_string('USA v White')) # tests no period in v.
     u'United States v. White'
+    >>> harmonize(clean_string('USA vs White')) # tests no period in vs.
+    u'United States v. White'
+    >>> harmonize(clean_string('/USA vs White')) # tests leading slash.
+    u'United States v. White'
     '''
 
 if __name__ == "__main__":

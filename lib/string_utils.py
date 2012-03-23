@@ -136,6 +136,9 @@ def harmonize(text):
     # replace v with v.
     text = re.sub(re.compile(r' v '), ' v. ', text)
 
+    # and finally, vs with v.
+    text = re.sub(re.compile(r' vs '), ' v. ', text)
+
     # Remove the BAD_WORDS.
     text = text.split()
     cleaned_text = []
@@ -191,7 +194,7 @@ def clean_string(string):
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
     # appellant.
-    bad_punctuation = r'(-|;|,|\s)*'
+    bad_punctuation = r'(-|/|;|,|\s)*'
     bad_endings = re.compile(r'%s$' % bad_punctuation)
     bad_beginnings = re.compile(r'^%s' % bad_punctuation)
 
