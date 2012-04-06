@@ -71,12 +71,15 @@ class Site(GenericSite):
             return href.split('#')[0]
         html_tree.rewrite_links(remove_anchors)
         d = self._get_article_count(html_tree)
+        print str(d)
         #add court cases information from the first result page
         self._extend_all_properties(html_tree)
 
         #iterate all the result pages and extend court cases information
-        iterator = 21 #start case index
+        iterator = 1 #start case index
+        page_iterator = 21
         stop_iter = int(math.ceil(d/20)) #20 cases per page
+        print str(stop_iter)
         while iterator <= stop_iter:
             br.select_form("Form1")
             br.form.find_control("__EVENTTARGET").readonly = False
@@ -99,8 +102,9 @@ class Site(GenericSite):
             html_tree.rewrite_links(remove_anchors)
             #add court cases information from the following result pages
             self._extend_all_properties(html_tree)
-            
-            iterator = iterator + 20
+            print str(iterator)
+            page_iterator = page_iterator + 20
+            iterator = iterator + 1
 
         return html_tree
 
@@ -153,7 +157,7 @@ class Site(GenericSite):
     def get_precedential_statuses(self, html):
         statuses = []
         for link in html.xpath('//div[@class="FieldSection"]/em[contains(text(), "Docket Number:")]/following-sibling::text()[1]'):
-            statuses.append("Published")
+            statuses.append("Unknown")
         return statuses
 
 
@@ -171,3 +175,5 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         return self.accumulated_precedential_statuses
+
+
