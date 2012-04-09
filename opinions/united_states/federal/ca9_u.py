@@ -1,8 +1,8 @@
-import ca9p
+import ca9_p
 import time
 from datetime import date
 
-class Site(ca9p.Site):
+class Site(ca9_p.Site):
     '''The unpublished cases have one more column than the published. Thus some
     overriding is done here. More than usual, but it's very slight tweaks.'''
     def __init__(self):

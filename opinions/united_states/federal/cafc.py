@@ -1,4 +1,4 @@
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 
@@ -19,7 +19,7 @@ class Site(GenericSite):
             case_names.append(titlecase(case_string.split('[')[0]))
         return case_names
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//table[@id = "searchResults"]/tr[position() >= 3]/td[4]/a/@href')]
 
     def _get_case_dates(self):
@@ -41,3 +41,13 @@ class Site(GenericSite):
             else:
                 statuses.append('Unknown')
         return statuses
+
+    def _download_backwards(self, page):
+        # Sample URLs for page 2 and 3 (as of 2011-02-09)
+        # http://www.cafc.uscourts.gov/opinions-orders/0/50/all/page-11-5.html
+        # http://www.cafc.uscourts.gov/opinions-orders/0/100/all/page-21-5.html
+        if page == 0:
+            self.url = "http://www.cafc.uscourts.gov/opinions-orders/0/all"
+        else:
+            self.url = "http://www.cafc.uscourts.gov/opinions-orders/0/%s/all/page-%s1-5.html" % ((page * 50), page)
+        self.html = self._download()

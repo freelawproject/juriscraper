@@ -1,4 +1,4 @@
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 import re
 import time
 from datetime import date
@@ -15,7 +15,7 @@ class Site(GenericSite):
         return [regex.search(html.tostring(e, method='text')).group(2)
                                   for e in self.html.xpath('//item/title')]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [html.tostring(e, method='text') for e in self.html.xpath('//item/link')]
 
     def _get_case_dates(self):

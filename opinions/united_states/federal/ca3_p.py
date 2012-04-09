@@ -1,4 +1,4 @@
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 
@@ -16,7 +16,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         return [e for e in self.html.xpath('//a[contains(@href, "opinarch")]/text()')]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//a[contains(@href, "opinarch")]/@href')]
 
     def _get_case_dates(self):
