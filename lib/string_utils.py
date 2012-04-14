@@ -27,6 +27,8 @@ def titlecase(text, DEBUG=False):
 
     The list of "SMALL words" which are not capped comes from
     the New York Times Manual of Style, plus 'vs' and 'v'.
+    
+    List of "BIG words" grows organically over time as entries are needed.
     '''
 
     # make all input uppercase.
@@ -111,7 +113,8 @@ ET_AL = re.compile(',?\set\.?\sal\.?', re.I)
 BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?' + \
      '|devisee|executor|executrix|petitioners?|petitioners?(--?|/)appell(ee|ant)s?' + \
      '|petitioners?(--?|/)defendants?|plaintiffs?|plaintiffs?(--?|/)appell(ee|ant)s?|respond(e|a)nts?' + \
-     '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?'
+     '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?' + \
+     '|cross(--?|/)appell(ees|ant)s?'
 BAD_WORDS = re.compile(r'^(%s)(,|\.)?$' % BW, re.I)
 def harmonize(text):
     '''Fixes case names so they are cleaner.
@@ -132,6 +135,12 @@ def harmonize(text):
 
     # replace V. with v.
     text = re.sub(re.compile(r'\WV\.\W'), ' v. ', text)
+
+    # replace v with v.
+    text = re.sub(re.compile(r' v '), ' v. ', text)
+
+    # and finally, vs with v.
+    text = re.sub(re.compile(r' vs '), ' v. ', text)
 
     # Remove the BAD_WORDS.
     text = text.split()
@@ -192,7 +201,7 @@ def clean_string(string):
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
     # appellant.
-    bad_punctuation = r'(-|;|,|\s)*'
+    bad_punctuation = r'(-|/|;|,|\s)*'
     bad_endings = re.compile(r'%s$' % bad_punctuation)
     bad_beginnings = re.compile(r'^%s' % bad_punctuation)
 

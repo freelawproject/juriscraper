@@ -1,4 +1,4 @@
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 
@@ -24,7 +24,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         return [e for e in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[3]//text()')]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         return [e for e in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[1]//a/@href')]
 
     def _get_case_dates(self):
@@ -38,7 +38,7 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for link in self.download_links:
+        for link in self.download_urls:
             if "unpub" in link:
                 statuses.append("Unpublished")
             elif "pub" in link:

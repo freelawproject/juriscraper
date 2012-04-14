@@ -1,4 +1,4 @@
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 from juriscraper.lib.string_utils import titlecase
@@ -14,7 +14,7 @@ class Site(GenericSite):
                 "NO OPINIONS") or contains(child::td//text(), "NO MEMOS"))]/td[1]/a/text()'''
         return [titlecase(text) for text in self.html.xpath(path)]
 
-    def _get_download_links(self):
+    def _get_download_urls(self):
         path = '''//table[3]//tr[position() >= 2 and not(contains(child::td//text(), 
                 "NO OPINIONS") or contains(child::td//text(), "NO MEMOS"))]/td[1]/a/@href'''
         return [e for e in self.html.xpath(path)]
