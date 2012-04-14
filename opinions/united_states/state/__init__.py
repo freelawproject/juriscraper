@@ -1,3 +1,5 @@
-__all__ = ['wi',
+__all__ = ['id_civil',
+           'id_criminal',
+           'wi',
            'wv',
            'wy', ]

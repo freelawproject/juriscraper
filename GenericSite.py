@@ -1,10 +1,10 @@
 import hashlib
 from lxml import html
-import logging
+import logging.handlers
 import re
 import requests
 
-from lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import clean_string, harmonize
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
