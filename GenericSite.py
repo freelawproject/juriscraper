@@ -105,15 +105,17 @@ class GenericSite(object):
         
         If sanity is OK, no return value. If not, throw InsanityException  
         '''
-        lengths = []
-        for item in [self.download_urls, self.case_names, self.case_dates,
-                     self.docket_numbers, self.neutral_citations,
-                     self.precedential_statuses, self.lower_courts,
-                     self.lower_court_judges, self.dispositions,
-                     self.judges]:
-            if item is not None:
-                lengths.append(len(item))
-        if lengths.count(lengths[0]) != len(lengths):
+        lengths = {}
+        attributes = ['download_urls', 'case_names', 'case_dates',
+                      'docket_numbers', 'neutral_citations',
+                      'precedential_statuses', 'lower_courts',
+                      'lower_court_judges', 'dispositions',
+                      'judges']
+        for attr in attributes:
+            if self.__getattribute__(attr) is not None:
+                lengths[attr] = len(self.__getattribute__(attr))
+        values = lengths.values()
+        if values.count(values[0]) != len(values):
             # Are all elements equal?
             raise InsanityException("%s: Scraped meta data fields have unequal lengths: %s"
                                     % (self.court_id, lengths))

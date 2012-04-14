@@ -188,7 +188,7 @@ def clean_string(string):
     # Get rid of HTML encoded chars
     string = string.replace('&rsquo;', '\'').replace('&rdquo;', '\"')\
         .replace('&ldquo;', '\"').replace('&nbsp;', ' ')\
-        .replace('&amp;', '&').replace('%20', ' ').replace('&#160;', ' ')\
+        .replace('&amp;', '&').replace('%20', ' ').replace('&#160;', ' ')
 
     # smart quotes
     string = string.replace(u'’', "'").replace(u'‘', "'").replace(u'“', '"')\
