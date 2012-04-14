@@ -5,8 +5,7 @@ from datetime import date
 class Site(GenericSite):
     '''This site is pretty bad. Very little HTML; everything is separated by 
     <br> tags. There is currently a case at the bottom of the page from 2009 
-    that has incomplete meta data. You can see it in the example document, but 
-    that is why all methods return a sliced array.
+    that has incomplete meta data. You can see it in the example document.
     '''
     def __init__(self):
         super(Site, self).__init__()
@@ -41,7 +40,7 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for status in range(0, len(self.case_names)):
+        for _ in range(0, len(self.case_names)):
             if 'recprec' in self.url:
                 statuses.append('Published')
             elif 'recnonprec' in self.url:
@@ -52,13 +51,12 @@ class Site(GenericSite):
 
     def _get_lower_courts(self):
         lower_courts = []
-        for text_string in self.html.xpath('//a[contains(@href, "opinarch")]/following-sibling::text()'):
-            if text_string.lower().startswith('filed'):
-                continue
+        for e in self.html.xpath('//a[contains(@href, "opinarch")]'):
+            text_strings = e.xpath('./following-sibling::text()[1]')
+            text_string = ' '.join(text_strings)
+            if text_string.lower().startswith('filed') or \
+                                            text_string.strip() == '':
+                lower_courts.append('Unknown')
             else:
                 lower_courts.append(text_string.strip())
-        if 'recprec' in self.url:
-            # The precedential page has a rogue value on the bottom that we 
-            # need a special case for.
-            lower_courts.append("Unknown")
         return lower_courts
