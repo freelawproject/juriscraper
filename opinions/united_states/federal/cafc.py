@@ -25,6 +25,8 @@ class Site(GenericSite):
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath('//table[@id = "searchResults"]/tr[position() >= 3]/td[1]/text()'):
+            if clean_string(date_string) == '2011-09-00':
+                date_string = '2011-09-02'
             dates.append(date.fromtimestamp(time.mktime(time.strptime(clean_string(date_string), '%Y-%m-%d'))))
         return dates
 
