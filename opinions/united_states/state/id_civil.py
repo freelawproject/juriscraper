@@ -1,104 +1,65 @@
-from GenericSite import GenericSite 
-import HTMLParser 
-import time 
-from datetime import date 
-import urllib 
-import string 
+# -*- coding: utf-8 -*-
+from GenericSite import GenericSite
+from juriscraper.lib.string_utils import clean_string
+
+from datetime import date
+from lxml import html
 import re
- 
-class id_civil(GenericSite):
+import time
+
+
+class Site(GenericSite):
     def __init__(self):
-        super(id_civil, self).__init__()
+        super(Site, self).__init__()
         self.url = 'http://www.isc.idaho.gov/opinions/sccivil.htm'
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        names = []
-        return_names = []
+        case_names = []
         for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
-                texts = xelement.xpath('./descendant-or-self::text()');
-                name_string = ''
-                for text in texts:
-                    name_string = name_string + HTMLParser.HTMLParser().unescape(text.strip()) + " "
-                name_string = string.replace(name_string, "\r", "")
-                name_string = string.replace(name_string, "\n", "")
-                name_string = string.replace(name_string, " ", " ")
-                names = name_string.split()
-    
-                if names == '':
-                    names.append('')
-                else:
-                    i = 0
-                    j = 0
-                    name = names[0]
-                    while not name == u'\u2013' and not name == u'-' and not name == u'&ndash;' and not u'\u2013' in name and not u'-' in name and not u'&ndash;' in name :
-                        i = i+1
-                        name = names[i]
-                        if name[0] == u'-' or name[len(name) - 1] == u'-':
-                            break
-                    j = i+1
-                    name = names[j]
-                    while not name == u'\u2013' and not name == u'-' and not name == u'&ndash;' and not u'\u2013' in name and not u'-' in name and not u'&ndash;' in name :
-                        name = names[j]
-                        if name[0] == u'-' or name[len(name) - 1] == u'-':
-                                break
-                        j = j + 1
-                        name = names[j]
-                        if name == names[len(names) - 1]:
-                                break
+            # Our text nodes are randomly surrounded by HTML spans, so we start
+            # at a high level node, and strip down to just what we want.
+            data_html = html.tostring(xelement, encoding=unicode)
+            data_string = re.sub(r'<[^>]*?>', '', data_html)
+            data_string = ' '.join(data_string.split())
 
-                    val = names[i+1:j]
-                
-                return_names.append(' '.join([unicode(x) for x in val]))
-    
-        return return_names
+            # Several regexes are needed since we have hyphen-separated values
+            regexes = [u'(.*?)[-–](.*?)–',
+                       u'(.*?)[-–](.*)-',
+                       u'(.*?)[-–](.*)$']
+            for regex in regexes:
+                try:
+                    case_names.append(re.search(regex, data_string).group(2))
+                    # Found what we're looking for...
+                    break
+                except AttributeError:
+                    # Try the next regex...
+                    continue
 
-    def _get_download_links(self):
-        download_links = []
-        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a/@href'):
-                download_links.append(e)
-        return download_links
+        return case_names
+
+    def _get_download_urls(self):
+        download_urls = []
+        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]/@href'):
+            download_urls.append(e)
+        return download_urls
 
     def _get_case_dates(self):
         dates = []
-        return_dates = []
-        date_time = []
         for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
-                texts = xelement.xpath('./descendant-or-self::text()');
-                date_string = ''
-                for text in texts:
-                        date_string = date_string + HTMLParser.HTMLParser().unescape(text.strip()) + " "
-                date_string = string.replace(date_string, "\r", "")
-                date_string = string.replace(date_string, "\n", "")
-                date_string = string.replace(date_string, " ", " ")
-                dates = date_string.split()
-        
-                if dates == '':
-                    dates.append('')
-                else:
-                    i = 0
-                    date_val = dates[0]
-                    while not date_val == u'\u2013' and not date_val == u'-' and not date_val == u'&ndash;' and not u'\u2013' in date_val and not u'-' in date_val and not u'&ndash;' in date_val :
-                            date_val = dates[i]
-                            i = i + 1
+            # Our text nodes are randomly surrounded by HTML spans, so we start
+            # at a high level node, and strip down to just what we want.
+            data_html = html.tostring(xelement, encoding=unicode)
+            data_string = re.sub(r'<[^>]*?>', '', data_html)
+            data_string = ' '.join(data_string.split())
+            regex = u'(.*?)[-–]'
+            try:
+                date_string = re.search(regex, data_string).group(1)
+            except AttributeError:
+                print data_string
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(clean_string(date_string), '%B %d, %Y'))))
 
-                val = dates[0:i]
-                val[0] = re.sub(r'\W', "", val[0])
-                val[1] = re.sub(r'\D', "", val[1])
-                val[2] = re.sub(r'\D', "", val[2])
-                date_time.append(date.fromtimestamp(time.mktime(time.strptime(val[0] + " " + val[1] + " " + val[2], "%B %d %Y"))))
-    
-        return date_time
-    
+        return dates
+
     def _get_precedential_statuses(self):
-        statuses = []
-        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a/@href'):
-                statuses.append("Published")
-        return statuses
-        
-    def _get_docket_numbers(self):
-        docket_numbers = []
-        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a/@href'):
-            docket_numbers.append("")
-        return docket_numbers
-
+        return ["Published"] * len(self.case_names)

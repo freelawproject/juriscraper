@@ -1,7 +1,7 @@
 from GenericSite import GenericSite
 import time
 from datetime import date
-from lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 class Site(GenericSite):
     def __init__(self):
