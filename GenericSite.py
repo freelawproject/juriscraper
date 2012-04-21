@@ -120,7 +120,7 @@ class GenericSite(object):
             raise InsanityException("%s: Scraped meta data fields have unequal lengths: %s"
                                     % (self.court_id, lengths))
         logger.info("%s: Successfully found %s items." % (self.court_id,
-                                                           len(self.case_names)))
+                                                          len(self.case_names)))
 
     def _date_sort(self):
         ''' This function sorts the object by date. It's a good candidate for
