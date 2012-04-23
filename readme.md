@@ -25,9 +25,19 @@ Some of the design goals for this project are:
 
 Installation & dependencies
 ===========================
-    pip install chardet==1.0.1
-    pip install requests==0.10.2
-    mkdir /var/log/juriscraper/
+    # install the dependencies
+    sudo pip install chardet==1.0.1
+    sudo pip install requests==0.10.2
+    sudo mkdir /var/log/juriscraper/
+    
+    # install the code
+    sudo mkdir /usr/local/juriscraper
+    cd /usr/local/juriscraper
+    hg clone https://bitbucket.org/mlissner/juriscraper .
+    
+    # add Juriscraper to your python path (in Ubuntu/Debian)
+    sudo ln -s /usr/local/juriscraper /usr/lib/python2.7/dist-packages/juriscraper
+    
 
 
 Usage
