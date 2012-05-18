@@ -1,4 +1,5 @@
-__all__ = ['ca1',
+__all__ = ['armfor',
+           'ca1',
            'ca2_p',
            'ca2_u',
            'ca3_p',
