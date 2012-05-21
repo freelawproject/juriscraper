@@ -17,6 +17,7 @@ __all__ = ['armfor',
            'ca11_u',
            'cadc',
            'cafc',
+           'cit',
            'scotus_chambers',
            'scotus_relating',
            'scotus_slip', ]
