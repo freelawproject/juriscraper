@@ -4,6 +4,7 @@ import time
 from datetime import date
 from lxml import html
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()

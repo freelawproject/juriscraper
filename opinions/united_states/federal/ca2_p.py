@@ -10,7 +10,7 @@ class Site(GenericSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath('//table/td[2]/text()')]
+        return [t for t in self.html.xpath('//table/td[2]/text()')]
 
     def _get_download_urls(self):
         return [e for e in self.html.xpath('//table/td/b/a/@href')]

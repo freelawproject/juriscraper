@@ -27,7 +27,7 @@ def titlecase(text, DEBUG=False):
 
     The list of "SMALL words" which are not capped comes from
     the New York Times Manual of Style, plus 'vs' and 'v'.
-    
+
     List of "BIG words" grows organically over time as entries are needed.
     '''
 
@@ -176,6 +176,7 @@ def harmonize(text):
 
     return clean_string(result)
 
+
 def clean_string(string):
     '''Clean up strings.
 
@@ -223,7 +224,8 @@ def clean_string(string):
     # return something vaguely sane
     return string
 
-def force_unicode(s, encoding='utf-8', errors='strict'):
+
+def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
     # Borrows heavily from django.utils.encoding.force_unicde
     # Handle the common case first, saves 30-40% in performance when s
     # is an instance of unicode. This function gets called often in that
@@ -255,7 +257,7 @@ def force_unicode(s, encoding='utf-8', errors='strict'):
             s = s.decode(encoding, errors)
     except UnicodeDecodeError, e:
         if not isinstance(s, Exception):
-            raise DjangoUnicodeDecodeError(s, *e.args)
+            raise
         else:
             # If we get to here, the caller has passed in an Exception
             # subclass populated with non-ASCII bytestring data without a

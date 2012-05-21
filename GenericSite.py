@@ -32,8 +32,8 @@ class InsanityException(Exception):
 
 class GenericSite(object):
     '''Contains generic methods for scraping data. Should be extended by all
-    scrapers. 
-    
+    scrapers.
+
     Should not contain lists that can't be sorted by the _date_sort function.'''
     def __init__(self):
         super(GenericSite, self).__init__()
@@ -102,8 +102,8 @@ class GenericSite(object):
         '''Check that the objects attributes make sense:
         1. Do all the attributes have the same length?
         2. ?
-        
-        If sanity is OK, no return value. If not, throw InsanityException  
+
+        If sanity is OK, no return value. If not, throw InsanityException
         '''
         lengths = {}
         attributes = ['download_urls', 'case_names', 'case_dates',
