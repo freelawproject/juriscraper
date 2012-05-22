@@ -6,16 +6,18 @@
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
 from juriscraper.GenericSite import GenericSite
-import re
 import time
 from datetime import date
-from lxml import html
+
 
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'
         self.court_id = self.__module__
+
+    def _download(self):
+        return GenericSite._download(self, redirect_allowed=True)
 
     def _get_download_urls(self):
         download_urls = []
