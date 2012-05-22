@@ -20,4 +20,5 @@ __all__ = ['armfor',
            'cit',
            'scotus_chambers',
            'scotus_relating',
-           'scotus_slip', ]
+           'scotus_slip', 
+           'tax', ]
