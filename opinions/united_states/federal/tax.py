@@ -16,14 +16,11 @@ class Site(GenericSite):
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'
         self.court_id = self.__module__
 
-    def _download(self):
-        return GenericSite._download(self, redirect_allowed=True)
+    def _download(self, use_sessions=False):
+        return GenericSite._download(self, use_sessions=True)
 
     def _get_download_urls(self):
-        download_urls = []
-        for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/@href'):
-            download_urls.append('http://www.ustaxcourt.gov' + t)
-        return download_urls
+        return [t for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/@href')]
 
     def _get_case_names(self):
         case_names = []
@@ -47,4 +44,3 @@ class Site(GenericSite):
     def _get_case_dates(self):
         return [date.fromtimestamp(time.mktime(time.strptime(date_string.strip(), '%m/%d/%Y')))
             for date_string in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td[2]/text()')]
-
