@@ -3,6 +3,7 @@ import time
 from datetime import date
 from lxml import html
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
@@ -11,26 +12,17 @@ class Site(GenericSite):
 
     def _get_case_names(self):
         return [t for t in self.html.xpath('//table//tr/td[1]/font/text()')]
-        
+
     def _get_download_urls(self):
-        # Must account for the presence of both .pdf and .htm links
-        # Only part of the page has both link types, so a single xpath won't work.
-        # So we get all the a tags and then append only those with .pdf
-        download_urls = []
-        for t in self.html.xpath('//table//tr/td[2]/font/a/@href'):
-            if '.pdf' in t:
-                download_urls.append(t)
-            else:
-                continue
-        return download_urls
+        return [t for t in self.html.xpath('//table//tr/td[2]/font/a/@href[contains(., ".pdf")]')]
 
     def _get_case_dates(self):
         dates = []
         for e in self.html.xpath('//table/tr[3]/td[2]/blockquote/table/tbody/tr[position() > 1]/td[3]'):
             s = html.tostring(e, method='text', encoding='unicode').strip()
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%b %d, %Y'))))        
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%b %d, %Y'))))
         return dates
-        
+
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath('//table//table//tr[position() > 1]/td[2]'):
