@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/SampleTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>United States Court of International Trade</title>
+<!-- InstanceEndEditable -->
+<link href="../StyleSheets/Styles.css" rel="stylesheet" type="text/css" />
+<script src="../SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+<!--
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+<body onload="KW_doClock()">
+
+<!--Table that includes the 3 headers -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" cols="3">
+
+<!--Top Header with Date -->
+  <tr>
+    <td colspan="3" valign="middle" class="TopHeader">
+	<Table align="left"><TR><TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--Time and date gadget-->     
+    <script language='JavaScript'>
+// Kaosweaver Live Clock Start
+function class_clock(f,s,c,b,w,h,d,m,g,z) { // Copyright 2002 by Kaosweaver, All rights reserved
+	this.b=b;this.w=w;this.h=h;this.d=d;this.g=g;this.z=z
+	this.o='<font style="color:'+c+'; font-family:'+f+'; font-size:'+s+'pt;">';
+if (m==1) this.o+=doDate("W0","-","M1","-","D0","-","Y0","-");
+
+}
+var clock=new class_clock("Arial, Helvetica, sans-serif","9","#FFFFFF","#633","203",1,1,1,0,0)
+// If the clock's size needs adjusting, change the 203 above.
+d=document
+if (d.all || d.getElementById) {d.write('<span id="activeClock" style="width:'+clock.w+'px; background-color:'+clock.b+'"></span>'); }
+else if (d.layers) {d.write('<ilayer bgcolor="'+clock.b+'" id="wrapClock"><layer width="'+clock.w+'" id="activeClock"></layer></ilayer>'); }
+else {KW_doClock(1);}
+function KW_doClock(a) { // Copyright 2003 by Kaosweaver, All rights reserved
+	d=document;t=new Date();p="";dClock="";	if (d.layers) d.wrapClock.visibility="show";
+	tD=(t.getTimezoneOffset()-(clock.z*60))*clock.g;t.setMinutes(tD+t.getMinutes())
+	h=t.getHours();m=t.getMinutes();s=t.getSeconds();if (clock.h)
+	 {p=(h>11)?"PM":"AM";h=(h>12)?h-12:h;h=(h==0)?12:h;}if (clock.d)
+	 {m=(m<=9)?"0"+m:m; s=(s<=9)?"0"+s:s;} dClock = clock.o+h+':'+m+':'+s+' '+p+'</font>';
+	if (a) {d.write(dClock);}if (d.layers) {wc = document.wrapClock;lc = wc.document.activeClock;
+		lc.document.write(dClock);lc.document.close();
+	} else if (d.all) {	activeClock.innerHTML = dClock;
+	} else if (d.getElementById) {d.getElementById("activeClock").innerHTML = dClock;}
+	if (!a) setTimeout("KW_doClock()",1000);
+}
+
+
+function doDate(){ // Copyright 2002 by Kaosweaver, All rights reserved.
+  var t=new Date(),a=doDate.arguments,str="",i,a1,lang="1";
+  var month=new Array('January','Jan', 'February','Feb', 'March','Mar', 'April','Apr', 'May','May', 'June','Jun', 'July','Jul', 'August','Aug', 'September','Sep', 'October','Oct', 'November','Nov', 'December','Dec');
+  var tday= new Array('Sunday','Sun','Monday','Mon', 'Tuesday','Tue', 'Wednesday','Wed','Thursday','Thr','Friday','Fri','Saturday','Sat');
+  for(i=0;i<a.length;i++) {a1=a[i].charAt(1);switch (a[i].charAt(0)) {
+  case "M":if  ((Number(a1)==3) && ((t.getMonth()+1)<10)) str+="0";
+  str+=(Number(a1)>1)?t.getMonth()+1:month[t.getMonth()*2+Number(a1)];break;
+  case "D": if ((Number(a1)==1) && (t.getDate()<10)) str+="0";str+=t.getDate();break;
+  case "Y": str+=(a1=='0')?t.getFullYear():t.getFullYear().toString().substring(2);break;
+  case "W":str+=tday[t.getDay()*2+Number(a1)];break; default: str+=unescape(a[i]);}}return str;
+}
+
+// Kaosweaver Live Clock End
+    </script>
+    <!-- KW Live Clock -->
+
+ <!--End of Time and Date gadget-->
+	</TD></TR></Table>
+    
+ <!-- Table for links to Visit the USCIT and Feedback--> 
+    <Table border="0" align="right" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><a href="../Directions.html">Visit the USCIT</a> | <a href="mailto:webmaster@cit.uscourts.gov">Feedback</a>&nbsp;&nbsp;&nbsp;</td></tr></Table>
+ <!--End of table for links to Visit the USCIT and Feedback-->        
+    </td></tr>
+
+<!--End of Top Header with Date -->
+  
+<!--Main Header with Title -->
+  <tr bgcolor="#003366" class="MainHeader">
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="../Images/CourtSeal.png" width="111" height="112" hspace="0" vspace="10" align="middle">
+    </TD>
+<TD valign="middle" bgcolor="#003366">Welcome to the website of the <br />  <span class="TitleofHeader">United States Court of International Trade</span></TD>
+      <TD align="right" valign="bottom">
+
+      
+  <!--Search Form-->
+        <form id="form1" name="form1" method=GET accept-charset="iso-8859-1" action="http://www.cit.uscourts.gov:8080/query.html">
+        <input type=text value="Search this site" name=qt id="search" size="30" />
+        <input name="" type="submit" class="bluebutton" value="GO" /><BR />
+          <a href="http://www.cit.uscourts.gov:8080/help/?la=en">Help</a> | <a href="http://www.cit.uscourts.gov:8080/index.html?ql=a&amp;charset=iso-8859-1">Advanced</a>
+        </form>
+  <!--End Search form -->
+
+  </TD></TR>
+ <!--End of Main Header with Title -->
+   
+ <!--Header with Drop Down Menu --> 
+  <tr>
+    <td colspan="3">
+      <ul id="MenuBar1" class="MenuBarHorizontal">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../CourtDirectory.html">Court Directory</a></li>
+
+        <li><a href="../AboutTheCourt.html">About The Court&nbsp;</a>        </li>
+        <li><a href="../CMECF/index.html">CM/ECF</a>        </li>
+        <li><a href="../JudicialEthics/index.html">Judicial Ethics&nbsp;</a>        </li>
+        <li><a href="index.html"> Slip Opinions&nbsp;</a>        </li>
+
+        <li><a href="../AttorneyInfo/index.html">&nbsp;&nbsp;Attorney Info</a>        </li>
+        <li><a href="#" class="MenuBarItemSubmenu">Human Resources</a>
+          <ul>
+            <li><a href="../HumanResources/EmploymentOpportunities.html">Employment Opportunities</a></li>
+            <li><a href="../HumanResources/GeneralInformation.html">General Information</a></li>
+          </ul>
+
+        </li>
+        <li><a href="../AZ-Index.html">A-Z Index</a></li>
+      </ul></td>
+  </tr>
+ <!--End of Header with Drop Down Menu -->
+</Table>
+<!-- InstanceBeginEditable name="Workspace" -->
+<p align="center" class="PageTitle">Slip Opinions</p>
+<Table width="95%" align="center">
+<TR><TD>
+
+<span class="smalltext"><strong>Note</strong>: The Court works to ensure the timeliness and accuracy of this information. However, researchers should independently verify the status of the opinions as well as their precedential value and note that the slip opinions filed on the Court's CM/ECF system are the official court documents of record.</span></TD></TR>
+<TR><TD align="right">
+<a href="PDF_Documents.html">Having trouble viewing PDF documents?</a></TD></TR></Table>
+
+<table width="10%" border="0" align="left" cellpadding="0" cellspacing="0">
+   <tr>
+    <td height="30" align="center"><a href="SlipOps-2011.html">2011</a></td>
+  </tr>
+  <tr>
+
+    <td height="30" align="center"><a href="SlipOps-2010.html">2010</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2009.html">2009</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2008.html">2008</a></td>
+
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2007.html">2007</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2006.html">2006</a></td>
+  </tr>
+  <tr>
+
+    <td height="30" align="center"><a href="SlipOps-2005.html">2005</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2004.html">2004</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2003.html">2003</a></td>
+
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2002.html">2002</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-2001.html">2001</a></td>
+  </tr>
+  <tr>
+
+    <td height="30" align="center"><a href="SlipOps-2000.html">2000</a></td>
+  </tr>
+  <tr>
+    <td height="30" align="center"><a href="SlipOps-1999.html">1999</a></td>
+  </tr>
+</table>
+<table align="center" border="1" cellpadding="6" cellspacing="0" width="85%">
+      <tr>
+        <th>Number</th>
+
+        <th>Caption</th>
+        <th>Date</th>
+        <th>Court No.</th>
+        <th>Judge</th>
+        <th>Jurisdiction</th>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49">12-64</td>
+        <td height="49">US Magnesium LLC v. United States<br />
+        <em>This opinion is confidential. The public version will be posted as soon as it is available.</em></td>
+        <td align="center" height="49">05/16/2012</td>
+        <td align="center" height="49">11-00076</td>
+
+        <td align="center">Goldberg</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-63.pdf">12-63</a></td>
+        <td height="49">Tianjin Magnesium Int'l Co.. v. United States</td>
+        <td align="center" height="49">05/16/2012</td>
+
+        <td align="center" height="49">Consol. 11-00006</td>
+        <td align="center">Tsoucalas</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-62.pdf">12-62</a></td>
+        <td height="49">Corning Gilbert Inc. v. United States</td>
+
+        <td align="center" height="49">05/14/2012</td>
+        <td align="center" height="49">11-00511</td>
+        <td align="center">Gordon</td>
+        <td align="center">1581(a)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-61.pdf">12-61</a></td>
+
+        <td height="49">KYD, Inc. v. United States</td>
+        <td align="center" height="49">05/08/2012</td>
+        <td align="center" height="49">09-00034</td>
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-60.pdf">12-60</a></td>
+        <td height="49">Home Prods. Int'l, Inc. v. United States<br />
+          <em>Errata: 05/04/2012</em></td>
+        <td align="center" height="49">05/03/2012</td>
+        <td align="center" height="49">Consol. 11-00104</td>
+
+        <td align="center">Gordon</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49">12-59</td>
+        <td height="49">Fisher S.A. Comercio v. United States<br />
+          <em>The opinion is confidential. The public version will be posted as soon as it is available.</em></td>
+
+        <td align="center" height="49">04/30/2012</td>
+        <td align="center" height="49">10-00281</td>
+        <td align="center">Goldberg</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-58.pdf">12-58</a></td>
+
+        <td height="49">Jinan Farmlady Trading Co. v. United States</td>
+        <td align="center" height="49">04/26/2012</td>
+        <td align="center" height="49">11-00195</td>
+        <td align="center">Tsoucalas</td>
+        <td align="center">1581(i)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-57.pdf">12-57</a></td>
+        <td height="49">Wuhu Fenglian Co., Ltd. v. United States</td>
+        <td align="center" height="49">04/25/2012</td>
+        <td align="center" height="49">11-00045</td>
+        <td align="center">Carman</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-56.pdf">12-56</a></td>
+        <td height="49">Union Steel v. United States</td>
+        <td align="center" height="49">04/25/2012</td>
+        <td align="center" height="49">09-00130</td>
+
+        <td align="center">Stanceu</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-55.pdf">12-55</a></td>
+        <td height="49">United States Steel Corp. v. United States</td>
+        <td align="center" height="49">04/25/2012</td>
+
+        <td align="center" height="49">Consol. 09-00156</td>
+        <td align="center">Stanceu</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-54.pdf">12-54</a></td>
+        <td height="49">Tianjin Magnesium Int'l Co. v. United States</td>
+
+        <td align="center" height="49">04/25/2012</td>
+        <td align="center" height="49">Consol. 09-00012</td>
+        <td align="center">Tsoucalas</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-53.pdf">12-53</a></td>
+
+        <td height="49">Deckers Outdoor Corp. v. United States</td>
+        <td align="center" height="49">4/24/2012</td>
+        <td align="center" height="49">08-00410</td>
+        <td align="center">Carman</td>
+        <td align="center">1581(a)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-52.pdf">12-52</a></td>
+        <td height="49">United Synthetics, Inc. v. United States</td>
+        <td align="center" height="49">4/20/2012</td>
+        <td align="center" height="49">08-00139</td>
+        <td align="center">Carman<br />
+
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-51.pdf">12-51</a></td>
+        <td height="49">Almond Bros. Lumber Co. v. United States</td>
+
+        <td align="center" height="49">4/19/2012</td>
+        <td align="center" height="49">08-00036</td>
+        <td align="center">Eaton</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-50.pdf">12-50</a></td>
+
+        <td height="49">United States v. Nitek Elecs., Inc.</td>
+        <td align="center" height="49">04/13/2012</td>
+        <td align="center" height="49">11-00078</td>
+        <td align="center">Barzilay</td>
+        <td align="center">1582</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-49.pdf">12-49</a></td>
+        <td height="49">United States v. Great Am. Ins. Co. of NY</td>
+        <td align="center" height="49">04/11/2012</td>
+        <td align="center" height="49">09-00187</td>
+        <td align="center">Goldberg</td>
+
+        <td align="center">1582</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-48.PDF">12-48</a></td>
+        <td height="49">United States Steel Corp. v. United States</td>
+        <td align="center" height="49">04/11/2012</td>
+        <td align="center" height="49">08-00216</td>
+
+        <td align="center">Aquilino</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-47.pdf">12-47</a></td>
+        <td height="49">Maclean-Fogg Co. v. United States</td>
+        <td align="center" height="49">04/04/2012</td>
+
+        <td align="center" height="49">Consol. 11-00209</td>
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-46.pdf">12-46</a></td>
+        <td height="49">Diamond Sawblades Mfrs. Coal. v. United States</td>
+
+        <td align="center" height="49">03/29/2012</td>
+        <td align="center" height="49">Consol. 06-00248</td>
+        <td align="center">Musgrave</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-45.pdf">12-45</a></td>
+
+        <td height="49">Lifestyle Enter., Inc. v. United States</td>
+        <td align="center" height="49">03/28/2012</td>
+        <td align="center" height="49">Consol. 09-00378</td>
+        <td align="center">Restani</td>
+        <td align="center">1581(c)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-44.pdf">12-44</a></td>
+        <td height="49">Applikon Biotechnology, Inc. v. United States</td>
+        <td align="center" height="49">03/28/2012</td>
+        <td align="center" height="49">Consol. 07-00364</td>
+        <td align="center">Musgrave</td>
+
+        <td align="center">1581(a)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-43.pdf">12-43</a></td>
+        <td height="49">Diamond Sawblades Mfrs. Coal. v. United States</td>
+        <td align="center" height="49">03/27/2012</td>
+        <td align="center" height="49">09-00110</td>
+
+        <td align="center">Musgrave</td>
+        <td align="center">1581(c)(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-42.pdf">12-42</a></td>
+        <td height="49">Acme Furniture Indus., Inc. v. United States</td>
+        <td align="center" height="49">03/23/2012</td>
+
+        <td align="center" height="49">11-00137</td>
+        <td align="center">Carman</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-41.PDF">12-41</a></td>
+        <td height="49">Target Stores v. United States</td>
+
+        <td align="center" height="49">03/22/2012</td>
+        <td align="center" height="49">Consol. 06-00444</td>
+        <td align="center">Aquilino</td>
+        <td align="center">1581(a)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-40.pdf">12-40</a></td>
+
+        <td height="49">Yangzhou Bestpak Gifts &amp; Crafts Co., Ltd. v. United States</td>
+        <td align="center" height="49">03/22/2012</td>
+        <td align="center" height="49">10-00295</td>
+        <td align="center">Barzilay</td>
+        <td align="center">1581(c)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-39.pdf">12-39</a></td>
+        <td height="49">Qingdao Sea-Line Trading Co., Ltd. v. United States</td>
+        <td align="center" height="49">03/21/2012</td>
+        <td align="center" height="49">10-00304</td>
+        <td align="center">Eaton</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-38.pdf">12-38</a></td>
+        <td height="49">Heveafil SDN. BHD. v. United States</td>
+        <td align="center" height="49">03/21/2012</td>
+        <td align="center" height="49">04-00477</td>
+
+        <td align="center">Goldberg</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-37.pdf">12-37</a></td>
+        <td height="49">Tampa Bay Fisheries, Inc. v. United States<br />
+        <em>Errata: 04/23/2012</em></td>
+
+        <td align="center" height="49">03/20/2012</td>
+        <td align="center" height="49">08-00404</td>
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-36.pdf">12-36</a></td>
+        <td height="49">Ad Hoc Shrimp Trade Action Comm. v. United States</td>
+        <td align="center" height="49">03/20/2012</td>
+        <td align="center" height="49">10-00275</td>
+        <td align="center">Pogue</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-35.pdf">12-35</a></td>
+        <td height="49">Global Commodity Group LLC v. United States</td>
+        <td align="center" height="49">03/19/2012</td>
+        <td align="center" height="49">11-00172</td>
+
+        <td align="center">Carman</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-34.pdf">12-34</a></td>
+        <td height="49">PT Pindo Deli Pulp and Paper Mills v. United States</td>
+        <td align="center" height="49">03/16/2012</td>
+
+        <td align="center" height="49">10-00370</td>
+        <td align="center">Restani</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-33.pdf">12-33</a></td>
+        <td height="49">PT Pindo Deli Pulp and Paper Mills  v. United States</td>
+
+        <td align="center" height="49">03/16/2012</td>
+        <td align="center" height="49">10-00369</td>
+        <td align="center">Restani</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-32.pdf">12-32</a></td>
+
+        <td height="49">United States v. Country Flavor Corp.<br />
+        <em>Errata: 03/27/2012</em></td>
+        <td align="center" height="49">03/15/2012</td>
+        <td align="center" height="49">11-00138</td>
+        <td align="center">Ridgway</td>
+        <td align="center">1582</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-31.pdf">12-31</a></td>
+        <td height="49">Mid Continent Nail Corp. v. United States</td>
+        <td align="center" height="49">03/07/2012</td>
+        <td align="center" height="49">10-00247</td>
+        <td align="center">Tsoucalas</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-30.pdf">12-30</a></td>
+        <td height="49">Fischer S.A. Comercio, Industria &amp; Agricultura v. United States</td>
+        <td align="center" height="49">03/07/2012</td>
+
+        <td align="center" height="49">08-00277</td>
+        <td align="center">Carman</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-29.pdf">12-29</a></td>
+        <td height="49">Ashley Furniture Indus., Inc. v. United States</td>
+
+        <td align="center" height="49">03/06/2012</td>
+        <td align="center" height="49">Consol. 07-00323</td>
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-28.pdf">12-28</a></td>
+        <td height="49">NSK Corp. v. United States</td>
+        <td align="center" height="49">03/06/2012</td>
+        <td align="center" height="49">Consol. 07-00223</td>
+        <td align="center">Carman<br />
+
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-27.pdf">12-27</a></td>
+        <td height="49">Pat Huval Rest. &amp; Oyster Bar, Inc. v. United States Int'l Trade Comm'n</td>
+
+        <td align="center" height="49">03/01/2012</td>
+        <td align="center" height="49">Consol. 06-00290</td>
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-26.pdf">12-26</a></td>
+        <td height="49">La Crosse Tech., Ltd. v. United States</td>
+        <td align="center" height="49">02/29/2012</td>
+        <td align="center" height="49">07-00114</td>
+        <td align="center">Musgrave</td>
+
+        <td align="center">1581(a)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-25.pdf">12-25</a></td>
+        <td height="49">Trust Chem Co. Ltd. v. United States</td>
+        <td align="center" height="49">02/29/2012</td>
+        <td align="center" height="49">10-00214</td>
+
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-24.pdf">12-24</a></td>
+        <td height="49">Union Steel v. United States</td>
+        <td align="center" height="49">02/27/2012</td>
+
+        <td align="center" height="49">Consol. 11-00083</td>
+        <td align="center">Restani</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-23rev.pdf">12-23</a></td>
+        <td height="49">SGL Carbon LLC v. United States<br />
+
+          <em>Errata: 03/01/2012</em></td>
+        <td align="center" height="49">02/22/2012</td>
+        <td align="center" height="49">Consol. 11-00389</td>
+        <td align="center">Ridgway</td>
+        <td align="center">1581(c)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-22.pdf">12-22</a></td>
+        <td height="49">Liberty Frozen Foods Pvt., Ltd. v. United States</td>
+        <td align="center" height="49">02/21/2012</td>
+        <td align="center" height="49">Consol. 10-00231</td>
+        <td align="center">Pogue</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-21.pdf">12-21</a></td>
+        <td height="49">Standard Furniture Mfg. Co., Inc. v. United States</td>
+        <td align="center" height="49">02/17/2012</td>
+        <td align="center" height="49">Consol. 07-00028</td>
+
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-20.pdf">12-20</a></td>
+
+        <td height="49">Furniture Brands Int'l, Inc. v. United States</td>
+        <td align="center" height="49">02/17/2012</td>
+        <td align="center" height="49">07-00026</td>
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-19.pdf">12-19</a></td>
+        <td height="49">Hiep Thanh Seafood Joint Stock Co. v. United States</td>
+        <td align="center" height="49">02/15/2012</td>
+        <td align="center" height="49">Consol. 09-00270</td>
+
+        <td align="center">Gordon</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-18.pdf">12-18</a></td>
+        <td height="49">Rack Room Shoes v. United States</td>
+        <td align="center" height="49">02/15/2012</td>
+
+        <td align="center" height="49">07-00404</td>
+        <td align="center">Pogue<br />
+          Restani<br />
+          Barzilay</td>
+        <td align="center">1581(i)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-17.pdf">12-17</a></td>
+        <td height="49">United States v. Robert E. Landweer &amp; Co.</td>
+        <td align="center" height="49">02/08/2012</td>
+        <td align="center" height="49">09-00060</td>
+        <td align="center">Gordon</td>
+
+        <td align="center">1582</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-16.pdf">12-16</a></td>
+        <td height="49">Ashley Furniture Indus., Inc. v. United States</td>
+        <td align="center" height="49">02/07/2012</td>
+        <td align="center" height="49">Consol. 07-00323</td>
+
+        <td align="center">Carman<br />
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-15.pdf">12-15</a></td>
+
+        <td height="49">United States v. Callanish, Ltd.</td>
+        <td align="center" height="49">02/01/2012</td>
+        <td align="center" height="49">03-00658</td>
+        <td align="center">Stanceu</td>
+        <td align="center">1582</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-14.pdf">12-14</a></td>
+        <td height="49">Ashley Furniture Indus., Inc. v. United States</td>
+        <td align="center" height="49">01/31/2012</td>
+        <td align="center" height="49">Consol. 07-00323</td>
+        <td align="center"><p>Carman<br />
+
+          Stanceu<br />
+          Gordon </p></td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-13.pdf">12-13</a></td>
+        <td height="49">Zhejiang Dunan Hetian Metal Co. v. United States</td>
+
+        <td align="center" height="49">01/27/2012</td>
+        <td align="center" height="49">09-00217</td>
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-12a.pdf">12-12</a></td>
+
+        <td height="49">Diamond Sawblades Mfrs. Coal. v. United States</td>
+        <td align="center" height="49">01/26/2012</td>
+        <td align="center" height="49">09-00110</td>
+        <td align="center">Musgrave</td>
+        <td align="center">1581(c)(i)</td>
+      </tr>
+
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-11.pdf">12-11</a></td>
+        <td height="49">Ethan Allen Global, Inc. v. United States</td>
+        <td align="center" height="49">01/20/2012</td>
+        <td align="center" height="49">08-00302</td>
+        <td align="center">Carman<br />
+
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-10.pdf">12-10</a></td>
+        <td height="49">KYD, Inc. v. United States</td>
+
+        <td align="center" height="49">01/18/2012</td>
+        <td align="center" height="49">09-00034</td>
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-9.pdf">12-09</a></td>
+
+        <td height="49">Grobest &amp; I-Mei Industrial (Vietnam) Co. v. United States</td>
+        <td align="center" height="49">01/18/2012</td>
+        <td align="center" height="49">Consol. 10-00238</td>
+        <td align="center">Pogue</td>
+        <td align="center">1581(c)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-08.pdf">12-08</a></td>
+        <td height="49">Schaeffler Grp. USA, Inc. v. United States</td>
+        <td align="center" height="49">01/17/2012</td>
+        <td align="center" height="49">Consol. 06-00432</td>
+        <td align="center">Carman<br />
+
+          Stanceu<br />
+          Gordon</td>
+        <td align="center">1581(i)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-7.pdf">12-07</a></td>
+        <td height="49">Shantou Red Garden Foodstuff Co., Ltd. v. United States</td>
+
+        <td align="center" height="49">01/13/2012</td>
+        <td align="center" height="49">05-00080</td>
+        <td align="center">Stanceu</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-06.pdf">12-06</a></td>
+
+        <td height="49">United States v. Sweet Little Mexico Corp.</td>
+        <td align="center" height="49">01/12/2012</td>
+        <td align="center" height="49">09-00236<br />
+          10-00374</td>
+        <td align="center">Musgrave</td>
+        <td align="center">1582</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-5.pdf">12-05</a></td>
+        <td height="49">Papierfabrik August Koehler AG v. United States</td>
+        <td align="center" height="49">01/10/2012</td>
+        <td align="center" height="49">08-00430</td>
+        <td align="center">Pogue</td>
+
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-04.pdf">12-04</a></td>
+        <td height="49">Home Prods. Int'l, Inc. v. United States</td>
+        <td align="center" height="49">01/06/2012</td>
+        <td height="49">Consol. 11-00104</td>
+
+        <td align="center">Gordon</td>
+        <td align="center">1581(c)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-03.pdf">12-03</a></td>
+        <td height="49">Epoch Design LLC v. United States</td>
+        <td align="center" height="49">01/03/2012</td>
+
+        <td align="center" height="49">09-00463</td>
+        <td align="center">Ridgway</td>
+        <td align="center">1581(a)</td>
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-02.pdf">12-02</a></td>
+        <td height="49">New Hampshire Ball Bearing, Inc. v. United States</td>
+
+        <td align="center" height="49">01/03/2012</td>
+        <td align="center" height="49">08-00398</td>
+        <td align="center"><p>Carman<br />
+          Stanceu<br />
+          Gordon</p></td>
+        <td align="center">1581(i)</td>
+
+      </tr>
+      <tr bordercolorlight="#C0C0C0" bordercolordark="#808080">
+        <td align="center" height="49"><a href="Slip_op12/12-01.pdf">12-01</a></td>
+        <td height="49">Estee Lauder, Inc. v. United States</td>
+        <td align="center" height="49">01/03/2012</td>
+        <td align="center" height="49">07-00217</td>
+        <td align="center">Musgrave</td>
+
+        <td align="center">1581(a)</td>
+      </tr>
+      
+            </table>
+<p><br clear="all" />
+</p>
+<p>&nbsp; </p>
+<!-- InstanceEndEditable -->
+<p class="smalltext">Last modified 
+  <!-- #BeginDate format:Am1 -->May 16, 2012<!-- #EndDate -->
+</p>
+
+<!--Script for Menu Bar-->
+<script type="text/javascript">
+<!--
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+</script>
+<!--End of Script for Menu Bar-->
+
+
+</body>
+<!-- InstanceEnd --></html>
