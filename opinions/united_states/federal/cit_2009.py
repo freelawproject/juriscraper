@@ -1,11 +1,11 @@
-import cit
+import cit_2010
 
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(cit.Site):
+class Site(cit_2010.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2009.html'
@@ -21,3 +21,6 @@ class Site(cit.Site):
             case_dates.append(date.fromtimestamp(
                          time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
         return case_dates
+
+    def _get_nature_of_suit(self):
+        return None
