@@ -47,7 +47,7 @@ We use a few tools pretty frequently while building these scrapers. The first is
 We also generally use Eclipse with the PyDev and Aptana tools installed. This 
 is useful because it allows syntax highlighting and PyLint integration. 
 
-For scrapers to be merged, they need to be PEP8 compliant, and should 
+For scrapers to be merged, they need to be [PEP8][4] compliant, and should 
 efficiently parse a page, returning no exceptions and having no major Pylint 
 problems.  
 
@@ -56,7 +56,7 @@ that makes sense and that nobody else is working on.
 
 When you're done with your scraper, fork this repository, push your changes into
 your fork, and then send a pull request for your changes. Be sure to 
-remember to update the __init__.py file as well, since it contains a list of
+remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
 
 
@@ -117,3 +117,4 @@ Juriscraper is licensed under the permissive BSD license.
 [1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/scrape_and_extract.py
 [2]: http://courtlistener.com
 [3]: https://bitbucket.org/mlissner/lxml-xpath-tester 
+[4]: http://www.python.org/dev/peps/pep-0008/
