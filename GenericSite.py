@@ -152,14 +152,18 @@ class GenericSite(object):
         # Make a unique ID. ETag and Last-Modified from courts cannot be trusted
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
-    def _download(self):
+    def _download(self, use_sessions=False):
         # methods for downloading the latest version of Site
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         if self.method == 'GET':
-            r = requests.get(self.url,
-                             allow_redirects=False,
-                             headers={'User-Agent':'Juriscraper'})
+            if use_sessions:
+                s = requests.session()
+                r = s.get(self.url, headers={'User-Agent':'Juriscraper'})
+            else:
+                r = requests.get(self.url,
+                                 allow_redirects=False,
+                                 headers={'User-Agent':'Juriscraper'})
         elif self.method == 'POST':
             r = requests.post(self.url,
                               allow_redirects=False,

@@ -1,4 +1,5 @@
-__all__ = ['id_civil',
+__all__ = ['ak',
+           'id_civil',
            'id_criminal',
            'in_supreme',
            'wi',
