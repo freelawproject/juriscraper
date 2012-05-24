@@ -90,7 +90,8 @@ Version History
 0.7 - Support for all federal district courts with non-PACER opinion listings
 0.8 - Support for all federal district courts with PACER written opinion reports
 0.9 - Support for all federal district bankruptcy courts
-1.0 - add video, oral argument audio, and transcripts everywhere available
+1.0 - For every court above where a backscraper is possible, it is implemented.
+1.1 - Support video, oral argument audio, and transcripts everywhere available
 
 **Beyond**  
  - add other countries, starting with courts issuing opinions in English.
