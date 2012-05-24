@@ -12,7 +12,7 @@ The code for that caller can be [found here][1].
 
 Some of the design goals for this project are:  
 
- - extensibility to support video, oral arguments, etc.
+ - extensibility to support video, oral argument audio, etc.
  - extensibility to support geographies (US, Cuba, Mexico, California) 
  - Mime type identification through magic numbers
  - Generalized architecture with no code repetition
@@ -79,16 +79,21 @@ all callers have thus far been able to work directly with the Python objects.
 Version History
 ===============
 **Current**  
-0.1 - Supports all common Federal Appeals courts
+0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
 
 **Roadmap**  
-0.2 - Support for all possible Federal District courts and small Federal Appeals courts  
-0.3 - Support for all state appeals courts
+0.2 - Support for all federal courts of special jurisdiction (Veterans, Tax, etc.)
+0.3 - Support for all federal bankruptcy appellate panels (1st, 4th and 10th Cir.)
+0.4 - Support for all state courts of last resort (typically the "Supreme" court)
+0.5 - Support for all intermediate appellate state courts
+0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
+0.7 - Support for all federal district courts with non-PACER opinion listings
+0.8 - Support for all federal district courts with PACER written opinion reports
+0.9 - Support for all federal district bankruptcy courts
+1.0 - add video, oral argument audio, and transcripts everywhere available
 
 **Beyond**  
- - add oral arguments  
- - add video  
- - add other countries
+ - add other countries, starting with courts issuing opinions in English.
 
 License
 ========
