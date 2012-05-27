@@ -1,8 +1,8 @@
-from opinions.united_states.state import nv_supreme
+from opinions.united_states.state import or_supreme
 
 
 # Create a site object
-site = nv_supreme.Site()
+site = or_supreme.Site()
 
 # Populate it with data
 site.parse()
