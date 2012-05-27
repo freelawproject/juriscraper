@@ -41,12 +41,7 @@ class Site(GenericSite):
         return dates
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for opinion in self.html.xpath(
-        "/html/body//h2[contains(.,'SUPREME')]"
-        "/following-sibling::ul[1]/li[a/@href]"):
-            statuses.append('Published')
-        return statuses
+        return ["Published"] * len(self.case_names)
 
     def _normalizeDateString(self, date):
 
@@ -67,9 +62,3 @@ class Site(GenericSite):
                 else:
                     dateComponents[position] = '20' + dateComponent
         return '/'.join(dateComponents)
-
-
-"""
-    def _get_docket_numbers(self):
-        return [t for t in self.html.xpath('//table/tr/td[2]/text()[1]')]
-       """
