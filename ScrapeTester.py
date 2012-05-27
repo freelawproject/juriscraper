@@ -1,8 +1,8 @@
-from opinions.united_states.state import or_supreme
+from opinions.united_states.state import wash_supreme
 
 
 # Create a site object
-site = or_supreme.Site()
+site = wash_supreme.Site()
 
 # Populate it with data
 site.parse()
