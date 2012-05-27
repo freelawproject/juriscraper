@@ -1,0 +1,13 @@
+syntax: glob
+
+# All compiled .pyc files
+*.pyc
+
+# Simple Tester code
+*crapeTester.*
+
+# File created by Mac OS X
+.DS_Store
+
+# Console output to file
+stdout.txt
