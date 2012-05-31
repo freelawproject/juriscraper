@@ -52,6 +52,12 @@ class GenericSite(object):
         self.dispositions = None
         self.judges = None
         self.nature_of_suit = None
+        self.west_citations = None
+        self.document_summaries = None
+        self.causes = None
+        self.adv_numbers = None
+        self.docket_document_numbers = None
+        self.docket_attachment_numbers = None
 
     def __str__(self):
         out = []
@@ -223,5 +229,23 @@ class GenericSite(object):
         return None
 
     def _get_nature_of_suit(self):
+        return None
+    
+    def _get_west_citations(self):
+        return None
+    
+    def _get_document_summaries(self):
+        return None
+    
+    def _get_causes(self):
+        return None
+    
+    def _get_adv_numbers(self):
+        return None
+    
+    def _get_docket_document_numbers(self):
+        return None
+    
+    def _get_docket_attachment_numbers(self):
         return None
 
