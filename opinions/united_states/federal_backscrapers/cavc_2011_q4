@@ -1,0 +1,37 @@
+# Scraper for the United States Court of Appeals for Veterans Claims
+# CourtID: cavc
+# Court Short Name: Vet.App.
+from juriscraper.GenericSite import GenericSite
+import time
+from datetime import date
+from lxml import html
+
+class Site(GenericSite):
+    def __init__(self):
+        super(Site, self).__init__()
+        self.url = 'http://www.uscourts.cavc.gov/orders_and_opinions/Opinions.cfm'
+        self.court_id = self.__module__
+
+    def _get_case_dates(self):
+        dates = []
+        for t in self.html.xpath('//table/tbody/tr[position() > 1]/td[1]/p/text()'):
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(t, '%d%b%y'))))
+        return dates
+
+    def _get_docket_numbers(self):
+        return [t for t in self.html.xpath('//table/tbody/tr[position() > 1]/td[2]/p/a/text()')]
+    
+    def _get_download_urls(self):
+        return [t for t in self.html.xpath('//table/tbody/tr[position() > 1]/td[2]/p/a/@href')]
+
+    def _get_case_names(self):
+        case_names = []
+        for t in self.html.xpath('//table/tbody/tr[position() > 1]/td[3]/p/text()'):
+            # See https://en.wikipedia.org/wiki/United_States_Secretary_of_Veterans_Affairs
+            # to know which name to append here for different opinion dates.
+            # Jan. 20, 2009 to present is Shinseki.
+            case_names.append(t + ' v. Shinseki')
+        return case_names
+
+    def _get_precedential_statuses(self):
+        return ['Published'] * len(self.case_names)

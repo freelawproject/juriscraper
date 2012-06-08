@@ -1,9 +1,11 @@
+"""Scraper for the United States Court of Appeals for the Armed Forces
+CourtID: armfor
+Court Short Name: C.A.A.F."""
+
 from juriscraper.GenericSite import GenericSite
-import re
 import time
 from datetime import date
 from lxml import html
-
 
 class Site(GenericSite):
     def __init__(self):
@@ -13,7 +15,9 @@ class Site(GenericSite):
             url_year = today.year
         else:
             url_year = today.year - 1
-        self.url = 'http://www.armfor.uscourts.gov/newcaaf/opinions/%sSepTerm.htm' % url_year
+        self.url = (
+            'http://www.armfor.uscourts.gov/newcaaf/opinions/%sSepTerm.htm'
+                % url_year )
         self.court_id = self.__module__
 
     def _get_case_names(self):
@@ -26,7 +30,8 @@ class Site(GenericSite):
         dates = []
         for s in self.html.xpath('//table//tr/td[3]/font/text()'):
             s = s.strip()
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%b %d, %Y'))))
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(
+                s, '%b %d, %Y'))))
         return dates
 
     def _get_docket_numbers(self):
