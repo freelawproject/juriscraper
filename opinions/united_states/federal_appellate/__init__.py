@@ -1,5 +1,4 @@
-__all__ = ['armfor',
-           'ca1',
+__all__ = ['ca1',
            'ca2_p',
            'ca2_u',
            'ca3_p',
@@ -17,8 +16,6 @@ __all__ = ['armfor',
            'ca11_u',
            'cadc',
            'cafc',
-           'cit',
            'scotus_chambers',
            'scotus_relating',
-           'scotus_slip', 
-           'tax', ]
+           'scotus_slip', ]
