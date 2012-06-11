@@ -1,7 +1,8 @@
-__all__ = ['ak',
-           'id_civil',
-           'id_criminal',
-           'in_supreme',
-           'wi',
-           'wv',
-           'wy', ]
+__all__ = ['alaska',
+           'idaho_civil',
+           'idaho_criminal',
+           'ind_supreme',
+           'mich',
+           'wis',
+           'wva',
+           'wyo', ]
