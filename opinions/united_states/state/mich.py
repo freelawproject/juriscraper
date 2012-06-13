@@ -29,7 +29,7 @@ class Site(GenericSite):
 
     def _get_case_names(self):
         case_names = []
-        # Some stray p tags and span tags make this xpath complex.        
+        # Some stray p tags and span tags make this xpath complex.
         for txt in self.html.xpath(
             '//table[4]/tr/td/table[3]/tr/td[3]/a/text() | //table[4]/tr/td/table[3]/tr/td[3]/*/a/text()'):
             # Two case names ignored because we get them under other names.
