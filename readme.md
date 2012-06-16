@@ -8,7 +8,9 @@ Juriscraper is part of a two-part system. The second part is the 'caller', which
 should be developed by the system using Juriscraper. The caller is responsible 
 for calling a scraper, downloading and saving its results. A reference 
 implementation of the caller has been developed and is in use at [CourtListener.com][2]. 
-The code for that caller can be [found here][1].
+The code for that caller can be [found here][1]. There is also a basic
+sample caller [included in Juriscraper][5] that can be used for testing or as a
+starting point when developing your own.
 
 Some of the design goals for this project are:  
 
@@ -38,6 +40,26 @@ Installation & dependencies
     # add Juriscraper to your python path (in Ubuntu/Debian)
     sudo ln -s /usr/local/juriscraper /usr/lib/python2.7/dist-packages/juriscraper
     
+
+Joining the project as a developer
+==================================
+We use a few tools pretty frequently while building these scrapers. The first is
+[a sister project called xpath-tester][3] that helps debug XPath queries.
+
+We also generally use Eclipse with the PyDev and Aptana tools installed. This 
+is useful because it allows syntax highlighting and PyLint integration. 
+
+For scrapers to be merged, they need to be [PEP8][4] compliant, and should 
+efficiently parse a page, returning no exceptions and having no major Pylint 
+problems.  
+
+When you're ready to develop a scraper, get in touch, and we'll find you one
+that makes sense and that nobody else is working on.
+
+When you're done with your scraper, fork this repository, push your changes into
+your fork, and then send a pull request for your changes. Be sure to 
+remember to update the `__init__.py` file as well, since it contains a list of
+completed scrapers.
 
 
 Usage
@@ -102,3 +124,6 @@ Juriscraper is licensed under the permissive BSD license.
 
 [1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/scrape_and_extract.py
 [2]: http://courtlistener.com
+[3]: https://bitbucket.org/mlissner/lxml-xpath-tester 
+[4]: http://www.python.org/dev/peps/pep-0008/
+[5]: https://bitbucket.org/mlissner/juriscraper/src/tip/sample_caller.py
