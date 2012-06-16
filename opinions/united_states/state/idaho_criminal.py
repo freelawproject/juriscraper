@@ -1,6 +1,7 @@
-import id_civil
+import idaho_civil
 
-class Site(id_civil.Site):
+
+class Site(idaho_civil.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.isc.idaho.gov/opinions/sccrim.htm'

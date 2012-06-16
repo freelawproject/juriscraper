@@ -1,8 +1,8 @@
 from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
-from datetime import timedelta
 from lib.string_utils import clean_string
+from lxml import html
 
 
 class Site(GenericSite):
@@ -25,7 +25,10 @@ class Site(GenericSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath('//table/tbody/tr/td[2]/text()')]
+        nums = []
+        for e in self.html.xpath('//table/tbody/tr/td[2]'):
+            nums.append(html.tostring(e, method='text', encoding='unicode').lower().strip())
+        return nums
 
     def _get_precedential_statuses(self):
         statuses = []

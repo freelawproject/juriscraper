@@ -3,9 +3,9 @@ import time
 from datetime import date
 
 
-class in_supreme(GenericSite):
+class Site(GenericSite):
     def __init__(self):
-        super(in_supreme, self).__init__()
+        super(Site, self).__init__()
         self.url = 'http://www.in.gov/judiciary/opinions/archsup.html'
         self.court_id = self.__module__
 

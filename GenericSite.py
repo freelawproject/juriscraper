@@ -25,6 +25,7 @@ handler.setFormatter(formatter)
 #logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s',
 #                    level=logging.DEBUG)
 
+
 class InsanityException(Exception):
     def __init__(self, message):
         Exception.__init__(self, message)
@@ -37,27 +38,31 @@ class GenericSite(object):
     Should not contain lists that can't be sorted by the _date_sort function.'''
     def __init__(self):
         super(GenericSite, self).__init__()
-        self.html = None
-        self.status = None
-        self.method = 'GET'
+
+        # Computed meta data
         self.hash = None
-        self.download_urls = None
-        self.case_names = None
+        self.html = None
+        self.method = 'GET'
+        self.status = None
+
+        # Scraped meta data
+        self.adversary_numbers = None
         self.case_dates = None
+        self.case_names = None
+        self.causes = None
+        self.dispositions = None
+        self.docket_attachment_numbers = None
+        self.docket_document_numbers = None
         self.docket_numbers = None
-        self.neutral_citations = None
-        self.precedential_statuses = None
+        self.download_urls = None
+        self.judges = None
         self.lower_courts = None
         self.lower_court_judges = None
-        self.dispositions = None
-        self.judges = None
         self.nature_of_suit = None
+        self.neutral_citations = None
+        self.precedential_statuses = None
+        self.summaries = None
         self.west_citations = None
-        self.document_summaries = None
-        self.causes = None
-        self.adv_numbers = None
-        self.docket_document_numbers = None
-        self.docket_attachment_numbers = None
 
     def __str__(self):
         out = []
@@ -69,17 +74,23 @@ class GenericSite(object):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
-        self.download_urls = self._get_download_urls()
-        self.case_names = self._get_case_names()
+        self.adversary_numbers = self._get_adversary_numbers()
         self.case_dates = self._get_case_dates()
+        self.case_names = self._get_case_names()
+        self.causes = self._get_causes()
+        self.dispositions = self._get_dispositions()
+        self.docket_attachment_numbers = self._get_docket_attachment_numbers()
+        self.docket_document_numbers = self._get_docket_document_numbers()
         self.docket_numbers = self._get_docket_numbers()
-        self.neutral_citations = self._get_neutral_citations()
-        self.precedential_statuses = self._get_precedential_statuses()
+        self.download_urls = self._get_download_urls()
+        self.judges = self._get_judges()
         self.lower_courts = self._get_lower_courts()
         self.lower_court_judges = self._get_lower_court_judges()
-        self.dispositions = self._get_dispositions()
-        self.judges = self._get_judges()
         self.nature_of_suit = self._get_nature_of_suit()
+        self.neutral_citations = self._get_neutral_citations()
+        self.precedential_statuses = self._get_precedential_statuses()
+        self.summaries = self._get_summaries()
+        self.west_citations = self._get_west_citations()
         self._clean_attributes()
         self._check_sanity()
         self._date_sort()
@@ -95,9 +106,12 @@ class GenericSite(object):
 
     def _clean_attributes(self):
         '''Iterate over attribute values and clean them'''
-        for item in [self.docket_numbers, self.neutral_citations,
-                     self.lower_courts, self.lower_court_judges,
-                     self.dispositions, self.judges, self.nature_of_suit]:
+        for item in [self.adversary_numbers, self.causes, self.dispositions,
+                     self.docket_attachment_numbers,
+                     self.docket_document_numbers, self.docket_numbers,
+                     self.judges, self.lower_courts, self.lower_court_judges,
+                     self.nature_of_suit, self.neutral_citations,
+                     self.summaries, self.west_citations]:
             if item is not None:
                 item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
@@ -107,24 +121,38 @@ class GenericSite(object):
     def _check_sanity(self):
         '''Check that the objects attributes make sense:
         1. Do all the attributes have the same length?
-        2. ?
+        2. Do we have any content at all?
+        3. Is there a bare minimum of meta data? 
+        4. ?
 
-        If sanity is OK, no return value. If not, throw InsanityException
+        If sanity is OK, no return value. If not, throw InsanityException or 
+        warnings, as appropriate.
         '''
         lengths = {}
-        attributes = ['download_urls', 'case_names', 'case_dates',
-                      'docket_numbers', 'neutral_citations',
-                      'precedential_statuses', 'lower_courts',
-                      'lower_court_judges', 'dispositions',
-                      'judges']
+        attributes = ['adversary_numbers', 'case_dates', 'case_names', 'causes',
+                      'dispositions', 'docket_attachment_numbers',
+                      'docket_document_numbers', 'docket_numbers',
+                      'download_urls', 'judges', 'lower_courts',
+                      'lower_court_judges', 'nature_of_suit',
+                      'neutral_citations', 'precedential_statuses', 'summaries',
+                      'west_citations']
         for attr in attributes:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
         values = lengths.values()
         if values.count(values[0]) != len(values):
             # Are all elements equal?
-            raise InsanityException("%s: Scraped meta data fields have unequal lengths: %s"
-                                    % (self.court_id, lengths))
+            raise InsanityException("%s: Scraped meta data fields have unequal"
+                                    " lengths: %s" % (self.court_id, lengths))
+        if len(self.case_names) == 0:
+            logger.warning('%s: Returned with zero items.' % self.court_id)
+        else:
+            required_fields = ['case_dates', 'case_names',
+                               'precedential_statuses']
+            for field in required_fields:
+                if self.__getattribute__(field) is None:
+                    raise InsanityException('%s: Required fields do not '
+                            'contain any data: %s' % (self.court_id, field))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 
@@ -133,23 +161,24 @@ class GenericSite(object):
         re-coding due to violating DRY and because it works by checking for 
         lists, limiting the kinds of attributes we can add to the object.
         '''
+        attributes = [self.adversary_numbers, self.case_dates, self.case_names,
+                      self.causes, self.dispositions,
+                      self.docket_attachment_numbers,
+                      self.docket_document_numbers, self.docket_numbers,
+                      self.download_urls, self.judges, self.lower_courts,
+                      self.lower_court_judges, self.nature_of_suit,
+                      self.neutral_citations, self.precedential_statuses,
+                      self.summaries, self.west_citations]
+
         if len(self.case_names) > 0:
             # Note that case_dates must be first for sorting to work.
-            obj_list_attrs = [item for item in [self.case_dates, self.download_urls,
-                                                self.case_names, self.docket_numbers,
-                                                self.neutral_citations, self.precedential_statuses,
-                                                self.lower_courts, self.lower_court_judges,
-                                                self.dispositions, self.judges]
-                                                if isinstance(item, list)]
+            obj_list_attrs = [item for item in attributes
+                              if isinstance(item, list)]
             zipped = zip(*obj_list_attrs)
             zipped.sort(reverse=True)
             i = 0
             obj_list_attrs = zip(*zipped)
-            for item in [self.case_dates, self.download_urls,
-                         self.case_names, self.docket_numbers,
-                         self.neutral_citations, self.precedential_statuses,
-                         self.lower_courts, self.lower_court_judges,
-                         self.dispositions, self.judges]:
+            for item in attributes:
                 if isinstance(item, list):
                     item[:] = obj_list_attrs[i][:]
                     i += 1
@@ -198,22 +227,41 @@ class GenericSite(object):
         # generally recursive methods for the entire Site
         pass
 
-    def _get_download_urls(self):
+    def _get_adversary_numbers(self):
+        # Common in bankruptcy cases where there are adversary proceedings.
         return None
 
-    def _get_case_names(self):
+    def _get_download_urls(self):
         return None
 
     def _get_case_dates(self):
         return None
 
+    def _get_case_names(self):
+        return None
+
+    def _get_causes(self):
+        return None
+
+    def _get_dispositions(self):
+        return None
+
+    def _get_docket_attachment_numbers(self):
+        return None
+
+    def _get_docket_document_numbers(self):
+        return None
+
     def _get_docket_numbers(self):
         return None
 
-    def _get_neutral_citations(self):
+    def _get_judges(self):
         return None
 
-    def _get_precedential_statuses(self):
+    def _get_nature_of_suit(self):
+        return None
+
+    def _get_neutral_citations(self):
         return None
 
     def _get_lower_courts(self):
@@ -222,30 +270,11 @@ class GenericSite(object):
     def _get_lower_court_judges(self):
         return None
 
-    def _get_dispositions(self):
+    def _get_precedential_statuses(self):
         return None
 
-    def _get_judges(self):
+    def _get_summaries(self):
         return None
 
-    def _get_nature_of_suit(self):
-        return None
-    
     def _get_west_citations(self):
         return None
-    
-    def _get_document_summaries(self):
-        return None
-    
-    def _get_causes(self):
-        return None
-    
-    def _get_adv_numbers(self):
-        return None
-    
-    def _get_docket_document_numbers(self):
-        return None
-    
-    def _get_docket_attachment_numbers(self):
-        return None
-
