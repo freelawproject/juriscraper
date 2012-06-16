@@ -1,5 +1,3 @@
-from GenericSite import logger
-
 import signal
 import sys
 import traceback
@@ -12,9 +10,9 @@ die_now = False
 
 def signal_handler(signal, frame):
     # Trigger this with CTRL+4
-    logger.info('**************')
-    logger.info('Signal caught. Finishing the current court, then exiting...')
-    logger.info('**************')
+    print '**************'
+    print 'Signal caught. Finishing the current court, then exiting...'
+    print '**************'
     global die_now
     die_now = True
 
@@ -42,27 +40,35 @@ def scrape_court(court, binaries=False):
                 data = urllib2.urlopen(download_url).read()
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
-                    logger.warn('EmptyFileError: %s' % download_url)
-                    logger.warn(traceback.format_exc())
+                    print 'EmptyFileError: %s' % download_url
+                    print traceback.format_exc()
                     continue
             except:
-                logger.warn('DownloadingError: %s' % download_url)
-                logger.warn(traceback.format_exc())
+                print 'DownloadingError: %s' % download_url
+                print traceback.format_exc()
                 continue
 
-        logger.info('Adding new document found at: %s' % download_url)
+        # Normally, you'd do your save routines here...
+        print 'Adding new document found at: %s' % download_url
+        attributes = ['adversary_numbers', 'case_dates', 'case_names',
+                      'causes', 'dispositions', 'docket_attachment_numbers',
+                      'docket_document_numbers', 'docket_numbers',
+                      'download_urls', 'judges', 'lower_courts',
+                      'lower_court_judges', 'nature_of_suit',
+                      'neutral_citations', 'precedential_statuses',
+                      'summaries', 'west_citations']
+        for attr in attributes:
+            if site.__getattribute__(attr) is not None:
+                print '    %s: %s' % (attr, site.__getattribute__(attr)[i])
 
         # Extract the contents using e.g. antiword, pdftotext, etc.
-        #extract_doc_content(data)
+        # extract_doc_content(data)
 
-        logger.info("Successfully added: %s" % site.case_names[i])
-
-    # Update the hash if everything finishes properly.
-    logger.info("%s: Successfully crawled." % site.court_id)
+    print "%s: Successfully crawled." % site.court_id
 
 
 def main():
-    logger.info("Starting up the scraper.")
+    print 'Starting up the scraper.'
     global die_now
 
     # this line is used for handling SIGTERM (CTRL+4), so things can die safely
@@ -117,7 +123,7 @@ def main():
         while i < num_courts:
             # this catches SIGINT, so the code can be killed safely.
             if die_now == True:
-                logger.info("The scraper has stopped.")
+                print 'The scraper has stopped.'
                 sys.exit(1)
 
             try:
@@ -133,10 +139,10 @@ def main():
             try:
                 scrape_court(mod, binaries)
             except:
-                logger.critical('%s: ********!! CRAWLER DOWN !!***********')
-                logger.critical('%s: *****scrape_court method failed!*****')
-                logger.critical('%s: ********!! ACTION NEEDED !!**********')
-                logger.critical(traceback.format_exc())
+                print '%s: ********!! CRAWLER DOWN !!***********'
+                print '%s: *****scrape_court method failed!*****'
+                print '%s: ********!! ACTION NEEDED !!**********'
+                print traceback.format_exc()
                 i += 1
                 continue
 
@@ -146,7 +152,7 @@ def main():
             else:
                 i += 1
 
-    logger.info("The scraper has stopped.")
+    print 'The scraper has stopped.'
     sys.exit(0)
 
 if __name__ == '__main__':
