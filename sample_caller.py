@@ -139,9 +139,9 @@ def main():
             try:
                 scrape_court(mod, binaries)
             except:
-                print '%s: ********!! CRAWLER DOWN !!***********'
-                print '%s: *****scrape_court method failed!*****'
-                print '%s: ********!! ACTION NEEDED !!**********'
+                print '********!! CRAWLER DOWN !!***********'
+                print '*****scrape_court method failed!*****'
+                print '********!! ACTION NEEDED !!**********'
                 print traceback.format_exc()
                 i += 1
                 continue

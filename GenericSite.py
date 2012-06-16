@@ -121,8 +121,9 @@ class GenericSite(object):
     def _check_sanity(self):
         '''Check that the objects attributes make sense:
         1. Do all the attributes have the same length?
-        2. Do we have any content at all? 
-        3. ?
+        2. Do we have any content at all?
+        3. Is there a bare minimum of meta data? 
+        4. ?
 
         If sanity is OK, no return value. If not, throw InsanityException or 
         warnings, as appropriate.
@@ -145,6 +146,13 @@ class GenericSite(object):
                                     " lengths: %s" % (self.court_id, lengths))
         if len(self.case_names) == 0:
             logger.warning('%s: Returned with zero items.' % self.court_id)
+        else:
+            required_fields = ['case_dates', 'case_names',
+                               'precedential_statuses']
+            for field in required_fields:
+                if self.__getattribute__(field) is None:
+                    raise InsanityException('%s: Required fields do not '
+                            'contain any data: %s' % (self.court_id, field))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 

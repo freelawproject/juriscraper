@@ -1,7 +1,11 @@
 __all__ = ['ak',
+           'cal_supreme',
            'id_civil',
            'id_criminal',
            'in_supreme',
+           'or_supreme',
+           'ut_supreme',
+           'wash_supreme',
            'wi',
            'wv',
            'wy', ]
