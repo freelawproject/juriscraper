@@ -33,6 +33,9 @@ class Site(GenericSite):
     def _get_docket_numbers(self):
         docket_numbers = []
         # using download link, we can get the docket numbers
+        if self.download_urls is None:
+            # We can't count on this being done yet, so we do it now.
+            self.download_urls = self._get_download_urls()
         for download_url in self.download_urls:
             fileName = download_url.split('/')[-1]
             docket_number = fileName.split('.')[0]
