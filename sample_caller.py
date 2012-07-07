@@ -43,7 +43,7 @@ def scrape_court(court, binaries=False):
                     print 'EmptyFileError: %s' % download_url
                     print traceback.format_exc()
                     continue
-            except:
+            except Exception:
                 print 'DownloadingError: %s' % download_url
                 print traceback.format_exc()
                 continue
@@ -58,17 +58,16 @@ def scrape_court(court, binaries=False):
                       'neutral_citations', 'precedential_statuses',
                       'summaries', 'west_citations']
         for attr in attributes:
-            if site.__getattribute__(attr) is not None:
-                print '    %s: %s' % (attr, site.__getattribute__(attr)[i])
+            if getattr(site, attr) is not None:
+                print ('    %s: %s' % (attr, getattr(site, attr)[i])).encode('utf-8')
 
         # Extract the contents using e.g. antiword, pdftotext, etc.
         # extract_doc_content(data)
 
-    print "%s: Successfully crawled." % site.court_id
+    print '%s: Successfully crawled.' % site.court_id
 
 
 def main():
-    print 'Starting up the scraper.'
     global die_now
 
     # this line is used for handling SIGTERM (CTRL+4), so things can die safely
@@ -76,9 +75,9 @@ def main():
 
     usage = ('usage: %prog -c COURTID [-d|--daemon] [-b|--binaries]\n\n'
              'To test ca1, downloading binaries, use: \n'
-             '    python %prog -c opinions.united_states.federal.ca1 -b\n\n'
+             '    python %prog -c opinions.united_states.federal_appellate.ca1 -b\n\n'
              'To test all federal courts, disregarding binaries, use: \n'
-             '    python %prog -c opinions.united_states.federal')
+             '    python %prog -c opinions.united_states.federal_appellate')
     parser = OptionParser(usage)
     parser.add_option('-c', '--courts', dest='court_id', metavar="COURTID",
                       help=('The court(s) to scrape and extract. This should be in '
@@ -113,11 +112,12 @@ def main():
                                       ['*']).__all__
         except AttributeError:
             # Lacks the __all__ attribute. Probably of the form:
-            # juriscraper.opinions.united_states.federal.ca1
+            # juriscraper.opinions.united_states.federal_appellate.ca1
             mod_str_list = [court_id.rsplit('.', 1)[1]]
         except ImportError:
             parser.error('Unable to import module or package. Aborting.')
 
+        print 'Starting up the scraper.'
         num_courts = len(mod_str_list)
         i = 0
         while i < num_courts:
@@ -138,10 +138,10 @@ def main():
                                  [mod_str_list[i]])
             try:
                 scrape_court(mod, binaries)
-            except:
-                print '********!! CRAWLER DOWN !!***********'
-                print '*****scrape_court method failed!*****'
-                print '********!! ACTION NEEDED !!**********'
+            except Exception:
+                print '*************!! CRAWLER DOWN !!****************'
+                print '*****scrape_court method failed on mod: %s*****' % mod_str_list[i]
+                print '*************!! ACTION NEEDED !!***************'
                 print traceback.format_exc()
                 i += 1
                 continue

@@ -4,7 +4,7 @@ import logging.handlers
 import re
 import requests
 
-from juriscraper.lib.string_utils import clean_string, harmonize
+from juriscraper.lib.string_utils import clean_string, harmonize, force_unicode
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
@@ -98,8 +98,10 @@ class GenericSite(object):
         return self
 
     def _clean_text(self, text):
-        # this function provides the opportunity to clean text before it's made
-        # into an HTML tree.
+        ''' Cleans up text before we make it into an HTML tree:
+            1. Nukes <![CDATA stuff.
+            2. ?
+        '''
         text = re.sub(r'<!\[CDATA\[', '', text)
         text = re.sub(r'\]\]>', '', text)
         return text
@@ -120,10 +122,10 @@ class GenericSite(object):
 
     def _check_sanity(self):
         '''Check that the objects attributes make sense:
-        1. Do all the attributes have the same length?
-        2. Do we have any content at all?
-        3. Is there a bare minimum of meta data? 
-        4. ?
+            1. Do all the attributes have the same length?
+            2. Do we have any content at all?
+            3. Is there a bare minimum of meta data? 
+            4. ?
 
         If sanity is OK, no return value. If not, throw InsanityException or 
         warnings, as appropriate.

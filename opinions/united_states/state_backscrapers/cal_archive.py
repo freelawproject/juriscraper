@@ -1,4 +1,4 @@
-import cal_supreme
+from juriscraper.opinions.united_states.state import cal_supreme
 
 
 class Site(cal_supreme.Site):

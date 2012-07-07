@@ -2,23 +2,27 @@
 import re
 
 # For use in titlecase
-BIG = '3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|NLRB|UPS|RSS|SEC|UMG|USA|USC|USPS|WTO'
+BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
+       'FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|NLRB|UPS|RSS|SEC|UMG|USA|USC|'
+       'USPS|WTO')
 SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
-NUMS = '0|1|2|3|4|5|6|7|8|9'
+NUMS = '0123456789'
 PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
-WEIRD_CHARS = r"""¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ"""
-BIG_WORDS = re.compile(r'^(%s)$' % BIG, re.I)
+WEIRD_CHARS = r'¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ'
+BIG_WORDS = re.compile(r'^(%s)[%s]$' % (BIG, PUNCT), re.I)
 SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
 INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
+INLINE_SLASH = re.compile(r'[a-z][/][a-z]', re.I)
+INLINE_AMPERSAND = re.compile(r'([a-z][&][a-z])(.*)', re.I)
 UC_ELSEWHERE = re.compile(r'[%s]*?[a-zA-Z]+[A-Z]+?' % PUNCT)
 CAPFIRST = re.compile(r"^[%s]*?([A-Za-z])" % PUNCT)
 SMALL_FIRST = re.compile(r'^([%s]*)(%s)\b' % (PUNCT, SMALL), re.I)
 SMALL_LAST = re.compile(r'\b(%s)[%s]?$' % (SMALL, PUNCT), re.I)
-SUBPHRASE = re.compile(r'([:.;?!][ ])(%s)' % SMALL)
+SUBPHRASE = re.compile(r'([:;?!][ ])(%s)' % SMALL)
 APOS_SECOND = re.compile(r"^[dol]{1}['‘]{1}[a-z]+$", re.I)
 ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
 UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
-MAC_MC = re.compile(r"^([Mm]a?c)(\w+)")
+MAC_MC = re.compile(r'^([Mm]a?c)(\w+.*)')
 def titlecase(text, DEBUG=False):
     '''Titlecases input text
 
@@ -28,11 +32,18 @@ def titlecase(text, DEBUG=False):
     The list of "SMALL words" which are not capped comes from
     the New York Times Manual of Style, plus 'vs' and 'v'.
 
-    List of "BIG words" grows organically over time as entries are needed.
+    This will fail if multiple sentences are provided as input and if the
+    first word of a sentence is a SMALL_WORD.
+
+    List of "BIG words" grows over time as entries are needed.
     '''
 
-    # make all input uppercase.
-    text = text.upper()
+    if text.replace('v', '').isupper():
+        if DEBUG:
+            print "Entire string is uppercase, thus lowercasing."
+        # if, after removing lowercase v., the entire string is uppercase,
+        # we lowercase it
+        text = text.lower()
 
     lines = re.split('[\r\n]+', text)
     processed = []
@@ -46,34 +57,84 @@ def titlecase(text, DEBUG=False):
             if all_caps:
                 if UC_INITIALS.match(word):
                     if DEBUG:
-                        print "UC_INITIALS match for: " + word
+                        print "  UC_INITIALS match for: " + word
                     tc_line.append(word)
                     continue
                 else:
                     if DEBUG:
-                        print "Not initials. Lowercasing: " + word
+                        print "  Not initials. Lowercasing: " + word
                     word = word.lower()
 
             if APOS_SECOND.match(word):
-                word = word.replace(word[0], word[0].upper())
-                word = word.replace(word[2], word[2].upper())
+                if DEBUG:
+                    print "  APOS_SECOND matched. Fixing it: " + word
+                word = word[0:3].upper() + word[3:]
                 tc_line.append(word)
                 continue
 
-            if INLINE_PERIOD.search(word) or UC_ELSEWHERE.match(word):
+            if INLINE_PERIOD.search(word):
+                if DEBUG:
+                    print "  INLINE_PERIOD matched. Uppercasing if == 1 char: " + word
+                parts = word.split('.')
+                new_parts = []
+                for part in parts:
+                    if len(part) == 1:
+                        # It's an initial like U.S.
+                        new_parts.append(part.upper())
+                    else:
+                        # It's something like '.com'
+                        new_parts.append(part)
+                word = '.'.join(new_parts)
+                tc_line.append(word)
+                continue
+
+            if INLINE_SLASH.search(word):
+                # This repeats INLINE_PERIOD. Could be more elegant.
+                if DEBUG:
+                    print "  INLINE_SLASH matched. Uppercasing if == 1 char: " + word
+                parts = word.split('/')
+                new_parts = []
+                for part in parts:
+                    if len(part) == 1:
+                        # It's an initial like A/M
+                        new_parts.append(part.upper())
+                    else:
+                        # It's something like 'True/False'
+                        new_parts.append(part)
+                word = '/'.join(new_parts)
+                tc_line.append(word)
+                continue
+
+            amp_match = INLINE_AMPERSAND.match(word)
+            if amp_match:
+                if DEBUG:
+                    print "  INLINE_AMPERSAND matched. Uppercasing: " + word
+                tc_line.append("%s%s" % (amp_match.group(1).upper(),
+                                         amp_match.group(2)))
+                continue
+
+            if UC_ELSEWHERE.match(word):
+                if DEBUG:
+                    print "  UC_ELSEWHERE matched. Leaving unchanged: " + word
                 tc_line.append(word)
                 continue
 
             if SMALL_WORDS.match(word):
+                if DEBUG:
+                    print "  SMALL_WORDS matched. Lowercasing: " + word
                 tc_line.append(word.lower())
                 continue
 
             if BIG_WORDS.match(word):
+                if DEBUG:
+                    print "  BIG_WORDS matched. Uppercasing: " + word
                 tc_line.append(word.upper())
                 continue
 
             match = MAC_MC.match(word)
             if match and (word != 'mack'):
+                if DEBUG:
+                    print "  MAC_MAC matched. Capitlizing: " + word
                 tc_line.append("%s%s" % (match.group(1).capitalize(),
                                       match.group(2).capitalize()))
                 continue
@@ -226,7 +287,8 @@ def clean_string(string):
 
 
 def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
-    # Borrows heavily from django.utils.encoding.force_unicde
+    # Borrows heavily from django.utils.encoding.force_unicde. 
+    # This should be applied to *input* not *output*!
     # Handle the common case first, saves 30-40% in performance when s
     # is an instance of unicode. This function gets called often in that
     # setting.

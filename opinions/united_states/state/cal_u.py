@@ -1,10 +1,10 @@
-import cal_supreme
+import cal
 
 
-class Site(cal_supreme.Site):
+class Site(cal.Site):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.courtinfo.ca.gov/cms/npopinions.htm'
+        self.url = 'http://www.courts.ca.gov/cms/npopinions.htm'
         self.court_id = self.__module__
 
     def _get_precedential_statuses(self):

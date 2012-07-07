@@ -19,15 +19,18 @@ class Site(GenericSite):
         return [e for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/@href')]
 
     def _get_case_dates(self):
-        date_regex = re.compile('\d{2}/\d{2}/\d{4}')
+        date_regex = re.compile('\d{1,2}/\d{1,2}/\d{2,4}')
         dates = []
         for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/following-sibling::text()'):
             try:
                 date_string = date_regex.search(e).group(0)
             except AttributeError:
-                # We have to try a bunch of text notes before we'll get the right ones
+                # We have to try a bunch of text nodes before we'll get the right ones
                 continue
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
+            try:
+                dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
+            except ValueError:
+                dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y'))))
         return dates
 
     def _get_docket_numbers(self):

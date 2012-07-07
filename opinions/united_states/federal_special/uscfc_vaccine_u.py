@@ -12,8 +12,7 @@ from lxml import html
 class Site(uscfc.Site):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = (
-            'http://www.uscfc.uscourts.gov/opinions_decisions_vaccine/Unpublished')
+        self.url = 'http://www.uscfc.uscourts.gov/opinions_decisions_vaccine/Unpublished'
         self.court_id = self.__module__
 
     # Exclude rows without opinions by ensuring there is a sibling row that
@@ -36,17 +35,19 @@ class Site(uscfc.Site):
     def _get_case_names(self):
         case_names = []
         for txt in self.html.xpath(
-                '//div[2]/table/tbody/tr/td[3][../td[4]/a]/a/text()'):        
+                '//div[2]/table/tbody/tr/td[3][../td[4]/a]/a/text()'):
             case_names.append(txt.strip()[:-8].replace('[', '').strip())
         return case_names
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        regex = re.compile("\d\d.\d*[a-zA-Z]")        
-        return [regex.search(html.tostring(
-                            ele, method ='text', encoding='unicode')).group(0)
-            for ele in self.html.xpath(
-                '//div[2]/table/tbody/tr/td[3][../td[4]/a]')]
+        regex = re.compile("\d{1,2}.\d*[a-zA-Z]?")
+        for txt in self.html.xpath('//div[2]/table/tbody/tr/td[3][../td[4]/a]/a/text()'):
+            try:
+                docket_numbers.append(regex.search(txt).group(0))
+            except AttributeError:
+                # Happens when the regex fails or there's truly no docket number.
+                docket_numbers.append('')
         return docket_numbers
 
     def _get_precedential_statuses(self):
