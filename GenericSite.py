@@ -208,14 +208,16 @@ class GenericSite(object):
                               data=self.parameters)
 
         # Throw an error if a bad status code is returned.
-        self.status = r.status_code
         r.raise_for_status()
 
-        # Provide the headers to the caller
-        self.headers = r.headers
+        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+        if r.encoding == 'ISO-8859-1':
+            r.encoding = 'cp1252'
 
+        # Provide the response in the Site object
+        self.r = r
         # Grab the content
-        text = self._clean_text(r.content)
+        text = self._clean_text(r.text)
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
         def remove_anchors(href):
