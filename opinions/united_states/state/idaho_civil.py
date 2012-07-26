@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from GenericSite import GenericSite
+from juriscraper.GenericSite import GenericSite
 from juriscraper.lib.string_utils import clean_string
 
 from datetime import date
