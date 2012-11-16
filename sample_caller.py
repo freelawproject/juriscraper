@@ -3,6 +3,7 @@ import sys
 import traceback
 import urllib2
 from optparse import OptionParser
+from lib.importer import build_module_list
 
 # for use in catching the SIGINT (Ctrl+4)
 die_now = False
@@ -66,47 +67,6 @@ def scrape_court(court, binaries=False):
 
     print '%s: Successfully crawled.' % site.court_id
 
-
-def build_module_list(court_id, parser):
-    '''Takes the user's argument, and builds up a list of modules to import.
-
-    This is a simple recursive function that iteratively looks for __all__
-    attributes. If it finds one, it inspects each of the items in it to see if
-    each of those has such an attribute. If they lack it, the item is added to
-    a list of modules.
-    '''
-    module_strings = []
-
-    def find_all_attr_or_punt(court_id):
-        '''Checks that we have an __all__ attribute. If so, recuses. If not,
-        adds the item to our list
-        '''
-        try:
-            # Test that we have an __all__ attribute (proving that it's a
-            # package) something like: opinions.united_states.federal
-            all_attr = __import__(court_id, globals(), locals(), ['*']).__all__
-
-            # Build the modules back up to full imports
-            all_attr = ["%s.%s" % (court_id, item) for item in all_attr]
-            for module in all_attr:
-                # If we've made it this far, we have an __all__ attribute, so
-                # we should see if the items within that attribute do too. And
-                # so forth, recurively...
-                find_all_attr_or_punt(module)
-        except AttributeError:
-            # Lacks the __all__ attribute. Probably of the form:
-            # juriscraper.opinions.united_states.federal_appellate.ca1,
-            # therefore, we add it to our list!
-            module_strings.append(court_id)
-        except ImportError:
-            # Something has gone wrong.
-            parser.error('Unable to import module or package. Aborting.')
-
-    find_all_attr_or_punt(court_id)
-
-    return module_strings
-
-
 def main():
     global die_now
 
@@ -143,7 +103,9 @@ def main():
     if not court_id:
         parser.error('You must specify a court as a package or module.')
     else:
-        module_strings = build_module_list(court_id, parser)
+        module_strings = build_module_list(court_id)
+        if len(module_strings) == 0:
+            parser.error('Unable to import module or package. Aborting.')
 
         print 'Starting up the scraper.'
         num_courts = len(module_strings)
