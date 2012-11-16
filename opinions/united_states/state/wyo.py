@@ -1,7 +1,7 @@
 from juriscraper.GenericSite import GenericSite
+from juriscraper.lib.string_utils import clean_string
 import time
 from datetime import date
-from lib.string_utils import clean_string
 
 
 class Site(GenericSite):

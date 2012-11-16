@@ -100,10 +100,21 @@ class GenericSite(object):
     def _clean_text(self, text):
         ''' Cleans up text before we make it into an HTML tree:
             1. Nukes <![CDATA stuff.
-            2. ?
+            2. Nukes encoding declarations
+            3. ?
         '''
+        # Remove <![CDATA because it causes breakage in lxml.
         text = re.sub(r'<!\[CDATA\[', '', text)
         text = re.sub(r'\]\]>', '', text)
+
+        # Remove <?xml> declaration in Unicode objects, because it causes an error:
+        # "ValueError: Unicode strings with encoding declaration are not supported."
+        # Note that the error only occurs if the <?xml> tag has an "encoding"
+        # attribute, but we remove it in all cases, as there's no downside to
+        # removing it. This moves our encoding detection to chardet, rather than
+        # lxml.
+        if isinstance(text, unicode):
+            text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
         return text
 
     def _clean_attributes(self):

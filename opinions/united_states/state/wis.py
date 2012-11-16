@@ -2,7 +2,7 @@ from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 from datetime import timedelta
-from lib.string_utils import clean_string
+from juriscraper.lib.string_utils import clean_string
 
 
 class Site(GenericSite):
