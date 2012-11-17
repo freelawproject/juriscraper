@@ -1,7 +1,7 @@
 """Scraper for the United States Court of Appeals for Veterans Claims
 CourtID: cavc
 Court Short Name: Vet.App.
-NOTE: If you modify this, make sure you know what you are doing and test it 
+NOTE: If you modify this, make sure you know what you are doing and test it
 as over 40 other backscrapers import this code and re-use parts of it."""
 
 from juriscraper.GenericSite import GenericSite
@@ -26,7 +26,7 @@ class Site(GenericSite):
     def _get_docket_numbers(self):
         return [txt for txt in self.html.xpath(
             '//table[1]/tbody/tr/td[2]/p/a/text()')]
-    
+
     def _get_download_urls(self):
         return [txt for txt in self.html.xpath(
             '//table[1]/tbody/tr/td[2]/p/a/@href')]
@@ -38,7 +38,7 @@ class Site(GenericSite):
         case_names = []
         dates = self._get_case_dates()
         for txt, dat in zip(self.html.xpath(
-                '//table[1]/tbody/tr/td[3]/p/text()'), dates):
+                            '//table[1]/tbody/tr/td[3]/p/text()'), dates):
             if dat > datetime.date(2009, 1, 20):
                 case_names.append(txt + ' v. Shinseki')
             elif dat > datetime.date(2007, 12, 20):
@@ -62,6 +62,6 @@ class Site(GenericSite):
             else:
                 case_names.append(txt + ' v. Derwinski')
         return case_names
-    
+
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)

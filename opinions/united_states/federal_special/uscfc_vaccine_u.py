@@ -9,6 +9,9 @@ from datetime import date
 import re
 from lxml import html
 
+from juriscraper.lib.string_utils import harmonize, titlecase
+
+
 class Site(uscfc.Site):
     def __init__(self):
         super(Site, self).__init__()
@@ -34,9 +37,10 @@ class Site(uscfc.Site):
 
     def _get_case_names(self):
         case_names = []
-        for txt in self.html.xpath(
-                '//div[2]/table/tbody/tr/td[3][../td[4]/a]/a/text()'):
-            case_names.append(txt.strip()[:-8].replace('[', '').strip())
+        for txt in self.html.xpath('//div[2]/table/tbody/tr/td[3][../td[4]/a]/a/text()'):
+            case_name = txt.strip()[:-8].replace('[', '')
+            case_name = titlecase(case_name.lower())
+            case_names.append(case_name)
         return case_names
 
     def _get_docket_numbers(self):

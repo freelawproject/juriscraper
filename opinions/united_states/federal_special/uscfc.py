@@ -3,7 +3,7 @@ CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
 from juriscraper.GenericSite import GenericSite
-from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import harmonize, titlecase
 import time
 from datetime import date
 import re
@@ -32,7 +32,9 @@ class Site(GenericSite):
     def _get_case_names(self):
         case_names = []
         for txt in self.html.xpath('//div[2]/table/tbody/tr/td[3]/text()'):
-            case_names.append(titlecase(txt.strip()[:-8].replace('[', '')))
+            case_name = txt.strip()[:-8].replace('[', '')
+            case_name = titlecase(case_name.lower())
+            case_names.append(case_name)
         return case_names
 
     def _get_docket_numbers(self):

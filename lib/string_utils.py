@@ -11,6 +11,7 @@ PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
 WEIRD_CHARS = r'¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ'
 BIG_WORDS = re.compile(r'^(%s)[%s]$' % (BIG, PUNCT), re.I)
 SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
+SMALL_WORD_INLINE = re.compile(r'(^|\s)(%s)(\s|$)' % SMALL, re.I)
 INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
 INLINE_SLASH = re.compile(r'[a-z][/][a-z]', re.I)
 INLINE_AMPERSAND = re.compile(r'([a-z][&][a-z])(.*)', re.I)
@@ -37,13 +38,15 @@ def titlecase(text, DEBUG=False):
 
     List of "BIG words" grows over time as entries are needed.
     '''
-
-    if text.replace('v', '').isupper():
+    text_sans_small_words = re.sub(SMALL_WORD_INLINE, '', text)
+    if text_sans_small_words.isupper():
         if DEBUG:
             print "Entire string is uppercase, thus lowercasing."
-        # if, after removing lowercase v., the entire string is uppercase,
+        # if, after removing small words, the entire string is uppercase,
         # we lowercase it
         text = text.lower()
+    elif not text_sans_small_words.isupper() and DEBUG:
+        print "Entire string not upper case. Not lowercasing: %s" % text
 
     lines = re.split('[\r\n]+', text)
     processed = []
@@ -175,7 +178,7 @@ BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)ap
      '|devisee|executor|executrix|petitioners?|petitioners?(--?|/)appell(ee|ant)s?' + \
      '|petitioners?(--?|/)defendants?|plaintiffs?|plaintiffs?(--?|/)appell(ee|ant)s?|respond(e|a)nts?' + \
      '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?' + \
-     '|cross(--?|/)appell(ees|ant)s?'
+     '|cross(--?|/)appell(ees|ant)s?|deceased'
 BAD_WORDS = re.compile(r'^(%s)(,|\.)?$' % BW, re.I)
 def harmonize(text):
     '''Fixes case names so they are cleaner.

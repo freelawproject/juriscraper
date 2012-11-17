@@ -157,6 +157,8 @@ def titlecase_tests():
     "Kevin O'Connell v. Kelly Harrington"
     >>> titlecase(force_unicode('International Union of Painter v. J&r Flooring, Inc')).encode('utf-8')
     'International Union of Painter v. J&R Flooring, Inc'
+    >>> titlecase(force_unicode('DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED STATES 07-693L And')).encode('utf-8')
+    'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And'
     '''
 
 if __name__ == '__main__':

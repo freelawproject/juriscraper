@@ -39,8 +39,20 @@ class Site(GenericSite):
         # This does not capture the release dates for the errata documents.
         # The errata release date is listed in column 2. This will use the
         # original release date instead.
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
-            for date_string in self.html.xpath('//table[4]//tr/td[3][../td/a]/text()')]
+        dates = []
+        date_formats = ['%m/%d/%Y', '%m/%d/%y']
+        for date_string in self.html.xpath('//table[4]//tr/td[3][../td/a]/text()'):
+            for date_format in date_formats:
+                try:
+                    d = date.fromtimestamp(time.mktime(
+                                       time.strptime(date_string, date_format)))
+                    dates.append(d)
+                    break
+                except ValueError:
+                    # Try the next format
+                    continue
+        return dates
+
 
     def _get_docket_numbers(self):
         docket_numbers = []
