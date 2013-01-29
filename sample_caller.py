@@ -76,7 +76,7 @@ def main():
     usage = ('usage: %prog -c COURTID [-d|--daemon] [-b|--binaries]\n\n'
              'To test ca1, downloading binaries, use: \n'
              '    python %prog -c opinions.united_states.federal_appellate.ca1 -b\n\n'
-             'To test all federal courts, disregarding binaries, use: \n'
+             'To test all federal courts, omitting binaries, use: \n'
              '    python %prog -c opinions.united_states.federal_appellate')
     parser = OptionParser(usage)
     parser.add_option('-c', '--courts', dest='court_id', metavar="COURTID",
@@ -84,7 +84,9 @@ def main():
                             'the form of a python module or package import '
                             'from the Juriscraper library, e.g. '
                             '"juriscraper.opinions.united_states.federal.ca1" or '
-                            'simply "opinions" to do all opinions.'))
+                            'simply "opinions" to do all opinions. If desired, '
+                            'you can use slashes instead of dots to separate'
+                            'the import path.'))
     parser.add_option('-d', '--daemon', action="store_true", dest='daemonmode',
                       default=False, help=('Use this flag to turn on daemon '
                                            'mode, in which all courts requested '
@@ -97,8 +99,11 @@ def main():
     (options, args) = parser.parse_args()
 
     daemon_mode = options.daemonmode
-    court_id = options.court_id
     binaries = options.binaries
+    court_id = options.court_id.replace('/', '.')
+    if court_id.endswith('.py'):
+        court_id = court_id[:-3]
+
 
     if not court_id:
         parser.error('You must specify a court as a package or module.')

@@ -1,3 +1,8 @@
+# Editor: mlr
+# Maintenance log
+#    Date     | Issue
+# 2013-01-28  | InsanityException due to the court adding busted share links.
+
 from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
@@ -18,7 +23,7 @@ class Site(GenericSite):
         return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[6]/td[2]/text()')]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[3]/td[2]/a/@href')]
+        return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[3]/td[2]/a[1]/@href')]
 
     def _get_case_dates(self):
         dates = []
