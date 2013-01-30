@@ -2,6 +2,7 @@
 # CourtID: cit
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
+
 from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
