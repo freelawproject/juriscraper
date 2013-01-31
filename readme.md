@@ -100,7 +100,7 @@ all callers have thus far been able to work directly with the Python objects.
 
 Version History
 ===============
-**Past**
+**Past**  
 0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
 
 **Current**  
