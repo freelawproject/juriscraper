@@ -1,4 +1,4 @@
-import cit
+from juriscraper.opinions.united_states.federal_special import cit
 
 import time
 from datetime import date

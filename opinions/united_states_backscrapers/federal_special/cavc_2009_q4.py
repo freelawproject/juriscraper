@@ -1,7 +1,7 @@
 # Scraper for the United States Court of Appeals for Veterans Claims
 # CourtID: cavc
 # Court Short Name: Vet.App.
-import cavc
+from juriscraper.opinions.united_states.federal_special import cavc
 
 class Site(cavc.Site):
     def __init__(self):

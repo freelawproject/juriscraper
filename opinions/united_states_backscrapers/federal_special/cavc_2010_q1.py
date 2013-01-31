@@ -1,7 +1,7 @@
 # Scraper for the United States Court of Appeals for Veterans Claims
 # CourtID: cavc
 # Court Short Name: Vet.App.
-import cavc
+from juriscraper.opinions.united_states.federal_special import cavc
 
 class Site(cavc.Site):
     def __init__(self):
@@ -21,10 +21,10 @@ class Site(cavc.Site):
     def _get_download_urls(self):
         download_urls = []        
         for t in self.html.xpath('//table[1]/tbody/tr/td[2]/p/a/@href'):
-            download_urls.append(t)
+            download_urls.append(t.replace('orders_and_opinions/',''))
         # This column of last row has extraneous tags:
         for t in self.html.xpath('//table[1]/tbody/tr/font/strong/td/p/a/@href'):
-            download_urls.append(t)
+            download_urls.append(t.replace('orders_and_opinions/',''))
         return download_urls
 
     def _get_case_names(self):

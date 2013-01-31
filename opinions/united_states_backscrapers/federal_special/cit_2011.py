@@ -1,5 +1,4 @@
-import cit
-
+from juriscraper.opinions.united_states.federal_special import cit
 
 class Site(cit.Site):
     def __init__(self):

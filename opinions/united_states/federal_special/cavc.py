@@ -28,8 +28,8 @@ class Site(GenericSite):
             '//table[1]/tbody/tr/td[2]/p/a/text()')]
 
     def _get_download_urls(self):
-        return [txt for txt in self.html.xpath(
-            '//table[1]/tbody/tr/td[2]/p/a/@href')]
+        return [txt.replace('orders_and_opinions/','') for txt in 
+            self.html.xpath('//table[1]/tbody/tr/td[2]/p/a/@href')]
 
     # http://en.wikipedia.org/wiki/United_States_Secretary_of_Veterans_Affairs
     # provided the names to append here for different opinion dates.

@@ -1,8 +1,11 @@
 # Scraper for the United States Court of Appeals for Veterans Claims
 # CourtID: cavc
 # Court Short Name: Vet.App.
-import cavc
+from juriscraper.opinions.united_states.federal_special import cavc
 from lxml import html
+import time
+import datetime
+from datetime import date
 
 class Site(cavc.Site):
     def __init__(self):
@@ -23,13 +26,10 @@ class Site(cavc.Site):
             s = html.tostring(e, method='text', encoding='unicode')
             docket_numbers.append(s)
         return docket_numbers
-        
+
     def _get_download_urls(self):
-        download_urls = []
-        for e in self.html.xpath('//table[1]/tbody/tr/td[2]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            download_urls.append(s)
-        return download_urls
+        return [txt.replace('orders_and_opinions/','') for txt in 
+            self.html.xpath('//table[1]/tbody/tr/td[2]/p/a/@href | //table[1]/tbody/tr/td[2]/a/@href')]
 
     def _get_case_names(self):
         case_names = []
