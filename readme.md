@@ -61,6 +61,8 @@ your fork, and then send a pull request for your changes. Be sure to
 remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
 
+All new scrapers must function with the sample caller as a basic sanity test.
+
 
 Usage
 ======
