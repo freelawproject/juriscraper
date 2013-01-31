@@ -16,11 +16,7 @@ class Site(GenericSite):
         self.court_id = self.__module__
 
     def _get_download_urls(self):
-        download_urls = []
-        for e in self.html.xpath('//table[3]/tr[position() > 1]/td[1]'):
-            s = html.tostring(e, method='text', encoding='unicode').strip()
-            download_urls.append('http://www.cit.uscourts.gov/SlipOpinions/Slip_op08/' + s + '.pdf')
-        return download_urls
+        return [t for t in self.html.xpath('//table[3]/tr[position() > 1]/td[1]/a/@href | //table[3]/tr[position() > 1]/td[1]/font/a/@href')]
 
     def _get_neutral_citations(self):
         neutral_citations = []
@@ -30,25 +26,17 @@ class Site(GenericSite):
         return neutral_citations
         
     def _get_case_names(self):
-# We strip "Errata: mm/dd/yyyy" from the case names of errata docs.
         case_names = []
-# This gets the first 125 case names
-        for t in self.html.xpath('//table[3]/tr[position() > 1]/td[2]/text()'):
+        for e in self.html.xpath('//table[3]/tr[position() > 1]/td[2]'):
+            t = html.tostring(e, method='text', encoding='unicode')
+# We strip "Errata: mm/dd/yyyy" from the case names of errata docs.
             if "Errata" in t:
                 case_names.append(t.strip()[:-18])
+# We strip "Public version posted on mm/dd/yyyy" from some case names.
+            elif "posted on" in t:
+                case_names.append(t.strip()[:-34])
             else:
                 case_names.append(t.strip())
-# This gets the other 19 case names
-        for e in self.html.xpath('//table[3]/tr[position() > 1]/td[2]/font'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            if "02/08/08" or "03/04/08" in s:
-                case_names.append(s)
-            elif "version posted on" in s:
-                continue
-            elif s == '':
-                continue
-            else:
-                case_names.append(s)
         return case_names
     
     def _get_precedential_statuses(self):
@@ -60,7 +48,6 @@ class Site(GenericSite):
             else:
                 statuses.append('Published')
         return statuses
-
 
 # This does not capture the release dates for the errata documents.
 # The errata release date is listed in column 2. This will use the original
@@ -75,7 +62,7 @@ class Site(GenericSite):
                 date_string = html.tostring (e, method='text', encoding='unicode').strip()
                 case_dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
         return case_dates
-"""
+
 # Because there can be multiple docket numbers we have to replace some newlines.
     def _get_docket_numbers(self):
         docket_numbers = []
@@ -92,4 +79,3 @@ class Site(GenericSite):
             s = html.tostring (e, method='text', encoding='unicode')
             judges.append(s.strip())
         return judges
-"""
