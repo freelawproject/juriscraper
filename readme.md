@@ -102,17 +102,19 @@ all callers have thus far been able to work directly with the Python objects.
 
 Version History
 ===============
-**Current**  
+**Past**  
 0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
 
-**Roadmap**  
-0.2 - Support for all federal courts of special jurisdiction (Veterans, Tax, etc.)  
+**Current**  
+0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)  
+
+**Future Roadmap**    
 0.3 - Support for all federal bankruptcy appellate panels (1st, 4th and 10th Cir.)  
 0.4 - Support for all state courts of last resort (typically the "Supreme" court)  
 0.5 - Support for all intermediate appellate state courts  
 0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)  
 0.7 - Support for all federal district courts with non-PACER opinion listings  
-0.8 - Support for all federal district courts with PACER written opinion reports  
+0.8 - Support for all federal district courts with PACER written opinion reports (+JPML)   
 0.9 - Support for all federal district bankruptcy courts  
 1.0 - For every court above where a backscraper is possible, it is implemented.  
 1.1 - Support video, oral argument audio, and transcripts everywhere available  
