@@ -109,7 +109,7 @@ Version History
 0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)  
 
 **Future Roadmap**    
-0.3 - Support for all federal bankruptcy appellate panels (1st, 4th and 10th Cir.)  
+0.3 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)  
 0.4 - Support for all state courts of last resort (typically the "Supreme" court)  
 0.5 - Support for all intermediate appellate state courts  
 0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)  
