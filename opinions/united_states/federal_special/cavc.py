@@ -12,24 +12,20 @@ from datetime import date
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = (
-            'http://www.uscourts.cavc.gov/orders_and_opinions/Opinions.cfm')
+        self.url = ('http://www.uscourts.cavc.gov/opinions.php')
         self.court_id = self.__module__
 
     def _get_case_dates(self):
         dates = []
-        for txt in self.html.xpath('//table[1]/tbody/tr/td[1]/p/text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(
-                txt.strip(), '%d%b%y'))))
+        for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[3]/text()'):
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(txt.strip(), '%d%b%y'))))
         return dates
 
     def _get_docket_numbers(self):
-        return [txt for txt in self.html.xpath(
-            '//table[1]/tbody/tr/td[2]/p/a/text()')]
+        return [txt for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[2]//text()')]
 
     def _get_download_urls(self):
-        return [txt.replace('orders_and_opinions/','') for txt in 
-            self.html.xpath('//table[1]/tbody/tr/td[2]/p/a/@href')]
+        return [txt for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[2]/a/@href')]
 
     # http://en.wikipedia.org/wiki/United_States_Secretary_of_Veterans_Affairs
     # provided the names to append here for different opinion dates.
@@ -37,8 +33,8 @@ class Site(GenericSite):
     def _get_case_names(self):
         case_names = []
         dates = self._get_case_dates()
-        for txt, dat in zip(self.html.xpath(
-                            '//table[1]/tbody/tr/td[3]/p/text()'), dates):
+        plaintiffs = self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[1]/text()')
+        for txt, dat in zip(plaintiffs, dates):
             if dat > datetime.date(2009, 1, 20):
                 case_names.append(txt + ' v. Shinseki')
             elif dat > datetime.date(2007, 12, 20):

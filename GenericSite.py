@@ -135,10 +135,10 @@ class GenericSite(object):
         '''Check that the objects attributes make sense:
             1. Do all the attributes have the same length?
             2. Do we have any content at all?
-            3. Is there a bare minimum of meta data? 
+            3. Is there a bare minimum of meta data?
             4. ?
 
-        If sanity is OK, no return value. If not, throw InsanityException or 
+        If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
         '''
         lengths = {}
@@ -171,7 +171,7 @@ class GenericSite(object):
 
     def _date_sort(self):
         ''' This function sorts the object by date. It's a good candidate for
-        re-coding due to violating DRY and because it works by checking for 
+        re-coding due to violating DRY and because it works by checking for
         lists, limiting the kinds of attributes we can add to the object.
         '''
         attributes = [self.adversary_numbers, self.case_dates, self.case_names,
@@ -229,6 +229,7 @@ class GenericSite(object):
         self.r = r
         # Grab the content
         text = self._clean_text(r.text)
+        #print "text: %s" % text
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
         def remove_anchors(href):
