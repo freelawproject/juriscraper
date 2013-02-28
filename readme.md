@@ -56,7 +56,9 @@ efficiently parse a page, returning no exceptions and having no major Pylint
 problems.  
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
-that makes sense and that nobody else is working on.
+that makes sense and that nobody else is working on. Alternatively, we have 
+[a list][6] of courts that you can browse yourself. It's sometimes out of date
+though.
 
 When you're done with your scraper, fork this repository, push your changes into
 your fork, and then send a pull request for your changes. Be sure to 
@@ -133,3 +135,4 @@ Juriscraper is licensed under the permissive BSD license.
 [3]: https://bitbucket.org/mlissner/lxml-xpath-tester 
 [4]: http://www.python.org/dev/peps/pep-0008/
 [5]: https://bitbucket.org/mlissner/juriscraper/src/tip/sample_caller.py
+[6]: http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/Court_Documents
