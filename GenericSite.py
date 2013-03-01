@@ -58,6 +58,7 @@ class GenericSite(object):
         self.judges = None
         self.lower_courts = None
         self.lower_court_judges = None
+        self.lower_court_numbers = None
         self.nature_of_suit = None
         self.neutral_citations = None
         self.precedential_statuses = None
@@ -86,6 +87,7 @@ class GenericSite(object):
         self.judges = self._get_judges()
         self.lower_courts = self._get_lower_courts()
         self.lower_court_judges = self._get_lower_court_judges()
+        self.lower_court_numbers = self._get_lower_court_numbers()
         self.nature_of_suit = self._get_nature_of_suit()
         self.neutral_citations = self._get_neutral_citations()
         self.precedential_statuses = self._get_precedential_statuses()
@@ -123,8 +125,9 @@ class GenericSite(object):
                      self.docket_attachment_numbers,
                      self.docket_document_numbers, self.docket_numbers,
                      self.judges, self.lower_courts, self.lower_court_judges,
-                     self.nature_of_suit, self.neutral_citations,
-                     self.summaries, self.west_citations]:
+                     self.lower_court_numbers, self.nature_of_suit,
+                     self.neutral_citations, self.summaries,
+                     self.west_citations]:
             if item is not None:
                 item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
@@ -147,8 +150,8 @@ class GenericSite(object):
                       'docket_document_numbers', 'docket_numbers',
                       'download_urls', 'judges', 'lower_courts',
                       'lower_court_judges', 'nature_of_suit',
-                      'neutral_citations', 'precedential_statuses', 'summaries',
-                      'west_citations']
+                      'lower_court_numbers', 'neutral_citations',
+                      'precedential_statuses', 'summaries', 'west_citations']
         for attr in attributes:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
@@ -179,9 +182,10 @@ class GenericSite(object):
                       self.docket_attachment_numbers,
                       self.docket_document_numbers, self.docket_numbers,
                       self.download_urls, self.judges, self.lower_courts,
-                      self.lower_court_judges, self.nature_of_suit,
-                      self.neutral_citations, self.precedential_statuses,
-                      self.summaries, self.west_citations]
+                      self.lower_court_judges, self.lower_court_numbers,
+                      self.nature_of_suit, self.neutral_citations,
+                      self.precedential_statuses, self.summaries,
+                      self.west_citations]
 
         if len(self.case_names) > 0:
             # Note that case_dates must be first for sorting to work.
@@ -284,6 +288,9 @@ class GenericSite(object):
         return None
 
     def _get_lower_court_judges(self):
+        return None
+
+    def _get_lower_court_numbers(self):
         return None
 
     def _get_precedential_statuses(self):
