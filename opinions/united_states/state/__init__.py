@@ -7,7 +7,7 @@ __all__ = ['alaska',
            'mich',
            'or',
            'utah',
-           #'wash',
+           'wash',
            'wis',
            'wva',
            'wyo', ]
