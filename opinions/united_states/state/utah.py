@@ -32,7 +32,7 @@ class Site(GenericSite):
         for text in self.html.xpath('/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'):
             parts = text.strip().split(', ')
             try:
-                caseDate = parts[2] + ', ' + parts[3]
+                caseDate = parts[-3] + ', ' + parts[-2]
                 dates.append(date.fromtimestamp(
                 time.mktime(time.strptime(caseDate, '%B %d, %Y'))))
             except IndexError:
@@ -48,7 +48,8 @@ class Site(GenericSite):
         for text in self.html.xpath('/html/body//div[@id="content"]//p[a[@class="bodylink"]]/text()'):
             try:
                 parts = text.strip().split(', ')
-                neutral_citations.append(parts[4])
+                if parts[-1]:
+                    neutral_citations.append(parts[-1])
             except IndexError:
                 # Happens in whitespace-only text nodes.
                 continue
