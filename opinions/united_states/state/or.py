@@ -7,7 +7,7 @@ from datetime import date
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://courts.oregon.gov/Publications/OpinionsSC.page'
+        self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC.aspx'
         self.court_id = self.__module__
 
     def _get_case_names(self):
