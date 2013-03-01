@@ -25,7 +25,7 @@ class Site(GenericSite):
 
     def _get_case_dates(self):
         dates = []
-        for h2_element in self.html.xpath('//h2[position() <= 10][following-sibling::ul//a/em]'):
+        for h2_element in self.html.xpath('//h2[position() <= 9][following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
             try:
                 date_obj = date.fromtimestamp(
