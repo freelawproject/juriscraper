@@ -12,14 +12,18 @@ class Site(GenericSite):
 
     def _get_case_names(self):
         case_names = []
-        for name in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]"
-                                    "/following-sibling::ul[1]/li/a//text()"):
+        for name in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]/following-sibling::ul[1]/li/a//text()"):
             case_names.append(re.sub('\(?S\d+[\s\)]\s?', '', name))
         return case_names
 
+    def _get_docket_numbers(self):
+        docket_numbers = []
+        for s in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]/following-sibling::ul[1]/li/a//text()"):
+            docket_numbers.append(' & '.join(re.findall('S\d+', s)))
+        return docket_numbers
+
     def _get_download_urls(self):
-        return [t for t in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]"
-                                           "/following-sibling::ul[1]/li/a/@href")]
+        return [t for t in self.html.xpath("/html/body//h2[contains(.,'SUPREME')]/following-sibling::ul[1]/li/a/@href")]
 
     def _get_case_dates(self):
         dates = []
