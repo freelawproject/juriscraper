@@ -201,11 +201,13 @@ class GenericSite(object):
                     i += 1
 
     def _make_hash(self):
-        # Make a unique ID. ETag and Last-Modified from courts cannot be trusted
+        '''Make a unique ID. ETag and Last-Modified from courts cannot be trusted
+        '''
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
     def _download(self, use_sessions=False):
-        # methods for downloading the latest version of Site
+        '''Methods for downloading the latest version of Site
+        '''
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         if self.method == 'GET':

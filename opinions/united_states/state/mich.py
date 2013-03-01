@@ -61,10 +61,8 @@ class Site(GenericSite):
     def _get_lower_court_numbers(self):
         nums = []
         for s in self.html.xpath('//li[@class = "casedetailsright"]//li[@class = "lowerCourt"]/text()'):
-            print s
             try:
                 nums.append(s.strip().split('No. ')[1])
             except IndexError:
                 nums.append('')
-        print nums
         return nums
