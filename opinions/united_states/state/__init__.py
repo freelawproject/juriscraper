@@ -1,8 +1,8 @@
 __all__ = ['alaska',
            'cal',
            'cal_u',
-           #'idaho_civil',
-           #'idaho_criminal',
+           #'idaho_civil', Broken, but never released.
+           #'idaho_criminal', Broken, but never released.
            'ind',
            'mich',
            'or',
