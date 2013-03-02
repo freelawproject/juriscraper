@@ -31,7 +31,13 @@ class Site(GenericSite):
         return docket_numbers
 
     def _get_case_names(self):
-        return [titlecase(s) for s in self.html.xpath('//li[@class="title1" and not(ancestor::ul[@class="result-header"])]/a/text()')]
+        case_names = []
+        for case_name in self.html.xpath('//li[@class="title1" and not(ancestor::ul[@class="result-header"])]/a/text()'):
+            case_name = titlecase(case_name)
+            if 'People of Mi ' in case_name:
+                case_name = case_name.replace('People of Mi ', 'People of Michigan ')
+            case_names.append(case_name)
+        return case_names
 
     def _get_download_urls(self):
         return [s for s in self.html.xpath('//li[@class="title1" and not(ancestor::ul[@class="result-header"])]/a/@href')]

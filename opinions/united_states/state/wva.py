@@ -34,11 +34,11 @@ class Site(GenericSite):
         statuses = []
         for status in self.html.xpath('//table/tbody/tr/td[5]/text()'):
             if status.lower() == 'md':
-                statuses.append('Memorandum Decision')
+                statuses.append('Published')
             elif status.lower() == 'so':
-                statuses.append('Signed Opinion')
+                statuses.append('Published')
             elif status.lower() == 'pc':
-                statuses.append('Per Curiam Opinion')
+                statuses.append('Published')
             elif status.lower() == 'sep':
                 statuses.append('Separate')
             else:
