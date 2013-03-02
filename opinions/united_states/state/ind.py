@@ -10,10 +10,10 @@ class Site(GenericSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()")]
+        return [s for s in self.html.xpath("//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/text()")]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath("//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/@href")]
+        return [s for s in self.html.xpath("//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[2]//a/@href")]
 
     def _get_case_dates(self):
         dates = []
@@ -25,7 +25,10 @@ class Site(GenericSite):
                 dates.append(date.fromtimestamp(time.mktime(time.strptime(val, '%m/%d/%y'))))
         return dates
 
-    def _get_lower_courts(self):
+    def _get_docket_numbers(self):
+        return [s for s in self.html.xpath('//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[4]//font/text()')]
+
+    def _get_lower_court_numbers(self):
         return [e for e in self.html.xpath("//table/tr/td[3]/table/tr[4]//table/tr[position() > 1]/td[3]//font/text()")]
 
     def _get_precedential_statuses(self):
