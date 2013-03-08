@@ -7,9 +7,11 @@ import time
 from datetime import date
 from lxml import html
 
+
 class Site(GenericSite):
     def __init__(self):
-# The string 'week' can be changed to 'today' to get just today's opinions
+        # The string 'week' can be changed to 'today' to get just today's
+        # opinions
         self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=week&Submit=Submit'
         super(Site, self).__init__()
         self.court_id = self.__module__
@@ -20,7 +22,7 @@ class Site(GenericSite):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
-   
+
     def _get_download_urls(self):
         return [e for e in self.html.xpath('//table[2]/tr/td/table/tr[position() >=3]/td/a/@href')]
 
@@ -35,7 +37,7 @@ class Site(GenericSite):
     def _get_precedential_statuses(self):
         statuses = []
         for e in self.html.xpath('//table//table/tr[position() >= 3]/td[5]/a'):
-            s = html.tostring(e, method='text', encoding='unicode').strip()
+            s = html.tostring(e, method='text', encoding='unicode')
             if 'Opinion' in s:
                 statuses.append('Published')
             elif 'Nonprecedential' in s:
