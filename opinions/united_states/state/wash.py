@@ -10,6 +10,7 @@ class Site(GenericSite):
         self.url = 'http://www.courts.wa.gov/opinions/rssSCOpinionsFeed.cfm'
         self.court_id = self.__module__
 
+
     def _get_case_names(self):
         case_names = []
         for name in self.html.xpath('/html/body/rss/channel/item/title/text()'):
@@ -38,3 +39,4 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
+

@@ -6,7 +6,9 @@ from juriscraper.lib.string_utils import titlecase
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.ca9.uscourts.gov/opinions/?o_mode=view&amp;o_sort_field=19&amp;o_sort_type=DESC&o_page_size=100'
+        self.method = 'POST'
+        self.parameters = {'age': '2'}
+        self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
         self.court_id = self.__module__
 
     def _get_case_names(self):
