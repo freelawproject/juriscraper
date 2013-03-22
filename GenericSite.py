@@ -164,7 +164,8 @@ class GenericSite(object):
             logger.warning('%s: Returned with zero items.' % self.court_id)
         else:
             required_fields = ['case_dates', 'case_names',
-                               'precedential_statuses']
+                               'precedential_statuses',
+                               'download_urls']
             for field in required_fields:
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not '
