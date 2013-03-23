@@ -22,7 +22,7 @@ handler = logging.handlers.RotatingFileHandler(LOG_FILENAME,
 logger.addHandler(handler)
 handler.setFormatter(formatter)
 
-#logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s',
+# logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s',
 #                    level=logging.DEBUG)
 
 
@@ -236,7 +236,7 @@ class GenericSite(object):
         self.r = r
         # Grab the content
         text = self._clean_text(r.text)
-        #print "text: %s" % text
+        # print "text: %s" % text
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
         def remove_anchors(href):
@@ -247,7 +247,7 @@ class GenericSite(object):
         return html_tree
 
     def _download_backwards(self):
-        # generally recursive methods for the entire Site
+        # methods for downloading the entire Site
         pass
 
     def _get_adversary_numbers(self):
