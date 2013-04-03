@@ -38,7 +38,7 @@ class Site(GenericSite):
         return case_names
 
     def _get_docket_numbers(self):
-        regex = re.compile("\d\d.\d*[a-zA-Z]")
+        regex = re.compile("\d\d.\d*[a-zA-Z]?")
         return [regex.search(html.tostring(ele, method='text', encoding='unicode')).group(0)
                     for ele in self.html.xpath('//div[2]/table/tbody/tr/td[3]')]
 
