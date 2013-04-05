@@ -4,9 +4,11 @@
 # import re
 import time
 from datetime import date
+from lxml import html
 
 from juriscraper.GenericSite import GenericSite
 # from juriscraper.lib.string_utils import titlecase
+
 
 class Site(GenericSite):
     def __init__(self):
@@ -61,7 +63,7 @@ class Site(GenericSite):
             'Published' or 'Unpublished', as below.
         '''
         statuses = []
-        for e in self.html.xpath('//table//table/tr[position() >= 3]/td[5]/a'):
+        for e in self.html.xpath('//path/to/text/text()'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'Opinion' in s:
                 statuses.append('Published')
@@ -71,11 +73,36 @@ class Site(GenericSite):
                 statuses.append('Unknown')
         return statuses
 
+    '''
+      High priority fields
+      
+      Remove this commend and any unused methods before submission
+    '''
+    def _get_docket_numbers(self):
+        return None
+
+    def _get_neutral_citations(self):
+        return None
+
+    def _get_judges(self):
+        return None
+
+    def _get_lower_courts(self):
+        return None
+
+    def _get_nature_of_suit(self):
+        return None
+
+    def _get_summaries(self):
+        return None
+
+    def _get_west_citations(self):
+        return None
 
     '''
       Optional fields
 
-      Remove this comment and any unused methods before submission ###
+      Remove this comment and any unused methods before submission
     '''
     def _get_adversary_numbers(self):
         # Common in bankruptcy cases where there are adversary proceedings.
@@ -93,31 +120,10 @@ class Site(GenericSite):
     def _get_docket_document_numbers(self):
         return None
 
-    def _get_docket_numbers(self):
-        return None
-
-    def _get_judges(self):
-        return None
-
-    def _get_nature_of_suit(self):
-        return None
-
-    def _get_neutral_citations(self):
-        return None
-
-    def _get_lower_courts(self):
-        return None
-
     def _get_lower_court_judges(self):
         return None
 
     def _get_lower_court_numbers(self):
-        return None
-
-    def _get_summaries(self):
-        return None
-
-    def _get_west_citations(self):
         return None
 
     '''
