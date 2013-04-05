@@ -74,7 +74,7 @@ Usage
 ======
 The scrapers is written in Python, and can can scrape a court as follows:
 
-    from juriscraper.opinions.united_states.federal import ca1
+    from juriscraper.opinions.united_states.federal_appellate import ca1
     
     # Create a site object 
     site = ca1.Site()
