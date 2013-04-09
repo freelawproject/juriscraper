@@ -67,6 +67,7 @@ def scrape_court(court, binaries=False):
 
     print '%s: Successfully crawled.' % site.court_id
 
+
 def main():
     global die_now
 
@@ -100,14 +101,15 @@ def main():
 
     daemon_mode = options.daemonmode
     binaries = options.binaries
-    court_id = options.court_id.replace('/', '.')
-    if court_id.endswith('.py'):
-        court_id = court_id[:-3]
-
+    court_id = options.court_id
 
     if not court_id:
         parser.error('You must specify a court as a package or module.')
     else:
+        court_id = court_id.replace('/', '.')
+        if court_id.endswith('.py'):
+            court_id = court_id[:-3]
+
         module_strings = build_module_list(court_id)
         if len(module_strings) == 0:
             parser.error('Unable to import module or package. Aborting.')
