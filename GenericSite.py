@@ -239,9 +239,8 @@ class GenericSite(object):
         # print "text: %s" % text
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
-        def remove_anchors(href):
-            # Some courts have anchors on their links that must be stripped.
-            return href.split('#')[0]
+
+        remove_anchors = lambda url: url.split('#')[0]
         html_tree.rewrite_links(remove_anchors)
 
         return html_tree
