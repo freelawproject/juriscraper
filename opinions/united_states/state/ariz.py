@@ -28,8 +28,16 @@ class Site(GenericSite):
                     for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
-
+        statuses = []
+        path = '//*[contains(@id, "DecType")]/text()'
+        for s in self.html.xpath(path):
+            if 'OPINION' in s:
+                statuses.append('Published')
+            elif 'MEMORANDUM' in s:
+                statuses.append('Unpublished')
+            else:
+                statuses.append('Unknown')
+        return statuses
     def _get_docket_document_numbers(self):
         path = '//a[contains(@id , "hypCaseNum")]//text()'
         return [t for t in self.html.xpath(path)]
