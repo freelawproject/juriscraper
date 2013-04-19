@@ -12,11 +12,11 @@ class Site(GenericSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [t for t in self.html.xpath('//table/tbody/tr/td[3]/a/text()')]
+        return [t for t in self.html.xpath('//table/tbody/tr/td[3]/a[1]/text()')]
 
     def _get_download_urls(self):
         return [href for href in
-                self.html.xpath('//table/tbody/tr/td[3]/a/@href')]
+                self.html.xpath('//table/tbody/tr/td[3]/a[1]/@href')]
 
     def _get_case_dates(self):
         dates = []
