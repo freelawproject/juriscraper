@@ -28,7 +28,7 @@ class Site(GenericSite):
             On a good site, most of your methods will follow this pattern.
         '''
         path = '//path/to/text/text()'
-        return [t for t in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         ''' This example demonstrates how to extract text from an element that

@@ -38,6 +38,7 @@ class Site(GenericSite):
             else:
                 statuses.append('Unknown')
         return statuses
+
     def _get_docket_document_numbers(self):
         path = '//a[contains(@id , "hypCaseNum")]//text()'
         return [t for t in self.html.xpath(path)]
