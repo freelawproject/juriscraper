@@ -39,3 +39,9 @@ class Site(GenericSite):
     def _get_docket_numbers(self):
         path = '''//tr[following-sibling::tr[1]/td[2][text()]]/following-sibling::tr[1]/td[1]/text()'''
         return list(self.html.xpath(path))
+
+    def _download_backwards(self, year):
+        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % year
+        self.html = self._download()
+
+
