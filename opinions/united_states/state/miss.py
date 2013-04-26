@@ -12,7 +12,7 @@ class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % 1996
+        self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year
 
     def _get_case_names(self):
         # This could be a very simple xpath, but alas, they have missing fields
