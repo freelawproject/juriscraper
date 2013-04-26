@@ -24,7 +24,12 @@ class Site(GenericSite):
         dates = []
         for s in self.html.xpath('//table/tr/td[1]/text()'):
             s = s.strip()
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%b %d %Y'))))
+            date_formats = ['%b %d %Y', '%b %d, %Y']
+            for format in date_formats:
+                try:
+                    dates.append(date.fromtimestamp(time.mktime(time.strptime(s, format))))
+                except ValueError:
+                    pass
         return dates
 
     def _get_docket_numbers(self):
