@@ -19,22 +19,20 @@ class Site(GenericSite):
         # for some cases. As a result, this xpath checks that the fields are 
         # valid (following-sibling), and only grabs those cases.
         case_names = []
-        for e in self.html.xpath('//tr[following-sibling::tr[1]/td[2][text()[not(contains(., "1899"))]]]/td/b/a'):
+        for e in self.html.xpath('//tr[following-sibling::tr[1]/td[2][text()]]/td/b/a'):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
 
     def _get_download_urls(self):
-        path = '''//tr[following-sibling::tr[1]/td[2][text()[not(contains(., '1899'))]]]/td/b/a/@href'''
+        path = '''//tr[following-sibling::tr[1]/td[2][text()]]/td/b/a/@href'''
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = '''//tr[following-sibling::tr[1]/td[2][text()[not(contains(., '1899'))]]]/following-sibling::tr[1]/td[2]/text()'''
+        path = '''//tr[following-sibling::tr[1]/td[2][text()]]/following-sibling::tr[1]/td[2]/text()'''
         dates = []
         for date_string in self.html.xpath(path):
-            print date_string
             dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
-
         return dates
 
 
@@ -42,7 +40,7 @@ class Site(GenericSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//tr[following-sibling::tr[1]/td[2][text()[not(contains(., '1899'))]]]/following-sibling::tr[1]/td[1]/text()'''
+        path = '''//tr[following-sibling::tr[1]/td[2][text()]]/following-sibling::tr[1]/td[1]/text()'''
         return list(self.html.xpath(path))
 
     def _download_backwards(self, year):
