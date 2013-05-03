@@ -7,7 +7,7 @@ class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         today = date.today()
-        self.url = 'http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%s&theYY=%s&A1=Get+Opinions' % (today.month, today.year)
+        self.url = 'http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions' % (today.month, today.year)
         self.court_id = self.__module__
 
     def _get_case_names(self):
