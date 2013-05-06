@@ -3,6 +3,7 @@ import re
 import time
 from datetime import date
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
@@ -21,12 +22,13 @@ class Site(GenericSite):
     def _get_case_dates(self):
         date_regex = re.compile('\d{1,2}/\d{1,2}/\d{2,4}')
         dates = []
-        for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/following-sibling::text()'):
+        for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/following-sibling::text()[1]'):
             try:
                 date_string = date_regex.search(e).group(0)
             except AttributeError:
                 # We have to try a bunch of text nodes before we'll get the right ones
                 continue
+            # We try two different date formats...
             try:
                 dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
             except ValueError:
