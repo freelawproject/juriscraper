@@ -54,6 +54,7 @@ We also generally use Eclipse with the PyDev and Aptana tools installed. This
 is useful because it allows syntax highlighting and PyLint integration. 
 
 For scrapers to be merged:
+
  - `python scraper_tests.py` must pass,
  - an *_example file should be included (this is needed for the tests to 
    run your code),
