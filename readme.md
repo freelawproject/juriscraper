@@ -53,9 +53,12 @@ xpath-tester can be installed locally in a few minutes or is available at
 We also generally use Eclipse with the PyDev and Aptana tools installed. This 
 is useful because it allows syntax highlighting and PyLint integration. 
 
-For scrapers to be merged, they need to be [PEP8][4] compliant, and should 
-efficiently parse a page, returning no exceptions and having no major Pylint 
-problems.  
+For scrapers to be merged:
+ - `python scraper_tests.py` must pass,
+ - an *_example file should be included (this is needed for the tests to 
+   run your code),
+ - your code should be [PEP8][4] compliant with no major Pylint problems, and 
+ - your code should efficiently parse a page, returning no exceptions.
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
 that makes sense and that nobody else is working on. Alternatively, we have 
@@ -105,6 +108,12 @@ over all courts of a certain jurisdiction that is provided by a script or a user
 
 Development of a `to_xml()` or `to_json()` method has not yet been completed, as 
 all callers have thus far been able to work directly with the Python objects.
+
+
+Tests
+=====
+We got that! You can (and should) run the tests with `python scraper_tests`.
+
 
 Version History
 ===============

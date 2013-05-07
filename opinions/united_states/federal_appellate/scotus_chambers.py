@@ -17,3 +17,6 @@ class Site(scotus_slip.Site):
     def _get_docket_numbers(self):
         path = '//div[@id = "maincolumn"]//table/tr/td[2]/text()'
         return [docket_number for docket_number in self.html.xpath(path)]
+
+    def _get_precedential_statuses(self):
+        return ['In-chambers'] * len(self.case_names)

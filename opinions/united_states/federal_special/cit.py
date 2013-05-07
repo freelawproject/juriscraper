@@ -7,6 +7,7 @@ from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 from lxml import html
+from lxml import etree
 
 
 class Site(GenericSite):
@@ -16,19 +17,19 @@ class Site(GenericSite):
         self.court_id = self.__module__
 
     def _get_download_urls(self):
-        return [t for t in self.html.xpath('//table[4]//tr/td[1]/a/@href')]
+        return [t for t in self.html.xpath('//table[6]//tr/td[1]/a/@href')]
 
     def _get_neutral_citations(self):
-        return [t for t in self.html.xpath('//table[4]//tr/td[1]/a/text()')]
+        return [t for t in self.html.xpath('//table[6]//tr/td[1]/a/text()')]
 
     def _get_case_names(self):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
-        return [s for s in self.html.xpath('//table[4]//tr[position() > 1]/td[2][../td/a]/text()[1]')]
+        return [s for s in self.html.xpath('//table[6]//tr[position() > 1]/td[2][../td/a]/text()[1]')]
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//table[4]//tr[position() > 1]/td[2][../td/a]'):
+        for e in self.html.xpath('//table[6]//tr[position() > 1]/td[2][../td/a]'):
             s = html.tostring(e, method='text', encoding='unicode').lower().strip()
             if "errata" in s:
                 statuses.append('Errata')
@@ -42,7 +43,7 @@ class Site(GenericSite):
         # original release date instead.
         dates = []
         date_formats = ['%m/%d/%Y', '%m/%d/%y']
-        for date_string in self.html.xpath('//table[4]//tr/td[3][../td/a]/text()'):
+        for date_string in self.html.xpath('//table[6]//tr/td[3][../td/a]/text()'):
             for date_format in date_formats:
                 try:
                     d = date.fromtimestamp(time.mktime(
@@ -54,20 +55,19 @@ class Site(GenericSite):
                     continue
         return dates
 
-
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//table[4]//tr[position() > 1]/td[4][../td/a]'):
+        for e in self.html.xpath('//table[6]//tr[position() > 1]/td[4][../td/a]'):
             docket_numbers.append(html.tostring(
                                 e, method='text', encoding='unicode').strip())
         return docket_numbers
 
     def _get_judges(self):
         judges = []
-        for e in self.html.xpath('//table[4]//tr[position() > 1]/td[5][../td/a]'):
+        for e in self.html.xpath('//table[6]//tr[position() > 1]/td[5][../td/a]'):
             s = html.tostring (e, method='text', encoding='unicode')
             judges.append(s)
         return judges
 
     def _get_nature_of_suit(self):
-        return [t for t in self.html.xpath('//table[4]//tr/td[6][../td/a]/text()')]
+        return [t for t in self.html.xpath('//table[6]//tr/td[6][../td/a]/text()')]

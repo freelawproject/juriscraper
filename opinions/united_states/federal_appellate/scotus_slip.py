@@ -25,12 +25,4 @@ class Site(GenericSite):
         return [docket_number for docket_number in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for _ in range(0, len(self.case_names)):
-            if 'slipopinion' in self.url:
-                statuses.append("Published")
-            elif 'in-chambers' in self.url:
-                statuses.append("In-chambers")
-            elif 'relatingtoorders' in self.url:
-                statuses.append("Relating-to")
-        return statuses
+        return ['Published'] * len(self.case_names)
