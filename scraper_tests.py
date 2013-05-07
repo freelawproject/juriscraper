@@ -1,12 +1,11 @@
 from glob import glob
+import logging
 import SimpleHTTPServer
 import SocketServer
 import threading
 import unittest
 
 from juriscraper.lib.importer import build_module_list
-
-# TODO: Make sure logging is disabled.
 
 PORT = 8080
 
@@ -25,8 +24,12 @@ class ScraperExampleTest(unittest.TestCase):
         httpd_thread.setDaemon(True)
         httpd_thread.start()
 
+        # Disable logging
+        logging.disable(logging.CRITICAL)
+
     def tearDown(self):
-        pass
+        # Re-enable logging
+        logging.disable(logging.NOTSET)
 
     def test_scrape_all_example_files(self):
         '''Finds all the $module_example* files and tests them with the sample
