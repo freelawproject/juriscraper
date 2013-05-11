@@ -42,7 +42,3 @@ class Site(GenericSite):
     def _get_docket_document_numbers(self):
         path = '//a[contains(@id , "hypCaseNum")]//text()'
         return [t for t in self.html.xpath(path)]
-
-    def _get_judges(self):
-        path = '//tr[contains(@id , "trSummary")]/td/text()[1]'
-        return [t for t in self.html.xpath(path) if t.strip()]
