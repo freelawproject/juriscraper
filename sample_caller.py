@@ -11,9 +11,9 @@ die_now = False
 
 def signal_handler(signal, frame):
     # Trigger this with CTRL+4
-    print '**************'
-    print 'Signal caught. Finishing the current court, then exiting...'
-    print '**************'
+    v_print(3, '**************')
+    v_print(3, 'Signal caught. Finishing the current court, then exiting...')
+    v_print(3, '**************')
     global die_now
     die_now = True
 
@@ -41,16 +41,16 @@ def scrape_court(court, binaries=False):
                 data = urllib2.urlopen(download_url).read()
                 # test for empty files (thank you CA1)
                 if len(data) == 0:
-                    print 'EmptyFileError: %s' % download_url
-                    print traceback.format_exc()
+                    v_print(3, 'EmptyFileError: %s' % download_url)
+                    v_print(3, traceback.format_exc())
                     continue
             except Exception:
-                print 'DownloadingError: %s' % download_url
-                print traceback.format_exc()
+                v_print(3, 'DownloadingError: %s' % download_url)
+                v_print(3, traceback.format_exc())
                 continue
 
         # Normally, you'd do your save routines here...
-        print 'Adding new document found at: %s' % download_url
+        v_print(1, 'Adding new document found at: %s' % download_url)
         attributes = ['adversary_numbers', 'case_dates', 'case_names',
                       'causes', 'dispositions', 'docket_attachment_numbers',
                       'docket_document_numbers', 'docket_numbers',
@@ -60,14 +60,15 @@ def scrape_court(court, binaries=False):
                       'summaries', 'west_citations']
         for attr in attributes:
             if getattr(site, attr) is not None:
-                print ('    %s: %s' % (attr, getattr(site, attr)[i])).encode('utf-8')
+                v_print(1, ('    %s: %s' % (attr, getattr(site, attr)[i])).encode('utf-8'))
 
         # Extract the contents using e.g. antiword, pdftotext, etc.
         # extract_doc_content(data)
 
-    print '%s: Successfully crawled.' % site.court_id
+    v_print(3, '%s: Successfully crawled.' % site.court_id)
 
 
+v_print = None
 def main():
     global die_now
 
@@ -96,12 +97,26 @@ def main():
                       dest='binaries', default=False,
                       help=('Use this flag if you wish to download the pdf, '
                             'wpd, and doc files.'))
+    parser.add_option('-v',
+                      '--verbosity',
+                      action='count',
+                      default=1,
+                      help='Increase output verbosity (e.g., -vv is more than -v).')
 
     (options, args) = parser.parse_args()
 
     daemon_mode = options.daemonmode
     binaries = options.binaries
     court_id = options.court_id
+
+    # Set up the print function
+    print "Verbosity is set to: %s" % options.verbosity
+    def _v_print(*verb_args):
+        if verb_args[0] > (3 - options.verbosity):
+            print verb_args[1]
+
+    global v_print
+    v_print = _v_print
 
     if not court_id:
         parser.error('You must specify a court as a package or module.')
@@ -114,17 +129,17 @@ def main():
         if len(module_strings) == 0:
             parser.error('Unable to import module or package. Aborting.')
 
-        print 'Starting up the scraper.'
+        v_print(3, 'Starting up the scraper.')
         num_courts = len(module_strings)
         i = 0
         while i < num_courts:
             # this catches SIGINT, so the code can be killed safely.
             if die_now == True:
-                print 'The scraper has stopped.'
+                v_print(3, 'The scraper has stopped.')
                 sys.exit(1)
 
             package, module = module_strings[i].rsplit('.', 1)
-            print "Current court: %s.%s" % (package, module)
+            v_print(3, "Current court: %s.%s" % (package, module))
 
             mod = __import__("%s.%s" % (package, module),
                              globals(),
@@ -133,10 +148,10 @@ def main():
             try:
                 scrape_court(mod, binaries)
             except Exception:
-                print '*************!! CRAWLER DOWN !!****************'
-                print '*****scrape_court method failed on mod: %s*****' % module_strings[i]
-                print '*************!! ACTION NEEDED !!***************'
-                print traceback.format_exc()
+                v_print(3, '*************!! CRAWLER DOWN !!****************')
+                v_print(3, '*****scrape_court method failed on mod: %s*****' % module_strings[i])
+                v_print(3, '*************!! ACTION NEEDED !!***************')
+                v_print(3, traceback.format_exc())
                 i += 1
                 continue
 
@@ -146,7 +161,7 @@ def main():
             else:
                 i += 1
 
-    print 'The scraper has stopped.'
+    v_print(3, 'The scraper has stopped.')
     sys.exit(0)
 
 if __name__ == '__main__':

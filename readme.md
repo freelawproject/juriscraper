@@ -1,8 +1,8 @@
 What is this?
 =============
 Juriscraper is a scraper library that is used to scrape the American court system. 
-It is currently able to scrape all major appellate Federal courts, and state courts
-are planned soon.
+It is currently able to scrape all major appellate Federal courts, and we are 
+currently working on adding state courts.
 
 Juriscraper is part of a two-part system. The second part is the 'caller', which 
 should be developed by the system using Juriscraper. The caller is responsible 
@@ -18,7 +18,7 @@ Some of the design goals for this project are:
  - extensibility to support geographies (US, Cuba, Mexico, California) 
  - Mime type identification through magic numbers
  - Generalized architecture with no code repetition
- - Xpath-based scraping powered by lxml's html parser
+ - XPath-based scraping powered by lxml's html parser
  - return all meta data available on court websites (caller can pick what it needs)
  - no need for a database
  - clear log levels (DEBUG, INFO, WARN, CRITICAL)
@@ -70,8 +70,6 @@ When you're done with your scraper, fork this repository, push your changes into
 your fork, and then send a pull request for your changes. Be sure to 
 remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
-
-All new scrapers must function with the sample caller as a basic sanity test.
 
 
 Usage
