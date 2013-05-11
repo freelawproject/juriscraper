@@ -14,7 +14,7 @@ from datetime import date
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.courts.alaska.gov/sp.htm'
+        self.url = 'http://www.courtrecords.alaska.gov/webdocs/opinions/sp.htm'
         self.court_id = self.__module__
 
     def _get_case_names(self):
