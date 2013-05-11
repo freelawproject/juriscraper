@@ -22,7 +22,7 @@ class Site(GenericSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [html.tostring(e, method='text') for e in self.html.xpath('//table/td/b/a/nobr')]
+        return [html.tostring(e, method='text', encoding='utf-8') for e in self.html.xpath('//table/td/b/a/nobr')]
 
     def _get_precedential_statuses(self):
         statuses = []

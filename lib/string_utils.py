@@ -250,6 +250,10 @@ def clean_string(string):
      - converts to unicode.
      - removes weird white space and replaces with spaces.
     '''
+    # if not already unicode, make it unicode, dropping invalid characters
+    # if not isinstance(string, unicode):
+    string = force_unicode(string, errors='ignore')
+
     # Get rid of HTML encoded chars
     string = string.replace('&rsquo;', '\'').replace('&rdquo;', '\"')\
         .replace('&ldquo;', '\"').replace('&nbsp;', ' ')\
@@ -277,10 +281,6 @@ def clean_string(string):
         frag = re.sub(bad_beginnings, '', frag)
         cleaned_string.append(frag)
     string = ' v. '.join(cleaned_string)
-
-    # if not already unicode, make it unicode, dropping invalid characters
-    # if not isinstance(string, unicode):
-    string = force_unicode(string, errors='ignore')
 
     # get rid of '\t\n\x0b\x0c\r ', and replace them with a single space.
     string = ' '.join(string.split())
