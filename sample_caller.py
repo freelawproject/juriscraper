@@ -19,7 +19,7 @@ def signal_handler(signal, frame):
 
 
 def scrape_court(court, binaries=False):
-    '''Calls the requested court(s), gets its content, then throws it away.
+    """Calls the requested court(s), gets its content, then throws it away.
 
     Note that this is a very basic caller lacking important functionality, such
     as:
@@ -29,7 +29,7 @@ def scrape_court(court, binaries=False):
 
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
-    '''
+    """
     site = court.Site().parse()
 
     for i in range(0, len(site.case_names)):
@@ -134,7 +134,7 @@ def main():
         i = 0
         while i < num_courts:
             # this catches SIGINT, so the code can be killed safely.
-            if die_now == True:
+            if die_now:
                 v_print(3, 'The scraper has stopped.')
                 sys.exit(1)
 

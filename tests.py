@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from glob import glob
+import glob
 import logging
 import SimpleHTTPServer
 import SocketServer
@@ -39,9 +39,9 @@ class ScraperExampleTest(unittest.TestCase):
         logging.disable(logging.NOTSET)
 
     def test_scrape_all_example_files(self):
-        '''Finds all the $module_example* files and tests them with the sample
+        """Finds all the $module_example* files and tests them with the sample
         scraper.
-        '''
+        """
         module_strings = build_module_list('opinions')
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
@@ -50,7 +50,7 @@ class ScraperExampleTest(unittest.TestCase):
                              locals(),
                              [module])
             if 'backscraper' not in module_string:
-                paths = glob('%s_example*' % module_string.replace('.', '/'))
+                paths = glob.glob('%s_example*' % module_string.replace('.', '/'))
                 for path in paths:
                     full_url = 'http://localhost:%s/%s' % (PORT, path)
                     site = mod.Site()
