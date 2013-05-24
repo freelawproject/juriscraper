@@ -1,13 +1,13 @@
 # Auth: mlr
 # Date: 2013-05-28
 
-import haw_appeals_ct
+import hawapp
 
 from datetime import date
 from lxml import html
 
 
-class Site(haw_appeals_ct.Site):
+class Site(hawapp.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
