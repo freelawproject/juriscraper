@@ -4,6 +4,10 @@ __all__ = ['alaska',
            'cal_u',
            #'idaho_civil', Broken, but never released.
            #'idaho_criminal', Broken, but never released.
+           'haw',
+           'haw_beginningofyear',
+           'haw_appeals_ct',
+           'haw_appeals_ct_beginningofyear',
            'ind',
            'miss_beginningofyear',
            'miss',

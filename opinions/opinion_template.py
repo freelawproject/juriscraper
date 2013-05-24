@@ -22,16 +22,16 @@ class Site(GenericSite):
       Remove this comment before submission.
     '''
     def _get_download_urls(self):
-        ''' This is an example of a basic piece of meta data accessible with a
+        """ This is an example of a basic piece of meta data accessible with a
             simple XPath query.
 
             On a good site, most of your methods will follow this pattern.
-        '''
+        """
         path = '//path/to/text/text()'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        ''' This example demonstrates how to extract text from an element that
+        """ This example demonstrates how to extract text from an element that
             may contain other elements.
 
             For example, this will work well on something like:
@@ -42,7 +42,7 @@ class Site(GenericSite):
 
             Note that titlecase() should be used here in the case that the case
             names are provided in uppercase.
-        '''
+        """
         case_names = []
         for e in self.html.xpath('//path/to/an/element/p'):
             s = html.tostring(e, method='text', encoding='unicode')
@@ -50,18 +50,18 @@ class Site(GenericSite):
         return case_names
 
     def _get_case_dates(self):
-        ''' This is an example of a date field. Note that the format string
+        """ This is an example of a date field. Note that the format string
             will likely need to be updated to  match the date formats
             on the site you are scraping.
-        '''
+        """
         path = '//path/to/text/text()'
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
                     for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        ''' In most cases, this field should be normalized to either
+        """ In most cases, this field should be normalized to either
             'Published' or 'Unpublished', as below.
-        '''
+        """
         statuses = []
         for e in self.html.xpath('//path/to/text/text()'):
             s = html.tostring(e, method='text', encoding='unicode')
@@ -73,11 +73,11 @@ class Site(GenericSite):
                 statuses.append('Unknown')
         return statuses
 
-    '''
+    """
       High priority fields
-      
+
       Remove this commend and any unused methods before submission
-    '''
+    """
     def _get_docket_numbers(self):
         return None
 
@@ -99,11 +99,11 @@ class Site(GenericSite):
     def _get_west_citations(self):
         return None
 
-    '''
+    """
       Optional fields
 
       Remove this comment and any unused methods before submission
-    '''
+    """
     def _get_adversary_numbers(self):
         # Common in bankruptcy cases where there are adversary proceedings.
         return None
@@ -126,11 +126,11 @@ class Site(GenericSite):
     def _get_lower_court_numbers(self):
         return None
 
-    '''
+    """
       Optional method used for downloading multiple pages of a court site.
-    '''
+    """
     def _download_backwards(self):
-        ''' This is a simple method that can be used to generate Site objects
+        """ This is a simple method that can be used to generate Site objects
             that can be used to paginate through a court's entire website.
 
             This method is usually called by a backscraper caller (see the
@@ -142,5 +142,5 @@ class Site(GenericSite):
 
             This can also be used to hold notes useful to future backscraper
             development.
-        '''
+        """
         pass

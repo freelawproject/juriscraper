@@ -16,19 +16,19 @@ class Site(GenericSite):
         self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % date.today().year
 
     def _get_download_urls(self):
-        path = '//table[@class = "opinionsdata"]/tr/td[3][../td/text() = "S.Ct"]/a[1]/@href'
+        path = '//table[@class = "opinionsdata"]/tr/td[3][../td/text() = "ICA"]/a[1]/@href'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         # There is often a missing link in a case, thus we need an extra check here.
-        path = '//table[@class = "opinionsdata"]/tr/td[4][../td/a][../td/text() = "S.Ct"]/p[1]/text()[1]'
+        path = '//table[@class = "opinionsdata"]/tr/td[4][../td/a][../td/text() = "ICA"]/p[1]/text()[1]'
         case_names = []
         for s in self.html.xpath(path):
             case_names.append(s.split('(')[0])
         return case_names
 
     def _get_case_dates(self):
-        path = '//table[@class = "opinionsdata"]/tr/td[1][../td/a][../td/text() = "S.Ct"]/text()'
+        path = '//table[@class = "opinionsdata"]/tr/td[1][../td/a][../td/text() = "ICA"]/text()'
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
                 for date_string in self.html.xpath(path)]
 
@@ -36,11 +36,11 @@ class Site(GenericSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//table[@class = "opinionsdata"]/tr/td[3][../td/a][../td/text() = "S.Ct"]/a[1]/text()'
+        path = '//table[@class = "opinionsdata"]/tr/td[3][../td/a][../td/text() = "ICA"]/a[1]/text()'
         return list(self.html.xpath(path))
 
     def _get_lower_courts(self):
-        path = '//table[@class = "opinionsdata"]/tr/td[5][../td/a][../td/text() = "S.Ct"]'
+        path = '//table[@class = "opinionsdata"]/tr/td[5][../td/a][../td/text() = "ICA"]'
         lower_courts = []
         for e in self.html.xpath(path):
             lower_courts.append(html.tostring(e, method='text', encoding='unicode'))
