@@ -13,7 +13,7 @@ class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % 2010
+        self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % date.today().year
 
     def _get_download_urls(self):
         path = '//table[@class = "opinionsdata"]/tr/td[3][../td/text() = "S.Ct"][not(contains(../td[3]/a/text(), "Bar"))]/a[1]/@href'
