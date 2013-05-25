@@ -8,7 +8,7 @@ from lxml import html
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.ca1.uscourts.gov/opinions/opinionrss.php'
+        self.url = 'http://media.ca1.uscourts.gov/opinions/opinionrss.php'
         self.court_id = self.__module__
 
     def _get_case_names(self):
