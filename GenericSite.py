@@ -221,15 +221,15 @@ class GenericSite(object):
         if self.method == 'GET':
             if use_sessions:
                 s = requests.session()
-                r = s.get(self.url, headers={'User-Agent':'Juriscraper'})
+                r = s.get(self.url, headers={'User-Agent': 'Juriscraper'})
             else:
                 r = requests.get(self.url,
                                  allow_redirects=False,
-                                 headers={'User-Agent':'Juriscraper'})
+                                 headers={'User-Agent': 'Juriscraper'})
         elif self.method == 'POST':
             r = requests.post(self.url,
                               allow_redirects=False,
-                              headers={'User-Agent':'Juriscraper'},
+                              headers={'User-Agent': 'Juriscraper'},
                               data=self.parameters)
 
         # Provides a hook for inheriting objects to tweak the request object.
