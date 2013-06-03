@@ -56,7 +56,7 @@ class Site(GenericSite):
         """
         path = '//path/to/text/text()'
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
-                    for date_string in self.html.xpath(path)]
+                for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         """ In most cases, this field should be normalized to either
