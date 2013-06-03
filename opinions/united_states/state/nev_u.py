@@ -7,6 +7,7 @@ from juriscraper.GenericSite import GenericSite
 from datetime import date
 import time
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()

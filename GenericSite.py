@@ -99,6 +99,13 @@ class GenericSite(object):
         self._make_hash()
         return self
 
+    def tweak_request_object(self, r):
+        """
+        Does nothing, but provides a hook that allows inheriting objects to
+        tweak the requests object if necessary.
+        """
+        pass
+
     def _clean_text(self, text):
         ''' Cleans up text before we make it into an HTML tree:
             1. Nukes <![CDATA stuff.
@@ -224,6 +231,9 @@ class GenericSite(object):
                               allow_redirects=False,
                               headers={'User-Agent':'Juriscraper'},
                               data=self.parameters)
+
+        # Provides a hook for inheriting objects to tweak the request object.
+        self.tweak_request_object(r)
 
         # Throw an error if a bad status code is returned.
         r.raise_for_status()

@@ -14,6 +14,16 @@ class Site(GenericSite):
         self.url = 'http://www.isc.idaho.gov/opinions/sccivil.htm'
         self.court_id = self.__module__
 
+    def tweak_request_object(self, r):
+        """
+        This state uses an HTTP header to indicate an encoding of UTF-8,
+        but the encoding is actually ISO-8859-1, as indicated in the HTML
+        itself. When this page is rendered in Firefox, chardet fails, and
+        many unknown characters are displayed to the user. Setting the
+        character encoding manually fixes the issue.
+        """
+        r.encoding = 'ISO-8859-1'
+
     def _get_case_names(self):
         case_names = []
         for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
@@ -45,21 +55,15 @@ class Site(GenericSite):
         return download_urls
 
     def _get_case_dates(self):
-        dates = []
-        for xelement in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
-            # Our text nodes are randomly surrounded by HTML spans, so we start
-            # at a high level node, and strip down to just what we want.
-            data_html = html.tostring(xelement, encoding=unicode)
-            data_string = re.sub(r'<[^>]*?>', '', data_html)
-            data_string = ' '.join(data_string.split())
-            regex = u'(.*?)[-–]'
-            try:
-                date_string = re.search(regex, data_string).group(1)
-            except AttributeError:
-                print data_string
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(clean_string(date_string), '%B %d, %Y'))))
-
-        return dates
+        case_dates = []
+        for e in self.html.xpath('//li[@class="MsoNormal"]/span/a[1]'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            # Cleanup...
+            s = s.split(u'-')[0]
+            s = s.split(u'–')[0]
+            case_date = date.fromtimestamp(time.mktime(time.strptime(clean_string(s), '%B %d, %Y')))
+            case_dates.append(case_date)
+        return case_dates
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
