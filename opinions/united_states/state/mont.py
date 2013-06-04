@@ -28,7 +28,6 @@ class Site(GenericSite):
                     '&cboToMonth=%s'
                     '&cboToDay=%s' % (thirty_days_ago.year, thirty_days_ago.month, thirty_days_ago.day,
                                       today.year, today.month, today.day))
-        print self.url
 
     def _get_download_urls(self):
         path = '//table[@id="anyid"]/tr[position() > 1]/td[1]/a/@href'
