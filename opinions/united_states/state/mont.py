@@ -49,7 +49,10 @@ class Site(GenericSite):
         docket_numbers = []
         for s in self.html.xpath('//table[@id="anyid"]/tr[position() > 1]/td[3]/text()'):
             if re.search('[A-Za-z]', s):
-                docket_numbers.append(s.split()[1])
+                try:
+                    docket_numbers.append(s.split()[1])
+                except IndexError:
+                    docket_numbers.append(s)
             else:
                 docket_numbers.append(s)
         return docket_numbers

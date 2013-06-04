@@ -138,7 +138,7 @@ class Site(GenericSite):
             modifies aspects of the Site object's attributes such as Site.url.
 
             For a simple example of this in use see the implementation for
-            michigan in opinions/united_states_backscrapers/state/mich.py.
+            michigan in opinions/united_states/state/mich.py.
 
             This can also be used to hold notes useful to future backscraper
             development.
