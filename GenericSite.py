@@ -163,8 +163,12 @@ class GenericSite(object):
                       'lower_court_numbers', 'neutral_citations',
                       'precedential_statuses', 'summaries', 'west_citations']
         for attr in attributes:
-            if self.__getattribute__(attr) is not None:
-                lengths[attr] = len(self.__getattribute__(attr))
+            try:
+                if self.__getattribute__(attr) is not None:
+                    lengths[attr] = len(self.__getattribute__(attr))
+            except TypeError:
+                # Occurs when using a generator rather than an actual list
+                pass
         values = lengths.values()
         if values.count(values[0]) != len(values):
             # Are all elements equal?
