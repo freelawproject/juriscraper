@@ -20,5 +20,7 @@ class Site(nm_p.Site):
         self.url = 'http://www.nmcompcomm.us/nmcases/NMUnrepYear.aspx?db=cau&y=%s' % (year)
         self.html = self._download()
 
+    def _get_precedential_statuses(self):
+        return ["Unpublished"] * len(self.case_names)
 
 
