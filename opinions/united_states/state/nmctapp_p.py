@@ -11,6 +11,6 @@ class Site(nm_p.Site):
         self.court_id = self.__module__
 
     def _download_backwards(self, year):
-        self.url = 'http://www.nmcompcomm.us/nmcases/NMARYear.aspx?db=car&y1=%s&y2=%s' % (today.year, today.year)
+        self.url = 'http://www.nmcompcomm.us/nmcases/NMARYear.aspx?db=car&y1=%s&y2=%s' % (year, year)
         self.html = self._download()
 

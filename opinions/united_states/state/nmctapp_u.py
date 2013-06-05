@@ -16,11 +16,11 @@ class Site(nm_p.Site):
     def _get_neutral_citations(self):
         return None
 
+    def _get_precedential_statuses(self):
+        return ["Unpublished"] * len(self.case_names)
+
     def _download_backwards(self, year):
         self.url = 'http://www.nmcompcomm.us/nmcases/NMUnrepYear.aspx?db=cau&y=%s' % (year)
         self.html = self._download()
-
-    def _get_precedential_statuses(self):
-        return ["Unpublished"] * len(self.case_names)
 
 
