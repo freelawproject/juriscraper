@@ -1,0 +1,156 @@
+'''
+History:
+ - Left message for Diana Norman (512) 463-1551, at the Appeals Court, requesting a call back.
+
+http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=886&Index=***coa01%5cOpinion
+http://www.search.txcourts.gov/SearchMedia.aspx?MediaVersionID=906eee9d-85e3-48a8-9349-7387948b6673&coa=coa01&DT=Opinion&MediaID=cf67a534-225a-4a5e-966f-41f68c35e6c4
+'''
+
+
+
+# Author: Michael Lissner
+# Date created: 2013-06-05
+
+# import re
+import time
+from datetime import date
+from lxml import html
+
+from juriscraper.GenericSite import GenericSite
+# from juriscraper.lib.string_utils import titlecase
+
+
+class Site(GenericSite):
+    def __init__(self):
+        super(Site, self).__init__()
+        self.court_id = self.__module__
+        self.url = 'http://court-url.gov/some-path.html'
+
+    '''
+      Required fields - InsanityExceptions will be thrown if omitted.
+
+      Remove this comment before submission.
+    '''
+    def _get_download_urls(self):
+        """ This is an example of a basic piece of meta data accessible with a
+            simple XPath query.
+
+            On a good site, most of your methods will follow this pattern.
+        """
+        path = '//path/to/text/text()'
+        return list(self.html.xpath(path))
+
+    def _get_case_names(self):
+        """ This example demonstrates how to extract text from an element that
+            may contain other elements.
+
+            For example, this will work well on something like:
+               <strong>Nadim v. <em>Jenny</em></strong>
+
+            Resulting in text like:
+               Nadim v. Jenny
+
+            Note that titlecase() should be used here in the case that the case
+            names are provided in uppercase.
+        """
+        case_names = []
+        for e in self.html.xpath('//path/to/an/element/p'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            case_names.append(s)
+        return case_names
+
+    def _get_case_dates(self):
+        """ This is an example of a date field. Note that the format string
+            will likely need to be updated to  match the date formats
+            on the site you are scraping.
+        """
+        path = '//path/to/text/text()'
+        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
+                for date_string in self.html.xpath(path)]
+
+    def _get_precedential_statuses(self):
+        """ In most cases, this field should be normalized to either
+            'Published' or 'Unpublished', as below.
+        """
+        statuses = []
+        for e in self.html.xpath('//path/to/text/text()'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            if 'Opinion' in s:
+                statuses.append('Published')
+            elif 'Nonprecedential' in s:
+                statuses.append('Unpublished')
+            else:
+                statuses.append('Unknown')
+        return statuses
+
+    """
+      High priority fields
+
+      Remove this commend and any unused methods before submission
+    """
+    def _get_docket_numbers(self):
+        return None
+
+    def _get_neutral_citations(self):
+        return None
+
+    def _get_judges(self):
+        return None
+
+    def _get_lower_courts(self):
+        return None
+
+    def _get_nature_of_suit(self):
+        return None
+
+    def _get_summaries(self):
+        return None
+
+    def _get_west_citations(self):
+        return None
+
+    """
+      Optional fields
+
+      Remove this comment and any unused methods before submission
+    """
+    def _get_adversary_numbers(self):
+        # Common in bankruptcy cases where there are adversary proceedings.
+        return None
+
+    def _get_causes(self):
+        return None
+
+    def _get_dispositions(self):
+        return None
+
+    def _get_docket_attachment_numbers(self):
+        return None
+
+    def _get_docket_document_numbers(self):
+        return None
+
+    def _get_lower_court_judges(self):
+        return None
+
+    def _get_lower_court_numbers(self):
+        return None
+
+    """
+      Optional method used for downloading multiple pages of a court site.
+    """
+    def _download_backwards(self):
+        """ This is a simple method that can be used to generate Site objects
+            that can be used to paginate through a court's entire website.
+
+            This method is usually called by a backscraper caller (see the
+            one in CourtListener/alert/scrapers for details), and typically
+            modifies aspects of the Site object's attributes such as Site.url.
+
+            For a simple example of this in use see the implementation for
+            michigan in opinions/united_states/state/mich.py.
+
+            This can also be used to hold notes useful to future backscraper
+            development.
+        """
+        pass
