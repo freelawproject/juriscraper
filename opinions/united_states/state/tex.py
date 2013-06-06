@@ -42,7 +42,7 @@ class Site(GenericSite):
             html_tree.make_links_absolute(self.url)
 
             paths = ["//tr[td/text()[contains(., 'Opinion issued')]]//tr[descendant::a[contains(., 'HTML')]]//@href",
-                     "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"]
+                     "//tr[td/text()[contains(., 'Opinion issued')]]//tr[descendant::a[contains(., 'PDF')]]//@href"]
             url = None
             for path in paths:
                 try:
