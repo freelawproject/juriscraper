@@ -48,7 +48,7 @@ class Site(GenericSite):
             return html_tree.xpath(path)[0]
 
         urls = YieldingList(seed=self.html.xpath(path),
-                            fetcher=fetcher())
+                            fetcher=fetcher)
         return urls
 
 
