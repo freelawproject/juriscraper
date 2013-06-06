@@ -40,14 +40,16 @@ class Site(GenericSite):
             html_tree = html.fromstring(r.text)
             html_tree.make_links_absolute(self.url)
 
-            # Path: href attr of the first tr that has an ancestor of type tr which in turn has a td containing the text
-            # 'Opinion issued'
-            path = "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"
-            try:
-                url = html_tree.xpath(path)[0]
-                return url
-            except IndexError:
-                return None
+            paths = ["//tr[td/text()[contains(., 'Opinion issued')]]//tr[descendant::a[contains(., 'HTML')]]//@href",
+                     "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"]
+            url = None
+            for path in paths:
+                try:
+                    url = html_tree.xpath(path)[0]
+                    break
+                except IndexError:
+                    continue
+            return url
 
         path = '//a[contains(@id, "lnkCase")]/@href'
         seed_urls = self.html.xpath(path)
