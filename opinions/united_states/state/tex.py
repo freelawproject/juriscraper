@@ -48,8 +48,7 @@ class Site(GenericSite):
         path = '//a[contains(@id, "lnkCase")]/@href'
         seed_urls = self.html.xpath(path)
         if seed_urls:
-            urls = DeferringList(seed=,
-                                fetcher=fetcher)
+            urls = DeferringList(seed=seed_urls, fetcher=fetcher)
             return urls
         else:
             return []
