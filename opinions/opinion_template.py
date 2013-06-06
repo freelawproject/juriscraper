@@ -2,8 +2,8 @@
 # Date created:
 
 # import re
-import time
 from datetime import date
+from datetime import datetime
 from lxml import html
 
 from juriscraper.GenericSite import GenericSite
@@ -55,7 +55,7 @@ class Site(GenericSite):
             on the site you are scraping.
         """
         path = '//path/to/text/text()'
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
+        return [datetime.strptime(date_string, '%m/%d/%Y').date()
                 for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):

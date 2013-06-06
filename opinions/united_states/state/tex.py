@@ -11,6 +11,7 @@ http://www.search.txcourts.gov/SearchMedia.aspx?MediaVersionID=906eee9d-85e3-48a
 
 import requests
 from datetime import date
+from datetime import datetime
 from lxml import html
 
 
@@ -64,10 +65,12 @@ class Site(GenericSite):
         return [titlecase(s) for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        # This mirrors the xpath for the case_names. We could use len(case_names) here, but it won't work because
-        # case_names isn't yet parsed at the time that case_dates is run.
+        date_str = self.html.xpath("//span[@id = 'ctl00_ContentPlaceHolder1_lblDocketDate']/text()")[0]
+        dt = datetime.strptime(date_str, "%m/%d/%Y").date()
+
+        # Uses the path from the case_name as a multiplier, since case_names are not known when case_date is run.
         path = '//td[@class = "caseStyle"]/span/text()'
-        return [date.today()] * len(list(self.html.xpath(path)))
+        return [dt] * len(list(self.html.xpath(path)))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
