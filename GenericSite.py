@@ -32,20 +32,26 @@ class InsanityException(Exception):
 
 
 class GenericSite(object):
-    '''Contains generic methods for scraping data. Should be extended by all
+    """Contains generic methods for scraping data. Should be extended by all
     scrapers.
 
-    Should not contain lists that can't be sorted by the _date_sort function.'''
+    Should not contain lists that can't be sorted by the _date_sort function."""
+
     def __init__(self):
         super(GenericSite, self).__init__()
 
-        # Computed meta data
+        # Computed metadata
         self.hash = None
         self.html = None
         self.method = 'GET'
         self.status = None
 
-        # Scraped meta data
+        # Upstream metadata
+        self.court_id = None
+        self.url = None
+        self.parameters = None
+
+        # Scraped metadata
         self.adversary_numbers = None
         self.case_dates = None
         self.case_names = None
@@ -75,9 +81,9 @@ class GenericSite(object):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
-        self.case_names = self._get_case_names()
         self.adversary_numbers = self._get_adversary_numbers()
         self.case_dates = self._get_case_dates()
+        self.case_names = self._get_case_names()
         self.causes = self._get_causes()
         self.dispositions = self._get_dispositions()
         self.docket_attachment_numbers = self._get_docket_attachment_numbers()
@@ -107,11 +113,11 @@ class GenericSite(object):
         pass
 
     def _clean_text(self, text):
-        ''' Cleans up text before we make it into an HTML tree:
+        """ Cleans up text before we make it into an HTML tree:
             1. Nukes <![CDATA stuff.
             2. Nukes encoding declarations
             3. ?
-        '''
+        """
         # Remove <![CDATA because it causes breakage in lxml.
         text = re.sub(r'<!\[CDATA\[', '', text)
         text = re.sub(r'\]\]>', '', text)
@@ -127,7 +133,7 @@ class GenericSite(object):
         return text
 
     def _clean_attributes(self):
-        '''Iterate over attribute values and clean them'''
+        """Iterate over attribute values and clean them"""
         for item in [self.adversary_numbers, self.causes, self.dispositions,
                      self.docket_attachment_numbers,
                      self.docket_document_numbers, self.docket_numbers,
@@ -139,10 +145,10 @@ class GenericSite(object):
                 item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
             self.case_names = [harmonize(clean_string(case_name))
-                                    for case_name in self.case_names]
+                               for case_name in self.case_names]
 
     def _check_sanity(self):
-        '''Check that the objects attributes make sense:
+        """Check that the objects attributes make sense:
             1. Do all the attributes have the same length?
             2. Do we have any content at all?
             3. Is there a bare minimum of meta data?
@@ -150,7 +156,7 @@ class GenericSite(object):
 
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
-        '''
+        """
         lengths = {}
         attributes = ['adversary_numbers', 'case_dates', 'case_names', 'causes',
                       'dispositions', 'docket_attachment_numbers',
@@ -176,16 +182,17 @@ class GenericSite(object):
             for field in required_fields:
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not '
-                            'contain any data: %s' % (self.court_id, field))
+                                            'contain any data: %s' % (self.court_id, field))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 
     def _date_sort(self):
-        ''' This function sorts the object by date. It's a good candidate for
+        """ This function sorts the object by date. It's a good candidate for
         re-coding due to violating DRY and because it works by checking for
         lists, limiting the kinds of attributes we can add to the object.
-        '''
-        attributes = [self.adversary_numbers, self.case_dates, self.case_names,
+        """
+        # Note that case_dates must be first for sorting to work.
+        attributes = [self.case_dates, self.adversary_numbers, self.case_names,
                       self.causes, self.dispositions,
                       self.docket_attachment_numbers,
                       self.docket_document_numbers, self.docket_numbers,
@@ -196,7 +203,6 @@ class GenericSite(object):
                       self.west_citations]
 
         if len(self.case_names) > 0:
-            # Note that case_dates must be first for sorting to work.
             obj_list_attrs = [item for item in attributes
                               if isinstance(item, list)]
             zipped = zip(*obj_list_attrs)
@@ -209,13 +215,13 @@ class GenericSite(object):
                     i += 1
 
     def _make_hash(self):
-        '''Make a unique ID. ETag and Last-Modified from courts cannot be trusted
-        '''
+        """Make a unique ID. ETag and Last-Modified from courts cannot be trusted
+        """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
     def _download(self, use_sessions=False):
-        '''Methods for downloading the latest version of Site
-        '''
+        """Methods for downloading the latest version of Site
+        """
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         if self.method == 'GET':

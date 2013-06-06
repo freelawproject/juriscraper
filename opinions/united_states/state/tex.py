@@ -9,30 +9,30 @@ http://www.search.txcourts.gov/SearchMedia.aspx?MediaVersionID=906eee9d-85e3-48a
 # Author: Michael Lissner
 # Date created: 2013-06-05
 
-# import re
 import requests
-import time
 from datetime import date
 from lxml import html
 
 
 from juriscraper.GenericSite import GenericSite
-from juriscraper.YieldingList import YieldingList
-# from juriscraper.lib.string_utils import titlecase
+from juriscraper.DeferringList import DeferringList
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=5/24/2013'
+        today = date.today()
+        self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=%s' % (today.strftime("%m/%d/%Y"))
+        # for testing
+        #self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=5/24/2013'
 
     def _get_download_urls(self):
-        '''Here we get very crafty, and create a custom list object.'''
+        '''Here we get very crafty and create a list-like object with deferred fetching.'''
         path = '//a[contains(@id, "lnkCase")]/@href'
 
         def fetcher(url):
-            print "Visiting deferred URL: %s" % url
             r = requests.get(url,
                              allow_redirects=False,
                              headers={'User-Agent': 'Juriscraper'})
@@ -47,18 +47,19 @@ class Site(GenericSite):
             path = "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"
             return html_tree.xpath(path)[0]
 
-        urls = YieldingList(seed=self.html.xpath(path),
+        urls = DeferringList(seed=self.html.xpath(path),
                             fetcher=fetcher)
         return urls
 
-
-
     def _get_case_names(self):
         path = '//td[@class = "caseStyle"]/span/text()'
-        return list(self.html.xpath(path))
+        return [titlecase(s) for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        return [date.today()] * len(self.case_names)
+        # This mirrors the xpath for the case_names. We could use len(case_names) here, but it won't work because
+        # case_names isn't yet parsed at the time that case_dates is run.
+        path = '//td[@class = "caseStyle"]/span/text()'
+        return [date.today()] * len(list(self.html.xpath(path)))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
@@ -73,23 +74,8 @@ class Site(GenericSite):
 
     def _get_dispositions(self):
         path = "//td[@class = 'caseDisp']/text()"
-        return list(self.html.xpath(path))
+        return [titlecase(s) for s in self.html.xpath(path)]
 
-    """
-      Optional method used for downloading multiple pages of a court site.
-    """
-    def _download_backwards(self):
-        """ This is a simple method that can be used to generate Site objects
-            that can be used to paginate through a court's entire website.
-
-            This method is usually called by a backscraper caller (see the
-            one in CourtListener/alert/scrapers for details), and typically
-            modifies aspects of the Site object's attributes such as Site.url.
-
-            For a simple example of this in use see the implementation for
-            michigan in opinions/united_states/state/mich.py.
-
-            This can also be used to hold notes useful to future backscraper
-            development.
-        """
-        pass
+    def _download_backwards(self, d):
+        self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=%s' % (d.strftime("%m/%d/%Y"))
+        self.html = self._download()

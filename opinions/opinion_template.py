@@ -46,7 +46,7 @@ class Site(GenericSite):
         case_names = []
         for e in self.html.xpath('//path/to/an/element/p'):
             s = html.tostring(e, method='text', encoding='unicode')
-            case_names.append(s)
+            case_names.append(titlecase(s))
         return case_names
 
     def _get_case_dates(self):
