@@ -43,7 +43,11 @@ class Site(GenericSite):
             # Path: href attr of the first tr that has an ancestor of type tr which in turn has a td containing the text
             # 'Opinion issued'
             path = "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"
-            return html_tree.xpath(path)[0]
+            try:
+                url = html_tree.xpath(path)[0]
+                return url
+            except IndexError:
+                return None
 
         path = '//a[contains(@id, "lnkCase")]/@href'
         seed_urls = self.html.xpath(path)

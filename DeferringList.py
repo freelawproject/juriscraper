@@ -1,6 +1,13 @@
+from juriscraper.GenericSite import logger
+
+
 class DeferringList(object):
     """This object can be used to do deferred loading of meta data in the case that a piece of meta data requires
     some special work to obtain.
+
+    Note that since this inherits from object (rather than list), it won't be sorted by the _date_sort function. As a
+    result, it's vital that the code using this object provide the seed data in sorted order. Failure to do so will
+    result in mixed up data being sent to the caller -- a bad fate.
 
     For an example of how this can be used, see juriscraper.opinions.united_states.state.tex
     """
@@ -14,17 +21,14 @@ class DeferringList(object):
             if self._fetched_items[item]:
                 yield self._data[item]
             else:
-                # Go get the item using the fetching function
-                new_val = self._fetching_function(self._data[item])
-                self._data[item] = new_val
-                self._fetched_items[item] = True
-                yield new_val
+                yield self.__getitem__(item)
 
     def __getitem__(self, item):
         if self._fetched_items[item]:
             return self._data[item]
         else:
             # Go get the item using the fetching function
+            logger.info("Getting deferred URL at: %s" % self._data[item])
             new_val = self._fetching_function(self._data[item])
             self._data[item] = new_val
             self._fetched_items[item] = True
@@ -32,6 +36,9 @@ class DeferringList(object):
 
     def __len__(self):
         return len(self._data)
+
+    def __str__(self):
+        return "<DeferringList %s>" % self.__dict__
 
 
 
