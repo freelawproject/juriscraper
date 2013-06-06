@@ -75,9 +75,6 @@ class GenericSite(object):
         if self.status != 200:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
-            # Run any functions that pursue data from secondary pages
-            self._get_deferred_data()
-        # Case names comes first because it's used by other functions.
         self.case_names = self._get_case_names()
         self.adversary_numbers = self._get_adversary_numbers()
         self.case_dates = self._get_case_dates()
@@ -163,12 +160,8 @@ class GenericSite(object):
                       'lower_court_numbers', 'neutral_citations',
                       'precedential_statuses', 'summaries', 'west_citations']
         for attr in attributes:
-            try:
-                if self.__getattribute__(attr) is not None:
-                    lengths[attr] = len(self.__getattribute__(attr))
-            except TypeError:
-                # Occurs when using a generator rather than an actual list
-                pass
+            if self.__getattribute__(attr) is not None:
+                lengths[attr] = len(self.__getattribute__(attr))
         values = lengths.values()
         if values.count(values[0]) != len(values):
             # Are all elements equal?
@@ -261,17 +254,6 @@ class GenericSite(object):
         html_tree.rewrite_links(remove_anchors)
 
         return html_tree
-
-    def _get_deferred_data(self):
-        '''This function provides a hook for any secondary pages that must be crawled.
-
-        For example, in Texas, the Opinion link can only be consistently found on a secondary page, so we have to get
-        that page before we can parse the data out.
-
-        Never has a return value, but modifies data in place as necessary.
-        '''
-        pass
-
 
     def _download_backwards(self):
         # methods for downloading the entire Site
