@@ -30,8 +30,6 @@ class Site(GenericSite):
 
     def _get_download_urls(self):
         '''Here we get very crafty and create a list-like object with deferred fetching.'''
-        path = '//a[contains(@id, "lnkCase")]/@href'
-
         def fetcher(url):
             r = requests.get(url,
                              allow_redirects=False,
@@ -47,9 +45,14 @@ class Site(GenericSite):
             path = "//tr[td/text()[contains(., 'Opinion issued')]]//tr[1]//@href"
             return html_tree.xpath(path)[0]
 
-        urls = DeferringList(seed=self.html.xpath(path),
-                            fetcher=fetcher)
-        return urls
+        path = '//a[contains(@id, "lnkCase")]/@href'
+        seed_urls = self.html.xpath(path)
+        if seed_urls:
+            urls = DeferringList(seed=,
+                                fetcher=fetcher)
+            return urls
+        else:
+            return []
 
     def _get_case_names(self):
         path = '//td[@class = "caseStyle"]/span/text()'
