@@ -2,10 +2,13 @@
 # Date created: 2013-06-06
 
 import re
+import requests
+
 from datetime import date
 from datetime import datetime
 
 from juriscraper.opinions.united_states.state import nd
+from juriscraper.DeferringList import DeferringList
 
 
 class Site(nd.Site):
@@ -16,15 +19,25 @@ class Site(nd.Site):
         self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
 
     def _get_download_urls(self):
+        """We use a fetcher and a DeferringList object and a HEAD request
+        to test whether the wpd exists for a case"""
+        def fetcher(html_link):
+            case_number = re.search('(\d+)', html_link).group(0)
+            wpd_link = 'http://www.ndcourts.gov/wp/%s.wpd' % case_number
+            r = requests.head(wpd_link,
+                              allow_redirects=False,
+                              headers={'User-Agent': 'Juriscraper'})
+            if r.status_code == 200:
+                return wpd_link
+            else:
+                return html_link
+
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href'
         else:
-            path = '//ul//a/@href'
-        download_urls = []
-        for html_link in self.html.xpath(path):
-            case_number = re.search('(\d+)', html_link).group(0)
-            download_urls.append('http://www.ndcourts.gov/wp/%s.wpd' % case_number)
-        return download_urls
+            path = '//ul//a[text()]/@href'
+        return DeferringList(seed=list(self.html.xpath(path)),
+                             fetcher=fetcher)
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
@@ -80,7 +93,7 @@ class Site(nd.Site):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href'
         else:
-            path = '//ul//a/@href'
+            path = '//ul//a[text()]/@href'
         docket_numbers = []
         for html_link in self.html.xpath(path):
             docket_numbers.append(re.search('(\d+)', html_link).group(0))
@@ -106,15 +119,20 @@ class Site(nd.Site):
 
     def _post_parse(self):
         # Remove any information that applies to appellate cases.
-        neutral_cites_copy = list(self.neutral_citations)
-        for i in range(0, len(neutral_cites_copy)):
-            if 'App' in neutral_cites_copy[i]:
-                del self.download_urls[i]
-                del self.case_names[i]
-                del self.case_dates[i]
-                del self.precedential_statuses[i]
-                del self.docket_numbers[i]
-                del self.neutral_citations[i]
+        try:
+            neutral_cites_copy = list(self.neutral_citations)
+            for i in range(0, len(neutral_cites_copy)):
+                if 'App' in neutral_cites_copy[i]:
+                    del self.download_urls[i]
+                    del self.case_names[i]
+                    del self.case_dates[i]
+                    del self.precedential_statuses[i]
+                    del self.docket_numbers[i]
+                    del self.neutral_citations[i]
+        except TypeError:
+            # When there aren't any neutral cites we assume all are supreme court cases.
+            return None
+
 
     def _download_backwards(self, d):
         self.crawl_date = d
