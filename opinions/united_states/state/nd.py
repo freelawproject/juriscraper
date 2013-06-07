@@ -4,10 +4,8 @@
 import re
 from datetime import date
 from datetime import datetime
-from lxml import html
 
 from juriscraper.GenericSite import GenericSite
-# from juriscraper.lib.string_utils import titlecase
 
 
 class Site(GenericSite):
@@ -64,7 +62,3 @@ class Site(GenericSite):
             except AttributeError:
                 continue
         return neutral_cites
-
-    def _download_backwards(self, d):
-        self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (d.strftime("%b%Y"))
-        self.html = self._download()

@@ -100,6 +100,7 @@ class GenericSite(object):
         self.summaries = self._get_summaries()
         self.west_citations = self._get_west_citations()
         self._clean_attributes()
+        self._post_parse()
         self._check_sanity()
         self._date_sort()
         self._make_hash()
@@ -146,6 +147,10 @@ class GenericSite(object):
         if self.case_names is not None:
             self.case_names = [harmonize(clean_string(case_name))
                                for case_name in self.case_names]
+
+    def _post_parse(self):
+        """This provides an hook for subclasses to do custom work on the data after the parsing is complete."""
+        pass
 
     def _check_sanity(self):
         """Check that the objects attributes make sense:
