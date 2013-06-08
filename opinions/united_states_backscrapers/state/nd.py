@@ -38,7 +38,7 @@ class Site(nd.Site):
         else:
             path = '//ul//a[text()]/@href'
             seed = list(self.html.xpath(path))
-        return DeferringList(seed=seed),
+        return DeferringList(seed=seed,
                              fetcher=fetcher)
 
     def _get_case_names(self):
