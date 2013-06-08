@@ -33,16 +33,18 @@ class Site(nd.Site):
                 return html_link
 
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a[position() > 1]/@href'
+            path = '//a/@href'
+            seed = list(self.html.xpath(path))[1:]
         else:
             path = '//ul//a[text()]/@href'
-        return DeferringList(seed=list(self.html.xpath(path)),
+            seed = list(self.html.xpath(path))
+        return DeferringList(seed=seed),
                              fetcher=fetcher)
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a[position() > 1]/text()'
-            return list(self.html.xpath(path))
+            path = '//a/text()'
+            return list(self.html.xpath(path))[1:]
         else:
             path = '//ul//a/text()'
             names = self.html.xpath(path)
