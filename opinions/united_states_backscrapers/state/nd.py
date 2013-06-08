@@ -33,7 +33,7 @@ class Site(nd.Site):
                 return html_link
 
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a/@href'
+            path = '//a[position() > 1]/@href'
         else:
             path = '//ul//a[text()]/@href'
         return DeferringList(seed=list(self.html.xpath(path)),
@@ -41,7 +41,7 @@ class Site(nd.Site):
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a/text()'
+            path = '//a[position() > 1]/text()'
             return list(self.html.xpath(path))
         else:
             path = '//ul//a/text()'
@@ -76,10 +76,12 @@ class Site(nd.Site):
             path = '//h4|//li'
             for e in self.html.xpath(path):
                 if e.tag == 'h4':
-                    date_str = e.text
+                    # We make dates on h4's because there's one h4 per date.
+                    date_str = e.text.strip()
                     dt = datetime.strptime(date_str, '%B %d, %Y').date()
                 elif e.tag == 'li':
                     try:
+                        # We append on li's, because there's one li per case.
                         case_dates.append(dt)
                     except NameError:
                         # When we don't yet have the date
@@ -96,7 +98,10 @@ class Site(nd.Site):
             path = '//ul//a[text()]/@href'
         docket_numbers = []
         for html_link in self.html.xpath(path):
-            docket_numbers.append(re.search('(\d+)', html_link).group(0))
+            try:
+                docket_numbers.append(re.search('(\d+)', html_link).group(0))
+            except AttributeError:
+                continue
         return docket_numbers
 
     def _get_neutral_citations(self):
@@ -105,14 +110,14 @@ class Site(nd.Site):
             return None
         elif self.crawl_date < date(1998, 10, 01):
             # Old format with: 1997 ND 30 - Civil No. 960157 or 1997 ND 30
-            path = '//h4|//li/text()'
+            path = '//li/text()'
         elif self.crawl_date >= date(1998, 10, 1):
             # New format with: 1997 ND 30
             path = '//body/text()'
         neutral_cites = []
         for t in self.html.xpath(path):
             try:
-                neutral_cites.append(re.search('(\d{4} ND (?:App)? \d{1,4})', t).group(0))
+                neutral_cites.append(re.search('^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t).group(1))
             except AttributeError:
                 continue
         return neutral_cites
@@ -131,7 +136,7 @@ class Site(nd.Site):
                     del self.neutral_citations[i]
         except TypeError:
             # When there aren't any neutral cites we assume all are supreme court cases.
-            return None
+            pass
 
 
     def _download_backwards(self, d):
