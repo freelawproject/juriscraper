@@ -33,10 +33,7 @@ class Site(nd.Site):
                 return html_link
 
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a/@href'
-            seed = list(self.html.xpath(path))[1:]
-        elif self.crawl_date >= date(2002, 2, 1):
-            path = "//a/@href[contains(., '/court/opinions/')]"
+            path = '//a/@href[contains(., "/court/opinions/")]'
             seed = list(self.html.xpath(path))
         else:
             path = '//ul//a[text()]/@href'
@@ -46,8 +43,8 @@ class Site(nd.Site):
 
     def _get_case_names(self):
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a/text()'
-            return list(self.html.xpath(path))[1:]
+            path = '//a[contains(@href, "/court/opinions/")]/text()'
+            return list(self.html.xpath(path))
         else:
             path = '//ul//a/text()'
             names = self.html.xpath(path)
@@ -98,7 +95,7 @@ class Site(nd.Site):
 
     def _get_docket_numbers(self):
         if self.crawl_date >= date(1998, 10, 1):
-            path = '//a/@href'
+            path = '//a/@href[contains(., "/court/opinions/")]'
         else:
             path = '//ul//a[text()]/@href'
         docket_numbers = []
@@ -142,7 +139,6 @@ class Site(nd.Site):
         except TypeError:
             # When there aren't any neutral cites we assume all are supreme court cases.
             pass
-
 
     def _download_backwards(self, d):
         self.crawl_date = d
