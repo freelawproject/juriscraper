@@ -123,7 +123,7 @@ class Site(nd.Site):
         neutral_cites = []
         for t in self.html.xpath(path):
             try:
-                neutral_cites.append(re.search('^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t).group(1))
+                neutral_cites.append(re.search('^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t, re.MULTILINE).group(1))
             except AttributeError:
                 continue
         return neutral_cites
