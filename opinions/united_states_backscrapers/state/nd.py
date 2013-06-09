@@ -63,6 +63,10 @@ class Site(nd.Site):
         # count them.
         case_dates = []
         if self.crawl_date >= date(1998, 10, 1):
+            test_path = '//body/a'
+            if len(self.html.xpath(test_path)) == 0:
+                # It's a month with no cases (like Jan, 2009)
+                return []
             path = '//body/a|//body/font'
             for e in self.html.xpath(path):
                 if e.tag == 'font':
