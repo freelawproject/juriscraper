@@ -35,6 +35,9 @@ class Site(nd.Site):
         if self.crawl_date >= date(1998, 10, 1):
             path = '//a/@href'
             seed = list(self.html.xpath(path))[1:]
+        elif self.crawl_date >= date(2002, 2, 1):
+            path = "//a/@href[contains(., '/court/opinions/')]"
+            seed = list(self.html.xpath(path))
         else:
             path = '//ul//a[text()]/@href'
             seed = list(self.html.xpath(path))
