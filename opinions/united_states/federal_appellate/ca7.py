@@ -10,10 +10,10 @@ from lxml import html
 
 class Site(GenericSite):
     def __init__(self):
+        super(Site, self).__init__()
         # The string 'week' can be changed to 'today' to get just today's
         # opinions
         self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=week&Submit=Submit'
-        super(Site, self).__init__()
         self.court_id = self.__module__
 
     def _get_case_names(self):
