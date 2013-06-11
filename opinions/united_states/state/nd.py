@@ -16,7 +16,7 @@ class Site(GenericSite):
         self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
 
     def _get_download_urls(self):
-        path = '//a/@href'
+        path = '//a/@href[contains(., "/court/opinions/")]'
         download_urls = []
         for html_link in self.html.xpath(path):
             case_number = re.search('(\d+)', html_link).group(0)
@@ -24,12 +24,16 @@ class Site(GenericSite):
         return download_urls
 
     def _get_case_names(self):
-        path = '//a/text()'
+        path = '//a[contains(@href, "/court/opinions/")]/text()'
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
         # A tricky one. We get the case dates, but each can have different number of cases below it, so we have to
         # count them.
+        test_path = '//body/a'
+        if len(self.html.xpath(test_path)) == 0:
+            # It's a month with no cases (like Jan, 2009). Early exit.
+            return []
         case_dates = []
         path = '//body/a|//body/font'
         for e in self.html.xpath(path):
@@ -48,17 +52,37 @@ class Site(GenericSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//a/@href'
+        path = '//a/@href[contains(., "/court/opinions/")]'
         docket_numbers = []
         for html_link in self.html.xpath(path):
-            docket_numbers.append(re.search('(\d+)', html_link).group(0))
+            try:
+                docket_numbers.append(re.search('(\d+)', html_link).group(0))
+            except AttributeError:
+                continue
         return docket_numbers
 
     def _get_neutral_citations(self):
         neutral_cites = []
         for t in self.html.xpath('//body/text()'):
             try:
-                neutral_cites.append(re.search('(\d{4} ND \d{1,4})', t).group(0))
+                cite = re.search('^.{0,5}(\d{4} ND (?:App )?\d{1,4})', t, re.MULTILINE).group(1)
+                neutral_cites.append(cite)
             except AttributeError:
                 continue
         return neutral_cites
+
+    def _post_parse(self):
+        # Remove any information that applies to appellate cases.
+            try:
+                neutral_cites_copy = list(self.neutral_citations)
+                for i in range(0, len(neutral_cites_copy)):
+                    if 'App' in neutral_cites_copy[i]:
+                        del self.download_urls[i]
+                        del self.case_names[i]
+                        del self.case_dates[i]
+                        del self.precedential_statuses[i]
+                        del self.docket_numbers[i]
+                        del self.neutral_citations[i]
+            except TypeError:
+                # When there aren't any neutral cites we assume all are supreme court cases.
+                pass
