@@ -72,17 +72,20 @@ class Site(GenericSite):
         return neutral_cites
 
     def _post_parse(self):
-        # Remove any information that applies to appellate cases.
-            try:
-                neutral_cites_copy = list(self.neutral_citations)
-                for i in range(0, len(neutral_cites_copy)):
-                    if 'App' in neutral_cites_copy[i]:
-                        del self.download_urls[i]
-                        del self.case_names[i]
-                        del self.case_dates[i]
-                        del self.precedential_statuses[i]
-                        del self.docket_numbers[i]
-                        del self.neutral_citations[i]
-            except TypeError:
-                # When there aren't any neutral cites we assume all are supreme court cases.
-                pass
+        # Remove any information that applies to non-appellate cases.
+        if self.neutral_citations:
+            delete_items = []
+            for i in range(0, len(self.neutral_citations)):
+                if 'App' in self.neutral_citations[i]:
+                    delete_items.append(i)
+
+            for i in sorted(delete_items, reverse=True):
+                del self.download_urls[i]
+                del self.case_names[i]
+                del self.case_dates[i]
+                del self.precedential_statuses[i]
+                del self.docket_numbers[i]
+                del self.neutral_citations[i]
+        else:
+            # When there aren't any neutral cites that means everything is a supreme court case.
+            pass

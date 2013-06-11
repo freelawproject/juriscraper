@@ -34,6 +34,10 @@ class DeferringList(object):
             self._fetched_items[item] = True
             return new_val
 
+    def __delitem__(self, item):
+        del self._data[item]
+        del self._fetched_items[item]
+
     def __len__(self):
         return len(self._data)
 

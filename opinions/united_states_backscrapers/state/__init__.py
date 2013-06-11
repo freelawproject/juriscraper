@@ -4,4 +4,5 @@ __all__ = ['cal_archive',
            'idahoctapp_criminal',
            'idahoctapp_u',
            'nd',
+           'ndctapp',
            ]
