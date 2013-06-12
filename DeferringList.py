@@ -12,6 +12,7 @@ class DeferringList(object):
     For an example of how this can be used, see juriscraper.opinions.united_states.state.tex
     """
     def __init__(self, *args, **kwargs):
+        logger.warn("Using DeferringList object which cannot be sorted.")
         self._data = kwargs['seed']
         self._fetched_items = [False] * len(kwargs['seed'])
         self._fetching_function = kwargs['fetcher']
@@ -33,6 +34,13 @@ class DeferringList(object):
             self._data[item] = new_val
             self._fetched_items[item] = True
             return new_val
+
+    def __setitem__(self, key, value):
+        if self._fetched_items[key]:
+            self._data[key] = value
+        else:
+            raise AttributeError('Cannot set item that has not yet been fetched.')
+
 
     def __delitem__(self, item):
         del self._data[item]

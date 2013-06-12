@@ -255,6 +255,8 @@ class GenericSite(object):
 
         # Provide the response in the Site object
         self.r = r
+        self.status = r.status_code
+
         # Grab the content
         text = self._clean_text(r.text)
         # print "text: %s" % text

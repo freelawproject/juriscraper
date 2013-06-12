@@ -2,10 +2,14 @@
 # Date created: 2013-06-11
 
 import re
+import requests
 from datetime import date
 from datetime import datetime
-
+from lxml import html
+from selenium import webdriver
+from time import sleep
 from juriscraper.GenericSite import GenericSite
+from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 
 
@@ -39,8 +43,11 @@ class Site(GenericSite):
         path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]//a[2]/@href'
         docket_numbers = []
         for url in self.html.xpath(path):
-            docket_number = re.search('(\d+).pdf', url).group(1)
-            docket_numbers.append(docket_number)
+            try:
+                # New style: easy
+                docket_numbers.append(re.search('(\d+).pdf', url).group(1))
+            except AttributeError:
+                docket_numbers.append(None)
         return docket_numbers
 
     def _get_neutral_citations(self):
@@ -50,3 +57,22 @@ class Site(GenericSite):
             neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
             neutral_cites.append(titlecase(neutral_cite))
         return neutral_cites
+
+    def _download_backwards(self, year):
+        browser = webdriver.PhantomJS()
+        browser.get(self.url)
+        elems = browser.find_elements_by_class_name('igeb_ItemLabel')
+        elem = [elem for elem in elems if elem.text == str(year)][0]
+        elem.click()
+        sleep(5)
+
+        text = browser.page_source
+        html_tree = html.fromstring(text)
+        html_tree.make_links_absolute(self.url)
+
+        remove_anchors = lambda url: url.split('#')[0]
+        html_tree.rewrite_links(remove_anchors)
+
+        self.html = html_tree
+        self.status = 200
+        browser.quit()

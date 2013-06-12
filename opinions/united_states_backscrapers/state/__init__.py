@@ -5,4 +5,5 @@ __all__ = ['cal_archive',
            'idahoctapp_u',
            'nd',
            'ndctapp',
+           'sd',
            ]
