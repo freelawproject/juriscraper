@@ -36,7 +36,7 @@ class Site(GenericSite):
                     case_names.append('State v. Springer-Ertl')
                 elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
                     case_names.append('Lois F. Henry v. Harold L. Henry')
-                elif 'spec. v. svera' in s.lower() and self.year == 2001:
+                elif 'spec. v. avera' in s.lower() and self.year == 2001:
                     case_names.append('Drs., Residents, and Orth. Surg. Spec. v. Avera St. Luke')
                 else:
                     raise AttributeError
@@ -75,7 +75,7 @@ class Site(GenericSite):
                     neutral_cites.append('2000 SD 56')
                 elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
                     neutral_cites.append('2000 SD 4')
-                elif 'spec. v. svera' in s.lower() and self.year == 2001:
+                elif 'spec. v. avera' in s.lower() and self.year == 2001:
                     neutral_cites.append('2001 SD 9')
                 else:
                     raise AttributeError
