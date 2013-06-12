@@ -34,6 +34,8 @@ class Site(GenericSite):
                     case_names.append('Lends His Horse v. Myrl & Roy')
                 elif 'springer' in s.lower():
                     case_names.append('State v. Springer-Ertl')
+                elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
+                    case_names.append('Lois F. Henry v. Harold L. Henry')
                 else:
                     raise AttributeError
         return case_names
@@ -69,11 +71,14 @@ class Site(GenericSite):
                     neutral_cites.append('2000 SD 146')
                 elif 'springer' in s.lower():
                     neutral_cites.append('2000 SD 56')
+                elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
+                    neutral_cites.append('2000 SD 4')
                 else:
                     raise AttributeError
         return neutral_cites
 
     def _download_backwards(self, year):
+        self.year = year
         browser = webdriver.PhantomJS()
         browser.get(self.url)
         elems = browser.find_elements_by_class_name('igeb_ItemLabel')
