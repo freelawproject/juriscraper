@@ -27,8 +27,12 @@ class Site(GenericSite):
         path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
         case_names = []
         for s in self.html.xpath(path):
-            case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
-            case_names.append(titlecase(case_name))
+            try:
+                case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
+                case_names.append(titlecase(case_name))
+            except AttributeError:
+                print "Failed with AttributeError on: %s" % s
+                raise AttributeError
         return case_names
 
     def _get_case_dates(self):
