@@ -32,6 +32,8 @@ class Site(GenericSite):
                 print "Failed with AttributeError on: %s" % s
                 if 'myrl' in s.lower():
                     case_names.append('Lends His Horse v. Myrl & Roy')
+                elif 'springer' in s.lower():
+                    case_names.append('State v. Springer-Ertl')
                 else:
                     raise AttributeError
         return case_names
@@ -65,6 +67,8 @@ class Site(GenericSite):
             except AttributeError:
                 if 'myrl' in s.lower():
                     neutral_cites.append('2000 SD 146')
+                elif 'springer' in s.lower():
+                    neutral_cites.append('2000 SD 56')
                 else:
                     raise AttributeError
         return neutral_cites
