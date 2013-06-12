@@ -3,7 +3,7 @@ import re
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
-       'FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|NLRB|UPS|RSS|SEC|UMG|USA|USC|'
+       'FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|USA|USC|'
        'USPS|WTO')
 SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
 NUMS = '0123456789'
@@ -290,7 +290,7 @@ def clean_string(string):
 
 
 def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
-    # Borrows heavily from django.utils.encoding.force_unicde. 
+    # Borrows heavily from django.utils.encoding.force_unicde.
     # This should be applied to *input* not *output*!
     # Handle the common case first, saves 30-40% in performance when s
     # is an instance of unicode. This function gets called often in that
