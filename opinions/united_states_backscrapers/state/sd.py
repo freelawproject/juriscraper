@@ -2,14 +2,12 @@
 # Date created: 2013-06-11
 
 import re
-import requests
 from datetime import date
 from datetime import datetime
 from lxml import html
 from selenium import webdriver
 from time import sleep
 from juriscraper.GenericSite import GenericSite
-from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 
 
@@ -32,7 +30,10 @@ class Site(GenericSite):
                 case_names.append(titlecase(case_name))
             except AttributeError:
                 print "Failed with AttributeError on: %s" % s
-                raise AttributeError
+                if 'myrl' in s.lower():
+                    case_names.append('Lends His Horse v. Myrl & Roy')
+                else:
+                    raise AttributeError
         return case_names
 
     def _get_case_dates(self):
@@ -58,8 +59,14 @@ class Site(GenericSite):
         path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
         neutral_cites = []
         for s in self.html.xpath(path):
-            neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
-            neutral_cites.append(titlecase(neutral_cite))
+            try:
+                neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
+                neutral_cites.append(titlecase(neutral_cite))
+            except AttributeError:
+                if 'myrl' in s.lower():
+                    neutral_cites.append('2000 SD 146')
+                else:
+                    raise AttributeError
         return neutral_cites
 
     def _download_backwards(self, year):
