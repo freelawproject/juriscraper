@@ -30,12 +30,14 @@ class Site(GenericSite):
                 case_names.append(titlecase(case_name))
             except AttributeError:
                 print "Failed with AttributeError on: %s" % s
-                if 'myrl' in s.lower():
+                if 'myrl' in s.lower() and self.year == 2000:
                     case_names.append('Lends His Horse v. Myrl & Roy')
-                elif 'springer' in s.lower():
+                elif 'springer' in s.lower() and self.year == 2000:
                     case_names.append('State v. Springer-Ertl')
                 elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
                     case_names.append('Lois F. Henry v. Harold L. Henry')
+                elif 'spec. v. svera' in s.lower() and self.year == 2001:
+                    case_names.append('Drs., Residents, and Orth. Surg. Spec. v. Avera St. Luke')
                 else:
                     raise AttributeError
         return case_names
@@ -67,12 +69,14 @@ class Site(GenericSite):
                 neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
                 neutral_cites.append(titlecase(neutral_cite))
             except AttributeError:
-                if 'myrl' in s.lower():
+                if 'myrl' in s.lower() and self.year == 2000:
                     neutral_cites.append('2000 SD 146')
-                elif 'springer' in s.lower():
+                elif 'springer' in s.lower() and self.year == 2000:
                     neutral_cites.append('2000 SD 56')
                 elif 'formatting provided courtesy' in s.lower() and self.year == 2000:
                     neutral_cites.append('2000 SD 4')
+                elif 'spec. v. svera' in s.lower() and self.year == 2001:
+                    neutral_cites.append('2001 SD 9')
                 else:
                     raise AttributeError
         return neutral_cites
