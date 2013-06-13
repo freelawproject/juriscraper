@@ -71,6 +71,14 @@ class Site(GenericSite):
                     case_names.append('Argus Leader v. Hagen')
                 elif 'nedved' in s.lower() and self.year == 2007:
                     case_names.append('Countryside S. Homeowners Assoc. v. Nedved')
+                elif 'gisi' in s.lower() and self.year == 2007:
+                    case_names.append('Gisi v. Gisi')
+                elif 'western' in s.lower() and self.year == 2007:
+                    case_names.append('Great Western Bank v. H&E Enterprises')
+                elif 'canyon' in s.lower() and self.year == 2007:
+                    case_names.append('Jackson v. Canyon Place Homeowners')
+                elif 'vansteenwyk' in s.lower() and self.year == 2007:
+                    case_names.append('Vanteenwyk v. Baumgartner Trees')
                 else:
                     raise AttributeError
         return case_names
@@ -143,6 +151,14 @@ class Site(GenericSite):
                     neutral_cites.append('2007 SD 96')
                 elif 'nedved' in s.lower() and self.year == 2007:
                     neutral_cites.append('2007 SD 70')
+                elif 'gisi' in s.lower() and self.year == 2007:
+                    neutral_cites.append('2007 SD 39')
+                elif 'western' in s.lower() and self.year == 2007:
+                    neutral_cites.append('2007 SD 38')
+                elif 'canyon' in s.lower() and self.year == 2007:
+                    neutral_cites.append('2007 SD 37')
+                elif 'vansteenwyk' in s.lower() and self.year == 2007:
+                    neutral_cites.append('2007 SD 36')
                 else:
                     raise AttributeError
         return neutral_cites
