@@ -57,6 +57,10 @@ class Site(GenericSite):
                     case_names.append('Town Square Limited Partnership v. Clay County Board of Equalization')
                 elif 'toft' in s.lower() and self.year == 2006:
                     case_names.append('Toft v. Toft & Stratmeyer')
+                elif 'masteller' in s.lower() and self.year == 2006:
+                    case_names.append('Masteller v. Champion Home')
+                elif 'nuzum' in s.lower() and self.year == 2006:
+                    case_names.append('State v. Nuzum')
                 else:
                     raise AttributeError
         return case_names
@@ -115,6 +119,10 @@ class Site(GenericSite):
                     neutral_cites.append('2005 SD 99')
                 elif 'toft' in s.lower() and self.year == 2006:
                     neutral_cites.append('2006 SD 91')
+                elif 'masteller' in s.lower() and self.year == 2006:
+                    neutral_cites.append('2006 SD 90')
+                elif 'nuzum' in s.lower() and self.year == 2006:
+                    neutral_cites.append('2006 SD 89')
                 else:
                     raise AttributeError
         return neutral_cites
