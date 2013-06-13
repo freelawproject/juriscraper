@@ -55,6 +55,8 @@ class Site(GenericSite):
                     case_names.append('State of South Dakota v. Duane J. St. John')
                 elif 'square' in s.lower() and self.year == 2005:
                     case_names.append('Town Square Limited Partnership v. Clay County Board of Equalization')
+                elif 'toft' in s.lower() and self.year == 2006:
+                    case_names.append('Toft v. Toft & Stratmeyer')
                 else:
                     raise AttributeError
         return case_names
@@ -111,6 +113,8 @@ class Site(GenericSite):
                     neutral_cites.append('2004 SD 15')
                 elif 'square' in s.lower() and self.year == 2005:
                     neutral_cites.append('2005 SD 99')
+                elif 'toft' in s.lower() and self.year == 2006:
+                    neutral_cites.append('2006 SD 91')
                 else:
                     raise AttributeError
         return neutral_cites
