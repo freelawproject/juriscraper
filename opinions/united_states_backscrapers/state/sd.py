@@ -81,6 +81,12 @@ class Site(GenericSite):
                     case_names.append('Vanteenwyk v. Baumgartner Trees')
                 elif 'jewett' in s.lower() and self.year == 2011:
                     case_names.append('Jewett v. Real Tuff')
+                elif 'jensen' in s.lower() and self.year == 2011:
+                    case_names.append('State v. Jensen')
+                elif 'cook' in s.lower() and self.year == 2011:
+                    case_names.append('Orr v. Cook')
+                elif 'living' in s.lower() and self.year == 2011:
+                    case_names.append('Benson Living Trust')
                 else:
                     raise AttributeError
         return case_names
@@ -163,6 +169,12 @@ class Site(GenericSite):
                     neutral_cites.append('2007 SD 36')
                 elif 'jewett' in s.lower() and self.year == 2011:
                     neutral_cites.append('2011 S.D.33')
+                elif 'jensen' in s.lower() and self.year == 2011:
+                    neutral_cites.append('2011 S.D.32')
+                elif 'cook' in s.lower() and self.year == 2011:
+                    neutral_cites.append('2011 S.D.31')
+                elif 'living' in s.lower() and self.year == 2011:
+                    neutral_cites.append('2011 S.D.30')
                 else:
                     raise AttributeError
         return neutral_cites
