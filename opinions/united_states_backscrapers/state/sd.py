@@ -22,9 +22,16 @@ class Site(GenericSite):
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
+        if self.year == 2005:
+            strings = []
+            path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]'
+            for e in self.html.xpath(path):
+                strings.append(html.tostring(e, method='text', encoding='unicode'))
+        else:
+            path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
+            strings = list(self.html.xpath(path))
         case_names = []
-        for s in self.html.xpath(path):
+        for s in strings:
             try:
                 case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
                 case_names.append(titlecase(case_name.lower()))
@@ -72,9 +79,16 @@ class Site(GenericSite):
         return docket_numbers
 
     def _get_neutral_citations(self):
-        path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
+        if self.year == 2005:
+            strings = []
+            path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]'
+            for e in self.html.xpath(path):
+                strings.append(html.tostring(e, method='text', encoding='unicode'))
+        else:
+            path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]/td[2]/text()'
+            strings = list(self.html.xpath(path))
         neutral_cites = []
-        for s in self.html.xpath(path):
+        for s in strings:
             try:
                 neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
                 neutral_cites.append(titlecase(neutral_cite))
