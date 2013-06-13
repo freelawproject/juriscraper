@@ -40,10 +40,10 @@ def titlecase(text, DEBUG=False):
     '''
     text_sans_small_words = re.sub(SMALL_WORD_INLINE, '', text)
     if text_sans_small_words.isupper():
-        if DEBUG:
-            print "Entire string is uppercase, thus lowercasing."
         # if, after removing small words, the entire string is uppercase,
         # we lowercase it
+        if DEBUG:
+            print "Entire string is uppercase, thus lowercasing."
         text = text.lower()
     elif not text_sans_small_words.isupper() and DEBUG:
         print "Entire string not upper case. Not lowercasing: %s" % text

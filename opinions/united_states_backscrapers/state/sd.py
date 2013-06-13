@@ -27,7 +27,7 @@ class Site(GenericSite):
         for s in self.html.xpath(path):
             try:
                 case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
-                case_names.append(titlecase(case_name))
+                case_names.append(titlecase(case_name.lower()))
             except AttributeError:
                 print "Failed with AttributeError on: %s" % s
                 if 'myrl' in s.lower() and self.year == 2000:
@@ -38,6 +38,8 @@ class Site(GenericSite):
                     case_names.append('Lois F. Henry v. Harold L. Henry')
                 elif 'spec. v. avera' in s.lower() and self.year == 2001:
                     case_names.append('Drs., Residents, and Orth. Surg. Spec. v. Avera St. Luke')
+                elif 'clausen' in s.lower() and self.year == 2003:
+                    case_names.append('Kelly Clausen v. Northern Plains Recycling, Fireman')
                 else:
                     raise AttributeError
         return case_names
@@ -77,6 +79,8 @@ class Site(GenericSite):
                     neutral_cites.append('2000 SD 4')
                 elif 'spec. v. avera' in s.lower() and self.year == 2001:
                     neutral_cites.append('2001 SD 9')
+                elif 'clausen' in s.lower() and self.year == 2003:
+                    neutral_cites.append('2003 SD 63')
                 else:
                     raise AttributeError
         return neutral_cites
