@@ -63,6 +63,8 @@ class Site(GenericSite):
                     case_names.append('State v. Nuzum')
                 elif 'aaberg' in s.lower() and self.year == 2006:
                     case_names.append('State v. Aaberg')
+                elif 'bryan' in s.lower() and self.year == 2006:
+                    case_names.append("O'Bryan v. Ashland")
                 else:
                     raise AttributeError
         return case_names
@@ -127,6 +129,8 @@ class Site(GenericSite):
                     neutral_cites.append('2006 SD 89')
                 elif 'aaberg' in s.lower() and self.year == 2006:
                     neutral_cites.append('2006 SD 58')
+                elif 'bryan' in s.lower() and self.year == 2006:
+                    neutral_cites.append('2006 SD 56')
                 else:
                     raise AttributeError
         return neutral_cites
