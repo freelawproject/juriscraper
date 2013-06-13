@@ -29,7 +29,7 @@ class Site(GenericSite):
                 case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
                 case_names.append(titlecase(case_name.lower()))
             except AttributeError:
-                print "Failed with AttributeError on: %s" % s
+                print "AttributeError on: %s" % s
                 if 'myrl' in s.lower() and self.year == 2000:
                     case_names.append('Lends His Horse v. Myrl & Roy')
                 elif 'springer' in s.lower() and self.year == 2000:
@@ -40,6 +40,8 @@ class Site(GenericSite):
                     case_names.append('Drs., Residents, and Orth. Surg. Spec. v. Avera St. Luke')
                 elif 'clausen' in s.lower() and self.year == 2003:
                     case_names.append('Kelly Clausen v. Northern Plains Recycling, Fireman')
+                elif 'burkhart' in s.lower() and self.year == 2003:
+                    case_names.append('Burkhart v. Lillehaug and Lillihaug')
                 else:
                     raise AttributeError
         return case_names
@@ -81,6 +83,8 @@ class Site(GenericSite):
                     neutral_cites.append('2001 SD 9')
                 elif 'clausen' in s.lower() and self.year == 2003:
                     neutral_cites.append('2003 SD 63')
+                elif 'burkhart' in s.lower() and self.year == 2003:
+                    neutral_cites.append('2003 SD 62')
                 else:
                     raise AttributeError
         return neutral_cites
