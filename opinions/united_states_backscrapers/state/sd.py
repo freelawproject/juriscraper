@@ -42,6 +42,8 @@ class Site(GenericSite):
                     case_names.append('Kelly Clausen v. Northern Plains Recycling, Fireman')
                 elif 'burkhart' in s.lower() and self.year == 2003:
                     case_names.append('Burkhart v. Lillehaug and Lillihaug')
+                elif 'bennett' in s.lower() and self.year == 2003:
+                    case_names.append('State of South Dakota, ex rel., Megan Bennett v. Thomas G. Peterson')
                 else:
                     raise AttributeError
         return case_names
@@ -85,6 +87,8 @@ class Site(GenericSite):
                     neutral_cites.append('2003 SD 63')
                 elif 'burkhart' in s.lower() and self.year == 2003:
                     neutral_cites.append('2003 SD 62')
+                elif 'bennett' in s.lower() and self.year == 2003:
+                    neutral_cites.append('2003 SD 16')
                 else:
                     raise AttributeError
         return neutral_cites
