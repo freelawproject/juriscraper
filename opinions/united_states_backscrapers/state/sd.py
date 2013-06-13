@@ -69,6 +69,8 @@ class Site(GenericSite):
                     case_names.append('In Re the Matter of J.D.M.C.')
                 elif 'argus' in s.lower() and self.year == 2007:
                     case_names.append('Argus Leader v. Hagen')
+                elif 'nedved' in s.lower() and self.year == 2007:
+                    case_names.append('Countryside S. Homeowners Assoc. v. Nedved')
                 else:
                     raise AttributeError
         return case_names
@@ -139,6 +141,8 @@ class Site(GenericSite):
                     neutral_cites.append('2007 SD 97')
                 elif 'argus' in s.lower() and self.year == 2007:
                     neutral_cites.append('2007 SD 96')
+                elif 'nedved' in s.lower() and self.year == 2007:
+                    neutral_cites.append('2007 SD 70')
                 else:
                     raise AttributeError
         return neutral_cites
