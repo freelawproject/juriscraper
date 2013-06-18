@@ -3,6 +3,7 @@ from lxml import html
 import logging.handlers
 import re
 import requests
+from tests import MockRequest
 
 from juriscraper.lib.string_utils import clean_string, harmonize, force_unicode
 
@@ -242,6 +243,9 @@ class GenericSite(object):
                               allow_redirects=False,
                               headers={'User-Agent': 'Juriscraper'},
                               data=self.parameters)
+        elif self.method == 'LOCAL':
+            mr = MockRequest(url=self.url)
+            r = mr.get()
 
         # Provides a hook for inheriting objects to tweak the request object.
         self.tweak_request_object(r)

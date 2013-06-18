@@ -3,9 +3,6 @@
 
 import glob
 import logging
-import SimpleHTTPServer
-import SocketServer
-import threading
 import unittest
 
 from juriscraper.lib.importer import build_module_list
@@ -14,23 +11,9 @@ from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
 
-PORT = 8080
-
-
-class TestServer(SocketServer.TCPServer):
-    allow_reuse_address = True
-
 
 class ScraperExampleTest(unittest.TestCase):
-    def setUp(self):
-        # Due to requests not supporting the 'file' scheme, we are forced to run
-        # our own server. See: https://github.com/kennethreitz/requests/issues/847
-        Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-        httpd = TestServer(('', PORT), Handler)
-        httpd_thread = threading.Thread(target=httpd.serve_forever)
-        httpd_thread.setDaemon(True)
-        httpd_thread.start()
-
+    def setUp(cls):
         # Disable logging
         logging.disable(logging.CRITICAL)
 
@@ -52,11 +35,10 @@ class ScraperExampleTest(unittest.TestCase):
             if 'backscraper' not in module_string:
                 paths = glob.glob('%s_example*' % module_string.replace('.', '/'))
                 for path in paths:
-                    full_url = 'http://localhost:%s/%s' % (PORT, path)
                     site = mod.Site()
-                    site.url = full_url
-                    # We always GET when we test locally.
-                    site.method = 'GET'
+                    site.url = path
+                    # Forces a local GET
+                    site.method = 'LOCAL'
                     site.parse()
 
 
