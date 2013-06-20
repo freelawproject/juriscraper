@@ -17,14 +17,9 @@ class Site(GenericSite):
         super(Site, self).__init__()
         self.url = 'http://www.massreports.com/slipops/redirect.aspx?location=sjcopinions'
         #self.url = 'http://weblinks.westlaw.com/signon/default.wl?ACTION=SEARCH&bQlocfnd=True&clientid=massreports&DB=MA%2DORSLIP&frompool=1&Method=TNC&path=%2Fsearch%2Fdefault%2Ewl&pwd=%7EAEP8I%5E%3D5I%2B%3B%2Fa%5Dj%3E%3DQP%5F%5Bb%3DP%2FF%3F%5D%7D%60M%60&query=to%28allsct+allsctrs+allsctoj%29+&rs=MAOR1%2E0&sp=MassOF%2D1001&ssl=n&strRecreate=no&vr=1%2E0'
+        self.use_sessions = True
         self.court_id = self.__module__
         self.grouping_regex = re.compile("(.*)\.\w{3}(.*)\.\w{3}(.*)\.")
-
-    def _download(self):
-        import sys
-        config = {'verbose': sys.stdout,
-                  'User-Agent': 'Mozilla/5.0 (X11; Linux i686 on x86_64; rv:5.0a2) Gecko/20110524 Firefox/5.0a2'}
-        return GenericSite._download(self, use_sessions=True, config=config)
 
     def _get_case_names(self):
         return [self.grouping_regex.search(s).group(1)

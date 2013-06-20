@@ -3,6 +3,7 @@
 
 import glob
 import logging
+import sys
 import unittest
 
 from juriscraper.lib.importer import build_module_list
@@ -13,7 +14,7 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class ScraperExampleTest(unittest.TestCase):
-    def setUp(cls):
+    def setUp(self):
         # Disable logging
         logging.disable(logging.CRITICAL)
 
@@ -39,7 +40,9 @@ class ScraperExampleTest(unittest.TestCase):
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
+                    site.use_sessions = True
                     site.parse()
+                    sys.stdout.write('.')
 
 
 class StringUtilTest(unittest.TestCase):
@@ -50,7 +53,7 @@ class StringUtilTest(unittest.TestCase):
         pass
 
     def test_harmonize_and_clean_string_tests(self):
-        '''Tests various inputs for the clean_string and harmonize functions'''
+        """Tests various inputs for the clean_string and harmonize functions"""
         test_pairs = [['U.S.A. v. Lissner',
                        u'United States v. Lissner'],
                       ['U.S. v. Lissner',
@@ -141,7 +144,7 @@ class StringUtilTest(unittest.TestCase):
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 
     def test_titlecase(self):
-        '''Tests various inputs for the titlecase function'''
+        """Tests various inputs for the titlecase function"""
         test_pairs = [["Q&A with steve jobs: 'that's what happens in technology'",
                        u"Q&A With Steve Jobs: 'That's What Happens in Technology'"],
                       ["What is AT&T's problem?",

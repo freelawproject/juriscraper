@@ -30,7 +30,7 @@ Installation & dependencies
     # install the dependencies
     sudo apt-get install libxml2-dev libxslt-devel
     sudo pip install chardet==1.0.1
-    sudo pip install requests==0.10.2
+    sudo pip install requests==1.2.3
     sudo pip install lxml==3.0.1
     sudo mkdir /var/log/juriscraper/
 

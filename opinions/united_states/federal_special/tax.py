@@ -14,10 +14,8 @@ class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'
+        self.use_sessions = True
         self.court_id = self.__module__
-
-    def _download(self, use_sessions=False):
-        return GenericSite._download(self, use_sessions=True)
 
     def _get_download_urls(self):
         return [t for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/@href')]

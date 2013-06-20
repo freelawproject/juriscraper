@@ -3,7 +3,7 @@ from lxml import html
 import logging.handlers
 import re
 import requests
-from tests import MockRequest
+from tests import MockRequest, TestAdapter
 
 from juriscraper.lib.string_utils import clean_string, harmonize, force_unicode
 
@@ -45,6 +45,7 @@ class GenericSite(object):
         self.hash = None
         self.html = None
         self.method = 'GET'
+        self.use_sessions = False
         self.status = None
 
         # Upstream metadata
@@ -225,13 +226,13 @@ class GenericSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
-    def _download(self, use_sessions=False):
+    def _download(self):
         """Methods for downloading the latest version of Site
         """
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         if self.method == 'GET':
-            if use_sessions:
+            if self.use_sessions:
                 s = requests.session()
                 r = s.get(self.url, headers={'User-Agent': 'Juriscraper'})
             else:
