@@ -16,6 +16,11 @@ from juriscraper.lib.string_utils import titlecase
 
 class ScraperExampleTest(unittest.TestCase):
     def setUp(self):
+        # Change the working directory to that of the script
+        abs_path = os.path.abspath(__file__)
+        dir_name = os.path.dirname(abs_path)
+        os.chdir('%s/../..' % dir_name)
+
         # Disable logging
         logging.disable(logging.CRITICAL)
 
@@ -27,8 +32,7 @@ class ScraperExampleTest(unittest.TestCase):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
         """
-
-        module_strings = build_module_list('opinions')
+        module_strings = build_module_list('juriscraper.opinions')
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -42,9 +46,7 @@ class ScraperExampleTest(unittest.TestCase):
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
-                    site.use_sessions = True
                     site.parse()
-                    sys.stdout.write('.')
 
 
 class StringUtilTest(unittest.TestCase):
