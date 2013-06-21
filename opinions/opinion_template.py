@@ -129,7 +129,7 @@ class Site(GenericSite):
     """
       Optional method used for downloading multiple pages of a court site.
     """
-    def _download_backwards(self):
+    def _download_backwards(self, date_str):
         """ This is a simple method that can be used to generate Site objects
             that can be used to paginate through a court's entire website.
 
@@ -137,10 +137,13 @@ class Site(GenericSite):
             one in CourtListener/alert/scrapers for details), and typically
             modifies aspects of the Site object's attributes such as Site.url.
 
-            For a simple example of this in use see the implementation for
-            michigan in opinions/united_states/state/mich.py.
+            A simple example has been provided below. The idea is that the
+            caller runs this method with a different variable on each iteration.
+            That variable is often a date that is getting iterated or is simply
+            a index (i), that we iterate upon.
 
             This can also be used to hold notes useful to future backscraper
             development.
         """
-        pass
+        self.site.url = 'http://example.com/new/url/%s' % date_str
+        self.html = self._download()

@@ -3,7 +3,7 @@ from lxml import html
 import logging.handlers
 import re
 import requests
-from tests import MockRequest, TestAdapter
+from tests import MockRequest
 
 from juriscraper.lib.string_utils import clean_string, harmonize, force_unicode
 
@@ -72,6 +72,7 @@ class GenericSite(object):
         self.precedential_statuses = None
         self.summaries = None
         self.west_citations = None
+        self.west_state_citations = None
 
     def __str__(self):
         out = []
@@ -101,6 +102,7 @@ class GenericSite(object):
         self.precedential_statuses = self._get_precedential_statuses()
         self.summaries = self._get_summaries()
         self.west_citations = self._get_west_citations()
+        self.west_state_citations = self._get_west_state_citations()
         self._clean_attributes()
         self._post_parse()
         self._check_sanity()
@@ -143,7 +145,7 @@ class GenericSite(object):
                      self.judges, self.lower_courts, self.lower_court_judges,
                      self.lower_court_numbers, self.nature_of_suit,
                      self.neutral_citations, self.summaries,
-                     self.west_citations]:
+                     self.west_citations, self.west_state_citations]:
             if item is not None:
                 item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
@@ -171,7 +173,8 @@ class GenericSite(object):
                       'download_urls', 'judges', 'lower_courts',
                       'lower_court_judges', 'nature_of_suit',
                       'lower_court_numbers', 'neutral_citations',
-                      'precedential_statuses', 'summaries', 'west_citations']
+                      'precedential_statuses', 'summaries', 'west_citations',
+                      'west_state_citations']
         for attr in attributes:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
@@ -207,7 +210,7 @@ class GenericSite(object):
                       self.lower_court_judges, self.lower_court_numbers,
                       self.nature_of_suit, self.neutral_citations,
                       self.precedential_statuses, self.summaries,
-                      self.west_citations]
+                      self.west_citations, self.west_state_citations]
 
         if len(self.case_names) > 0:
             obj_list_attrs = [item for item in attributes
@@ -330,4 +333,7 @@ class GenericSite(object):
         return None
 
     def _get_west_citations(self):
+        return None
+
+    def _get_west_state_citations(self):
         return None

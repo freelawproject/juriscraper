@@ -3,6 +3,7 @@
 
 import glob
 import logging
+import os
 import sys
 import unittest
 
@@ -26,6 +27,7 @@ class ScraperExampleTest(unittest.TestCase):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
         """
+
         module_strings = build_module_list('opinions')
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)

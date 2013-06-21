@@ -41,17 +41,17 @@ class Site(GenericSite):
 
     def _download_backwards(self, i):
         host = 'http://supremecourt.ne.gov'
-        paths = ['/sc/opinions/2013-06-21',
-                 '/sc/opinions/2013-06-14',
-                 '/sc/opinions/2013-05-31',
-                 '/sc/opinions/2013-05-24',
-                 '/sc/opinions/2013-05-17',
-                 '/sc/opinions/2013-05-10',
-                 '/sc/opinions/2013-05-03',
-                 '/sc/opinions/2013-04-25',
-                 '/sc/opinions/2013-04-19',
-                 '/sc/opinions/2013-04-12',
-                 '/sc/opinions/2013-04-05',
-                 '/sc/opinions/2013-03-29']
+        paths = ['/coa/opinions/2013-06-18',
+                 '/coa/opinions/2013-06-04',
+                 '/coa/opinions/2013-05-28',
+                 '/coa/opinions/2013-05-21',
+                 '/coa/opinions/2013-05-14',
+                 '/coa/opinions/2013-05-07',
+                 '/coa/opinions/2013-04-30',
+                 '/coa/opinions/2013-04-23',
+                 '/coa/opinions/2013-04-16',
+                 '/coa/opinions/2013-04-09',
+                 '/coa/opinions/2013-04-02',
+                 '/coa/opinions/2013-03-26',]
         self.site.url = host + paths[i]
         self.html = self._download()
