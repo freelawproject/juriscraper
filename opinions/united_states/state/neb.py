@@ -13,7 +13,7 @@ class Site(GenericSite):
         self.court_id = self.__module__
         today = date.today()
         self.crawl_date = today
-        self.url = 'http://supremecourt.ne.gov/sc/opinions/%s' % today.strftime('%m-%d-%Y')
+        self.url = 'http://supremecourt.ne.gov/sc/opinions/%s' % today.strftime('%Y-%m-%d')
 
     def _get_download_urls(self):
         path = '//tr[contains(concat(" ", @class, " "), " sc-opinion ")]//a/@href'
@@ -53,5 +53,6 @@ class Site(GenericSite):
                  '/sc/opinions/2013-04-12',
                  '/sc/opinions/2013-04-05',
                  '/sc/opinions/2013-03-29']
+        self.site.crawl_date = datetime.strptime(paths[i][-10:], '%Y-%m-%d').date()
         self.site.url = host + paths[i]
         self.html = self._download()

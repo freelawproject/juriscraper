@@ -57,7 +57,7 @@ def scrape_court(court, binaries=False):
                       'download_urls', 'judges', 'lower_courts',
                       'lower_court_judges', 'nature_of_suit',
                       'neutral_citations', 'precedential_statuses',
-                      'summaries', 'west_citations']
+                      'summaries', 'west_citations', 'west_state_citations']
         for attr in attributes:
             if getattr(site, attr) is not None:
                 v_print(1, ('    %s: %s' % (attr, getattr(site, attr)[i])).encode('utf-8'))
