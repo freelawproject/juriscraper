@@ -70,6 +70,6 @@ class Site(GenericSite):
                  '/coa/opinions/2013-04-09',
                  '/coa/opinions/2013-04-02',
                  '/coa/opinions/2013-03-26']
-        self.site.crawl_date = datetime.strptime(paths[i][-10:], '%Y-%m-%d').date()
-        self.site.url = host + paths[i]
+        self.crawl_date = datetime.strptime(paths[i][-10:], '%Y-%m-%d').date()
+        self.url = host + paths[i]
         self.html = self._download()
