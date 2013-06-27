@@ -7,7 +7,6 @@ from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 from lxml import html
-from lxml import etree
 
 
 class Site(GenericSite):

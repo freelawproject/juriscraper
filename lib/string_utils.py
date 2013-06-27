@@ -3,7 +3,7 @@ import re
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
-       'FTC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|USA|USC|'
+       'FTC|HSBC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|USA|USC|'
        'USPS|WTO')
 SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
 NUMS = '0123456789'
