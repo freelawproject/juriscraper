@@ -44,7 +44,7 @@ class Site(GenericSite):
         return statuses
 
     def _get_nature_of_suit(self):
-        return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[5]/td[2]/text()')]
+        return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[5]/td[2]//text()')]
 
     def _download_backwards(self):
         # This link will give you EVERYTHING on a single page: http://www.ca11.uscourts.gov/unpub/searchdate.php
