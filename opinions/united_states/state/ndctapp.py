@@ -14,14 +14,13 @@ class Site(nd.Site):
         self.court_id = self.__module__
         today = date.today()
         now = datetime.now()
+        self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
         if today.day == 1 and now.hour < 16:
             # On the first of the month, the page doesn't exist until later in the day, so when that's the case,
             # we don't do anything until after 16:00. If we try anyway, we get a 503 error. This simply aborts the
             # crawler.
             self.status = 200
             self.html = html.fromstring('<html></html>')
-        else:
-            self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
 
     def _post_parse(self):
         # Remove any information that applies to non-appellate cases.
