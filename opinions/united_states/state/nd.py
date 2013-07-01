@@ -1,5 +1,6 @@
 # Author: Michael Lissner
 # Date created: 2013-06-06
+# Updated: 2013-07-01 (make it abort on 1st of month before 4pm)
 
 import re
 from datetime import date
