@@ -234,22 +234,16 @@ class GenericSite(object):
         """
         logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
+        s = requests.session()
         if self.method == 'GET':
-            if self.use_sessions:
-                s = requests.session()
-                r = s.get(self.url, headers={'User-Agent': 'Juriscraper'},
-                          **request_dict)
-            else:
-                r = requests.get(self.url,
-                                 allow_redirects=False,
-                                 headers={'User-Agent': 'Juriscraper'},
-                                 **request_dict)
+            r = s.get(self.url,
+                      headers={'User-Agent': 'Juriscraper'},
+                      **request_dict)
         elif self.method == 'POST':
-            r = requests.post(self.url,
-                              allow_redirects=False,
-                              headers={'User-Agent': 'Juriscraper'},
-                              data=self.parameters,
-                              **request_dict)
+            r = s.post(self.url,
+                       headers={'User-Agent': 'Juriscraper'},
+                       data=self.parameters,
+                       **request_dict)
         elif self.method == 'LOCAL':
             mr = MockRequest(url=self.url)
             r = mr.get()
