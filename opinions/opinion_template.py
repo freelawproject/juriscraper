@@ -145,5 +145,5 @@ class Site(GenericSite):
             This can also be used to hold notes useful to future backscraper
             development.
         """
-        self.site.url = 'http://example.com/new/url/%s' % date_str
+        self.url = 'http://example.com/new/url/%s' % date_str
         self.html = self._download()

@@ -1,85 +1,50 @@
 from juriscraper.GenericSite import GenericSite
-import re
-import time
 from datetime import date
+from datetime import datetime
+from datetime import timedetla
 
 
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://pacer.ca4.uscourts.gov/opinions_week.htm'
+        self.url = 'http://pacer.ca4.uscourts.gov/cgi-bin/opinions.pl'
         self.court_id = self.__module__
+        td = date.today()
+        self.parameters = {'CASENUM': '',
+                           'FROMDATE': (td - timedetla(days=20)).strftime('%m-%d-%Y'),
+                           'TITLE': '',
+                           'TODATE': td.strftime('%m-%d-%Y')}
+        self.method = 'POST'
 
     def _get_case_names(self):
-        case_names = []
-        for text in self.html.xpath('//a[contains(@href, "opinion.pdf")]/following-sibling::text()[1]'):
-            case_names.append(text.split('(')[0].strip())
-        return case_names
+        path = '//td[4]/text()'
+        return list(self.html.xpath(path))
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/@href')]
+        path = '//td[1]/a/@href'
+        return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        date_regex = re.compile('\d{1,2}/\d{1,2}/\d{2,4}')
-        dates = []
-        for e in self.html.xpath('//a[contains(@href, "opinion.pdf")]/following-sibling::text()[1]'):
-            try:
-                date_string = date_regex.search(e).group(0)
-            except AttributeError:
-                # We have to try a bunch of text nodes before we'll get the right ones
-                continue
-            # We try two different date formats...
-            try:
-                dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
-            except ValueError:
-                dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y'))))
-        return dates
+        path = '//td[3]/text()'
+        return [datetime.strptime(date_string, '%Y/%m/%d').date()
+                for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        docket_numbers = []
-        # using download link, we can get the docket numbers
-        if self.download_urls is None:
-            # We can't count on this being done yet, so we do it now.
-            self.download_urls = self._get_download_urls()
-        for download_url in self.download_urls:
-            fileName = download_url.split('/')[-1]
-            docket_number = fileName.split('.')[0]
-            # the docket number needs a hyphen inserted after the second digit
-            docket_number = docket_number[0:2] + "-" + docket_number[2:]
-            docket_numbers.append(docket_number)
-        return docket_numbers
+        path = '//td[2]//text()'
+        return list(self.html.xpath(path))
 
     def _get_precedential_statuses(self):
         statuses = []
         # using download link, we can get the statuses
         for download_url in self.download_urls:
-            fileName = download_url.split('/')[-1]
-            status = fileName.split('.')[1]
-            if status.lower() == 'u':
+            file_name = download_url.split('/')[-1]
+            if 'u' in file_name.lower():
                 statuses.append('Unpublished')
-            elif status.lower() == 'p':
-                statuses.append('Published')
             else:
-                statuses.append('Unknown')
+                statuses.append('Published')
         return statuses
 
-    def _get_lower_courts(self):
-        '''This is available, but very hard to get consistently, thus punted.'''
-        return None
-
-    def _get_lower_court_judges(self):
-        '''This is available, but very hard to get consistently, thus punted.'''
-        return None
-
-    def _get_dispositions(self):
-        '''This is available, but very hard to get consistently, thus punted.'''
-        return None
-
-    def _get_judges(self):
-        '''This is available, but very hard to get consistently, thus punted.'''
-        pass
-
-    def _download_backwards(self):
-        '''Note that links of the following form can be constructed:
-        http://pacer.ca4.uscourts.gov/dailyopinions/opinions022412.htm'''
-        pass
+    def _download_backwards(self, dt):
+        self.parameters['FROMDATE'] = dt.strftime('%m-%d-%Y')
+        self.parameters['TODATE'] = (dt - timedetla(days=9)).strftime('%m-%d-%Y')
+        self.html = self._download()
