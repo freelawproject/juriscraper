@@ -12,12 +12,12 @@ from juriscraper.lib.string_utils import clean_string
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
+        self.court_id = self.__module__
         self.url = 'http://www.ca11.uscourts.gov/opinions/searchdate.php'
         self.method = 'POST'
         self.parameters = {
-                'date'  : time.strftime('%Y-%m', date.today().timetuple()),
-            }
-        self.court_id = self.__module__
+            'date': time.strftime('%Y-%m', date.today().timetuple()),
+        }
 
     def _get_case_names(self):
         return [e for e in self.html.xpath('//table//table//table[position() >= 2]/tr[6]/td[2]/text()')]

@@ -229,7 +229,7 @@ class GenericSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
-    def _download(self):
+    def _download(self, request_dict={}):
         """Methods for downloading the latest version of Site
         """
         logger.info("Now downloading case page at: %s" % self.url)
@@ -237,16 +237,19 @@ class GenericSite(object):
         if self.method == 'GET':
             if self.use_sessions:
                 s = requests.session()
-                r = s.get(self.url, headers={'User-Agent': 'Juriscraper'})
+                r = s.get(self.url, headers={'User-Agent': 'Juriscraper'},
+                          **request_dict)
             else:
                 r = requests.get(self.url,
                                  allow_redirects=False,
-                                 headers={'User-Agent': 'Juriscraper'})
+                                 headers={'User-Agent': 'Juriscraper'},
+                                 **request_dict)
         elif self.method == 'POST':
             r = requests.post(self.url,
                               allow_redirects=False,
                               headers={'User-Agent': 'Juriscraper'},
-                              data=self.parameters)
+                              data=self.parameters,
+                              **request_dict)
         elif self.method == 'LOCAL':
             mr = MockRequest(url=self.url)
             r = mr.get()
