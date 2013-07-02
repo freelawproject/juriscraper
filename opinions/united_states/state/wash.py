@@ -1,6 +1,5 @@
 from juriscraper.GenericSite import GenericSite
 from datetime import datetime
-from lxml import etree
 
 
 class Site(GenericSite):
