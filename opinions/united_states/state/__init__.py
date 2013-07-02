@@ -33,6 +33,8 @@ __all__ = ['alaska',
            'tex',
            'utah',
            'wash',
+           'washctapp_p',
+           'washctapp_u',
            'wis',
            'wva',
            'wyo', ]
