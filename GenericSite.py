@@ -232,7 +232,10 @@ class GenericSite(object):
     def _download(self, request_dict={}):
         """Methods for downloading the latest version of Site
         """
-        logger.info("Now downloading case page at: %s" % self.url)
+        if self.method == 'POST':
+            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, self.parameters))
+        else:
+            logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
         if self.method == 'GET':
@@ -264,7 +267,7 @@ class GenericSite(object):
 
         # Grab the content
         text = self._clean_text(r.text)
-        # print "text: %s" % text
+        #print "text: %s" % text
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
 

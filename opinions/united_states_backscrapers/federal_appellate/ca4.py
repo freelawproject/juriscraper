@@ -11,13 +11,17 @@ class Site(GenericSite):
         self.court_id = self.__module__
         td = date.today()
         self.parameters = {'CASENUM': '',
-                           'FROMDATE': (td - timedelta(days=10)).strftime('%m-%d-%Y'),
+                           'FROMDATE': (td - timedelta(days=20)).strftime('%m-%d-%Y'),
                            'TITLE': '',
                            'TODATE': td.strftime('%m-%d-%Y')}
         self.method = 'POST'
 
     def _get_case_names(self):
-        path = '//tr/td[4]/text()'
+        if self.only_get_unpublished:
+            # No precedential cases (or else dups)
+            path = "//tr/td[4][../td[1]/a/text()[contains(., 'U')]]/text()"
+        else:
+            path = '//tr/td[4]/text()'
         names = []
         for s in self.html.xpath(path):
             if s.strip():
@@ -25,16 +29,25 @@ class Site(GenericSite):
         return names
 
     def _get_download_urls(self):
-        path = '//tr/td[1]/a/@href'
+        if self.only_get_unpublished:
+            path = "//tr/td[1][../td[1]/a/text()[contains(., 'U')]]/a/@href"
+        else:
+            path = '//tr/td[1]/a/@href'
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = '//tr/td[3]/text()'
+        if self.only_get_unpublished:
+            path = "//tr/td[3][../td[1]/a/text()[contains(., 'U')]]/text()"
+        else:
+            path = '//tr/td[3]/text()'
         return [datetime.strptime(date_string.strip(), '%Y/%m/%d').date()
                 for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = '//tr/td[2]//text()'
+        if self.only_get_unpublished:
+            path = "//tr/td[2][../td[1]/a/text()[contains(., 'U')]]//text()"
+        else:
+            path = '//tr/td[2]//text()'
         docket_numbers = []
         for s in self.html.xpath(path):
             if s.strip():
@@ -51,3 +64,12 @@ class Site(GenericSite):
             else:
                 statuses.append('Published')
         return statuses
+
+    def _download_backwards(self, dt):
+        self.end_date = dt + timedelta(days=6)
+        self.resource_org_end_date = date(2007, 07, 31)
+        # We only get unpublished docs when we're in a period of time during which we have resource.org docs.
+        self.only_get_unpublished = (self.end_date < self.resource_org_end_date)
+        self.parameters['FROMDATE'] = dt.strftime('%m-%d-%Y')
+        self.parameters['TODATE'] = self.end_date.strftime('%m-%d-%Y')
+        self.html = self._download()
