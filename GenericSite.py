@@ -73,7 +73,7 @@ class GenericSite(object):
         self.summaries = None
         self.west_citations = None
         self.west_state_citations = None
-        self.division = None
+        self.divisions = None
 
     def __str__(self):
         out = []
@@ -104,7 +104,7 @@ class GenericSite(object):
         self.summaries = self._get_summaries()
         self.west_citations = self._get_west_citations()
         self.west_state_citations = self._get_west_state_citations()
-        self.division = self._get_division()
+        self.divisions = self._get_divisions()
         self._clean_attributes()
         self._post_parse()
         self._check_sanity()
@@ -148,7 +148,7 @@ class GenericSite(object):
                      self.lower_court_numbers, self.nature_of_suit,
                      self.neutral_citations, self.summaries,
                      self.west_citations, self.west_state_citations,
-                     self.division]:
+                     self.divisions]:
             if item is not None:
                 item[:] = [clean_string(sub_item) for sub_item in item]
         if self.case_names is not None:
@@ -177,7 +177,7 @@ class GenericSite(object):
                       'lower_court_judges', 'nature_of_suit',
                       'lower_court_numbers', 'neutral_citations',
                       'precedential_statuses', 'summaries', 'west_citations',
-                      'west_state_citations', 'division']
+                      'west_state_citations', 'divisions']
         for attr in attributes:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
@@ -214,7 +214,7 @@ class GenericSite(object):
                       self.nature_of_suit, self.neutral_citations,
                       self.precedential_statuses, self.summaries,
                       self.west_citations, self.west_state_citations,
-                      self.division]
+                      self.divisions]
 
         if len(self.case_names) > 0:
             obj_list_attrs = [item for item in attributes
@@ -342,5 +342,5 @@ class GenericSite(object):
     def _get_west_state_citations(self):
         return None
 
-    def _get_division(self):
+    def _get_divisions(self):
         return None
