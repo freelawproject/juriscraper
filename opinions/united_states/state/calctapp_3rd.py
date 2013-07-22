@@ -13,5 +13,5 @@ class Site(cal.Site):
         self.url = 'http://www.courtinfo.ca.gov/cgi-bin/opinions-blank.cgi?Courts=C'
         self.court_id = self.__module__
 
-    def _get_division(self):
+    def _get_divisions(self):
         return ['3rd App. Dist.'] * len(self.case_names)
