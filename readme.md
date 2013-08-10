@@ -77,6 +77,13 @@ your fork, and then send a pull request for your changes. Be sure to
 remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
 
+Before we can accept any changes from any contributor, we need a signed and
+completed Contributor License Agreement. You can find this agreement in the
+root of the repository. While an annoying bit of paperwork, this license is for
+your protection as a Contributor as well as the protection of Free Law Project
+and our users; it does not change your rights to use your own Contributions for
+any other purpose.
+
 
 Usage
 ======

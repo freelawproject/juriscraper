@@ -3,13 +3,13 @@ import re
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
-       'FTC|HSBC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|USA|USC|'
+       'FTC|HSBC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|US|USA|USC|'
        'USPS|WTO')
 SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
 NUMS = '0123456789'
 PUNCT = r"""!"#$¢%&'‘()*+,\-./:;?@[\\\]_—`{|}~"""
 WEIRD_CHARS = r'¼½¾§ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÑÒÓÔÕÖØÙÚÛÜßàáâãäåæçèéêëìíîïñòóôœõöøùúûüÿ'
-BIG_WORDS = re.compile(r'^(%s)[%s]$' % (BIG, PUNCT), re.I)
+BIG_WORDS = re.compile(r'^(%s)[%s]?$' % (BIG, PUNCT), re.I)
 SMALL_WORDS = re.compile(r'^(%s)$' % SMALL, re.I)
 SMALL_WORD_INLINE = re.compile(r'(^|\s)(%s)(\s|$)' % SMALL, re.I)
 INLINE_PERIOD = re.compile(r'[a-z][.][a-z]', re.I)
@@ -25,7 +25,7 @@ ALL_CAPS = re.compile(r'^[A-Z\s%s%s%s]+$' % (PUNCT, WEIRD_CHARS, NUMS))
 UC_INITIALS = re.compile(r"^(?:[A-Z]{1}\.{1}|[A-Z]{1}\.{1}[A-Z]{1})+,?$")
 MAC_MC = re.compile(r'^([Mm]a?c)(\w+.*)')
 def titlecase(text, DEBUG=False):
-    '''Titlecases input text
+    """Titlecases input text
 
     This filter changes all words to Title Caps, and attempts to be clever
     about *un*capitalizing SMALL words like a/an/the in the input.
@@ -37,7 +37,7 @@ def titlecase(text, DEBUG=False):
     first word of a sentence is a SMALL_WORD.
 
     List of "BIG words" grows over time as entries are needed.
-    '''
+    """
     text_sans_small_words = re.sub(SMALL_WORD_INLINE, '', text)
     if text_sans_small_words.isupper():
         # if, after removing small words, the entire string is uppercase,
@@ -69,6 +69,7 @@ def titlecase(text, DEBUG=False):
                     word = word.lower()
 
             if APOS_SECOND.match(word):
+                # O'Reiley, L'Oreal, D'Angelo
                 if DEBUG:
                     print "  APOS_SECOND matched. Fixing it: " + word
                 word = word[0:3].upper() + word[3:]
@@ -144,8 +145,7 @@ def titlecase(text, DEBUG=False):
 
             hyphenated = []
             for item in word.split('-'):
-                hyphenated.append(CAPFIRST.sub(lambda m: m.group(0).upper(),
-                    item))
+                hyphenated.append(CAPFIRST.sub(lambda m: m.group(0).upper(), item))
             tc_line.append("-".join(hyphenated))
 
         result = " ".join(tc_line)
@@ -165,12 +165,10 @@ def titlecase(text, DEBUG=False):
     # replace V. with v.
     text = re.sub(re.compile(r'\WV\.\W'), ' v. ', text)
 
-    # replace Llc. with LLC
-    text = text.replace('Llc.', 'LLC')
-
     return text
 
 # For use in harmonize function
+# More details: http://www.law.cornell.edu/citation/4-300.htm
 US = 'USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States'
 UNITED_STATES = re.compile(r'^(%s)(,|\.)?$' % US, re.I)
 ET_AL = re.compile(',?\set\.?\sal\.?', re.I)
@@ -181,7 +179,7 @@ BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)ap
      '|cross(--?|/)appell(ees|ant)s?|deceased'
 BAD_WORDS = re.compile(r'^(%s)(,|\.)?$' % BW, re.I)
 def harmonize(text):
-    '''Fixes case names so they are cleaner.
+    """Fixes case names so they are cleaner.
 
     Using a bunch of regex's, this function cleans up common data problems in
     case names. The following are currently fixed:
@@ -191,7 +189,7 @@ def harmonize(text):
      - plaintiff, appellee, defendant and the like --> Removed.
 
     Lots of tests are in tests.py.
-    '''
+    """
 
     result = ''
     # replace vs. with v.
@@ -242,14 +240,14 @@ def harmonize(text):
 
 
 def clean_string(string):
-    '''Clean up strings.
+    """Clean up strings.
 
     Accomplishes the following:
      - replaces HTML encoded characters with ASCII versions.
      - removes -, ' ', #, *, ; and ',' from the end of lines
      - converts to unicode.
      - removes weird white space and replaces with spaces.
-    '''
+    """
     # if not already unicode, make it unicode, dropping invalid characters
     # if not isinstance(string, unicode):
     string = force_unicode(string, errors='ignore')

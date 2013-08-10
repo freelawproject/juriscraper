@@ -1,13 +1,13 @@
 # Author:
 # Date created:
 
-# import re
+import re
 from datetime import date
 from datetime import datetime
 from lxml import html
 
 from juriscraper.GenericSite import GenericSite
-# from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(GenericSite):
