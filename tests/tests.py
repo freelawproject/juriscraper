@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import datetime
 import glob
 import logging
 import os
@@ -8,10 +9,35 @@ import sys
 import unittest
 
 from juriscraper.lib.importer import build_module_list
+from juriscraper.lib.parse_dates import parse_dates
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
+
+
+class DateParserTest(unittest.TestCase):
+    def test_various_date_extractions(self):
+        test_pairs = (
+            # Dates separated by semicolons and JUMP words
+            ('February 5, 1980; March 14, 1980 and May 28, 1980.',
+             [datetime.datetime(1980, 2, 5, 0, 0), datetime.datetime(1980, 3, 14, 0, 0),
+              datetime.datetime(1980, 5, 28, 0, 0)]),
+            # Misspelled month value.
+            ('Febraury 17, 1945',
+             [datetime.datetime(1945, 2, 17, 0, 0)]),
+            ('Sepetmber 19 1924',
+             [datetime.datetime(1924, 9, 19)]),
+            # Using 'Term' as an indicator.
+            ('November Term 2004.',
+             [datetime.datetime(2004, 11, 01)]),
+            (u'April 26, 1961.[†]',
+             [datetime.datetime(1961, 4, 26)]),
+
+        )
+        for pair in test_pairs:
+            dates = parse_dates(pair[0])
+            self.assertEqual(dates, pair[1])
 
 
 class ScraperExampleTest(unittest.TestCase):
@@ -136,14 +162,17 @@ class StringUtilTest(unittest.TestCase):
                        u'Test v. United States'],
                       ['The United States v. Lissner',
                        u'United States v. Lissner'],
-                      ['USA v White', # tests no period in v.
+                      ['USA v White',  # tests no period in v.
                        u'United States v. White'],
-                      ['USA vs White', # tests no period in vs.
+                      ['USA vs White',  # tests no period in vs.
                        u'United States v. White'],
-                      ['/USA vs White', # tests leading slash.
+                      ['/USA vs White',  # tests leading slash.
                        u'United States v. White'],
-                      ['12–1438-cr', # tests unicode input
-                       u'12–1438-cr']]
+                      ['12–1438-cr',  # tests unicode input
+                       u'12–1438-cr'],
+                      ['Carver v. US',  # Tests the output from a titlecased word containing US to ensure it gets
+                                        # harmonized.
+                       u'Carver v. United States']]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 
@@ -208,7 +237,9 @@ class StringUtilTest(unittest.TestCase):
                       ['International Union of Painter v. J&r Flooring, Inc',
                        u'International Union of Painter v. J&R Flooring, Inc'],
                       ['DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED STATES 07-693L And',
-                       u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And']]
+                       u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And'],
+                      ['CARVER v. US',
+                       u'Carver v. US']]
         for pair in test_pairs:
             self.assertEqual(titlecase(force_unicode(pair[0])),
                              pair[1])
