@@ -1,7 +1,3 @@
-==========
-Krist test
-==========
-
 What is this?
 =============
 Juriscraper is a scraper library that is used to scrape the American court system.
