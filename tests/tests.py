@@ -5,7 +5,7 @@ import datetime
 import glob
 import logging
 import os
-import sys
+import time
 import unittest
 
 from juriscraper.lib.importer import build_module_list
@@ -14,6 +14,7 @@ from juriscraper.lib.string_utils import clean_string
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
+import sys
 
 
 class DateParserTest(unittest.TestCase):
@@ -58,6 +59,7 @@ class ScraperExampleTest(unittest.TestCase):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
         """
+        print "Testing scrapers against example files:"
         module_strings = build_module_list('juriscraper.opinions')
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
@@ -66,13 +68,25 @@ class ScraperExampleTest(unittest.TestCase):
                              locals(),
                              [module])
             if 'backscraper' not in module_string:
+                sys.stdout.write('  %s ' % module_string)
+                sys.stdout.flush()  # Makes sure the output prints before the error message.
                 paths = glob.glob('%s_example*' % module_string.replace('.', '/'))
+                self.assertTrue(paths, "No example file found for: %s!" % module_string.rsplit('.', 1)[1])
+                t1 = time.time()
                 for path in paths:
+                    # This loop allows multiple example files per module
                     site = mod.Site()
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
                     site.parse()
+                t2 = time.time()
+                if t2 - t1 > 2:
+                    msg = " - WARNING: Slow scraper!"
+                else:
+                    msg = ' - OK'
+                print '(%0.1f seconds%s)' % ((t2 - t1), msg)
+
 
 
 class StringUtilTest(unittest.TestCase):

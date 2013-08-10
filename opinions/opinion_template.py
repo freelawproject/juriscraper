@@ -26,6 +26,9 @@ class Site(GenericSite):
             simple XPath query.
 
             On a good site, most of your methods will follow this pattern.
+
+            Note that relative URLs are made absolute by the GenericSite
+            object's cleanup routines, so doing so here is not needed.
         """
         path = '//path/to/text/text()'
         return list(self.html.xpath(path))
@@ -42,6 +45,9 @@ class Site(GenericSite):
 
             Note that titlecase() should be used here in the case that the case
             names are provided in uppercase.
+
+            Use the titlecase function on cases where the name is provided in
+            uppercase only.
         """
         case_names = []
         for e in self.html.xpath('//path/to/an/element/p'):
