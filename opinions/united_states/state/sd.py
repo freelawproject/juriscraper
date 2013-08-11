@@ -17,16 +17,15 @@ class Site(GenericSite):
         self.url = 'http://www.sdjudicial.com/Supreme_Court/opinions.aspx'
 
     def _get_download_urls(self):
-        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[starts-with(.,'http')]"
-        return [t for t in self.html.xpath(path)]
+        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[contains(.,'pdf')]"
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
-#        path = '//div//div[3]/div/div[2]/div[8]/div/div[3]/div//tr[position() >1]/td[2]/a/text()'
-        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a/text()"
+        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
         case_names = []
         for s in self.html.xpath(path):
             case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
-            case_names.append(titlecase(case_name))
+            case_names.append(titlecase(case_name.upper()))
         return case_names
 
     def _get_case_dates(self):
@@ -38,9 +37,10 @@ class Site(GenericSite):
         return ['Published'] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a/text()"
+        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
         neutral_cites = []
         for s in self.html.xpath(path):
             neutral_cite = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(2)
-            neutral_cites.append(titlecase(neutral_cite))
+            # Make the citation SD instead of S.D. The former is a neutral cite, the latter, the South Dakota Reporter
+            neutral_cites.append(neutral_cite.replace('.', ''))
         return neutral_cites
