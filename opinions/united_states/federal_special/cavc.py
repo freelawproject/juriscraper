@@ -44,8 +44,6 @@ class Site(GenericSite):
         appellants = []
         for e in self.html.xpath('//div/ul/li/ul/li/table/tr/td[1]'):
             app = ', '.join([t.strip() for t in e.xpath('text()') if t.strip()])
-            if "Bove" in app:
-                print app
             appellants.append(app)
         for txt, dat in zip(appellants, dates):
             if dat > datetime.date(2009, 1, 20):

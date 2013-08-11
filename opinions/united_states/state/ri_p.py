@@ -12,6 +12,7 @@ from lxml import html
 
 from juriscraper.GenericSite import GenericSite
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
@@ -22,11 +23,8 @@ class Site(GenericSite):
         self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Opinions/Opinions%20%282012-2013%29.aspx'
 
     def _get_download_urls(self):
-        download_urls = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a[child::span]/@href"
-        for url in (self.html.xpath(path)):
-            download_urls.append(url)
-        return download_urls
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []

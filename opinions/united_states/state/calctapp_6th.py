@@ -2,9 +2,6 @@
 # CourtID: calctapp_6th
 # Court Short Name: Cal. Ct. App.
 from juriscraper.opinions.united_states.state import cal
-import re
-import time
-from datetime import date
 
 
 class Site(cal.Site):

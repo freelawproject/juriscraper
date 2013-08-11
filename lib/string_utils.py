@@ -331,3 +331,23 @@ def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
                     errors) for arg in s])
     return s
 
+
+def trunc(s, length, elipsize=False):
+    """Truncates a string at a good length.
+
+    Finds the rightmost space in a string, and truncates there. Lacking such
+    a space, truncates at length.
+    """
+    if len(s) <= length:
+        return s
+    else:
+        # find the rightmost space
+        end = s.rfind(' ', 0, length)
+        if end == -1:
+            # no spaces found, just use max position
+            end = length
+        s = s[0:end]
+        if elipsize:
+            s = '%s...' % s
+        return s
+
