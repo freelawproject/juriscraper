@@ -1,9 +1,7 @@
 """Scraper for the United States Court of Appeals for Veterans Claims
 CourtID: cavc
 Court Short Name: Vet.App.
-NOTE: This court changed its website after all the backscrapers were created.
-The page scraped here now covers all prior years too, so the backscrapers
-are obsolete."""
+"""
 
 from juriscraper.GenericSite import GenericSite
 import time
@@ -11,24 +9,22 @@ import datetime
 from datetime import date
 from lxml import html
 
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = (
-            'http://www.uscourts.cavc.gov/opinions.php')
+        self.url = ('http://www.uscourts.cavc.gov/opinions.php')
         self.court_id = self.__module__
 
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath('//div/ul/li/ul/li/table/tr/td/a'):
-            s = html.tostring (e, method='text', encoding='unicode')
-# I can't figure out how to replace the <br>'s with &'s.
-            docket_numbers.append(s.replace('\r\n', ' &'))
+            s = ', '.join([t.strip() for t in e.xpath('text()') if t.strip()])
+            docket_numbers.append(s)
         return docket_numbers
-            
+
     def _get_download_urls(self):
-        return [txt for txt in 
-            self.html.xpath('//div/ul/li/ul/li/table/tr/td/a/@href')]
+        return [txt for txt in self.html.xpath('//div/ul/li/ul/li/table/tr/td/a/@href')]
 
     def _get_case_dates(self):
         dates = []
@@ -47,9 +43,10 @@ class Site(GenericSite):
         dates = self._get_case_dates()
         appellants = []
         for e in self.html.xpath('//div/ul/li/ul/li/table/tr/td[1]'):
-            app = html.tostring (e, method='text', encoding='unicode')
-# I can't figure out how to replace the <br>'s with &'s.
-            appellants.append(app.replace('\r\n', ' &'))
+            app = ', '.join([t.strip() for t in e.xpath('text()') if t.strip()])
+            if "Bove" in app:
+                print app
+            appellants.append(app)
         for txt, dat in zip(appellants, dates):
             if dat > datetime.date(2009, 1, 20):
                 case_names.append(txt + ' v. Shinseki')
