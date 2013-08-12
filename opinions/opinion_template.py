@@ -1,13 +1,17 @@
-# Author:
-# Date created:
+"""Scraper for [Full name of court]
+CourtID: [unique abbreviation to be used by software/filesystem]
+Court Short Name: [standard abbreviation used in citations]
+Author:
+Date created:
+"""
 
-import re
+# import re
 from datetime import date
 from datetime import datetime
 from lxml import html
 
 from juriscraper.GenericSite import GenericSite
-from juriscraper.lib.string_utils import titlecase
+# from juriscraper.lib.string_utils import titlecase
 
 
 class Site(GenericSite):
@@ -82,27 +86,53 @@ class Site(GenericSite):
     """
       High priority fields
 
-      Remove this commend and any unused methods before submission
+      Remove this comment and any unused methods before submission
     """
     def _get_docket_numbers(self):
+        """
+          This is typically of the form ##-####
+        """
         return None
 
     def _get_neutral_citations(self):
+        """ 
+          This is often of the form year, state abbreviation, sequential number
+          as in '2013 Neb. 12' which would be the 12th opinion issued in 2013.
+        """
         return None
 
     def _get_judges(self):
+        """
+          For the name of the judge authoring the lead opinion
+        """
         return None
 
     def _get_lower_courts(self):
+        """
+          If the document is an opinion of an appellate court, then the court
+          from which the case was appealed would go here. So, a 9th Circuit
+          case might be appealed from the 'N.D. Cal.' which would go here.
+        """
         return None
 
     def _get_nature_of_suit(self):
+        """
+          Some courts provide a NOS code or phrase giving the subject matter
+          of the case, such as 'Contract' 'Civil Rights' 'Immigration' etc.
+        """
         return None
 
     def _get_summaries(self):
+        """
+          Some courts provide a summary of the case or the opinion's holding.
+        """
         return None
 
     def _get_west_citations(self):
+        """
+          You are unlikely to encounter these unless it's a backscraper because
+          these citations only exist once the document is in a bound volume. 
+        """
         return None
 
     """
@@ -111,25 +141,56 @@ class Site(GenericSite):
       Remove this comment and any unused methods before submission
     """
     def _get_adversary_numbers(self):
-        # Common in bankruptcy cases where there are adversary proceedings.
+        """
+          Similar to a docket number, but found only in bankruptcy cases.
+        """
         return None
 
     def _get_causes(self):
+        """
+          Some courts will give the plaintiff's or appellant's cause of action
+          such as 'Employment' 'Trademark' etc.
+        """
         return None
 
     def _get_dispositions(self):
+        """
+          Affirmed, Reversed, Vacated; if longer than a sentence, should 
+          probably use _get_summaries instead.
+        """
         return None
 
     def _get_docket_attachment_numbers(self):
+        """
+          A document appears on a docket. Each line on the docket has a number.
+          Item number 12, for example, might be a declaration with several
+          attachments, numbered 1-5. That number, from 1-5, goes here.
+        """
         return None
 
     def _get_docket_document_numbers(self):
+        """
+          A document appears on a docket. Each line on the docket has a number.
+          Those numbers go here.
+        """
         return None
 
     def _get_lower_court_judges(self):
+        """
+          If the document is an opinion of an appellate court, then the court
+          from which the case was appealed is the lower court. So, a 9th Cir.
+          case might be appealed from the N.D. Cal. and the judge from that
+          court that handled the case would go here.
+        """
         return None
 
     def _get_lower_court_numbers(self):
+        """
+          If the document is an opinion of an appellate court, then the court
+          from which the case was appealed is the lower court. So, a 9th Cir.
+          case might be appealed from the N.D. Cal. and the docket number or
+          other relevant case numbers from that court would go here.
+        """
         return None
 
     """
