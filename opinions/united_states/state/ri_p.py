@@ -32,11 +32,11 @@ class Site(GenericSite):
         case_names = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
         #Could an easier regex do the same thing? Perhaps, but this works.
-        expression = '(.*)(, No\. \d*-\d*.[^(.]*|, Nos\..*\d*-\d*.[^(.]*|, \d*-\d*.[^(.]*|, No\.\d*-\d*[^(.]*)(\(.*)'
+        expression = '(\s*.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
         for s in self.html.xpath(path):
             case_name = re.search(expression, s, re.MULTILINE).group(1)
             #Chopping off some docket numbers that get mixed in.
-            case_name = case_name.split(', Nos.', 1)[0]
+            case_name = case_name.split(', Nos.', 1)[0].strip()
             case_names.append(case_name)
         return case_names
 
@@ -46,7 +46,7 @@ class Site(GenericSite):
     def _get_case_dates(self):
         case_dates = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
-        expression = '(.*)(, No\. \d*-\d*.[^(.]*|, Nos\..*\d*-\d*.[^(.]*|, \d*-\d*.[^(.]*|, No\.\d*-\d*[^(.]*)(\(.*)'
+        expression = '(.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
         for s in self.html.xpath(path):
             date_string = re.search(expression, s, re.MULTILINE).group(3)
             #Both some whitespace and surrounding parentheses must be removed.
@@ -57,7 +57,7 @@ class Site(GenericSite):
     def _get_docket_numbers(self):
         docket_numbers = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
-        expression = '(.*)(, No\. \d*-\d*.[^(.]*|, Nos\..*\d*-\d*.[^(.]*|, \d*-\d*.[^(.]*|, No\.\d*-\d*[^(.]*)(\(.*)'
+        expression = '(.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
         for s in self.html.xpath(path):
             dockets = re.search(expression, s, re.MULTILINE).group(2)
             #This page lists these about five different ways, normalizing:
