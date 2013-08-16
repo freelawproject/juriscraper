@@ -15,7 +15,7 @@ class Site(GenericSite):
         for name in self.html.xpath('//table/tr/td[3]/text()'):
             date_regex = re.compile(r' \d\d?\/\d\d?\/\d\d| filed')
             if 'P. v. ' in date_regex.split(name)[0]:
-                case_names.append(date_regex.split(name)[0].replace("P. ", "The People "))
+                case_names.append(date_regex.split(name)[0].replace("P. ", "People "))
             else:
                 case_names.append(date_regex.split(name)[0])
         return case_names
