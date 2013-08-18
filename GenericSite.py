@@ -59,6 +59,7 @@ class GenericSite(object):
         self.case_names = None
         self.causes = None
         self.dispositions = None
+        self.divisions = None
         self.docket_attachment_numbers = None
         self.docket_document_numbers = None
         self.docket_numbers = None
@@ -89,6 +90,7 @@ class GenericSite(object):
         self.case_names = self._get_case_names()
         self.causes = self._get_causes()
         self.dispositions = self._get_dispositions()
+        self.divisions = self._get_divisions()
         self.docket_attachment_numbers = self._get_docket_attachment_numbers()
         self.docket_document_numbers = self._get_docket_document_numbers()
         self.docket_numbers = self._get_docket_numbers()
@@ -121,7 +123,8 @@ class GenericSite(object):
         """ Cleans up text before we make it into an HTML tree:
             1. Nukes <![CDATA stuff.
             2. Nukes encoding declarations
-            3. ?
+            3. Replaces </br> with <br/>
+            4. ?
         """
         # Remove <![CDATA because it causes breakage in lxml.
         text = re.sub(r'<!\[CDATA\[', '', text)
@@ -135,12 +138,15 @@ class GenericSite(object):
         # lxml.
         if isinstance(text, unicode):
             text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
+
+        # Fix </br>
+        text = re.sub('</br>', '<br/>', text)
         return text
 
     def _clean_attributes(self):
         """Iterate over attribute values and clean them"""
         for item in [self.adversary_numbers, self.causes, self.dispositions,
-                     self.docket_attachment_numbers,
+                     self.divisions, self.docket_attachment_numbers,
                      self.docket_document_numbers, self.docket_numbers,
                      self.judges, self.lower_courts, self.lower_court_judges,
                      self.lower_court_numbers, self.nature_of_suit,
@@ -168,7 +174,7 @@ class GenericSite(object):
         """
         lengths = {}
         attributes = ['adversary_numbers', 'case_dates', 'case_names', 'causes',
-                      'dispositions', 'docket_attachment_numbers',
+                      'dispositions', 'divisions', 'docket_attachment_numbers',
                       'docket_document_numbers', 'docket_numbers',
                       'download_urls', 'judges', 'lower_courts',
                       'lower_court_judges', 'nature_of_suit',
@@ -203,7 +209,7 @@ class GenericSite(object):
         """
         # Note that case_dates must be first for sorting to work.
         attributes = [self.case_dates, self.adversary_numbers, self.case_names,
-                      self.causes, self.dispositions,
+                      self.causes, self.dispositions, self.divisions,
                       self.docket_attachment_numbers,
                       self.docket_document_numbers, self.docket_numbers,
                       self.download_urls, self.judges, self.lower_courts,
@@ -297,6 +303,9 @@ class GenericSite(object):
         return None
 
     def _get_dispositions(self):
+        return None
+
+    def _get_divisions(self):
         return None
 
     def _get_docket_attachment_numbers(self):
