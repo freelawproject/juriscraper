@@ -1,13 +1,14 @@
 """Scraper for the United States Court of Appeals for Veterans Claims
 CourtID: cavc
 Court Short Name: Vet.App.
-NOTE: If you modify this, make sure you know what you are doing and test it
-as over 40 other backscrapers import this code and re-use parts of it."""
+"""
 
 from juriscraper.GenericSite import GenericSite
 import time
 import datetime
 from datetime import date
+from lxml import html
+
 
 class Site(GenericSite):
     def __init__(self):
@@ -15,26 +16,36 @@ class Site(GenericSite):
         self.url = ('http://www.uscourts.cavc.gov/opinions.php')
         self.court_id = self.__module__
 
-    def _get_case_dates(self):
-        dates = []
-        for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[3]/text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(txt.strip(), '%d%b%y'))))
-        return dates
-
     def _get_docket_numbers(self):
-        return [txt for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[2]//text()')]
+        docket_numbers = []
+        for e in self.html.xpath('//div/ul/li/ul/li/table/tr/td/a'):
+            s = ', '.join([t.strip() for t in e.xpath('text()') if t.strip()])
+            docket_numbers.append(s)
+        return docket_numbers
 
     def _get_download_urls(self):
-        return [txt for txt in self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[2]/a/@href')]
+        return [txt for txt in self.html.xpath('//div/ul/li/ul/li/table/tr/td/a/@href')]
+
+    def _get_case_dates(self):
+        dates = []
+        for txt in self.html.xpath('//div/ul/li/ul/li/table/tr/td[3]/text()'):
+            if txt == '20JUN008':
+                dates.append(date.fromtimestamp(time.mktime(time.strptime('20JUN08', '%d%b%y'))))
+            else:
+                dates.append(date.fromtimestamp(time.mktime(time.strptime(txt, '%d%b%y'))))
+        return dates
 
     # http://en.wikipedia.org/wiki/United_States_Secretary_of_Veterans_Affairs
     # provided the names to append here for different opinion dates.
-    # Covering all possibilities here makes the backscrapers simple.
+    # Covering all possibilities here.
     def _get_case_names(self):
         case_names = []
         dates = self._get_case_dates()
-        plaintiffs = self.html.xpath('//ul[@id = "oasteps_boxes"]/li[1]//td[1]/text()')
-        for txt, dat in zip(plaintiffs, dates):
+        appellants = []
+        for e in self.html.xpath('//div/ul/li/ul/li/table/tr/td[1]'):
+            app = ', '.join([t.strip() for t in e.xpath('text()') if t.strip()])
+            appellants.append(app)
+        for txt, dat in zip(appellants, dates):
             if dat > datetime.date(2009, 1, 20):
                 case_names.append(txt + ' v. Shinseki')
             elif dat > datetime.date(2007, 12, 20):

@@ -61,11 +61,12 @@ is useful because it allows syntax highlighting and PyLint integration.
 
 For scrapers to be merged:
 
- - `python scraper_tests.py` must pass,
- - an *_example file should be included (this is needed for the tests to
-   run your code),
- - your code should be [PEP8][4] compliant with no major Pylint problems, and
- - your code should efficiently parse a page, returning no exceptions.
+ - `python tests/tests.py` must pass, listing the results for any new scrapers
+ - a *_example file should be included (this is needed for the tests to
+   run your code)
+ - your code should be [PEP8][4] compliant with no major Pylint problems
+ - your code should efficiently parse a page, returning no exceptions or
+   speed warnings
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
 that makes sense and that nobody else is working on. Alternatively, we have
@@ -77,17 +78,24 @@ your fork, and then send a pull request for your changes. Be sure to
 remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
 
+Before we can accept any changes from any contributor, we need a signed and
+completed Contributor License Agreement. You can find this agreement in the
+root of the repository. While an annoying bit of paperwork, this license is for
+your protection as a Contributor as well as the protection of Free Law Project
+and our users; it does not change your rights to use your own Contributions for
+any other purpose.
+
 
 Usage
 ======
-The scrapers is written in Python, and can can scrape a court as follows:
+The scrapers are written in Python, and can can scrape a court as follows:
 
     from juriscraper.opinions.united_states.federal_appellate import ca1
 
     # Create a site object
     site = ca1.Site()
 
-    # Populate it with data
+    # Populate it with data, downloading the page if necessary
     site.parse()
 
     # Print out the object
@@ -110,34 +118,37 @@ they're not known before starting the scraper. For example:
 
 This can be useful if you wish to create a command line scraper that iterates
 over all courts of a certain jurisdiction that is provided by a script or a user.
+See `lib/importer.py` for an example that's used in the sample caller.
 
 Development of a `to_xml()` or `to_json()` method has not yet been completed, as
-all callers have thus far been able to work directly with the Python objects.
+all callers have thus far been able to work directly with the Python objects. We
+welcome contributions in this area.
 
 
 Tests
 =====
-We got that! You can (and should) run the tests with `python scraper_tests`.
+We got that! You can (and should) run the tests with `python tests/tests.py`.
 
 
 Version History
 ===============
 **Past**
-0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
+ - 0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
 
 **Current**
-0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)
+ - 0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)
 
 **Future Roadmap**
-0.3 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
-0.4 - Support for all state courts of last resort (typically the "Supreme" court)
-0.5 - Support for all intermediate appellate state courts
-0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
-0.7 - Support for all federal district courts with non-PACER opinion listings
-0.8 - Support for all federal district courts with PACER written opinion reports (+JPML)
-0.9 - Support for all federal district bankruptcy courts
-1.0 - For every court above where a backscraper is possible, it is implemented.
-1.1 - Support video, oral argument audio, and transcripts everywhere available
+
+ - 0.3 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
+ - 0.4 - Support for all state courts of last resort (typically the "Supreme" court)
+ - 0.5 - Support for all intermediate appellate state courts
+ - 0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
+ - 0.7 - Support for all federal district courts with non-PACER opinion listings
+ - 0.8 - Support for all federal district courts with PACER written opinion reports (+JPML)
+ - 0.9 - Support for all federal district bankruptcy courts
+ - 1.0 - For every court above where a backscraper is possible, it is implemented.
+ - 1.1 - Support video, oral argument audio, and transcripts everywhere available
 
 **Beyond**
  - add other countries, starting with courts issuing opinions in English.
@@ -146,7 +157,7 @@ License
 ========
 Juriscraper is licensed under the permissive BSD license.
 
-[1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/scrape_and_extract.py
+[1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/management/commands/cl_scrape_and_extract.py?at=default
 [2]: http://courtlistener.com
 [3]: https://bitbucket.org/mlissner/lxml-xpath-tester
 [4]: http://www.python.org/dev/peps/pep-0008/

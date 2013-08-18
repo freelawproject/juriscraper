@@ -33,4 +33,3 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)
-

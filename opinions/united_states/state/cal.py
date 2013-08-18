@@ -14,7 +14,10 @@ class Site(GenericSite):
         case_names = []
         for name in self.html.xpath('//table/tr/td[3]/text()'):
             date_regex = re.compile(r' \d\d?\/\d\d?\/\d\d| filed')
-            case_names.append(date_regex.split(name)[0])
+            if 'P. v. ' in date_regex.split(name)[0]:
+                case_names.append(date_regex.split(name)[0].replace("P. ", "The People "))
+            else:
+                case_names.append(date_regex.split(name)[0])
         return case_names
 
     def _get_download_urls(self):

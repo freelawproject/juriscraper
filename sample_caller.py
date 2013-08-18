@@ -6,6 +6,8 @@ from optparse import OptionParser
 from lib.importer import build_module_list
 
 # for use in catching the SIGINT (Ctrl+4)
+from lib.string_utils import trunc
+
 die_now = False
 
 
@@ -60,7 +62,13 @@ def scrape_court(court, binaries=False):
                       'summaries', 'west_citations', 'west_state_citations']
         for attr in attributes:
             if getattr(site, attr) is not None:
-                v_print(1, ('    %s: %s' % (attr, getattr(site, attr)[i])).encode('utf-8'))
+                value = getattr(site, attr)[i]
+                if type(value) == unicode:
+                    value = trunc(value, 200, elipsize=True)
+                    v_print(1, '    %s: %s' % (attr, value.encode('utf-8')))
+                else:
+                    # Dates and such...
+                    v_print(1, '    %s: %s' % (attr, value))
 
         # Extract the contents using e.g. antiword, pdftotext, etc.
         # extract_doc_content(data)
