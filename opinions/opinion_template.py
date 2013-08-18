@@ -62,7 +62,8 @@ class Site(GenericSite):
     def _get_case_dates(self):
         """ This is an example of a date field. Note that the format string
             will likely need to be updated to  match the date formats
-            on the site you are scraping.
+            on the site you are scraping. The datetime formats can be found
+            here: http://docs.python.org/2/library/datetime.html
         """
         path = '//path/to/text/text()'
         return [datetime.strptime(date_string, '%m/%d/%Y').date()
