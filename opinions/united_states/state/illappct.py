@@ -1,0 +1,60 @@
+# Author: Krist Jin
+# Date created:2013-08-18
+
+from datetime import date
+from datetime import datetime
+from lxml import html
+
+from juriscraper.GenericSite import GenericSite
+from juriscraper.lib.string_utils import titlecase
+
+
+class Site(GenericSite):
+    def __init__(self):
+        super(Site, self).__init__()
+        self.court_id = self.__module__
+        self.url = 'http://www.state.il.us/court/Opinions/recent_appellate.asp'
+
+    def _get_download_urls(self):
+        path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a/@href'
+        return list(self.html.xpath(path))
+
+    def _get_case_names(self):
+        case_names = []
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            case_names.append(s)
+        return case_names
+
+    def _get_case_dates(self):
+        path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[1]/div/text()'
+        return [datetime.strptime(date_string, '%m/%d/%y').date()
+                for date_string in self.html.xpath(path)]
+
+    def _get_precedential_statuses(self):
+        statuses = []
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div//*[text()[contains(.,"Official")] or text()[contains(.,"Rel")]]'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            if 'Rel' in s:
+                statuses.append('Unpublished')
+            else:
+                statuses.append('Published')
+        return statuses
+
+    def _get_docket_numbers(self):
+        docket_numbers = []
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            s = ' '.join(s.split())
+            s = s.replace("Official Reports", "")
+            s = s.replace("NRel", "")
+            docket_numbers.append(s)
+        return docket_numbers
+
+    def _get_neutral_citations(self):
+        neutral_citations = []
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[4]/div'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            neutral_citations.append(s)
+        return neutral_citations
+

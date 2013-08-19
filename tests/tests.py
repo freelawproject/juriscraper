@@ -34,7 +34,6 @@ class DateParserTest(unittest.TestCase):
              [datetime.datetime(2004, 11, 01)]),
             (u'April 26, 1961.[†]',
              [datetime.datetime(1961, 4, 26)]),
-
         )
         for pair in test_pairs:
             dates = parse_dates(pair[0])
@@ -79,6 +78,9 @@ class ScraperExampleTest(unittest.TestCase):
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
+                    # do-nothing function, b/c we don't want to iterate over items in a DeferringList. Otherwise, this
+                    # function is called as part of the parse() function.
+                    site._clean_attributes = lambda *a: None
                     site.parse()
                 t2 = time.time()
                 if t2 - t1 > 2:
@@ -86,7 +88,6 @@ class ScraperExampleTest(unittest.TestCase):
                 else:
                     msg = ' - OK'
                 print '(%0.1f seconds%s)' % ((t2 - t1), msg)
-
 
 
 class StringUtilTest(unittest.TestCase):
