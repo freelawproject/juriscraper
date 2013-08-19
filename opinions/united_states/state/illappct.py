@@ -17,14 +17,13 @@ class Site(GenericSite):
 
     def _get_download_urls(self):
         path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a/@href'
-        return ["http://www.state.il.us/court/Opinions/"+url_string
-                for url_string in self.html.xpath(path)]
+        return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
         for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a'):
             s = html.tostring(e, method='text', encoding='unicode')
-            case_names.append(titlecase(s))
+            case_names.append(s)
         return case_names
 
     def _get_case_dates(self):
@@ -46,11 +45,9 @@ class Site(GenericSite):
         docket_numbers=[]
         for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div'):
             s = html.tostring(e, method='text', encoding='unicode')
-            s = s.replace(" ","")
-            s = s.replace("\r\n","")
-            s = s.replace("\t","")
-            s = s.replace("OfficialReports","")
-            s = s.replace("NRel","")
+            s = ' '.join(s.split())
+            s = s.replace("Official Reports", "")
+            s = s.replace("NRel", "")
             docket_numbers.append(s)
         return docket_numbers
 
