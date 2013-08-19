@@ -48,10 +48,8 @@ class Site(GenericSite):
                Nadim v. Jenny
 
             Note that titlecase() should be used here in the case that the case
-            names are provided in uppercase.
-
-            Use the titlecase function on cases where the name is provided in
-            uppercase only.
+            names are provided in uppercase. Use the titlecase function on
+            cases where the name is provided in uppercase only.
         """
         case_names = []
         for e in self.html.xpath('//path/to/an/element/p'):
@@ -96,7 +94,7 @@ class Site(GenericSite):
         return None
 
     def _get_neutral_citations(self):
-        """ 
+        """
           This is often of the form year, state abbreviation, sequential number
           as in '2013 Neb. 12' which would be the 12th opinion issued in 2013.
         """
@@ -132,7 +130,7 @@ class Site(GenericSite):
     def _get_west_citations(self):
         """
           You are unlikely to encounter these unless it's a backscraper because
-          these citations only exist once the document is in a bound volume. 
+          these citations only exist once the document is in a bound volume.
         """
         return None
 
@@ -156,7 +154,7 @@ class Site(GenericSite):
 
     def _get_dispositions(self):
         """
-          Affirmed, Reversed, Vacated; if longer than a sentence, should 
+          Affirmed, Reversed, Vacated; if longer than a sentence, should
           probably use _get_summaries instead.
         """
         return None
