@@ -133,9 +133,11 @@ We got that! You can (and should) run the tests with `python tests/tests.py`.
 Version History
 ===============
 **Past**
+
  - 0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
 
 **Current**
+
  - 0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)
 
 **Future Roadmap**
