@@ -34,7 +34,6 @@ class DateParserTest(unittest.TestCase):
              [datetime.datetime(2004, 11, 01)]),
             (u'April 26, 1961.[†]',
              [datetime.datetime(1961, 4, 26)]),
-
         )
         for pair in test_pairs:
             dates = parse_dates(pair[0])

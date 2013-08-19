@@ -42,7 +42,7 @@ class Site(GenericSite):
         return statuses
 
     def _get_docket_numbers(self):
-        docket_numbers=[]
+        docket_numbers = []
         for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div'):
             s = html.tostring(e, method='text', encoding='unicode')
             s = ' '.join(s.split())
