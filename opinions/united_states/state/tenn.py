@@ -20,7 +20,7 @@ all of these subsequent pages, however.
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions'
+        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions?page=0'
         self.court_id = self.__module__
 
     def _get_download_urls(self):
