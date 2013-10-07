@@ -2,6 +2,7 @@ import hashlib
 from lxml import html
 import logging.handlers
 import re
+from lxml.html import tostring
 import requests
 from tests import MockRequest
 
@@ -187,7 +188,7 @@ class GenericSite(object):
         values = lengths.values()
         if values.count(values[0]) != len(values):
             # Are all elements equal?
-            raise InsanityException("%s: Scraped meta data fields have unequal"
+            raise InsanityException("%s: Scraped meta data fields have differing"
                                     " lengths: %s" % (self.court_id, lengths))
         if len(self.case_names) == 0:
             logger.warning('%s: Returned with zero items.' % self.court_id)
@@ -273,13 +274,11 @@ class GenericSite(object):
 
         # Grab the content
         text = self._clean_text(r.text)
-        #print "text: %s" % text
         html_tree = html.fromstring(text)
         html_tree.make_links_absolute(self.url)
 
         remove_anchors = lambda url: url.split('#')[0]
         html_tree.rewrite_links(remove_anchors)
-
         return html_tree
 
     def _download_backwards(self):
