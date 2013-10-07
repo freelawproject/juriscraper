@@ -3,7 +3,7 @@ import re
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
-       'FTC|HSBC|IBM|II|III|IV|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|SD|UPS|RSS|SEC|UMG|US|USA|USC|'
+       'FTC|HSBC|IBM|II|III|IV|JJ|LLC|LLP|MCI|MJL|MSPB|ND|NLRB|PTO|SD|UPS|RSS|SEC|UMG|US|USA|USC|'
        'USPS|WTO')
 SMALL = 'a|an|and|as|at|but|by|en|for|if|in|is|of|on|or|the|to|v\.?|via|vs\.?'
 NUMS = '0123456789'
@@ -140,7 +140,7 @@ def titlecase(text, DEBUG=False):
                 if DEBUG:
                     print "  MAC_MAC matched. Capitlizing: " + word
                 tc_line.append("%s%s" % (match.group(1).capitalize(),
-                                      match.group(2).capitalize()))
+                                         match.group(2).capitalize()))
                 continue
 
             hyphenated = []

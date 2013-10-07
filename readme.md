@@ -45,6 +45,9 @@ Installation & dependencies
     # add Juriscraper to your python path (in Ubuntu/Debian)
     sudo ln -s /usr/local/juriscraper /usr/lib/python2.7/dist-packages/juriscraper
 
+    # create a directory for logs
+    sudo mkdir -p /var/log/juriscraper
+
 We also occasionally use [PhantomJS][8] for more painful jobs, but so far it's only
 a dependency for backscrapers. It can be installed from [here][9].
 
