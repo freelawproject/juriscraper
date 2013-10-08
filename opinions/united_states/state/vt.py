@@ -51,8 +51,14 @@ class Site(GenericSite):
         docket_numbers = []
         path = '//h4/a'
         for e in self.html.xpath(path):
-            s = html.tostring(e, method='text', encoding='unicode')
-            expression = '(\d{4}-\d{3})'
-            docket_number = re.search(expression, s, re.MULTILINE).group(1)
+            s = ' '.join(html.tostring(e, method='text', encoding='unicode').split())
+            regexes = ['(\d{4}-\d{2,3} \& \d{4}-\d{2,3})', '(\d{4}-\d{2,3})']
+            for regex in regexes:
+                try:
+                    docket_number = re.search(regex, s).group(1)
+                    break
+                except AttributeError:
+                    # Happens when a regex doesn't match.
+                    continue
             docket_numbers.append(docket_number)
         return docket_numbers

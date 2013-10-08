@@ -2,7 +2,6 @@ import hashlib
 from lxml import html
 import logging.handlers
 import re
-from lxml.html import tostring
 import requests
 from tests import MockRequest
 
