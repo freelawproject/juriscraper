@@ -12,7 +12,7 @@ from lxml import html
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions'
+        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions?page=14'
         self.court_id = self.__module__
 
     def _get_download_urls(self):
@@ -58,9 +58,14 @@ class Site(GenericSite):
 
     def _get_summaries(self):
         summaries = []
-        for e in self.html.xpath("//table//tr[not(descendant::a[contains(@href, 'pendingcase')])]/td//div/p"):
-            s = html.tostring(e, method='text', encoding='unicode')
-            summaries.append(s)
+        for e in self.html.xpath("//table//tr[not(descendant::a[contains(@href, 'pendingcase')])]/td//div"):
+            ps = e.xpath('p')
+            s = ''
+            for p in ps:
+                s += html.tostring(p, method='text', encoding='unicode')
+            if s:
+                # Only append if s got content.
+                summaries.append(s)
         return summaries
 
     def _get_precedential_statuses(self):
