@@ -12,7 +12,7 @@ from lxml import html
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions?page=0'
+        self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions'
         self.court_id = self.__module__
 
     def _get_download_urls(self):
@@ -65,3 +65,8 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
+
+    def _download_backwards(self, page):
+        self.url = '%s?page=%s' % (self.url, page)
+        self.html = self._download()
+
