@@ -23,8 +23,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         case_names = []
         for e in self.html.xpath('//div[@id = "block-system-main"]//li'):
-            paths = ['a[1]',
-                     'span/a[1]',]
+            paths = ['a[1]', 'span/a[1]']
             for path in paths:
                 try:
                     e = e.xpath(path)[0]
@@ -48,13 +47,14 @@ class Site(GenericSite):
 
     def _get_download_urls(self):
         download_urls = []
-        for e in self.html.xpath('//div[@id = "block-system-main"]//li/a[1]/@href|//div[@id = "block-system-main"]//li/span/a[1]/@href'):
+        for e in self.html.xpath('//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li/a[1]/@href|'
+                                 '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li/span/a[1]/@href'):
             download_urls.append(e)
         return download_urls
 
     def _get_case_dates(self):
         case_dates = []
-        for e in self.html.xpath('//div[@id = "block-system-main"]//li'):
+        for e in self.html.xpath('//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li'):
             s = html.tostring(e, method='text', encoding='unicode')
             s = re.search('(.*[0-9]{4})', s).group(1)
             date_formats = ['%B %d, %Y',

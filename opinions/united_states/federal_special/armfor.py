@@ -36,7 +36,7 @@ class Site(GenericSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//table//table//tr[descendant::a][position() > 1]/td[2]'):
+        for e in self.html.xpath('//table//table//tr[descendant::a and position() > 1]/td[2]'):
             s = html.tostring(e, method='text', encoding='unicode')
             docket_numbers.append(s.strip()[:-5])
         return docket_numbers
