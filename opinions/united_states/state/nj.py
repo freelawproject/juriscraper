@@ -1,6 +1,7 @@
 # Author: Krist Jin
 # Reviewer: Michael Lissner
 # Date created: 2013-08-03
+from lxml import html
 
 import time
 from datetime import date
@@ -27,13 +28,14 @@ class Site(GenericSite):
 
     def _get_case_dates(self):
         dates = []
-        path = '//*[@id="content2col"]/table[%s]/tr' \
-               '[not(contains(., "No Appellate opinions approved for publication."))]' \
-               '[not(contains(., "No Supreme Court opinions reported"))]' \
-               '/td[1]//text()' % self.table
+        path = ('//*[@id="content2col"]/table[%s]/tr'
+                '[not(contains(., "No Appellate opinions approved for publication."))]'
+                '[not(contains(., "No Supreme Court opinions reported"))]'
+                '/td[1]//text()' % self.table)
         for s in self.html.xpath(path):
             s = s.strip()
             s = s.replace('.', '')
+            s = s.replace('Sept', 'Sep')
             date_formats = ['%b %d, %Y', '%B %d, %Y']
             for format in date_formats:
                 try:
@@ -46,8 +48,11 @@ class Site(GenericSite):
         return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//*[@id="content2col"]/table[%s]/tr' \
-               '[not(contains(., "No Appellate opinions approved for publication."))]' \
-               '[not(contains(., "No Supreme Court opinions reported"))]' \
-               '/td[2]//text()' % self.table
-        return list(self.html.xpath(path))
+        path = ('//*[@id="content2col"]/table[%s]/tr'
+                '[not(contains(., "No Appellate opinions approved for publication."))]'
+                '[not(contains(., "No Supreme Court opinions reported"))]'
+                '/td[2]' % self.table)
+        docket_numbers = []
+        for cell in self.html.xpath(path):
+            docket_numbers.append(html.tostring(cell, method='text', encoding='unicode'))
+        return docket_numbers
