@@ -13,7 +13,7 @@ class Site(GenericSite):
         return [titlecase(text) for text in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td/a/text()')]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td/a/@href')]
+        return [e for e in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td/a[text()]/@href')]
 
     def _get_case_dates(self):
         path = '//div[@id = "maincolumn"]//table/tr/td[2]/text()'
