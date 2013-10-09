@@ -7,8 +7,10 @@ class Site(va.Site):
         self.url = 'http://www.courts.state.va.us/wpcap.htm'
         self.court_id = self.__module__
 
-    def _get_precedential_statuses(self):
-        return ["Published"] * len(self.case_names)
+    def _get_download_urls(self):
+        path = "//p[./a[contains(./@href, '.pdf')]]/a[1]/@href"
+        urls = [url for url in self.html.xpath(path) if url.endswith('.pdf')]
+        return urls
 
 
 
