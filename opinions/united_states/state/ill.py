@@ -2,12 +2,13 @@
 # Date created:2013-08-16
 # Reviewer: Mike Lissner
 
-from datetime import date
-from datetime import datetime
-from lib.html_utils import get_clean_body_content
-from lxml import html
 import requests
 
+from datetime import date
+from datetime import datetime
+from lxml import html
+
+from juriscraper.lib.html_utils import get_clean_body_content
 from juriscraper.GenericSite import GenericSite
 from juriscraper.DeferringList import DeferringList
 
