@@ -136,7 +136,7 @@ def titlecase(text, DEBUG=False):
                 continue
 
             match = MAC_MC.match(word)
-            if match and (word != 'mack'):
+            if match and (word not in ['mack', 'machine']):
                 if DEBUG:
                     print "  MAC_MAC matched. Capitlizing: " + word
                 tc_line.append("%s%s" % (match.group(1).capitalize(),

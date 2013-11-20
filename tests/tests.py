@@ -73,10 +73,10 @@ class ScraperExampleTest(unittest.TestCase):
                 self.assertTrue(paths, "No example file found for: %s!" % module_string.rsplit('.', 1)[1])
                 t1 = time.time()
                 for path in paths:
+                    # This loop allows multiple example files per module
                     if path.endswith('~'):
                         # Text editor backup: Not interesting.
                         continue
-                    # This loop allows multiple example files per module
                     site = mod.Site()
                     site.url = path
                     # Forces a local GET

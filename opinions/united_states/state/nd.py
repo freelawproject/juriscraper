@@ -48,7 +48,8 @@ class Site(GenericSite):
         for e in self.html.xpath(path):
             if e.tag == 'font':
                 date_str = e.text
-                dt = datetime.strptime(date_str, '%B %d, %Y').date()
+                if date_str is not None:  # Needed for times when the court has no records yet for the month.
+                    dt = datetime.strptime(date_str, '%B %d, %Y').date()
             elif e.tag == 'a':
                 try:
                     case_dates.append(dt)
