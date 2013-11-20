@@ -6,7 +6,6 @@ from datetime import datetime
 from lxml import html
 
 from juriscraper.GenericSite import GenericSite
-from juriscraper.lib.string_utils import titlecase
 
 
 class Site(GenericSite):
@@ -21,7 +20,8 @@ class Site(GenericSite):
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a'):
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]'
+                                 '/td[5]//a[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
@@ -33,7 +33,7 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div//*[text()[contains(.,"Official")] or text()[contains(.,"Rel")]]'):
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div//strong[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'Rel' in s:
                 statuses.append('Unpublished')
@@ -53,7 +53,7 @@ class Site(GenericSite):
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[4]/div'):
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[4]'):
             s = html.tostring(e, method='text', encoding='unicode')
             neutral_citations.append(s)
         return neutral_citations
