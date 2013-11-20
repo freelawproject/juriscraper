@@ -37,7 +37,7 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]/tr/td[3]//div/strong[text()]'):
+        for e in self.html.xpath('//td[@class="center"]/table[3]/tr/td[3]//div/strong[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'NRel' in s:
                 statuses.append('Unpublished')
