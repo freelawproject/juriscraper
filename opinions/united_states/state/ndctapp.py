@@ -8,6 +8,7 @@ from datetime import date
 from datetime import datetime
 from lxml import html
 
+
 class Site(nd.Site):
     def __init__(self):
         super(Site, self).__init__()

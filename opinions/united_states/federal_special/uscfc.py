@@ -25,8 +25,9 @@ class Site(GenericSite):
 
     def _get_judges(self):
         judges = []
-        for txt in self.html.xpath('//div[2]/table/tbody/tr/td[2]/text()'):
-            judges.append(txt)
+        for e in self.html.xpath('//div[2]/table/tbody/tr/td[2]'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            judges.append(s)
         return judges
 
     def _get_case_names(self):
