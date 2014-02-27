@@ -15,6 +15,7 @@ __all__ = [
     'calctapp_6th',
     'calctapp_app_div',
     'calctapp_u',
+    'dc',
     'haw',
     'haw_beginningofyear',
     'hawapp',
