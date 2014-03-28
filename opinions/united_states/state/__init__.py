@@ -1,6 +1,8 @@
 __all__ = [
     'alaska',
     'ariz',
+    'arizctapp_div_1',
+    'arizctapp_div_2',
     'ark',
     'arkctapp',
     'cal',
@@ -14,6 +16,7 @@ __all__ = [
     'calctapp_6th',
     'calctapp_app_div',
     'calctapp_u',
+    'dc',
     'haw',
     'haw_beginningofyear',
     'hawapp',
