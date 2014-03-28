@@ -2,6 +2,7 @@ __all__ = [
     'alaska',
     'ariz',
     'arizctapp_div_1',
+    'arizctapp_div_2',
     'ark',
     'arkctapp',
     'cal',
