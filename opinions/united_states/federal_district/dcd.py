@@ -15,6 +15,8 @@ import re
 from juriscraper.GenericSite import GenericSite
 from juriscraper.lib.string_utils import titlecase
 
+import itertools
+
 class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
@@ -34,13 +36,13 @@ class Site(GenericSite):
         cnpath = './td[2]//text()[preceding-sibling::br]'
         urlpath = './td[3]/a/@href'
         for row in self.html.xpath(rowpath):
-            # It seems like titlecase does not always work here. Mike
-            # should look at this. Good enough for now.
-            case_name = titlecase(str(row.xpath(cnpath)))
-            # Determine the number of urls in each row and pad the case name 
-            # list sufficiently
-            count = len(row.xpath(urlpath))
-            casenames.extend([case_name] * count)
+            case_list = row.xpath(cnpath)
+            for rough_case_name in case_list:
+                case_name = titlecase(rough_case_name.lower())
+                # Determine the number of urls in each row and pad the case
+                # name list sufficiently
+                count = len(row.xpath(urlpath))
+                casenames.extend([case_name] * count)
         return casenames
 
     def _get_case_dates(self):
