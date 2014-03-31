@@ -20,7 +20,7 @@ class Site(GenericSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?' + str(date.today().year)
+        self.url = 'https://ecf.dcd.uscourts.gov/cgi-bin/Opinions.pl?2013'
 
     def _get_download_urls(self):
         # There are often multiple documents and hence urls for each case.
