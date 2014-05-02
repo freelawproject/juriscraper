@@ -28,7 +28,8 @@ Some of the design goals for this project are:
 Installation & dependencies
 ===========================
     # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-devel
+    sudo apt-get install python-pip  # If you don't have it already...
+    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is named libxslt-devel
     sudo pip install chardet==1.0.1
     sudo pip install requests==1.2.3
     sudo pip install lxml==3.0.1
