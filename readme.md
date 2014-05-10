@@ -33,6 +33,7 @@ Installation & dependencies
     sudo pip install chardet==1.0.1
     sudo pip install requests==2.2.1
     sudo pip install lxml==3.0.1
+    sudo pip install python-dateutil==1.5  # Newer have known incompatibilities with Python < 3
     sudo mkdir /var/log/juriscraper/
 
     # optional, only used for backscrapers
