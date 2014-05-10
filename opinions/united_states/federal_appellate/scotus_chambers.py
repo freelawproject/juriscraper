@@ -1,3 +1,4 @@
+from lxml import html
 import scotus_slip
 import time
 from datetime import date
@@ -15,8 +16,12 @@ class Site(scotus_slip.Site):
                                                                 for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = '//div[@id = "maincolumn"]//table/tr/td[2]/text()'
-        return [docket_number for docket_number in self.html.xpath(path)]
+        docket_numbers = []
+        for e in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td[2]'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            docket_numbers.append(s)
+
+        return docket_numbers
 
     def _get_precedential_statuses(self):
         return ['In-chambers'] * len(self.case_names)
