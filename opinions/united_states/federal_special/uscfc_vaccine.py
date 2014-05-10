@@ -10,3 +10,6 @@ class Site(uscfc.Site):
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7'
         self.court_id = self.__module__
 
+    def _download_backwards(self, page):
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7?page=' % page
+        self.html = self._download()

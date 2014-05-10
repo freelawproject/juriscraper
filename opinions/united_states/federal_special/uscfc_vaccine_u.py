@@ -3,13 +3,8 @@ CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
 import uscfc
-import time
 import datetime
 from datetime import date
-import re
-from lxml import html
-
-from juriscraper.lib.string_utils import harmonize, titlecase
 
 
 class Site(uscfc.Site):
@@ -20,3 +15,7 @@ class Site(uscfc.Site):
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)
+
+    def _download_backwards(self, page):
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/11?page=' % page
+        self.html = self._download()

@@ -101,3 +101,8 @@ class Site(GenericSite):
             judge.strip('.')
             judges.append(judge)
         return judges
+
+    def _download_backwards(self, page):
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8?page=' % page
+        self.html = self._download()
+
