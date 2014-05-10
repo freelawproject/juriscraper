@@ -103,6 +103,6 @@ class Site(GenericSite):
         return judges
 
     def _download_backwards(self, page):
-        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8?page=' % page
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8?page=%s' % page
         self.html = self._download()
 

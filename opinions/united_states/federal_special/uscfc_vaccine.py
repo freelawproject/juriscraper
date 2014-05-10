@@ -4,6 +4,7 @@ Court Short Name: Fed. Cl."""
 
 import uscfc
 
+
 class Site(uscfc.Site):
     def __init__(self):
         super(Site, self).__init__()
@@ -11,5 +12,5 @@ class Site(uscfc.Site):
         self.court_id = self.__module__
 
     def _download_backwards(self, page):
-        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7?page=' % page
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7?page=%s' % page
         self.html = self._download()

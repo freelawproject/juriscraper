@@ -17,5 +17,5 @@ class Site(uscfc.Site):
         return ['Unpublished'] * len(self.case_names)
 
     def _download_backwards(self, page):
-        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/11?page=' % page
+        self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/11?page=%s' % page
         self.html = self._download()
