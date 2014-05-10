@@ -34,6 +34,7 @@ class Site(GenericSite):
     def _get_case_names(self):
         case_names = []
         for t in self.html.xpath('//h3[@class="feed-item-title"]//text()'):
+            t = ' '.join(t.split())  # Normalize whitespace
             if t.strip():
                 # If there is something other than whitespace...
                 t = t.encode('utf8').split(' • ')[1].strip()
