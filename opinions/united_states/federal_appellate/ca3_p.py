@@ -1,12 +1,13 @@
+"""This site is pretty bad. Very little HTML; everything is separated by
+<br> tags. There is currently a case at the bottom of the page from 2009
+that has incomplete meta data. You can see it in the example document.
+"""
+
 from juriscraper.GenericSite import GenericSite
 import time
 from datetime import date
 
 class Site(GenericSite):
-    '''This site is pretty bad. Very little HTML; everything is separated by
-    <br> tags. There is currently a case at the bottom of the page from 2009
-    that has incomplete meta data. You can see it in the example document.
-    '''
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www2.ca3.uscourts.gov/recentop/week/recprec.htm'
