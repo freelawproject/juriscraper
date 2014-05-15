@@ -52,6 +52,7 @@ __all__ = [
     'njsuperctappdiv',
     'or',
     'sd',
+    'sc',
     'tenn',
     'tennctapp',
     'tenncrimapp',
