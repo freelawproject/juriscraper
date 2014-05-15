@@ -33,7 +33,7 @@ class Site(GenericSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div//strong[normalize-space(text())]'):
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]//strong[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'Rel' in s:
                 statuses.append('Unpublished')
@@ -43,12 +43,14 @@ class Site(GenericSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]/div'):
+        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]'):
             s = html.tostring(e, method='text', encoding='unicode')
             s = ' '.join(s.split())
             s = s.replace("Official Reports", "")
             s = s.replace("NRel", "")
             docket_numbers.append(s)
+        for num in docket_numbers:
+            print num
         return docket_numbers
 
     def _get_neutral_citations(self):

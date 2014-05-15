@@ -31,13 +31,13 @@ class Site(GenericSite):
         return case_names
 
     def _get_case_dates(self):
-        path = '//td[@class="center"]/table[3]/tr/td[1]//div/text()'
+        path = '//td[@class="center"]/table[3]//tr/td[1]//div/text()'
         return [datetime.strptime(date_string, '%m/%d/%y').date()
                 for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]/tr/td[3]//div/strong[normalize-space(text())]'):
+        for e in self.html.xpath('//td[@class="center"]/table[3]//tr/td[3]//div/strong[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'NRel' in s:
                 statuses.append('Unpublished')
@@ -47,7 +47,7 @@ class Site(GenericSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for s in self.html.xpath('//td[@class="center"]/table[3]/tr/td[3]/div/text()[not(preceding-sibling::br)]'):
+        for s in self.html.xpath('//td[@class="center"]/table[3]//tr/td[3]/div/text()[not(preceding-sibling::br)]'):
             s = " ".join(s.split())
             if s:
                 docket_numbers.append(s)
@@ -55,7 +55,7 @@ class Site(GenericSite):
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for e in self.html.xpath('//td[@class="center"]/table[3]/tr/td[4]/div'):
+        for e in self.html.xpath('//td[@class="center"]/table[3]//tr/td[4]/div'):
             s = html.tostring(e, method='text', encoding='unicode')
             neutral_citations.append(s)
         return neutral_citations
@@ -78,7 +78,7 @@ class Site(GenericSite):
                 summary_string += s
             return get_clean_body_content(summary_string, remove_extra_tags=['span'])
 
-        path = "//td[@class='center']/table[3]/tr/td[6]/div/a/@href"
+        path = "//td[@class='center']/table[3]//tr/td[6]/div/a/@href"
         seed_urls = self.html.xpath(path)
         if seed_urls:
             summaries = DeferringList(seed=seed_urls, fetcher=fetcher)
