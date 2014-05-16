@@ -1,7 +1,5 @@
 from juriscraper.GenericSite import GenericSite
-import re
-import time
-from datetime import date
+from datetime import datetime
 
 
 class Site(GenericSite):
@@ -33,8 +31,7 @@ class Site(GenericSite):
             parts = text.strip().split(', ')
             try:
                 caseDate = parts[-3] + ', ' + parts[-2]
-                dates.append(date.fromtimestamp(
-                time.mktime(time.strptime(caseDate, '%B %d, %Y'))))
+                dates.append(datetime.strptime(caseDate, 'Filed %B %d, %Y'))
             except IndexError:
                 # Happens in whitespace-only text nodes.
                 continue

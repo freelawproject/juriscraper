@@ -1,5 +1,5 @@
 def build_module_list(court_id):
-    '''Takes a string and builds up a list of modules to import.
+    """Takes a string and builds up a list of modules to import.
 
     This is a simple recursive function that iteratively looks for __all__
     attributes in packages. If it finds one, it inspects each of the items in
@@ -7,13 +7,13 @@ def build_module_list(court_id):
     item is added to a list of modules.
 
     Returns either a list of modules or in the case of errors, an empty list.
-    '''
+    """
     module_strings = []
 
     def find_all_attr_or_punt(court_id):
-        '''Checks that we have an __all__ attribute. If so, recuses. If not,
+        """Checks that we have an __all__ attribute. If so, recurses. If not,
         adds the item to our list
-        '''
+        """
         try:
             # Test that we have an __all__ attribute (proving that it's a
             # package) something like: opinions.united_states.federal
@@ -24,7 +24,7 @@ def build_module_list(court_id):
             for module in all_attr:
                 # If we've made it this far, we have an __all__ attribute, so
                 # we should see if the items within that attribute do too. And
-                # so forth, recurively...
+                # so forth, recursively...
                 find_all_attr_or_punt(module)
         except AttributeError:
             # Lacks the __all__ attribute. Probably of the form:

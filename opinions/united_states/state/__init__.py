@@ -56,7 +56,7 @@ __all__ = [
     'tenn',
     'tennctapp',
     'tenncrimapp',
-    'tex',
+    #'tex',  # Failing
     'utah',
     'va',
     'vactapp_u',
