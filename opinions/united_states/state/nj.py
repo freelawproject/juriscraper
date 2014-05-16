@@ -1,6 +1,7 @@
 # Author: Krist Jin
 # Reviewer: Michael Lissner
 # Date created: 2013-08-03
+import re
 from lxml import html
 
 import time
@@ -34,12 +35,18 @@ class Site(GenericSite):
                 '/td[1]//text()' % self.table)
         for s in self.html.xpath(path):
             s = s.strip()
-            s = s.replace('.', '')
+            s = re.sub('[\.,]', '', s)
             s = s.replace('Sept', 'Sep')
-            date_formats = ['%b %d, %Y', '%B %d, %Y']
+            date_formats = ['%b %d %Y', '%B %d %Y']
             for format in date_formats:
                 try:
                     dates.append(date.fromtimestamp(time.mktime(time.strptime(s, format))))
+                    # This break is necessary for a funny reason. 11 months out of the year, only one of the
+                    # date_formats will match and things will work smoothly. In May, however, %b == 'May' as
+                    # does %B. When that happens, both date formats match, and you get double metadata. This
+                    # break takes us out of this inner for loop as soon as we have a match, so the next
+                    # format can't be attempted. Yikes, dates always have one more tricky thing.
+                    break
                 except ValueError:
                     pass
         return dates
