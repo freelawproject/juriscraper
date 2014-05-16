@@ -49,8 +49,6 @@ class Site(GenericSite):
             s = s.replace("Official Reports", "")
             s = s.replace("NRel", "")
             docket_numbers.append(s)
-        for num in docket_numbers:
-            print num
         return docket_numbers
 
     def _get_neutral_citations(self):
