@@ -1,10 +1,10 @@
-'''
+"""
 Auth: Jordan Atanasov <jordan.atanasov@commetric.com>
 History:
     2012-05-07: Written by Jordan.
     2012-07-06: Updated by mlr to only get the first ten items.
 Notes: Only queries first ten dates. Beyond that, they get messy.
-'''
+"""
 
 from juriscraper.GenericSite import GenericSite
 import time
