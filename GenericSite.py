@@ -205,7 +205,7 @@ class GenericSite(object):
         for d in self.case_dates:
             if not isinstance(d, date):
                 raise InsanityException('%s: member of case_dates list not a valid date object. '
-                                        'Instead it is: %s' % (self.court_id, type(d)))
+                                        'Instead it is: %s with value: %s' % (self.court_id, type(d), d))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 

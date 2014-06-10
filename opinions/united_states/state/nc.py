@@ -53,7 +53,7 @@ class Site(GenericSite):
             if date_nodes:
                 date_str = re.search(date_cleaner, date_str, re.MULTILINE).group()
             elif is_case_row:
-                case_dates.append(date_str)
+                case_dates.append(datetime.strptime(date_str, '%d %B %Y').date())
             else:
                 # Some junk we don't care about
                 continue
