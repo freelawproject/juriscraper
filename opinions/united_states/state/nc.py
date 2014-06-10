@@ -77,3 +77,7 @@ class Site(GenericSite):
         for txt in self.html.xpath(path):
             summaries.append(txt)
         return summaries
+
+    def _download_backwards(self, year):
+        self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % year
+        self.html = self._download()
