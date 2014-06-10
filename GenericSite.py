@@ -1,8 +1,10 @@
 import hashlib
-from lxml import html
 import logging.handlers
 import re
 import requests
+
+from datetime import date
+from lxml import html
 from tests import MockRequest
 
 from juriscraper.lib.string_utils import clean_string, harmonize, force_unicode
@@ -167,7 +169,8 @@ class GenericSite(object):
             1. Do all the attributes have the same length?
             2. Do we have any content at all?
             3. Is there a bare minimum of meta data?
-            4. ?
+            4. Are the dates datetime objects, not strings?
+            5. ?
 
         If sanity is OK, no return value. If not, throw InsanityException or
         warnings, as appropriate.
@@ -197,8 +200,12 @@ class GenericSite(object):
                                'download_urls']
             for field in required_fields:
                 if self.__getattribute__(field) is None:
-                    raise InsanityException('%s: Required fields do not '
-                                            'contain any data: %s' % (self.court_id, field))
+                    raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
+
+        for d in self.case_dates:
+            if not isinstance(d, date):
+                raise InsanityException('%s: member of case_dates list not a valid date object. '
+                                        'Instead it is: %s' % (self.court_id, type(d)))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 
