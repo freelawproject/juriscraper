@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
 
 from datetime import date
@@ -8,7 +8,7 @@ import re
 import time
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.isc.idaho.gov/opinions/cacivil.htm'

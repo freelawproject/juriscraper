@@ -10,11 +10,11 @@ Court Short Name: Ariz.
 import time
 from datetime import date
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__

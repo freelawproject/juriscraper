@@ -1,10 +1,10 @@
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from datetime import date
 from datetime import datetime
 from datetime import timedelta
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://pacer.ca4.uscourts.gov/cgi-bin/opinions.pl'

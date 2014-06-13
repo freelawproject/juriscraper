@@ -8,7 +8,7 @@ Notes:
     Scraper adapted for new website as of February 20, 2014.
 """
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 import re
 import time
@@ -16,7 +16,7 @@ from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8'

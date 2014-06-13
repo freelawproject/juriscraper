@@ -1,10 +1,10 @@
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
 import time
 from datetime import date
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.courts.state.wy.us/Opinions.aspx'

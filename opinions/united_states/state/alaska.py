@@ -6,12 +6,12 @@ History:
 Notes: Only queries first ten dates. Beyond that, they get messy.
 """
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.courtrecords.alaska.gov/webdocs/opinions/sp.htm'

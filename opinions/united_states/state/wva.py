@@ -1,11 +1,11 @@
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.courtswv.gov/supreme-court/opinions.html'
@@ -48,7 +48,7 @@ class Site(GenericSite):
     def _get_nature_of_suit(self):
         natures = []
         for t in self.html.xpath('//table/tbody/tr/td[4]/text()'):
-            # List is sourced from JS in scraped HTML  
+            # List is sourced from JS in scraped HTML
             if t == "CR-F":
                 natures.append('Felony (non-Death Penalty)')
             elif t == "CR-M":

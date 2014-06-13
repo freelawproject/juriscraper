@@ -5,12 +5,12 @@
 # Neutral Citation Format (Memorandum opinions): T.C. Memo 2012-1
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'

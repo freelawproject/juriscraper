@@ -2,13 +2,13 @@
 CourtID: armfor
 Court Short Name: C.A.A.F."""
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         today = date.today()

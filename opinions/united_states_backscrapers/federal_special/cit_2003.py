@@ -2,13 +2,13 @@
 # CourtID: cit
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
 from lxml import html
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
 # This is a special backscraper to deal with problems on the 2003 page.
@@ -27,7 +27,7 @@ class Site(GenericSite):
             else:
                 neutral_citations.append(s)
         return neutral_citations
-       
+
     def _get_case_names(self):
         case_names = []
         for e in self.html.xpath('//table[3]//tr[position() > 1]/td[2]/*'):
@@ -40,7 +40,7 @@ class Site(GenericSite):
             else:
                 case_names.append(s.strip())
         return case_names
-    
+
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 

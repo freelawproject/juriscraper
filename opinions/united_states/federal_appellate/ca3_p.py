@@ -3,11 +3,11 @@
 that has incomplete meta data. You can see it in the example document.
 """
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www2.ca3.uscourts.gov/recentop/week/recprec.htm'

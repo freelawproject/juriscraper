@@ -3,13 +3,13 @@
 #    Date     | Issue
 # 2013-01-28  | InsanityException due to the court adding busted share links.
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from juriscraper.lib.string_utils import clean_string
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__

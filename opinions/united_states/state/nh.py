@@ -1,4 +1,4 @@
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         # Replace %d with the current year; backscraper looks to be easy

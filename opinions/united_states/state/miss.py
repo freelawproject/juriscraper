@@ -1,14 +1,14 @@
 # Auth: ryee
 # Review: mlr
-# Date: 2013-04-26 
+# Date: 2013-04-26
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
@@ -16,7 +16,7 @@ class Site(GenericSite):
 
     def _get_case_names(self):
         # This could be a very simple xpath, but alas, they have missing fields
-        # for some cases. As a result, this xpath checks that the fields are 
+        # for some cases. As a result, this xpath checks that the fields are
         # valid (following-sibling), and only grabs those cases.
         case_names = []
         for e in self.html.xpath('//tr[following-sibling::tr[1]/td[2][text()]]/td/b/a'):

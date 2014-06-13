@@ -15,12 +15,12 @@ from datetime import datetime
 from lxml import html
 
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__

@@ -2,13 +2,13 @@
 CourtID: mich
 Court Short Name: Mich."""
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 import time
 from datetime import date
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4'

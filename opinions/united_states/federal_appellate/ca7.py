@@ -2,13 +2,13 @@
 # CourtID: ca7
 # Court Short Name: 7th Cir.
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         # The string 'week' can be changed to 'today' to get just today's

@@ -9,7 +9,7 @@ Court Short Name: Ariz. Ct. App.
 import time
 from datetime import date
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import ariz
 from juriscraper.lib.string_utils import titlecase
 

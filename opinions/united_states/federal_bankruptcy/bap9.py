@@ -2,12 +2,12 @@
 CourtID: bap9
 Court Short Name: 9th Cir. BAP"""
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from juriscraper.lib.string_utils import titlecase
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.ca9.uscourts.gov/bap/'

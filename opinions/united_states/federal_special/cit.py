@@ -3,13 +3,13 @@
 # Court Short Name: Ct. Int'l Trade
 # Neutral Citation Format: Ct. Int'l Trade No. 12-1
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from lxml import html
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.cit.uscourts.gov/SlipOpinions/index.html'

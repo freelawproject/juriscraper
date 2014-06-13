@@ -12,11 +12,11 @@ from datetime import datetime
 from lxml import html
 import re
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
@@ -54,7 +54,7 @@ class Site(GenericSite):
             for d in date_string:
                 date_object = date.fromtimestamp(
                       time.mktime(time.strptime(d, '%m/%d/%Y')))
-                # Determine the number of urls in each row and pad the date 
+                # Determine the number of urls in each row and pad the date
                 # list sufficiently
                 count = len(row.xpath(urlpath))
                 dates.extend([date_object] * count)
@@ -70,7 +70,7 @@ class Site(GenericSite):
         urlpath = './td[3]/a/@href'
         for row in self.html.xpath(rowpath):
             docket_number = row.xpath(dktpath)
-            # Determine the number of urls in each row and pad the docket 
+            # Determine the number of urls in each row and pad the docket
             # numbers list sufficiently
             count = len(row.xpath(urlpath))
             docket_numbers.extend(docket_number * count)
@@ -123,7 +123,7 @@ class Site(GenericSite):
                 # Criminal or Civil cases, and their docket_number field will
                 # reflect this, but they do classify these separately under
                 # these 'mj' and 'mc' codes and the first page of these
-                #  documents will often refer to them as 'Magistrate Case 
+                #  documents will often refer to them as 'Magistrate Case
                 # ####-####' so, we will too.
                 elif nature_code == 'mj' or 'mc':
                     nos.append("Magistrate Case")

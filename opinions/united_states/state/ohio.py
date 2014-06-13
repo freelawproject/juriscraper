@@ -3,11 +3,11 @@ CourtID: ohio
 Court Short Name: Ohio
 """
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 
-class Site(GenericSite):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         # Changing the page # in the url will get additional pages
@@ -75,7 +75,7 @@ class Site(GenericSite):
         return ['Published'] * len(self.case_names)
 
 """
-# This doesn't work right because even though it pads the list of judges to 
+# This doesn't work right because even though it pads the list of judges to
 # be the same length as the dates, it doesn't insert 'per curiam' in the
 # right places. It just pads the end of the list. Perhaps someone can fix.
 import itertools
