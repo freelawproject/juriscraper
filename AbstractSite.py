@@ -5,6 +5,7 @@ import re
 import requests
 
 from lxml import html
+from lib.string_utils import harmonize, clean_string
 from tests import MockRequest
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
@@ -52,6 +53,9 @@ class AbstractSite(object):
         self.court_id = None
         self.url = None
         self.parameters = None
+        self._opt_attrs = []
+        self._req_attrs = []
+        self._all_attrs = []
 
     def __str__(self):
         out = []
@@ -60,6 +64,15 @@ class AbstractSite(object):
         return '\n'.join(out)
 
     def parse(self):
+        if self.status != 200:
+            # Run the downloader if it hasn't been run already
+            self.html = self._download()
+
+        # Set the attribute to the return value from _get_foo()
+        # e.g., this does self.case_names = _get_case_names()
+        for attr in self._all_attrs:
+            self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
+
         self._clean_attributes()
         self._post_parse()
         self._check_sanity()
@@ -99,19 +112,24 @@ class AbstractSite(object):
         return text
 
     def _clean_attributes(self):
-        """Clean up any attributes of the Site object, removing any issues that they may have.
-
-        All inheriting objects should override this method.
-
-        Has no return value.
-        """
-        pass
+        """Iterate over attribute values and clean them"""
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                cleaned_item = []
+                for sub_item in item:
+                    if isinstance(sub_item, str):
+                        sub_item = clean_string(sub_item)
+                    if attr == 'case_names':
+                        sub_item = harmonize(sub_item)
+                    cleaned_item.append(sub_item)
+            self.__setattr__(attr, item)
 
     def _post_parse(self):
         """This provides an hook for subclasses to do custom work on the data after the parsing is complete."""
         pass
 
-    def _check_sanity(self, all_attributes=[], required_attributes=[]):
+    def _check_sanity(self):
         """Check that the objects attributes make sense:
             1. Do all the attributes have the same length?
             2. Do we have any content at all?
@@ -129,7 +147,7 @@ class AbstractSite(object):
         warnings, as appropriate.
         """
         lengths = {}
-        for attr in all_attributes:
+        for attr in self._all_attrs:
             if self.__getattribute__(attr) is not None:
                 lengths[attr] = len(self.__getattribute__(attr))
         values = lengths.values()
@@ -140,7 +158,7 @@ class AbstractSite(object):
         if len(self.case_names) == 0:
             logger.warning('%s: Returned with zero items.' % self.court_id)
         else:
-            for field in required_attributes:
+            for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
 
@@ -152,13 +170,21 @@ class AbstractSite(object):
                                                           len(self.case_names)))
 
     def _date_sort(self):
-        """Sorts the data by date.
-
-        All inheriting objects should override this method.
-
-        Provides no return value.
+        """ This function sorts the object by date. It's a good candidate for
+        re-coding due to violating DRY and because it works by checking for
+        lists, limiting the kinds of attributes we can add to the object.
         """
-        pass
+        if len(self.case_names) > 0:
+            obj_list_attrs = [item for item in self._all_attrs
+                              if isinstance(item, list)]
+            zipped = zip(*obj_list_attrs)
+            zipped.sort(reverse=True)
+            i = 0
+            obj_list_attrs = zip(*zipped)
+            for item in self._all_attrs:
+                if isinstance(item, list):
+                    item[:] = obj_list_attrs[i][:]
+                    i += 1
 
     def _make_hash(self):
         """Make a unique ID. ETag and Last-Modified from courts cannot be trusted

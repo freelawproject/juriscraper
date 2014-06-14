@@ -53,13 +53,7 @@ def scrape_court(court, binaries=False):
 
         # Normally, you'd do your save routines here...
         v_print(1, 'Adding new document found at: %s' % download_url)
-        attributes = ['adversary_numbers', 'case_dates', 'case_names',
-                      'causes', 'dispositions', 'docket_attachment_numbers',
-                      'docket_document_numbers', 'docket_numbers',
-                      'download_urls', 'judges', 'lower_courts',
-                      'lower_court_judges', 'nature_of_suit',
-                      'neutral_citations', 'precedential_statuses',
-                      'summaries', 'west_citations', 'west_state_citations']
+        attributes = site._all_attrs
         for attr in attributes:
             if getattr(site, attr) is not None:
                 value = getattr(site, attr)[i]
