@@ -59,7 +59,7 @@ class ScraperExampleTest(unittest.TestCase):
         scraper.
         """
         print "Testing scrapers against example files:"
-        module_strings = build_module_list('juriscraper.opinions')
+        module_strings = build_module_list('juriscraper')
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),

@@ -31,7 +31,7 @@ class Site(OralArgumentSite):
 
             On a good site, most of your methods will follow this pattern.
 
-            Note that relative URLs are made absolute by the GenericSite
+            Note that relative URLs are made absolute by the AbstractSite
             object's cleanup routines, so doing so here is not needed.
         """
         path = '//path/to/text/text()'

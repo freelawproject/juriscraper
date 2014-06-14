@@ -34,7 +34,7 @@ class Site(OpinionSite):
         return [t for t in self.html.xpath("//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/div[./@class[contains(.,'number')]]/text()")]
 
     # Here we are using the 'judges' field to list the Authoring Judge.
-    # It would be better for GenericSite to have an 'author' field and to put
+    # It would be better for AbstractSite to have an 'author' field and to put
     # these there.
     def _get_judges(self):
         judges = []

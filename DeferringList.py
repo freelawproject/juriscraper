@@ -1,4 +1,4 @@
-from juriscraper.GenericSite import logger
+from juriscraper.AbstractSite import logger
 
 
 class DeferringList(object):

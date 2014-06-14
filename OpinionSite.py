@@ -1,5 +1,4 @@
 from AbstractSite import AbstractSite
-from juriscraper.lib.string_utils import clean_string, harmonize
 
 
 class OpinionSite(AbstractSite):
@@ -11,13 +10,14 @@ class OpinionSite(AbstractSite):
     def __init__(self):
         super(OpinionSite, self).__init__()
 
+        # Order of attributes is important as it affects the order of parsing. Some methods
+        # rely on others having already been run.
         self._opt_attrs = ['adversary_numbers', 'causes', 'dispositions', 'divisions',
                            'docket_attachment_numbers', 'docket_document_numbers',
                            'docket_numbers', 'judges', 'lower_courts', 'lower_court_judges',
                            'lower_court_numbers', 'nature_of_suit', 'neutral_citations',
                            'summaries', 'west_citations', 'west_state_citations']
-        self._req_attrs = ['case_dates', 'case_names', 'precedential_statuses',
-                           'download_urls']
+        self._req_attrs = ['case_dates', 'case_names', 'download_urls', 'precedential_statuses']
         # For date sorting to work, case_dates must be the first item in _all_attrs.
         self._all_attrs = self._req_attrs + self._opt_attrs
 

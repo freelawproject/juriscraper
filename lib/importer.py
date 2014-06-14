@@ -31,8 +31,9 @@ def build_module_list(court_id):
             # juriscraper.opinions.united_states.federal_appellate.ca1,
             # therefore, we add it to our list!
             module_strings.append(court_id)
-        except ImportError:
+        except ImportError, e:
             # Something has gone wrong with the import
+            print "Import error: %s" % e
             return []
 
     find_all_attr_or_punt(court_id)
