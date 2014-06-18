@@ -123,7 +123,7 @@ class AbstractSite(object):
                     if attr == 'case_names':
                         sub_item = harmonize(sub_item)
                     cleaned_item.append(sub_item)
-            self.__setattr__(attr, item)
+            self.__setattr__(attr, cleaned_item)
 
     def _post_parse(self):
         """This provides an hook for subclasses to do custom work on the data after the parsing is complete."""
