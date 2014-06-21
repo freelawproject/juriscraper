@@ -9,7 +9,7 @@ from datetime import date
 from datetime import datetime
 from lxml import html
 
-from juriscraper.GenericSite import GenericSite
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.opinions.united_states.state import me
 
 class Site(me.Site):
