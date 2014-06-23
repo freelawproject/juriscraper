@@ -5,7 +5,6 @@ Author: Brian W. Carver
 Date created: 2014-06-21
 """
 
-from datetime import date
 from datetime import datetime
 from lxml import html
 
