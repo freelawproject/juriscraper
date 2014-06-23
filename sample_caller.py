@@ -59,7 +59,7 @@ def scrape_court(court, binaries=False):
                 value = getattr(site, attr)[i]
                 if type(value) == unicode:
                     value = trunc(value, 200, elipsize=True)
-                    v_print(1, '    %s: %s' % (attr, value.encode('utf-8')))
+                    v_print(1, '    %s: "%s"' % (attr, value.encode('utf-8')))
                 else:
                     # Dates and such...
                     v_print(1, '    %s: %s' % (attr, value))

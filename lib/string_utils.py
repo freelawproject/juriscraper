@@ -283,7 +283,6 @@ def clean_string(string):
     # get rid of '\t\n\x0b\x0c\r ', and replace them with a single space.
     string = ' '.join(string.split())
 
-    # return something vaguely sane
     return string
 
 

@@ -118,7 +118,7 @@ class AbstractSite(object):
             if item is not None:
                 cleaned_item = []
                 for sub_item in item:
-                    if isinstance(sub_item, str):
+                    if isinstance(sub_item, basestring):
                         sub_item = clean_string(sub_item)
                     if attr == 'case_names':
                         sub_item = harmonize(sub_item)
