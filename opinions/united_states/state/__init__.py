@@ -29,7 +29,7 @@ __all__ = [
     'illappct',
     'ind',
     'md',
-    'md_ct_spec_app',
+    'mdctspecapp',
     'me',
     'miss_beginningofyear',
     'miss',
