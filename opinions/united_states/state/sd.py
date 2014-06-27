@@ -3,7 +3,6 @@
 # Revised: 2013-08-06 by Brian Carver
 
 import re
-from datetime import date
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite

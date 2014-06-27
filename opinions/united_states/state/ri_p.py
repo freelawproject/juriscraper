@@ -6,7 +6,6 @@ Date created: 2013-08-10
 """
 
 import re
-from datetime import date
 from datetime import datetime
 from lxml import html
 

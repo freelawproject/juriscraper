@@ -7,6 +7,7 @@ from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 
+
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()

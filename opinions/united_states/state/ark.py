@@ -2,7 +2,6 @@
 # Reviewer: Michael Lissner
 # Date created: 2013-08-03
 
-from datetime import date
 from datetime import datetime
 from lxml import html
 

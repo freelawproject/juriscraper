@@ -16,7 +16,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % 2013 #date.today().year
+        self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % date.today().year
 
     def _get_download_urls(self):
         urls = []
