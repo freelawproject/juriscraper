@@ -1,5 +1,5 @@
 """
-Scraper for Maryland
+Scraper for Maryland Court of Appeals
 CourtID: md
 Court Short Name: MD
 Author: Andrei Chelaru
