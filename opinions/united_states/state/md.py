@@ -50,10 +50,6 @@ class Site(OpinionSite):
         path = '//table//tr/td[1]//text()'
         return list(self.html.xpath(path))
 
-    def _get_neutral_citations(self):
+    def _get_west_state_citations(self):
         path = '//table//tr/td[2]/font/text()'
-        neutral_cites = []
-        for cite in self.html.xpath(path):
-            cite = re.sub('\.', '', cite)
-            neutral_cites.append(cite.upper())
-        return neutral_cites
+        return list(self.html.xpath(path))

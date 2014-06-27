@@ -30,8 +30,16 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//table//tr/td[3]/text()'
-        return [datetime.strptime(date_string, '%B %d, %Y').date()
-                for date_string in self.html.xpath(path)]
+        formats = ['%B %d, %Y', '%B %d,%Y']
+        dates = []
+        for s in self.html.xpath(path):
+            for format in formats:
+                try:
+                    d = datetime.strptime(s, format).date()
+                except ValueError:
+                    continue
+                dates.append(d)
+        return dates
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
