@@ -58,8 +58,10 @@ class ScraperExampleTest(unittest.TestCase):
         """Finds all the $module_example* files and tests them with the sample
         scraper.
         """
-        print "Testing scrapers against example files:"
+
         module_strings = build_module_list('juriscraper')
+        count = len([s for s in module_strings if 'backscraper' not in s])
+        print "Testing {count} scrapers against their example files:".format(count=count)
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
