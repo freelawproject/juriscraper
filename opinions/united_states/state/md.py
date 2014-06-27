@@ -8,6 +8,7 @@ Date created: 06/27/2014
 
 
 from juriscraper.OpinionSite import OpinionSite
+import re
 
 import time
 from datetime import date
@@ -16,8 +17,7 @@ from datetime import date
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.mdcourts.gov/cgi-bin/indexlist.pl?court=coa' \
-                    '&year={current_year}&order=bydate&submit=Submit'.format(current_year=date.today().year)
+        self.url = 'http://www.mdcourts.gov/cgi-bin/indexlist.pl?court=coa&year={current_year}&order=bydate&submit=Submit'.format(current_year=date.today().year)
         self.court_id = self.__module__
 
     def _get_download_urls(self):
@@ -49,7 +49,11 @@ class Site(OpinionSite):
     def _get_docket_numbers(self):
         path = '//table//tr/td[1]//text()'
         return list(self.html.xpath(path))
-    
+
     def _get_neutral_citations(self):
         path = '//table//tr/td[2]/font/text()'
-        return list(self.html.xpath(path))
+        neutral_cites = []
+        for cite in self.html.xpath(path):
+            cite = re.sub('\.', '', cite)
+            neutral_cites.append(cite.upper())
+        return neutral_cites
