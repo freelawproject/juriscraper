@@ -1,13 +1,10 @@
 # Author: Michael Lissner
 # Date created: 2013-07-09
 
-# import re
-from datetime import date
 from datetime import datetime
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-# from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
@@ -34,12 +31,6 @@ class Site(OpinionSite):
                            'query': ' xfirstword',
                            'superseded': '',
                            'title': ''}
-
-    '''
-      Required fields - InsanityExceptions will be thrown if omitted.
-
-      Remove this comment before submission.
-    '''
 
     def _get_download_urls(self):
         """ This is an example of a basic piece of meta data accessible with a

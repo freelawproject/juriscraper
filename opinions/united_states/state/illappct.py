@@ -1,7 +1,6 @@
 # Author: Krist Jin
 # Date created:2013-08-18
 
-from datetime import date
 from datetime import datetime
 from lxml import html
 

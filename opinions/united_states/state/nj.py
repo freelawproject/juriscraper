@@ -6,7 +6,6 @@ from lxml import html
 
 import time
 from datetime import date
-from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase

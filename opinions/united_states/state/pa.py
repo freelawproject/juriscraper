@@ -3,9 +3,6 @@
 # Court Short Name: 7th Cir.
 
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
-from lxml import html
 
 class Site(OpinionSite):
     def __init__(self):

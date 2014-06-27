@@ -7,7 +7,6 @@ Reviewer: Mike Lissner
 """
 
 import re
-from datetime import date
 from datetime import datetime
 from lxml import html
 

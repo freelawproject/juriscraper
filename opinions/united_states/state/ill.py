@@ -4,7 +4,6 @@
 
 import requests
 
-from datetime import date
 from datetime import datetime
 from lxml import html
 
