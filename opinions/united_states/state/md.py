@@ -16,7 +16,7 @@ from datetime import date
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.mdcourts.gov/cgi-bin/indexlist.pl?court=both' \
+        self.url = 'http://www.mdcourts.gov/cgi-bin/indexlist.pl?court=coa' \
                     '&year={current_year}&order=bydate&submit=Submit'.format(current_year=date.today().year)
         self.court_id = self.__module__
 
@@ -48,4 +48,8 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = '//table//tr/td[1]//text()'
+        return list(self.html.xpath(path))
+    
+    def _get_neutral_citations(self):
+        path = '//table//tr/td[2]/font/text()'
         return list(self.html.xpath(path))
