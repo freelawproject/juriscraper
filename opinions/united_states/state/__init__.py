@@ -46,6 +46,7 @@ __all__ = [
     'ndctapp',
     'nev_p',
     'nev_u',
+    'nh',
     'nm_slip',
     'nm_p',
     'nm_u',
