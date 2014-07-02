@@ -3,6 +3,9 @@ CourtID: me
 Court Short Name: Me.
 Author: Brian W. Carver
 Date created: June 20, 2014
+
+2014-06-25 (est): Added code for additional date formats.
+2014-07-02: Was receiving InsanityException and tweaked date code to get some missing dates.
 """
 
 from datetime import datetime
@@ -35,7 +38,7 @@ class Site(OpinionSite):
         for s in self.html.xpath(path):
             for format in formats:
                 try:
-                    d = datetime.strptime(s, format).date()
+                    d = datetime.strptime(s.strip(), format).date()
                 except ValueError:
                     continue
                 dates.append(d)
