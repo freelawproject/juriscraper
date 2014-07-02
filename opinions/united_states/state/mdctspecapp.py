@@ -1,6 +1,6 @@
 """
 Scraper for Maryland Court of Special Appeals
-CourtID: md
+CourtID: mdctspecapp
 Court Short Name: MD
 Author: Andrei Chelaru
 Date created: 06/27/2014
