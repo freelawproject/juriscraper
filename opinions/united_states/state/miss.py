@@ -13,6 +13,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://courts.ms.gov/scripts/websiteX_cgi.exe/GetOpinion?Year=%s&Court=Supreme+Court&Submit=Submit' % date.today().year
+        self.back_scrape_iterable = range(1990, 2012)
 
     def _get_case_names(self):
         # This could be a very simple xpath, but alas, they have missing fields
@@ -34,7 +35,6 @@ class Site(OpinionSite):
         for date_string in self.html.xpath(path):
             dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
         return dates
-
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)

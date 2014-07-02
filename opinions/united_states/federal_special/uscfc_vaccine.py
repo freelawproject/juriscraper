@@ -10,6 +10,7 @@ class Site(uscfc.Site):
         super(Site, self).__init__()
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7'
         self.court_id = self.__module__
+        self.back_scrape_iterable = [1]
 
     def _download_backwards(self, page):
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/7?page=%s' % page

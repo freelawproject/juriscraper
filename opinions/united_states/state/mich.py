@@ -13,6 +13,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4'
                    '&Status_Advanced=sct&FirstDate_Advanced=7%2f1%2f1996&LastDate_Advanced=3%2f1%2f2013')
+        self.back_scrape_iterable = range(0, 868)
         self.court_id = self.__module__
 
     def _get_case_dates(self):

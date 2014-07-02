@@ -48,7 +48,7 @@ class AbstractSite(object):
         self.method = 'GET'
         self.use_sessions = False
         self.status = None
-        self.back_scrape_iterator = None
+        self.back_scrape_iterable = None
 
         # Upstream metadata
         self.court_id = None

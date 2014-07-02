@@ -9,6 +9,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.cafc.uscourts.gov/opinions-orders/7/all'
+        self.back_scrape_iterable = range(0, 185)
         self.court_id = self.__module__
 
     def _get_case_names(self):

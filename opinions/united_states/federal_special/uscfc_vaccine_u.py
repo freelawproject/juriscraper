@@ -3,8 +3,6 @@ CourtID: uscfc
 Court Short Name: Fed. Cl."""
 
 import uscfc
-import datetime
-from datetime import date
 
 
 class Site(uscfc.Site):
@@ -12,6 +10,7 @@ class Site(uscfc.Site):
         super(Site, self).__init__()
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/11'
         self.court_id = self.__module__
+        self.back_scrape_iterable = range(1, 10)
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)

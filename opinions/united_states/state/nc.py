@@ -17,6 +17,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % date.today().year
+        self.back_scrape_iterable = [2013]
 
     def _get_download_urls(self):
         urls = []

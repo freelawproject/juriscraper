@@ -12,8 +12,9 @@ from juriscraper.OpinionSite import OpinionSite
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.court_id = self.__module__
         self.url = 'http://www.courts.state.hi.us/opinions_and_orders/opinions/%s/index.html' % date.today().year
+        self.court_id = self.__module__
+        self.back_scrape_iterable = range(2010, 2013)
 
     def _get_download_urls(self):
         path = '//table[@class = "opinionsdata"]/tr/td[3][../td/text() = "ICA"][not(contains(../td[3]/a/text(), "Bar"))]/a[1]/@href'

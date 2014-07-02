@@ -14,6 +14,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions'
         self.court_id = self.__module__
+        self.back_scrape_iterable = range(0, 131)
 
     def _get_download_urls(self):
         return [t for t in self.html.xpath("//table//tr[not(descendant::a[contains(@href, 'pendingcase')]) and descendant::a/text()]/td/a/@href")]

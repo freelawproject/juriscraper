@@ -14,6 +14,7 @@ class Site(OpinionSite):
         today = date.today()
         self.crawl_date = today
         self.url = 'http://supremecourt.ne.gov/sc/opinions/%s' % today.strftime('%Y-%m-%d')
+        self.back_scrape_iterable = range(0, 11)
 
     def _get_download_urls(self):
         path = '//tr[contains(concat(" ", @class, " "), " sc-opinion ")]//a/@href'

@@ -13,6 +13,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         today = date.today()
         self.url = 'http://www.nmcompcomm.us/nmcases/NMARYear.aspx?db=scr&y1=%s&y2=%s' % (today.year, today.year)
+        self.back_scrape_iterable = range(2009, 2013)
 
     def _get_download_urls(self):
         path = '//table[@id="GridView1"]/tr/td[2]//a/@href'
