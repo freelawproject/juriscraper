@@ -22,13 +22,23 @@ class Site(OpinionSite):
         path = ("id('content')/div//ul//li//a[position()=1]/text()")
         l_case_names = []
         for text in self.html.xpath(path):
-            match_case_name = re.sub('\d{4}-\d+,', '', text)
-            l_case_names.append(match_case_name)
+            l_match_docket_nr = re.findall('\d{4}-\d+', text)
+            match_case_name = re.sub('and \d{4}-\d+,', '', text)
+            match_case_name = re.sub('\d{4}-\d+,', '', match_case_name)
+            number_docket_nr = len(l_match_docket_nr)
+            l_case_names.extend([match_case_name] * number_docket_nr)
         return l_case_names
 
     def _get_download_urls(self):
-        path = '''id('content')/div//ul//li//a[position()=1]/@href'''
-        return list(self.html.xpath(path))
+        path = '''id('content')/div//ul//li//a[position()=1]'''
+        l_download_url = []
+        for element in self.html.xpath(path):
+            url = element.xpath('./@href')[0]
+            text = element.xpath('./text()')[0]
+            l_match_docket_nr = re.findall('\d{4}-\d+', text)
+            number_docket_nr = len(l_match_docket_nr)
+            l_download_url.extend([url] * number_docket_nr)
+        return l_download_url
 
     def _get_case_dates(self):
         path = '''id('content')/div//p[position() > 2]'''
@@ -39,8 +49,11 @@ class Site(OpinionSite):
                 s_date = str(p_element.xpath('./strong/text()')[0])
                 obj_date = date.fromtimestamp(
                     time.mktime(time.strptime(re.sub(' ', '', s_date), '%B%d,%Y')))
-                nr_opinions = len(p_element.xpath(path_2))
-                l_dates.extend([obj_date] * nr_opinions)
+                for li_element in p_element.xpath(path_2):
+                    text = li_element.xpath('.//a/text()')[0]
+                    l_match_docket_nr = re.findall('\d{4}-\d+', text)
+                    number_docket_nr = len(l_match_docket_nr)
+                    l_dates.extend([obj_date] * number_docket_nr)
             except ValueError:
                 pass
             except IndexError:
@@ -54,6 +67,7 @@ class Site(OpinionSite):
         path = '''id('content')/div//ul//li//a[position()=1]/text()'''
         l_docket_nr = []
         for text in self.html.xpath(path):
-            match_docket_nr = re.search('\d{4}-\d+', text)
-            l_docket_nr.append(match_docket_nr.group())
+            l_match_docket_nr = re.findall('\d{4}-\d+', text)
+            for docket_nr in l_match_docket_nr:
+                l_docket_nr.append(docket_nr)
         return l_docket_nr
