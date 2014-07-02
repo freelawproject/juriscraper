@@ -1,3 +1,6 @@
+from requests import HTTPError
+
+
 def build_module_list(court_id):
     """Takes a string and builds up a list of modules to import.
 
@@ -39,3 +42,13 @@ def build_module_list(court_id):
     find_all_attr_or_punt(court_id)
 
     return module_strings
+
+
+def site_yielder(iterable, mod):
+    for i in iterable:
+        try:
+            site = mod.Site()
+            site._download_backwards(i)
+            yield site
+        except HTTPError, e:
+            continue

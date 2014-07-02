@@ -1,9 +1,11 @@
 import signal
 import sys
 import traceback
-import urllib2
 from optparse import OptionParser
-from lib.importer import build_module_list
+import urllib2
+
+from lib.importer import build_module_list, site_yielder
+
 
 # for use in catching the SIGINT (Ctrl+4)
 from lib.string_utils import trunc
@@ -20,7 +22,7 @@ def signal_handler(signal, frame):
     die_now = True
 
 
-def scrape_court(court, binaries=False):
+def scrape_court(site, binaries=False):
     """Calls the requested court(s), gets its content, then throws it away.
 
     Note that this is a very basic caller lacking important functionality, such
@@ -32,8 +34,6 @@ def scrape_court(court, binaries=False):
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
     """
-    site = court.Site().parse()
-
     for i in range(0, len(site.case_names)):
         # Percent encode URLs (this is a Python wart)
         download_url = urllib2.quote(site.download_urls[i], safe="%/:=&?~#+!$,;'@()*[]")
@@ -96,7 +96,8 @@ def main():
                                            'mode, in which all courts requested '
                                            'will be scraped in turn, non-stop.'))
     parser.add_option('-b', '--download_binaries', action='store_true',
-                      dest='binaries', default=False,
+                      dest='binaries',
+                      default=False,
                       help=('Use this flag if you wish to download the pdf, '
                             'wpd, and doc files.'))
     parser.add_option('-v',
@@ -104,12 +105,18 @@ def main():
                       action='count',
                       default=1,
                       help='Increase output verbosity (e.g., -vv is more than -v).')
+    parser.add_option('--backscrape',
+                      dest='backscrape',
+                      action='store_true',
+                      default=False,
+                      help='Download the historical corpus using the _download_backwards method.')
 
     (options, args) = parser.parse_args()
 
     daemon_mode = options.daemonmode
     binaries = options.binaries
     court_id = options.court_id
+    backscrape = options.backscrape
 
     # Set up the print function
     print "Verbosity is set to: %s" % options.verbosity
@@ -148,7 +155,14 @@ def main():
                              locals(),
                              [module])
             try:
-                scrape_court(mod, binaries)
+                if backscrape:
+                    for site in site_yielder(mod.Site().back_scrape_iterable, mod):
+                        site.parse()
+                        scrape_court(site, binaries)
+                else:
+                    site = mod.Site()
+                    site.parse()
+                    scrape_court(site, binaries)
             except Exception:
                 v_print(3, '*************!! CRAWLER DOWN !!****************')
                 v_print(3, '*****scrape_court method failed on mod: %s*****' % module_strings[i])
