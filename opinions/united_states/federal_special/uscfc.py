@@ -20,6 +20,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/8'
+        self.back_scrape_iterator = range(1, 4)
         self.court_id = self.__module__
 
     def _get_case_dates(self):
