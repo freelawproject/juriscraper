@@ -32,7 +32,7 @@ __all__ = [
     'mdctspecapp',
     'me',
     'minn',
-    'minnctapp',
+    'minnctapp_p',
     'minnctapp_u',
     'miss_beginningofyear',
     'miss',

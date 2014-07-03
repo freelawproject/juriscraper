@@ -9,7 +9,7 @@ import time
 import unittest
 
 from juriscraper.lib.importer import build_module_list
-from juriscraper.lib.parse_dates import parse_dates
+from juriscraper.lib.parse_dates import parse_dates, quarter, is_first_month_in_quarter
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
@@ -101,6 +101,24 @@ class StringUtilTest(unittest.TestCase):
 
     def tearDown(self):
         pass
+
+    def test_quarter(self):
+        answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4, 11: 4, 12: 4}
+        for month, q in answers.iteritems():
+            self.assertEqual(quarter(month), q)
+
+    def test_is_first_month_in_quarter(self):
+        answers = {
+            1: True,
+            2: False,
+            3: False,
+            4: True,
+            5: False,
+            6: False,
+            7: True,
+        }
+        for month, is_first in answers.iteritems():
+            self.assertEqual(is_first_month_in_quarter(month), is_first)
 
     def test_harmonize_and_clean_string_tests(self):
         """Tests various inputs for the clean_string and harmonize functions"""

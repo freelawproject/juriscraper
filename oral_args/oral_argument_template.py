@@ -2,6 +2,7 @@
 CourtID: [unique abbreviation to be used by software/filesystem]
 Court Short Name: [standard abbreviation used in citations]
 Author:
+Reviewer:
 Date created:
 """
 
