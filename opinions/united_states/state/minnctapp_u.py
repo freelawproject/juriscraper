@@ -1,26 +1,26 @@
-#Scraper for Minnesota Court of Appeals Unpublished Opinions
-#CourtID: minnctspecapp_u
+# Scraper for Minnesota Court of Appeals Unpublished Opinions
+#CourtID: minnctapp_u
 #Court Short Name: MN
 #Author: Andrei Chelaru
 #Reviewer:
 #Date: 2014-07-03
 
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.opinions.united_states.state import minn
 import time
 import re
-from datetime import date
+from datetime import date, timedelta
 
 
-class Site(OpinionSite):
+class Site(minn.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        # self.url = "http://mn.gov/lawlib/archive/cau{short_year}q{quarter}.html".format(
-        #     short_year=date.today().strftime("%y"),
-        #     quarter=(date.today().month - 1) // 3 + 1
-        # )
-        self.url = "http://mn.gov/lawlib/archive/cau14q2.html"
+        d = date.today() - timedelta(days=5)
+        self.url = "http://mn.gov/lawlib/archive/cau{short_year}q{quarter}.html".format(
+            short_year=d.strftime("%y"),
+            quarter=(d.month - 1) // 3 + 1
+        )
 
     def _get_case_names(self):
         path = "//li[./a]/text()[1]"
@@ -38,7 +38,7 @@ class Site(OpinionSite):
             if li_node.xpath('./h4'):
                 body_node.insert(body_node.index(li_node) + 1, li_node.xpath('./h4')[0])
 
-        path = '''//body//h4/text()'''
+        path = "//body//h4/text()"
         dates = self.html.xpath(path)
         last_date_index = len(dates) - 1
         case_dates = []
@@ -46,7 +46,7 @@ class Site(OpinionSite):
             if index < last_date_index:
                 path_2 = "//h4[{c}]/following-sibling::li[./a][count(.|//h4[{n}]/preceding-sibling::li[./a])" \
                          "=count(//h4[{n}]/preceding-sibling::li[./a])]".format(c=index + 1,
-                                                                                   n=index + 2)
+                                                                                n=index + 2)
             else:
                 path_2 = "//h4[{c}]/following-sibling::li[./a]".format(c=index + 1)
             d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', str(date_element)), '%B%d,%Y')))
@@ -57,5 +57,5 @@ class Site(OpinionSite):
         return ['Unpublished'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//li/a[1]/text()'''
+        path = "//li/a[1]/text()"
         return list(self.html.xpath(path))
