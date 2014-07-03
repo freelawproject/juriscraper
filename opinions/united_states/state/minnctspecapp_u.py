@@ -16,7 +16,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        # self.url = "http://mn.gov/lawlib/archive/cap{short_year}q{quarter}.html".format(
+        # self.url = "http://mn.gov/lawlib/archive/cau{short_year}q{quarter}.html".format(
         #     short_year=date.today().strftime("%y"),
         #     quarter=(date.today().month - 1) // 3 + 1
         # )
