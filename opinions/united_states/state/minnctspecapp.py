@@ -10,7 +10,6 @@ from juriscraper.OpinionSite import OpinionSite
 import time
 import re
 from datetime import date
-from lxml import etree
 
 
 class Site(OpinionSite):
