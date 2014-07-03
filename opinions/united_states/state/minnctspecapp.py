@@ -1,0 +1,64 @@
+#Scraper for Minnesota Court of Appeals Published Opinions
+#CourtID: minnctspecapp
+#Court Short Name: MN
+#Author: Andrei Chelaru
+#Reviewer:
+#Date: 2014-07-03
+
+
+from juriscraper.OpinionSite import OpinionSite
+import time
+import re
+from datetime import date
+from lxml import etree
+
+
+class Site(OpinionSite):
+    def __init__(self):
+        super(Site, self).__init__()
+        self.court_id = self.__module__
+        # self.url = "http://mn.gov/lawlib/archive/cap{short_year}q{quarter}.html".format(
+        #     short_year=date.today().strftime("%y"),
+        #     quarter=(date.today().month - 1) // 3 + 1
+        # )
+        self.url = "http://mn.gov/lawlib/archive/cap14q2.html"
+
+    def _get_case_names(self):
+        path = "//li/text()[not(contains(., 'NO PUBLISHED OPINIONS FILED'))]"
+        return list(self.html.xpath(path))
+
+    def _get_download_urls(self):
+        path = "//li//@href"
+        return list(self.html.xpath(path))
+
+    def _get_case_dates(self):
+        # remove <h4> child element of <li> elements and set them as their next sibling
+        # I looked for a hook for modifying self.html before the attributes are parsed but I couldn't find one
+        body_node = self.html.xpath("//body")[0]
+        for li_node in body_node.xpath('.//li'):
+            if li_node.xpath('./h4'):
+                body_node.insert(body_node.index(li_node) + 1, li_node.xpath('./h4')[0])
+
+        path = '''//body//h4/text()'''
+        dates = self.html.xpath(path)
+        last_date_index = len(dates) - 1
+        case_dates = []
+        for index, date_element in enumerate(dates):
+            if index < last_date_index:
+                path_2 = "//h4[{c}]/following-sibling::li/text()[count(.|//h4[{n}]/preceding-sibling::li/text())" \
+                         "=count(//h4[{n}]/preceding-sibling::li/text()) and " \
+                         "not(contains(., 'NO PUBLISHED OPINIONS FILED'))]".format(c=index + 1,
+                                                                                   n=index + 2)
+            else:
+                path_2 = "//h4[{c}]/following-sibling::li/text()" \
+                         "[not(contains(., 'NO PUBLISHED OPINIONS FILED'))]".format(c=index + 1)
+            d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', str(date_element)), '%B%d,%Y')))
+            case_dates.extend([d] * len(self.html.xpath(path_2)))
+        return case_dates
+
+    def _get_precedential_statuses(self):
+        return ['Published'] * len(self.case_names)
+
+    def _get_docket_numbers(self):
+        path = '''//li/a/text()'''
+        return list(self.html.xpath(path))
