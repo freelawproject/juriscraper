@@ -31,6 +31,8 @@ __all__ = [
     'md',
     'mdctspecapp',
     'me',
+    'minn',
+    'minnctspecapp',
     'miss_beginningofyear',
     'miss',
     'mich',
