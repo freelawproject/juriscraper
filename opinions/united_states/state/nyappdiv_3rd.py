@@ -2,57 +2,34 @@
 #CourtID: nyappdiv_3rd
 #Court Short Name: NY
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-04
-import calendar
-
-from lxml import html
-from requests.exceptions import HTTPError
 
 from juriscraper.opinions.united_states.state import ny
 import re
-import time
 from datetime import date
+from dateutil.relativedelta import relativedelta, TH
 
 
 class Site(ny.Site):
     def __init__(self):
         super(Site, self).__init__()
-        d = date.today()
+        self.crawl_date = date.today() + relativedelta(weekday=TH(-1))  # Last thursday, this court publishes weekly
         self.url = 'http://decisions.courts.state.ny.us/ad3/CalendarPages/nc{month_nr}{day_nr}{year}.htm'.format(
-            month_nr=d.strftime("%m"),
-            day_nr=d.strftime("%d"),
-            year=d.year
+            month_nr=self.crawl_date.strftime("%m"),
+            day_nr=self.crawl_date.strftime("%d"),
+            year=self.crawl_date.year
         )
         # self.url = 'http://decisions.courts.state.ny.us/ad3/CalendarPages/nc07032014.htm'
         self.court_id = self.__module__
-
-    def _download(self, request_dict={}):
-        """Overrides the download function so that we can catch 404 errors silently.
-        This is necessary because these web pages appear only on a Thursday.
-        """
-        try:
-            return super(Site, self)._download()
-        except HTTPError, e:
-            d = date.today()
-            week_day = calendar.weekday(d.year, d.month, d.day)
-            got_404 = e.response.status_code == 404
-            if got_404 and week_day != 3:
-                # Do nothing; abort the crawler
-                self.status = 200
-                # We need the body tag here so that xpath works elsewhere.
-                html_tree = html.fromstring('<html><body></body></html>')
-                return html_tree
-            else:
-                raise e
 
     def _get_case_names(self):
         path = '''//td[2]//a[contains(./@href, 'Decisions')]/text()'''
         case_names = []
         for text in self.html.xpath(path):
             # Uses a negative look ahead to make sure to get the last occurrence of a docket number.
-            text = re.sub('[\t\n]', '', text)
-            match_case_name = re.search('(\d{6}(?!.*\d{6})|.{1}-\d{2}-\d{2})\s*(.*)', text)
+            text = ''.join(text.split())
+            match_case_name = re.search('(\d{6}(?!.*\d{6})|.-\d{2}-\d{2})\s*(.*)', text)
             case_names.extend([match_case_name.group(2)])
         return case_names
 
@@ -61,14 +38,8 @@ class Site(ny.Site):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = '//title/text()'
-        case_date = re.search('((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d|\d{2}),\s\d{4})',
-                              self.html.xpath(path)[0]).group(1)
-        case_dates = []
-        path_2 = "count(//td[2]//a[contains(./@href, 'Decisions')]/text())"
-        d = date.fromtimestamp(time.mktime(time.strptime(case_date, '%b %d, %Y')))
-        case_dates.extend([d] * int(self.html.xpath(path_2)))
-        return case_dates
+        path = "count(//td[2]//a[contains(./@href, 'Decisions')]/text())"
+        return [self.crawl_date] * int(self.html.xpath(path))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)

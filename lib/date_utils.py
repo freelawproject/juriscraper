@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from math import ceil
 
 from dateutil.parser import _timelex, parser, parserinfo
 
@@ -121,3 +122,19 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1), sane_e
 
     return dates
 
+
+def quarter(month):
+    """
+    :int month: Any month, as an int.
+    :return: The quarter of the year during which that month occurs (1-4)
+    """
+    return ceil(float(month) / 3)
+
+
+def is_first_month_in_quarter(month):
+    """
+
+    :int month: Any month as an int.
+    :return: Whether that month is the first month in a quarter
+    """
+    return month in [1, 4, 7, 10]

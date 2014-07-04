@@ -2,6 +2,7 @@
 CourtID: [unique abbreviation to be used by software/filesystem]
 Court Short Name: [standard abbreviation used in citations]
 Author:
+Reviewer:
 Date created:
 """
 
@@ -134,6 +135,13 @@ class Site(OpinionSite):
         """
         return None
 
+    def _get_west_state_citations(self):
+        """
+          You are unlikely to encounter these unless it's a backscraper because
+          these citations only exist once the document is in a bound volume.
+        """
+        return None
+
     """
       Optional fields
 
@@ -194,6 +202,7 @@ class Site(OpinionSite):
 
     """
       Optional method used for downloading multiple pages of a court site.
+      Can be tested using the --backwards flag in sample_caller.py
     """
     def _download_backwards(self, date_str):
         """ This is a simple method that can be used to generate Site objects

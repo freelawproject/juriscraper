@@ -2,14 +2,10 @@
 #CourtID: nyappdiv_2nd
 #Court Short Name: NY
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-04
 
 from juriscraper.opinions.united_states.state import nyappdiv_1st
-
-import re
-import time
-from datetime import date
 
 
 class Site(nyappdiv_1st.Site):

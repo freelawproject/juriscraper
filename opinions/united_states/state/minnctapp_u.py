@@ -1,8 +1,8 @@
 # Scraper for Minnesota Court of Appeals Unpublished Opinions
-#CourtID: minnctapp_u
+#CourtID: minnctapp
 #Court Short Name: MN
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-03
 
 
@@ -10,6 +10,7 @@ from juriscraper.opinions.united_states.state import minn
 import time
 import re
 from datetime import date
+from lib.date_utils import quarter
 
 
 class Site(minn.Site):
@@ -19,7 +20,7 @@ class Site(minn.Site):
         d = date.today()
         self.url = "http://mn.gov/lawlib/archive/cau{short_year}q{quarter}.html".format(
             short_year=d.strftime("%y"),
-            quarter=(d.month - 1) // 3 + 1
+            quarter=quarter(d.month)
         )
 
     def _get_case_names(self):
