@@ -6,8 +6,6 @@
 #Date: 2014-07-05
 
 from datetime import date
-import time
-import re
 
 from juriscraper.opinions.united_states.state import okla
 
