@@ -37,18 +37,19 @@ class Site(OpinionSite):
         return download_url
 
     def _get_case_dates(self):
-        path = "id('content')/div//p[position() > 2]"
-        path_2 = './following-sibling::ul[1]//li'
+        path = "id('content')/div//strong"
+        path_2 = './following-sibling::ul[1]//li|../following-sibling::ul[1]//li'
         dates = []
         for p_element in self.html.xpath(path):
             try:
-                date_str = str(p_element.xpath('./strong/text()')[0])
+                date_str = str(p_element.xpath('./text()')[0])
                 d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', date_str), '%B%d,%Y')))
                 dates.extend([d] * len(p_element.xpath(path_2)))
             except ValueError:
                 pass
             except IndexError:
                 pass
+        print dates
         return dates
 
     def _get_precedential_statuses(self):

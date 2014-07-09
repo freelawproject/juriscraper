@@ -30,7 +30,7 @@ class Site(OpinionSite):
         #self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=5/24/2013'
 
     def _get_download_urls(self):
-        '''Here we get very crafty and create a list-like object with deferred fetching.'''
+        """Here we get very crafty and create a list-like object with deferred fetching."""
         def fetcher(url):
             r = requests.get(url,
                              allow_redirects=False,
