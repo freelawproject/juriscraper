@@ -8,6 +8,9 @@ most recent at the top.
 ------------------------------
 
 
+2014-07-10:
+ - Adds the PhantomJS dependency officially. Looks like there's no crawling Texas without it.
+
 2013-06-19:
  - The dependency on the requests library has been updated to version 1.2.3 in both CourtListener and Juriscraper:
 

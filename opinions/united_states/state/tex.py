@@ -27,7 +27,7 @@ class Site(OpinionSite):
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
 
     def _download(self, request_dict={}):
-        driver = webdriver.PhantomJS(executable_path='Path\to\phantomjs.exe') #  ------ please change this path
+        driver = webdriver.PhantomJS(executable_path='/usr/local/phantomjs/phantomjs')
         driver.get(self.url)
         driver.implicitly_wait(10)
         search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(

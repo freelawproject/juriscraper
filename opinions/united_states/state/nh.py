@@ -49,7 +49,6 @@ class Site(OpinionSite):
                 pass
             except IndexError:
                 pass
-        print dates
         return dates
 
     def _get_precedential_statuses(self):
