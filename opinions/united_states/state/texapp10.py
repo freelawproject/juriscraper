@@ -1,4 +1,4 @@
-# Scraper for Texas 1st Court of Appeals
+# Scraper for Texas 10th Court of Appeals
 #CourtID: texapp1
 #Court Short Name: TX
 #Author: Andrei Chelaru
