@@ -4,7 +4,7 @@ History:
 Notes: There are some Docket numbers which dont obey the general format for them additional code is there
 """
 
-from OpinionSite import OpinionSite
+from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from lxml import html
