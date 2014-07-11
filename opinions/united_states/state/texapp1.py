@@ -6,10 +6,6 @@
 #Date: 2014-07-10
 
 
-from datetime import date
-from lxml import html
-from selenium import webdriver
-
 from juriscraper.opinions.united_states.state import tex
 
 
