@@ -128,7 +128,7 @@ def quarter(month):
     :int month: Any month, as an int.
     :return: The quarter of the year during which that month occurs (1-4)
     """
-    return ceil(float(month) / 3)
+    return int(ceil(float(month) / 3))
 
 
 def is_first_month_in_quarter(month):

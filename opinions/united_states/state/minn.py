@@ -21,7 +21,7 @@ class Site(OpinionSite):
         d = date.today()
         self.url = 'http://mn.gov/lawlib/archive/sct{short_year}q{quarter}.html'.format(
             short_year=d.strftime("%y"),
-            quarter=int(quarter(d.month))
+            quarter=quarter(d.month)
         )
         # self.url = 'http://mn.gov/lawlib/archive/sct14q3.html'
 
