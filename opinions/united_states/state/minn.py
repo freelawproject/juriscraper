@@ -5,14 +5,13 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
-
+from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
 from juriscraper.OpinionSite import OpinionSite
 import time
 import re
 from datetime import date
 from lxml import html
 from requests.exceptions import HTTPError
-from lib.date_utils import quarter, is_first_month_in_quarter
 
 
 class Site(OpinionSite):
@@ -33,7 +32,7 @@ class Site(OpinionSite):
         try:
             return super(Site, self)._download()
         except HTTPError, e:
-            is_first_days_of_the_quarter = (date.today().day <= 4 and
+            is_first_days_of_the_quarter = (date.today().day <= 15 and
                                             is_first_month_in_quarter(date.today().month))
             got_404 = e.response.status_code == 404
             if got_404 and is_first_days_of_the_quarter:
