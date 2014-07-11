@@ -8,7 +8,7 @@ Date created: 2014-07-11
 """
 
 from datetime import date
-from opinions.united_states.state import colo
+from juriscraper.opinions.united_states.state import colo
 
 
 class Site(colo.Site):
