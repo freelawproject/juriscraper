@@ -21,8 +21,9 @@ class Site(OpinionSite):
         d = date.today()
         self.url = 'http://mn.gov/lawlib/archive/sct{short_year}q{quarter}.html'.format(
             short_year=d.strftime("%y"),
-            quarter=quarter(d.month)
+            quarter=int(quarter(d.month))
         )
+        # self.url = 'http://mn.gov/lawlib/archive/sct14q3.html'
 
     def _download(self, request_dict={}):
         """Overrides the download function so that we can catch 404 errors silently.
