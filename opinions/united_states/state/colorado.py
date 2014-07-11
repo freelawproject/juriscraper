@@ -16,7 +16,6 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.url = 'http://www.cobar.org/opinions/index.cfm?courtid=1'
         self.court_id = self.__module__
-        
 
     def _get_case_names(self):
         g1=[]
@@ -37,7 +36,7 @@ class Site(OpinionSite):
                         g2=g2+g
                     a=a+1
                 print g2
-                g1.append(g2)  
+                g1.append(g2)
                 g2=''
         return [g for g in g1]
 
@@ -46,7 +45,7 @@ class Site(OpinionSite):
         print 'IN GET DOWNLOAD URLS'
         page=requests.get(self.url)
         tree=html.fromstring(page.text)
-       
+
         for h2 in tree.xpath('//*[@id="bodyBox"]/table[2]/tr[1]/td[1]/ul[1]/li/strong/a/@href'):
             str1='http://www.cobar.org/opinions/'+h2
             page1=requests.get(str1)
@@ -59,18 +58,18 @@ class Site(OpinionSite):
             for opinion in opinions:
                 if(a<=d-3):
                     opinion= 'http://www.cobar.org/opinions/'+opinion
-                    
+
                     back.append(opinion)
                 a=a+1
-        
-        return [url for url in back]           
-    
+
+        return [url for url in back]
+
     def _get_case_dates(self):
         g1=[]
         print 'IN GET CASE DATES'
         page=requests.get(self.url)
         tree=html.fromstring(page.text)
-       
+
         for h2 in tree.xpath('//*[@id="bodyBox"]/table[2]/tr[1]/td[1]/ul[1]/li/strong/a/@href'):
             str1='http://www.cobar.org/opinions/'+h2
             page1=requests.get(str1)
@@ -85,7 +84,7 @@ class Site(OpinionSite):
                 date_obj = date.fromtimestamp(
                       time.mktime(time.strptime(date1[0], "%B %Y")))
             for t in text:
-                
+
                 g1.append(date_obj)
                 print date_obj
         return [g for g in g1]
@@ -95,7 +94,7 @@ class Site(OpinionSite):
         print 'IN GET DOCKET NUMBERS'
         page=requests.get(self.url)
         tree=html.fromstring(page.text)
-    
+
         for h2 in tree.xpath('//*[@id="bodyBox"]/table[2]/tr[1]/td[1]/ul[1]/li/strong/a/@href'):
             str1='http://www.cobar.org/opinions/'+h2
             page1=requests.get(str1)
@@ -106,7 +105,7 @@ class Site(OpinionSite):
                 str=t.split('.')
                 a=0
                 for g in str:
-                    
+
                     if a>=1 and a<=2:
                         g2=g2+g
                     if 'No' not in str[1]:
@@ -114,9 +113,9 @@ class Site(OpinionSite):
                         g2='No '+str[1]
                     a=a+1
                 print g2
-                g1.append(g2)  
+                g1.append(g2)
                 g2=''
         return [g for g in g1]
-    
+
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)

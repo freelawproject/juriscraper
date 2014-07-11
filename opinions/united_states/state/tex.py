@@ -1,92 +1,186 @@
-'''
-History:
- - Left message for Diana Norman (512) 463-1551, at the Appeals Court, requesting a call back.
+# Scraper for Texas Supreme Court
+# CourtID: tex
+#Court Short Name: TX
+#Author: Andrei Chelaru
+#Reviewer: mlr
+#Date: 2014-07-10
 
-http://www.search.txcourts.gov/RetrieveDocument.aspx?DocId=886&Index=***coa01%5cOpinion
-http://www.search.txcourts.gov/SearchMedia.aspx?MediaVersionID=906eee9d-85e3-48a8-9349-7387948b6673&coa=coa01&DT=Opinion&MediaID=cf67a534-225a-4a5e-966f-41f68c35e6c4
-'''
 
-# Author: Michael Lissner
-# Date created: 2013-06-05
-
-import requests
 from datetime import date
-from datetime import datetime
 from lxml import html
-
+import requests
+from selenium import webdriver
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.DeferringList import DeferringList
-from juriscraper.lib.string_utils import titlecase
+from DeferringList import DeferringList
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        today = date.today()
-        self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=%s' % (today.strftime("%m/%d/%Y"))
-        # for testing
-        #self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=5/24/2013'
+        self.case_date = date.today()
+        self.records_nr = 0
+        self.courts = {'sc': 0, 'ccrimapp': 1, 'capp_1': 2, 'capp_2': 3, 'capp_3': 4,
+                       'capp_4': 5, 'capp_5': 6, 'capp_6': 7, 'capp_7': 8, 'capp_8': 9,
+                       'capp_9': 10, 'capp_10': 11, 'capp_11': 12, 'capp_12': 13,
+                       'capp_13': 14, 'capp_14': 15}
+        self.court_name = 'sc'
+        self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
 
-    def _get_download_urls(self):
-        """Here we get very crafty and create a list-like object with deferred fetching."""
+    def _download(self, request_dict={}):
+        driver = webdriver.PhantomJS(executable_path='/usr/local/phantomjs/phantomjs')
+        driver.get(self.url)
+        driver.implicitly_wait(10)
+        search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
+            court_nr=self.courts[self.court_name])
+        )
+        search_court_type.click()
+
+        search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
+        search_opinions.click()
+
+        search_orders = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_1")
+        search_orders.click()
+
+        start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
+        start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+        # start_date.send_keys('7/3/2014')
+
+        end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
+        end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+        # end_date.send_keys('7/3/2014')
+
+        submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
+        submit.click()
+        driver.implicitly_wait(20)
+
+        nr_of_pages = driver.find_element_by_xpath(
+            '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]')
+        records_nr = driver.find_element_by_xpath(
+            '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]')
+        if records_nr:
+            self.records_nr = int(records_nr.text)
+        if nr_of_pages:
+            if nr_of_pages.text == '1':
+                text = driver.page_source
+                driver.close()
+
+                html_tree = html.fromstring(text)
+                html_tree.make_links_absolute(self.url)
+
+                remove_anchors = lambda url: url.split('#')[0]
+                html_tree.rewrite_links(remove_anchors)
+                return html_tree
+            else:
+                html_pages = []
+                text = driver.page_source
+
+                html_tree = html.fromstring(text)
+                html_tree.make_links_absolute(self.url)
+
+                remove_anchors = lambda url: url.split('#')[0]
+                html_tree.rewrite_links(remove_anchors)
+                html_pages.append(html_tree)
+
+                for i in xrange(int(nr_of_pages.text) - 1):
+                    next_page = driver.find_element_by_class_name('rgPageNext')
+                    next_page.click()
+                    driver.implicitly_wait(5)
+
+                    text = driver.page_source
+
+                    html_tree = html.fromstring(text)
+                    html_tree.make_links_absolute(self.url)
+
+                    remove_anchors = lambda url: url.split('#')[0]
+                    html_tree.rewrite_links(remove_anchors)
+                    html_pages.append(html_tree)
+                driver.close()
+                return html_pages
+
+    def _get_case_names(self):
         def fetcher(url):
             r = requests.get(url,
                              allow_redirects=False,
                              headers={'User-Agent': 'Juriscraper'})
-            # Throw an error if a bad status code is returned.
             r.raise_for_status()
 
             html_tree = html.fromstring(r.text)
             html_tree.make_links_absolute(self.url)
 
-            paths = ["//tr[td/text()[contains(., 'Opinion issued')]]//tr[descendant::a[contains(., 'HTML')]]//@href",
-                     "//tr[td/text()[contains(., 'Opinion issued')]]//tr[descendant::a[contains(., 'PDF')]]//@href"]
-            url = None
-            for path in paths:
-                try:
-                    url = html_tree.xpath(path)[0]
-                    break
-                except IndexError:
-                    continue
-            return url
+            plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
+            defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
 
-        path = '//a[contains(@id, "lnkCase")]/@href'
-        seed_urls = self.html.xpath(path)
+            if not defendant.strip():
+                # If there's a defendant
+                return '%s v. %s' % (plaintiff, defendant)
+            else:
+                return plaintiff
+
+            # TODO: Sort by date
+            # TODO: defendant not getting populated.
+
+        seed_urls = []
+        if isinstance(self.html, list):
+            for html_tree in self.html:
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
+                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
+                    seed_urls.append(html_tree.xpath(path)[0])
+        else:
+            seed_urls = map(self._return_seed_url, range(self.records_nr))
         if seed_urls:
-            urls = DeferringList(seed=seed_urls, fetcher=fetcher)
-            return urls
+            return DeferringList(seed=seed_urls, fetcher=fetcher)
         else:
             return []
 
-    def _get_case_names(self):
-        path = '//td[@class = "caseStyle"]/span/text()'
-        return [titlecase(s) for s in self.html.xpath(path)]
-
     def _get_case_dates(self):
-        date_str = self.html.xpath("//span[@id = 'ctl00_ContentPlaceHolder1_lblDocketDate']/text()")[0]
-        dt = datetime.strptime(date_str, "%m/%d/%Y").date()
-
-        # Uses the path from the case_name as a multiplier, since case_names are not known when case_date is run.
-        path = '//td[@class = "caseStyle"]/span/text()'
-        return [dt] * len(list(self.html.xpath(path)))
+        return [self.case_date] * self.records_nr
 
     def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
+        return ['Published'] * self.records_nr
+
+    def _get_download_urls(self):
+        if isinstance(self.html, list):
+            download_urls = []
+            for html_tree in self.html:
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
+                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
+                    download_urls.append(html_tree.xpath(path)[0])
+            return download_urls
+        else:
+            return map(self._return_download_url, range(self.records_nr))
 
     def _get_docket_numbers(self):
-        path = '//a[contains(@id, "lnkCase")]/text()'
-        return list(self.html.xpath(path))
+        if isinstance(self.html, list):
+            docket_numbers = []
+            for html_tree in self.html:
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
+                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')" \
+                           "/td[5]//text()[contains(., '-')]".format(n=record)
+                    docket_numbers.append(html_tree.xpath(path)[0])
+            return docket_numbers
+        else:
+            return map(self._return_docket_number, range(self.records_nr))
 
-    def _get_lower_courts(self):
-        path = "//td[@class = 'caseStyle']/text()"
-        return list(self.html.xpath(path))
+    def _return_docket_number(self, record):
+        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
+            n=record
+        )
+        return self.html.xpath(path)[0]
 
-    def _get_dispositions(self):
-        path = "//td[@class = 'caseDisp']/text()"
-        return [titlecase(s) for s in self.html.xpath(path)]
+    def _return_download_url(self, record):
+        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
+        return self.html.xpath(path)[0]
 
-    def _download_backwards(self, d):
-        self.url = 'http://www.search.txcourts.gov/Docket.aspx?coa=cossup&FullDate=%s' % (d.strftime("%m/%d/%Y"))
-        self.html = self._download()
+    def _return_seed_url(self, record):
+        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
+        return self.html.xpath(path)[0]
+
+    @staticmethod
+    def _get_opinion_count(html_tree):
+        return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
+                                   "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
