@@ -2,13 +2,9 @@
 #CourtID: texapp7
 #Court Short Name: TX
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-10
 
-
-from datetime import date
-from lxml import html
-from selenium import webdriver
 
 from juriscraper.opinions.united_states.state import tex
 

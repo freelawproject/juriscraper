@@ -2,15 +2,17 @@
 # CourtID: tex
 #Court Short Name: TX
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-10
 
 
 from datetime import date
 from lxml import html
+import requests
 from selenium import webdriver
 
 from juriscraper.OpinionSite import OpinionSite
+from DeferringList import DeferringList
 
 
 class Site(OpinionSite):
@@ -90,7 +92,40 @@ class Site(OpinionSite):
         return html_tree
 
     def _get_case_names(self):
-        return [''] * self.records_nr
+        def fetcher(url):
+            r = requests.get(url,
+                             allow_redirects=False,
+                             headers={'User-Agent': 'Juriscraper'})
+            r.raise_for_status()
+
+            html_tree = html.fromstring(r.text)
+            html_tree.make_links_absolute(self.url)
+
+            plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
+            defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
+
+            if not defendant.strip():
+                # If there's a defendant
+                return '%s v. %s' % (plaintiff, defendant)
+            else:
+                return plaintiff
+
+            # TODO: Sort by date
+            # TODO: defendant not getting populated.
+
+        seed_urls = []
+        if isinstance(self.html, list):
+            for html_tree in self.html:
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
+                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
+                    seed_urls.append(html_tree.xpath(path)[0])
+        else:
+            seed_urls = map(self._return_seed_url, range(self.records_nr))
+        if seed_urls:
+            return DeferringList(seed=seed_urls, fetcher=fetcher)
+        else:
+            return []
 
     def _get_case_dates(self):
         return [self.case_date] * self.records_nr
@@ -102,9 +137,8 @@ class Site(OpinionSite):
         if isinstance(self.html, list):
             download_urls = []
             for html_tree in self.html:
-                page_records_nr = int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
-                                                      "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
-                for record in xrange(page_records_nr):
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
                     path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
                     download_urls.append(html_tree.xpath(path)[0])
             return download_urls
@@ -115,17 +149,16 @@ class Site(OpinionSite):
         if isinstance(self.html, list):
             docket_numbers = []
             for html_tree in self.html:
-                page_records_nr = int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
-                                                      "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
-                for record in xrange(page_records_nr):
+                page_records_count = self._get_opinion_count(html_tree)
+                for record in xrange(page_records_count):
                     path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')" \
                            "/td[5]//text()[contains(., '-')]".format(n=record)
                     docket_numbers.append(html_tree.xpath(path)[0])
             return docket_numbers
         else:
-            return map(self._return_case_number, range(self.records_nr))
+            return map(self._return_docket_number, range(self.records_nr))
 
-    def _return_case_number(self, record):
+    def _return_docket_number(self, record):
         path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
             n=record
         )
@@ -134,3 +167,12 @@ class Site(OpinionSite):
     def _return_download_url(self, record):
         path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
         return self.html.xpath(path)[0]
+
+    def _return_seed_url(self, record):
+        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
+        return self.html.xpath(path)[0]
+
+    @staticmethod
+    def _get_opinion_count(html_tree):
+        return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
+                                   "//tr[contains(., 'Opinion') or contains(., 'Order')])"))

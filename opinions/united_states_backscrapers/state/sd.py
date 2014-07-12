@@ -2,7 +2,6 @@
 # Date created: 2013-06-11
 
 import re
-from datetime import date
 from datetime import datetime
 from lxml import html
 from selenium import webdriver

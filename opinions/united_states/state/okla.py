@@ -2,7 +2,7 @@
 #CourtID: okla
 #Court Short Name: OK
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-05
 
 from datetime import date
@@ -29,19 +29,20 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        return map(self._return_desired_group, self.elements, [3]*self.len_elements)
+        # Depends on _get_case_dates being run prior.
+        return map(self._return_desired_group, self.elements, [3] * self.len_elements)
 
     def _get_case_dates(self):
         path = "{gen_path}/text()".format(gen_path=self.general_path)
         self.elements = self.html.xpath(path)
         self.len_elements = len(self.elements)
-        return map(self._return_desired_group, self.elements, [2]*self.len_elements)
+        return map(self._return_desired_group, self.elements, [2] * self.len_elements)
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        return map(self._return_desired_group, self.elements, [1]*self.len_elements)
+        return map(self._return_desired_group, self.elements, [1] * self.len_elements)
 
     @staticmethod
     def _return_desired_group(element_text, nr):

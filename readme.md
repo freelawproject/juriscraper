@@ -36,9 +36,14 @@ Installation & dependencies
     sudo pip install python-dateutil==1.5  # Newer have known incompatibilities with Python < 3
     sudo mkdir /var/log/juriscraper/
 
-    # optional, only used for backscrapers
+    # Install selenium and PhantomJS
     sudo pip install selenium
-
+    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+    tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
+    sudo mkdir -p /usr/local/phantomjs
+    sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
+    rm -r phantomjs-1.9.7*  # Cleanup
+    
     # install the code
     sudo mkdir /usr/local/juriscraper
     cd /usr/local/juriscraper
@@ -49,9 +54,6 @@ Installation & dependencies
 
     # create a directory for logs
     sudo mkdir -p /var/log/juriscraper
-
-We also occasionally use [PhantomJS][8] for more painful jobs, but so far it's only
-a dependency for backscrapers. It can be installed from [here][9].
 
 
 Joining the project as a developer

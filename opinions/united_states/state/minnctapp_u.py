@@ -5,12 +5,11 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
-
+from juriscraper.lib.date_utils import quarter
 from juriscraper.opinions.united_states.state import minn
 import time
 import re
 from datetime import date
-from lib.date_utils import quarter
 
 
 class Site(minn.Site):
