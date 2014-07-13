@@ -8,6 +8,7 @@
 from datetime import date
 
 from juriscraper.opinions.united_states.state import okla
+from lxml import html
 
 
 class Site(okla.Site):
@@ -21,3 +22,10 @@ class Site(okla.Site):
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)
+
+    @staticmethod
+    def _cleanup_content(content):
+        tree = html.fromstring(content)
+        core_element = tree.xpath('//div[contains(concat(" ", normalize-space(@class), " "), " main ")]')[0]
+        return html.tostring(core_element, pretty_print=True, encoding='unicode')
+

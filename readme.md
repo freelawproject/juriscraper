@@ -107,6 +107,12 @@ The scrapers are written in Python, and can can scrape a court as follows:
 
     # Print out the object
     print str(site)
+    
+That will print out all the current meta data for a site, including links to 
+the objects you wish to download (typically opinions). If you download those
+opinions, we also recommend running the `_cleanup_content()` method against the
+items that you download (PDFs, HTML, etc.). See the `sample_caller.py` for an
+example.
 
 It's also possible to iterate over all courts in a Python package, even if
 they're not known before starting the scraper. For example:

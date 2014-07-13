@@ -201,9 +201,20 @@ class Site(OpinionSite):
         return None
 
     """
-      Optional method used for downloading multiple pages of a court site.
-      Can be tested using the --backwards flag in sample_caller.py
+      Optional methods for special purposes
     """
+    @staticmethod
+    def _cleanup_content(content):
+        """
+          Given the HTML from a page, this method is used to strip it down to its bare essentials.
+
+          Jurisdictions post their content in an HTML page where the headers, foots and other content must be
+          stripped after the page has been downloaded by the caller. The intention of this method is that the
+          caller is able to call the Site object and do all the meta data parsing necessary. Once that's complete,
+          the caller can call this method, stripping the html content down to its essentials, before saving.
+        """
+        return content
+
     def _download_backwards(self, date_str):
         """ This is a simple method that can be used to generate Site objects
             that can be used to paginate through a court's entire website.
