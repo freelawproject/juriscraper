@@ -1,0 +1,1746 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Current Term Opinion List - Supreme Court of Appeals of West Virginia</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="page description" -->
+<meta name="description" content="All decisions filed in the current term of the Supreme Court of Appeals of West Virginia. The new integrated decision list combines all of the decisions issued during a court term, identified using case type and decision type codes." />
+<!-- InstanceEndEditable -->
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="../css/print.css" rel="stylesheet" type="text/css" media="print" />
+<!--[if lt IE 9]>
+<link href="../css/mainIE.css" rel="stylesheet" meida="screen" />
+<link href="../../css/mainIE.css" rel="stylesheet" meida="screen" />
+<![endif]-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+<script type="text/javascript" src="../js/func-lib.js"></script>
+<link rel="apple-touch-icon" href="../images/app-icon.png"/>
+<link rel="shortcut icon" href="../images/favicon.ico"/>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//create the select dropdown for the mobile main nav
+        $("<select class='dropDown' />").appendTo("#main-navigation");
+		$("<option />", {
+        	"selected": "selected",
+         	"value"   : "",
+         	"text"    : "Main Navigation"
+      	}).appendTo("#main-navigation select");
+		
+		$("#main-navigation > ul > li > a, #main-navigation > ul > li > ul > li > a").each(function() {
+       		var el = $(this);
+       			$("<option />", {
+           		"value"   : el.attr("href"),
+           		"text"    : el.text()
+       		}).appendTo("#main-navigation select");
+      	});
+		//set the default selected option
+		$("#main-navigation select").change(function() {
+        	window.location = $(this).find("option:selected").val();
+      	});
+		//create the select dropdown for the mobile tertiary nav
+		$("<select />").appendTo("#tertiary-menu");
+		$("<option />", {
+        	"selected": "selected",
+         	"value"   : "",
+         	"text"    : "Interior Pages"
+      	}).appendTo("#tertiary-menu select");
+		$("#tertiary-menu > ul > li > a").each(function() {
+       		var el = $(this);
+       			$("<option />", {
+           		"value"   : el.attr("href"),
+           		"text"    : el.text()
+       		}).appendTo("#tertiary-menu select");
+      	});
+		//set the default selected option
+		$("#tertiary-menu select").change(function() {
+        	window.location = $(this).find("option:selected").val();
+      	});
+		//add class to mobile main nav when mobile tertiary nav exsits
+		$('#tertiary-menu ul li').each(function(){
+			if($('#tertiary-menu ul > li').hasClass('firstChild')){
+				$('select').addClass('links');
+			}
+			else {
+				$('select').addClass('nolinks');
+			}
+		});
+		//add classes to mobile main nav options for styling purposes
+		$('.dropDown option:eq(1), .dropDown option:eq(11), .dropDown option:eq(18), .dropDown option:eq(24), .dropDown option:eq(31)').addClass('bold');
+	
+	});
+</script>
+<!-- InstanceBeginEditable name="head" -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+
+<script src="../js/thickbox/thickbox.js"></script>
+<link href="../js/thickbox/thickbox.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../js/jquery.tools.min.js"></script>
+
+<script type="text/javascript" src="../js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../js/FixedHeader.js"></script>
+
+<script type="text/javascript" src="../js/columnFilter.js"></script>
+
+<script type="text/javascript" src="../js/chosen/chosen.jquery.js"></script>
+<link href="../js/chosen/chosen.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$('#opinions').dataTable({
+			"sPaginationType": "full_numbers",
+			"bAutoWidth": true,
+			"aaSorting": [[0,'desc']],
+			"aoColumns": [
+				{"asSorting": ["desc", "asc"] },
+				{"asSorting": [null], "bSearchable": true },
+				null,
+				null,
+				null
+			],
+			"oLanguage": {
+				"sZeroRecords": "There are no current term opinions available",
+				"sSearch": "List Search:",
+				"sInfoFiltered": "(_MAX_ total opinions)",
+				"sInfo": "_START_ to _END_ of _TOTAL_ opinions",
+				"sInfoEmpty": "0 to 0 of 0 opinions"
+			},
+			"iDisplayLength": -1,
+			"aLengthMenu": [[-1, 10, 25, 50, 100], ["All", 10, 25, 50, 100]],
+			"sDom": '<"top"ifl>rt<"bottom"ip>'
+		}).columnFilter({
+			sPlaceHolder: 'head:before',
+			aoColumns: [null, null, null, null, {type: 'select'}]
+		});
+		
+		$(".select_filter").chosen({no_results_text: "No results match"}).before('<div class="narrowText"><p>Are you looking for all cases with a specific decision type?</p></div>');
+		
+		//var oTable = $('#opinions').dataTable();
+		//new FixedHeader(oTable);
+		
+		$('#opinions tbody tr').each(function() {
+        	var sTitle = '';
+            var nTds = $(this).find('td');
+            var sDescription = nTds.eq(3).text();
+                                                                                                
+            switch(sDescription){
+            	case "CR-F":
+					sTitle  = 'Felony (non-Death Penalty)';
+					break;
+                case "CR-M":
+					sTitle = 'Misdemeanor';
+					break;
+                case "CR-O":
+                	sTitle = 'Criminal-Other';
+                    break;
+				case "TCR":
+					sTitle = 'Tort, Contract, and Real Property';
+					break;
+				case "PR":
+					sTitle = 'Probate';
+					break;
+				case "FAM":
+					sTitle = 'Family';
+					break;
+				case "JUV":
+					sTitle = 'Juvenile';
+					break;
+				case "CIV-O":
+					sTitle = 'Civil-Other';
+					break;
+				case "WC":
+					sTitle = 'Workers Compensation';
+					break;
+				case "TAX":
+					sTitle = 'Revenue (Tax)';
+					break;
+				case "ADM":
+					sTitle = 'Administrative Agency-Other';
+					break;
+				case "MISC":
+					sTitle = 'Appeal by Right-Other';
+					break;
+				case "OJ-H":
+					sTitle = 'Habeas Corpus';
+					break;
+				case "OJ-M":
+					sTitle = 'Writ Application-Other';
+					break;
+				case "OJ-P":
+					sTitle = 'Writ Application-Other';
+					break;
+				case "L-ADM":
+					sTitle = 'Bar Admission';
+					break;
+				case "L-DISC":
+					sTitle = 'Bar Discipline/Eligibility'
+					break;
+				case "L-DISC-O":
+					sTitle = 'Bar/Judiciary Proceeding-Other';
+					break;
+				case "J-DISC":
+					sTitle = 'Bar/Judiciary Proceeding-Other';
+					break;
+				case "CERQ":
+					sTitle = 'Certified Question';
+					break;
+				case "OJ-O":
+					sTitle = 'Original Proceeding/Appellate Matter-Other';
+					break;
+                default:
+                	sTitle = 'Please review our integrated decision list information.';
+                    break;
+             }
+             nTds.eq(3).attr('title', sTitle ); 
+        });
+		
+		$("#opinions tbody td[title]").tooltip({
+			effect: 'slide',
+			offset: [27, 0]
+		});
+		
+	});
+</script>
+
+<style type="text/css">
+	#TB_title { background:#f7f7ef url(../images/calendar/dateFieldBGSm.jpg) repeat-x bottom; overflow:hidden; min-height:35px; }
+	#TB_ajaxWindowTitle { font-size:16px; font-weight:bold; color:#3f4c5b; padding-top:11px; }
+	
+	#TB_closeAjaxWindow { position:absolute; top:0px; right:0px; text-indent:-9999px; font-size:0px; margin:0px; padding:0px; }
+	#TB_closeAjaxWindow #TB_closeWindowButton { background:url(../images/clearSearchBtn.png) no-repeat; text-indent:-9999px; height:29px; width:29px; position:relative; float:right; margin:5px 5px 0px 0px; padding:0px; }
+	
+	.chzn-container { width:150px !important; }
+	.chzn-drop { width:148px !important; }
+	.chzn-search input[type="text"] { width:112px !important; }
+</style>
+
+<!-- InstanceEndEditable -->
+<!-- InstanceParam name="TertiaryMenu" type="boolean" value="true" -->
+<!-- InstanceParam name="SubContentContainer" type="boolean" value="false" -->
+<!-- InstanceParam name="BodyClass" type="text" value="supreme-court" -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25329062-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- InstanceParam name="openHeaderArea" type="boolean" value="true" -->
+</head>
+
+<body class="supreme-court">
+
+<div id="printLogo"><img src="../images/printLogo.jpg" alt="West Virginia Supreme Court of Appeals" /></div>
+
+<ul id="accessLinks" class="noPrint">
+  <li><a href="#main-navigation">Skip to main menu</a></li>
+  <li><a href="#main-content">Skip to main content</a></li>
+</ul>
+<!-- InstanceBeginEditable name="openHeaderEditableArea" -->
+<!-- Opinion Table Help -->
+<div id="tableHelp" class="noPrint">
+	<div id="tableHelpContent">
+    	<h6>Opinion List Quick Tip</h6>
+        <img src="../images/opinionTableHelp/exampleImg.png" width="390" height="100" alt="Opinion Table Exmample Photo" />
+      <ul>
+      	<li><span class="tableHelpLetter">A</span><span class="tableHelpDesc">Each column of the list can be sorted by clicking the header of that column.</span></li>
+        <li><span class="tableHelpLetter">B</span><span class="tableHelpDesc">The list-wide active text search or "List Search" allows the viewer to quickly search for specific information by typing a single word or multiple words, seperated by a space.</span></li>
+        <li><span class="tableHelpLetter">C</span><span class="tableHelpDesc">A drop down menu allows the user to change the humber of list items currently showing on the page.</span></li>
+      </ul>
+      <p>For more detailed help on the new features of the Opinion List, download the overview by <a href="../siteOverViewTakeHome.pdf" target="_blank">clicking here.</a></p>
+    </div>
+    <div id="tableHelpBtn"><span class="helpClosed">Open Help</span></div>  
+</div>
+<!-- InstanceEndEditable -->
+<div id="main-header">
+  <h1 class="noPrint"><a href="../index.html">West Virginia Judiciary</a></h1>
+  <p class="navigation noPrint"><a href="../index.html">Home</a> | <a href="../contact.html">Contact</a> | <a href="../jobs.html">Jobs</a> | <a href="../sitemap.html">Sitemap</a></p>
+  <h2 class="page-title"><!-- InstanceBeginEditable name="PageTitle" -->Opinions of the Supreme Court of Appeals<!-- InstanceEndEditable --></h2>
+  <div id="tertiary-menu">
+		
+    <ul class="sub-menu">
+      <!-- InstanceBeginRepeat name="TertiaryMenuItems" --><!-- InstanceBeginRepeatEntry -->
+      <!-- InstanceBeginEditable name="TertiaryMenuItem" -->
+	    <li><a href="opinion-information.html">Information & Search</a></li>
+        <li><a href="integrated-decision-list-explained.html">About the Decision List</a></li>
+        <li><a href="docs/fall2011/index.html">September 2011 Term</a></li>
+    		
+      <!-- InstanceEndEditable -->      <!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+    </ul>
+      </div>
+</div>
+<div id="main-body">
+  <div id="main-navigation">
+    <div id="searchText" class="noPrint">Search</div>
+    <div id="cse-search-form" class="noPrint">Loading</div>
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+	<script type="text/javascript"> 
+  		google.load('search', '1', {language : 'en'});
+  		google.setOnLoadCallback(function() {
+    		var customSearchControl = new google.search.CustomSearchControl('002442811923801076369:gpk47hv1cg0');
+    		customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    		var options = new google.search.DrawOptions();
+    		options.enableSearchboxOnly("http://www.courtswv.gov/searchPageResults.html");
+    		customSearchControl.draw('cse-search-form', options);
+  		}, true);
+	</script>
+    <h2 class="noPrint">Main Menu</h2>
+    <ul class="menu noPrint">
+      <li id="public-resources"><a href="../public-resources/index.html">Public Resources</a>
+        <ul>
+          <li><a href="../public-resources/court-information-by-county.html">Court Information by County</a></li>
+          <li><a href="../public-resources/press-page.html">Press Page</a></li>
+          <li><a href="../public-resources/jury-information.html">Jury information</a></li>
+          <li><a href="../public-resources/law-library/law-library-home.html">Law Library</a></li>
+          <li><a href="../public-resources/student-resources/index.html">Student Resources</a></li>
+          <li><a href="../public-resources/domestic/domestic-violence.html">Domestic Violence</a></li> 
+          <li><a href="../public-resources/guardians-conservators.html">Guardians &amp; Conservators</a></li> 
+          <li><a href="../public-resources/accessibility-information.html">Accessibility Information</a></li>
+        </ul>
+      </li>
+      <li id="supreme-court"><a href="index.html">Supreme Court</a>
+        <ul>
+          <li><a href="index.html">Supreme Court of Appeals</a></li>
+          <li><a href="justices-staff.html">Justices &amp; Staff</a></li>
+          <li><a href="clerk/clerks-office.html">Clerk's Office</a></li>
+          <li><a href="office-of-counsel.html">Office of Counsel</a></li>
+          <li><a href="calendar-docket.html">Calendar &amp; Docket</a></li>
+          <li><a href="opinions.html">Opinions</a></li>
+        </ul>
+      </li>
+      <li id="lower-courts"><a href="../lower-courts/index.html">Lower Courts</a>
+        <ul>
+          <li><a href="../lower-courts/circuit-courts.html">Circuit Courts</a></li>
+          <li><a href="../lower-courts/family-courts.html">Family Courts</a></li>
+          <li><a href="../lower-courts/magistrate-courts.html">Magistrate Courts</a></li>
+          <li><a href="../lower-courts/treatment-courts.html">Treatment Courts</a></li>
+          <li><a href="../lower-courts/mlp/overview.html">Mass Litigation Panel</a></li>       
+    	</ul>
+      </li>
+      <li id="legal-community"><a href="../legal-community/index.html">Legal Community</a>
+        <ul>
+    	  <li><a href="../legal-community/court-rules.html">Court Rules</a></li>
+          <li><a href="../legal-community/court-forms.html">Court Forms</a></li>
+          <li><a href="../legal-community/board-of-law-examiners.html">Bar Admissions</a></li>
+          <li><a href="http://www.wvodc.org/" target="_blank">Lawyer Disciplinary Board</a></li>
+          <li><a href="../legal-community/judicial-investigaion.html">Judicial Investigation</a></li>
+          <li><a href="http://www.wvbar.org/" target="_blank">West Virginia State Bar</a></li>
+        </ul>
+      </li>
+      <li id="court-administration"><a href="../court-administration/index.html">Court Administration</a>
+        <ul>
+          <li><a href="../court-administration/administrative-office.html">Administrative Office</a></li>
+          <li><a href="../court-administration/security-closures.html">Court Security and Closures</a></li>
+          <li><a href="../court-administration/court-services.html">Court Services</a></li>
+          <li><a href="../court-administration/probation/probation-services.html">Probation Services</a></li>
+          <li><a href="../court-administration/access-to-justice.html">Access to Justice</a></li>
+          <li><a href="../court-administration/judicial-projects.html">Judicial Projects</a></li>
+          <li><a href="../court-administration/for-court-employees.html">For Court Employees</a></li>   
+    	</ul>
+      </li>
+    </ul>
+  </div>
+  <div id="main-content"><!-- InstanceBeginEditable name="MainContent" -->
+     <h3>Current Term Opinion List</h3>
+    <p>Links to all decisions filed in the current term of court are listed in the table below. <strong>Are you looking for an opinion list from a prior term of court?</strong> If so, please <a href="opinion-information.html">visit the Information & Search page</a>. Opinions from the September 1991 term of court to the present day are available online.</p>
+    <p>The new integrated decision list combines all of the decisions issued during a court term, identifed using case type and decision type codes. To re-sort the list quickly, click any of the column headers (except case number). For more information about using the decision list and for an explanation of the codes, review the page: <a href="integrated-decision-list-explained.html">About the Decision List</a>.</p>
+    <div class="quickTip">
+    	<p><strong>QUICK TIP:</strong> For more help on using the opinion table, click the <span class="openHelp"><img class="helpBtnContent" src="../images/opinionTableHelp/blueQuestion.png" width="22" height="22" alt="Open Opinion Table Help" /></span> to the right on the page. When the page loads, the  Date Filed column is sorted descending.</p>
+    </div>
+    
+    <div id="caption">January 2012 Term of Court Opinions and Memorandum Decisions</div>
+    <table border="0" cellpadding="0" cellspacing="0" class="display" id="opinions"> 
+    	<caption>January 2012 Term of Court Opinions and Memorandum Decisions</caption>
+        
+        <thead>
+        	<tr class="searchRow OpinionsSelect">
+            	<th colspan="5">decision Type</th>
+            </tr>
+    		<tr>
+  				<th width="11%">Date Filed</th>
+    			<th class="noSort" width="15%">Case No.</th>
+    			<th width="53%">Case Name</th>
+    			<th width="10%">Case Type</th>
+    			<th width="11%">Decision Type</th>
+    		</tr>
+    	</thead>
+          
+  		<tbody>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0368</td>
+                <td><a href="memo-decisions/spring2012/11-0368memo.pdf" target="_blank">Lawrence E. Scible v. David Ballard, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>      
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0432</td>
+                <td><a href="memo-decisions/spring2012/11-0432memo.pdf" target="_blank">State of West Virginia v. Mark Wilson</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0433</td>
+                <td><a href="memo-decisions/spring2012/11-0433memo.pdf" target="_blank">Keith R. Jeffers v. David Ballard, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>101571</td>
+                <td><a href="memo-decisions/spring2012/101571memo.pdf" target="_blank">James Ward v. USA, Federal Bureau of Prisons</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1474</td>
+                <td><a href="memo-decisions/spring2012/11-1474memo.pdf" target="_blank">In the Interest of: K.H.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1365</td>
+                <td><a href="memo-decisions/spring2012/11-1365memo.pdf" target="_blank">In the Interest of: E.M.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1317</td>
+                <td><a href="memo-decisions/spring2012/11-1317memo.pdf" target="_blank">In the Interest of: T.M.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1263</td>
+                <td><a href="memo-decisions/spring2012/11-1263memo.pdf" target="_blank">In the Interest of: B.H.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+       <tr>
+            	<td>3/12/2012</td>
+                <td>11-1165</td>
+                <td><a href="memo-decisions/spring2012/11-1165memo.pdf" target="_blank">In the Interest of: J.M., C.H., B.H. and C.H., Jr.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>101437</td>
+                <td><a href="memo-decisions/spring2012/101437memo.pdf" target="_blank">Tex Gene Holbrook v. David Ballard, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>34359</td>
+                <td><a href="memo-decisions/spring2012/34359memo.pdf" target="_blank">Bobby R. Hicks v. W. Va. Office of Insurance Commission/United Dairy</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1182</td>
+                <td><a href="memo-decisions/spring2012/11-1182memo.pdf" target="_blank">In Re: M.D. and A.D.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1161</td>
+                <td><a href="memo-decisions/spring2012/11-1161memo.pdf" target="_blank">In Re: I.A. and M.A.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1018</td>
+                <td><a href="memo-decisions/spring2012/11-1018memo.pdf" target="_blank">In Re: M.M. Jr., S.M., E.M., A.M. and B.M.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-0952</td>
+                <td><a href="memo-decisions/spring2012/11-0952memo.pdf" target="_blank">In Re: M.M. Jr., S.M., E.M., A.M. and B.M.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-0672</td>
+                <td><a href="memo-decisions/spring2012/11-0672memo.pdf" target="_blank">Ray and Bette Kesling v. Sonshine, LLC</a></td>
+                <td>TCR</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1102</td>
+                <td><a href="memo-decisions/spring2012/11-1102memo.pdf" target="_blank">In Re: B.K. and J.K.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1089</td>
+                <td><a href="memo-decisions/spring2012/11-1089memo.pdf" target="_blank">In Re: J.S. and K.S.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1088</td>
+                <td><a href="memo-decisions/spring2012/11-1088memo.pdf" target="_blank">In Re: A.C., A.C., A.C. and A.C.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1086</td>
+                <td><a href="memo-decisions/spring2012/11-1086memo.pdf" target="_blank">In Re: D.N.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1078</td>
+                <td><a href="memo-decisions/spring2012/11-1078memo.pdf" target="_blank">In Re: J.N.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-1026</td>
+                <td><a href="memo-decisions/spring2012/11-1026memo.pdf" target="_blank">In Re: N.W.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-0979</td>
+                <td><a href="memo-decisions/spring2012/11-0979memo.pdf" target="_blank">In Re: P.D. and A.D.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0974</td>
+                <td><a href="memo-decisions/spring2012/11-0974memo.pdf" target="_blank">In Re: D.C. and M.C.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-0795</td>
+                <td><a href="memo-decisions/spring2012/11-0795memo.pdf" target="_blank">Sara Jane Workman v. Carl Samuel Workman</a></td>
+                <td>FAM</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0763</td>
+                <td><a href="memo-decisions/spring2012/11-0763memo.pdf" target="_blank">D.G.L. v. D.K.L.</a></td>
+                <td>FAM</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0709</td>
+                <td><a href="memo-decisions/spring2012/11-0709memo.pdf" target="_blank">State of West Virginia v. J.S.</a></td>
+                <td>CR-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0823</td>
+                <td><a href="memo-decisions/spring2012/11-0823memo.pdf" target="_blank">Dana Waid Young, et al. v. Brian Waid, et al.</a></td>
+                <td>TCR</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0922</td>
+                <td><a href="memo-decisions/spring2012/11-0922memo.pdf" target="_blank">Burch Roofing and Construction v. Mark Poh, etc.</a></td>
+                <td>TCR</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1568</td>
+                <td><a href="memo-decisions/spring2012/11-1568memo.pdf" target="_blank">In Re: S.B.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1552</td>
+                <td><a href="memo-decisions/spring2012/11-1552memo.pdf" target="_blank">In Re: A.D., K.D., D.D., K.P., A.P. and J.P.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1538</td>
+                <td><a href="memo-decisions/spring2012/11-1538memo.pdf" target="_blank">In Re: D.N.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1518</td>
+                <td><a href="memo-decisions/spring2012/11-1518memo.pdf" target="_blank">In Re: M.W.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1419</td>
+                <td><a href="memo-decisions/spring2012/11-1419memo.pdf" target="_blank">In Re: S.W.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1364</td>
+                <td><a href="memo-decisions/spring2012/11-1364memo.pdf" target="_blank">In Re: A.S., A.S., A.S.and K.S.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1338</td>
+                <td><a href="memo-decisions/spring2012/11-1338memo.pdf" target="_blank">In Re: A.S., A.S., A.S.and K.S.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1266</td>
+                <td><a href="memo-decisions/spring2012/11-1266memo.pdf" target="_blank">In Re: NB. and Z.B.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1150</td>
+                <td><a href="memo-decisions/spring2012/11-1150memo.pdf" target="_blank">In Re: T.C., J.C., V.C., A.C., C.C., C.C. and E.C.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1403</td>
+                <td><a href="memo-decisions/spring2012/11-1403memo.pdf" target="_blank">In Re: J.W., K.W., T.W. and M.S.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0774</td>
+                <td><a href="memo-decisions/spring2012/11-0774memo.pdf" target="_blank">In Re: J.W., K.W., T.W. and M.S.</a></td>
+                <td>JUV</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0857</td>
+                <td><a href="memo-decisions/spring2012/11-0857memo.pdf" target="_blank">State of West Virginia v. Michael Marks</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-1082</td>
+                <td><a href="memo-decisions/spring2012/11-1082memo.pdf" target="_blank">Alvin Chambers v. David Ballard, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/12/2012</td>
+                <td>11-0923</td>
+                <td><a href="memo-decisions/spring2012/11-0923memo.pdf" target="_blank">Todd A. Hicks v. Brickstreet Mutual Insurance</a></td>
+                <td>TCR</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/12/2012</td>
+                <td>11-0923</td>
+                <td><a href="memo-decisions/spring2012/11-0923memo.pdf" target="_blank">Todd A. Hicks v. Brickstreet Mutual Insurance</a></td>
+                <td>TCR</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/9/2012</td>
+                <td>11-0417 &amp; 11-0794</td>
+                <td><a href="memo-decisions/spring2012/11-0417and11-0794memo.pdf" target="_blank">State of West Virginia v. Shawn J. Bailey</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/9/2012</td>
+                <td>11-0556</td>
+                <td><a href="memo-decisions/spring2012/11-0556memo.pdf" target="_blank">State of West Virginia v. Shelley Ray Guthrie</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/9/2012</td>
+                <td>11-0663</td>
+                <td><a href="memo-decisions/spring2012/11-0663memo.pdf" target="_blank">SER Roger Repass v. Adrian Hoke, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/9/2012</td>
+                <td>11-0777</td>
+                <td><a href="memo-decisions/spring2012/11-0777memo.pdf" target="_blank">State of West Virginia v. David Kestner</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0778</td>
+                <td><a href="memo-decisions/spring2012/11-0778memo.pdf" target="_blank">Gary D. Lanham v. W. Va. Consolidated Public Retirement Board</a></td>
+                <td>ADM</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0553</td>
+                <td><a href="memo-decisions/spring2012/11-0553memo.pdf" target="_blank">In Re: The Adoption of Wesley G.</a></td>
+                <td>FAM</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0702</td>
+                <td><a href="memo-decisions/spring2012/11-0702memo.pdf" target="_blank">Melissa Sue Ennis(formerly Steele) v. Andrew Blair Cox</a></td>
+                <td>FAM</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0814</td>
+                <td><a href="memo-decisions/spring2012/11-0814memo.pdf" target="_blank">Travis Hough v. Boll Medical</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0329</td>
+                <td><a href="memo-decisions/spring2012/11-0329memo.pdf" target="_blank">Brent Childress v. W. Va. State Police, etc.</a></td>
+                <td>ADM</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0237</td>
+                <td><a href="memo-decisions/spring2012/11-0237memo.pdf" target="_blank">SER Andre King v. Jim Ielapi, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0494</td>
+                <td><a href="memo-decisions/spring2012/11-0494memo.pdf" target="_blank">SER William David Belcher v. Adrian Hoke, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0593</td>
+                <td><a href="memo-decisions/spring2012/11-0593memo.pdf" target="_blank">SER Ernest "Sonny" Tucker v. Thomas L. McBride, Warden</a></td>
+                <td>CIV-O</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/9/2012</td>
+                <td>11-0988</td>
+                <td><a href="memo-decisions/spring2012/11-0988memo.pdf" target="_blank">State of West Virginia v. J.D. Lambert</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>3/9/2012</td>
+                <td>11-0620</td>
+                <td><a href="memo-decisions/spring2012/11-0620memo.pdf" target="_blank">State of West Virginia v. James Ellis Spuduck</a></td>
+                <td>CR-F</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>3/1/2012</td>
+            	<td>11-0592</td>
+            	<td><a href="docs/spring2012/11-0592.pdf" target="_blank">Rebuild America v. Mark E. Davis, et al.</a></td>
+            	<td>TCR</td>
+            	<td>SO</td>
+            </tr>
+         <tr>
+            	<td>2/28/2012</td>
+            	<td>11-0755</td>
+            	<td><a href="docs/spring2012/11-0755c.pdf" target="_blank">In Re: Ashton M.</a> (Workman, J., concurring, in part, and dissenting, in part)</td>
+            	<td>JUV</td>
+            	<td>SEP</td>
+            </tr>
+        <tr>
+            	<td>2/28/2012</td>
+            	<td>11-0755</td>
+            	<td><a href="docs/spring2012/11-0755.pdf" target="_blank">In Re: Ashton M.</a></td>
+            	<td>JUV</td>
+            	<td>PC</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+            	<td>11-0074</td>
+            	<td><a href="docs/spring2012/11-0074d.pdf" target="_blank">All-Med v. Randolph Engineering Co., etc.</a>(Workman, J. dissenting)</td>
+            	<td>TCR</td>
+            	<td>SEP</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+            	<td>11-0074</td>
+            	<td><a href="docs/spring2012/11-0074.pdf" target="_blank">All-Med v. Randolph Engineering Co., etc.</a></td>
+            	<td>TCR</td>
+            	<td>PC</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+            	<td>11-0315</td>
+            	<td><a href="docs/spring2012/11-0315.pdf" target="_blank">National Union Fire Ins. v. Jennifer Miller, etc.</a></td>
+            	<td>TCR</td>
+            	<td>PC</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+            	<td>11-0361</td>
+            	<td><a href="docs/spring2012/11-0361.pdf" target="_blank">State of West Virginia v. Donald Surber</a></td>
+            	<td>CR-F</td>
+            	<td>PC</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+            	<td>11-0120 &amp; 11-0457</td>
+            	<td><a href="docs/spring2012/11-0120and11-0457.pdf" target="_blank">State of West Virginia v. Paula D. Hoston, etc.</a></td>
+            	<td>CR-F</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+            	<td>11-1514</td>
+            	<td><a href="docs/spring2012/11-1514.pdf" target="_blank">SER Massachusetts Mutual Life Ins. v. Hon. David Sanders, et al.</a></td>
+            	<td>OJ-P</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+                <td>101372</td>
+                <td><a href="memo-decisions/spring2012/101372memo.pdf" target="_blank">Larry D. Butcher v. W. Va. Office of Insurance Commissioner/J.E.T. Resources</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+                <td>101370</td>
+                <td><a href="memo-decisions/spring2012/101370memo.pdf" target="_blank">Bernadette K. Shaw v. W. Va. Office of Insurance Commissioner/Morgan Co. Board of Ed.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+                <td>101362</td>
+                <td><a href="memo-decisions/spring2012/101362memo.pdf" target="_blank">Joseph Scalise v. W. Va. Office of Insurance Commissioner/Wheeling Island Gaming</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+                <td>101360</td>
+                <td><a href="memo-decisions/spring2012/101360memo.pdf" target="_blank">Ethel Vennum v. W. Va. Office of Insurance Commissioner/Homer Laughlin China</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+                <td>101358</td>
+                <td><a href="memo-decisions/spring2012/101358memo.pdf" target="_blank">Joseph S. Dingus v. W. Va. Office of Insurance Commissioner/Greif Brothers Corp.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/24/2012</td>
+                <td>101312</td>
+                <td><a href="memo-decisions/spring2012/101312memo.pdf" target="_blank">Betty J. Nease v. W. Va. Office of Insurance Commissioner/Morgans Restaurants</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/24/2012</td>
+                <td>101305</td>
+                <td><a href="memo-decisions/spring2012/101305memo.pdf" target="_blank">Danny Kennedy v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/23/2012</td>
+            	<td>11-0679</td>
+            	<td><a href="docs/spring2012/11-0679.pdf" target="_blank">Shawn Romano v. Wendy Greve</a></td>
+            	<td>FAM</td>
+            	<td>PC</td>
+            </tr>
+         <tr>
+            	<td>2/23/2012</td>
+            	<td>11-0342</td>
+            	<td><a href="docs/spring2012/11-0043.pdf" target="_blank">State of West Virginia v. Kendra Sulick</a></td>
+            	<td>CR-F</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>11-0442</td>
+                <td><a href="memo-decisions/spring2012/11-0442memo.pdf" target="_blank">Harrison L. Epperly v. W. Va. Office of Insurance Commissioner/Apogee Coal</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101386</td>
+                <td><a href="memo-decisions/spring2012/101386memo.pdf" target="_blank">Charles S. Stone v. W. Va. Office of Insurance Commissioner/Huntington Alloys</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101384</td>
+                <td><a href="memo-decisions/spring2012/101384memo.pdf" target="_blank">Harrison L. Epperly v. W. Va. Office of Insurance Commissioner/Apogee Coal</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101383</td>
+                <td><a href="memo-decisions/spring2012/101383memo.pdf" target="_blank">Gerald R. Jenkins v. W. Va. Office of Insurance Commissioner/Consolidation Coal</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101382</td>
+                <td><a href="memo-decisions/spring2012/101382memo.pdf" target="_blank">Thomas L. Cooper v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101375</td>
+                <td><a href="memo-decisions/spring2012/101375memo.pdf" target="_blank">Rennie D. Pauley v. W. Va. Office of Insurance Commissioner/Charleston Area Medical Center</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101374</td>
+                <td><a href="memo-decisions/spring2012/101374memo.pdf" target="_blank">James A. Lawson v. W. Va. Office of Insurance Commissioner/ACF Industries</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101373</td>
+                <td><a href="memo-decisions/spring2012/101373memo.pdf" target="_blank">James A. Milam, Jr. v. W. Va. Office of Insurance Commissioner/Essential Fuels</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/22/2012</td>
+                <td>101361</td>
+                <td><a href="memo-decisions/spring2012/101361memo.pdf" target="_blank">John D. Wood v. W. Va. Office of Insurance Commissioner/Performance Coal</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        	<tr>
+            	<td>2/17/2012</td>
+                <td>101397</td>
+                <td><a href="memo-decisions/spring2012/101397memo.pdf" target="_blank">D'Mitri L. Beverly v. W. Va. Office of Insurance Commissioner/W. Va. Division of Highways</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101396</td>
+                <td><a href="memo-decisions/spring2012/101396memo.pdf" target="_blank">Pamela S. Harding v. W. Va. Office of Insurance Commissioner/Mayflower Vehicle Systems, Inc.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101395</td>
+                <td><a href="memo-decisions/spring2012/101395memo.pdf" target="_blank">Mary J. Walter v. W. Va. Office of Insurance Commissioner</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101394</td>
+                <td><a href="memo-decisions/spring2012/101394memo.pdf" target="_blank">Donald R. Spaun v. W. Va. Office of Insurance Commissioner/Century Aluminum of WV, Inc.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101393</td>
+                <td><a href="memo-decisions/spring2012/101393memo.pdf" target="_blank">Billy J. McClanahan v. W. Va. Office of Insurance Commissioner/Nichols Construction, LLC</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101392</td>
+                <td><a href="memo-decisions/spring2012/101392memo.pdf" target="_blank">Mary Gannon v. W. Va. Office of Insurance Commissioner/Perry &amp; Hylton, Inc.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101391</td>
+                <td><a href="memo-decisions/spring2012/101391memo.pdf" target="_blank">Bruce E. Benedum v. W. Va. Office of Insurance Commissioner/Mosites Construction Company</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        	<tr>
+            	<td>2/17/2012</td>
+                <td>101390</td>
+                <td><a href="memo-decisions/spring2012/101390memo.pdf" target="_blank">Ricky D. Thomas v. W. Va. Office of Insurance Commissioner/Century Aluminum of WV, Inc.</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+        	<tr>
+            	<td>2/17/2012</td>
+                <td>101385</td>
+                <td><a href="memo-decisions/spring2012/101385memo.pdf" target="_blank">Consolidation Coal Company v. W. Va. Office of Insurance Commissioner/James D. White</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/17/2012</td>
+                <td>101359</td>
+                <td><a href="memo-decisions/spring2012/101359memo.pdf" target="_blank">Jackie L. Snodgrass v. W. Va. Office of Insurance Commissioner/Kroger Limited Partnership</a></td>
+                <td>WC</td>
+                <td>MD</td>
+            </tr>
+            <tr>
+            	<td>2/15/2012</td>
+            	<td>101252</td>
+            	<td><a href="memo-decisions/spring2012/101252memo.pdf" target="_blank">Linda A. Wall v. W. Va. Office of Insurance Commissioner/Mercer Co. Board of Education</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/15/2012</td>
+            	<td>101253</td>
+            	<td><a href="memo-decisions/spring2012/101253memo.pdf" target="_blank">William E. Kendrick v. W. Va. Office of Insurance Commissioner/Gapco Mining</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/15/2012</td>
+            	<td>101258</td>
+            	<td><a href="memo-decisions/spring2012/101258memo.pdf" target="_blank">Betty Estep v. W. Va. Office of Insurance Commissioner/Plott &amp; Holbook, Inc.</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0387</td>
+            	<td><a href="memo-decisions/spring2012/11-0387memo.pdf" target="_blank">State of West Virginia v. Steve E. Blankenship</a></td>
+            	<td>CR-M</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0504</td>
+            	<td><a href="memo-decisions/spring2012/11-0504memo.pdf" target="_blank">J.B. v. K.C. and L.C.</a></td>
+            	<td>FAM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0413</td>
+            	<td><a href="memo-decisions/spring2012/11-0413memo.pdf" target="_blank">Stoney G. Riley v. Adrian Hoke, Warden</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0530</td>
+            	<td><a href="memo-decisions/spring2012/11-0530memo.pdf" target="_blank">SER Steve A. Watkins v. Jim Rubenstein, Commissioner</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0133</td>
+            	<td><a href="memo-decisions/spring2012/11-0133memo.pdf" target="_blank">State of West Virginia v. Jack Conner</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0548</td>
+            	<td><a href="memo-decisions/spring2012/11-0548memo.pdf" target="_blank">State of West Virginia v. Henry Howard Jenkins</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0468</td>
+            	<td><a href="memo-decisions/spring2012/11-0468memo.pdf" target="_blank">State of West Virginia v. R.T.</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0342</td>
+            	<td><a href="memo-decisions/spring2012/11-0342memo.pdf" target="_blank">State of West Virginia v. Gerald Wayne Little</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0129</td>
+            	<td><a href="memo-decisions/spring2012/11-0129memo.pdf" target="_blank">Robert Allen Hager v. Thomas McBride, Warden</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0462</td>
+            	<td><a href="memo-decisions/spring2012/11-0462memo.pdf" target="_blank">State of West Virginia v. Stephanie D. Pauley</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0056</td>
+            	<td><a href="memo-decisions/spring2012/11-0056memo.pdf" target="_blank">Agnieszka Collins v. Barbara L. Stewart, et al.</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0146</td>
+            	<td><a href="memo-decisions/spring2012/11-0146memo.pdf" target="_blank">State of West Virginia v. Megan Ryman</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0563</td>
+            	<td><a href="memo-decisions/spring2012/11-0563memo.pdf" target="_blank">State of West Virginia v. Scott E. Minnick</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0458</td>
+            	<td><a href="memo-decisions/spring2012/11-0458memo.pdf" target="_blank">State of West Virginia v. Roger A. McKinney</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0661</td>
+            	<td><a href="memo-decisions/spring2012/11-0661memo.pdf" target="_blank">Frances A. Preast v. Burl Keith Skaggs, et al.</a></td>
+            	<td>ADM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0077</td>
+            	<td><a href="memo-decisions/spring2012/11-0077memo.pdf" target="_blank">D.C. v. Wayne Co. Board of Education</a></td>
+            	<td>ADM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0185</td>
+            	<td><a href="memo-decisions/spring2012/11-0185memo.pdf" target="_blank">Dean Miner v. Ricardo Pacheco</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0278</td>
+            	<td><a href="memo-decisions/spring2012/11-0278memo.pdf" target="_blank">Mitch Nelson v. Board of Education of Boone Co.</a></td>
+            	<td>ADM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/14/2012</td>
+            	<td>11-0650</td>
+            	<td><a href="memo-decisions/spring2012/11-0650memo.pdf" target="_blank">Kathy S. Lefler v. W. Va. Dept. of Education</a></td>
+            	<td>ADM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-1405 &amp; 11-1447, etc.</td>
+            	<td><a href="docs/spring2012/11-1405and11-1447.pdf" target="_blank">SER Thornton Cooper v. Natalie E. Tennant, Sec. of State, etc.</a></td>
+            	<td>OJ-M</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0596</td>
+            	<td><a href="memo-decisions/spring2012/11-0596memo.pdf" target="_blank">Sanford D. Creameans v. Christopher D. Chiles, Pros. Attorney</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0874</td>
+            	<td><a href="memo-decisions/spring2012/11-0874memo.pdf" target="_blank">State of West Virginia v. Matthew Jonathan Robey</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0619</td>
+            	<td><a href="memo-decisions/spring2012/11-0619memo.pdf" target="_blank">State of West Virginia v. Michelle Bryant</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0570</td>
+            	<td><a href="memo-decisions/spring2012/11-0570memo.pdf" target="_blank">Dana and Nancy Singleton v. Citizens Bank of Weston</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0966</td>
+            	<td><a href="memo-decisions/spring2012/11-0966memo.pdf" target="_blank">In Re: J.S. and K.S.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0930</td>
+            	<td><a href="memo-decisions/spring2012/11-0930memo.pdf" target="_blank">In Re: A.S. and W.M.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0913</td>
+            	<td><a href="memo-decisions/spring2012/11-0913memo.pdf" target="_blank">In Re: E.M.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0860</td>
+            	<td><a href="memo-decisions/spring2012/11-0860memo.pdf" target="_blank">In Re: A.M., S.M. and B.B.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0690</td>
+            	<td><a href="memo-decisions/spring2012/11-0690memo.pdf" target="_blank">State of West Virginia v. Brian Keith Hubbard</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0636</td>
+            	<td><a href="memo-decisions/spring2012/11-0636memo.pdf" target="_blank">State of West Virginia v. Dustin Chad Reed</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0534</td>
+            	<td><a href="memo-decisions/spring2012/11-0534memo.pdf" target="_blank">State of West Virginia v. Sherri Wukeson</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0545</td>
+            	<td><a href="memo-decisions/spring2012/11-0545memo.pdf" target="_blank">Samuel P. Sommerville, et al. v. Robert B. Rausenberger</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-1366</td>
+            	<td><a href="memo-decisions/spring2012/11-1366memo.pdf" target="_blank">In Re: I.F. and I.C.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-1347</td>
+            	<td><a href="memo-decisions/spring2012/11-1347memo.pdf" target="_blank">In Re: S.B. and D.B.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-1311</td>
+            	<td><a href="memo-decisions/spring2012/11-1311memo.pdf" target="_blank">In Re: D.B., F.B. and T.S.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-1242</td>
+            	<td><a href="memo-decisions/spring2012/11-1242memo.pdf" target="_blank">In Re: S.O.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0724</td>
+            	<td><a href="memo-decisions/spring2012/11-0724memo.pdf" target="_blank">In Re: the Matter of J.B. and J.B.</a></td>
+            	<td>FAM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0918</td>
+            	<td><a href="memo-decisions/spring2012/11-0918memo.pdf" target="_blank">State of West Virginia v. Danny Honaker, Jr.</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0835</td>
+            	<td><a href="memo-decisions/spring2012/11-0835memo.pdf" target="_blank">State of West Virginia v. Miguel Perez</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0825</td>
+            	<td><a href="memo-decisions/spring2012/11-0825memo.pdf" target="_blank">State of West Virginia v. John Payne</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0760</td>
+            	<td><a href="memo-decisions/spring2012/11-0760memo.pdf" target="_blank">State of West Virginia v. Joseph Suber</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0714</td>
+            	<td><a href="memo-decisions/spring2012/11-0714memo.pdf" target="_blank">State of West Virginia v. Thomas Eugene Gardner, Jr.</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0633</td>
+            	<td><a href="memo-decisions/spring2012/11-0633memo.pdf" target="_blank">State of West Virginia v. David L. Hunter</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0562</td>
+            	<td><a href="memo-decisions/spring2012/11-0562memo.pdf" target="_blank">State of West Virginia v. Larry E. Mayle, Jr.</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0829</td>
+            	<td><a href="memo-decisions/spring2012/11-0829memo.pdf" target="_blank">William Nesbitt v. Shannon Markle, Administrator</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/13/2012</td>
+            	<td>11-0852</td>
+            	<td><a href="memo-decisions/spring2012/11-0852memo.pdf" target="_blank">Melissa Dixon v. Estate of Faye Hudson, etc.</a></td>
+            	<td>PR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-1358 &amp; 11-1360</td>
+            	<td><a href="docs/spring2012/11-1358and11-1360d.pdf" target="_blank">SER W. Va. Dept. of Transportation v. Hon. Jeffrey B. Reed</a> (Workman, J. dissenting)</td>
+            	<td>OJ-P</td>
+            	<td>SEP</td>
+            </tr>
+         <tr>
+            	<td>2/10/2012</td>
+            	<td>11-1358 &amp; 11-1360</td>
+            	<td><a href="docs/spring2012/11-1358and11-1360.pdf" target="_blank">SER W. Va. Dept. of Transportation v. Hon. Jeffrey B. Reed</a></td>
+            	<td>OJ-P</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0073</td>
+            	<td><a href="docs/spring2012/11-0073c.pdf" target="_blank">In Re: The Marriage of: Zickefoose v. Zickefoose</a>(Workman, J. concurring, in part, and dissenting, in part)</td>
+            	<td>FAM</td>
+            	<td>SEP</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0073</td>
+            	<td><a href="docs/spring2012/11-0073.pdf" target="_blank">In Re: The Marriage of: Zickefoose v. Zickefoose</a></td>
+            	<td>FAM</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-1404</td>
+            	<td><a href="memo-decisions/spring2012/11-1404memo.pdf" target="_blank">SER Coal Age, Inc. v. Hon. Warren R. McGraw, et al.</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0257</td>
+            	<td><a href="memo-decisions/spring2012/11-0257memo.pdf" target="_blank">John S. Shannon v. City of Hurricane, et al.</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0277</td>
+            	<td><a href="memo-decisions/spring2012/11-0277memo.pdf" target="_blank">Gregory Allan Zerkel v. Dana C. Zerkel n/k/a Leech</a></td>
+            	<td>FAM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0211</td>
+            	<td><a href="memo-decisions/spring2012/11-0211memo.pdf" target="_blank">State of West Virginia v. Freddie Lee Bragg</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/10/2012</td>
+            	<td>11-0599</td>
+            	<td><a href="memo-decisions/spring2012/11-0599memo.pdf" target="_blank">State of West Virginia v. Kenneth Lenhart</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/10/2012</td>
+            	<td>11-1627</td>
+            	<td><a href="memo-decisions/spring2012/11-1627memo.pdf" target="_blank">SER Baker Installation v. Hon. Carrie Webster, Judge</a></td>
+            	<td>OJ-M</td>
+            	<td>MD</td>
+            </tr>
+         <tr>
+            	<td>2/9/2012</td>
+            	<td>11-0397</td>
+            	<td><a href="memo-decisions/spring2012/11-0397memo.pdf" target="_blank">Katy Addair v. Litwar Processing Co.</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>2/9/2012</td>
+            	<td>11-0248 &amp; 11-0701</td>
+            	<td><a href="docs/spring2012/11-0248and11-0701.pdf" target="_blank">Shenandoah Sales v. Assessor of Jefferson Co., etc</a></td>
+            	<td>ADM</td>
+            	<td>SO</td>
+            </tr>
+         <tr>
+            	<td>2/9/2012</td>
+            	<td>11-1260</td>
+            	<td><a href="docs/spring2012/11-1260.pdf" target="_blank">Big Lots Stores v. Rebecca and Kevin Arbogast</a></td>
+            	<td>TCR</td>
+            	<td>PC</td>
+            </tr>
+        <tr>
+            	<td>1/20/2012</td>
+            	<td>101347</td>
+            	<td><a href="memo-decisions/spring2012/101347memo.pdf" target="_blank">Marvin Shawn Bench v. W. Va. Office of Insurance Commissioner/Spartan Mining</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>101172</td>
+            	<td><a href="memo-decisions/spring2012/101172memo.pdf" target="_blank">Danny L. Boyles v. W. Va. Office of Insurance Commissioner/Turn 4 Truck and Auto</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>101116</td>
+            	<td><a href="memo-decisions/spring2012/101116memo.pdf" target="_blank">Jeana L. Hicks v. W. Va. Office of Insurance Commissioner/Westmoreland Coal</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>101102</td>
+            	<td><a href="memo-decisions/spring2012/101102memo.pdf" target="_blank">Shirley Snyder v. W. Va. Office of Insurance Commissioner//Bayer Corp.</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>101071</td>
+            	<td><a href="memo-decisions/spring2012/101071memo.pdf" target="_blank">Michael F. Estremera v. W. Va. Office of Insurance Commissioner/Royal Harvest</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>101060</td>
+            	<td><a href="memo-decisions/spring2012/101060memo.pdf" target="_blank">Roger L. Harris v. W. Va. Office of Insurance Commissioner/Patriot Mining</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>        
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>100965</td>
+            	<td><a href="memo-decisions/spring2012/100965memo.pdf" target="_blank">Richard D. Spurlock v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>     
+         <tr>
+            	<td>1/19/2012</td>
+            	<td>101561</td>
+            	<td><a href="memo-decisions/spring2012/101561memo.pdf" target="_blank">Richard D. Spurlock v. W. Va. Office of Insurance Commissioner/Appalachian Power</a></td>
+            	<td>WC</td>
+            	<td>MD</td>
+            </tr>        
+        	<tr>
+            	<td>1/27/2012</td>
+                <td>11-0565</td>
+                <td><a href="docs/spring2012/11-0565.pdf" target="_blank">Steven M. Posey and Michelle E. Posey v. City of Buckhannon</a></td>
+                <td>TCR</td>
+                <td>SO</td>
+            </tr>
+            <tr>
+            	<td>1/19/2012</td>
+            	<td>11-0206</td>
+            	<td><a href="docs/spring2012/11-0206.pdf" target="_blank">Albert Postlewait, Jr. v. City of Wheeling</a></td>
+            	<td>TCR</td>
+            	<td>SO</td>
+            </tr>
+            <tr>
+            	<td>1/19/2012</td>
+            	<td>11-0206</td>
+            	<td><a href="docs/spring2012/11-0206d.pdf" target="_blank">Albert Postlewait, Jr. v. City of Wheeling</a><br />(Davis, J. dissenting)</td>
+            	<td>TCR</td>
+            	<td>SEP</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>11-0399</td>
+            	<td><a href="docs/spring2012/11-0399.pdf" target="_blank">State of West Virginia v. Timothy Michael Waldron</a></td>
+            	<td>CR-F</td>
+            	<td>SO</td>
+            </tr>
+        <tr>
+            	<td>1/19/2012</td>
+            	<td>11-0191</td>
+            	<td><a href="memo-decisions/spring2012/11-0191memo.pdf" target="_blank">William Watson Jr. v. W. Va. DHHR and Mildred-Mitchell Bateman Hospital</a></td>
+            	<td>ADM</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1080</td>
+            	<td><a href="memo-decisions/spring2012/11-1080memo.pdf" target="_blank">In Re: S.M. and F.M.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1079</td>
+            	<td><a href="memo-decisions/spring2012/11-1079memo.pdf" target="_blank">In Re: S.M. and F.M.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1210</td>
+            	<td><a href="memo-decisions/spring2012/11-1210memo.pdf" target="_blank">In Re: R.P.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+         <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1227</td>
+            	<td><a href="memo-decisions/spring2012/11-1227memo.pdf" target="_blank">In Re: J. O. and I.O.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1087</td>
+            	<td><a href="memo-decisions/spring2012/11-1087memo.pdf" target="_blank">In Re: A.W.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1040</td>
+            	<td><a href="memo-decisions/spring2012/11-1040memo.pdf" target="_blank">In Re: D.D.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1027</td>
+            	<td><a href="memo-decisions/spring2012/11-1027memo.pdf" target="_blank">In Re: B.C., C.C. and A.C.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0951</td>
+            	<td><a href="memo-decisions/spring2012/11-0951memo.pdf" target="_blank">In Re: E.B.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-1137</td>
+            	<td><a href="memo-decisions/spring2012/11-1137memo.pdf" target="_blank">In Re: T.C., J.C., V.C., A.C., C.C., C.C. and E.C.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0696</td>
+            	<td><a href="memo-decisions/spring2012/11-0696memo.pdf" target="_blank">In Re: I.G., L.G., J.H., G.N. III, and T.N.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0798</td>
+            	<td><a href="memo-decisions/spring2012/11-0798memo.pdf" target="_blank">In Re: B.D.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0807</td>
+            	<td><a href="memo-decisions/spring2012/11-0807memo.pdf" target="_blank">In Re: B.D.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0834</td>
+            	<td><a href="memo-decisions/spring2012/11-0834memo.pdf" target="_blank">In Re: K.M.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0907</td>
+            	<td><a href="memo-decisions/spring2012/11-0907memo.pdf" target="_blank">In Re: K.S.</a></td>
+            	<td>JUV</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/18/2012</td>
+            	<td>11-0317</td>
+            	<td><a href="memo-decisions/spring2012/11-0317memo.pdf" target="_blank">State of West Virginia v. Shawn McCamick</a></td>
+            	<td>CR-F</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+            	<td>1/13/2012</td>
+            	<td>101278</td>
+            	<td><a href="memo-decisions/spring2012/101278memo.pdf" target="_blank">Donald Roger Layne v. Evelyn Siefert, Warden</a></td>
+            	<td>CIV-O</td>
+            	<td>MD</td>
+            </tr>
+        <tr>
+           		<td>1/13/2012</td>
+            	<td>101602</td>
+            	<td><a href="memo-decisions/spring2012/101602memo.pdf" target="_blank">Richard E. Smallwood v. Patrick Smallwood</a></td>
+            	<td>PR</td>
+            	<td>MD</td>
+            </tr>
+            <tr>
+           		<td>1/13/2012</td>
+            	<td>101615</td>
+            	<td><a href="memo-decisions/spring2012/101615memo.pdf" target="_blank">Jennifer J. Grafton-Gore v. Centra Bank</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+            <tr>
+           		<td>1/13/2012</td>
+            	<td>101573</td>
+            	<td><a href="memo-decisions/spring2012/101573memo.pdf" target="_blank">Robert Sanchez v. Tod Benson</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+                <tr>
+           		<td>1/13/2012</td>
+            	<td>11-0597</td>
+            	<td><a href="memo-decisions/spring2012/11-0597memo.pdf" target="_blank">Marlon Ferguson v. Nicholas J. Wall</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+            <tr>
+           		<td>1/13/2012</td>
+            	<td>11-1209</td>
+            	<td><a href="memo-decisions/spring2012/11-1209memo.pdf" target="_blank">Marlon Ferguson v. Kevin Hensel, etc.</a></td>
+            	<td>TCR</td>
+            	<td>MD</td>
+            </tr>
+            <tr>
+           		<td>1/13/2012</td>
+            	<td>11-0911</td>
+            	<td><a href="memo-decisions/spring2012/11-0911memo.pdf" target="_blank">Jeremy Toler v. Roger W. Goff</a></td>
+            	<td>PR</td>
+            	<td>MD</td>
+            </tr>
+            
+        
+    	</tbody>
+    </table>
+   
+  <!-- InstanceEndEditable --></div>
+  </div>
+<div id="main-footer" class="noPrint">
+  <p class="contact-info">&nbsp;<br />&nbsp;<br />&nbsp;</p>
+  
+  <ul id="additionalNav">
+  	<li class="redesign"><a href="about-this-redesign.html">About this Redesign</a></li>
+    <li class="twitter"><a href="http://www.twitter.com/wvcourts" target="_blank">Twitter</a></li>
+  </ul>
+  
+  <ul id="additionalNav2">
+  	<li class="redesign"><a href="../about-this-redesign.html">About this Redesign</a></li>
+    <li class="twitter"><a href="../courts-twitter.html">Twitter</a></li>
+  </ul>
+  
+  <ul class="navigation">
+    <li><a href="../contact.html">Contact Information</a></li>
+    <li><a href="../terms-of-use.html">Terms of Use</a></li>
+    <li><a href="http://www.wv.gov/Pages/default.aspx" target="_blank">State of WV Main Page</a></li>
+  </ul>
+  <p class="terms">The West Virginia Judicial System is an Equal Opportunity Employer committed to providing equal access and unbiased, non-discriminatory treatment to all.<br />
+    2011 West Virginia Court System - Supreme Court of Appeals. All Rights Reserved.</p>
+</div>
+</body>
+<!-- InstanceEnd --></html>
