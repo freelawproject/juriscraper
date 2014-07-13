@@ -18,3 +18,6 @@ class Site(okla.Site):
         self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1'.format(
             year=d.year
         )
+
+    def _get_precedential_statuses(self):
+        return ['Unpublished'] * len(self.case_names)
