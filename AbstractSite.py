@@ -240,3 +240,14 @@ class AbstractSite(object):
     def _download_backwards(self):
         # methods for downloading the entire Site
         pass
+
+    @staticmethod
+    def _cleanup_content(content):
+        """
+          Given the HTML from a page, the binary PDF file, or similar, do any last-minute cleaning.
+
+          This method should be called as the last step by any caller and works to do any cleanup that is necessary.
+          Usually, this is needed on HTML pages, in jurisdictions that post their content in an HTML page with
+          headers, footers and other content must be stripped after the page has been downloaded by the caller.
+        """
+        return content

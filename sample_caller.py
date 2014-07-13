@@ -22,6 +22,11 @@ def signal_handler(signal, frame):
     die_now = True
 
 
+def extract_doc_content(data):
+    # Your data extraction routines here.
+    pass
+
+
 def scrape_court(site, binaries=False):
     """Calls the requested court(s), gets its content, then throws it away.
 
@@ -51,6 +56,10 @@ def scrape_court(site, binaries=False):
                 v_print(3, traceback.format_exc())
                 continue
 
+            # Clean the data, then extract it using e.g. antiword, pdftotext, etc.
+            data = site._cleanup_content(data)
+            extract_doc_content(data)
+
         # Normally, you'd do your save routines here...
         v_print(1, 'Adding new document found at: %s' % download_url)
         attributes = site._all_attrs
@@ -63,9 +72,6 @@ def scrape_court(site, binaries=False):
                 else:
                     # Dates and such...
                     v_print(1, '    %s: %s' % (attr, value))
-
-        # Extract the contents using e.g. antiword, pdftotext, etc.
-        # extract_doc_content(data)
 
     v_print(3, '%s: Successfully crawled.' % site.court_id)
 

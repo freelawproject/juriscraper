@@ -7,6 +7,10 @@ most recent at the top.
 
 ------------------------------
 
+2014-07-13:
+ - Adds a new method on the AbstractSite object that should be implemented by all calling libraries. This method is used
+   to do post-download cleanup on PDFs and HTML files that Juriscraper unearths. See the bottom of AbstractSite for
+   details.
 
 2014-07-10:
  - Adds the PhantomJS dependency officially. Looks like there's no crawling Texas without it.
