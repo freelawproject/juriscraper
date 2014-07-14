@@ -12,7 +12,7 @@ import requests
 from selenium import webdriver
 
 from juriscraper.OpinionSite import OpinionSite
-from DeferringList import DeferringList
+from juriscraper.DeferringList import DeferringList
 from lib.string_utils import titlecase
 
 
