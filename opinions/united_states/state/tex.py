@@ -13,7 +13,7 @@ from selenium import webdriver
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.DeferringList import DeferringList
-from lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
