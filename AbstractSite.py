@@ -253,7 +253,6 @@ class AbstractSite(object):
         """
         return content
 
-    @staticmethod
     def _get_cookies(self):
         """
           Some websites require cookies in order to be scraped. This method provides a hook where cookies

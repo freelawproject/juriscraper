@@ -46,7 +46,7 @@ def scrape_court(site, binaries=False):
         if binaries:
             try:
                 opener = urllib2.build_opener()
-                for cookie_dict in site.cookies:
+                for cookie_dict in site._get_cookies():
                     opener.addheaders.append(("Cookie", "%s=%s" % (cookie_dict['name'], cookie_dict['value'])))
                 data = opener.open(download_url).read()
                 # test for empty files (thank you CA1)

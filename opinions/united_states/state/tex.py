@@ -11,9 +11,11 @@ from lxml import html
 import requests
 from selenium import webdriver
 
-from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+
 
 
 class Site(OpinionSite):
@@ -30,6 +32,7 @@ class Site(OpinionSite):
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
 
     def _download(self, request_dict={}):
+        logger.info("Running Selenium browser PhantomJS...")
         driver = webdriver.PhantomJS(executable_path='/usr/local/phantomjs/phantomjs')
         driver.get(self.url)
 
@@ -191,4 +194,4 @@ class Site(OpinionSite):
         if self.status is None:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
-        return self.cookies
+        return self._cookies
