@@ -49,6 +49,7 @@ class AbstractSite(object):
         self.use_sessions = False
         self.status = None
         self.back_scrape_iterable = None
+        self._cookies = []
 
         # Upstream metadata
         self.court_id = None
@@ -65,7 +66,7 @@ class AbstractSite(object):
         return '\n'.join(out)
 
     def parse(self):
-        if self.status != 200:
+        if self.status is None:
             # Run the downloader if it hasn't been run already
             self.html = self._download()
 
@@ -251,3 +252,23 @@ class AbstractSite(object):
           headers, footers and other content must be stripped after the page has been downloaded by the caller.
         """
         return content
+
+    @staticmethod
+    def _get_cookies(self):
+        """
+          Some websites require cookies in order to be scraped. This method provides a hook where cookies
+          can be retrieved by calling functions. Generally the cookies will be set by the _download() method.
+
+          self.cookies is a list of dicts of the form:
+          [
+              {
+                  u'domain':   u'www.search.txcourts.gov',
+                  u'httponly': True,
+                  u'name':     u'ASP.NET_SessionId',
+                  u'path':     u'/',
+                  u'secure':   False,
+                  u'value':    u'hryku05534xhgr45yxvusuux'
+              },
+          ]
+        """
+        return self._cookies

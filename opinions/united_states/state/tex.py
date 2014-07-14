@@ -13,6 +13,7 @@ from selenium import webdriver
 
 from juriscraper.OpinionSite import OpinionSite
 from DeferringList import DeferringList
+from lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
@@ -31,6 +32,10 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         driver = webdriver.PhantomJS(executable_path='/usr/local/phantomjs/phantomjs')
         driver.get(self.url)
+
+        # Set the cookie
+        self._cookies = driver.get_cookies()
+
         driver.implicitly_wait(10)
         search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
             court_nr=self.courts[self.court_name])
@@ -45,11 +50,11 @@ class Site(OpinionSite):
 
         start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
         start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-        # start_date.send_keys('7/3/2014')
+        #start_date.send_keys('7/3/2014')
 
         end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
         end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-        # end_date.send_keys('7/3/2014')
+        #end_date.send_keys('7/3/2014')
 
         submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
         submit.click()
@@ -108,18 +113,14 @@ class Site(OpinionSite):
 
             html_tree = html.fromstring(r.text)
             html_tree.make_links_absolute(self.url)
-
             plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
             defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
 
-            if not defendant.strip():
+            if defendant.strip():
                 # If there's a defendant
-                return '%s v. %s' % (plaintiff, defendant)
+                return titlecase('%s v. %s' % (plaintiff, defendant))
             else:
-                return plaintiff
-
-            # TODO: Sort by date
-            # TODO: defendant not getting populated.
+                return titlecase(plaintiff)
 
         seed_urls = []
         if isinstance(self.html, list):
@@ -184,3 +185,10 @@ class Site(OpinionSite):
     def _get_opinion_count(html_tree):
         return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
+
+    @staticmethod
+    def _get_cookies(self):
+        if self.status is None:
+            # Run the downloader if it hasn't been run already
+            self.html = self._download()
+        return self.cookies
