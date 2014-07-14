@@ -189,7 +189,6 @@ class Site(OpinionSite):
         return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
 
-    @staticmethod
     def _get_cookies(self):
         if self.status is None:
             # Run the downloader if it hasn't been run already
