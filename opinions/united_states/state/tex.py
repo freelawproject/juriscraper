@@ -68,42 +68,34 @@ class Site(OpinionSite):
         if records_nr:
             self.records_nr = int(records_nr.text)
         if nr_of_pages:
+            html_tree = self._text_to_etree(driver)
             if nr_of_pages.text == '1':
-                text = driver.page_source
                 driver.close()
-
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
                 return html_tree
             else:
-                html_pages = []
-                text = driver.page_source
-
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
-                html_pages.append(html_tree)
-
+                html_pages = [html_tree]
                 for i in xrange(int(nr_of_pages.text) - 1):
+
                     next_page = driver.find_element_by_class_name('rgPageNext')
                     next_page.click()
                     driver.implicitly_wait(5)
 
-                    text = driver.page_source
-
-                    html_tree = html.fromstring(text)
-                    html_tree.make_links_absolute(self.url)
-
-                    remove_anchors = lambda url: url.split('#')[0]
-                    html_tree.rewrite_links(remove_anchors)
+                    html_tree = self._text_to_etree(driver)
                     html_pages.append(html_tree)
                 driver.close()
                 return html_pages
+        else:
+            driver.close()
+
+    def _text_to_etree(self, driver):
+        text = driver.page_source
+
+        html_tree = html.fromstring(text)
+        html_tree.make_links_absolute(self.url)
+
+        remove_anchors = lambda url: url.split('#')[0]
+        html_tree.rewrite_links(remove_anchors)
+        return html_tree
 
     def _get_case_names(self):
         def fetcher(url):
