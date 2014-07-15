@@ -17,12 +17,12 @@ from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
 
-
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
+        #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
         self.courts = {'sc': 0, 'ccrimapp': 1, 'capp_1': 2, 'capp_2': 3, 'capp_3': 4,
                        'capp_4': 5, 'capp_5': 6, 'capp_6': 7, 'capp_7': 8, 'capp_8': 9,
@@ -53,11 +53,9 @@ class Site(OpinionSite):
 
         start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
         start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-        #start_date.send_keys('7/3/2014')
 
         end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
         end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-        #end_date.send_keys('7/3/2014')
 
         submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
         submit.click()

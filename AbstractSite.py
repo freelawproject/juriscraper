@@ -120,10 +120,13 @@ class AbstractSite(object):
             if item is not None:
                 cleaned_item = []
                 for sub_item in item:
-                    if isinstance(sub_item, basestring):
-                        sub_item = clean_string(sub_item)
-                    if attr == 'case_names':
-                        sub_item = harmonize(sub_item)
+                    if attr == 'download_urls':
+                        sub_item = sub_item.strip()
+                    else:
+                        if isinstance(sub_item, basestring):
+                            sub_item = clean_string(sub_item)
+                        if attr == 'case_names':
+                            sub_item = harmonize(sub_item)
                     cleaned_item.append(sub_item)
                 self.__setattr__(attr, cleaned_item)
 
