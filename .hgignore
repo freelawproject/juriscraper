@@ -1,0 +1,7 @@
+syntax: glob
+
+# All compiled .pyc files
+*.pyc
+
+# File created by Mac OS X
+.DS_Store
