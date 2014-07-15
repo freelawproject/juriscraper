@@ -1,13 +1,13 @@
 # coding=utf-8
-"""Scraper for Colorado Supreme Court
-CourtID: colo
-Court Short Name: Colo.
+"""Scraper for Conneticut Supreme Court
+CourtID: conn
+Court Short Name: Conn.
 Author: Asadullah Baig<asadullahbeg@outlook.com>
-Reviewer: mlr
+
 Date created: 2014-07-11
 """
 
-from OpinionSite import OpinionSite
+from juriscraper.OpinionSite import OpinionSite
 from lib.string_utils import clean_string
 import re
 from datetime import date
@@ -23,10 +23,10 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         names=[]
-        casenames=self.html.xpath('//*[@id="AutoNumber1"]/tr[2]/td/table/tr/td/ul/li//text()')
+        casenames=self.html.xpath('//*[@id="AutoNumber1"]/tr[2]/td/table/tr/td//ul//text()')
         for x in range(0,len(casenames)):
             if "-" in casenames[x]:
-                names.append(clean_string(casenames[x]))
+                 names.append(clean_string(casenames[x]))
         return names
 
     def _get_download_urls(self):
@@ -34,15 +34,12 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates=[]
-        for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p/b'):
-            
-            for x in range(0,len(title.getparent().xpath('following-sibling::ul[1]/li'))):
+        for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p//text()'):
+            for x in range(0,len(title.getparent().xpath("following::ul[1]//a/@href[contains(., 'pdf')]"))):
                 dates.append( date.fromtimestamp(
-                      time.mktime(time.strptime(self._get_last_entry(clean_string(title.text)),'%m/%d/%y'))))
-                
+                      time.mktime(time.strptime(self._get_last_entry(clean_string(title)),'%m/%d/%y'))))
         return dates
-                
-
+    
     def _get_docket_numbers(self):
         return self._get_data_by_grouping_name('docket_numbers')
 
@@ -53,7 +50,6 @@ class Site(OpinionSite):
                 publish.append('Not Published')
             else:
                 publish.append('Published')
-                
         return publish
 
     def _get_last_entry(self,text):
@@ -63,17 +59,16 @@ class Site(OpinionSite):
     def _get_data_by_grouping_name(self, group_name):
         path = '//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p/b'
         meta_data = []
-        for title in self.html.xpath(path):
-            if group_name is 'href':
-                links= title.getparent().xpath('//@href')
-                for i in range(0,len(links)):
-                    if( '.pdf' in links[i]):
-                       meta_data.append(links[i])
-                return meta_data
-            if group_name is 'docket_numbers':
-                docket_numbers=title.getparent().xpath('following-sibling::ul/li//a/text()')
-                for d in docket_numbers:
-                    meta_data.append(clean_string(d))
-                return meta_data
-        return meta_data
+        if group_name is 'href':
+            links= self.html.xpath('//@href')
+            for i in range(0,len(links)):
+                if( '.pdf' in links[i]):
+                    meta_data.append(links[i])
+            return meta_data
+        if group_name is 'docket_numbers':
+            docket_numbers=self.html.xpath('//tr[2]//ul//a//text()')
+            for d in docket_numbers:
+                if re.search(r"([AC]|[SC]\d{5,5})",d):
+                   meta_data.append(d)
+            return meta_data
     
