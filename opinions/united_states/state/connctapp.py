@@ -7,7 +7,7 @@ Date created: 2014-07-11
 """
 
 from datetime import date
-from opinions.united_states.state import conn
+from juriscraper.opinions.united_states.state import conn
 
 class Site(conn.Site):
     def __init__(self):
