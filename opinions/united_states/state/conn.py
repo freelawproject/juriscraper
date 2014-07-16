@@ -1,5 +1,5 @@
 # coding=utf-8
-"""Scraper for Conneticut Supreme Court
+"""Scraper for Connecticut Supreme Court
 CourtID: conn
 Court Short Name: Conn.
 Author: Asadullah Baig<asadullahbeg@outlook.com>
@@ -51,13 +51,12 @@ class Site(OpinionSite):
             else:
                 publish.append('Published')
         return publish
-
-    def _get_last_entry(self,text):
+    @staticmethod
+    def _get_last_entry(text):
         t1=text.split()
         return t1[len(t1)-1][:-1]
        
     def _get_data_by_grouping_name(self, group_name):
-        path = '//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p/b'
         meta_data = []
         if group_name is 'href':
             links= self.html.xpath('//@href')
