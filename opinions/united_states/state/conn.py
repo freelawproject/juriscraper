@@ -38,7 +38,7 @@ class Site(OpinionSite):
         for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p//text()'):
             for x in range(0, len(title.getparent().xpath("following::ul[1]//a/@href[contains(., 'pdf')]"))):
                 dates.append(date.fromtimestamp(
-                             time.mktime(time.strptime(self._get_last_entry(clean_string(title)),'%m/%d/%y'))))
+                             time.mktime(time.strptime(self._get_last_entry(clean_string(title)), '%m/%d/%y'))))
         return dates
     
     def _get_docket_numbers(self):
@@ -55,7 +55,7 @@ class Site(OpinionSite):
         
     @staticmethod
     def _get_last_entry(text):
-        t1=text.split()
+        t1 = text.split()
         return t1[len(t1)-1][:-1]
        
     def _get_data_by_grouping_name(self, group_name):
@@ -72,4 +72,3 @@ class Site(OpinionSite):
                 if re.search(r"([AC]|[SC]\d{5})", d):
                     meta_data.append(d)
             return meta_data
-    
