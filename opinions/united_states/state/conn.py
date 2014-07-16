@@ -19,7 +19,8 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.crawl_date = date.today()
-        self.url = 'http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm'.format(year=self.crawl_date.strftime("%y"))
+        self.url = 'http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm'.format(
+        year=self.crawl_date.strftime("%y"))
         self.court_id = self.__module__
 
     def _get_case_names(self):
