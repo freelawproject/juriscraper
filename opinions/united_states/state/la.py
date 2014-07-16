@@ -166,8 +166,3 @@ class Site(OpinionSite):
                     if text2:
                         docket_numbers.append(re.search('(\d+ ?-.*- ?\d+)\s*(.*)', text2).group(1))
         return docket_numbers
-
-
-site = Site()
-site.parse()
-print(str(site))
