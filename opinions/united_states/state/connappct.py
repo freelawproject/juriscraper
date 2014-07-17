@@ -1,6 +1,6 @@
 """Scraper for Connecticut Appellate Court
 CourtID: connctapp
-Court Short Name: Connctapp.
+Court Short Name: Connappct.
 Author: Asadullah Baig<asadullahbeg@outlook.com>
 Date created: 2014-07-11
 """
