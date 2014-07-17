@@ -31,8 +31,8 @@ __all__ = [
     'illappct',
     'ind',
     'la',
-    #'mass',
-    #'massapp'
+    'mass',
+    'massapp'
     'md',
     'mdctspecapp',
     'me',
