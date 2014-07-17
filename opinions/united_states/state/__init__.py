@@ -18,7 +18,7 @@ __all__ = [
     'colo',
     'coloctapp',
     'conn',
-    'connctapp',
+    'connappct',
     'dc',
     'haw',
     'haw_beginningofyear',
