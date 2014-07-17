@@ -2,14 +2,11 @@
 # CourtID: massapp
 #Court Short Name: MS
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-12
 
 from juriscraper.opinions.united_states.state import mass
 import re
-import time
-from datetime import date
-from lxml import html, etree
 
 
 class Site(mass.Site):
@@ -17,4 +14,6 @@ class Site(mass.Site):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.court_identifier = '(AC'
+        self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(
+            id=self.court_identifier)
         self.grouping_regex = re.compile("(.*) \((AC \d+-P-\d+)\) \((.+)\)")
