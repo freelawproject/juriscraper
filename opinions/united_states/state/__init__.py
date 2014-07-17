@@ -30,6 +30,9 @@ __all__ = [
     'ill',
     'illappct',
     'ind',
+    'la',
+    'mass',
+    'massappct'
     'md',
     'mdctspecapp',
     'me',
@@ -75,7 +78,7 @@ __all__ = [
     'tenn',
     'tennctapp',
     'tenncrimapp',
-    'tex',
+    #'tex',
     # 'texapp1',
     # 'texapp2',
     # 'texapp3',
