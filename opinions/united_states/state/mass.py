@@ -1,54 +1,47 @@
+# Scraper for Massachusetts Supreme Court
+# CourtID: mass
+#Court Short Name: MS
+#Author: Andrei Chelaru
+#Reviewer: mlr
+#Date: 2014-07-12
+
 from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
-from lxml import html
-
-'''
-TODO:
- - Purge footnotess
- - Find the doc type
- - figure out how to handle HTML
-'''
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.massreports.com/slipops/redirect.aspx?location=sjcopinions'
-        #self.url = 'http://weblinks.westlaw.com/signon/default.wl?ACTION=SEARCH&bQlocfnd=True&clientid=massreports&DB=MA%2DORSLIP&frompool=1&Method=TNC&path=%2Fsearch%2Fdefault%2Ewl&pwd=%7EAEP8I%5E%3D5I%2B%3B%2Fa%5Dj%3E%3DQP%5F%5Bb%3DP%2FF%3F%5D%7D%60M%60&query=to%28allsct+allsctrs+allsctoj%29+&rs=MAOR1%2E0&sp=MassOF%2D1001&ssl=n&strRecreate=no&vr=1%2E0'
-        self.use_sessions = True
+        self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
-        self.grouping_regex = re.compile("(.*)\.\w{3}(.*)\.\w{3}(.*)\.")
+        self.court_identifier = 'SJC'
+        self.grouping_regex = re.compile("(.*) \((SJC \d+)\) \((.+)\)")
+        self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
 
     def _get_case_names(self):
-        return [self.grouping_regex.search(s).group(1)
-                for s in self.html.xpath('//span[@class[contains(.,"ResultSubListItem")]]/text()')]
+        path = self.base_path + "//text()[contains(., '{id}')]".format(
+            id=self.court_identifier
+        )
+        return [self.grouping_regex.search(s).group(1) for s in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        return [a for a in self.html.xpath('//span[@class[contains(.,"Cite")]]/a/@href')]
+        path = self.base_path + "/following-sibling::link/@href"
+        return list(self.html.xpath(path))
 
     def _get_case_dates(self):
         dates = []
-        for s in self.html.xpath('//span[@class[contains(.,"ResultSubListItem")]]/text()'):
+        path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
+        for s in self.html.xpath(path):
             s = self.grouping_regex.search(s).group(3)
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%m %d, %Y'))))
+            dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%B %d, %Y'))))
         return dates
 
     def _get_docket_numbers(self):
+        path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
         return [self.grouping_regex.search(s).group(2)
-                for s in self.html.xpath('//span[@class[contains(.,"ResultSubListItem")]]/text()')]
+                for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        for e in self.html.xpath("//item/category"):
-            text = html.tostring(e, method='text').lower().strip()
-            if "unpublished" in text:
-                statuses.append("Unpublished")
-            elif "published" in text:
-                statuses.append("Published")
-            elif "errata" in text:
-                statuses.append("Errata")
-            else:
-                statuses.append("Unknown")
-        return statuses
+        return ["Published"] * len(self.case_dates)
