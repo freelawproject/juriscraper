@@ -27,7 +27,7 @@ class Site(OpinionSite):
         html_l = OpinionSite._download(self)
         s = requests.session()
         htmls = []
-        for url in html_l.xpath("//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]"
+        for url in html_l.xpath("//td[contains(./text(),'pinion') or contains(./text(), 'CURIAM')  or contains(./text(), 'uriam')]"
                                 "/preceding-sibling::td[1]//@href"):
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
