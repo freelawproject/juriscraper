@@ -78,7 +78,7 @@ __all__ = [
     'tenn',
     'tennctapp',
     'tenncrimapp',
-    'tex',
+    #'tex',
     # 'texapp1',
     # 'texapp2',
     # 'texapp3',

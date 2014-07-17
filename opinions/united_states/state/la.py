@@ -2,14 +2,13 @@
 # CourtID: la
 # Court Short Name: LA
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date: 2014-07-05
 
-from lxml import html, etree
+from lxml import html
 import requests
-from requests.exceptions import HTTPError
-from tests import MockRequest
 
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
 import re
 import time
@@ -26,9 +25,9 @@ class Site(OpinionSite):
     def _download(self, request_dict={}):
         html_l = OpinionSite._download(self)
         s = requests.session()
-        htmls = []
+        html_trees = []
         for url in html_l.xpath("//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]"
-                                "/preceding-sibling::td[1]//@href"):
+                                "/preceding-sibling::td[1]//@href")[:2]:
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
                       **request_dict)
@@ -45,8 +44,8 @@ class Site(OpinionSite):
 
             remove_anchors = lambda url: url.split('#')[0]
             html_tree.rewrite_links(remove_anchors)
-            htmls.append(html_tree)
-        return htmls
+            html_trees.append(html_tree)
+        return html_trees
 
     def _get_case_names(self):
         case_names = []
@@ -84,13 +83,13 @@ class Site(OpinionSite):
     @staticmethod
     def _add_judges(html_tree):
         judges = []
-        for element in html_tree.xpath("//strong[contains(., 'J.') or contains(., 'CURIAM')]"):
-            text = ' '.join(list(element.xpath(".//text()")))
+        for e in html_tree.xpath("//strong[contains(., 'J.') or contains(., 'CURIAM')]"):
+            text = html.tostring(e, method='text', encoding='unicode')
             text = ' '.join(text.split())
             match = re.search('(\w+\s*\w+,?\s?J?\.?)', text)
             if match:
                 judge = match.group(1)
-                judge = re.sub('BY ', '', judge)
+                judge = re.sub('^BY ', '', judge)
                 if 'CURIAM' in judge:
                     preceding_judge = 'CURIAM'
                 else:
@@ -145,14 +144,13 @@ class Site(OpinionSite):
                         case_name = re.search('(\w+.+)+', text).group(1)
                 except AttributeError:
                     case_name = re.search('(\w+.+)+', text).group(1)
-                case_names.append(case_name)
+                case_names.append(titlecase(case_name))
 
         return case_names
 
     @staticmethod
     def _add_docket_numbers(html_tree):
         docket_numbers = []
-        path = "//blockquote//text()[string-length(translate(., translate(.,'0123456789',''), '')) > 6 and starts-with(normalize-space(), '20')]"
         for element in html_tree.xpath("//p[contains(., 'v.') or contains(., 'IN RE') or contains(., 'IN THE') or contains(., 'vs.')]//a"):
             text = ' '.join(list(element.xpath(".//text()")))
             text = ' '.join(text.split())
