@@ -167,6 +167,62 @@ def titlecase(text, DEBUG=False):
 
     return text
 
+
+def fix_camel_case(s):
+    """Sometimes courts provide nasty camel-cased content instead of real words. This code attempts to fix that."""
+    if ' ' in s:
+        s_out = s
+    else:
+        s_out = s[0]
+        for i in xrange(1, len(s)):
+            # Iterate over the letters, starting with the second one.
+            if s[i - 1].isupper() and s[i].isupper():
+                # A pattern like 'PAPublic' --> PA Public
+                try:
+                    next_letter_is_lower = s[i + 1].islower() and s[i+1] != 'v'
+                except IndexError:
+                    # End of string. Break.
+                    s_out += s[i]
+                    continue
+                if next_letter_is_lower:
+                    s_out += ' %s' % s[i]
+                else:
+                    s_out += s[i]
+            elif s[i - 1].islower() and s[i].isupper():
+                # A pattern like 'McLaughlin'
+                try:
+                    mac_or_mc = ((s[i - 2] == 'a' and s[i - 3] == 'M') or
+                                 s[i - 2] == 'M')
+                except KeyError:
+                    s_out += ' %s' % s[i]
+                if s[i - 1] == 'c' and mac_or_mc:
+                    s_out += s[i]
+                else:
+                    s_out += ' %s' % s[i]
+            elif s[i].isupper() and s[i-1].islower():
+                # Uppercase letter preceded by a lowercase one. Add a space then the letter.
+                s_out += ' %s' % s[i]
+            else:
+                s_out += s[i]
+        # Fix v.'s that don't have spaces. These come in two forms:
+        # 1. So and sov.so and so
+        s_out = ' '.join(re.sub('v\.', ' v. ', s_out).split())
+        # 2. So and sov so and so --> So and so v. so and so
+        if 'v.' not in s_out:
+            s_out = ' '.join(re.sub('([^ ])v ', r'\1 v. ', s_out).split())
+
+        # Fix strings like Governorof, Stateof, Secretaryofthe
+        if 'of' in s_out:
+            s_out = re.sub(r'([a-zA-Z])of( |(?:the))', r'\1 of\2', s_out)
+        if 'the' in s_out:
+            s_out = re.sub(r'([a-zA-Z])the ', r'\1 the ', s_out)
+
+        # Fix strings like Santomenno,etal v. John Hancock Life Ins
+        if 'etal' in s_out:
+            s_out = re.sub(r',?etal( |\Z)', ' ', s_out).strip()
+    return s_out
+
+
 # For use in harmonize function
 # More details: http://www.law.cornell.edu/citation/4-300.htm
 US = 'USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States'

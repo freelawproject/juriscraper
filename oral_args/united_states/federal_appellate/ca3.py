@@ -2,12 +2,13 @@
 # CourtID: ca3
 # Court Short Name: ca3
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 18 July 2014
 
 from datetime import datetime
 import re
 
+from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -31,8 +32,8 @@ class Site(OralArgumentSite):
 
     @staticmethod
     def _return_case_name(e):
-        case_name = re.search('(\d{2}.*\d{3,4})?(.+).wma', e)
-        return case_name.group(2)
+        case_name = re.search('(\d{2}.*\d{3,4})?(.+).wma', e).group(2)
+        return fix_camel_case(case_name)
 
     def _get_case_dates(self):
         path = '//item/description/text()'
@@ -51,6 +52,8 @@ class Site(OralArgumentSite):
         case_name = re.search('(\d{2}.*\d{3,4})?(.+).wma', e)
         docket_number = case_name.group(1)
         if docket_number:
+            # Surround ampersands with spaces and remove dup spaces if created
+            docket_number = ' '.join(re.sub('&', ' & ', docket_number).split())
             return docket_number
         else:
             return ''

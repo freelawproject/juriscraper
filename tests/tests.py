@@ -11,6 +11,7 @@ import unittest
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, is_first_month_in_quarter
 from juriscraper.lib.string_utils import clean_string
+from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
@@ -96,11 +97,6 @@ class ScraperExampleTest(unittest.TestCase):
 
 
 class StringUtilTest(unittest.TestCase):
-    def setUp(self):
-        pass
-
-    def tearDown(self):
-        pass
 
     def test_quarter(self):
         answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4, 11: 4, 12: 4}
@@ -281,6 +277,46 @@ class StringUtilTest(unittest.TestCase):
         for pair in test_pairs:
             self.assertEqual(titlecase(force_unicode(pair[0])),
                              pair[1])
+
+    def test_fixing_camel_case(self):
+        """Can we correctly identify and fix camelCase?"""
+        test_pairs = (
+            # A nasty one with a v in the middle and two uppercase letters
+            ('Metropolitanv.PAPublic',
+             'Metropolitan v. PA Public'),
+            # An OK string.
+            ('In Re Avandia Marketing Sales Practices & Products Liability Litigation',
+             'In Re Avandia Marketing Sales Practices & Products Liability Litigation'),
+            # Partial camelCase should be untouched.
+            ('PPL EnergyPlus, LLC, et al v. Solomon, et al',
+             'PPL EnergyPlus, LLC, et al v. Solomon, et al'),
+            # The v. has issues.
+            ('Pagliaccettiv.Kerestes',
+             'Pagliaccetti v. Kerestes'),
+            ('Coxv.Hornetal',
+             'Cox v. Horn'),
+            ('InReNortelNetworksInc',
+             'In Re Nortel Networks Inc'),
+            # Testing with a Mc.
+            ('McLaughlinv.Hallinan',
+             'McLaughlin v. Hallinan'),
+            # Ends with uppercase letter
+            ('TourchinvAttyGenUSA',
+             'Tourchin v. Atty Gen USA'),
+            ('USAv.Brown',
+             'USA v. Brown'),
+            # Fix 'of', ',etal', and the problems
+            ('RawdinvTheAmericanBrdofPediatrics',
+             'Rawdin v. The American Brd of Pediatrics'),
+            ('Santomenno,etalv.JohnHancockLifeInsuranceCompany,etal',
+             'Santomenno v. John Hancock Life Insurance Company'),
+            ('BaughvSecretaryoftheNavy',
+             'Baugh v. Secretary of the Navy'),
+            ('Smallv.CamdenCountyetal',
+             'Small v. Camden County'),
+        )
+        for pair in test_pairs:
+            self.assertEqual(pair[1], fix_camel_case(pair[0]))
 
 if __name__ == '__main__':
     unittest.main()
