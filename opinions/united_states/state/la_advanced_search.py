@@ -2,7 +2,7 @@
 #CourtID: la
 #Court Short Name: LA
 #Author: Andrei Chelaru
-#Reviewer:
+#Reviewer: mlr
 #Date: 2014-07-16
 
 from lxml import html, etree
@@ -117,7 +117,7 @@ class Site(OpinionSite):
         else:
             # the docket link should be opened and searched for the docket number
             return ''
-    
+
     def _get_judges(self):
         return map(self._return_judge, self.nr_of_documents)
 

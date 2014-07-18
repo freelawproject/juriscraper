@@ -1,5 +1,6 @@
 # Author: Krist Jin
-# Date created:2013-08-18
+# 2013-08-18: Created.
+# 2014-07-17: Updated by mlr to remedy InsanityException.
 
 from datetime import datetime
 from lxml import html
@@ -12,27 +13,27 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www.state.il.us/court/Opinions/recent_appellate.asp'
+        self.base_path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a][count(td) = 5]'
 
     def _get_download_urls(self):
-        path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[5]//a/@href'
+        path = self.base_path + '/td[5]//a/@href'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]'
-                                 '/td[5]//a[normalize-space(text())]'):
+        for e in self.html.xpath(self.base_path + '/td[5]//a[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
 
     def _get_case_dates(self):
-        path = '//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[1]/div/text()'
+        path = self.base_path + '/td[1]/div/text()'
         return [datetime.strptime(date_string, '%m/%d/%y').date()
                 for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]//strong[normalize-space(text())]'):
+        for e in self.html.xpath(self.base_path + '/td[3]//strong[normalize-space(text())]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'Rel' in s:
                 statuses.append('Unpublished')
@@ -42,7 +43,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[3]'):
+        for e in self.html.xpath(self.base_path + '/td[3]'):
             s = html.tostring(e, method='text', encoding='unicode')
             s = ' '.join(s.split())
             s = s.replace("Official Reports", "")
@@ -52,7 +53,7 @@ class Site(OpinionSite):
 
     def _get_neutral_citations(self):
         neutral_citations = []
-        for e in self.html.xpath('//table[@class="content"]//table//tr[not(name(..)="thead") and descendant::a]/td[4]'):
+        for e in self.html.xpath(self.base_path + '/td[4]'):
             s = html.tostring(e, method='text', encoding='unicode')
             neutral_citations.append(s)
         return neutral_citations

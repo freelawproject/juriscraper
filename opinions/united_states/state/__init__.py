@@ -17,6 +17,8 @@ __all__ = [
     'calctapp_u',
     'colo',
     'coloctapp',
+    'conn',
+    'connappct',
     'dc',
     'haw',
     'haw_beginningofyear',
@@ -31,8 +33,8 @@ __all__ = [
     'illappct',
     'ind',
     'la',
-    #'mass',
-    #'massapp'
+    'mass',
+    'massappct'
     'md',
     'mdctspecapp',
     'me',
@@ -78,7 +80,7 @@ __all__ = [
     'tenn',
     'tennctapp',
     'tenncrimapp',
-    'tex',
+    #'tex',
     # 'texapp1',
     # 'texapp2',
     # 'texapp3',
