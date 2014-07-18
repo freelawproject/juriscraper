@@ -63,15 +63,18 @@ We use a few tools pretty frequently while building these scrapers. The first is
 xpath-tester can be installed locally in a few minutes or is available at
 [http://xpath.courtlistener.com][7].
 
-We also generally use Eclipse with the PyDev and Aptana tools installed. This
-is useful because it allows syntax highlighting and PyLint integration.
+We also generally use Eclipse with the PyDev and Aptana tools installed or 
+Intellij with PyCharm installed. These are useful because they allow syntax 
+highlighting, code inspection, and PyLint integration. Intellij is particularly
+strong in this area and a license is available to contributors.
 
 For scrapers to be merged:
 
  - `python tests/tests.py` must pass, listing the results for any new scrapers
- - a *_example file should be included (this is needed for the tests to
-   run your code)
- - your code should be [PEP8][4] compliant with no major Pylint problems
+ - a *_example* file must be included (this is needed for the tests to
+   run your code -- see examples of these files next to any current scraper).
+ - your code should be [PEP8][4] compliant with no major Pylint problems or
+Intellij inspection issues.
  - your code should efficiently parse a page, returning no exceptions or
    speed warnings
 
@@ -155,18 +158,19 @@ Version History
 
 **Future Roadmap**
 
- - 0.3 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
- - 0.4 - Support for all state courts of last resort (typically the "Supreme" court)
- - 0.5 - Support for all intermediate appellate state courts
- - 0.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
- - 0.7 - Support for all federal district courts with non-PACER opinion listings
- - 0.8 - Support for all federal district courts with PACER written opinion reports (+JPML)
- - 0.9 - Support for all federal district bankruptcy courts
- - 1.0 - For every court above where a backscraper is possible, it is implemented.
- - 1.1 - Support video, oral argument audio, and transcripts everywhere available
+ - 0.9 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
+ - 1.0 - Support for all state courts of last resort (typically the "Supreme" court)
+ - 1.5 - Support for all intermediate appellate state courts
+ - 1.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
+ - 2.0 - Support for all federal district courts with non-PACER opinion listings
+ - 2.5 - Support for all federal district courts with PACER written opinion reports (+JPML)
+ - 2.6 - Support for all federal district bankruptcy courts
+ - 3.0 - For every court above where a backscraper is possible, it is implemented.
 
 **Beyond**
- - add other countries, starting with courts issuing opinions in English.
+ - Support video, oral argument audio, and transcripts everywhere available
+ - Add other countries, starting with courts issuing opinions in English.
+ 
 
 License
 ========

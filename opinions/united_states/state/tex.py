@@ -7,6 +7,7 @@
 
 
 from datetime import date
+import os
 from lxml import html
 import requests
 from selenium import webdriver
@@ -33,7 +34,10 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         logger.info("Running Selenium browser PhantomJS...")
-        driver = webdriver.PhantomJS(executable_path='/usr/local/phantomjs/phantomjs')
+        driver = webdriver.PhantomJS(
+            executable_path='/usr/local/phantomjs/phantomjs',
+            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+        )
         driver.get(self.url)
 
         # Set the cookie
