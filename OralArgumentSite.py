@@ -11,7 +11,7 @@ class OralArgumentSite(AbstractSite):
     def __init__(self):
         super(OralArgumentSite, self).__init__()
 
-        self._opt_attrs = ['docket_numbers']
+        self._opt_attrs = ['docket_numbers', 'judges']
         self._req_attrs = ['case_dates', 'case_names', 'download_urls']
         # For date sorting to work, case_dates must be the first item in _all_attrs.
         self._all_attrs = self._req_attrs + self._opt_attrs
@@ -30,4 +30,7 @@ class OralArgumentSite(AbstractSite):
         return None
 
     def _get_docket_numbers(self):
+        return None
+
+    def _get_judges(self):
         return None
