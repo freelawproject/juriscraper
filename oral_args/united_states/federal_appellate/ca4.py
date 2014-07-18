@@ -34,6 +34,10 @@ class Site(OralArgumentSite):
         e = ''.join(e.split())
         return datetime.strptime(e, '%m/%d/%Y').date()
 
+    def _get_judges(self):
+        path = '//tr/td[4]/text()'
+        return list(self.html.xpath(path))
+
     def _get_docket_numbers(self):
         path = '//tr/td[2]/a/text()'
         return list(self.html.xpath(path))
