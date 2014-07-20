@@ -35,7 +35,7 @@ __all__ = [
     'ind',
     'la',
     'mass',
-    'massappct'
+    'massappct',
     'md',
     'mdctspecapp',
     'me',
