@@ -1,8 +1,8 @@
-"""Scraper for Supreme Court of U.S. OYEZ
+"""Scraper for Supreme Court of U.S.
 CourtID: scotus
 Court Short Name: scotus
 Author: Andrei Chelaru
-Reviewer:
+Reviewer: mlr
 Date created: 20 July 2014
 """
 
@@ -22,7 +22,7 @@ class Site(OralArgumentSite):
         return map(self._return_download_url, self.html.xpath(path))
 
     def _return_download_url(self, d):
-        file_type = 'mp3' # or 'wma'
+        file_type = 'mp3' # or 'wma' is also available for any case.
         download_url = 'http://www.supremecourt.gov/media/audio/{type}files/{docket_number}.{type}'.format(
             type=file_type,
             docket_number=d
@@ -31,18 +31,11 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         path = "id('maincontentbox')//tr//a/text()/ancestor::tr[1]/td[1]/text()[2]"
-        return map(self._return_case_name, self.html.xpath(path))
-
-    def _return_case_name(self, e):
-        return e.lstrip('. ')
+        return [s.lstrip('. ') for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
         path = "id('maincontentbox')//tr//a/text()/ancestor::tr[1]/td[2]/text()"
-        return map(self._return_case_date, self.html.xpath(path))
-
-    @staticmethod
-    def _return_case_date(e):
-        return datetime.strptime(e, '%m/%d/%y').date()
+        return [datetime.strptime(s, '%m/%d/%y').date() for s in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         path = "id('maincontentbox')//tr//a/text()"
