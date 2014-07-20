@@ -4,8 +4,9 @@ __all__ = ['ca1',
            'ca5',
            'ca7',
            'ca8',
-           # 'ca9',
-           # 'cadc',
-           # 'cafc',
-           # 'scotus'
+           'ca9',
+           'cadc',
+           'cafc',
+           'scotus',
+           'scotusoyez'
            ]
