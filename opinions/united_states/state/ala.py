@@ -97,7 +97,6 @@ class Site(OpinionSite):
         A couple other notes:
          1. When developing, if you stop this after dirver.get(), you can get the content of the page by doing this:
             https://stackoverflow.com/questions/22739514
-         2.
         """
         def fetcher(html_link):
             full_url = 'http://2.alalinc.net/library/view/file/?lib=SUPREME&file={seed}'.format(seed=html_link)

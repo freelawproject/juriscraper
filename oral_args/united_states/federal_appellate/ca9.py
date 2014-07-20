@@ -2,13 +2,14 @@
 CourtID: ca9
 Court Short Name: ca9
 Author: Andrei Chelaru
-Reviewer:
+Reviewer: mlr
 Date created: 20 July 2014
 """
 
-from datetime import datetime, date
+from datetime import date
 
 from juriscraper.OralArgumentSite import OralArgumentSite
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OralArgumentSite):
@@ -16,6 +17,7 @@ class Site(OralArgumentSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
+        #self.case_date = date(month=7, day=18, year=2014)
         self.url = 'http://www.ca9.uscourts.gov/media/'
         self.parameters = {
             'c_page_size': '100',
@@ -34,13 +36,14 @@ class Site(OralArgumentSite):
             'c__ff_cms_media_hearing_loc_operator': 'like',
             'c__ff_cms_media_hearing_loc': '',
             'c__ff_cms_media_hearing_date_mod_operator': 'like',
-            'c__ff_cms_media_hearing_date_mod': '{date}'.format(date = self.case_date.strftime('%m/%d/%Y')),
+            'c__ff_cms_media_hearing_date_mod': '{date}'.format(date=self.case_date.strftime('%m/%d/%Y')),
             'c__ff_selSearchType': '0',
             'c__ff_onSUBMIT_FILTER': 'Search',
         }
         self.method = 'POST'
 
     def _get_download_urls(self):
+        """Note that the links from the root page go to a second page, where the real links are posted."""
         path = "//*[contains(concat(' ',@id,' '),' case_num')]/text()"
         return map(self._return_download_url, self.html.xpath(path))
 
@@ -61,7 +64,7 @@ class Site(OralArgumentSite):
 
     def _get_judges(self):
         path = "//*[contains(concat(' ',@id,' '),' case_panel')]/text()"
-        return list(self.html.xpath(path))
+        return [titlecase(s.lower()) for s in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         path = "//*[contains(concat(' ',@id,' '),' case_num')]/text()"
