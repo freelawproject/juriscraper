@@ -16,6 +16,7 @@ class Site(OralArgumentSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         d = date.today()
+        #d = date(month=5, day=1, year=2014)
         self.url = 'http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}'.format(
             yearmo=d.strftime('%Y%m')
         )
@@ -40,3 +41,7 @@ class Site(OralArgumentSite):
     def _get_docket_numbers(self):
         path = "id('ViewBody')//*[contains(concat(' ',@class,' '),' row-entry')]//a//text()"
         return list(self.html.xpath(path))
+
+    def _get_judges(self):
+        path = '//div[span[contains(., "Judges")]]/text()'
+        return [' '.join(s.split()) for s in self.html.xpath(path)]
