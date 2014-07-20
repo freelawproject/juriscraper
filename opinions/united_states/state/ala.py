@@ -4,12 +4,27 @@ Court Short Name: Ala. Sup. Ct.
 Author: mlr
 Reviewer: None
 Date created: 2014-07-18
+
+This is one of the most ridiculous scrapers of them all. The list of unusual hacks includes:
+
+1. We use the _download() method to log into the website and collect cookies that we later use for all requests.
+2. The page with the content we want contains a beautiful table, but that table is generated using JavaScript from
+   values that are in the JavaScript itself. We work around this in the _clean_text() method by parsing out the
+   JavaScript lines and making them into a nice XML tree.
+3. The root page contains Lists of Decisions in addition to actual opinions. They're easy to find, but the casing of the
+   text is inconsistent (sometimes upper, sometimes lower, etc.) so we lowercase the case names (this doesn't affect the
+   final results because we eventually get results from the linked pages).
+4. Unfortunately, the values on the root page are incomplete, and the next page is also formed by executing JavaScript.
+   We work around this by actually executing the JavaScript inside PhantomJS, then grabbing the content we want.
+5. Once we have that content, we have to clean it up because it has more information than we need. We do this with a few
+   string manipulation hacks in the inner function named fetcher().
+
+What a fragile mess.
+
 """
-from StringIO import StringIO
 from juriscraper.DeferringList import DeferringList
 import os
 import re
-from lxml import html
 
 import requests
 from datetime import datetime
@@ -31,7 +46,7 @@ class Site(OpinionSite):
         """
         r = requests.post(
             'http://2.alalinc.net/session/login/',
-            data={'uid': 'justia', 'pwd': 'peace99'},
+            data={'uid': '', 'pwd': ''},
             headers={'User-Agent': 'Juriscraper'}
         )
         self._cookies = dict(r.cookies)
@@ -54,6 +69,9 @@ class Site(OpinionSite):
             values = [value.strip('"') for value in line.split('","')]
             xml_text += '  <row>\n'
             for value in values:
+                if 'list' in value.lower():
+                    # A sad hack that's needed because XPath 1.0 doesn't support lower-casing.
+                    value = value.lower()
                 xml_text += '    <value>%s</value>\n' % value
             xml_text += '  </row>\n'
         xml_text += '</rows>\n'
@@ -66,14 +84,23 @@ class Site(OpinionSite):
         return self._cookies
 
     def _get_download_urls(self):
-        path = "//value[2]/text()[not(contains(../../value[7]/text(), 'List of Decisions'))]"
+        path = "//value[2]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"
         return list('http://2.alalinc.net/library/download/SUPREME/{rel_link}'.format(rel_link=s)
                     for s in self.html.xpath(path))
 
     def _get_case_names(self):
+        """The case names on the main page only show the first half of long case names. As a result, we browse to the
+        pages they link to and compile those pages using Selenium and PhantomJS. Normally we wouldn't do the compilation
+        step, but, alas, these pages put all their data into JavaScript functions, where are then executed to create the
+        page.
+
+        A couple other notes:
+         1. When developing, if you stop this after dirver.get(), you can get the content of the page by doing this:
+            https://stackoverflow.com/questions/22739514
+         2.
+        """
         def fetcher(html_link):
-            full_url = 'http://2.alalinc.net/library/view/file/?lib=SUPREME&file={seed}' % html_link
-            logger.info("Running Selenium browser PhantomJS...")
+            full_url = 'http://2.alalinc.net/library/view/file/?lib=SUPREME&file={seed}'.format(seed=html_link)
             driver = webdriver.PhantomJS(
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
@@ -86,20 +113,22 @@ class Site(OpinionSite):
             )
             r.raise_for_status()
 
-            fake_file = StringIO().write(r.text)
-            driver.get(fake_file)
+            # Create a fake HTML page from r.text that can be requested by selenium.
+            # See: https://stackoverflow.com/questions/24834838/
+            driver.get('data:text/html,' + r.text)
+            case_name = driver.find_element_by_xpath("//table[contains(descendant::text(), 'Description')]//tr[2]").text
+            case_name = ' '.join(case_name.split())
+            case_name = case_name.split('(')[0]
+            case_name = case_name.split('PETITION')[0]
 
-            html_tree = html.fromstring(r.text)
-            html_tree.make_links_absolute(self.url)
-            path =
-            description = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
+            return case_name
 
-
-        seed = list(self.html.xpath("//value[2]/text()[not(contains(../../value[7]/text(), 'List of Decisions'))]"))
+        seed = list(self.html.xpath("//value[2]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"))
+        logger.info("Getting {count} pages and rendering them using Selenium browser PhantomJS...".format(count=len(seed)))
         return DeferringList(seed=seed, fetcher=fetcher)
 
     def _get_case_dates(self):
-        path = "//value[4]/text()[not(contains(../../value[7]/text(), 'List of Decisions'))]"
+        path = "//value[4]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"
         return [datetime.strptime(date_string, '%m/%d/%y').date()
                 for date_string in self.html.xpath(path)]
 
@@ -107,5 +136,5 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = "//value[2]/text()[not(contains(../../value[7]/text(), 'List of Decisions'))]"
+        path = "//value[2]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"
         return [val.split('.')[0] for val in self.html.xpath(path)]
