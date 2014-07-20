@@ -7,7 +7,6 @@ Date created: 20 July 2014
 """
 
 from datetime import datetime, date
-import re
 from lxml import html
 import requests
 from juriscraper.OralArgumentSite import OralArgumentSite
