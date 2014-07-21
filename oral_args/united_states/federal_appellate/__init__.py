@@ -6,7 +6,9 @@ __all__ = ['ca1',
            'ca8',
            'ca9',
            'cadc',
+           'cadc_one_month_ago',
+           'cadc_two_months_ago',
            'cafc',
            'scotus',
-           #'scotusoyez'
-          ]
+           #'scotusoyez',
+           ]
