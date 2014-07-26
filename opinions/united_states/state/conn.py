@@ -41,11 +41,10 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for d in self.html.xpath('//tr[2]//ul//a//text()'):
-            if re.search(r"([AC]|[SC]\d{3,5})", d):
+        for d in self.html.xpath("//a[contains(./@href, '.pdf')]/text()"):
+            if re.search(r"(A?S?C\d{3,5})", d):
                 docket_numbers.append(d)
         return docket_numbers
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)
-

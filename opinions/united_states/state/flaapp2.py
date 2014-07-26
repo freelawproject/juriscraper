@@ -1,34 +1,35 @@
-#  Scraper for Kansas Supreme Court
-# CourtID: kan
-# Court Short Name: kan
+#  Scraper for Florida 2nd District Court of Appeal
+# CourtID: flaapp2
+# Court Short Name: flaapp2
 # Author: Andrei Chelaru
 # Reviewer:
-# Date created: 25 July 2014
+# Date created: 21 July 2014
 
 
 from datetime import date
 import time
-from lxml import html
 import requests
-import re
+from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.opinions.united_states.state import fla
 
 
-class Site(OpinionSite):
+class Site(fla.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.court_index = 1
-        self.date = date.today()
-        self.url = 'http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/'
+        d = date.today()
+        self.url = 'http://www.2dca.org/opinions/Opinions_Yearly_Links/{year}/{month_yr}.shtml'.format(
+            year=d.year,
+            month_yr=d.strftime("%B_%y")
+        )
 
     def _download(self, request_dict={}):
         html_l = OpinionSite._download(self)
         s = requests.session()
         html_trees = []
-        for url in html_l.xpath("//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index, year=self.date.year)):
+        for url in html_l.xpath("//*[@class='cen']/a/@href"):
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
                       **request_dict)
@@ -41,7 +42,7 @@ class Site(OpinionSite):
             # Grab the content
             text = self._clean_text(r.text)
             html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
+            html_tree.make_links_absolute(url)
 
             remove_anchors = lambda url: url.split('#')[0]
             html_tree.rewrite_links(remove_anchors)
@@ -56,8 +57,8 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_case_names(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/following::text()[1]"
-        return [e.strip() for e in html_tree.xpath(path)]
+        path = "//th//a[contains(., '/')]/text()"
+        return list(html_tree.xpath(path))
 
     def _get_download_urls(self):
         download_urls = []
@@ -67,7 +68,7 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_download_urls(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/@href"
+        path = "//th//a[contains(., '/')]/@href"
         return list(html_tree.xpath(path))
 
     def _get_case_dates(self):
@@ -78,12 +79,11 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_dates(html_tree):
-        path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
+        path = "//h1/text()"
         dates = []
         text = html_tree.xpath(path)[0]
-        text = re.sub('Opinions Released', '', text)
         case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
-        dates.extend([case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])")))
+        dates.extend([case_date] * int(html_tree.xpath("count(//th//a[contains(., '/')])")))
         return dates
 
     def _get_precedential_statuses(self):
@@ -97,5 +97,5 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_docket_numbers(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/text()"
+        path = "//th//a[contains(., '-')]/*/text()"
         return list(html_tree.xpath(path))

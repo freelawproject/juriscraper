@@ -16,8 +16,11 @@ class Site(OpinionSite):
         # the Court of Claims. We do not use the "all sources" link because a
         # single day might yield more than 25 opinions and this scraper is
         # not designed to walk through multiple pages.
-        d = date.today()
-        self.url = ('http://www.sconet.state.oh.us/ROD/docs/default.asp?Page=1&Sort=docdecided%20DESC&PageSize=25&Source=0&iaFilter={year}&ColumnMask=669'.format(year=d.year))
+        self.court_index = 0
+        self.url = ('http://www.sconet.state.oh.us/ROD/docs/default.asp?Page=1&Sort=docdecided%20DESC&PageSize=100&Source={court}&iaFilter={year}&ColumnMask=669'.format(
+            court=self.court_index,
+            year=date.today().year)
+        )
         self.court_id = self.__module__
         self.base_path = "id('Table1')//tr[position() > 1]/td[2][contains(., '-')]"
 
