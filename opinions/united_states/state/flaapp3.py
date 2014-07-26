@@ -1,34 +1,39 @@
-#  Scraper for Kansas Supreme Court
-# CourtID: kan
-# Court Short Name: kan
+#  Scraper for Florida 3rd District Court of Appeal
+# CourtID: flaapp3
+# Court Short Name: flaapp3
 # Author: Andrei Chelaru
 # Reviewer:
-# Date created: 25 July 2014
+# Date created: 21 July 2014
 
 
 from datetime import date
-import time
-from lxml import html
-import requests
 import re
+import time
+import requests
+from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.opinions.united_states.state import fla
 
 
-class Site(OpinionSite):
+class Site(fla.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.court_index = 1
-        self.date = date.today()
-        self.url = 'http://www.kscourts.org/Cases-and-Opinions/Date-of-Release-List/'
+        self.url = 'http://www.3dca.flcourts.org/Opinions/ArchivedOpinions.shtml'
+        self.base_path = "//h3/following::text()[.='OPINIONS']/following::table[1]//tr"
 
     def _download(self, request_dict={}):
         html_l = OpinionSite._download(self)
         s = requests.session()
         html_trees = []
-        for url in html_l.xpath("//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index, year=self.date.year)):
+        # this path reads the row for the last month in that year
+        path = "//th[contains(., '{year}')]/following::tr[1]/td[position()>1]/a[contains(., '/')]/@href".format(
+            year=self.year
+        )
+        # to get all the dates in that page the following path can be used:
+        # path = "//th/following::tr/td[position()>1]/a[contains(., '/')]/@href"
+        for url in html_l.xpath(path):
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
                       **request_dict)
@@ -54,10 +59,9 @@ class Site(OpinionSite):
             case_names.extend(self._return_case_names(html_tree))
         return case_names
 
-    @staticmethod
-    def _return_case_names(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/following::text()[1]"
-        return [e.strip() for e in html_tree.xpath(path)]
+    def _return_case_names(self, html_tree):
+        path = "{base}/td[2]//text()".format(base=self.base_path)
+        return list(html_tree.xpath(path))
 
     def _get_download_urls(self):
         download_urls = []
@@ -65,9 +69,8 @@ class Site(OpinionSite):
             download_urls.extend(self._return_download_urls(html_tree))
         return download_urls
 
-    @staticmethod
-    def _return_download_urls(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/@href"
+    def _return_download_urls(self, html_tree):
+        path = "{base}/td[1]//a/@href".format(base=self.base_path)
         return list(html_tree.xpath(path))
 
     def _get_case_dates(self):
@@ -76,14 +79,13 @@ class Site(OpinionSite):
             case_dates.extend(self._return_dates(html_tree))
         return case_dates
 
-    @staticmethod
-    def _return_dates(html_tree):
-        path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
+    def _return_dates(self, html_tree):
+        path = "//h3/text()"
         dates = []
         text = html_tree.xpath(path)[0]
-        text = re.sub('Opinions Released', '', text)
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
-        dates.extend([case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])")))
+        text = re.search('(\d{2}-\d{2}-\d{4})', text).group(1)
+        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%m-%d-%Y')))
+        dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))
         return dates
 
     def _get_precedential_statuses(self):
@@ -95,7 +97,6 @@ class Site(OpinionSite):
             docket_numbers.extend(self._return_docket_numbers(html_tree))
         return docket_numbers
 
-    @staticmethod
-    def _return_docket_numbers(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/text()"
+    def _return_docket_numbers(self, html_tree):
+        path = "{base}/td[1]//a/text()".format(base=self.base_path)
         return list(html_tree.xpath(path))
