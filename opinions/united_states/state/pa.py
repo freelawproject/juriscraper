@@ -2,11 +2,11 @@
 # CourtID: pa
 # Court Short Name: pa
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 21 July 2014
 
 
-from datetime import date
+from datetime import date, timedelta
 import re
 
 from juriscraper.OpinionSite import OpinionSite
@@ -16,7 +16,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.case_date = date.today()
+        self.case_date = date.today() -timedelta(days=2)
         self.regex = re.compile("(.*)(?:, Nos\. |- Nos\. |- No\. |, No\. )(.*)")
         self.url = 'http://www.pacourts.us/courts/supreme-court/court-opinions/Default.aspx'
         self.parameters = {
@@ -38,6 +38,7 @@ class Site(OpinionSite):
         path = "//*[contains(concat(' ',@id,' '),' CaptionView')]/text()"
         return map(self._return_case_name, self.html.xpath(path))
 
+    @staticmethod
     def _return_case_name(self, e):
         match = self.regex.search(e)
         return match.group(1)
@@ -57,6 +58,7 @@ class Site(OpinionSite):
         path = "//*[contains(concat(' ',@id,' '),' CaptionView')]/text()"
         return map(self._return_docket_number, self.html.xpath(path))
 
+    @staticmethod
     def _return_docket_number(self, e):
         match = self.regex.search(e)
         return match.group(2)

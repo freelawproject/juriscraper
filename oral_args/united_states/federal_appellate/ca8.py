@@ -3,11 +3,11 @@ CourtID: ca8
 Court Short Name: 8th Cir.
 Author: Brian W. Carver
 Date created: 2014-06-21
+History:
+ - 2014-07-22: download_url fixed by mlr
 """
 
 from datetime import datetime
-from lxml import html
-
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -18,11 +18,7 @@ class Site(OralArgumentSite):
         self.url = 'http://8cc-www.ca8.uscourts.gov/circ8rss.xml'
 
     def _get_download_urls(self):
-        download_urls = []
-        for e in self.html.xpath('//item/link'):
-            url = html.tostring(e, method='text', encoding='unicode')
-            download_urls.append(url)
-        return download_urls
+        return list(self.html.xpath('//enclosure/@url'))
 
     def _get_case_names(self):
         case_names = []
