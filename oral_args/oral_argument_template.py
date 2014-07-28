@@ -12,7 +12,7 @@ from datetime import datetime
 from lxml import html
 
 from juriscraper.OralArgumentSite import OralArgumentSite
-# from juriscraper.lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OralArgumentSite):
@@ -76,6 +76,12 @@ class Site(OralArgumentSite):
     def _get_docket_numbers(self):
         """
           This is typically of the form ##-####
+        """
+        return None
+
+    def _get_judges(self):
+        """
+          For the name of the judge authoring the lead opinion
         """
         return None
 

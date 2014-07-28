@@ -1,6 +1,7 @@
 """Scraper for the 1st District Court of Appeals
 CourtID: ohio
 Court Short Name: Ohio
+Author: Brian Carver
 """
 
 from juriscraper.opinions.united_states.state import ohio

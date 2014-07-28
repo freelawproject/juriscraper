@@ -24,7 +24,7 @@ class Site(OralArgumentSite):
 
     @staticmethod
     def _return_download_url(e):
-        return 'www2.ca3.uscourts.gov{end}'.format(end=e.tail)
+        return 'http://www2.ca3.uscourts.gov{end}'.format(end=e.tail)
 
     def _get_case_names(self):
         path = '//item/title/text()'

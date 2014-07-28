@@ -1,6 +1,7 @@
 """Scraper for the Supreme Court of Ohio
 CourtID: ohio
 Court Short Name: Ohio
+Author: Brian Carver
 """
 
 from juriscraper.OpinionSite import OpinionSite
