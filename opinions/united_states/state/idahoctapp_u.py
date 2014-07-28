@@ -9,3 +9,5 @@ class Site(idaho_civil.Site):
 
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.case_names)
+
+

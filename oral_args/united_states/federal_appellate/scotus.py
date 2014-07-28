@@ -21,7 +21,8 @@ class Site(OralArgumentSite):
         path = "id('maincontentbox')//tr//a/text()"
         return map(self._return_download_url, self.html.xpath(path))
 
-    def _return_download_url(self, d):
+    @staticmethod
+    def _return_download_url(d):
         file_type = 'mp3' # or 'wma' is also available for any case.
         download_url = 'http://www.supremecourt.gov/media/audio/{type}files/{docket_number}.{type}'.format(
             type=file_type,
