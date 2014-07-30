@@ -227,6 +227,7 @@ def fix_camel_case(s):
 # More details: http://www.law.cornell.edu/citation/4-300.htm
 US = 'USA|U\.S\.A\.|U\.S\.?|U\. S\.?|(The )?United States of America|The United States'
 UNITED_STATES = re.compile(r'^(%s)(,|\.)?$' % US, re.I)
+THE_STATE = re.compile(r'the state', re.I)
 ET_AL = re.compile(',?\set\.?\sal\.?', re.I)
 BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?' + \
      '|devisee|executor|executrix|petitioners?|petitioners?(--?|/)appell(ee|ant)s?' + \
@@ -240,6 +241,7 @@ def harmonize(text):
     Using a bunch of regex's, this function cleans up common data problems in
     case names. The following are currently fixed:
      - various forms of United States --> United States
+     - The State --> State
      - vs. --> v.
      - et al --> Removed.
      - plaintiff, appellee, defendant and the like --> Removed.
@@ -274,19 +276,19 @@ def harmonize(text):
     for frag in text:
         frag = frag.strip()
         if UNITED_STATES.match(frag):
-            if i == len(text):
-                # it's the last iteration don't append v.
-                result = result + 'United States'
-            else:
-                result = result + 'United States v. '
+            result += 'United States'
+        elif THE_STATE.match(frag):
+            result += 'State'
         else:
-            #needed here, because case sensitive
+            # needed here, because we can't put "US" as a case-insensitive
+            # word into the UNITED_STATES regex.
             frag = re.sub(re.compile(r'^US$'), 'United States', frag)
             # no match
-            if i == len(text):
-                result = result + frag
-            else:
-                result = result + frag + ' v. '
+            result += frag
+
+        if i < len(text):
+            # More stuff coming; append v.
+            result += ' v. '
         i += 1
 
     # Remove the ET_AL words.

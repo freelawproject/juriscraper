@@ -2,11 +2,9 @@
 # CourtID: kanctapp
 # Court Short Name: kanctapp
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 25 July 2014
 
-
-from datetime import date
 
 from juriscraper.opinions.united_states.state import kan
 

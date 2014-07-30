@@ -2,7 +2,7 @@
 # CourtID: fla
 # Court Short Name: fla
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 21 July 2014
 
 
@@ -19,6 +19,7 @@ class Site(OpinionSite):
         self.year = date.today().year
         self.regex = re.compile("(SC\d+-\d+)(.*)")
         self.base_path = "//h2[contains(., '{y}')]".format(y=self.year)
+        self.back_scrape_iterable = range(1999, 2013)
         self.url = 'http://www.floridasupremecourt.org/decisions/opinions.shtml'
 
     def _get_case_names(self):

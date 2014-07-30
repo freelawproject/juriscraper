@@ -206,7 +206,10 @@ class StringUtilTest(unittest.TestCase):
                        u'12–1438-cr'],
                       ['Carver v. US',  # Tests the output from a titlecased word containing US to ensure it gets
                                         # harmonized.
-                       u'Carver v. United States']]
+                       u'Carver v. United States'],
+                      ['Aimee v. The State',  # Normalize "The State"
+                       u'Aimee v. State'],
+        ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 

@@ -2,7 +2,7 @@
 # CourtID: iowa
 # Court Short Name: iowa
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 25 July 2014
 
 
@@ -13,7 +13,7 @@ import requests
 import re
 
 from juriscraper.OpinionSite import OpinionSite
-from lib.string_utils import titlecase
+from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
@@ -56,7 +56,7 @@ class Site(OpinionSite):
     @staticmethod
     def _return_case_names(html_tree):
         path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/text()"
-        return [titlecase(e.strip()) for e in html_tree.xpath(path)]
+        return [titlecase(s.strip().lower()) for s in html_tree.xpath(path)]
 
     def _get_download_urls(self):
         download_urls = []
@@ -96,4 +96,4 @@ class Site(OpinionSite):
     @staticmethod
     def _return_docket_numbers(html_tree):
         path = "//*[contains(concat(' ',@id,' '),' wfLabel')]/preceding::tr[2]/td[1]/a/text()"
-        return [re.sub('No.', '', e).strip() for e in html_tree.xpath(path)]
+        return [re.sub('Nos?.', '', e).strip() for e in html_tree.xpath(path)]

@@ -2,7 +2,7 @@
 # CourtID: flaapp5
 # Court Short Name: flaapp5
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 23 July 2014
 
 
@@ -10,25 +10,25 @@ from datetime import date
 import re
 import time
 import requests
-from lxml import html, etree
+from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.opinions.united_states.state import fla
 
 
-class Site(fla.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www.5dca.org/opinions_archived.shtml'
         self.base_path = "//a"
+        self.case_regex = '(5D.*\d)([- ]+[A-Z].*)'
 
     def _download(self, request_dict={}):
-        html_l = OpinionSite._download(self)
+        html_l = super(Site, self)._download(request_dict)
         s = requests.session()
         html_trees = []
-        # this path reads the link of the last date
-        path = "(//a[contains(./@href, 'filings')])[1]/@href"
+        # this path reads the link of the last 2 dates
+        path = "(//a[contains(./@href, 'filings')])[position() < 3]/@href"
         # to get all the dates in that page the following path can be used:
         # path = "//a[contains(./@href, 'filings')]"
         for url in html_l.xpath(path):
@@ -59,7 +59,7 @@ class Site(fla.Site):
 
     def _return_case_names(self, html_tree):
         path = "{base}/text()".format(base=self.base_path)
-        return [re.search('(5D.*\d)([- ][A-Z].*)', e).group(2) for e in html_tree.xpath(path)]
+        return [re.search(self.case_regex, s).group(2) for s in html_tree.xpath(path)]
 
     def _get_download_urls(self):
         download_urls = []
@@ -72,7 +72,6 @@ class Site(fla.Site):
         return list(html_tree.xpath(path))
 
     def _get_case_dates(self):
-
         case_dates = []
         for html_tree in self.html:
             case_dates.extend(self._return_dates(html_tree))
@@ -98,4 +97,4 @@ class Site(fla.Site):
 
     def _return_docket_numbers(self, html_tree):
         path = "{base}/text()".format(base=self.base_path)
-        return [re.search('(5D.*\d)([- ][A-Z].*)', e).group(1) for e in html_tree.xpath(path)]
+        return [re.search(self.case_regex, e).group(1) for e in html_tree.xpath(path)]
