@@ -1,28 +1,34 @@
-#  Scraper for Georgia Appeals Court
+# Scraper for Georgia Appeals Court
 # CourtID: gactapp
 # Court Short Name: gactapp
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 25 July 2014
 
 
-from datetime import date
+from datetime import date, timedelta
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
 
-from juriscraper.opinions.united_states.state import ga
-from lib.string_utils import titlecase
 
-
-class Site(ga.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
+        self.a_while_ago = date.today() - timedelta(days=20)
         self.base_path = "id('art-main')//tr[position() > 1]"
-        self.url = 'http://www.gaappeals.us/docketdate/results_all.php?searchterm={mn}%2F{day}%2F{year}&searchterm2={mn}%2F{day}%2F{year}&submit=Search'.format(
+        self.url = 'http://www.gaappeals.us/docketdate/results_all.php?searchterm=' \
+                   '{mn_ago:02d}%2F{day_ago:02d}%2F{year_ago}&searchterm2=' \
+                   '{mn:02d}%2F{day:02d}%2F{year}&submit=Search'.format(
+            mn_ago=self.a_while_ago.month,
+            day_ago=self.a_while_ago.day,
+            year_ago=self.a_while_ago.year,
             mn=self.case_date.month,
             day=self.case_date.day,
-            year=self.case_date.year
+            year=self.case_date.year,
         )
+        print self.url
 
     def _get_case_names(self):
         path = "{base}/td[2]/text()".format(base=self.base_path)

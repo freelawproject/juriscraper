@@ -2,7 +2,7 @@
 # CourtID: flaapp2
 # Court Short Name: flaapp2
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 21 July 2014
 
 
@@ -12,10 +12,9 @@ import requests
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.opinions.united_states.state import fla
 
 
-class Site(fla.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
@@ -26,7 +25,7 @@ class Site(fla.Site):
         )
 
     def _download(self, request_dict={}):
-        html_l = OpinionSite._download(self)
+        html_l = super(Site, self)._download(request_dict)
         s = requests.session()
         html_trees = []
         for url in html_l.xpath("//*[@class='cen']/a/@href"):

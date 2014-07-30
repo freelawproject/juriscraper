@@ -2,12 +2,11 @@
 # CourtID: flaapp1
 # Court Short Name: flaapp1
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 21 July 2014
 
 
 from datetime import date, timedelta
-from lxml import etree
 
 from juriscraper.opinions.united_states.state import flaapp1_per_curiam
 

@@ -2,11 +2,12 @@
 # CourtID: ga
 # Court Short Name: ga
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 25 July 2014
 
 
 from datetime import date, datetime
+from juriscraper.lib.string_utils import titlecase
 import re
 
 from juriscraper.OpinionSite import OpinionSite
@@ -23,7 +24,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         path = "{base}/following::ul[1]//li//a[1]/text()".format(base=self.base_path)
-        return [self.regex.search(e).group(2) for e in self.html.xpath(path)]
+        return [titlecase(self.regex.search(s).group(2).lower()) for s in self.html.xpath(path)]
 
     def _get_download_urls(self):
         path = "{base}/following::ul[1]//li//a[1]/@href".format(base=self.base_path)

@@ -2,29 +2,30 @@
 # CourtID: flaapp3
 # Court Short Name: flaapp3
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 21 July 2014
 
 
 from datetime import date
+from juriscraper.lib.string_utils import titlecase
 import re
 import time
 import requests
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.opinions.united_states.state import fla
 
 
-class Site(fla.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
+        self.year = date.today().year
         self.url = 'http://www.3dca.flcourts.org/Opinions/ArchivedOpinions.shtml'
         self.base_path = "//h3/following::text()[.='OPINIONS']/following::table[1]//tr"
 
     def _download(self, request_dict={}):
-        html_l = OpinionSite._download(self)
+        html_l = super(Site, self)._download(request_dict)
         s = requests.session()
         html_trees = []
         # this path reads the row for the last month in that year
@@ -61,7 +62,7 @@ class Site(fla.Site):
 
     def _return_case_names(self, html_tree):
         path = "{base}/td[2]//text()".format(base=self.base_path)
-        return list(html_tree.xpath(path))
+        return [titlecase(s.lower()) for s in html_tree.xpath(path)]
 
     def _get_download_urls(self):
         download_urls = []

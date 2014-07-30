@@ -1,7 +1,11 @@
 """Scraper for the Supreme Court of Ohio
 CourtID: ohio
 Court Short Name: Ohio
-Author: Brian Carver
+Author: Andrei Chelaru
+Reviewer: mlr
+History:
+ - Stubbed out by Brian Carver
+ - 2014-07-30: Finished by Andrei Chelaru
 """
 
 from juriscraper.OpinionSite import OpinionSite
@@ -51,7 +55,7 @@ class Site(OpinionSite):
 
     def _get_neutral_citations(self):
         path = "{base}/following::td[4]//text()".format(base=self.base_path)
-        return list(self.html.xpath(path))
+        return [s.replace('-', ' ') for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
@@ -66,4 +70,4 @@ class Site(OpinionSite):
         if txt:
             return txt[0]
         else:
-            return 'per curiam'
+            return ''

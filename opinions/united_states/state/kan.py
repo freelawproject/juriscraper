@@ -2,17 +2,18 @@
 # CourtID: kan
 # Court Short Name: kan
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 25 July 2014
 
 
 from datetime import date
 import time
-from lxml import html
+from lxml import etree, html
 import requests
 import re
 
 from juriscraper.OpinionSite import OpinionSite
+from AbstractSite import logger
 
 
 class Site(OpinionSite):
@@ -27,8 +28,10 @@ class Site(OpinionSite):
         html_l = OpinionSite._download(self)
         s = requests.session()
         html_trees = []
+        # The latest 5 urls on the page.
         for url in html_l.xpath("//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index, year=self.date.year)):
+                court_index=self.court_index, year=self.date.year))[0:4]:
+            logger.info("Downloading Kansas page at: {url}".format(url=url))
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
                       **request_dict)
@@ -51,13 +54,19 @@ class Site(OpinionSite):
     def _get_case_names(self):
         case_names = []
         for html_tree in self.html:
-            case_names.extend(self._return_case_names(html_tree))
+            try:
+                parent_elem = html_tree.xpath("//p/font[a]")[0]
+            except IndexError:
+                # When there were no opinions that week.
+                continue
+            etree.strip_tags(parent_elem, 'em')
+            case_names.extend(self._return_case_names(parent_elem))
         return case_names
 
     @staticmethod
-    def _return_case_names(html_tree):
-        path = "//a[contains(./@href, '.pdf')]/following::text()[1]"
-        return [e.strip() for e in html_tree.xpath(path)]
+    def _return_case_names(parent_elem):
+        path = "./a[contains(./@href, '.pdf')]"
+        return [e.tail.strip() for e in parent_elem.xpath(path)]
 
     def _get_download_urls(self):
         download_urls = []
@@ -79,12 +88,10 @@ class Site(OpinionSite):
     @staticmethod
     def _return_dates(html_tree):
         path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
-        dates = []
         text = html_tree.xpath(path)[0]
         text = re.sub('Opinions Released', '', text)
         case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
-        dates.extend([case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])")))
-        return dates
+        return [case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])"))
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_dates)

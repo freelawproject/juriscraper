@@ -2,7 +2,7 @@
 # CourtID: flaapp4
 # Court Short Name: flaapp4
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 22 July 2014
 
 
@@ -13,18 +13,18 @@ import requests
 from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.opinions.united_states.state import fla
 
 
-class Site(fla.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
+        self.year = date.today().year
         self.url = 'http://www.4dca.org/opinions/{year}op.shtml'.format(year=self.year)
         self.base_path = "//a[starts-with(., '4D')]"
 
     def _download(self, request_dict={}):
-        html_l = OpinionSite._download(self)
+        html_l = super(Site, self)._download(request_dict)
         s = requests.session()
         html_trees = []
         # this path reads the links for the last month in that year

@@ -1,21 +1,23 @@
-#  Scraper for Court of Appeals of Arizona, Division 2
+# Scraper for Court of Appeals of Arizona, Division 2
 # CourtID: arizctapp_div_2
 # Court Short Name: arizctapp_div_2
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 23 July 2014
+
 
 import re
 from datetime import datetime
 
-from juriscraper.opinions.united_states.state import ariz
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
 
-class Site(ariz.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
+        # Feeling down and tired of of your regular life? Check out this website.
         self.url = 'https://www.appeals2.az.gov/ODSPlus/recentDecisions2.cfm'
         self.base_path = "//*[@class='contentcontainer']//a[not(contains(., '(2)')) and not(contains(., 'page'))]"
 
@@ -31,7 +33,8 @@ class Site(ariz.Site):
         path = "{base}/following::td[2]/text()".format(base=self.base_path)
         return map(self._return_case_date, self.html.xpath(path))
 
-    def _return_case_date(self, e):
+    @staticmethod
+    def _return_case_date(e):
         e = re.sub('Opinion Filed:', '', e)
         case_date = datetime.strptime(e.strip(), '%m/%d/%Y').date()
         return case_date
@@ -47,6 +50,7 @@ class Site(ariz.Site):
         path = "{base}/following::tr[1]".format(base=self.base_path)
         return map(self._return_summary, self.html.xpath(path))
 
-    def _return_summary(self, e):
+    @staticmethod
+    def _return_summary(e):
         text = ' '.join(e.xpath(".//text()"))
         return text.strip()
