@@ -230,7 +230,7 @@ UNITED_STATES = re.compile(r'^(%s)(,|\.)?$' % US, re.I)
 THE_STATE = re.compile(r'the state', re.I)
 ET_AL = re.compile(',?\set\.?\sal\.?', re.I)
 BW = 'appell(ee|ant)s?|claimants?|complainants?|defendants?|defendants?(--?|/)appell(ee|ant)s?' + \
-     '|devisee|executor|executrix|petitioners?|petitioners?(--?|/)appell(ee|ant)s?' + \
+     '|devisee|executor|executrix|pet(\.|itioner)s?|petitioners?(--?|/)appell(ee|ant)s?' + \
      '|petitioners?(--?|/)defendants?|plaintiffs?|plaintiffs?(--?|/)appell(ee|ant)s?|respond(e|a)nts?' + \
      '|respond(e|a)nts?(--?|/)appell(ee|ant)s?|cross(--?|/)respondents?|crosss?(--?|/)petitioners?' + \
      '|cross(--?|/)appell(ees|ant)s?|deceased'
@@ -389,7 +389,7 @@ def force_unicode(s, encoding='utf-8', strings_only=False, errors='strict'):
     return s
 
 
-def trunc(s, length, elipsize=False):
+def trunc(s, length, elipsize=False, elipsis='...'):
     """Truncates a string at a good length.
 
     Finds the rightmost space in a string, and truncates there. Lacking such
@@ -405,6 +405,6 @@ def trunc(s, length, elipsize=False):
             end = length
         s = s[0:end]
         if elipsize:
-            s = '%s...' % s
+            s = '%s%s' % (s, elipsis)
         return s
 

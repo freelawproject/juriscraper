@@ -209,6 +209,10 @@ class StringUtilTest(unittest.TestCase):
                        u'Carver v. United States'],
                       ['Aimee v. The State',  # Normalize "The State"
                        u'Aimee v. State'],
+                      ['Commonwealth v. Mickle, V., Pet.',
+                       u'Commonwealth v. Mickle v.'],  # Nuke Pet (short for petitioners)
+                      ['Pet Doctors inc. v. Spoon',
+                       u'Pet Doctors inc. v. Spoon'],  # Unchanged, despite having the word Pet
         ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])

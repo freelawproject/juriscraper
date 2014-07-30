@@ -5,8 +5,8 @@ import re
 import requests
 
 from lxml import html
-from lib.string_utils import harmonize, clean_string
-from tests import MockRequest
+from lib.string_utils import harmonize, clean_string, trunc
+from juriscraper.tests import MockRequest
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
@@ -175,9 +175,7 @@ class AbstractSite(object):
                                                           len(self.case_names)))
 
     def _date_sort(self):
-        """ This function sorts the object by date. It's a good candidate for
-        re-coding due to violating DRY and because it works by checking for
-        lists, limiting the kinds of attributes we can add to the object.
+        """ Sort the object by date.
         """
         if len(self.case_names) > 0:
             obj_list_attrs = [item for item in self._all_attrs
@@ -200,7 +198,10 @@ class AbstractSite(object):
         """Methods for downloading the latest version of Site
         """
         if self.method == 'POST':
-            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, self.parameters))
+            truncateded_params = {}
+            for k, v in self.parameters.iteritems():
+                truncateded_params[k] = trunc(v, 50, elipsize=True, elipsis='...[truncated]')
+            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncateded_params))
         else:
             logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error

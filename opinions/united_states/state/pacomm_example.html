@@ -1,1334 +1,566 @@
-<!DOCTYPE html>
-<!--[if IE 6 ]>    <html lang="en" class="no-js ie6 lte10 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lte10 lte9 lte8 lte7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lte10 lte9 lte8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9 lte10 lte9"> <![endif]-->
-<!--[if IE 10 ]>    <html lang="en" class="no-js ie10 lte10"> <![endif]-->
-<!--[if (gt IE 10)|!(IE)]><!-->
-<html class="js js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths mti-repaint mti-repaint mti-repaint" lang="en"><!--<![endif]--><!--[if !IE]><!--><!--<![endif]--><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>
-	Court Opinions and Postings | Commonwealth Court | Courts | Unified Judicial System of Pennsylvania
-</title><meta name="copyright" content="Copyright (c) 2013 Administrative Office of Pennsylvania Courts. All Rights Reserved."><meta name="google-translate-customization" content="a2b872ce665b9fe3-5736e110f7555b6c-gd0d91bffc0291c65-f">
-	<!-- RENDERED @ 7/21/2014 5:19:11 AM -->
-
-	<!-- STYLES -->
-		<link rel="stylesheet" type="text/css" href="pacomm_example_files/screen.css">
-	<!--[if IE]><link rel="stylesheet" type="text/css" href="/assets/styles/css/ie.css?v=1" /><![endif]-->
-	<link rel="stylesheet" type="text/css" href="pacomm_example_files/jquery-ui-1.css">
-
-
-	<!-- SCRIPTS -->
-		<script src="pacomm_example_files/ga.js" async="" type="text/javascript"></script><script src="pacomm_example_files/widgets.js" id="twitter-wjs"></script><script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,"js");})(document.documentElement);</script>
-	<script type="text/javascript" src="pacomm_example_files/html5.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/jquery.js"></script>
-	<script type="text/javascript">window.jQuery || document.write('<script src="/assets/scripts/jquery-1.8.2.min.js">\x3C/script>')</script>
-	<script type="text/javascript" src="pacomm_example_files/jquery_005.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/powerpointUrlRewrite.js"></script>
-	<style id="mti_fontface_bad75042-5e38-41d7-848e-f39129b58487" type="text/css">@font-face{
-font-family:"Sabon LT W01 Italic";
-src:url("http://fast.fonts.com/d/a9baeb23-afc5-4d93-bf9f-b83fd44a2220.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Sabon LT W01 Roman";
-src:url("http://fast.fonts.com/d/d93bebe4-cefa-455e-8b51-eaae50be173e.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Sabon W01 SC Roman";
-src:url("http://fast.fonts.com/d/dea58936-f317-46e1-9f94-d76f95f882c3.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"URW Egizio W01 Regular";
-src:url("http://fast.fonts.com/d/ffc3aca7-01d5-4165-a414-92e89f4eca02.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"URW Egizio W01 Bold";
-src:url("http://fast.fonts.com/d/71810ec5-e187-44eb-b87b-786a1afdb40f.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"URW Egizio W01 Italic";
-src:url("http://fast.fonts.com/d/d19a72b9-7f46-4639-9c22-3f83568a1b99.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Proxima N W01 Reg";
-src:url("http://fast.fonts.com/d/e56ecb6d-da41-4bd9-982d-2d295bec9ab0.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Proxima N W01 Reg It";
-src:url("http://fast.fonts.com/d/9c69c878-2255-4027-8632-ed3635cddf45.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Proxima N W01 Bold";
-src:url("http://fast.fonts.com/d/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-@font-face{
-font-family:"Proxima N W01SC Reg";
-src:url("http://fast.fonts.com/d/e96e70c4-309b-48dd-a8b8-3d0ac4fe93aa.woff?d44f19a684109620e484157fa590e818c24a917ca21d24455bea287449a522a828438570928e34aa94f4f893f6d7cf3ff9d7fdc149577ee01ffb4aeec88de276ada90ee74adaffa73a4c5bfa2489d1176f6fa07781cdd95e84028108ed1850e8a9a5e4afe3a627bf1b2f82e936865153010640db480fe86b98fcbb283e7e8c247faebf4fd7a66ebf96fbfb46fb84c064da485e94a1982bec639460e698ffd9f1ec81&projectId=bad75042-5e38-41d7-848e-f39129b58487") format('woff');}
-</style><script type="text/javascript" src="pacomm_example_files/bad75042-5e38-41d7-848e-f39129b58487.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/modernizr-2.js"></script><link href="pacomm_example_files/1.css" rel="stylesheet" type="text/css" id="MonoTypeFontApiFontTracker">
-	<script type="text/javascript">var isProduction = true;</script>
-	<script type="text/javascript" src="pacomm_example_files/content-control.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/jquery-ui-1.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/jquery_002.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/datepicker.js"></script>
-	<script type="text/javascript">var NumberOfPostingsPerOpinion = 1;</script>
-	<script type="text/javascript" src="pacomm_example_files/opinions.js"></script>
-	<script type="text/javascript">$(document).ready(function() {setupAjaxForm('CommonwealthUploadForm');});</script>
-
-	<script type="text/javascript">
-		$(function() {
-			$('.page.backtotop').click(function(){
-				$('html, body').animate({scrollTop:0}, 'slow');
-			});
-			
-			$('.list.backtotop').click(function(){
-				$('html, body').animate({scrollTop:0}, 'slow');
-			});
-			
-			$('.glossary.backtotop').click(function(){
-				$('html, body').animate({scrollTop:0}, 'slow');
-			});
-		});
-	</script>
-	</head>
-<body data-twttr-rendered="true" id="DOMAIN_NAME" class="courts">
-	
-	
-<header class="site-header" role="banner">
-	<div class="site-grid section ">
-		<div class="wrapper">
-			<div class="row">
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-				<div class="grid-1">‌</div>
-			</div>
-		</div>
-	</div>
-	<div class="header-logo section">
-		<div class="wrapper">
-			<div class="row">
-				<a class="ir" href="http://www.pacourts.us/" title="Link to Home Page">
-					<div class="header-banner grid-4"></div>
-					<img src="pacomm_example_files/header-banner-mobile2x.png" class="header-banner mobile" alt="Pennsylvania Court System Logo">
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="global section">
-		<div class="wrapper">
-			<div class="row">
-				<div class="grid-24 append-1">
-					<div class="search-container">
-						<form action="/sitesearch.aspx" method="get" class="search">
-							<fieldset id="search">
-								<input name="q" placeholder="search" id="search-header" type="text">
-								<input value="search" type="submit">
-							</fieldset>
-							
-<nav class="nav-global" role="navigation">
-	<ul>
-		<li><a href="http://www.pacourts.us/judicial-administration/human-resources/job-openings/" title="Link to Careers">Careers</a></li>
-		
-		<li><a class="LoginLink" href="http://www.pacourts.us/login" title="Link to Login Screen">Login</a></li>
-		
-	</ul>
-</nav>
-						</form>
-					</div>
-					<div class="size-selector" style="">
-						<img src="pacomm_example_files/plus.png" id="plusText" alt="Zoom In" title="Zoom In">
-						<span id="txtAdjust" style="font-style: normal; font-size: 1.2em; font-family: 'Proxima N W01SC Reg','Helvetica Neue',Helvetica,Arial,sans-serif;">100%</span>
-						<img src="pacomm_example_files/minus.png" id="minusText" alt="Zoom Out" title="Zoom Out">
-					</div>
-				</div> 
-			</div>
-		</div>
-	</div> <!-- close global section -->
-	<div class="header-content section">
-		<div class="wrapper">
-			<div class=" row">
-				<div class="grid-14 push-5 aopc zero-bottom"><em>The Unified</em> Judicial<br> System <em>of</em> Pennsylvania</div>
-				<div class="grid-14 push-5 aopc zero-bottom mobile"><em>The Unified</em> <br>Judicial System <br><em>of</em> Pennsylvania</div>
-				<nav id="resource" class="nav-secondary grid-4 prepend-1" role="navigation">
-					<ul>
-						<li><a href="http://www.pacourts.us/courts/supreme-court/court-opinions/" title="Link to Opinions">Opinions</a></li>
-						<li><a href="http://ujsportal.pacourts.us/DocketSheets.aspx" title="Link to Docket Sheets">Docket Sheets</a></li>
-						<li><a href="http://ujsportal.pacourts.us/ePay.aspx" title="Link to Pay Fine or Fees">Pay Fine or Fees</a></li>
-						<li><a href="http://www.pacourts.us/forms" title="Link to Forms">Forms</a></li>
-						<li><a href="http://www.pacourts.us/public-record-policies" title="Link to Public Records">Public Records</a></li>
-					</ul>
-				</nav>
-			</div> 
-		</div>
-	</div> <!-- close header-content -->
-	<div style="height: 169px; overflow: hidden;" class="header-nav section">
-		<div class="wrapper">
-			<div class="row">
-				<div class="mobile-links">
-					<a class="mobile-menu" href="#menu">Menu</a>
-					<a class="resource-menu" href="#resource">Resources</a>
-					<a class="search-menu" href="#search">Search</a>
-				</div>
-				<div id="menu" class="header-nav-main" data-position="fixed">
-					
-<ul style="display: block;">
-<li class="parent current"><a href="http://www.pacourts.us/courts">Courts</a>
-<ul style="display: block;">
-<li class="child medium"><a href="http://www.pacourts.us/courts/supreme-court">Supreme Court</a>
-<ul style="display: none;">
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/supreme-court/supreme-court-justices">Supreme Court Justices</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/supreme-court/docket-sheets">Docket Sheets</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/supreme-court/court-opinions">Court Opinions and Postings</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/supreme-court/prothonotarys-addresses">Supreme Court Prothonotary's Addresses</a></li>
-<li class="grandchild small no-children"><a href="http://www.pacourts.us/courts/supreme-court/calendar">Calendar</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/supreme-court/committees">Committees, Boards &amp; Advisory Panels</a></li>
-</ul>
-</li>
-<li class="child medium"><a href="http://www.pacourts.us/courts/superior-court">Superior Court</a>
-<ul style="display: none;">
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/superior-court/superior-court-judges">Superior Court Judges</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/superior-court/docket-sheets">Docket Sheets</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/superior-court/court-opinions">Court Opinions</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/superior-court/prothonotarys-addresses">Superior Court Prothonotary's Addresses</a></li>
-<li class="grandchild small no-children"><a href="http://www.pacourts.us/courts/superior-court/calendar">Calendar</a></li>
-</ul>
-</li>
-<li class="child current medium"><a href="http://www.pacourts.us/courts/commonwealth-court">Commonwealth Court</a>
-<ul style="display: block;">
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/commonwealth-court-judges">Commonwealth Court Judges</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/commonwealth-court/docket-sheets">Docket Sheets</a></li>
-<li class="grandchild current large no-children"><a href="http://www.pacourts.us/courts/commonwealth-court/court-opinions">Court Opinions and Postings</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/commonwealth-court/chief-clerks-address">Commonwealth Court Chief Clerk's Address</a></li>
-<li class="grandchild small no-children"><a href="http://www.pacourts.us/courts/commonwealth-court/calendar">Calendar</a></li>
-</ul>
-</li>
-<li class="child large"><a href="http://www.pacourts.us/courts/courts-of-common-pleas">Courts of Common Pleas</a>
-<ul style="display: none;">
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/courts-of-common-pleas/common-pleas-president-judges">Common Pleas President Judges</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/courts-of-common-pleas/common-pleas-judges">Common Pleas Judges</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/courts-of-common-pleas/district-court-administrators">District Court Administrators</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/courts-of-common-pleas/individual-county-courts">Individual County Courts</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/courts-of-common-pleas/docket-sheets">Docket Sheets</a></li>
-</ul>
-</li>
-<li class="child medium"><a href="http://www.pacourts.us/courts/minor-courts">Minor Courts</a>
-<ul style="display: none;">
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/minor-courts/magisterial-district-judges">Magisterial District Judges</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/minor-courts/philadelphia-municipal-court-judges">Philadelphia Municipal Court Judges</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/courts/minor-courts/pittsburgh-municipal-court-judges">Pittsburgh Municipal Court Judges</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/courts/minor-courts/docket-sheets">Docket Sheets</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="parent"><a href="http://www.pacourts.us/judicial-administration">Judicial Administration</a>
-<ul style="display: none;">
-<li class="child medium no-children"><a href="http://www.pacourts.us/judicial-administration/office-of-communications-and-intergovernmental-relations">Communications</a></li>
-<li class="child large no-children"><a href="http://www.pacourts.us/judicial-administration/judicial-automation">Information Technology</a></li>
-<li class="child small"><a href="http://www.pacourts.us/judicial-administration/court-programs">Programs</a>
-<ul style="display: none;">
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/interpreter-program">Interpreter Program</a></li>
-<li class="grandchild large no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/office-of-children-and-families-in-the-courts">Office of Children &amp; Families in the Courts</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/drug-courts">Drug Courts</a></li>
-<li class="grandchild small no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/dui-court">DUI Courts</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/juvenile-drug-courts">Juvenile Drug Courts</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/mental-health-courts">Mental Health Courts</a></li>
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/court-programs/veterans-courts">Veterans Courts</a></li>
-</ul>
-</li>
-<li class="child medium no-children"><a href="http://www.pacourts.us/judicial-administration/judicial-security">Judicial Security</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/judicial-administration/budget">Budget</a></li>
-<li class="child medium"><a href="http://www.pacourts.us/judicial-administration/human-resources">Human Resources</a>
-<ul style="display: none;">
-<li class="grandchild medium no-children"><a href="http://www.pacourts.us/judicial-administration/human-resources/job-openings">Job Openings</a></li>
-<li class="grandchild small no-children"><a href="http://www.pacourts.us/judicial-administration/human-resources/benefits">Benefits</a></li>
-</ul>
-</li>
-<li class="child medium no-children"><a href="http://www.pacourts.us/judicial-administration/judicial-education">Judicial Education</a></li>
-</ul>
-</li>
-<li class="parent"><a href="http://www.pacourts.us/news-and-statistics">News &amp; Statistics</a>
-<ul style="display: none;">
-<li class="child small no-children"><a href="http://www.pacourts.us/news-and-statistics/news">News</a></li>
-<li class="child large no-children"><a href="http://www.pacourts.us/news-and-statistics/cases-of-public-interest">Cases of Public Interest</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/news-and-statistics/issues">Issues</a></li>
-<li class="child medium no-children"><a href="http://www.pacourts.us/news-and-statistics/news-releases">News Releases</a></li>
-<li class="child medium no-children"><a href="http://www.pacourts.us/news-and-statistics/media-resources">Media Resources</a></li>
-<li class="child large no-children"><a href="http://www.pacourts.us/news-and-statistics/research-and-statistics">Research &amp; Statistics</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/news-and-statistics/reports">Reports</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/news-and-statistics/archived-resources">Archive</a></li>
-</ul>
-</li>
-<li class="parent"><a href="http://www.pacourts.us/learn">Learn</a>
-<ul style="display: none;">
-<li class="child large no-children"><a href="http://www.pacourts.us/learn/how-the-courts-operate">How the Courts Operate</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/learn/history">History</a></li>
-<li class="child large no-children"><a href="http://www.pacourts.us/learn/how-judges-are-elected">How Judges Are Elected</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/learn/faqs">FAQs</a></li>
-<li class="child medium no-children"><a href="http://www.pacourts.us/learn/legal-glossary">Legal Glossary</a></li>
-<li class="child small no-children"><a href="http://www.pacourts.us/learn/jury-duty">Jury Duty</a></li>
-</ul>
-</li>
-</ul>
-
-					<a href="#menu" class="list backtotop">Back to Top</a>
-				</div>
-			</div>
-		</div>
-	</div> <!-- close header-nav -->
-</header> <!-- close site-header -->
-
-	<div class="site-content section">
-		
-	<div class="wrapper">
-		
-	
-		<div class="row">
-		<div class="grid-24 prepend-1">
-			<ul class="link-list breadcrumb"><li><a href="http://www.pacourts.us/" title="">Home</a></li><li><a href="http://www.pacourts.us/courts" title="">Courts</a></li><li><a href="http://www.pacourts.us/courts/commonwealth-court" title="">Commonwealth Court</a></li><li class="current-page"><a href="http://www.pacourts.us/courts/commonwealth-court/court-opinions" title="">Court Opinions and Postings</a></li></ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="grid-24 prepend-1 append-1 content">
-			<div class="content-inner full">
-				<h1 id="ContentBackground_Main_h1">Court Opinions and Postings</h1>
-				
-<div id="block_1403" class="default section">
-	<div id="ContentBackground_Main_Default_PlacementDefault_Block1403_Content3856_Default" class="">
-	<p>
-	Official opinions are available from the <a href="http://www.pacourts.us/courts/commonwealth-court/chief-clerks-addresses">Court Chief Clerk</a>.</p>
-
-</div>
-
-
-
-
-
-
-
-
-</div>
-<div id="block_979" class="default section">
-	
-
-<div class="box form section filter">
-	<div class="inner">
-		<div class="section">
-			<div class="two-col">
-				<div class="col">
-					<h3>Search contents of Opinions and Postings from Appellate Courts</h3>
-					<p>Fill in any of the fields below to view court postings:</p>
-				</div>
-				<div class="col">
-					<form action="/sitesearch.aspx" method="get" class="search mm-search">
-						<fieldset id="search">
-							<input name="c" value="Opinions" type="hidden">
-							<input name="q" placeholder="search all opinions" type="text">
-							<input value="search" type="submit">
-						</fieldset>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="section">
-			<form method="post" action="Default.aspx" id="CommonwealthSearchForm">
-<div class="aspNetHidden">
-<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgZmD2QWBgICD2QWAmYPFgIeBFRleHQFY0NvdXJ0IE9waW5pb25zIGFuZCBQb3N0aW5ncyB8IENvbW1vbndlYWx0aCBDb3VydCB8IENvdXJ0cyB8IFVuaWZpZWQgSnVkaWNpYWwgU3lzdGVtIG9mIFBlbm5zeWx2YW5pYWQCBA8WBB4HY29udGVudGQeB1Zpc2libGVoZAIFDxYEHwFkHwJoZAICD2QWAgIBD2QWBGYPFQHBAjx1bCBjbGFzcz0ibGluay1saXN0IGJyZWFkY3J1bWIiPjxsaT48YSBocmVmPSIvIiB0aXRsZT0iIj5Ib21lPC9hPjwvbGk+PGxpPjxhIGhyZWY9Ii9jb3VydHMiIHRpdGxlPSIiPkNvdXJ0czwvYT48L2xpPjxsaT48YSBocmVmPSIvY291cnRzL2NvbW1vbndlYWx0aC1jb3VydCIgdGl0bGU9IiI+Q29tbW9ud2VhbHRoIENvdXJ0PC9hPjwvbGk+PGxpIGNsYXNzPSJjdXJyZW50LXBhZ2UiPjxhIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NvdXJ0LW9waW5pb25zIiB0aXRsZT0iIj5Db3VydCBPcGluaW9ucyBhbmQgUG9zdGluZ3M8L2E+PC9saT48L3VsPmQCAw9kFgJmD2QWBGYPZBYCZg9kFgJmD2QWEGYPZBYCZg8VAYUBPHA+CglPZmZpY2lhbCBvcGluaW9ucyBhcmUgYXZhaWxhYmxlIGZyb20gdGhlIDxhIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCAg9kFgJmDxUCB2NvbnRlbnSiATxwPgoJT2ZmaWNpYWwgb3BpbmlvbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSA8YSBhb3BjdHlwZT0iY21zLXJlc291cmNlLWxpbmsiIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCBA9kFgJmDxUCB2NvbnRlbnSiATxwPgoJT2ZmaWNpYWwgb3BpbmlvbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSA8YSBhb3BjdHlwZT0iY21zLXJlc291cmNlLWxpbmsiIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCBg9kFgJmDxUCB2NvbnRlbnSiATxwPgoJT2ZmaWNpYWwgb3BpbmlvbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSA8YSBhb3BjdHlwZT0iY21zLXJlc291cmNlLWxpbmsiIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCCA9kFgJmDxUCB2NvbnRlbnSiATxwPgoJT2ZmaWNpYWwgb3BpbmlvbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSA8YSBhb3BjdHlwZT0iY21zLXJlc291cmNlLWxpbmsiIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCCg9kFgJmDxUCB2NvbnRlbnSiATxwPgoJT2ZmaWNpYWwgb3BpbmlvbnMgYXJlIGF2YWlsYWJsZSBmcm9tIHRoZSA8YSBhb3BjdHlwZT0iY21zLXJlc291cmNlLWxpbmsiIGhyZWY9Ii9jb3VydHMvY29tbW9ud2VhbHRoLWNvdXJ0L2NoaWVmLWNsZXJrcy1hZGRyZXNzZXMiPkNvdXJ0IENoaWVmIENsZXJrPC9hPi48L3A+CmQCDA9kFgJmDxUBogE8cD4KCU9mZmljaWFsIG9waW5pb25zIGFyZSBhdmFpbGFibGUgZnJvbSB0aGUgPGEgYW9wY3R5cGU9ImNtcy1yZXNvdXJjZS1saW5rIiBocmVmPSIvY291cnRzL2NvbW1vbndlYWx0aC1jb3VydC9jaGllZi1jbGVya3MtYWRkcmVzc2VzIj5Db3VydCBDaGllZiBDbGVyazwvYT4uPC9wPgpkAg4PZBYCZg8VAaIBPHA+CglPZmZpY2lhbCBvcGluaW9ucyBhcmUgYXZhaWxhYmxlIGZyb20gdGhlIDxhIGFvcGN0eXBlPSJjbXMtcmVzb3VyY2UtbGluayIgaHJlZj0iL2NvdXJ0cy9jb21tb253ZWFsdGgtY291cnQvY2hpZWYtY2xlcmtzLWFkZHJlc3NlcyI+Q291cnQgQ2hpZWYgQ2xlcms8L2E+LjwvcD4KZAIBD2QWAmYPZBYCZg9kFgpmD2QWAmYPFQMDODU4AzEyMwQyMzAzZAICD2QWDGYPFQIJIHNlbGVjdGVkAGQCAQ8WAh4LXyFJdGVtQ291bnQCCBYQZg9kFgJmDxUDCGNvbXBsZXRlCCBjaGVja2VkEENvbXBsZXRlIE9waW5pb25kAgEPZBYCZg8VAwRtaXNjAA1NaXNjZWxsYW5lb3VzZAICD2QWAmYPFQMCbW8IIGNoZWNrZWQQTWFqb3JpdHkgT3BpbmlvbmQCAw9kFgJmDxUDA29wYwggY2hlY2tlZBJPcGluaW9uIFBlciBDdXJpYW1kAgQPZBYCZg8VAwNvcmQABU9yZGVyZAIFD2QWAmYPFQMDcGNvABBQZXIgQ3VyaWFtIE9yZGVyZAIGD2QWAmYPFQMCcG4AHVByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uZAIHD2QWAmYPFQMDc2pvABRTaW5nbGUgSnVkZ2UgT3BpbmlvbmQCAg8WAh8DAg0WGgIBD2QWAmYPFQMBMAAKQWxsIE1vbnRoc2QCAg9kFgJmDxUDATEAB0phbnVhcnlkAgMPZBYCZg8VAwEyCSBzZWxlY3RlZAhGZWJydWFyeWQCBA9kFgJmDxUDATMABU1hcmNoZAIFD2QWAmYPFQMBNAAFQXByaWxkAgYPZBYCZg8VAwE1AANNYXlkAgcPZBYCZg8VAwE2AARKdW5lZAIID2QWAmYPFQMBNwAESnVseWQCCQ9kFgJmDxUDATgABkF1Z3VzdGQCCg9kFgJmDxUDATkACVNlcHRlbWJlcmQCCw9kFgJmDxUDAjEwAAdPY3RvYmVyZAIMD2QWAmYPFQMCMTEACE5vdmVtYmVyZAIND2QWAmYPFQMCMTIACERlY2VtYmVyZAIDDxYCHwMCExYmAgEPZBYCZg8VAwAAC1NlbGVjdCBZZWFyZAICD2QWAmYPFQMEMjAxNAkgc2VsZWN0ZWQEMjAxNGQCAw9kFgJmDxUDBDIwMTMABDIwMTNkAgQPZBYCZg8VAwQyMDEyAAQyMDEyZAIFD2QWAmYPFQMEMjAxMQAEMjAxMWQCBg9kFgJmDxUDBDIwMTAABDIwMTBkAgcPZBYCZg8VAwQyMDA5AAQyMDA5ZAIID2QWAmYPFQMEMjAwOAAEMjAwOGQCCQ9kFgJmDxUDBDIwMDcABDIwMDdkAgoPZBYCZg8VAwQyMDA2AAQyMDA2ZAILD2QWAmYPFQMEMjAwNQAEMjAwNWQCDA9kFgJmDxUDBDIwMDQABDIwMDRkAg0PZBYCZg8VAwQyMDAzAAQyMDAzZAIOD2QWAmYPFQMEMjAwMgAEMjAwMmQCDw9kFgJmDxUDBDIwMDEABDIwMDFkAhAPZBYCZg8VAwQyMDAwAAQyMDAwZAIRD2QWAmYPFQMEMTk5OQAEMTk5OWQCEg9kFgJmDxUDBDE5OTgABDE5OThkAhMPZBYCZg8VAwQxOTk3AAQxOTk3ZAIED2QWAgIBDxYCHglpbm5lcmh0bWxlZAIFDxUBBGRlc2NkAgUPFQIJIHNlbGVjdGVkAGQCBg8WAh8DAgoWFGYPZBYkZg8VAQEwZAIBDxUBATBkAgIPFQMGJnp3bmo7ATAuSi4gTWF5cyB2LiBNLiBLb3NpbnNraTsgZXQgYWwuIC0gMzU0IE0uRC4gMjAxM2QCAw8VAgEwLkouIE1heXMgdi4gTS4gS29zaW5za2k7IGV0IGFsLiAtIDM1NCBNLkQuIDIwMTNkAgQPFQIBMBJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBMBJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBMBZGcmllZG1hbiwgU2VuaW9yIEp1ZGdlZAIHDxUCATAWRnJpZWRtYW4sIFNlbmlvciBKdWRnZWQCCA8VAgEwEUZlYnJ1YXJ5IDI3LCAyMDE0ZAIJDxUDATABMAowMi8yNy8yMDE0ZAIKDxUCATAIUmVwb3J0ZWRkAgsPFQMBMAkgc2VsZWN0ZWQAZAIMDxUCATAQTWFqb3JpdHkgT3BpbmlvbmQCDQ8VAgEwhQM8b3B0aW9uIHZhbHVlPSdjb21wbGV0ZSc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbycgc2VsZWN0ZWQ9J3NlbGVjdGVkJz5NYWpvcml0eSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3BjJz5PcGluaW9uIFBlciBDdXJpYW08L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcmQnPk9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncGNvJz5QZXIgQ3VyaWFtIE9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncG4nPlByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nc2pvJz5TaW5nbGUgSnVkZ2UgT3Bpbmlvbjwvb3B0aW9uPmQCDg8VAQEwZAIPDxUDEzM1NE1EMTNfMi0yNy0xNC5wZGYBMRMzNTRNRDEzXzItMjctMTQucGRmZAIQDxUBATBkAhEPFQ4BMAEwAzg1OAMxMjMEMjMwMwEwBTEzMDI1ATABMAEwATABMAEwATBkAgEPZBYkZg8VAQExZAIBDxUBATFkAgIPFQMGJnp3bmo7ATFkUG9jb25vIE10bi4gQ2hhcnRlciBTY2hvb2wsIEluYy4gZC9iL2EgUG9jb25vIE10bi4gQ2hhcnRlciBTY2hvb2wgdi4gUG9jb25vIE10bi4gU0QgLSAxMzA4IEMuRC4gMjAxM2QCAw8VAgExZFBvY29ubyBNdG4uIENoYXJ0ZXIgU2Nob29sLCBJbmMuIGQvYi9hIFBvY29ubyBNdG4uIENoYXJ0ZXIgU2Nob29sIHYuIFBvY29ubyBNdG4uIFNEIC0gMTMwOCBDLkQuIDIwMTNkAgQPFQIBMRJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBMRJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBMQxTaW1wc29uLCBKLiBkAgcPFQIBMQxTaW1wc29uLCBKLiBkAggPFQIBMRFGZWJydWFyeSAyNiwgMjAxNGQCCQ8VAwExATEKMDIvMjYvMjAxNGQCCg8VAgExCFJlcG9ydGVkZAILDxUDATEJIHNlbGVjdGVkAGQCDA8VAgExEE1ham9yaXR5IE9waW5pb25kAg0PFQIBMYUDPG9wdGlvbiB2YWx1ZT0nY29tcGxldGUnPkNvbXBsZXRlIE9waW5pb248L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtaXNjJz5NaXNjZWxsYW5lb3VzPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nbW8nIHNlbGVjdGVkPSdzZWxlY3RlZCc+TWFqb3JpdHkgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J29wYyc+T3BpbmlvbiBQZXIgQ3VyaWFtPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3JkJz5PcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Bjbyc+UGVyIEN1cmlhbSBPcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3BuJz5QcmV2aW91cyBOb24tcmVwb3J0ZWQgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Nqbyc+U2luZ2xlIEp1ZGdlIE9waW5pb248L29wdGlvbj5kAg4PFQEBMWQCDw8VAxQxMzA4Q0QxM18yLTI2LTE0LnBkZgExFDEzMDhDRDEzXzItMjYtMTQucGRmZAIQDxUBATFkAhEPFQ4BMQExAzg1OAMxMjMEMjMwMwExBTEzMDE3ATEBMQExATEBMQExATFkAgIPZBYkZg8VAQEyZAIBDxUBATJkAgIPFQMGJnp3bmo7ATIkTC4gTXVsZHJvdyB2LiBTRVBUQSAtIDExODEgQy5ELiAyMDEzZAIDDxUCATIkTC4gTXVsZHJvdyB2LiBTRVBUQSAtIDExODEgQy5ELiAyMDEzZAIEDxUCATISQ29tbW9ud2VhbHRoIENvdXJ0ZAIFDxUCATISQ29tbW9ud2VhbHRoIENvdXJ0ZAIGDxUCATIJQ292ZXksIEouZAIHDxUCATIJQ292ZXksIEouZAIIDxUCATIRRmVicnVhcnkgMjYsIDIwMTRkAgkPFQMBMgEyCjAyLzI2LzIwMTRkAgoPFQIBMghSZXBvcnRlZGQCCw8VAwEyCSBzZWxlY3RlZABkAgwPFQIBMhBNYWpvcml0eSBPcGluaW9uZAINDxUCATKFAzxvcHRpb24gdmFsdWU9J2NvbXBsZXRlJz5Db21wbGV0ZSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nbWlzYyc+TWlzY2VsbGFuZW91czwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21vJyBzZWxlY3RlZD0nc2VsZWN0ZWQnPk1ham9yaXR5IE9waW5pb248L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcGMnPk9waW5pb24gUGVyIEN1cmlhbTwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J29yZCc+T3JkZXI8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdwY28nPlBlciBDdXJpYW0gT3JkZXI8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdwbic+UHJldmlvdXMgTm9uLXJlcG9ydGVkIE9waW5pb248L29wdGlvbj48b3B0aW9uIHZhbHVlPSdzam8nPlNpbmdsZSBKdWRnZSBPcGluaW9uPC9vcHRpb24+ZAIODxUBATJkAg8PFQMUMTE4MUNEMTNfMi0yNi0xNC5wZGYBMRQxMTgxQ0QxM18yLTI2LTE0LnBkZmQCEA8VAQEyZAIRDxUOATIBMgM4NTgDMTIzBDIzMDMBMgUxMzAxOAEyATIBMgEyATIBMgEyZAIDD2QWJGYPFQEBM2QCAQ8VAQEzZAICDxUDBiZ6d25qOwEzOk0uIEJyZXR6IHYuIENlbnRyYWwgQnVja3MgU2Nob29sIERpc3RyaWN0IC0gMTAzOSBDLkQuIDIwMTJkAgMPFQIBMzpNLiBCcmV0eiB2LiBDZW50cmFsIEJ1Y2tzIFNjaG9vbCBEaXN0cmljdCAtIDEwMzkgQy5ELiAyMDEyZAIEDxUCATMSQ29tbW9ud2VhbHRoIENvdXJ0ZAIFDxUCATMSQ29tbW9ud2VhbHRoIENvdXJ0ZAIGDxUCATMOTWNDdWxsb3VnaCwgSi5kAgcPFQIBMw5NY0N1bGxvdWdoLCBKLmQCCA8VAgEzEUZlYnJ1YXJ5IDIxLCAyMDE0ZAIJDxUDATMBMwowMi8yMS8yMDE0ZAIKDxUCATMIUmVwb3J0ZWRkAgsPFQMBMwkgc2VsZWN0ZWQAZAIMDxUCATMQTWFqb3JpdHkgT3BpbmlvbmQCDQ8VAgEzhQM8b3B0aW9uIHZhbHVlPSdjb21wbGV0ZSc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbycgc2VsZWN0ZWQ9J3NlbGVjdGVkJz5NYWpvcml0eSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3BjJz5PcGluaW9uIFBlciBDdXJpYW08L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcmQnPk9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncGNvJz5QZXIgQ3VyaWFtIE9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncG4nPlByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nc2pvJz5TaW5nbGUgSnVkZ2UgT3Bpbmlvbjwvb3B0aW9uPmQCDg8VAQEzZAIPDxUDFDEwMzlDRDEyXzItMjEtMTQucGRmATEUMTAzOUNEMTJfMi0yMS0xNC5wZGZkAhAPFQEBM2QCEQ8VDgEzATMDODU4AzEyMwQyMzAzATMFMTMwMDMBMwEzATMBMwEzATMBM2QCBA9kFiRmDxUBATRkAgEPFQEBNGQCAg8VAwYmenduajsBNFFDb21tb253ZWFsdGggb2YgUEEsIERQVyB2LiBKLiBFaXNlbWFuLCBKci4sIGV0IGFsIC0gMTkzNSwgMTk0OSBhbmQgMTk1MCBDLkQuIDIwMTJkAgMPFQIBNFFDb21tb253ZWFsdGggb2YgUEEsIERQVyB2LiBKLiBFaXNlbWFuLCBKci4sIGV0IGFsIC0gMTkzNSwgMTk0OSBhbmQgMTk1MCBDLkQuIDIwMTJkAgQPFQIBNBJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBNBJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBNEJTaW1wc29uLCBKLiB+IENvbmN1cnJpbmcgYW5kIERpc3NlbnRpbmcgT3BpbmlvbiBieTogTWNDdWxsb3VnaCwgSi5kAgcPFQIBNEJTaW1wc29uLCBKLiB+IENvbmN1cnJpbmcgYW5kIERpc3NlbnRpbmcgT3BpbmlvbiBieTogTWNDdWxsb3VnaCwgSi5kAggPFQIBNBFGZWJydWFyeSAxOSwgMjAxNGQCCQ8VAwE0ATQKMDIvMTkvMjAxNGQCCg8VAgE0CFJlcG9ydGVkZAILDxUDATQJIHNlbGVjdGVkAGQCDA8VAgE0EENvbXBsZXRlIE9waW5pb25kAg0PFQIBNIUDPG9wdGlvbiB2YWx1ZT0nY29tcGxldGUnIHNlbGVjdGVkPSdzZWxlY3RlZCc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbyc+TWFqb3JpdHkgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J29wYyc+T3BpbmlvbiBQZXIgQ3VyaWFtPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3JkJz5PcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Bjbyc+UGVyIEN1cmlhbSBPcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3BuJz5QcmV2aW91cyBOb24tcmVwb3J0ZWQgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Nqbyc+U2luZ2xlIEp1ZGdlIE9waW5pb248L29wdGlvbj5kAg4PFQEBNGQCDw8VAxQxOTM1Q0QxMl8yLTE5LTE0LnBkZgExFDE5MzVDRDEyXzItMTktMTQucGRmZAIQDxUBATRkAhEPFQ4BNAE0Azg1OAMxMjMEMjMwMwE0BTEyOTg2ATQBNAE0ATQBNAE0ATRkAgUPZBYkZg8VAQE1ZAIBDxUBATVkAgIPFQMGJnp3bmo7ATVcRGVudGFsIEJlbmVmaXQgUHJvdmlkZXJzLCBJbmMuIGV0IGFsIHYuIEouIEVpc2VtYW4sIEpyLiwgZXQgYWwuIC0gOTQ1LCA5NTcgYW5kIDk1OCBDLkQuIDIwMTNkAgMPFQIBNVxEZW50YWwgQmVuZWZpdCBQcm92aWRlcnMsIEluYy4gZXQgYWwgdi4gSi4gRWlzZW1hbiwgSnIuLCBldCBhbC4gLSA5NDUsIDk1NyBhbmQgOTU4IEMuRC4gMjAxM2QCBA8VAgE1EkNvbW1vbndlYWx0aCBDb3VydGQCBQ8VAgE1EkNvbW1vbndlYWx0aCBDb3VydGQCBg8VAgE1MlNpbXBzb24sIEouIH4gRGlzc2VudGluZyBPcGluaW9uIGJ5IE1jQ3VsbG91Z2gsIEouZAIHDxUCATUyU2ltcHNvbiwgSi4gfiBEaXNzZW50aW5nIE9waW5pb24gYnkgTWNDdWxsb3VnaCwgSi5kAggPFQIBNRFGZWJydWFyeSAxOSwgMjAxNGQCCQ8VAwE1ATUKMDIvMTkvMjAxNGQCCg8VAgE1CFJlcG9ydGVkZAILDxUDATUJIHNlbGVjdGVkAGQCDA8VAgE1EENvbXBsZXRlIE9waW5pb25kAg0PFQIBNYUDPG9wdGlvbiB2YWx1ZT0nY29tcGxldGUnIHNlbGVjdGVkPSdzZWxlY3RlZCc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbyc+TWFqb3JpdHkgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J29wYyc+T3BpbmlvbiBQZXIgQ3VyaWFtPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3JkJz5PcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Bjbyc+UGVyIEN1cmlhbSBPcmRlcjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3BuJz5QcmV2aW91cyBOb24tcmVwb3J0ZWQgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J3Nqbyc+U2luZ2xlIEp1ZGdlIE9waW5pb248L29wdGlvbj5kAg4PFQEBNWQCDw8VAxM5NDVDRDEzXzItMTktMTQucGRmATETOTQ1Q0QxM18yLTE5LTE0LnBkZmQCEA8VAQE1ZAIRDxUOATUBNQM4NTgDMTIzBDIzMDMBNQUxMjk4NwE1ATUBNQE1ATUBNQE1ZAIGD2QWJGYPFQEBNmQCAQ8VAQE2ZAICDxUDBiZ6d25qOwE2R00uIFN0dWdhcnQgdi4gVUNCUiB+IERpc3NlbnRpbmcgT3BpbmlvbiBieSBMZWF2aXR0LCBKLiAtIDIzODYgQy5ELiAyMDEyZAIDDxUCATZHTS4gU3R1Z2FydCB2LiBVQ0JSIH4gRGlzc2VudGluZyBPcGluaW9uIGJ5IExlYXZpdHQsIEouIC0gMjM4NiBDLkQuIDIwMTJkAgQPFQIBNhJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBNhJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBNgpQRVIgQ1VSSUFNZAIHDxUCATYKUEVSIENVUklBTWQCCA8VAgE2EUZlYnJ1YXJ5IDE5LCAyMDE0ZAIJDxUDATYBNgowMi8xOS8yMDE0ZAIKDxUCATYIUmVwb3J0ZWRkAgsPFQMBNgkgc2VsZWN0ZWQAZAIMDxUCATYQQ29tcGxldGUgT3BpbmlvbmQCDQ8VAgE2hQM8b3B0aW9uIHZhbHVlPSdjb21wbGV0ZScgc2VsZWN0ZWQ9J3NlbGVjdGVkJz5Db21wbGV0ZSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nbWlzYyc+TWlzY2VsbGFuZW91czwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21vJz5NYWpvcml0eSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3BjJz5PcGluaW9uIFBlciBDdXJpYW08L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcmQnPk9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncGNvJz5QZXIgQ3VyaWFtIE9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncG4nPlByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nc2pvJz5TaW5nbGUgSnVkZ2UgT3Bpbmlvbjwvb3B0aW9uPmQCDg8VAQE2ZAIPDxUDFDIzODZDRDEyXzItMTktMTQucGRmATEUMjM4NkNEMTJfMi0xOS0xNC5wZGZkAhAPFQEBNmQCEQ8VDgE2ATYDODU4AzEyMwQyMzAzATYFMTI5ODgBNgE2ATYBNgE2ATYBNmQCBw9kFiRmDxUBATdkAgEPFQEBN2QCAg8VAwYmenduajsBN1RQQSBVbmluc3VyZWQgRW1wbG95ZXJzIEd1YXJhbnR5IEZ1bmQgdi4gV0NBQiAoQm9ubmVyIGFuZCBGaXR6Z2VyYWxkKSAtIDMwMCBDLkQuIDIwMTNkAgMPFQIBN1RQQSBVbmluc3VyZWQgRW1wbG95ZXJzIEd1YXJhbnR5IEZ1bmQgdi4gV0NBQiAoQm9ubmVyIGFuZCBGaXR6Z2VyYWxkKSAtIDMwMCBDLkQuIDIwMTNkAgQPFQIBNxJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBNxJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBNw5NY0N1bGxvdWdoLCBKLmQCBw8VAgE3Dk1jQ3VsbG91Z2gsIEouZAIIDxUCATcRRmVicnVhcnkgMTIsIDIwMTRkAgkPFQMBNwE3CjAyLzEyLzIwMTRkAgoPFQIBNwhSZXBvcnRlZGQCCw8VAwE3CSBzZWxlY3RlZABkAgwPFQIBNxBNYWpvcml0eSBPcGluaW9uZAINDxUCATeFAzxvcHRpb24gdmFsdWU9J2NvbXBsZXRlJz5Db21wbGV0ZSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nbWlzYyc+TWlzY2VsbGFuZW91czwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21vJyBzZWxlY3RlZD0nc2VsZWN0ZWQnPk1ham9yaXR5IE9waW5pb248L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcGMnPk9waW5pb24gUGVyIEN1cmlhbTwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J29yZCc+T3JkZXI8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdwY28nPlBlciBDdXJpYW0gT3JkZXI8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdwbic+UHJldmlvdXMgTm9uLXJlcG9ydGVkIE9waW5pb248L29wdGlvbj48b3B0aW9uIHZhbHVlPSdzam8nPlNpbmdsZSBKdWRnZSBPcGluaW9uPC9vcHRpb24+ZAIODxUBATdkAg8PFQMTMzAwQ0QxM18yLTEyLTE0LnBkZgExEzMwMENEMTNfMi0xMi0xNC5wZGZkAhAPFQEBN2QCEQ8VDgE3ATcDODU4AzEyMwQyMzAzATcFMTI5ODUBNwE3ATcBNwE3ATcBN2QCCA9kFiRmDxUBAThkAgEPFQEBOGQCAg8VAwYmenduajsBOFdUaGUgTWF5b3IgYW5kIFRvd24gQ291bmNpbCBvZiB0aGUgQm9yb3VnaCBvZiBDaGFtYmVyc2J1cmcgdi4gUi4gS2VlbGVyIC0gMjM4OSBDLkQuIDIwMTJkAgMPFQIBOFdUaGUgTWF5b3IgYW5kIFRvd24gQ291bmNpbCBvZiB0aGUgQm9yb3VnaCBvZiBDaGFtYmVyc2J1cmcgdi4gUi4gS2VlbGVyIC0gMjM4OSBDLkQuIDIwMTJkAgQPFQIBOBJDb21tb253ZWFsdGggQ291cnRkAgUPFQIBOBJDb21tb253ZWFsdGggQ291cnRkAgYPFQIBOBZGcmllZG1hbiwgU2VuaW9yIEp1ZGdlZAIHDxUCATgWRnJpZWRtYW4sIFNlbmlvciBKdWRnZWQCCA8VAgE4EUZlYnJ1YXJ5IDEwLCAyMDE0ZAIJDxUDATgBOAowMi8xMC8yMDE0ZAIKDxUCATgIUmVwb3J0ZWRkAgsPFQMBOAkgc2VsZWN0ZWQAZAIMDxUCATgQTWFqb3JpdHkgT3BpbmlvbmQCDQ8VAgE4hQM8b3B0aW9uIHZhbHVlPSdjb21wbGV0ZSc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbycgc2VsZWN0ZWQ9J3NlbGVjdGVkJz5NYWpvcml0eSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3BjJz5PcGluaW9uIFBlciBDdXJpYW08L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcmQnPk9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncGNvJz5QZXIgQ3VyaWFtIE9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncG4nPlByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nc2pvJz5TaW5nbGUgSnVkZ2UgT3Bpbmlvbjwvb3B0aW9uPmQCDg8VAQE4ZAIPDxUDFDIzODlDRDEyXzItMTAtMTQucGRmATEUMjM4OUNEMTJfMi0xMC0xNC5wZGZkAhAPFQEBOGQCEQ8VDgE4ATgDODU4AzEyMwQyMzAzATgFMTI5NzQBOAE4ATgBOAE4ATgBOGQCCQ9kFiRmDxUBATlkAgEPFQEBOWQCAg8VAwYmenduajsBOZQBU2VsZWN0aXZlIEluc3VyYW5jZSBDb21wYW55IG9mIEFtZXJpY2Egdi4gQnVyZWF1IG9mIFdvcmtlcnMnIENvbXBlbnNhdGlvbiBGZWUgUmV2aWV3IEhlYXJpbmcgT2ZmaWNlIChUaGUgUGh5c2ljYWwgVGhlcmFweSBJbnN0aXR1dGUpIC0gNjEzIEMuRC4gMjAxM2QCAw8VAgE5lAFTZWxlY3RpdmUgSW5zdXJhbmNlIENvbXBhbnkgb2YgQW1lcmljYSB2LiBCdXJlYXUgb2YgV29ya2VycycgQ29tcGVuc2F0aW9uIEZlZSBSZXZpZXcgSGVhcmluZyBPZmZpY2UgKFRoZSBQaHlzaWNhbCBUaGVyYXB5IEluc3RpdHV0ZSkgLSA2MTMgQy5ELiAyMDEzZAIEDxUCATkSQ29tbW9ud2VhbHRoIENvdXJ0ZAIFDxUCATkSQ29tbW9ud2VhbHRoIENvdXJ0ZAIGDxUCATkLTGVhdml0dCwgSi5kAgcPFQIBOQtMZWF2aXR0LCBKLmQCCA8VAgE5EUZlYnJ1YXJ5IDA0LCAyMDE0ZAIJDxUDATkBOQowMi8wNC8yMDE0ZAIKDxUCATkIUmVwb3J0ZWRkAgsPFQMBOQkgc2VsZWN0ZWQAZAIMDxUCATkQTWFqb3JpdHkgT3BpbmlvbmQCDQ8VAgE5hQM8b3B0aW9uIHZhbHVlPSdjb21wbGV0ZSc+Q29tcGxldGUgT3Bpbmlvbjwvb3B0aW9uPjxvcHRpb24gdmFsdWU9J21pc2MnPk1pc2NlbGxhbmVvdXM8L29wdGlvbj48b3B0aW9uIHZhbHVlPSdtbycgc2VsZWN0ZWQ9J3NlbGVjdGVkJz5NYWpvcml0eSBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nb3BjJz5PcGluaW9uIFBlciBDdXJpYW08L29wdGlvbj48b3B0aW9uIHZhbHVlPSdvcmQnPk9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncGNvJz5QZXIgQ3VyaWFtIE9yZGVyPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0ncG4nPlByZXZpb3VzIE5vbi1yZXBvcnRlZCBPcGluaW9uPC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0nc2pvJz5TaW5nbGUgSnVkZ2UgT3Bpbmlvbjwvb3B0aW9uPmQCDg8VAQE5ZAIPDxUDEjYxM0NEMTNfMi00LTE0LnBkZgEyEjYxM0NEMTNfMi00LTE0LnBkZmQCEA8VAQE5ZAIRDxUOATkBOQM4NTgDMTIzBDIzMDMBOQUxMjk2MgE5ATkBOQE5ATkBOQE5ZAIIDxYCHwJoZAIGDxUCCnByb2R1Y3Rpb24KcHJvZHVjdGlvbmRk07JNsf0VxcUlMFe4eaoom/lVv5o=" type="hidden">
-</div>
-
-				<fieldset>
-					<label for="CourtType" class="delta">Court Type</label>
-					<div class="three-col inline-block">
-						<div class="col">
-							<select name="CourtType" id="CourtType" onchange="switchCourt('commonwealth')">
-								<option value="supreme">Supreme Court</option>
-								<option value="superior">Superior Court</option>
-								<option value="commonwealth" selected="selected">Commonwealth Court</option>
-								<option value="dboard">Disciplinary Board</option>
-							</select>
-						</div>
-					</div>
-				</fieldset>
-				<div>
-					<fieldset>
-						<label for="StatusSearch" class="delta">Opinion Status:</label>
-						<div class="three-col inline-block">
-							<select name="StatusSearch" id="StatusSearch">
-								<option value="">All Panel Opinions</option>
-								<option value="Reported" selected="selected">Reported Panel Opinions</option>
-								<option value="Unreported">Unreported Panel Opinions</option>
-							</select>
-						</div>
-					</fieldset>
-					<fieldset>
-						<label class="delta">Opinion Type</label>
-						<div class="three-col inline-block">
-							<div style="clear: both;" class="check"><label><input name="TypeSearch" value="complete" checked="checked" type="checkbox"><span>Complete Opinion</span></label></div><div class="check"><label><input name="TypeSearch" value="misc" type="checkbox"><span>Miscellaneous</span></label></div><div class="check"><label><input name="TypeSearch" value="mo" checked="checked" type="checkbox"><span>Majority Opinion</span></label></div><div style="clear: both;" class="check"><label><input name="TypeSearch" value="opc" checked="checked" type="checkbox"><span>Opinion Per Curiam</span></label></div><div class="check"><label><input name="TypeSearch" value="ord" type="checkbox"><span>Order</span></label></div><div class="check"><label><input name="TypeSearch" value="pco" type="checkbox"><span>Per Curiam Order</span></label></div><div style="clear: both;" class="check"><label><input name="TypeSearch" value="pn" type="checkbox"><span>Previous Non-reported Opinion</span></label></div><div class="check"><label><input name="TypeSearch" value="sjo" type="checkbox"><span>Single Judge Opinion</span></label></div>
-						</div>
-					</fieldset>
-				</div>
-				<div>
-					<fieldset>
-						<div class="three-col inline-block">
-							<div class="col">
-								<label for="CaptionSearch" class="delta">Caption</label>
-								<input name="CaptionSearch" id="CaptionSearch" type="text">
-							</div>
-							<div class="col">
-								<label for="AuthorSearch" class="delta">Author</label>
-								<input name="AuthorSearch" id="AuthorSearch" maxlength="200" type="text">
-							</div>
-						</div>
-					</fieldset>
-				</div>
-				<fieldset>
-					<label for="MinDateSearch" class="delta">Date Range</label>
-					<div class="three-col inline-block">
-						<div class="col">
-							<input class="hasDatepicker" name="MinDateSearch" id="MinDateSearch" maxlength="10" type="text"><img title="..." alt="..." src="pacomm_example_files/calendar.png" class="ui-datepicker-trigger">
-						</div>
-						<div class="col">
-							<input class="hasDatepicker" name="MaxDateSearch" id="MaxDateSearch" maxlength="10" type="text"><img title="..." alt="..." src="pacomm_example_files/calendar.png" class="ui-datepicker-trigger">
-						</div>
-					</div>
-				</fieldset>
-				<fieldset>
-					<div class="three-col">
-						<div class="col">
-							<label for="MonthSearch" class="delta">Month</label>
-							<select id="MonthSearch" name="MonthSearch"><option value="0">All Months</option><option value="1">January</option><option value="2" selected="selected">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>
-						</div>
-						<div class="col">
-							<label for="YearSearch" class="delta">Year</label>
-							<select id="YearSearch" name="YearSearch"><option value="">Select Year</option><option value="2014" selected="selected">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option></select>
-						</div>
-					</div>
-				</fieldset>
-				
-				<fieldset>
-					<div class="two-col">
-						<div class="col">
-							<input name="SortOrder" id="SortOrder" value="desc" type="hidden">
-							<input name="FormButton" id="SubmitButton" value="Search" type="submit">
-							<input name="FormButton" id="ResetButton" value="Clear" type="submit">
-						</div>
-					</div>
-				</fieldset>
-			</form>
-		</div>
-	</div>
-</div>
-
-<div class="three-col section">
-	<div class="col" style="width:40%;">
-		<h2 id="ContentBackground_Main_Default_PlacementDefault_Block979_Control858_wTitle">Commonwealth Court Results:</h2>
-	</div>
-	<div class="col" style="width:40%;">
-		<label for="SortOrderDropdown">Choose Sort Order:</label>
-		<select id="SortOrderDropdown" onchange="submitSortOrder()">
-			<option value="desc" selected="selected">Most Recent to Oldest</option>
-			<option value="asc">Oldest to Most Recent</option>
-		</select>
-	</div>
-	<div class="col" style="width:20%;">
-		<a href="http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx" class="right"><img src="pacomm_example_files/btn-rss.png" alt="RSS Feed Button"></a>
-	</div>
-</div>
-<div class="one-col divided no-stripe">
-	
-			<div class="col odd" id="SearchResultContainer0">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView0">J. Mays v. M. Kosinski; et al. - 354 M.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView0">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView0">Friedman, Senior Judge</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView0">February 27, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView0">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView0">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView0">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/354MD13_2-27-14.pdf?cb=1" target="_blank">
-												<span title="354MD13_2-27-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col" id="SearchResultContainer1">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView1">Pocono Mtn. Charter School, Inc. d/b/a Pocono Mtn. Charter School v. Pocono Mtn. SD - 1308 C.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView1">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView1">Simpson, J. </span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView1">February 26, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView1">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView1">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView1">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1308CD13_2-26-14.pdf?cb=1" target="_blank">
-												<span title="1308CD13_2-26-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col odd" id="SearchResultContainer2">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView2">L. Muldrow v. SEPTA - 1181 C.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView2">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView2">Covey, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView2">February 26, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView2">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView2">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView2">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1181CD13_2-26-14.pdf?cb=1" target="_blank">
-												<span title="1181CD13_2-26-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col" id="SearchResultContainer3">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView3">M. Bretz v. Central Bucks School District - 1039 C.D. 2012</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView3">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView3">McCullough, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView3">February 21, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView3">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView3">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView3">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1039CD12_2-21-14.pdf?cb=1" target="_blank">
-												<span title="1039CD12_2-21-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col odd" id="SearchResultContainer4">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView4">Commonwealth of PA, DPW v. J. Eiseman, Jr., et al - 1935, 1949 and 1950 C.D. 2012</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView4">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView4">Simpson, J. ~ Concurring and Dissenting Opinion by: McCullough, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView4">February 19, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView4">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView4">Complete Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView4">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1935CD12_2-19-14.pdf?cb=1" target="_blank">
-												<span title="1935CD12_2-19-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col" id="SearchResultContainer5">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView5">Dental Benefit Providers, Inc. et al v. J. Eiseman, Jr., et al. - 945, 957 and 958 C.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView5">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView5">Simpson, J. ~ Dissenting Opinion by McCullough, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView5">February 19, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView5">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView5">Complete Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView5">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/945CD13_2-19-14.pdf?cb=1" target="_blank">
-												<span title="945CD13_2-19-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col odd" id="SearchResultContainer6">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView6">M. Stugart v. UCBR ~ Dissenting Opinion by Leavitt, J. - 2386 C.D. 2012</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView6">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView6">PER CURIAM</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView6">February 19, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView6">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView6">Complete Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView6">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2386CD12_2-19-14.pdf?cb=1" target="_blank">
-												<span title="2386CD12_2-19-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col" id="SearchResultContainer7">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView7">PA Uninsured Employers Guaranty Fund v. WCAB (Bonner and Fitzgerald) - 300 C.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView7">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView7">McCullough, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView7">February 12, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView7">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView7">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView7">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/300CD13_2-12-14.pdf?cb=1" target="_blank">
-												<span title="300CD13_2-12-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col odd" id="SearchResultContainer8">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView8">The Mayor and Town Council of the Borough of Chambersburg v. R. Keeler - 2389 C.D. 2012</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView8">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView8">Friedman, Senior Judge</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView8">February 10, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView8">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView8">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView8">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2389CD12_2-10-14.pdf?cb=1" target="_blank">
-												<span title="2389CD12_2-10-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-			<div class="col" id="SearchResultContainer9">
-				‌
-						<table class="search-results">
-							<thead>
-								<tr class="title-row">
-									<th id="search_th_var" scope="col" colspan="2">
-										<strong id="CaptionView9">Selective Insurance Company of 
-America v. Bureau of Workers' Compensation Fee Review Hearing Office 
-(The Physical Therapy Institute) - 613 C.D. 2013</strong>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th id="posted_by_var" headers="search_th_var" scope="row">Posted by:</th>
-									<td headers="search_th_var posted_by_var">
-										<span id="UserIDView9">Commonwealth Court</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_by_var" headers="search_th_var" scope="row">Opinion by:</th>
-									<td headers="search_th_var opinion_by_var">
-										<span id="AuthorView9">Leavitt, J.</span>
-										
-									</td>
-								</tr>
-								<tr class="date-row">
-									<th id="date_var" headers="search_th_var" scope="row">Date:</th>
-									<td headers="search_th_var date_var">
-										<span id="DateView9">February 04, 2014</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_status_var" headers="search_th_var" scope="row">Opinion status:</th>
-									<td headers="search_th_var opinion_status_var">
-										<span id="StatusView9">Reported</span>
-										
-									</td>
-								</tr>
-								<tr>
-									<th id="opinion_type_var" headers="search_th_var" scope="row">Opinion type:</th>
-									<td headers="search_th_var opinion_type_var">
-										<span id="TypeView9">Majority Opinion</span>
-										
-									</td>
-								</tr>
-								<tr class="download-row">
-									<th id="download_var" headers="search_th_var" scope="row">
-										Download:
-									</th>
-									<td headers="search_th_var download_var">
-										<div id="FileView9">
-											<a class="link" href="http://www.pacourts.us/assets/opinions/Commonwealth/out/613CD13_2-4-14.pdf?cb=2" target="_blank">
-												<span title="613CD13_2-4-14.pdf">&nbsp;</span>
-											</a>
-										</div>
-										
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						
-			</div>
-		
-	
-</div>
-</div>
-			</div>
-		</div>
-	</div>
-
-	</div>
-
-	</div> <!-- close site-content -->
-	
-	
-<footer class="site-footer" role="contentinfo">
-	<div class="global section leeway-3">
-		<div class="wrapper">
-			<div class="row">
-				<div class="grid-13 prepend-1 milli aopc"><em>The Unified</em> judicial system <em>of</em> Pennsylvania</div>
-				<div class="grid-11 append-1">
-					<form action="/sitesearch.aspx" method="get" class="search">
-						<fieldset>
-							<!-- <label for="search-footer">Search</label> -->
-							<input name="q" placeholder="search" id="search-footer" type="text">
-							<input value="search" type="submit">
-						</fieldset>
-						
-<nav class="nav-global" role="navigation">
-	<ul>
-		<li><a href="http://www.pacourts.us/judicial-administration/human-resources/job-openings/" title="Link to Careers">Careers</a></li>
-		
-		<li><a class="LoginLink" href="http://www.pacourts.us/login" title="Link to Login Screen">Login</a></li>
-		
-	</ul>
-</nav>
-					</form>
-				</div> 
-			</div>
-		</div>
-	</div> <!-- close global section -->
-	<div class="footer-content section">
-		<div class="wrapper">
-			<div class="row">
-				
-				<a href="javascript:void(0)" class="page backtotop">Back to Top</a>
-
-				
-<div class="footer-menu"><div class="col grid-5 push-1">
-<ul>
-<li><a href="http://www.pacourts.us/courts" title="Link to Courts">Courts</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/supreme-court" title="Link to Supreme Court">Supreme Court</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/supreme-court/supreme-court-justices" title="Link to Supreme Court Justices">Supreme Court Justices</a></li>
-<li><a href="http://www.pacourts.us/courts/supreme-court/docket-sheets" title="Link to Docket Sheets">Docket Sheets</a></li>
-<li><a href="http://www.pacourts.us/courts/supreme-court/court-opinions" title="Link to Court Opinions and Postings">Court Opinions and Postings</a></li>
-<li><a href="http://www.pacourts.us/courts/supreme-court/prothonotarys-addresses" title="Link to Supreme Court Prothonotary's Addresses">Supreme Court Prothonotary's Addresses</a></li>
-<li><a href="http://www.pacourts.us/courts/supreme-court/calendar" title="Link to Calendar">Calendar</a></li>
-<li><a href="http://www.pacourts.us/courts/supreme-court/committees" title="Link to Committees, Boards &amp; Advisory Panels">Committees, Boards &amp; Advisory Panels</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/courts/superior-court" title="Link to Superior Court">Superior Court</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/superior-court/superior-court-judges" title="Link to Superior Court Judges">Superior Court Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/superior-court/docket-sheets" title="Link to Docket Sheets">Docket Sheets</a></li>
-<li><a href="http://www.pacourts.us/courts/superior-court/court-opinions" title="Link to Court Opinions">Court Opinions</a></li>
-<li><a href="http://www.pacourts.us/courts/superior-court/prothonotarys-addresses" title="Link to Superior Court Prothonotary's Addresses">Superior Court Prothonotary's Addresses</a></li>
-<li><a href="http://www.pacourts.us/courts/superior-court/calendar" title="Link to Calendar">Calendar</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court" title="Link to Commonwealth Court">Commonwealth Court</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court-judges" title="Link to Commonwealth Court Judges">Commonwealth Court Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court/docket-sheets" title="Link to Docket Sheets">Docket Sheets</a></li>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court/court-opinions" title="Link to Court Opinions and Postings">Court Opinions and Postings</a></li>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court/chief-clerks-address" title="Link to Commonwealth Court Chief Clerk's Address">Commonwealth Court Chief Clerk's Address</a></li>
-<li><a href="http://www.pacourts.us/courts/commonwealth-court/calendar" title="Link to Calendar">Calendar</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas" title="Link to Pennsylvania Courts of Common Pleas">Courts of Common Pleas</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas/common-pleas-president-judges" title="Link to Common Pleas President Judges">Common Pleas President Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas/common-pleas-judges" title="Link to Common Pleas Judges">Common Pleas Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas/district-court-administrators" title="Link to District Court Administrators">District Court Administrators</a></li>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas/individual-county-courts" title="Link to Individual County Courts">Individual County Courts</a></li>
-<li><a href="http://www.pacourts.us/courts/courts-of-common-pleas/docket-sheets" title="Link to Docket Sheets">Docket Sheets</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/courts/minor-courts" title="Link to Minor Courts of Pennsylvania">Minor Courts</a>
-<ul>
-<li><a href="http://www.pacourts.us/courts/minor-courts/magisterial-district-judges" title="Link to Magisterial District Judges">Magisterial District Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/minor-courts/philadelphia-municipal-court-judges" title="Link to Philadelphia Municipal Court Judges">Philadelphia Municipal Court Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/minor-courts/pittsburgh-municipal-court-judges" title="Link to Pittsburgh Municipal Court Judges">Pittsburgh Municipal Court Judges</a></li>
-<li><a href="http://www.pacourts.us/courts/minor-courts/docket-sheets" title="Link to Docket Sheets">Docket Sheets</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="col grid-5">
-<ul>
-<li><a class="aopc" href="http://www.pacourts.us/judicial-administration" title="Link to Judicial Administration">Judicial Administration<br><em><span class="extended">Administrative Office<br> of Pennsylvania Courts</span></em></a>
-<ul>
-<li><a href="http://www.pacourts.us/judicial-administration/office-of-communications-and-intergovernmental-relations" title="Link to Office of Communications and Intergovernmental Relations">Communications</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/judicial-automation" title="Link to Information Technology">Information Technology</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs" title="Link to Programs">Programs</a>
-<ul>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/interpreter-program" title="Link to Interpreter Program">Interpreter Program</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/office-of-children-and-families-in-the-courts" title="Link to Office of Children &amp; Families in the Courts">Office of Children &amp; Families in the Courts</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/drug-courts" title="Link to Drug Courts">Drug Courts</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/dui-court" title="Link to DUI Courts">DUI Courts</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/juvenile-drug-courts" title="Link to Juvenile Drug Courts">Juvenile Drug Courts</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/mental-health-courts" title="Link to Mental Health Courts">Mental Health Courts</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/court-programs/veterans-courts" title="Link to Veterans Courts">Veterans Courts</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/judicial-administration/judicial-security" title="Link to Judicial Security">Judicial Security</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/budget" title="Link to Budget">Budget</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/human-resources" title="Link to Human Resources">Human Resources</a>
-<ul>
-<li><a href="http://www.pacourts.us/judicial-administration/human-resources/job-openings" title="Link to Job Openings">Job Openings</a></li>
-<li><a href="http://www.pacourts.us/judicial-administration/human-resources/benefits" title="Link to Benefits">Benefits</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/judicial-administration/judicial-education" title="Link to Judicial Education">Judicial Education</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="col grid-6 append-1">
-<ul>
-<li><a href="http://www.pacourts.us/news-and-statistics" title="Link to News &amp; Statistics">News &amp; Statistics</a>
-<ul>
-<li><a href="http://www.pacourts.us/news-and-statistics/news" title="Link to News">News</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/cases-of-public-interest" title="Link to Cases of Public Interest">Cases of Public Interest</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/issues" title="Link to Issues">Issues</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/news-releases" title="Link to News Releases">News Releases</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/media-resources" title="Link to Media Resources">Media Resources</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/research-and-statistics" title="Link to Research &amp; Statistics">Research &amp; Statistics</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/reports" title="Link to Reports">Reports</a></li>
-<li><a href="http://www.pacourts.us/news-and-statistics/archived-resources" title="Link to Archive">Archive</a></li>
-</ul>
-</li>
-<li><a href="http://www.pacourts.us/learn" title="Link to Learn">Learn</a>
-<ul>
-<li><a href="http://www.pacourts.us/learn/how-the-courts-operate" title="Link to How the Courts Operate">How the Courts Operate</a></li>
-<li><a href="http://www.pacourts.us/learn/history" title="Link to History">History</a></li>
-<li><a href="http://www.pacourts.us/learn/how-judges-are-elected" title="Link to How Judges Are Elected">How Judges Are Elected</a></li>
-<li><a href="http://www.pacourts.us/learn/faqs" title="Link to FAQs">FAQs</a></li>
-<li><a href="http://www.pacourts.us/learn/legal-glossary" title="Link to Legal Glossary">Legal Glossary</a></li>
-<li><a href="http://www.pacourts.us/learn/jury-duty" title="Link to Jury Duty">Jury Duty</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-
-				<div class="footer-sidebar grid-7 prepend-1 append-1 side-bar larger">
-					<div class="contact">
-						<div>
-							<p><a href="http://www.pacourts.us/contact-us" title="">Contact Us</a></p></div>
-						<div class="location">
-							<h4>Mailing Address:<br>Pennsylvania<br>Judicial Center</h4>
-							<p>601 Commonwealth Avenue<br>P.O. Box 61260<br>Suite 1500<br>Harrisburg, PA 17106</p>
-						</div>
-						<div class="location">
-							<h4>Physical Address:<br>Pennsylvania<br>Judicial Center</h4>
-							<p>601 Commonwealth Avenue<br>Suite 1500<br>Harrisburg, PA 17120</p>
-							<p><a target="_blank" href="https://maps.google.com/maps?t=m&amp;q=Pennsylvania+Judicial+Center,+Commonwealth+Avenue,+Harrisburg,+PA" title="">Get Directions</a></p>
-						</div>
-						<div class="location">
-							<h4>AOPC Philadelphia</h4>
-							<p>1515 Market Street<br>Suite 1414<br>Philadelphia, PA 19102</p>
-						</div>
-					</div>
-					<div class="box white twitter">
-						<div class="media twitter label">
-							<div class="img">‌</div>
-							<div class="bd">
-								<h4>Follow the Unified Judicial System</h4>
-								<a href="http://twitter.com/PACourts" title="PACourts Twitter Page">@PACourts</a>
-							</div>
-						</div>
-						<div data-twttr-id="twttr-sandbox-0" class="media twitter" style="padding: 0 0.75em;">
-							<iframe title="Twitter Timeline" style="border: medium none; max-width: 100%; min-width: 180px; width: 230px;" class="twitter-timeline twitter-timeline-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0" height="430"></iframe>
-							<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
-						</div>
-					</div>
-				</div> <!-- close footer-sidebar -->
-
-				<div class="footer-add-info grid">
-					<div class="grid-14 append-1">
-						<p><span class="copyright">©</span> <span id="year">2014</span> The Unified Judicial System of Pennsylvania</p>
-					</div>
-				</div>
-
-			</div> <!-- close row -->
-		</div> <!-- close footer-content wrapper -->
-	</div> <!-- close footer-content section -->		
-</footer> <!-- close site-footer -->
-
-	
-		<script type="text/javascript" src="pacomm_example_files/jquery_003.js"></script>
-	<script type="text/javascript" src="pacomm_example_files/jquery_004.js"></script>
-	<script type="text/javascript">$(function() { $('.nyroModal').nyroModal(); });</script>
-	<script type="text/javascript">
-					var _gaq = _gaq || [];
-					_gaq.push(['_setAccount', 'UA-168399-25']);
-					_gaq.push(['_trackPageview']);
-					(function() {
-						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-					})();</script>
-	<script type="text/javascript" src="pacomm_example_files/base.js"></script>
-	<script type="text/javascript">
-				if (window.location.href.indexOf('Mode=Logout') == -1) {
-					$("body").append("<script src='/assets/scripts/tools/CheckLoginStatus.ashx?ReturnUrl=" + escape(window.location.pathname) + "&d=" +new Date() + "' type='text/javascript'></scr" + "ipt>");
-				}</script>
-
-
-	
-	<div id="google_translate_element" style="position: fixed; top: 10px; right: 170px;"></div>
-	<!-- <script type="text/javascript">
-		// function googleTranslateElementInit() {
-		// 	new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-		// }
-	</script>
-	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-
-  <script type="text/javascript" src="pacomm_example_files/plugins.js"></script>
-  <script type="text/javascript" src="pacomm_example_files/main.js"></script>
-
-<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><div></div><iframe style="display: none;" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:pheedo="http://www.pheedo.com/namespace/pheedo">
+<channel>
+<title>Unified Judicial System of Pennsylvania: Commonwealth Court Opinions</title>
+<link>
+http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx</link>
+<description>Unified Judicial System of Pennsylvania: Commonwealth Court Opinions</description>
+<lastBuildDate>Wed, 30 Jul 2014 04:00:00 GMT</lastBuildDate>
+<language>en-us</language>
+<item>
+    <title>A. Battiste v. Borough of East McKeesport and R. Bachner - 111 C.D. 2013 (RECONSIDERATION ORDER)</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/111CD13ORD_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/111CD13ORD_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/111CD13ORD_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/111CD13ORD_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>Verizon Pennsylvania, Inc. v. WCAB (McCallion) - 2167 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2167CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2167CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2167CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2167CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>Abrams Bed, LLC v. UCBR - 1829 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1829CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1829CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1829CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1829CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>Com. v. B.S. Comensky - 1431 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1431CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1431CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1431CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1431CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>In Re: Consolidated Return of Luzerne County TCB of the Upset Tax Sale of Properties held on April 26, 2013 ~
+        Appeal of: J.P. Covert and A. Covert - 2091 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2091CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2091CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2091CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2091CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Simpson, J.</dc:creator>
+</item>
+<item>
+    <title>D.D. Richardson v. PA DOC, J.E. Wetzel, Secretary - 114 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/114CD14_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/114CD14_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/114CD14_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/114CD14_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>Arena Beverage Corp. v. PA LCB - 1960 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1960CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1960CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1960CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1960CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>Dr. J.C. Garner, O.D. v. BPOA, State Board of Optometry - 1938 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1938CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1938CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1938CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1938CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>William Schenk &amp; Sons; et al. v. Northampton, Bucks County, Municipal Authority - 1881 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1881CD13_7-30-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1881CD13_7-30-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1881CD13_7-30-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1881CD13_7-30-14.pdf"/>
+    <pubDate>Wed, 30 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>Appeal of Cleft of the Rock Ministries - 1269 C.D. 2013 (REARGUMENT ORDER)</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1269CD13ORD_7-29-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1269CD13ORD_7-29-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1269CD13ORD_7-29-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1269CD13ORD_7-29-14.pdf"/>
+    <pubDate>Tue, 29 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>J. Ocasio v. WCAB (Cit of Bethlehem) - 91 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/91CD14_7-28-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/91CD14_7-28-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/91CD14_7-28-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/91CD14_7-28-14.pdf"/>
+    <pubDate>Mon, 28 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Cohn Jubelirer, J.</dc:creator>
+</item>
+<item>
+    <title>J. Cook v. Chambersburg Area S.D. and Shippensburg Area S.D. - 1096 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1096CD13_7-28-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1096CD13_7-28-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1096CD13_7-28-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1096CD13_7-28-14.pdf"/>
+    <pubDate>Mon, 28 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Colins, Senior Judge ~ Dissenting Opinion by Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>H. N. Rodriguez v. PA BPP - 1464 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1464CD13_7-25-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1464CD13_7-25-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1464CD13_7-25-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1464CD13_7-25-14.pdf"/>
+    <pubDate>Fri, 25 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Colins, Senior Judge</dc:creator>
+</item>
+<item>
+    <title>D.A. Bell v. PA BPP - 181 M.D. 2013
+    </title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/181MD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/181MD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/181MD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/181MD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>PER CURIAM</dc:creator>
+</item>
+<item>
+    <title>D. Whyel v. WCAB (BAE Systems) - 37 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/37CD14_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/37CD14_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/37CD14_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/37CD14_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Colins, Senior Judge</dc:creator>
+</item>
+<item>
+    <title>A. W. Murray v. Com. DOT, Bureau of Driver Licensing - 10 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/10CD14_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/10CD14_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/10CD14_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/10CD14_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Colins, Senior Judge</dc:creator>
+</item>
+<item>
+    <title>J. J. and P. J. Miravich, et al. v. Twp. of Exeter and Metrodev V, LP - 2066 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2066CD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2066CD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2066CD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2066CD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leadbetter, J.</dc:creator>
+</item>
+<item>
+    <title>G. R. Snyder v. UCBR - 1788 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1788CD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1788CD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1788CD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1788CD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leadbetter, J.</dc:creator>
+</item>
+<item>
+    <title>Metro Dev V, LP v. Exeter Township ZHB, et al. ~ Appeal of: S. Davis-Haas, et al. - 1367 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1367CD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1367CD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1367CD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1367CD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leadbetter, J.</dc:creator>
+</item>
+<item>
+    <title>S.H.; G.H v. DPW - 1098 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1098CD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1098CD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1098CD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1098CD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leavitt, J.</dc:creator>
+</item>
+<item>
+    <title>G. Simmons v. WCAB (Powertrack International) - 2168 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2168CD13_7-24-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2168CD13_7-24-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2168CD13_7-24-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2168CD13_7-24-14.pdf"/>
+    <pubDate>Thu, 24 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leadbetter, J.</dc:creator>
+</item>
+<item>
+    <title>J. M. Strunk v. UCBR - 2147 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2147CD13_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2147CD13_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2147CD13_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2147CD13_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>L. Dixon v. UCBR - 1900 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1900CD13_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1900CD13_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1900CD13_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1900CD13_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>City of Pittsburgh, and UPMC Mgmt. Svcs., Inc. - 362 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/362CD14_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/362CD14_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/362CD14_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/362CD14_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leavitt, J.</dc:creator>
+</item>
+<item>
+    <title>Com. of PA v. A.J. Porrino - 833 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/833CD13_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/833CD13_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/833CD13_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/833CD13_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leavitt, J. ~ Dissenting Opinion by Leadbetter, J.</dc:creator>
+</item>
+<item>
+    <title>D.Z. Slaweski v. PennDOT, Bureau of Driver Licensing - 171 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/171CD14_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/171CD14_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/171CD14_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/171CD14_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>Germantown Cab Co. v. PUC - 1850 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1850CD13_7-23-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1850CD13_7-23-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1850CD13_7-23-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1850CD13_7-23-14.pdf"/>
+    <pubDate>Wed, 23 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>D. Barnes v. PA DOC - 243 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/243CD14_7-22-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/243CD14_7-22-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/243CD14_7-22-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/243CD14_7-22-14.pdf"/>
+    <pubDate>Tue, 22 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Friedman, Senior Judge</dc:creator>
+</item>
+<item>
+    <title>M.B. Selig v. ZHB of North Whitehall Twp. and R. and S. Sloyer - 180 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/180CD14_7-22-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/180CD14_7-22-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/180CD14_7-22-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/180CD14_7-22-14.pdf"/>
+    <pubDate>Tue, 22 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McGinley, J.</dc:creator>
+</item>
+<item>
+    <title>R.J. Neumann v. PHFA - 1533 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1533CD13_7-22-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1533CD13_7-22-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1533CD13_7-22-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1533CD13_7-22-14.pdf"/>
+    <pubDate>Tue, 22 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McGinley, J.</dc:creator>
+</item>
+<item>
+    <title>Lehigh Valley Dual Language Charter School v. Bethlehem Area SD - 2010 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2010CD13_7-22-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2010CD13_7-22-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2010CD13_7-22-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2010CD13_7-22-14.pdf"/>
+    <pubDate>Tue, 22 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Cohn Jubelirer, J. ~ Dissenting Opinion by Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>L. Bourzgui v. UCBR - 246 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/246CD14_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/246CD14_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/246CD14_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/246CD14_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Colins, Senior Judge</dc:creator>
+</item>
+<item>
+    <title>K.G. Connors v. UCBR - 2198 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2198CD13_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2198CD13_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2198CD13_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2198CD13_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McCullough, J.</dc:creator>
+</item>
+<item>
+    <title>DPW v. State Civil Service Comm. (Butler) - 846 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/846CD13_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/846CD13_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/846CD13_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/846CD13_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>C. Obst v. UCBR - 132 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/132CD14_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/132CD14_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/132CD14_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/132CD14_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Simpson, J.</dc:creator>
+</item>
+<item>
+    <title>T. Allison v. WCAB (Fisher Auto Parts, Inc.) - 2285 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2285CD13_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2285CD13_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2285CD13_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2285CD13_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Simpson, J.</dc:creator>
+</item>
+<item>
+    <title>D. Centi and A. Centi v. Gen. Municipal Auth.- 2048 .C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2048CD13_7-21-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2048CD13_7-21-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2048CD13_7-21-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2048CD13_7-21-14.pdf"/>
+    <pubDate>Mon, 21 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Cohn Jubelirer, J</dc:creator>
+</item>
+<item>
+    <title>Board of Directors of the Philadelphia Masjid, et al. v. G. Jones, aka S. Muhammad, et al. - 1044 C.D. 2013
+        (REARGUMENT ORDER)</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1044CD13ORD_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1044CD13ORD_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1044CD13ORD_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1044CD13ORD_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Pellegrini, President Judge</dc:creator>
+</item>
+<item>
+    <title>D.A. Taft and M. Taft, h/w v. S. Kuby, et al. - 1947 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1947CD13_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1947CD13_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1947CD13_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1947CD13_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Covey, J.</dc:creator>
+</item>
+<item>
+    <title>T.J. Gallo v. UCBR - 2203 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2203CD13_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2203CD13_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2203CD13_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2203CD13_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>G.S. Knepper v. UCBR - 1991 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1991CD13_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1991CD13_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1991CD13_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1991CD13_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>S.G. Birkenmaier v. UCBR - 1914 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1914CD13_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1914CD13_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1914CD13_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1914CD13_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>V. Kelly v. WCAB (Commonwealth of PA) - 138 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/138CD14_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/138CD14_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/138CD14_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/138CD14_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Simpson, J.</dc:creator>
+</item>
+<item>
+    <title>J.E. De Ritis v. UCBR - 1952 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1952CD13_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1952CD13_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1952CD13_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1952CD13_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McGinley, J.</dc:creator>
+</item>
+<item>
+    <title>L. Sturgis v. DOC - 103 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/103CD14_7-18-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/103CD14_7-18-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/103CD14_7-18-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/103CD14_7-18-14.pdf"/>
+    <pubDate>Fri, 18 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Brobson, J.</dc:creator>
+</item>
+<item>
+    <title>Com. v. C. Campbell - 1962 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1962CD13_7-17-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1962CD13_7-17-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1962CD13_7-17-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1962CD13_7-17-14.pdf"/>
+    <pubDate>Thu, 17 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>PER CURIAM</dc:creator>
+</item>
+<item>
+    <title>J. Horvath v. UCBR - 6 C.D. 2014</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/6CD14_7-17-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/6CD14_7-17-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/6CD14_7-17-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/6CD14_7-17-14.pdf"/>
+    <pubDate>Thu, 17 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McCullough, J.</dc:creator>
+</item>
+<item>
+    <title>L. Hackney v. PennDOT, Bureau of Driver Licensing - 2155-2159 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/2155CD13_7-17-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/2155CD13_7-17-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/2155CD13_7-17-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/2155CD13_7-17-14.pdf"/>
+    <pubDate>Thu, 17 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McCullough, J.</dc:creator>
+</item>
+<item>
+    <title>G.L. Macer v. UCBR - 1766 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1766CD13_7-17-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1766CD13_7-17-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1766CD13_7-17-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1766CD13_7-17-14.pdf"/>
+    <pubDate>Thu, 17 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>McCullough, J.</dc:creator>
+</item>
+<item>
+    <title>PennDOT, Bureau of Motor Vehicles v. D. Jenkins - 1923 C.D. 2013</title>
+    <link>
+    http://www.pacourts.us/assets/opinions/Commonwealth/out/1923CD13_7-17-14.pdf</link>
+    <guid>http://www.pacourts.us/assets/opinions/Commonwealth/out/1923CD13_7-17-14.pdf</guid>
+    <pheedo:origLink>http://www.pacourts.us/assets/opinions/Commonwealth/out/1923CD13_7-17-14.pdf</pheedo:origLink>
+    <atom:link href="http://www.pacourts.us/assets/opinions/Commonwealth/out/1923CD13_7-17-14.pdf"/>
+    <pubDate>Thu, 17 Jul 2014 04:00:00 GMT</pubDate>
+    <description><![CDATA[]]></description>
+    <dc:creator>Leavitt, J.</dc:creator>
+</item>
+<atom:link rel="self" href="http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx" type="application/rss+xml"/>
+</channel>
+</rss>
