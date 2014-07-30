@@ -1,4 +1,4 @@
-#  Scraper for Florida Supreme Court
+# Scraper for Florida Supreme Court
 # CourtID: fla
 # Court Short Name: fla
 # Author: Andrei Chelaru
@@ -10,6 +10,7 @@ from datetime import date, datetime
 import re
 
 from juriscraper.OpinionSite import OpinionSite
+from lxml import html
 
 
 class Site(OpinionSite):
@@ -23,23 +24,30 @@ class Site(OpinionSite):
         self.url = 'http://www.floridasupremecourt.org/decisions/opinions.shtml'
 
     def _get_case_names(self):
-        path = "{base}/text()/following::ul[1]//li".format(base=self.base_path)
-        return map(self._return_case_name, self.html.xpath(path))
-
-    def _return_case_name(self, e):
-        path = ".//a"
-        case_name = []
-        for a in e.xpath(path):
-            text = ' '.join(a.xpath(".//text()[not(contains(., 'Notice'))]"))
+        path = '{base}/text()/following::ul[1]//li' \
+               '//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'.format(
+            base=self.base_path)
+        case_names = []
+        for e in self.html.xpath(path):
+            s = ' '.join(e.xpath('.//text()'))
             try:
-                case_name.append(self.regex.search(text).group(2))
+                case_names.append(self.regex.search(s).group(2))
             except AttributeError:
                 pass
-        return ' and '.join(case_name)
+        return case_names
 
     def _get_download_urls(self):
-        path = "{base}/text()/following::ul[1]//li//a[1]/@href".format(base=self.base_path)
-        return list(self.html.xpath(path))
+        path = '{base}/text()/following::ul[1]//li' \
+               '//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'.format(
+            base=self.base_path)
+        urls = []
+        for e in self.html.xpath(path):
+            try:
+                _ = self.regex.search(html.tostring(e, method='text', encoding='unicode')).group(2)
+                urls.append(e.xpath('@href')[0])
+            except AttributeError:
+                pass
+        return urls
 
     def _get_case_dates(self):
         case_dates = []
@@ -47,27 +55,29 @@ class Site(OpinionSite):
             text = e.xpath("./text()")[0]
             text = re.sub('Releases for ', '', text)
             case_date = datetime.strptime(text.strip(), '%B %d, %Y').date()
-            case_dates.extend([case_date] * int(e.xpath("count(./following::ul[1]//li)")))
+            count = 0
+            for a in e.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
+                try:
+                    _ = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
+                    count += 1
+                except AttributeError:
+                    pass
+            case_dates.extend([case_date] * count)
         return case_dates
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = "{base}/text()/following::ul[1]//li".format(base=self.base_path)
-        return map(self._return_docket_number, self.html.xpath(path))
-
-    def _return_docket_number(self, e):
-        path = ".//a/text()[not(contains(., 'Notice'))]"
-        docket_number = []
-        for cn in e.xpath(path):
-            # cn = ''.join(cn.split())
-            match = self.regex.search(cn)
+        path = '{base}/text()/following::ul[1]//li' \
+               '//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'.format(base=self.base_path)
+        docket_numbers = []
+        for a in self.html.xpath(path):
             try:
-                docket_number.append(match.group(1))
+                docket_numbers.append(self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(1))
             except AttributeError:
                 pass
-        return ', '.join(docket_number)
+        return docket_numbers
 
     def _download_backwards(self):
         self.url = 'http://www.floridasupremecourt.org/decisions/{y}/index.shtml'.format(y=self.year)

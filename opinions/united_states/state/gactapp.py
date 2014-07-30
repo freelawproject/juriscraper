@@ -28,7 +28,6 @@ class Site(OpinionSite):
             day=self.case_date.day,
             year=self.case_date.year,
         )
-        print self.url
 
     def _get_case_names(self):
         path = "{base}/td[2]/text()".format(base=self.base_path)

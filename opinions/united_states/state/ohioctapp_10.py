@@ -11,4 +11,5 @@ class Site(ohio.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.court_index = 1
+        self.court_index = 10
+        self.url = self.make_url(self.court_index)

@@ -178,7 +178,7 @@ Juriscraper is licensed under the permissive BSD license.
 
 [1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/management/commands/cl_scrape_and_extract.py?at=default
 [2]: http://courtlistener.com
-[3]: https://bitbucket.org/mlissner/lxml-xpath-tester
+[3]: https://github.com/mlissner/lxml-xpath-tester
 [4]: http://www.python.org/dev/peps/pep-0008/
 [5]: https://bitbucket.org/mlissner/juriscraper/src/tip/sample_caller.py
 [6]: http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/Court_Documents
