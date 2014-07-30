@@ -1,5 +1,5 @@
-# Scraper for the 1st District Court of Appeals
-#CourtID: ohioctapp1
+# Scraper for the 4th District Court of Appeals
+#CourtID: ohioctapp4
 #Court Short Name: Ohio
 #Author: Andrei Chelaru
 #Reviewer:
@@ -12,4 +12,4 @@ class Site(ohio.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.court_index = 1
+        self.court_index = 4
