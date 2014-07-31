@@ -11,7 +11,7 @@ from datetime import date, timedelta
 from juriscraper.opinions.united_states.state import fladistctapp_1_per_curiam
 
 
-class Site(flaapp1_per_curiam.Site):
+class Site(fladistctapp_1_per_curiam.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
