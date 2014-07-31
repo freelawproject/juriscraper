@@ -13,7 +13,3 @@ class Site(de.Site):
         super(Site, self).__init__()
         self.url = 'http://courts.delaware.gov/opinions/List.aspx?ag=Court%20of%20Common%20Pleas'
         self.court_id = self.__module__
-
-site = Site()
-site.parse()
-print(str(site))
