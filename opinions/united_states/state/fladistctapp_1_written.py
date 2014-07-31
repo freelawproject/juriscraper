@@ -8,7 +8,7 @@
 
 from datetime import date, timedelta
 
-from juriscraper.opinions.united_states.state import flaapp1_per_curiam
+from juriscraper.opinions.united_states.state import fladistctapp_1_per_curiam
 
 
 class Site(flaapp1_per_curiam.Site):
