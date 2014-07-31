@@ -5,7 +5,6 @@ Creator: Andrei Chelaru
 Reviewer: mlr
 """
 
-import re
 import time
 from datetime import date
 
@@ -17,25 +16,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.url = 'http://courts.delaware.gov/opinions/list.aspx?ag=supreme%20court'
         self.court_id = self.__module__
-        self.base_path = "//*[contains(concat(' ',@class,' '),'Row')]/td[6][contains(., 'Opinion')]/preceding::"
-
-    def _clean_text(self, text):
-        text = re.sub(r'<!\[CDATA\[', '', text)
-        text = re.sub(r'\]\]>', '', text)
-        if isinstance(text, unicode):
-            text = re.sub(r'^\s*<\?xml\s+.*?\?>', '', text)
-        text = re.sub('</br>', '<br/>', text)
-        #text = ''.join(c for c in text if self.valid_XML_char_ordinal(ord(c)))
-        return text
-
-    def valid_XML_char_ordinal(self, i):
-        # http://stackoverflow.com/questions/8733233/filtering-out-certain-bytes-in-python
-        return (# conditions ordered by presumed frequency
-            0x20 <= i <= 0xD7FF
-            or i in (0x9, 0xA, 0xD)
-            or 0xE000 <= i <= 0xFFFD
-            or 0x10000 <= i <= 0x10FFFF
-            )
+        self.base_path = "//*[contains(concat(' ',@class,' '),'Row')]//"
 
     def _get_case_dates(self):
         path = "{base}td[5]/text()".format(base=self.base_path)

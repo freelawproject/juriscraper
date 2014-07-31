@@ -92,9 +92,10 @@ class AbstractSite(object):
     def _clean_text(self, text):
         """ Cleans up text before we make it into an HTML tree:
             1. Nukes <![CDATA stuff.
-            2. Nukes encoding declarations
+            2. Nukes XML encoding declarations
             3. Replaces </br> with <br/>
-            4. ?
+            4. Nukes invalid bytes in input
+            5. ?
         """
         # Remove <![CDATA because it causes breakage in lxml.
         text = re.sub(r'<!\[CDATA\[', '', text)
@@ -111,6 +112,19 @@ class AbstractSite(object):
 
         # Fix </br>
         text = re.sub('</br>', '<br/>', text)
+
+        # Fix invalid bytes (http://stackoverflow.com/questions/8733233/filtering-out-certain-bytes-in-python)
+        def valid_xml_char_ordinal(c):
+            code_point = ord(c)
+            # conditions ordered by presumed frequency
+            return (
+                0x20 <= code_point <= 0xD7FF or
+                code_point in (0x9, 0xA, 0xD) or
+                0xE000 <= code_point <= 0xFFFD or
+                0x10000 <= code_point <= 0x10FFFF
+            )
+        text = ''.join(c for c in text if valid_xml_char_ordinal(c))
+
         return text
 
     def _clean_attributes(self):
