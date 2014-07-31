@@ -2,13 +2,13 @@
 # CourtID: dechan
 # Court Short Name: De.
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date created: 31 July 2014
 
-from juriscraper.opinions.united_states.state import de
+from juriscraper.opinions.united_states.state import delaware
 
 
-class Site(de.Site):
+class Site(delaware.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://courts.delaware.gov/opinions/List.aspx?ag=Court%20of%20Chancery'
