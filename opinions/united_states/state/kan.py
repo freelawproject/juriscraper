@@ -13,7 +13,7 @@ import requests
 import re
 
 from juriscraper.OpinionSite import OpinionSite
-from AbstractSite import logger
+from juriscraper.AbstractSite import logger
 
 
 class Site(OpinionSite):
