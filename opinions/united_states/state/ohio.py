@@ -79,7 +79,9 @@ class Site(OpinionSite):
         else:
             return ''
 
-    def _download_backwards(self, year):
-        self.year = year
-        self.url = self.make_url(self.court_index, self.year)
+    def _download_backwards(self, i):
+        self.url = 'http://www.sconet.state.oh.us/ROD/docs/default.asp?Page={i}&Sort=docdecided%20DESC&PageSize=100&Source={court}&iaFilter=-2&ColumnMask=669'.format(
+            i=i,
+            court=self.court_index,
+        )
         self.html = self._download()
