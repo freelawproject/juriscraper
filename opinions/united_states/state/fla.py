@@ -5,7 +5,6 @@
 # Reviewer: mlr
 # Date created: 21 July 2014
 
-
 from datetime import date, datetime
 import re
 
@@ -18,7 +17,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.year = date.today().year
-        self.regex = re.compile("(SC\d+-\d+)(.*)")
+        self.regex = re.compile("(S?C\d+-\d+)(.*)")
         self.base_path = "//h2[contains(., '{y}')]".format(y=self.year)
         self.back_scrape_iterable = range(1999, 2013)
         self.url = 'http://www.floridasupremecourt.org/decisions/opinions.shtml'
@@ -31,7 +30,11 @@ class Site(OpinionSite):
         for e in self.html.xpath(path):
             s = ' '.join(e.xpath('.//text()'))
             try:
-                case_names.append(self.regex.search(s).group(2))
+                case_name = self.regex.search(s).group(2)
+                if not case_name.strip():
+                    continue
+                else:
+                    case_names.append(case_name)
             except AttributeError:
                 pass
         return case_names
@@ -43,8 +46,11 @@ class Site(OpinionSite):
         urls = []
         for e in self.html.xpath(path):
             try:
-                _ = self.regex.search(html.tostring(e, method='text', encoding='unicode')).group(2)
-                urls.append(e.xpath('@href')[0])
+                case_name_check = self.regex.search(html.tostring(e, method='text', encoding='unicode')).group(2)
+                if not case_name_check.strip():
+                    continue
+                else:
+                    urls.append(e.xpath('@href')[0])
             except AttributeError:
                 pass
         return urls
@@ -58,8 +64,11 @@ class Site(OpinionSite):
             count = 0
             for a in e.xpath('./following::ul[1]//li//a[not(contains(., "Notice"))][not(contains(., "Rehearing Order"))]'):
                 try:
-                    _ = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
-                    count += 1
+                    case_name_check = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
+                    if not case_name_check.strip():
+                        continue
+                    else:
+                        count += 1
                 except AttributeError:
                     pass
             case_dates.extend([case_date] * count)
@@ -74,7 +83,11 @@ class Site(OpinionSite):
         docket_numbers = []
         for a in self.html.xpath(path):
             try:
-                docket_numbers.append(self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(1))
+                case_name_check = self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(2)
+                if not case_name_check.strip():
+                    continue
+                else:
+                    docket_numbers.append(self.regex.search(html.tostring(a, method='text', encoding='unicode')).group(1))
             except AttributeError:
                 pass
         return docket_numbers
