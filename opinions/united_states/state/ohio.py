@@ -25,6 +25,7 @@ class Site(OpinionSite):
         self.year = date.today().year
         self.url = self.make_url(self.court_index, self.year)
         self.court_id = self.__module__
+        self.back_scrape_iterable = range(1992, 2014)
         self.base_path = "id('Table1')//tr[position() > 1]/td[2][normalize-space(.//text())]"
 
     @staticmethod
