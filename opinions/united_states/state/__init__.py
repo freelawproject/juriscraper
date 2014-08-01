@@ -3,7 +3,7 @@ __all__ = [
     'alaska',
     'ariz',
     'arizctapp_div_1',
-    #'arizctapp_div_2', -- All items return same hash: 157e9ae1f7f33b1f952c9c00d0e97fa628d8b809
+    'arizctapp_div_2',
     'ark',
     'arkctapp',
     'cal',
