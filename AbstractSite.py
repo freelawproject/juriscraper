@@ -5,8 +5,9 @@ import re
 import requests
 
 from lxml import html
-from lib.string_utils import harmonize, clean_string, trunc
+from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
+from urlparse import urlsplit, urlunsplit, urljoin
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
@@ -250,10 +251,31 @@ class AbstractSite(object):
         # Grab the content
         text = self._clean_text(r.text)
         html_tree = html.fromstring(text)
-        html_tree.make_links_absolute(self.url)
 
-        remove_anchors = lambda url: url.split('#')[0]
-        html_tree.rewrite_links(remove_anchors)
+        def link_repl(href):
+            """Makes links absolute, working around buggy URLs and nuking anchors.
+
+            Some URLS, like the following, make no sense:
+             - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
+                                          ^^^^ -- This makes no sense!
+            The fix is to remove any extra '/..' patterns at the beginning of the path.
+
+            Others have annoying anchors on the end, like:
+             - http://example.com/path/#anchor
+
+            Note that lxml has a method generally for this purpose called
+            make_links_absolute, but we cannot use it because it does not work around
+            invalid relative URLS, nor remove anchors.
+            """
+            url_parts = urlsplit(urljoin(self.url, href))
+            url = urlunsplit(
+                url_parts[:2] +
+                (re.sub('^(/\.\.)+', '', url_parts.path),) +
+                url_parts[3:]
+            )
+            return url.split('#')[0]
+        html_tree.rewrite_links(link_repl)
+
         return html_tree
 
     def _download_backwards(self):
