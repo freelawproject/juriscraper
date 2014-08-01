@@ -12,4 +12,5 @@ class Site(ohio.Site):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.court_index = 13
-        self.url = self.make_url(self.court_index)
+        self.back_scrape_iterable = range(1992, 2014)
+        self.url = self.make_url(self.court_index, self.year)
