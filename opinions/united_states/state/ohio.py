@@ -81,5 +81,5 @@ class Site(OpinionSite):
 
     def _download_backwards(self, year):
         self.year = year
-        self.url = self.make_url(self.index, self.year)
+        self.url = self.make_url(self.court_index, self.year)
         self.html = self._download()
