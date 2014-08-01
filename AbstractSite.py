@@ -155,7 +155,8 @@ class AbstractSite(object):
             2. Do we have any content at all?
             3. Is there a bare minimum of meta data?
             4. Are the dates datetime objects, not strings?
-            5. ?
+            5. Are case_names more than just empty whitespace?
+            6. ?
 
         The signature of this method is subject to change as additional checks become
         convenient.
@@ -181,6 +182,11 @@ class AbstractSite(object):
             for field in self._req_attrs:
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
+            i = 0
+            for name in self.case_names:
+                if not name.strip():
+                    raise InsanityException("Item with index %s has an empty case name." % i)
+                i += 1
 
         for d in self.case_dates:
             if not isinstance(d, date):
