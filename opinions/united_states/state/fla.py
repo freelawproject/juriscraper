@@ -91,7 +91,3 @@ class Site(OpinionSite):
             except AttributeError:
                 pass
         return docket_numbers
-
-    def _download_backwards(self):
-        self.url = 'http://www.floridasupremecourt.org/decisions/{y}/index.shtml'.format(y=self.year)
-        self.html = self._download()
