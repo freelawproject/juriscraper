@@ -58,7 +58,7 @@ class Site(OpinionSite):
         return case_names
 
     def _return_case_names(self, html_tree):
-        path = "{base}/text()".format(base=self.base_path)
+        path = "{base}//text()".format(base=self.base_path)
         return [re.search('(4D.*\d{2})([- ][A-Z].*)', e).group(2) for e in html_tree.xpath(path)]
 
     def _get_download_urls(self):
