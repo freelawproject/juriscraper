@@ -96,5 +96,5 @@ class Site(OpinionSite):
         return docket_numbers
 
     def _return_docket_numbers(self, html_tree):
-        path = "{base}/text()".format(base=self.base_path)
+        path = "{base}//text()".format(base=self.base_path)
         return [re.search('(4D.*\d{2})([- ][A-Z].*)', e).group(1) for e in html_tree.xpath(path)]
