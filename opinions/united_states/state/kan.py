@@ -29,8 +29,11 @@ class Site(OpinionSite):
         s = requests.session()
         html_trees = []
         # The latest 5 urls on the page.
-        for url in html_l.xpath("//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
-                court_index=self.court_index, year=self.date.year))[0:4]:
+        path = "//td[@width='50%'][{court_index}]/h3[contains(., '{year}')]/following::ul[1]//a/@href".format(
+            court_index=self.court_index,
+            year=self.date.year,
+        )
+        for url in html_l.xpath(path)[0:4]:
             logger.info("Downloading Kansas page at: {url}".format(url=url))
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
@@ -44,7 +47,7 @@ class Site(OpinionSite):
             # Grab the content
             text = self._clean_text(r.text)
             html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
+            html_tree.make_links_absolute(url)
 
             remove_anchors = lambda url: url.split('#')[0]
             html_tree.rewrite_links(remove_anchors)
