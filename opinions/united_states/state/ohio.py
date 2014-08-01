@@ -22,16 +22,17 @@ class Site(OpinionSite):
         # single day might yield more than 25 opinions and this scraper is
         # not designed to walk through multiple pages.
         self.court_index = 0
-        self.url = self.make_url(self.court_index)
+        self.year = date.today().year
+        self.url = self.make_url(self.court_index, self.year)
         self.court_id = self.__module__
         self.base_path = "id('Table1')//tr[position() > 1]/td[2][normalize-space(.//text())]"
 
     @staticmethod
-    def make_url(index):
+    def make_url(index, year):
         return (
             'http://www.sconet.state.oh.us/ROD/docs/default.asp?Page=1&Sort=docdecided%20DESC&PageSize=100&Source={court}&iaFilter={year}&ColumnMask=669'.format(
             court=index,
-            year=date.today().year)
+            year=year)
         )
 
     def _get_case_names(self):
@@ -76,3 +77,8 @@ class Site(OpinionSite):
             return txt[0]
         else:
             return ''
+
+    def _download_backwards(self, year):
+        self.year = year
+        self.url = self.make_url(self.index, self.year)
+        self.html = self._download()

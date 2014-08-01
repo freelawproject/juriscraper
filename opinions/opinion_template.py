@@ -20,6 +20,8 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://court-url.gov/some-path.html'
+        # Complete this variable if you create a backscraper.
+        self.back_scrape_iterable = None
 
     '''
       Required fields - InsanityExceptions will be thrown if omitted.
