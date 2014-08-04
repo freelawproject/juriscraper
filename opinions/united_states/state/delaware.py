@@ -9,6 +9,7 @@ import time
 from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
+from urlparse import urljoin
 from lxml import html
 
 
@@ -29,7 +30,10 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         path = "{base}td[2]//a/@href[not(contains(., 'mailto'))]".format(base=self.base_path)
-        return list(self.html.xpath(path))
+        # The reason this call to urljoin is necessary is unknown. For some reason, the usual function in AbstractSite
+        # that makes links absolute doesn't work on this site's html. Even lxml's iterlinks() method doesn't identify
+        # the links on this site.
+        return [urljoin(self.url, url) for url in self.html.xpath(path)]
 
     def _get_case_names(self):
         path = "{base}td[2]//a[not(contains(./@href, 'mailto'))]/text()[1]".format(base=self.base_path)
