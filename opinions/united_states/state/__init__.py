@@ -25,7 +25,7 @@ __all__ = [
     'delaware',
     'delch',
     'delctcompl',
-    'delsup',
+    'delsuperct',
     'fla',
     'fladistctapp_1_per_curiam',
     'fladistctapp_1_written',
