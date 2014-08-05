@@ -1,18 +1,31 @@
 """Scraper for the Supreme Court of Michigan
 CourtID: mich
-Court Short Name: Mich."""
+Court Short Name: Mich.
+History:
+ - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
+"""
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 import time
-from datetime import date
+from datetime import date, timedelta
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
+        self.today = date.today()
+        self.a_while_ago = date.today() - timedelta(days=30)
         self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4'
-                   '&Status_Advanced=sct&FirstDate_Advanced=7%2f1%2f1996&LastDate_Advanced=3%2f1%2f2013')
+                   '&Status_Advanced=sct&FirstDate_Advanced={start_month}%2f{start_day}%2f{start_year}'
+                   '&LastDate_Advanced={end_month}%2f{end_day}%2f{end_year}'.format(
+            start_day=self.a_while_ago.day,
+            start_month=self.a_while_ago.month,
+            start_year=self.a_while_ago.year,
+            end_day=self.today.day,
+            end_month=self.today.month,
+            end_year=self.today.year,
+        ))
         self.back_scrape_iterable = range(0, 868)
         self.court_id = self.__module__
 
@@ -75,7 +88,6 @@ class Site(OpinionSite):
         return nums
 
     def _download_backwards(self, page):
-        if page <= 21711:
-            self.url = "http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4&Status_Advanced=sct&FirstDate_Advanced=7%2f1%2f1996&LastDate_Advanced=3%2f1%2f2013&PageIndex=" + str(page)
-
+        self.url = "http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4&Status_Advanced=sct&FirstDate_Advanced=3%2f1%2f2013&LastDate_Advanced=8%2f8%2f2014&PageIndex=" + str(page)
+        time.sleep(6)
         self.html = self._download()
