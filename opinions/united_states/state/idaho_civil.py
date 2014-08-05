@@ -1,11 +1,16 @@
 # -*- coding: utf-8 -*-
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
 
-from datetime import date
-from lxml import html
+"""
+History:
+ - 2014-08-05: Updated by mlr.
+"""
+
 import re
 import time
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_string
+from datetime import date
+from lxml import html
 
 
 class Site(OpinionSite):
