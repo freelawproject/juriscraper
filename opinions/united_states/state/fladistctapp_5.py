@@ -1,10 +1,13 @@
-#  Scraper for Florida 5th District Court of Appeal
-# CourtID: flaapp5
-# Court Short Name: flaapp5
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date created: 23 July 2014
-
+"""
+Scraper for Florida 5th District Court of Appeal
+CourtID: flaapp5
+Court Short Name: flaapp5
+Author: Andrei Chelaru
+Reviewer: mlr
+History:
+ - 23 July 2014: Created.
+ - 05 August 2014: Updated by mlr.
+"""
 
 from datetime import date
 import re
@@ -21,7 +24,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = 'http://www.5dca.org/opinions_archived.shtml'
         self.base_path = "//a"
-        self.case_regex = '(5D.*\d)([- ]+[A-Z].*)'
+        self.case_regex = '(5D.*\d{3})([- ]+[A-Z].*)'
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
