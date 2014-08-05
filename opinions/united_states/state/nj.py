@@ -1,6 +1,9 @@
 # Author: Krist Jin
-# Reviewer: Michael Lissner
-# Date created: 2013-08-03
+# Reviewer: mlr
+# History:
+#  - 2013-08-03: Created.
+#  - 2014-08-05: Updated by mlr.
+
 import re
 from lxml import html
 
@@ -28,10 +31,8 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
-        path = ('//*[@id="content2col"]/table[%s]/tr'
-                '[not(contains(., "No Appellate opinions approved for publication."))]'
-                '[not(contains(., "No Supreme Court opinions reported"))]'
-                '/td[1]//text()' % self.table)
+        path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[1]//text()' % self.table)
+        print path
         for s in self.html.xpath(path):
             s = s.strip()
             s = re.sub('[\.,]', '', s)
@@ -54,10 +55,7 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = ('//*[@id="content2col"]/table[%s]/tr'
-                '[not(contains(., "No Appellate opinions approved for publication."))]'
-                '[not(contains(., "No Supreme Court opinions reported"))]'
-                '/td[2]' % self.table)
+        path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[2]' % self.table)
         docket_numbers = []
         for cell in self.html.xpath(path):
             docket_numbers.append(html.tostring(cell, method='text', encoding='unicode'))
