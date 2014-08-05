@@ -1,3 +1,8 @@
+"""
+History:
+ - 2014-08-05: Adapted scraper to have year-based URLs.
+"""
+
 from juriscraper.OpinionSite import OpinionSite
 import re
 import time
@@ -7,7 +12,9 @@ from datetime import date
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC.aspx'
+        self.today = date.today()
+        self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC{year}.aspx'.format(year=self.today.year)
+        # self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC2014.aspx'
         self.court_id = self.__module__
 
     def _get_case_names(self):
