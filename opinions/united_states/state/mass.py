@@ -1,14 +1,18 @@
-# Scraper for Massachusetts Supreme Court
-# CourtID: mass
-#Court Short Name: MS
-#Author: Andrei Chelaru
-#Reviewer: mlr
-#Date: 2014-07-12
+"""
+Scraper for Massachusetts Supreme Court
+CourtID: mass
+Court Short Name: MS
+Author: Andrei Chelaru
+Reviewer: mlr
+History:
+ - 2014-07-12: Created.
+ - 2014-08-05: Updated by mlr.
+"""
 
-from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -17,7 +21,7 @@ class Site(OpinionSite):
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.grouping_regex = re.compile("(.*) \((SJC \d+)\) \((.+)\)")
+        self.grouping_regex = re.compile("(.*) \((SJC \d+(?:, \d+)?)\) \((.+)\)")
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
 
     def _get_case_names(self):
@@ -34,6 +38,7 @@ class Site(OpinionSite):
         dates = []
         path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
         for s in self.html.xpath(path):
+            print s
             s = self.grouping_regex.search(s).group(3)
             dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%B %d, %Y'))))
         return dates
