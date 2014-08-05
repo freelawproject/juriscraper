@@ -54,7 +54,7 @@ class Site(OpinionSite):
         for date_string in self.html.xpath('{base}/td[3][../td/a]//text()'.format(base=self.base)):
             for date_format in date_formats:
                 try:
-                    d = date.fromtimestamp(time.mktime(time.strptime(date_string, date_format)))
+                    d = date.fromtimestamp(time.mktime(time.strptime(date_string.strip(), date_format)))
                     dates.append(d)
                     break
                 except ValueError:
