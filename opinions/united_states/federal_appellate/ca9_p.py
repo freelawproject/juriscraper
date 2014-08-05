@@ -1,39 +1,42 @@
+"""
+History:
+    - 2014-08-05: Updated by mlr because it was not working, however, in middle of update, site appeared to change. At
+                  first there were about five columns in the table and scraper was failing. Soon, there were seven and
+                  the scraper started working without my fixing it. Very odd.
+"""
+
 from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
 from juriscraper.lib.string_utils import titlecase
 
+
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.method = 'POST'
-        self.parameters = {'age': '2'}
+        self.parameters = {'age': '90'}
         self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
+        self.base = ('//table[@id = "c__contentTable"]//tr[position() >= 2 and '
+                     'not(contains(child::td//text(), "NO OPINIONS") or'
+                     ' contains(child::td//text(), "NO MEMOS"))]')
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[1]/a/text()'''
+        path = '{base}/td[1]/a/text()'.format(base=self.base)
         return [titlecase(text) for text in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[1]/a/@href'''
+        path = '{base}/td[1]/a/@href'.format(base=self.base)
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[7]//text()'''
+        path = '{base}/td[7]//text()'.format(base=self.base)
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
                     for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[2]//text()'''
+        path = '{base}/td[2]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
 
     def _get_precedential_statuses(self):
@@ -48,13 +51,9 @@ class Site(OpinionSite):
         return statuses
 
     def _get_nature_of_suit(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[5]//text()'''
+        path = '{base}/td[5]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
 
     def _get_lower_court(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and
-                    not(contains(child::td//text(), "NO OPINIONS") or
-                        contains(child::td//text(), "NO MEMOS"))]/td[3]//text()'''
+        path = '{base}/td[3]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
