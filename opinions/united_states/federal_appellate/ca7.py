@@ -4,16 +4,21 @@
 
 from juriscraper.OpinionSite import OpinionSite
 import time
-from datetime import date
+from datetime import date, timedelta
 from lxml import html
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        # The string 'week' can be changed to 'today' to get just today's
-        # opinions
-        self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=week&Submit=Submit'
+        self.a_while_ago = date.today() - timedelta(days=60)
+        self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=any&FromMonth={month}&FromDay={day}&FromYear={year}&' \
+                   'ToMonth=&ToDay=&ToYear=&Author=any&AuthorName=&Case=any&CaseY1=&CaseY2=&CaseN1=&CaseN2=&CaseN3=&' \
+                   'CaseN4=&Submit=Submit&RssJudgeName=Easterbrook&OpsOnly=no'.format(
+            month=self.a_while_ago.month,
+            day=self.a_while_ago.day,
+            year=self.a_while_ago.year,
+        )
         self.court_id = self.__module__
 
     def _get_case_names(self):
@@ -49,6 +54,14 @@ class Site(OpinionSite):
     def _get_nature_of_suit(self):
         natures = []
         for e in self.html.xpath('//table//table/tr[position() >= 3]/td[3]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            natures.append(s)
+            natures.append(html.tostring(e, method='text', encoding='unicode'))
         return natures
+
+    def _get_judges(self):
+        judges = []
+        for e in self.html.xpath('//table//table/tr[position() >= 3]/td[6]'):
+            s = html.tostring(e, method='text', encoding='unicode')
+            if s.lower() == 'percuriam':
+                s = "Per Curiam"
+            judges.append(s)
+        return judges
