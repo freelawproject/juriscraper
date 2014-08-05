@@ -1,7 +1,7 @@
 # coding=utf-8
-"""Scraper for Colorado Supreme Court
-CourtID: colo
-Court Short Name: Colo.
+"""Scraper for Colorado Appeals Court
+CourtID: coloctapp
+Court Short Name: Colo. Ct. App.
 Author: Asadullah Baig<asadullahbeg@outlook.com>
 Reviewer: mlr
 Date created: 2014-07-11
@@ -21,5 +21,5 @@ class Site(colo.Site):
             year=self.crawl_date.year,
         )
         # For testing
-        #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=7/3/2014&courtid=1'
+        #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=7/31/2014&courtid=1'
         self.court_id = self.__module__
