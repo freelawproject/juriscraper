@@ -89,5 +89,5 @@ class Site(OpinionSite):
 
     def _download_backwards(self, page):
         self.url = "http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4&Status_Advanced=sct&FirstDate_Advanced=3%2f1%2f2013&LastDate_Advanced=8%2f8%2f2014&PageIndex=" + str(page)
-        time.sleep(6)
+        time.sleep(6)  # This site throttles if faster than 2 hits / 5s.
         self.html = self._download()
