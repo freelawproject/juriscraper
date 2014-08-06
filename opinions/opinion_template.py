@@ -23,6 +23,11 @@ class Site(OpinionSite):
         # Complete this variable if you create a backscraper.
         self.back_scrape_iterable = None
 
+        # if a POST, use these two attributes, otherwise, delete them.
+        self.parameters = {}
+        self.method = POST
+
+
     '''
       Required fields - InsanityExceptions will be thrown if omitted.
 

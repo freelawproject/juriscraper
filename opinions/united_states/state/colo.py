@@ -92,7 +92,6 @@ class Site(OpinionSite):
         regex = re.compile(r'(?P<neutral_citations>.*)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{2})\. (?P<case_names>.*)\.')
         for title in self.html.xpath(path):
             title = ' '.join(title.split())
-            print title
             value = regex.search(title).group(group_name)
             meta_data.append(value)
         return meta_data

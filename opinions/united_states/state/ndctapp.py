@@ -1,7 +1,7 @@
 # Author: Michael Lissner
 # Date created: 2013-06-11
-# This court only hears cases that the ND Supreme Court assigns to it. As a result,
-# years can go by without a case from this court.
+# This court only hears cases that the ND Supreme Court assigns to it. As a
+# result, years can go by without a case from this court.
 
 
 from juriscraper.opinions.united_states.state import nd
