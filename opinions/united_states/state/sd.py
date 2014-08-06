@@ -1,26 +1,46 @@
 # Author: Michael Lissner
-# Date created: 2013-06-11
-# Revised: 2013-08-06 by Brian Carver
+# History:
+# - 2013-06-11: Birth.
+# - 2013-08-06: Revised by Brian Carver
+# - 2014-08-05: Updated URL by mlr
+import os
 
 import re
 from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+from urlparse import urlsplit, urljoin, urlunsplit
+from lxml import html
+from selenium import webdriver
+from AbstractSite import logger
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://www.sdjudicial.com/Supreme_Court/opinions.aspx'
+        self.url = 'http://ujs.sd.gov/Supreme_Court/opinions.aspx'
+        self.back_scrape_iterable = [
+            (0, 2014),
+            (1, 2014),
+            (2, 2014),
+            (3, 2014),
+            (0, 2013),
+            (1, 2013),
+            (2, 2013),
+            (3, 2013),
+            (4, 2013),
+            (5, 2013),
+            (6, 2013),
+        ]
 
     def _get_download_urls(self):
-        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[contains(.,'pdf')]"
+        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[contains(.,'pdf')]"
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path ="//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
+        path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//tr[position() > 1]/td/a[contains(@href, 'pdf')]/text()"
         case_names = []
         for s in self.html.xpath(path):
             case_name = re.search('(.*)(\d{4} S\.?D\.? \d{1,4})', s, re.MULTILINE).group(1)
@@ -43,3 +63,55 @@ class Site(OpinionSite):
             # Make the citation SD instead of S.D. The former is a neutral cite, the latter, the South Dakota Reporter
             neutral_cites.append(neutral_cite.replace('.', ''))
         return neutral_cites
+
+    def _download_backwards(self, page_year):
+        logger.info("Running PhantomJS with params: %s" % (page_year,))
+        driver = webdriver.PhantomJS(
+            executable_path='/usr/local/phantomjs/phantomjs',
+            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+        )
+        driver.implicitly_wait(30)
+        driver.get(self.url)
+
+        # Select the year (this won't trigger a GET unless it's changed)
+        path = "//*[@id='ContentPlaceHolder1_PageContent_OpinionYears']/option[@value={year}]".format(year=page_year[1])
+        option = driver.find_element_by_xpath(path)
+        option.click()
+
+        if page_year[0] != 0:
+            # Not the first, page, go to the one desired.
+            links = driver.find_elements_by_xpath("//a[@href[contains(., 'Page')]]")
+            links[page_year[0] - 1].click()
+
+        text = self._clean_text(driver.page_source)
+        driver.close()
+        html_tree = html.fromstring(text)
+
+        def link_repl(href):
+            """Makes links absolute, working around buggy URLs and nuking anchors.
+
+            Some URLS, like the following, make no sense:
+             - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
+                                          ^^^^ -- This makes no sense!
+            The fix is to remove any extra '/..' patterns at the beginning of the path.
+
+            Others have annoying anchors on the end, like:
+             - http://example.com/path/#anchor
+
+            Note that lxml has a method generally for this purpose called
+            make_links_absolute, but we cannot use it because it does not work around
+            invalid relative URLS, nor remove anchors.
+            """
+            url_parts = urlsplit(urljoin(self.url, href))
+            url = urlunsplit(
+                url_parts[:2] +
+                (re.sub('^(/\.\.)+', '', url_parts.path),) +
+                url_parts[3:]
+            )
+            return url.split('#')[0]
+
+        html_tree.rewrite_links(link_repl)
+        self.html = html_tree
+        self.status = 200
+
+
