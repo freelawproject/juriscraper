@@ -215,14 +215,37 @@ class AbstractSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
+    def _link_repl(self, href):
+        """Makes links absolute, working around buggy URLs and nuking anchors.
+
+        Some URLS, like the following, make no sense:
+         - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
+                                      ^^^^ -- This makes no sense!
+        The fix is to remove any extra '/..' patterns at the beginning of the path.
+
+        Others have annoying anchors on the end, like:
+         - http://example.com/path/#anchor
+
+        Note that lxml has a method generally for this purpose called
+        make_links_absolute, but we cannot use it because it does not work around
+        invalid relative URLS, nor remove anchors.
+        """
+        url_parts = urlsplit(urljoin(self.url, href))
+        url = urlunsplit(
+            url_parts[:2] +
+            (re.sub('^(/\.\.)+', '', url_parts.path),) +
+            url_parts[3:]
+        )
+        return url.split('#')[0]
+
     def _download(self, request_dict={}):
         """Methods for downloading the latest version of Site
         """
         if self.method == 'POST':
-            truncateded_params = {}
+            truncated_params = {}
             for k, v in self.parameters.iteritems():
-                truncateded_params[k] = trunc(v, 50, elipsize=True, elipsis='...[truncated]')
-            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncateded_params))
+                truncated_params[k] = trunc(v, 50, elipsize=True, elipsis='...[truncated]')
+            logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
         else:
             logger.info("Now downloading case page at: %s" % self.url)
         # Get the response. Disallow redirects so they throw an error
@@ -257,31 +280,7 @@ class AbstractSite(object):
         # Grab the content
         text = self._clean_text(r.text)
         html_tree = html.fromstring(text)
-
-        def link_repl(href):
-            """Makes links absolute, working around buggy URLs and nuking anchors.
-
-            Some URLS, like the following, make no sense:
-             - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
-                                          ^^^^ -- This makes no sense!
-            The fix is to remove any extra '/..' patterns at the beginning of the path.
-
-            Others have annoying anchors on the end, like:
-             - http://example.com/path/#anchor
-
-            Note that lxml has a method generally for this purpose called
-            make_links_absolute, but we cannot use it because it does not work around
-            invalid relative URLS, nor remove anchors.
-            """
-            url_parts = urlsplit(urljoin(self.url, href))
-            url = urlunsplit(
-                url_parts[:2] +
-                (re.sub('^(/\.\.)+', '', url_parts.path),) +
-                url_parts[3:]
-            )
-            return url.split('#')[0]
-        html_tree.rewrite_links(link_repl)
-
+        html_tree.rewrite_links(self._link_repl)
         return html_tree
 
     def _download_backwards(self):
