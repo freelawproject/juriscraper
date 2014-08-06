@@ -99,5 +99,8 @@ class Site(OpinionSite):
         return docket_numbers
 
     def _return_docket_numbers(self, html_tree):
-        path = "{base}/td[1]//a/text()".format(base=self.base_path)
-        return list(html_tree.xpath(path))
+        docket_numbers = []
+        for e in html_tree.xpath("{base}/td[1]//a".format(base=self.base_path)):
+            s = html.tostring(e, method='text', encoding='unicode')
+            docket_numbers.append(s)
+        return docket_numbers

@@ -7,6 +7,7 @@ Reviewer: mlr
 History:
  - 23 July 2014: Created.
  - 05 August 2014: Updated by mlr.
+ - 06 August 2014: Updated by mlr.
 """
 
 from datetime import date
@@ -24,7 +25,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.url = 'http://www.5dca.org/opinions_archived.shtml'
         self.base_path = "//a"
-        self.case_regex = '(5D.*\d{3})([- ]+[A-Z].*)'
+        self.case_regex = '(5D.*-.*\d{1,3})([- ]+[A-Za-z].*)'
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
@@ -47,10 +48,27 @@ class Site(OpinionSite):
             # Grab the content
             text = self._clean_text(r.text)
             html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(url)
+            html_tree.rewrite_links(self._link_repl)
 
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
+            # This district has some nasty HTML that occasionally breaks one case name across two anchors.
+            # For example (http://www.5dca.org/Opinions/Opin2014/072114/filings%20072114.html):
+            #
+            #      <a href='...'>5D12-4340, 5D12-4401 and 5D12-4319</a><br>
+            #      <a href='...'>N.R. v. Florida Birth-Related</a>
+            #
+            # The solution is to look at all the a's, and merge the text when the href's are identical.
+            previous_a = None
+            for e in html_tree.xpath('//a'):
+                if previous_a is not None and e.attrib['href'] == previous_a.attrib['href']:
+                    # Same. Merge their text then delete the extraneous element.
+                    previous_text = html.tostring(previous_a, method='text', encoding='unicode')
+                    e_text = html.tostring(e, method='text', encoding='unicode')
+                    previous_a.text = " ".join((previous_text + e_text).split())
+
+                    # See: http://stackoverflow.com/a/7981894/64911
+                    e.getparent().remove(e)
+                previous_a = e
+
             html_trees.append(html_tree)
         return html_trees
 
@@ -62,6 +80,10 @@ class Site(OpinionSite):
 
     def _return_case_names(self, html_tree):
         path = "{base}/text()".format(base=self.base_path)
+        # Uncomment for inevitable regex debugging.
+        # for s in html_tree.xpath(path):
+        #     print "s: %s" % s
+        #     re.search(self.case_regex, s).group(2)
         return [re.search(self.case_regex, s).group(2) for s in html_tree.xpath(path)]
 
     def _get_download_urls(self):
