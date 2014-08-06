@@ -8,12 +8,12 @@ import os
 import re
 from datetime import datetime
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 from urlparse import urlsplit, urljoin, urlunsplit
 from lxml import html
 from selenium import webdriver
-from AbstractSite import logger
 
 
 class Site(OpinionSite):
