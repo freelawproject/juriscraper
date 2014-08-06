@@ -199,19 +199,21 @@ class AbstractSite(object):
         """ Sort the object by date.
         """
         if len(self.case_names) > 0:
-            obj_list_attrs = [item for item in self._all_attrs
-                              if isinstance(item, list)]
+            obj_list_attrs = [self.__getattribute__(attr) for attr in
+                              self._all_attrs if
+                              isinstance(self.__getattribute__(attr), list)]
             zipped = zip(*obj_list_attrs)
             zipped.sort(reverse=True)
             i = 0
             obj_list_attrs = zip(*zipped)
-            for item in self._all_attrs:
-                if isinstance(item, list):
-                    item[:] = obj_list_attrs[i][:]
+            for attr in self._all_attrs:
+                if isinstance(self.__getattribute__(attr), list):
+                    self.__setattr__(attr, obj_list_attrs[i][:])
                     i += 1
 
     def _make_hash(self):
-        """Make a unique ID. ETag and Last-Modified from courts cannot be trusted
+        """Make a unique ID. ETag and Last-Modified from courts cannot be
+        trusted
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
@@ -221,14 +223,17 @@ class AbstractSite(object):
         Some URLS, like the following, make no sense:
          - https://www.appeals2.az.gov/../Decisions/CR20130096OPN.pdf.
                                       ^^^^ -- This makes no sense!
-        The fix is to remove any extra '/..' patterns at the beginning of the path.
+        The fix is to remove any extra '/..' patterns at the beginning of the
+        path.
 
         Others have annoying anchors on the end, like:
          - http://example.com/path/#anchor
 
         Note that lxml has a method generally for this purpose called
-        make_links_absolute, but we cannot use it because it does not work around
-        invalid relative URLS, nor remove anchors.
+        make_links_absolute, but we cannot use it because it does not work
+        around invalid relative URLS, nor remove anchors. This is a limitation
+        of Python's urljoin that will be fixed in Python 3.5 according to a bug
+        we filed: http://bugs.python.org/issue22118
         """
         url_parts = urlsplit(urljoin(self.url, href))
         url = urlunsplit(
@@ -290,18 +295,22 @@ class AbstractSite(object):
     @staticmethod
     def _cleanup_content(content):
         """
-          Given the HTML from a page, the binary PDF file, or similar, do any last-minute cleaning.
+          Given the HTML from a page, the binary PDF file, or similar, do any
+          last-minute cleaning.
 
-          This method should be called as the last step by any caller and works to do any cleanup that is necessary.
-          Usually, this is needed on HTML pages, in jurisdictions that post their content in an HTML page with
-          headers, footers and other content must be stripped after the page has been downloaded by the caller.
+          This method should be called as the last step by any caller and works
+          to do any cleanup that is necessary. Usually, this is needed on HTML
+          pages, in jurisdictions that post their content in an HTML page with
+          headers, footers and other content must be stripped after the page
+          has been downloaded by the caller.
         """
         return content
 
     def _get_cookies(self):
         """
-          Some websites require cookies in order to be scraped. This method provides a hook where cookies
-          can be retrieved by calling functions. Generally the cookies will be set by the _download() method.
+          Some websites require cookies in order to be scraped. This method
+          provides a hook where cookies can be retrieved by calling functions.
+          Generally the cookies will be set by the _download() method.
 
           self.cookies is a list of dicts of the form:
           [

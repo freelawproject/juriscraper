@@ -1,3 +1,8 @@
+"""
+History:
+ - 2014-08-07: Fixed due to InsanityError on docketnumber
+"""
+
 import ca9_p
 import time
 from datetime import date
@@ -12,20 +17,14 @@ class Site(ca9_p.Site):
         self.court_id = self.__module__
 
     def _get_case_dates(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and 
-                    not(contains(child::td//text(), "NO OPINIONS") or 
-                        contains(child::td//text(), "NO MEMOS"))]/td[7]//text()'''
+        path = '{base}/td[7]//text()'.format(base=self.base)
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y')))
                     for date_string in self.html.xpath(path)]
 
     def _get_nature_of_suit(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and 
-                    not(contains(child::td//text(), "NO OPINIONS") or 
-                        contains(child::td//text(), "NO MEMOS"))]/td[5]//text()'''
+        path = '{base}/td[5]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
 
     def _get_lower_court(self):
-        path = '''//table[@id = "c__contentTable"]//tr[position() >= 2 and 
-                    not(contains(child::td//text(), "NO OPINIONS") or 
-                        contains(child::td//text(), "NO MEMOS"))]/td[4]//text()'''
+        path = '{base}/td[4]//text()'.format(base=self.base)
         return list(self.html.xpath(path))

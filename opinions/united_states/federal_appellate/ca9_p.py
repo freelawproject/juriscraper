@@ -1,8 +1,9 @@
 """
 History:
-    - 2014-08-05: Updated by mlr because it was not working, however, in middle of update, site appeared to change. At
-                  first there were about five columns in the table and scraper was failing. Soon, there were seven and
-                  the scraper started working without my fixing it. Very odd.
+    - 2014-08-05: Updated by mlr because it was not working, however, in middle
+      of update, site appeared to change. At first there were about five
+      columns in the table and scraper was failing. Soon, there were seven and
+      the scraper started working without my fixing it. Very odd.
 """
 
 from juriscraper.OpinionSite import OpinionSite
@@ -19,7 +20,7 @@ class Site(OpinionSite):
         self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
         self.base = ('//table[@id = "c__contentTable"]//tr[position() >= 2 and '
                      'not(contains(child::td//text(), "NO OPINIONS") or'
-                     ' contains(child::td//text(), "NO MEMOS"))]')
+                     ' contains(child::td//text(), "NO MEMO"))]')
         self.court_id = self.__module__
 
     def _get_case_names(self):

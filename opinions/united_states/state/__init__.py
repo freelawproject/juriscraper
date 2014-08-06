@@ -51,7 +51,7 @@ __all__ = [
     'iowactapp',
     'kan',
     'kanctapp',
-    #'ky',
+    'ky',
     'la',
     'mass',
     'massappct',

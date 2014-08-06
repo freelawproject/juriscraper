@@ -2,17 +2,21 @@ from juriscraper.AbstractSite import logger
 
 
 class DeferringList(object):
-    """This object can be used to do deferred loading of meta data in the case that a piece of meta data requires
-    some special work to obtain.
+    """This object can be used to do deferred loading of meta data in the case
+    that a piece of meta data requires some special work to obtain.
 
-    Note that since this inherits from object (rather than list), it won't be sorted by the _date_sort function. As a
-    result, it's vital that the code using this object provide the seed data in sorted order. Failure to do so will
-    result in mixed up data being sent to the caller -- a bad fate.
+    Note that since this inherits from object (rather than list), it won't be
+    sorted by the _date_sort function. As a result, it's vital that the code
+    using this object provide the seed data in sorted order. Failure to do so
+    will result in mixed up data being sent to the caller -- a bad fate.
 
-    For an example of how this can be used, see juriscraper.opinions.united_states.state.tex
+    For an example of how this can be used, see
+    juriscraper.opinions.united_states.state.tex
     """
     def __init__(self, *args, **kwargs):
-        logger.warn("Using DeferringList object which cannot be sorted.")
+        logger.warn("Using DeferringList object which cannot be sorted until "
+                    "fetched. Note that in usual processing, the fetching "
+                    "happens before the sorting, so this is OK.")
         self._data = kwargs['seed']
         self._fetched_items = [False] * len(kwargs['seed'])
         self._fetching_function = kwargs['fetcher']
@@ -40,7 +44,6 @@ class DeferringList(object):
             self._data[key] = value
         else:
             raise AttributeError('Cannot set item that has not yet been fetched.')
-
 
     def __delitem__(self, item):
         del self._data[item]

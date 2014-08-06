@@ -6,9 +6,11 @@ Reviewer: None
 Date created: 2014-08-07
 
 This scraper is unique. Kentucky does not provide case names in the search
-results pages, making them almost useless. They have a separate interaface
+results pages, making them almost useless. They have a separate interface
 though that allows a lookup by case year and number, which *does* provide the
-case name.
+case name (and lots of other information). Note that it only provides this
+information for supreme court cases, so extending this to do kyctapp won't be
+possible.
 
 Our process is therefore:
 1. Get anything we can from the search results.
@@ -16,11 +18,11 @@ Our process is therefore:
 3. Merge it all.
 
 Also fun, they use IP addresses instead of DNS and hide them behind HTML
-frames.
+frames hosted by real domains.
 
-One of the worst ones. I tried calling to get more information, and though
-they've heard of us (a first!), they didn't want to help, and seemed downright
-aggressive in their opposition. Curious. Anyway, don't bother calling  again.
+I tried calling to get more information, and though they've heard of us (a
+first!), they didn't want to help, and seemed downright aggressive in their
+opposition. Curious. Anyway, don't bother calling  again.
 """
 
 import re
@@ -46,7 +48,7 @@ class Site(OpinionSite):
             'index': 'D:\\Inetpub\\wwwroot\\indices\\SupremeCourt_Index',
             # This can be bumped as high as you dream to get back *massive*
             # result sets.
-            'maxFiles': '10',
+            'maxFiles': '30',
             # This is a dtSearch trick that brings back all results.
             'request': 'xfirstword',
             # This provides things in newest-first order, but indeed shows the
@@ -54,21 +56,22 @@ class Site(OpinionSite):
             'sort': 'Date'
         }
         self.method = 'POST'
-        self.docket_number_regex = re.compile('(?P<year>\d{4})-(?P<court>[CAS]{2})-(?P<docket_num>\d+)')
+        self.docket_number_regex = re.compile('(?P<year>\d{4})-(?P<court>[SC]{2})-(?P<docket_num>\d+)')
+        self.hrefs_contain = 'Opinions'
 
     def _get_download_urls(self):
-        path = "//a[@href[contains(., 'Opinions')]]"
+        path = "//a[@href[contains(., '{m}')]]".format(m=self.hrefs_contain)
         elems = filter(self._has_valid_docket_number, self.html.xpath(path))
         return [e.xpath('./@href')[0] for e in elems]
 
     def _get_case_names(self):
-        """This reaches out to a secondary system and scrapes the correct info.
-        """
         url = 'http://162.114.92.78/dockets/SearchCaseDetail.asp'
-
         def fetcher(e):
-            text = html.tostring(e, method='text', encoding='unicode')
-            m = self.docket_number_regex.search(text)
+            """This reaches out to a secondary system and scrapes the correct
+             info.
+             """
+            anchor_text = html.tostring(e, method='text', encoding='unicode')
+            m = self.docket_number_regex.search(anchor_text)
 
             r = requests.post(
                 url,
@@ -96,20 +99,28 @@ class Site(OpinionSite):
             case_name_parts = []
             for s in html_tree.xpath(parties_path):
                 if s.strip():
-                    case_name_parts.append(titlecase(s.strip()))
+                    case_name_parts.append(titlecase(s.strip().lower()))
                 if len(case_name_parts) == 2:
                     break
             return ' v. '.join(case_name_parts)
 
         # Get the docket numbers to use for queries.
-        path = "//a[@href[contains(., 'Opinions')]]"
+        path = "//a[@href[contains(., '{m}')]]".format(m=self.hrefs_contain)
         elements = filter(self._has_valid_docket_number, self.html.xpath(path))
         return DeferringList(seed=elements, fetcher=fetcher)
 
     def _get_docket_numbers(self):
-        path = "//a[@href[contains(., 'Opinions')]]"
+        path = "//a[@href[contains(., '{m}')]]".format(
+            m=self.hrefs_contain)
         elements = filter(self._has_valid_docket_number, self.html.xpath(path))
         return map(self._return_docket_number_from_str, elements)
+
+    def _has_valid_docket_number(self, e):
+        text = html.tostring(e, method='text', encoding='unicode')
+        if self.docket_number_regex.search(text):
+            return True
+        else:
+            return False
 
     def _return_docket_number_from_str(self, e):
         s = html.tostring(e, method='text', encoding='unicode')
@@ -121,7 +132,8 @@ class Site(OpinionSite):
         )
 
     def _get_case_dates(self):
-        path = "//tr[descendant::a[@href[contains(., 'Opinions')]]]/td[2]"
+        path = "//tr[descendant::a[@href[contains(., '{m}')]]]/td[2]".format(
+            m=self.hrefs_contain)
         elements = filter(self._has_valid_docket_number, self.html.xpath(path))
         dates = []
         for e in elements:
@@ -135,20 +147,4 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         # noinspection PyUnresolvedReferences
-        return ['Published'] * len(self.case_names)
-
-    def _has_valid_docket_number(self, e):
-        text = html.tostring(e, method='text', encoding='unicode')
-        if self.docket_number_regex.search(text):
-            return True
-        else:
-            return False
-
-    '''
-    def _get_neutral_citations(self):
-        """
-          This is often of the form year, state abbreviation, sequential number
-          as in '2013 Neb. 12' which would be the 12th opinion issued in 2013.
-        """
-        return None
-    '''
+        return ['Unknown'] * len(self.case_names)
