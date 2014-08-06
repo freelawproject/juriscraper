@@ -1,18 +1,13 @@
 import wash
-from datetime import datetime
 
 
 class Site(wash.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.parameters = {'courtLevel': 'C',
-                           'pubStatus': 'PUB',
-                           'beginDate': '01/01/2012',
-                           'endDate': '01/01/2050',
-                           'SType': 'Phrase',
-                           'SValue': ''}
+        self.pubStatus = 'PUB'
+        self._set_parameters()
 
     def _get_case_names(self):
-        path = "//table[@class = 'listTable']/tr/td[4]/text()"
+        path = "{base}/td[4]/text()".format(base=self.base)
         return list(self.html.xpath(path))
