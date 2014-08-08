@@ -6,15 +6,15 @@ currently able to scrape:
 
   - opinions from all major appellate Federal courts
   - opinions from all state courts of last resort (typically their "Supreme 
-    Court"
+    Court")
   - oral arguments from all appellate federal courts that offer them
 
 Juriscraper is part of a two-part system. The second part is your code, which
-calls the code in Juriscraper. Your code is responsible for calling a scraper, 
-downloading and saving its results. A reference implementation of the caller 
-has been developed and is in use at [CourtListener.com][2]. The code for that 
-caller can be [found here][1]. There is also a basic sample caller [included 
-in Juriscraper][5] that can be used for testing or as a starting point when 
+calls Juriscraper. Your code is responsible for calling a scraper, downloading 
+and saving its results. A reference implementation of the caller has been 
+developed and is in use at [CourtListener.com][2]. The code for that caller 
+can be [found here][1]. There is also a basic sample caller [included in 
+Juriscraper][5] that can be used for testing or as a starting point when 
 developing your own.
 
 Some of the design goals for this project are:
