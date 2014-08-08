@@ -3,7 +3,9 @@ CourtID: conn
 Court Short Name: Conn.
 Author: Asadullah Baig<asadullahbeg@outlook.com>
 
-Date created: 2014-07-11
+History:
+ - 2014-07-11: created
+ - 2014-08-08: updated by mlr to fix InsanityError on case_dates
 """
 
 from juriscraper.OpinionSite import OpinionSite
@@ -33,7 +35,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
-        for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td/p//text()'):
+        for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td//b//text()'):
             count = len(title.getparent().xpath("following::ul[1]//a/@href[contains(., 'pdf')]"))
             date_string = title.split()[-1].strip(':')
             dates.extend([datetime.strptime(date_string, '%m/%d/%y').date()] * count)
