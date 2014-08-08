@@ -6,10 +6,10 @@
 #Date: 2014-07-10
 
 
-from datetime import date
 import os
-from lxml import html
 import requests
+from datetime import date, timedelta
+from lxml import html
 from selenium import webdriver
 
 from juriscraper.AbstractSite import logger
@@ -22,6 +22,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
+        self.a_week_ago = date.today() - timedelta(days=5)
         self.case_date = date.today()
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -56,7 +57,7 @@ class Site(OpinionSite):
         search_orders.click()
 
         start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
-        start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+        start_date.send_keys(self.a_week_ago.strftime("%m/%d/%Y"))
 
         end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
         end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
