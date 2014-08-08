@@ -1,28 +1,33 @@
 What is this?
 =============
-Juriscraper is a scraper library that is used to scrape the American court system.
-It is currently able to scrape all major appellate Federal courts, and we are
-currently working on adding state courts.
+Juriscraper is a scraper library started several years ago that is gathers 
+judicial opinions and oral arguments in the American court system. It is 
+currently able to scrape:
 
-Juriscraper is part of a two-part system. The second part is the 'caller', which
-should be developed by the system using Juriscraper. The caller is responsible
-for calling a scraper, downloading and saving its results. A reference
-implementation of the caller has been developed and is in use at [CourtListener.com][2].
-The code for that caller can be [found here][1]. There is also a basic
-sample caller [included in Juriscraper][5] that can be used for testing or as a
-starting point when developing your own.
+  - opinions from all major appellate Federal courts
+  - opinions from all state courts of last resort (typically their "Supreme 
+    Court"
+  - oral arguments from all appellate federal courts that offer them
+
+Juriscraper is part of a two-part system. The second part is your code, which
+calls the code in Juriscraper. Your code is responsible for calling a scraper, 
+downloading and saving its results. A reference implementation of the caller 
+has been developed and is in use at [CourtListener.com][2]. The code for that 
+caller can be [found here][1]. There is also a basic sample caller [included 
+in Juriscraper][5] that can be used for testing or as a starting point when 
+developing your own.
 
 Some of the design goals for this project are:
 
  - extensibility to support video, oral argument audio, etc.
  - extensibility to support geographies (US, Cuba, Mexico, California)
  - Mime type identification through magic numbers
- - Generalized architecture with no code repetition
+ - Generalized architecture with minimal code repetition
  - XPath-based scraping powered by lxml's html parser
  - return all meta data available on court websites (caller can pick what it needs)
  - no need for a database
  - clear log levels (DEBUG, INFO, WARN, CRITICAL)
- - friendly to court websites
+ - friendly as possible to court websites
 
 
 Installation & dependencies
@@ -47,7 +52,7 @@ Installation & dependencies
     # install the code
     sudo mkdir /usr/local/juriscraper
     cd /usr/local/juriscraper
-    hg clone https://bitbucket.org/mlissner/juriscraper .
+    git clone https://github.com/freelawproject/juriscraper.git .
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
     sudo ln -s /usr/local/juriscraper /usr/lib/python2.7/dist-packages/juriscraper
@@ -66,7 +71,7 @@ xpath-tester can be installed locally in a few minutes or is available at
 We also generally use Eclipse with the PyDev and Aptana tools installed or 
 Intellij with PyCharm installed. These are useful because they allow syntax 
 highlighting, code inspection, and PyLint integration. Intellij is particularly
-strong in this area and a license is available to contributors.
+strong in this area and a license is available to interested contributors.
 
 For scrapers to be merged:
 
@@ -80,11 +85,11 @@ Intellij inspection issues.
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
 that makes sense and that nobody else is working on. Alternatively, we have
-[a list][6] of courts that you can browse yourself. There is also a template
-in the opinions directory that you may use to begin scraper development.
+[a list][6] of courts that you can browse yourself. There are templates for new
+scrapers [here][10] and [here][11].
 
-When you're done with your scraper, fork this repository, push your changes into
-your fork, and then send a pull request for your changes. Be sure to
+When you're done with your scraper, fork this repository, push your changes 
+into your fork, and then send a pull request for your changes. Be sure to
 remember to update the `__init__.py` file as well, since it contains a list of
 completed scrapers.
 
@@ -143,32 +148,35 @@ welcome contributions in this area.
 
 Tests
 =====
-We got that! You can (and should) run the tests with `python tests/tests.py`.
+We got that! You can (and should) run the tests with `python tests/tests.py`. 
+This will iterate over all of the *_example_* files and run the scrapers 
+against them.
 
 
 Version History
 ===============
 **Past**
 
- - 0.1 - Supports all 13 Federal Circuit courts and the U.S. Supreme Court
+ - 0.1 - Supports opinions from all 13 Federal Circuit courts and the U.S. Supreme Court
+ - 0.2 - Supports opinions from all federal courts of special jurisdiction (Veterans, Tax, etc.)
+ - 0.8 - Supports oral arguments for all possible Federal Circuit courts.
 
 **Current**
 
- - 0.2 - Supports all federal courts of special jurisdiction (Veterans, Tax, etc.)
+ - 0.9 - Supports all state courts of last resort (typically the "Supreme" court) 
 
 **Future Roadmap**
 
- - 0.9 - Support for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
- - 1.0 - Support for all state courts of last resort (typically the "Supreme" court)
- - 1.5 - Support for all intermediate appellate state courts
- - 1.6 - Support for all courts of U.S. territories (Guam, American Samoa, etc.)
- - 2.0 - Support for all federal district courts with non-PACER opinion listings
- - 2.5 - Support for all federal district courts with PACER written opinion reports (+JPML)
- - 2.6 - Support for all federal district bankruptcy courts
+ - 1.0 - Support opinions from for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
+ - 1.5 - Support opinions from for all intermediate appellate state courts
+ - 1.6 - Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
+ - 2.0 - Support opinions from for all federal district courts with non-PACER opinion listings
+ - 2.5 - Support opinions from for all federal district courts with PACER written opinion reports (+JPML)
+ - 2.6 - Support opinions from for all federal district bankruptcy courts
  - 3.0 - For every court above where a backscraper is possible, it is implemented.
 
 **Beyond**
- - Support video, oral argument audio, and transcripts everywhere available
+ - Support video, additional oral argument audio, and transcripts everywhere available
  - Add other countries, starting with courts issuing opinions in English.
  
 
@@ -176,12 +184,14 @@ License
 ========
 Juriscraper is licensed under the permissive BSD license.
 
-[1]: https://bitbucket.org/mlissner/search-and-awareness-platform-courtlistener/src/tip/alert/scrapers/management/commands/cl_scrape_and_extract.py?at=default
+[1]: https://github.com/freelawproject/courtlistener/blob/master/alert/scrapers/management/commands/cl_scrape_and_extract.py
 [2]: http://courtlistener.com
 [3]: https://github.com/mlissner/lxml-xpath-tester
 [4]: http://www.python.org/dev/peps/pep-0008/
-[5]: https://bitbucket.org/mlissner/juriscraper/src/tip/sample_caller.py
+[5]: https://github.com/freelawproject/juriscraper/blob/master/sample_caller.py
 [6]: http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/Court_Documents
 [7]: http://xpath.courtlistener.com
 [8]: http://phantomjs.org
 [9]: http://phantomjs.org/download.html
+[10]: https://github.com/freelawproject/juriscraper/blob/master/opinions/opinion_template.py
+[11]: https://github.com/freelawproject/juriscraper/blob/master/oral_args/oral_argument_template.py

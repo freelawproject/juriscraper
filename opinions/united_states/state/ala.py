@@ -5,21 +5,33 @@ Author: mlr
 Reviewer: None
 Date created: 2014-07-18
 
-This is one of the most ridiculous scrapers of them all. The list of unusual hacks includes:
+This is one of the most ridiculous scrapers of them all. The list of unusual
+hacks includes:
 
-1. We use the _download() method to log into the website and collect cookies that we later use for all requests.
-2. The page with the content we want contains a beautiful table, but that table is generated using JavaScript from
-   values that are in the JavaScript itself. We work around this in the _clean_text() method by parsing out the
+1. We use the _download() method to log into the website and collect cookies
+   that we later use for all requests.
+2. The page with the content we want contains a beautiful table, but that table
+   is generated using JavaScript from values that are in the JavaScript itself.
+   We work around this in the _clean_text() method by parsing out the
    JavaScript lines and making them into a nice XML tree.
-3. The root page contains Lists of Decisions in addition to actual opinions. They're easy to find, but the casing of the
-   text is inconsistent (sometimes upper, sometimes lower, etc.) so we lowercase the case names (this doesn't affect the
-   final results because we eventually get results from the linked pages).
-4. Unfortunately, the values on the root page are incomplete, and the next page is also formed by executing JavaScript.
-   We work around this by actually executing the JavaScript inside PhantomJS, then grabbing the content we want.
-5. Once we have that content, we have to clean it up because it has more information than we need. We do this with a few
-   string manipulation hacks in the inner function named fetcher().
+3. The root page contains Lists of Decisions in addition to actual opinions.
+   They're easy to find, but the casing of the text is inconsistent (sometimes
+   upper, sometimes lower, etc.) so we lowercase the case names (this doesn't
+   affect the final results because we eventually get results from the linked
+   pages).
+4. Unfortunately, the values on the root page are incomplete, and the next page
+   is also formed by executing JavaScript. We work around this by actually
+   executing the JavaScript inside PhantomJS, then grabbing the content we
+   want.
+5. Once we have that content, we have to clean it up because it has more
+   information than we need. We do this with a few string manipulation hacks
+   in the inner function named fetcher().
 
 What a fragile mess.
+
+The login to alalinc.net is set up by the Alabama Administrative Office of the
+Courts. The person to call about it is Myra Sabel. She's very helpful and her
+number is 334-229-0580.
 
 """
 from juriscraper.DeferringList import DeferringList
@@ -46,7 +58,7 @@ class Site(OpinionSite):
         """
         r = requests.post(
             'http://2.alalinc.net/session/login/',
-            data={'uid': '', 'pwd': ''},
+            data={'uid': 'juriscraper', 'pwd': 'freelaw'},
             headers={'User-Agent': 'Juriscraper'}
         )
         self._cookies = dict(r.cookies)
