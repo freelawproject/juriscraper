@@ -12,24 +12,29 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        regex = re.compile("(\d{2}-.*?\W)(.*)$")
-        return [regex.search(html.tostring(e, method='text')).group(2)
-                                  for e in self.html.xpath('//item/title')]
+        regex = re.compile("(\d{2}-.*?\W)(.*)")
+        case_names = []
+        for e in self.html.xpath('//item/title'):
+            t = html.tostring(e, method='text')
+            case_names.append(regex.search(t).group(2))
+        return case_names
 
     def _get_download_urls(self):
-        return [html.tostring(e, method='text') for e in self.html.xpath('//item/link')]
+        return [html.tostring(e, method='text') for e in
+                self.html.xpath('//item/link')]
 
     def _get_case_dates(self):
         dates = []
         for e in self.html.xpath('//item/pubdate'):
             date_string = html.tostring(e, method='text').split()[0]
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%Y-%m-%d'))))
+            dates.append(date.fromtimestamp(
+                time.mktime(time.strptime(date_string, '%Y-%m-%d'))))
         return dates
 
     def _get_docket_numbers(self):
         regex = re.compile("(\d{2}-.*?\W)(.*)$")
         return [regex.search(html.tostring(e, method='text')).group(1)
-                                  for e in self.html.xpath('//item/title')]
+                for e in self.html.xpath('//item/title')]
 
     def _get_precedential_statuses(self):
         statuses = []
