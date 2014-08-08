@@ -4,8 +4,10 @@ Court Short Name: R.I.
 Author: Brian W. Carver
 Date created: 2013-08-10
 """
+from juriscraper.AbstractSite import InsanityException
 
 import re
+from datetime import date
 from datetime import datetime
 from lxml import html
 
@@ -16,10 +18,24 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        #This page provides the Supreme Court's published opinions.
-        #Another page provides the Supreme Court's unpublised orders.
-        #Backscrapers are possible back to the (1999-2000) term.
-        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Opinions/Opinions%20%282012-2013%29.aspx'
+        # This court hears things from mid-September to end of June. This
+        # defines the "term" for that year, which triggers the website updates.
+        today = datetime.today()
+        if today >= datetime(today.year, 9, 15):
+            self.current_year = today.year
+        else:
+            self.current_year = today.year - 1
+        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Opinions/Opinions%20%28{current}-{next}%29.aspx'.format(
+            current=self.current_year,
+            next=self.current_year + 1,
+        )
+        # The list of pages can be found here:
+        # http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions%20and%20Orders%20Issued%20in%20Supreme%20Court%20Cases.aspx
+
+        # This regex should be fairly clear, but the question mark at the end
+        # might be confusing. That is there to make the date match optional,
+        # because sometimes they forget it.
+        self.regex = '(.*?)((?:Nos?\.)?\s+(?:\d{2,}-\d+,?\s?)+)(\(.*\))?'
 
     def _get_download_urls(self):
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a[child::span]/@href"
@@ -28,12 +44,8 @@ class Site(OpinionSite):
     def _get_case_names(self):
         case_names = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
-        #Could an easier regex do the same thing? Perhaps, but this works.
-        expression = '(\s*.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
         for s in self.html.xpath(path):
-            case_name = re.search(expression, s, re.MULTILINE).group(1)
-            #Chopping off some docket numbers that get mixed in.
-            case_name = case_name.split(', Nos.', 1)[0].strip()
+            case_name = re.search(self.regex, s, re.MULTILINE).group(1)
             case_names.append(case_name)
         return case_names
 
@@ -43,22 +55,33 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         case_dates = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
-        expression = '(.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
+        previous = None
+        error_count = 0
         for s in self.html.xpath(path):
-            date_string = re.search(expression, s, re.MULTILINE).group(3)
-            #Both some whitespace and surrounding parentheses must be removed.
-            date_string = date_string.strip()[1:-1]
-            case_dates.append(datetime.strptime(date_string, '%B %d, %Y').date())
+            try:
+                date_string = re.search(self.regex, s, re.MULTILINE).group(3)
+                d = datetime.strptime(date_string.strip(), '(%B %d, %Y)').date()
+                case_dates.append(d)
+                previous = d
+                error_count = 0
+            except AttributeError:
+                # Happens when the regex fails. Use the previous date and set
+                # error_count back to zero.
+                error_count += 1
+                if error_count == 2:
+                    raise InsanityException(
+                        "Regex appears to be failing in Rhode Island")
+                else:
+                    case_dates.append(previous)
         return case_dates
 
     def _get_docket_numbers(self):
         docket_numbers = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]/td/a/span/text()"
-        expression = '(.*)(,? No\. *\d*-\d*.[^(.]*|,? Nos\..*\d\d*-\d*.[^(.]*|,? \d*-\d*.[^(.]*|,? No\.\d*-\d*[^(.]*)(\(.*)'
         for s in self.html.xpath(path):
-            dockets = re.search(expression, s, re.MULTILINE).group(2)
+            dockets = re.search(self.regex, s, re.MULTILINE).group(2)
             #This page lists these about five different ways, normalizing:
-            dockets = dockets[2:].strip('No.').strip('s.').strip()
+            dockets = re.sub('Nos?\.', '', dockets)
             docket_numbers.append(dockets)
         return docket_numbers
 

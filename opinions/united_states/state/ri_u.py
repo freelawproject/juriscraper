@@ -11,10 +11,10 @@ class Site(ri_p.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        #This page provides the Supreme Court's unpublished orders.
-        #Another page provides the Supreme Court's published opinions.
-        #Backscrapers are possible back to the (1999-2000) term.
-        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Orders/Orders%20%282012-2013%29.aspx'
+        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Orders/Orders%20%28{current}-{next}%29.aspx'.format(
+            current=self.current_year,
+            next=self.current_year + 1,
+        )
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)
