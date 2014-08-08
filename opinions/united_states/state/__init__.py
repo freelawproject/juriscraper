@@ -112,6 +112,8 @@ __all__ = [
     'pa',
     'pacommwct',
     'pasuperct',
+    'ri_p',
+    'ri_u',
     'sd',
     'sc',
     'tenn',
