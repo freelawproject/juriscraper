@@ -3,6 +3,7 @@ import re
 import time
 from datetime import date
 
+
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()

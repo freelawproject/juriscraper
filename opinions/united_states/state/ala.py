@@ -56,18 +56,23 @@ class Site(OpinionSite):
         """Alabama requires a login in order to work. Here, we login, set the cookies,
         and then run the usual download method.
         """
-        r = requests.post(
-            'http://2.alalinc.net/session/login/',
-            data={'uid': 'juriscraper', 'pwd': 'freelaw'},
-            headers={'User-Agent': 'Juriscraper'}
-        )
-        self._cookies = dict(r.cookies)
-        return super(Site, self)._download(request_dict={'cookies': self._cookies})
+        if self.method == 'LOCAL':
+            # No need for cookies when testing.
+            return super(Site, self)._download(request_dict={})
+        else:
+            r = requests.post(
+                'http://2.alalinc.net/session/login/',
+                data={'uid': 'juriscraper', 'pwd': 'freelaw'},
+                headers={'User-Agent': 'Juriscraper'}
+            )
+            self._cookies = dict(r.cookies)
+            return super(Site, self)._download(request_dict={'cookies': self._cookies})
 
     def _clean_text(self, text):
-        """Alabama has some *nasty* code that generates an HTML table from javascript. What we do here is build an HTML
-         tree from that javascript, and return that as the HTML of the page. It's very aggressive, but the page is
-         very bad.
+        """Alabama has some *nasty* code that generates an HTML table from
+        javascript. What we do here is build an HTML tree from the text of that
+        javascript, and return that as the HTML of the page. It's very
+        aggressive, but the page is very bad.
         """
         csv_lines = []
         for line in text.split('\n'):
@@ -82,7 +87,8 @@ class Site(OpinionSite):
             xml_text += '  <row>\n'
             for value in values:
                 if 'list' in value.lower():
-                    # A sad hack that's needed because XPath 1.0 doesn't support lower-casing.
+                    # A sad hack that's needed because XPath 1.0 doesn't
+                    # support lower-casing.
                     value = value.lower()
                 xml_text += '    <value>%s</value>\n' % value
             xml_text += '  </row>\n'
@@ -101,38 +107,42 @@ class Site(OpinionSite):
                     for s in self.html.xpath(path))
 
     def _get_case_names(self):
-        """The case names on the main page only show the first half of long case names. As a result, we browse to the
-        pages they link to and compile those pages using Selenium and PhantomJS. Normally we wouldn't do the compilation
-        step, but, alas, these pages put all their data into JavaScript functions, where are then executed to create the
-        page.
+        """The case names on the main page only show the first half of long
+        case names. As a result, we browse to the pages they link to and
+        compile those pages using Selenium and PhantomJS. Normally we wouldn't
+        do the compilation step, but, alas, these pages put all their data
+        into JavaScript functions, where are then executed to create the page.
 
         A couple other notes:
-         1. When developing, if you stop this after dirver.get(), you can get the content of the page by doing this:
-            https://stackoverflow.com/questions/22739514
+         1. When developing, if you stop this after dirver.get(), you can get
+            the content of the page by doing this:
+              https://stackoverflow.com/questions/22739514
         """
         def fetcher(html_link):
-            full_url = 'http://2.alalinc.net/library/view/file/?lib=SUPREME&file={seed}'.format(seed=html_link)
-            driver = webdriver.PhantomJS(
-                executable_path='/usr/local/phantomjs/phantomjs',
-                service_log_path=os.path.devnull,  # Disable ghostdriver.log
-            )
+            if self.method == 'LOCAL':
+                return "No case names fetched during tests."
+            else:
+                full_url = 'http://2.alalinc.net/library/view/file/?lib=SUPREME&file={seed}'.format(seed=html_link)
+                driver = webdriver.PhantomJS(
+                    executable_path='/usr/local/phantomjs/phantomjs',
+                    service_log_path=os.path.devnull,  # Disable ghostdriver.log
+                )
 
-            r = requests.get(
-                full_url,
-                headers={'User-Agent': 'Juriscraper'},
-                cookies=self._cookies,
-            )
-            r.raise_for_status()
+                r = requests.get(
+                    full_url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    cookies=self._cookies,
+                )
+                r.raise_for_status()
 
-            # Create a fake HTML page from r.text that can be requested by selenium.
-            # See: https://stackoverflow.com/questions/24834838/
-            driver.get('data:text/html,' + r.text)
-            case_name = driver.find_element_by_xpath("//table[contains(descendant::text(), 'Description')]//tr[2]").text
-            case_name = ' '.join(case_name.split())
-            case_name = case_name.split('(')[0]
-            case_name = case_name.split('PETITION')[0]
-
-            return case_name
+                # Create a fake HTML page from r.text that can be requested by
+                # selenium. See: https://stackoverflow.com/questions/24834838/
+                driver.get('data:text/html,' + r.text)
+                case_name = driver.find_element_by_xpath("//table[contains(descendant::text(), 'Description')]//tr[2]").text
+                case_name = ' '.join(case_name.split())
+                case_name = case_name.split('(')[0]
+                case_name = case_name.split('PETITION')[0]
+                return case_name
 
         seed = list(self.html.xpath("//value[2]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"))
         logger.info("Getting {count} pages and rendering them using Selenium browser PhantomJS...".format(count=len(seed)))

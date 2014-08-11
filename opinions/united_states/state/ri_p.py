@@ -7,7 +7,6 @@ Date created: 2013-08-10
 from juriscraper.AbstractSite import InsanityException
 
 import re
-from datetime import date
 from datetime import datetime
 from lxml import html
 

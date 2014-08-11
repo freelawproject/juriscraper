@@ -9,7 +9,8 @@ import time
 import unittest
 
 from juriscraper.lib.importer import build_module_list
-from juriscraper.lib.date_utils import parse_dates, quarter, is_first_month_in_quarter
+from juriscraper.lib.date_utils import parse_dates, quarter, \
+    is_first_month_in_quarter
 from juriscraper.lib.string_utils import clean_string
 from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.lib.string_utils import force_unicode
@@ -23,7 +24,8 @@ class DateParserTest(unittest.TestCase):
         test_pairs = (
             # Dates separated by semicolons and JUMP words
             ('February 5, 1980; March 14, 1980 and May 28, 1980.',
-             [datetime.datetime(1980, 2, 5, 0, 0), datetime.datetime(1980, 3, 14, 0, 0),
+             [datetime.datetime(1980, 2, 5, 0, 0),
+              datetime.datetime(1980, 3, 14, 0, 0),
               datetime.datetime(1980, 5, 28, 0, 0)]),
             # Misspelled month value.
             ('Febraury 17, 1945',
@@ -62,7 +64,8 @@ class ScraperExampleTest(unittest.TestCase):
 
         module_strings = build_module_list('juriscraper')
         count = len([s for s in module_strings if 'backscraper' not in s])
-        print "Testing {count} scrapers against their example files:".format(count=count)
+        print "Testing {count} scrapers against their example files:".format(
+            count=count)
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -72,8 +75,10 @@ class ScraperExampleTest(unittest.TestCase):
             if 'backscraper' not in module_string:
                 sys.stdout.write('  %s ' % module_string)
                 sys.stdout.flush()  # Makes sure the output prints before the error message.
-                paths = glob.glob('%s_example*' % module_string.replace('.', '/'))
-                self.assertTrue(paths, "No example file found for: %s!" % module_string.rsplit('.', 1)[1])
+                paths = glob.glob(
+                    '%s_example*' % module_string.replace('.', '/'))
+                self.assertTrue(paths, "No example file found for: %s!" %
+                                module_string.rsplit('.', 1)[1])
                 t1 = time.time()
                 for path in paths:
                     # This loop allows multiple example files per module
@@ -98,9 +103,9 @@ class ScraperExampleTest(unittest.TestCase):
 
 
 class StringUtilTest(unittest.TestCase):
-
     def test_quarter(self):
-        answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4, 11: 4, 12: 4}
+        answers = {1: 1, 2: 1, 3: 1, 4: 2, 5: 2, 6: 2, 7: 3, 8: 3, 9: 3, 10: 4,
+                   11: 4, 12: 4}
         for month, q in answers.iteritems():
             self.assertEqual(quarter(month), q)
 
@@ -189,8 +194,9 @@ class StringUtilTest(unittest.TestCase):
                        u'United States v. Lissner'],
                       ['United States, Petitioner, v. Lissner',
                        u'United States v. Lissner'],
-                      ['United States of America, Plaintiff-Appellee, v. Orlando B. Pino, Defendant-Appellant, Joseph',
-                       u'United States v. Orlando B. Pino, Joseph'],
+                      [
+                          'United States of America, Plaintiff-Appellee, v. Orlando B. Pino, Defendant-Appellant, Joseph',
+                          u'United States v. Orlando B. Pino, Joseph'],
                       ['Herring v. U.S. **',
                        u'Herring v. United States'],
                       ['Test v. U.S',
@@ -205,83 +211,91 @@ class StringUtilTest(unittest.TestCase):
                        u'United States v. White'],
                       ['12–1438-cr',  # tests unicode input
                        u'12–1438-cr'],
-                      ['Carver v. US',  # Tests the output from a titlecased word containing US to ensure it gets
-                                        # harmonized.
+                      ['Carver v. US',
+                       # Tests the output from a titlecased word containing US to ensure it gets
+                       # harmonized.
                        u'Carver v. United States'],
                       ['Aimee v. The State',  # Normalize "The State"
                        u'Aimee v. State'],
                       ['Commonwealth v. Mickle, V., Pet.',
-                       u'Commonwealth v. Mickle v.'],  # Nuke Pet (short for petitioners)
+                       u'Commonwealth v. Mickle v.'],
+                      # Nuke Pet (short for petitioners)
                       ['Pet Doctors inc. v. Spoon',
-                       u'Pet Doctors inc. v. Spoon'],  # Unchanged, despite having the word Pet
+                       u'Pet Doctors inc. v. Spoon'],
+                      # Unchanged, despite having the word Pet
         ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
 
     def test_titlecase(self):
         """Tests various inputs for the titlecase function"""
-        test_pairs = [["Q&A with steve jobs: 'that's what happens in technology'",
-                       u"Q&A With Steve Jobs: 'That's What Happens in Technology'"],
-                      ["What is AT&T's problem?",
-                       u"What is AT&T's Problem?"],
-                      ['Apple deal with AT&T falls through',
-                       u'Apple Deal With AT&T Falls Through'],
-                      ['this v that',
-                       u'This v That'],
-                      ['this v. that',
-                       u'This v. That'],
-                      ['this vs that',
-                       u'This vs That'],
-                      ['this vs. that',
-                       u'This vs. That'],
-                      ["The SEC's Apple Probe: What You Need to Know",
-                       u"The SEC's Apple Probe: What You Need to Know"],
-                      ["'by the Way, small word at the start but within quotes.'",
-                       u"'By the Way, Small Word at the Start but Within Quotes.'"],
-                      ['Small word at end is nothing to be afraid of',
-                       u'Small Word at End is Nothing to Be Afraid Of'],
-                      ['Starting Sub-Phrase With a Small Word: a Trick, Perhaps?',
-                       u'Starting Sub-Phrase With a Small Word: A Trick, Perhaps?'],
-                      ["Sub-Phrase With a Small Word in Quotes: 'a Trick, Perhaps?'",
-                       u"Sub-Phrase With a Small Word in Quotes: 'A Trick, Perhaps?'"],
-                      ['Sub-Phrase With a Small Word in Quotes: "a Trick, Perhaps?"',
-                       u'Sub-Phrase With a Small Word in Quotes: "A Trick, Perhaps?"'],
-                      ['"Nothing to Be Afraid of?"',
-                       u'"Nothing to Be Afraid Of?"'],
-                      ['"Nothing to be Afraid Of?"',
-                       u'"Nothing to Be Afraid Of?"'],
-                      ['a thing',
-                       u'A Thing'],
-                      ["2lmc Spool: 'gruber on OmniFocus and vapo(u)rware'",
-                       u"2lmc Spool: 'Gruber on OmniFocus and Vapo(u)rware'"],
-                      ['this is just an example.com',
-                       u'This is Just an example.com'],
-                      ['this is something listed on del.icio.us',
-                       u'This is Something Listed on del.icio.us'],
-                      ['iTunes should be unmolested',
-                       u'iTunes Should Be Unmolested'],
-                      ['Reading between the lines of steve jobs’s ‘thoughts on music’', # Tests unicode
-                       u'Reading Between the Lines of Steve Jobs’s ‘thoughts on Music’'],
-                      ['seriously, ‘repair permissions’ is voodoo', # Tests unicode
-                       u'Seriously, ‘repair Permissions’ is Voodoo'],
-                      ['generalissimo francisco franco: still dead; kieren McCarthy: still a jackass',
-                       u'Generalissimo Francisco Franco: Still Dead; Kieren McCarthy: Still a Jackass'],
-                      ['Chapman v. u.s. Postal Service',
-                       u'Chapman v. U.S. Postal Service'],
-                      ['Spread Spectrum Screening Llc. v. Eastman Kodak Co.',
-                       u'Spread Spectrum Screening LLC. v. Eastman Kodak Co.'],
-                      ['Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, Llc.',
-                       u'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, LLC.'],
-                      ['Infosint s.a. v. H. Lundbeck A/s',
-                       u'Infosint S.A. v. H. Lundbeck A/S'],
-                      ["KEVIN O'CONNELL v. KELLY HARRINGTON",
-                       u"Kevin O'Connell v. Kelly Harrington"],
-                      ['International Union of Painter v. J&r Flooring, Inc',
-                       u'International Union of Painter v. J&R Flooring, Inc'],
-                      ['DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED STATES 07-693L And',
-                       u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And'],
-                      ['CARVER v. US',
-                       u'Carver v. US']]
+        test_pairs = [
+            ["Q&A with steve jobs: 'that's what happens in technology'",
+             u"Q&A With Steve Jobs: 'That's What Happens in Technology'"],
+            ["What is AT&T's problem?",
+             u"What is AT&T's Problem?"],
+            ['Apple deal with AT&T falls through',
+             u'Apple Deal With AT&T Falls Through'],
+            ['this v that',
+             u'This v That'],
+            ['this v. that',
+             u'This v. That'],
+            ['this vs that',
+             u'This vs That'],
+            ['this vs. that',
+             u'This vs. That'],
+            ["The SEC's Apple Probe: What You Need to Know",
+             u"The SEC's Apple Probe: What You Need to Know"],
+            ["'by the Way, small word at the start but within quotes.'",
+             u"'By the Way, Small Word at the Start but Within Quotes.'"],
+            ['Small word at end is nothing to be afraid of',
+             u'Small Word at End is Nothing to Be Afraid Of'],
+            ['Starting Sub-Phrase With a Small Word: a Trick, Perhaps?',
+             u'Starting Sub-Phrase With a Small Word: A Trick, Perhaps?'],
+            ["Sub-Phrase With a Small Word in Quotes: 'a Trick, Perhaps?'",
+             u"Sub-Phrase With a Small Word in Quotes: 'A Trick, Perhaps?'"],
+            ['Sub-Phrase With a Small Word in Quotes: "a Trick, Perhaps?"',
+             u'Sub-Phrase With a Small Word in Quotes: "A Trick, Perhaps?"'],
+            ['"Nothing to Be Afraid of?"',
+             u'"Nothing to Be Afraid Of?"'],
+            ['"Nothing to be Afraid Of?"',
+             u'"Nothing to Be Afraid Of?"'],
+            ['a thing',
+             u'A Thing'],
+            ["2lmc Spool: 'gruber on OmniFocus and vapo(u)rware'",
+             u"2lmc Spool: 'Gruber on OmniFocus and Vapo(u)rware'"],
+            ['this is just an example.com',
+             u'This is Just an example.com'],
+            ['this is something listed on del.icio.us',
+             u'This is Something Listed on del.icio.us'],
+            ['iTunes should be unmolested',
+             u'iTunes Should Be Unmolested'],
+            ['Reading between the lines of steve jobs’s ‘thoughts on music’',
+             # Tests unicode
+             u'Reading Between the Lines of Steve Jobs’s ‘thoughts on Music’'],
+            ['seriously, ‘repair permissions’ is voodoo',  # Tests unicode
+             u'Seriously, ‘repair Permissions’ is Voodoo'],
+            [
+                'generalissimo francisco franco: still dead; kieren McCarthy: still a jackass',
+                u'Generalissimo Francisco Franco: Still Dead; Kieren McCarthy: Still a Jackass'],
+            ['Chapman v. u.s. Postal Service',
+             u'Chapman v. U.S. Postal Service'],
+            ['Spread Spectrum Screening Llc. v. Eastman Kodak Co.',
+             u'Spread Spectrum Screening LLC. v. Eastman Kodak Co.'],
+            [
+                'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, Llc.',
+                u'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, LLC.'],
+            ['Infosint s.a. v. H. Lundbeck A/s',
+             u'Infosint S.A. v. H. Lundbeck A/S'],
+            ["KEVIN O'CONNELL v. KELLY HARRINGTON",
+             u"Kevin O'Connell v. Kelly Harrington"],
+            ['International Union of Painter v. J&r Flooring, Inc',
+             u'International Union of Painter v. J&R Flooring, Inc'],
+            [
+                'DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED STATES 07-693L And',
+                u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And'],
+            ['CARVER v. US',
+             u'Carver v. US']]
         for pair in test_pairs:
             self.assertEqual(titlecase(force_unicode(pair[0])),
                              pair[1])
@@ -293,8 +307,9 @@ class StringUtilTest(unittest.TestCase):
             ('Metropolitanv.PAPublic',
              'Metropolitan v. PA Public'),
             # An OK string.
-            ('In Re Avandia Marketing Sales Practices & Products Liability Litigation',
-             'In Re Avandia Marketing Sales Practices & Products Liability Litigation'),
+            (
+                'In Re Avandia Marketing Sales Practices & Products Liability Litigation',
+                'In Re Avandia Marketing Sales Practices & Products Liability Litigation'),
             # Partial camelCase should be untouched.
             ('PPL EnergyPlus, LLC, et al v. Solomon, et al',
              'PPL EnergyPlus, LLC, et al v. Solomon, et al'),
@@ -325,6 +340,7 @@ class StringUtilTest(unittest.TestCase):
         )
         for pair in test_pairs:
             self.assertEqual(pair[1], fix_camel_case(pair[0]))
+
 
 if __name__ == '__main__':
     unittest.main()

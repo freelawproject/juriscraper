@@ -25,7 +25,6 @@ class Site(OpinionSite):
         return map(self._return_case_name, self.html.xpath(path))
 
     def _return_case_name(self, s):
-        print s
         match = self.regex.search(s)
         return match.group(1)
 

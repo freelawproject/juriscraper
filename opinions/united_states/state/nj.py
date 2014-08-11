@@ -32,7 +32,6 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         path = ('//*[@id="content2col"]/table[%s]/tr[.//a]/td[1]//text()' % self.table)
-        print path
         for s in self.html.xpath(path):
             s = s.strip()
             s = re.sub('[\.,]', '', s)

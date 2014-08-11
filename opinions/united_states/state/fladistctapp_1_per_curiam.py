@@ -6,12 +6,13 @@
 # History:
 # - 21 July 2014: Created.
 # - 06 August 2014: Updated by mlr to use Selenium
-from juriscraper.AbstractSite import logger
-from juriscraper.lib.string_utils import trunc
+# - 11 August 2014: Updated by mlr to pass tests when method is 'LOCAL'
+
 
 import os
 
 from datetime import date, timedelta
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 from selenium import webdriver
@@ -27,33 +28,37 @@ class Site(OpinionSite):
         self.release_date = self.case_date.strftime("%m%Y")
 
     def _download(self, request_dict={}):
-        """This is another of the cursed MS asp.net pages with damned POST parameters like __EVENTVALIDATION.
-         These are near impossible to scrape without using Selenium.
+        """This is another of the cursed MS asp.net pages with damned POST
+          parameters like __EVENTVALIDATION. These are near impossible to
+          scrape without using Selenium.
         """
-        driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.implicitly_wait(30)
-        logger.info("Now downloading case page at: %s" % self.url)
-        driver.get(self.url)
+        if self.method == 'LOCAL':
+            return super(Site, self)._download(request_dict=request_dict)
+        else:
+            driver = webdriver.PhantomJS(
+                executable_path='/usr/local/phantomjs/phantomjs',
+                service_log_path=os.path.devnull,  # Disable ghostdriver.log
+            )
+            driver.implicitly_wait(30)
+            logger.info("Now downloading case page at: %s" % self.url)
+            driver.get(self.url)
 
-        # Select the correct drop downs, then submit.
-        path_to_opinion_type = "//select[@id='ddlTypes']/option[@value='{type}']".format(
-            type=self.opinion_type)
-        driver.find_element_by_xpath(path_to_opinion_type).click()
-        path_to_date = "//select[@id='ddlMonths']/option[@value='{d}']".format(
-            d=self.release_date)
-        driver.find_element_by_xpath(path_to_date).click()
-        path_to_submit = "//input[@id='cmdSearch']"
-        driver.find_element_by_xpath(path_to_submit).click()
+            # Select the correct drop downs, then submit.
+            path_to_opinion_type = "//select[@id='ddlTypes']/option[@value='{type}']".format(
+                type=self.opinion_type)
+            driver.find_element_by_xpath(path_to_opinion_type).click()
+            path_to_date = "//select[@id='ddlMonths']/option[@value='{d}']".format(
+                d=self.release_date)
+            driver.find_element_by_xpath(path_to_date).click()
+            path_to_submit = "//input[@id='cmdSearch']"
+            driver.find_element_by_xpath(path_to_submit).click()
 
-        # Selenium doesn't give us the actual code, we have to hope.
-        self.status = 200
+            # Selenium doesn't give us the actual code, we have to hope.
+            self.status = 200
 
-        text = self._clean_text(driver.page_source)
-        html_tree = html.fromstring(text)
-        html_tree.rewrite_links(self._link_repl)
+            text = self._clean_text(driver.page_source)
+            html_tree = html.fromstring(text)
+            html_tree.rewrite_links(self._link_repl)
         return html_tree
 
     def _get_case_names(self):

@@ -38,7 +38,6 @@ class Site(OpinionSite):
         dates = []
         path = self.base_path + "//text()[contains(., '{id}')]".format(id=self.court_identifier)
         for s in self.html.xpath(path):
-            print s
             s = self.grouping_regex.search(s).group(3)
             dates.append(date.fromtimestamp(time.mktime(time.strptime(s, '%B %d, %Y'))))
         return dates

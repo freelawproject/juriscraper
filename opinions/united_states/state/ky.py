@@ -65,44 +65,47 @@ class Site(OpinionSite):
         return [e.xpath('./@href')[0] for e in elems]
 
     def _get_case_names(self):
-        url = 'http://162.114.92.78/dockets/SearchCaseDetail.asp'
         def fetcher(e):
             """This reaches out to a secondary system and scrapes the correct
              info.
              """
-            anchor_text = html.tostring(e, method='text', encoding='unicode')
-            m = self.docket_number_regex.search(anchor_text)
+            if self.method == 'LOCAL':
+                return "No case names fetched during tests."
+            else:
+                url = 'http://162.114.92.78/dockets/SearchCaseDetail.asp'
+                anchor_text = html.tostring(e, method='text', encoding='unicode')
+                m = self.docket_number_regex.search(anchor_text)
 
-            r = requests.post(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                data={
-                    'txtyear': m.group('year'),
-                    'txtcasenumber': m.group('docket_num').strip('0'),
-                    'cmdnamesearh': 'Search',
-                },
-            )
+                r = requests.post(
+                    url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    data={
+                        'txtyear': m.group('year'),
+                        'txtcasenumber': m.group('docket_num').strip('0'),
+                        'cmdnamesearh': 'Search',
+                    },
+                )
 
-            # Throw an error if a bad status code is returned.
-            r.raise_for_status()
+                # Throw an error if a bad status code is returned.
+                r.raise_for_status()
 
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
+                # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+                if r.encoding == 'ISO-8859-1':
+                    r.encoding = 'cp1252'
 
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
+                # Grab the content
+                text = self._clean_text(r.text)
+                html_tree = html.fromstring(text)
 
-            # And finally, we parse out the good stuff.
-            parties_path = "//tr[descendant::text()[contains(., 'Appell')]]//td[3]//text()"
-            case_name_parts = []
-            for s in html_tree.xpath(parties_path):
-                if s.strip():
-                    case_name_parts.append(titlecase(s.strip().lower()))
-                if len(case_name_parts) == 2:
-                    break
-            return ' v. '.join(case_name_parts)
+                # And finally, we parse out the good stuff.
+                parties_path = "//tr[descendant::text()[contains(., 'Appell')]]//td[3]//text()"
+                case_name_parts = []
+                for s in html_tree.xpath(parties_path):
+                    if s.strip():
+                        case_name_parts.append(titlecase(s.strip().lower()))
+                    if len(case_name_parts) == 2:
+                        break
+                return ' v. '.join(case_name_parts)
 
         # Get the docket numbers to use for queries.
         path = "//a[@href[contains(., '{m}')]]".format(m=self.hrefs_contain)

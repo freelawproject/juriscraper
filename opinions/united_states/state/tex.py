@@ -22,7 +22,6 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.a_week_ago = date.today() - timedelta(days=5)
         self.case_date = date.today()
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -34,71 +33,63 @@ class Site(OpinionSite):
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
 
     def _download(self, request_dict={}):
-        logger.info("Running Selenium browser PhantomJS...")
-        driver = webdriver.PhantomJS(
-            executable_path='/usr/local/phantomjs/phantomjs',
-            service_log_path=os.path.devnull,  # Disable ghostdriver.log
-        )
-        driver.get(self.url)
+        if self.method == 'LOCAL':
+            html_tree_list = [
+                super(Site, self)._download(request_dict=request_dict)]
+            self.records_nr = len(html_tree_list[0].xpath("//tr[@class='rgRow' or @class='rgAltRow']"))
+            return html_tree_list
+        else:
+            logger.info("Running Selenium browser PhantomJS...")
+            driver = webdriver.PhantomJS(
+                executable_path='/usr/local/phantomjs/phantomjs',
+                service_log_path=os.path.devnull,  # Disable ghostdriver.log
+            )
+            driver.get(self.url)
 
-        # Set the cookie
-        self._cookies = driver.get_cookies()
+            # Set the cookie
+            self._cookies = driver.get_cookies()
 
-        driver.implicitly_wait(10)
-        search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
-            court_nr=self.courts[self.court_name])
-        )
-        search_court_type.click()
+            driver.implicitly_wait(10)
+            search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
+                court_nr=self.courts[self.court_name])
+            )
+            search_court_type.click()
 
-        search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
-        search_opinions.click()
+            search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
+            search_opinions.click()
 
-        search_orders = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_1")
-        search_orders.click()
+            search_orders = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_1")
+            search_orders.click()
 
-        start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
-        start_date.send_keys(self.a_week_ago.strftime("%m/%d/%Y"))
+            start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
+            start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
 
-        end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
-        end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+            end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
+            end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
 
-        submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
-        submit.click()
-        driver.implicitly_wait(20)
+            submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
+            submit.click()
+            driver.implicitly_wait(20)
 
-        nr_of_pages = driver.find_element_by_xpath(
-            '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]')
-        records_nr = driver.find_element_by_xpath(
-            '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]')
-        if records_nr:
-            self.records_nr = int(records_nr.text)
-        if nr_of_pages:
-            if nr_of_pages.text == '1':
-                text = driver.page_source
-                driver.close()
+            nr_of_pages = driver.find_element_by_xpath(
+                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]')
+            records_nr = driver.find_element_by_xpath(
+                '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]')
+            if records_nr:
+                self.records_nr = int(records_nr.text)
+            if nr_of_pages:
+                if nr_of_pages.text == '1':
+                    text = driver.page_source
+                    driver.close()
 
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
+                    html_tree = html.fromstring(text)
+                    html_tree.make_links_absolute(self.url)
 
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
-                return html_tree
-            else:
-                html_pages = []
-                text = driver.page_source
-
-                html_tree = html.fromstring(text)
-                html_tree.make_links_absolute(self.url)
-
-                remove_anchors = lambda url: url.split('#')[0]
-                html_tree.rewrite_links(remove_anchors)
-                html_pages.append(html_tree)
-
-                for i in xrange(int(nr_of_pages.text) - 1):
-                    next_page = driver.find_element_by_class_name('rgPageNext')
-                    next_page.click()
-                    driver.implicitly_wait(5)
-
+                    remove_anchors = lambda url: url.split('#')[0]
+                    html_tree.rewrite_links(remove_anchors)
+                    return html_tree
+                else:
+                    html_pages = []
                     text = driver.page_source
 
                     html_tree = html.fromstring(text)
@@ -107,26 +98,45 @@ class Site(OpinionSite):
                     remove_anchors = lambda url: url.split('#')[0]
                     html_tree.rewrite_links(remove_anchors)
                     html_pages.append(html_tree)
-                driver.close()
-                return html_pages
+
+                    for i in xrange(int(nr_of_pages.text) - 1):
+                        next_page = driver.find_element_by_class_name('rgPageNext')
+                        next_page.click()
+                        driver.implicitly_wait(5)
+
+                        text = driver.page_source
+
+                        html_tree = html.fromstring(text)
+                        html_tree.make_links_absolute(self.url)
+
+                        remove_anchors = lambda url: url.split('#')[0]
+                        html_tree.rewrite_links(remove_anchors)
+                        html_pages.append(html_tree)
+                    driver.close()
+                    return html_pages
 
     def _get_case_names(self):
         def fetcher(url):
-            r = requests.get(url,
-                             allow_redirects=False,
-                             headers={'User-Agent': 'Juriscraper'})
-            r.raise_for_status()
-
-            html_tree = html.fromstring(r.text)
-            html_tree.make_links_absolute(self.url)
-            plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
-            defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
-
-            if defendant.strip():
-                # If there's a defendant
-                return titlecase('%s v. %s' % (plaintiff, defendant))
+            if self.method == 'LOCAL':
+                return "No case names fetched during tests."
             else:
-                return titlecase(plaintiff)
+                r = requests.get(
+                    url,
+                    allow_redirects=False,
+                    headers={'User-Agent': 'Juriscraper'},
+                )
+                r.raise_for_status()
+
+                html_tree = html.fromstring(r.text)
+                html_tree.make_links_absolute(self.url)
+                plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
+                defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
+
+                if defendant.strip():
+                    # If there's a defendant
+                    return titlecase('%s v. %s' % (plaintiff, defendant))
+                else:
+                    return titlecase(plaintiff)
 
         seed_urls = []
         if isinstance(self.html, list):
