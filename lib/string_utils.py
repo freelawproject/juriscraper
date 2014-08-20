@@ -245,6 +245,7 @@ def harmonize(text):
      - vs. --> v.
      - et al --> Removed.
      - plaintiff, appellee, defendant and the like --> Removed.
+     - No. and Nos. removed from beginning
 
     Lots of tests are in tests.py.
     """
@@ -293,6 +294,10 @@ def harmonize(text):
 
     # Remove the ET_AL words.
     result = re.sub(ET_AL, '', result)
+
+    # Fix the No. and Nos.
+    if result.startswith('No.') or result.startswith('Nos.'):
+        result = re.sub(r'^Nos?\.\s+', '', result)
 
     return clean_string(result)
 

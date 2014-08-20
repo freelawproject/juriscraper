@@ -140,7 +140,7 @@ class AbstractSite(object):
                     else:
                         if isinstance(sub_item, basestring):
                             sub_item = clean_string(sub_item)
-                        if attr == 'case_names':
+                        if attr in ['case_names', 'docket_numbers']:
                             sub_item = harmonize(sub_item)
                     cleaned_item.append(sub_item)
                 self.__setattr__(attr, cleaned_item)
