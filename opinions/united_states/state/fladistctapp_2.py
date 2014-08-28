@@ -3,7 +3,9 @@
 # Court Short Name: flaapp2
 # Author: Andrei Chelaru
 # Reviewer: mlr
-# Date created: 21 July 2014
+# Log:
+# - 2014-07-21: Created
+# - 2014-08-28: Updated by mlr.
 
 
 from datetime import date
@@ -11,6 +13,7 @@ import time
 import requests
 from lxml import html
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -29,6 +32,7 @@ class Site(OpinionSite):
         s = requests.session()
         html_trees = []
         for url in html_l.xpath("//*[@class='cen']/a/@href"):
+            logger.info("Getting sub-url: {url}".format(url=url))
             r = s.get(url,
                       headers={'User-Agent': 'Juriscraper'},
                       **request_dict)
@@ -57,7 +61,7 @@ class Site(OpinionSite):
     @staticmethod
     def _return_case_names(html_tree):
         path = "//th//a[contains(., '/')]/text()"
-        return list(html_tree.xpath(path))
+        return [name for name in html_tree.xpath(path) if name.strip()]
 
     def _get_download_urls(self):
         download_urls = []

@@ -1,3 +1,4 @@
+
 #  Scraper for Florida 1st District Court of Appeal
 # CourtID: flaapp1
 # Court Short Name: flaapp1
