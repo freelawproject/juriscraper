@@ -5,6 +5,7 @@ import datetime
 import glob
 import logging
 import os
+import re
 import time
 import unittest
 
@@ -150,8 +151,9 @@ class StringUtilTest(unittest.TestCase):
              u'United States v. Lissner'],
             ['United States, Petitioner, v. Lissner',
              u'United States v. Lissner'],
-            ['United States of America, Plaintiff-Appellee, v. Orlando B. Pino, Defendant-Appellant, Joseph',
-             u'United States v. Orlando B. Pino, Joseph'],
+            [
+                'United States of America, Plaintiff-Appellee, v. Orlando B. Pino, Defendant-Appellant, Joseph',
+                u'United States v. Orlando B. Pino, Joseph'],
             ['Herring v. U.S. **',
              u'Herring v. United States'],
             ['Test v. U.S',
@@ -367,6 +369,39 @@ class StringUtilTest(unittest.TestCase):
         )
         for pair in test_pairs:
             self.assertEqual(pair[1], fix_camel_case(pair[0]))
+
+
+class ScraperSpotTest(unittest.TestCase):
+    """Adds specific tests to specific courts that are more-easily tested
+    without a full integration test.
+    """
+
+    def test_massappct(self):
+        strings = (
+            'Commonwealth v. Forbes (AC 13-P-730) (August 26, 2014)',
+            'Commonwealth v. Malick (AC 09-P-1292, 11-P-0973) (August 25, 2014)',
+            'Litchfield\'s Case (AC 13-P-1044) (August 28, 2014)',
+            'Rose v. Highway Equipment Company (AC 13-P-1215) (August 27, 2014)',
+            'Commonwealth v. Alves (AC 13-P-1183) (August 27, 2014)',
+            'Commonwealth v. Forbes (AC 13-P-730) (August 26, 2014)',
+            'Commonwealth v. Malick (AC 09-P-1292, 11-P-0973) (August 25, 2014)',
+            'Commonwealth v. Dale (AC 12-P-1909) (August 25, 2014)',
+            'Kewley v. Department of Elementary and Secondary Education (AC 13-P-0833) (August 22, 2014)',
+            'Hazel\'s Cup & Saucer, LLC v. Around The Globe Travel, Inc. (AC 13-P-1371) (August 22, 2014)',
+            'Becker v. Phelps (AC 13-P-0951) (August 22, 2014)',
+            'Barrow v. Dartmouth House Nursing Home, Inc. (AC 13-P-1375) (August 18, 2014)',
+            'Zimmerling v. Affinity Financial Corp. (AC 13-P-1439) (August 18, 2014)',
+            'Lowell v. Talcott (AC 13-P-1053) (August 18, 2014)',
+        )
+        for s in strings:
+            from juriscraper.opinions.united_states.state import massappct
+
+            site = massappct.Site()
+            try:
+                site.grouping_regex.search(s).group(3)
+            except AttributeError:
+                self.fail(
+                    "Unable to parse massctapp string: '{s}'".format(s=s))
 
 
 if __name__ == '__main__':

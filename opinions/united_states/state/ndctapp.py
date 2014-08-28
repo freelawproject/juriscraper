@@ -41,8 +41,8 @@ class Site(nd.Site):
                 del self.docket_numbers[i]
                 del self.neutral_citations[i]
         else:
-            # When there aren't any neutral cites that means everything is a supreme court case, and it all gets
-            # deleted.
+            # When there aren't any neutral cites that means everything is a
+            # supreme court case, and it all gets deleted.
             self.download_urls = []
             self.case_names = []
             self.case_dates = []

@@ -16,4 +16,4 @@ class Site(mass.Site):
         self.court_identifier = '(AC'
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(
             id=self.court_identifier)
-        self.grouping_regex = re.compile("(.*) \((AC \d+-P-\d+)\) \((.+)\)")
+        self.grouping_regex = re.compile("(.*) \((AC.*)\) \((.+)\)")
