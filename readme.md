@@ -189,7 +189,7 @@ Juriscraper is licensed under the permissive BSD license.
 [3]: https://github.com/mlissner/lxml-xpath-tester
 [4]: http://www.python.org/dev/peps/pep-0008/
 [5]: https://github.com/freelawproject/juriscraper/blob/master/sample_caller.py
-[6]: http://people.ischool.berkeley.edu/~bcarver/mediawiki/index.php/Court_Documents
+[6]: https://github.com/freelawproject/juriscraper/wiki/Court-Websites
 [7]: http://xpath.courtlistener.com
 [8]: http://phantomjs.org
 [9]: http://phantomjs.org/download.html
