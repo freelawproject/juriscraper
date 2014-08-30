@@ -16,19 +16,23 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//ul[position() > 1 and position() <= 25]/li[descendant::a/em]//em/text()")]
+        return [e for e in self.html.xpath("//ul/li[descendant::a/em]//em/text()")][0:len(self.case_dates)]
 
     def _get_download_urls(self):
-        return [h for h in self.html.xpath("//ul[position() > 1 and position() <= 25]/li/a[child::em]/@href")]
+        return [h for h in self.html.xpath("//ul/li/a[child::em]/@href")][0:len(self.case_dates)]
 
     def _get_case_dates(self):
         dates = []
-        for h2_element in self.html.xpath('//h2[position() <= 24][following-sibling::ul//a/em]'):
+        for h2_element in self.html.xpath('//h2[following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
 
-            # Older opinions have date headers like: January - March 2014
             if (date_string.find("-") > 0):
-                date_string = date_string[date_string.find("-")+1:].strip()
+                # The opinion list eventually gets to older
+                # cases that do not have exact date headers.
+                # Like: January - March 2014
+                # Stop at the first inexact date header.
+                # This depends on the dates being parsed first.
+                return dates
 
             try:
                 date_obj = date.fromtimestamp(
@@ -44,7 +48,7 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath("//ul[position() > 1 and position() <= 25]/li[descendant::a/em]/text()[1]")]
+        return [t for t in self.html.xpath("//ul/li[descendant::a/em]/text()[1]")][0:len(self.case_dates)]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
