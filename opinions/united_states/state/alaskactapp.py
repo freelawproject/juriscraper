@@ -1,7 +1,11 @@
 """
+Scraper for Alaska Court of Appeals
+ID: alaskactapp
+Court Short Name: Alaska Court of Appeals
 Auth: Jon Andersen <janderse@gmail.com>
+Reviewer: mlr
 History:
-    2014-08-29 Cloned from alaska.py
+    2014-08-29 Cloned from alaska.py by Jon Andersen
 """
 
 from juriscraper.OpinionSite import OpinionSite
@@ -23,6 +27,10 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
+        date_formats = (
+            "%B %d, %Y",
+            "%B %Y",
+        )
         for h2_element in self.html.xpath('//h2[following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
 
@@ -34,17 +42,18 @@ class Site(OpinionSite):
                 # This depends on the dates being parsed first.
                 return dates
 
-            try:
-                date_obj = date.fromtimestamp(
-                    time.mktime(time.strptime(date_string, "%B %d, %Y")))
-            except ValueError:
-                date_obj = date.fromtimestamp(
-                    time.mktime(time.strptime(date_string, "%B %Y")))
+            for frmt in date_formats:
+                try:
+                    d = date.fromtimestamp(
+                        time.mktime(time.strptime(date_string, frmt)))
+                    break
+                except ValueError:
+                    continue
 
             # Determine the number of links below the date and add them all to
             # the date list.
             count = len(h2_element.xpath('./following-sibling::ul[1]//a/em'))
-            dates.extend([date_obj] * count)
+            dates.extend([d] * count)
         return dates
 
     def _get_docket_numbers(self):
