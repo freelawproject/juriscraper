@@ -1,6 +1,7 @@
 __all__ = [
     'ala',
     'alaska',
+    'alaskactapp',
     'ariz',
     'arizctapp_div_1',
     'arizctapp_div_2',
