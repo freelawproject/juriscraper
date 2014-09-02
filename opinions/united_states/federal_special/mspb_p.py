@@ -2,19 +2,15 @@
 CourtID: mspb
 Court Short Name: MSPB
 Author: Jon Andersen
-Reviewer:
+Reviewer: mlr
 Date created: 1 Sep 2014
 Type: Precedential
 """
 
-import re
 import random
-from datetime import date
 from datetime import datetime
-from lxml import html
 
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
@@ -22,27 +18,26 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www.mspb.gov/netsearch/decisiondisplay_2011.aspx?timelapse=3&displaytype=2368396&description=Precedential%20Decisions&cachename=a' + str(random.randrange(1, 100000000))
-        # Complete this variable if you create a backscraper.
-        self.back_scrape_iterable = None
+        self.column_diff = 0
 
     def _get_download_urls(self):
         """
             Like: http://www.mspb.gov/netsearch/viewdocs.aspx?docnumber=1075720&version=1080035&application=ACROBAT
         """
-        path = "//tr[@class='ITEMS']/td[3]/a/@href"
+        path = "//tr[@class='ITEMS']/td[%s]/a/@href" % (3 + self.column_diff)
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         """
             Like: {Appellant} v. {Agency}
         """
-        path = "//tr[@class='ITEMS']/td[3]/a/text()"
+        path = "//tr[@class='ITEMS']/td[%s]/a/text()" % (3 + self.column_diff)
         appellants = self.html.xpath(path)
-
-        path = "//tr[@class='ITEMS']/td[4]/text()"
+        path = "//tr[@class='ITEMS']/td[%s]/text()" % (4 + self.column_diff)
         agencies = self.html.xpath(path)
-
-        return ["%s v. %s" % (appellant, agency) for (appellant, agency) in zip(appellants, agencies)]
+        return ["%s v. %s" % (appellant, agency)
+                for (appellant, agency)
+                in zip(appellants, agencies)]
 
     def _get_case_dates(self):
         """
@@ -53,9 +48,7 @@ class Site(OpinionSite):
                 for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        statuses = []
-        statuses.extend(["Published"] * len(self.case_dates))
-        return statuses
+        return ["Published"] * len(self.case_dates)
 
     def _get_neutral_citations(self):
         """
