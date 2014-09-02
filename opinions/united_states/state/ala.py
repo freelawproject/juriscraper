@@ -53,8 +53,8 @@ class Site(OpinionSite):
         self.url = 'http://2.alalinc.net/library/list/files/?lib=SUPREME'
 
     def _download(self, request_dict={}):
-        """Alabama requires a login in order to work. Here, we login, set the cookies,
-        and then run the usual download method.
+        """Alabama requires a login in order to work. Here, we login, set the
+        cookies and then run the usual download method.
         """
         if self.method == 'LOCAL':
             # No need for cookies when testing.
