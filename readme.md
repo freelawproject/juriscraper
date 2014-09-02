@@ -160,14 +160,14 @@ Version History
  - 0.1 - Supports opinions from all 13 Federal Circuit courts and the U.S. Supreme Court
  - 0.2 - Supports opinions from all federal courts of special jurisdiction (Veterans, Tax, etc.)
  - 0.8 - Supports oral arguments for all possible Federal Circuit courts.
+ - 0.9 - Supports all state courts of last resort (typically the "Supreme" court)
 
 **Current**
 
- - 0.9 - Supports all state courts of last resort (typically the "Supreme" court) 
+ - 1.0 - Support opinions from for all possible federal bankruptcy appellate panels (9th and 10th Cir.) 
 
 **Future Roadmap**
 
- - 1.0 - Support opinions from for all federal bankruptcy appellate panels (1st, 9th and 10th Cir.)
  - 1.5 - Support opinions from for all intermediate appellate state courts
  - 1.6 - Support opinions from for all courts of U.S. territories (Guam, American Samoa, etc.)
  - 2.0 - Support opinions from for all federal district courts with non-PACER opinion listings
