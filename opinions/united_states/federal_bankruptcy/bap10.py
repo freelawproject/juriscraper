@@ -3,15 +3,15 @@ Scraper for the United States Bankruptcy Appellate Panel for the Tenth Circuit
 CourtID: bap10
 Court Short Name: 10th Cir. BAP
 Auth: Jon Andersen <janderse@gmail.com>
-Reviewer:
+Reviewer: mlr
 History:
-    2014-09-01 First draft by Jon Andersen
+    2014-09-01: First draft by Jon Andersen
+    2014-09-02: Revised by mlr to use _clean_text() instead of pushing logic
+                into the _get_case_dates function.
 """
 
+from datetime import datetime
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
-import lxml
 
 
 class Site(OpinionSite):
@@ -23,39 +23,55 @@ class Site(OpinionSite):
         self.my_download_urls = []
         self.my_docket_numbers = []
 
+    def _clean_text(self, text):
+        """This page is a txt file, so here we convert it to something that
+        can be easily ingested by lxml.
+
+        Lines like:
+          13-94.pdf|13|94|08/25/2014|Steve Christensen|Raymond Madsen|United States Bankruptcy Court for the District of Utah
+        """
+        # Nuke duplicates
+        lines = set([line for line in text.split('\n') if line])
+
+        # Build an XML tree.
+        xml_text = '<rows>\n'
+        for line in lines:
+            values = line.split('|')
+            xml_text += '  <row>\n'
+            for value in values:
+                xml_text += '    <value>%s</value>\n' % value
+            xml_text += '  </row>\n'
+        xml_text += '</rows>\n'
+        return xml_text
+
     def _get_case_dates(self):
-        """
-        Parse opinion.txt and ignores duplicates.  Lines like:
-        13-94.pdf|13|94|08/25/2014|Steve Christensen|Raymond Madsen|United States Bankruptcy Court for the District of Utah
-        """
-        dates = []
-        rows = lxml.html.tostring(self.html)
-        alreadyseen = []
-        for s in rows.splitlines():
-            s = s.replace("<p>", "").replace("</p>", "").strip()
-            if s in alreadyseen:
-                continue
-            if s == "":
-                continue
-            alreadyseen.append(s)
-            (pdf, yr, num, casedate, p1, p2, court) = s.split("|")
-            self.my_download_urls.append(
-                'http://www.bap10.uscourts.gov/opinions/%s/%s' % (yr, pdf))
-            self.my_case_names.append("%s v. %s" % (p1, p2))
-            self.my_docket_numbers.append("%s-%s" % (yr, num))
-            dates.append(
-                date.fromtimestamp(
-                    time.mktime(time.strptime(casedate, '%m/%d/%Y'))))
-        return dates
+        path = '//row/value[4]/text()'
+        return [datetime.strptime(date_string, '%m/%d/%Y').date()
+                for date_string in self.html.xpath(path)]
 
     def _get_case_names(self):
-        return self.my_case_names
+        plaintiffs = self.html.xpath('//row/value[6]/text()')
+        defendants = self.html.xpath('//row/value[7]/text()')
+        case_names = []
+        for p, d in zip(plaintiffs, defendants):
+            case_names.append("%s v. %s" % (p, d))
+        return case_names
 
     def _get_download_urls(self):
-        return self.my_download_urls
+        years = self.html.xpath('//row/value[2]/text()')
+        file_names = self.html.xpath('//row/value[1]/text()')
+        urls = []
+        for y, f_n in zip(years, file_names):
+            urls.append('http://www.bap10.uscourts.gov/opinions/%s/%s' % (y, f_n))
+        return urls
 
     def _get_precedential_statuses(self):
-        return ["Unknown"] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _get_docket_numbers(self):
-        return self.my_docket_numbers
+        years = self.html.xpath('//row/value[2]/text()')
+        numbers = self.html.xpath('//row/value[3]/text()')
+        docket_numbers = []
+        for y, n in zip(years, numbers):
+            docket_numbers.append("%s-%s" % (y, n))
+        return docket_numbers
