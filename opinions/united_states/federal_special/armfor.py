@@ -12,12 +12,11 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         today = date.today()
-        if today.month > 8:
+        if today.month > 8 and today.day > 4:
             url_year = today.year
         else:
             url_year = today.year - 1
-        self.url = (
-            'http://www.armfor.uscourts.gov/newcaaf/opinions/%sSepTerm.htm' % url_year)
+        self.url = 'http://www.armfor.uscourts.gov/newcaaf/opinions/%sSepTerm.htm' % url_year
         self.court_id = self.__module__
 
     def _get_case_names(self):

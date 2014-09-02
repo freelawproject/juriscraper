@@ -5,7 +5,6 @@ import datetime
 import glob
 import logging
 import os
-import re
 import time
 import unittest
 
@@ -17,6 +16,7 @@ from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
+from juriscraper.opinions.united_states.state import massappct, pa
 import sys
 
 
@@ -393,15 +393,38 @@ class ScraperSpotTest(unittest.TestCase):
             'Zimmerling v. Affinity Financial Corp. (AC 13-P-1439) (August 18, 2014)',
             'Lowell v. Talcott (AC 13-P-1053) (August 18, 2014)',
         )
-        for s in strings:
-            from juriscraper.opinions.united_states.state import massappct
 
-            site = massappct.Site()
+        site = massappct.Site()
+        for s in strings:
             try:
                 site.grouping_regex.search(s).group(3)
             except AttributeError:
                 self.fail(
                     "Unable to parse massctapp string: '{s}'".format(s=s))
+
+    def test_pa(self):
+        """Ensures our regex parses what we think it can, and fails otherwise.
+        """
+        string_pairs = (
+            ("In Re: Reaccreditation of the American Board of Certification as a Certifying Organization for Consumer Bankruptcy, Creditors' Rights and Business Bankruptcy", False),
+            ("Commonwealth v. Brown, M., Pet - No. 176 WAL 2014", True),
+        )
+        site = pa.Site()
+        for s, expectation in string_pairs:
+            try:
+                site._return_case_name(s)
+                outcome = True
+            except:
+                outcome = False
+            self.assertEqual(
+                expectation,
+                outcome,
+                msg="Did not get expected result ({expectation}) when parsing "
+                    "string in 'pa' test. Instead got: {outcome}".format(
+                    expectation=expectation,
+                    outcome=outcome,
+                )
+            )
 
 
 if __name__ == '__main__':

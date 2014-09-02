@@ -18,7 +18,9 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         self.regex = re.compile("(.*)(?:[,-]?\s+Nos?\.)(.*)", re.MULTILINE)
         self.url = 'http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx'
-        self.base = "//item[not(contains(title/text(), 'Judgment List'))][not(contains(title/text(), 'Reargument Table'))]"
+        self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
+                          "[not(contains(title/text(), 'Reargument Table'))]" \
+                          "[contains(title/text(), 'No.')]"
 
     def _get_case_names(self):
         path = "{base}/title/text()".format(base=self.base)

@@ -28,7 +28,7 @@ class Site(OpinionSite):
         s = requests.session()
         html_trees = []
         # this path reads the links for the last month in that year
-        path = "id('opinions')//h2[string-length()>2][last()]/following::a[string-length()=10]/@href"
+        path = "id('opinions')//h2[string-length()>2][last()]/following::a[string-length()=10]/@href[not(contains(., 'pdf'))]"
         # to get all the dates in that page the following path can be used:
         # path = "id('opinions')//a[string-length()=10]"
         for url in html_l.xpath(path):
