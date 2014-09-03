@@ -28,12 +28,11 @@ class Site(OralArgumentSite):
 
     def _get_case_names(self):
         path = '//item/title/text()'
-        return map(self._return_case_name, self.html.xpath(path))
-
-    @staticmethod
-    def _return_case_name(e):
-        case_name = re.search('(\d{2}.*\d{3,4})?(.+).wma', e).group(2)
-        return fix_camel_case(case_name)
+        case_names = []
+        for s in self.html.xpath(path):
+            case_name = re.search('(\d{2}-\d{3,4})?(.+).wma', s).group(2)
+            case_names.append(fix_camel_case(case_name))
+        return case_names
 
     def _get_case_dates(self):
         path = '//item/description/text()'
