@@ -8,6 +8,11 @@ from lxml import html
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
 from urlparse import urlsplit, urlunsplit, urljoin
+try:
+    # Use cchardet for performance to detect the character encoding.
+    import cchardet as chardet
+except:
+    import chardet
 
 LOG_FILENAME = '/var/log/juriscraper/debug.log'
 
@@ -124,6 +129,7 @@ class AbstractSite(object):
                 0xE000 <= code_point <= 0xFFFD or
                 0x10000 <= code_point <= 0x10FFFF
             )
+
         text = ''.join(c for c in text if valid_xml_char_ordinal(c))
 
         return text
@@ -281,6 +287,8 @@ class AbstractSite(object):
         # Provide the response in the Site object
         self.r = r
         self.status = r.status_code
+
+        r.encoding = chardet.detect(r.content)['encoding']
 
         # Grab the content
         text = self._clean_text(r.text)
