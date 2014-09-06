@@ -1,3 +1,12 @@
+"""
+Scraper for Indiana Supreme Court archive before 6/6/2005
+CourtID: ind
+Court Short Name: Ind.
+Auth: Mike Lissner <mike@freelawproject.org>
+Reviewer:
+History:
+    2014-09-03: Renamed to ind_2005.py
+"""
 from juriscraper.OpinionSite import OpinionSite
 
 import time
