@@ -169,7 +169,8 @@ def titlecase(text, DEBUG=False):
 
 
 def fix_camel_case(s):
-    """Sometimes courts provide nasty camel-cased content instead of real words. This code attempts to fix that."""
+    """Sometimes courts provide nasty camel-cased content instead of real
+    words. This code attempts to fix that."""
     if ' ' in s:
         s_out = s
     else:
