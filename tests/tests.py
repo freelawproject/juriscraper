@@ -20,6 +20,11 @@ from juriscraper.opinions.united_states.state import massappct, pa
 import sys
 
 
+class SlownessException(Exception):
+    def __init__(self, message):
+        Exception.__init__(self, message)
+
+
 class DateParserTest(unittest.TestCase):
     def test_various_date_extractions(self):
         test_pairs = (
@@ -64,9 +69,14 @@ class ScraperExampleTest(unittest.TestCase):
         """
 
         module_strings = build_module_list('juriscraper')
-        count = len([s for s in module_strings if 'backscraper' not in s])
+        num_scrapers = len([s for s in module_strings if 'backscraper' not in s])
         print "Testing {count} scrapers against their example files:".format(
-            count=count)
+            count=num_scrapers)
+        max_len_mod_string = max(len(mod) for mod in module_strings
+                                 if 'backscraper' not in mod) + 2
+        warning_triggered = False
+        num_example_files = 0
+        num_warnings = 0
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -74,13 +84,15 @@ class ScraperExampleTest(unittest.TestCase):
                              locals(),
                              [module])
             if 'backscraper' not in module_string:
-                sys.stdout.write('  %s ' % module_string)
+                sys.stdout.write('  %s ' % module_string.ljust(max_len_mod_string))
                 sys.stdout.flush()  # Makes sure the output prints before the error message.
                 paths = glob.glob(
                     '%s_example*' % module_string.replace('.', '/'))
                 self.assertTrue(paths, "No example file found for: %s!" %
                                 module_string.rsplit('.', 1)[1])
+                num_example_files += len(paths)
                 t1 = time.time()
+                num_tests = len(paths)
                 for path in paths:
                     # This loop allows multiple example files per module
                     if path.endswith('~'):
@@ -96,12 +108,42 @@ class ScraperExampleTest(unittest.TestCase):
                     site._clean_attributes = lambda *a: None
                     site.parse()
                 t2 = time.time()
-                if t2 - t1 > 2:
-                    msg = " - WARNING: Slow scraper!"
-                else:
-                    msg = ' - OK'
-                print '(%0.1f seconds%s)' % ((t2 - t1), msg)
 
+                max_speed = 2
+                warn_speed = 1
+                speed = t2 - t1
+                if speed > max_speed:
+                    raise SlownessException(
+                        "This scraper took {speed}s to test, which is more "
+                        "than the allowed speed of {max_speed}s. "
+                        "Please speed it up for tests to pass.".format(
+                            max_speed=max_speed))
+                elif speed > warn_speed:
+                    msg = ' - WARNING: SLOW SCRAPER'
+                    num_warnings += 1
+                else:
+                    msg = ''
+
+                print '(%s tests in %0.1f seconds%s)' % (num_tests, speed, msg)
+
+        print ("\n{num_scrapers} scrapers tested successfully against "
+               "{num_example_files} example files, with {num_warnings} "
+               "speed warnings.".format(
+                    num_scrapers=num_scrapers,
+                    num_example_files=num_example_files,
+                    num_warnings=num_warnings,
+                ))
+        if num_warnings:
+            print ("\nAt least one speed warning was triggered during the "
+                   "tests. If this is due to a slow scraper you wrote, we "
+                   "suggest attempting to speed it up, as it will be slow "
+                   "both in production and while running tests. This is "
+                   "currently a warning, but may raise a failure in the "
+                   "future as performance requirements are tightened.")
+        else:
+            # Someday, this line of code will be run. That day is not today.
+            print "\nNo speed warnings detected. That's great, keep up the " \
+                  "good work!"
 
 class StringUtilTest(unittest.TestCase):
     def test_quarter(self):

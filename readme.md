@@ -39,6 +39,13 @@ Installation & dependencies
     sudo pip install requests==2.2.1
     sudo pip install lxml==3.0.1
     sudo pip install python-dateutil==1.5  # Newer have known incompatibilities with Python < 3
+    
+    # Optionally, you may install cchardet for faster tests and better 
+    # performance. Note that unless you have an extremely fast CPU, this is 
+    # a requirement for tests to pass as they have speed requirements.
+    sudo pip install cchardet==0.3.5
+    
+    # Create a directory for logs
     sudo mkdir /var/log/juriscraper/
 
     # Install selenium and PhantomJS
@@ -49,7 +56,7 @@ Installation & dependencies
     sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
     rm -r phantomjs-1.9.7*  # Cleanup
     
-    # install the code
+    # Finally, install the code
     sudo mkdir /usr/local/juriscraper
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
