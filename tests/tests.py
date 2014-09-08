@@ -69,12 +69,12 @@ class ScraperExampleTest(unittest.TestCase):
         """
 
         module_strings = build_module_list('juriscraper')
-        num_scrapers = len([s for s in module_strings if 'backscraper' not in s])
+        num_scrapers = len([s for s in module_strings
+                            if 'backscraper' not in s])
         print "Testing {count} scrapers against their example files:".format(
             count=num_scrapers)
         max_len_mod_string = max(len(mod) for mod in module_strings
                                  if 'backscraper' not in mod) + 2
-        warning_triggered = False
         num_example_files = 0
         num_warnings = 0
         for module_string in module_strings:
@@ -84,8 +84,10 @@ class ScraperExampleTest(unittest.TestCase):
                              locals(),
                              [module])
             if 'backscraper' not in module_string:
-                sys.stdout.write('  %s ' % module_string.ljust(max_len_mod_string))
-                sys.stdout.flush()  # Makes sure the output prints before the error message.
+                sys.stdout.write(
+                    '  %s ' % module_string.ljust(max_len_mod_string)
+                )
+                sys.stdout.flush()
                 paths = glob.glob(
                     '%s_example*' % module_string.replace('.', '/'))
                 self.assertTrue(paths, "No example file found for: %s!" %
@@ -124,15 +126,17 @@ class ScraperExampleTest(unittest.TestCase):
                 else:
                     msg = ''
 
-                print '(%s test(s) in %0.1f seconds%s)' % (num_tests, speed, msg)
+                print '(%s test(s) in %0.1f seconds%s)' % (
+                    num_tests, speed, msg
+                )
 
         print ("\n{num_scrapers} scrapers tested successfully against "
                "{num_example_files} example files, with {num_warnings} "
                "speed warnings.".format(
-                    num_scrapers=num_scrapers,
-                    num_example_files=num_example_files,
-                    num_warnings=num_warnings,
-                ))
+                   num_scrapers=num_scrapers,
+                   num_example_files=num_example_files,
+                   num_warnings=num_warnings,
+               ))
         if num_warnings:
             print ("\nAt least one speed warning was triggered during the "
                    "tests. If this is due to a slow scraper you wrote, we "
@@ -144,6 +148,7 @@ class ScraperExampleTest(unittest.TestCase):
             # Someday, this line of code will be run. That day is not today.
             print "\nNo speed warnings detected. That's great, keep up the " \
                   "good work!"
+
 
 class StringUtilTest(unittest.TestCase):
     def test_quarter(self):
@@ -194,7 +199,8 @@ class StringUtilTest(unittest.TestCase):
             ['United States, Petitioner, v. Lissner',
              u'United States v. Lissner'],
             [
-                'United States of America, Plaintiff-Appellee, v. Orlando B. Pino, Defendant-Appellant, Joseph',
+                'United States of America, Plaintiff-Appellee, v. Orlando B. '
+                'Pino, Defendant-Appellant, Joseph',
                 u'United States v. Orlando B. Pino, Joseph'],
             ['Herring v. U.S. **',
              u'Herring v. United States'],
@@ -347,15 +353,19 @@ class StringUtilTest(unittest.TestCase):
             ['seriously, ‘repair permissions’ is voodoo',  # Tests unicode
              u'Seriously, ‘repair Permissions’ is Voodoo'],
             [
-                'generalissimo francisco franco: still dead; kieren McCarthy: still a jackass',
-                u'Generalissimo Francisco Franco: Still Dead; Kieren McCarthy: Still a Jackass'],
+                'generalissimo francisco franco: still dead; kieren McCarthy: '
+                'still a jackass',
+                u'Generalissimo Francisco Franco: Still Dead; Kieren McCarthy:'
+                u' Still a Jackass'],
             ['Chapman v. u.s. Postal Service',
              u'Chapman v. U.S. Postal Service'],
             ['Spread Spectrum Screening Llc. v. Eastman Kodak Co.',
              u'Spread Spectrum Screening LLC. v. Eastman Kodak Co.'],
             [
-                'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, Llc.',
-                u'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear Indian Point 2, LLC.'],
+                'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear '
+                'Indian Point 2, Llc.',
+                u'Consolidated Edison Co. of New York, Inc. v. Entergy Nuclear'
+                u' Indian Point 2, LLC.'],
             ['Infosint s.a. v. H. Lundbeck A/s',
              u'Infosint S.A. v. H. Lundbeck A/S'],
             ["KEVIN O'CONNELL v. KELLY HARRINGTON",
@@ -363,8 +373,10 @@ class StringUtilTest(unittest.TestCase):
             ['International Union of Painter v. J&r Flooring, Inc',
              u'International Union of Painter v. J&R Flooring, Inc'],
             [
-                'DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED STATES 07-693L And',
-                u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the United States 07-693l And'],
+                'DOROTHY L. BIERY, and JERRAMY and ERIN PANKRATZ v. THE UNITED'
+                ' STATES 07-693L And',
+                u'Dorothy L. Biery, and Jerramy and Erin Pankratz v. the '
+                u'United States 07-693l And'],
             ['CARVER v. US',
              u'Carver v. US']]
         for pair in test_pairs:
@@ -379,8 +391,10 @@ class StringUtilTest(unittest.TestCase):
              'Metropolitan v. PA Public'),
             # An OK string.
             (
-                'In Re Avandia Marketing Sales Practices & Products Liability Litigation',
-                'In Re Avandia Marketing Sales Practices & Products Liability Litigation'),
+                'In Re Avandia Marketing Sales Practices & Products Liability '
+                'Litigation',
+                'In Re Avandia Marketing Sales Practices & Products Liability '
+                'Litigation'),
             # Partial camelCase should be untouched.
             ('PPL EnergyPlus, LLC, et al v. Solomon, et al',
              'PPL EnergyPlus, LLC, et al v. Solomon, et al'),
@@ -448,8 +462,12 @@ class ScraperSpotTest(unittest.TestCase):
         """Ensures our regex parses what we think it can, and fails otherwise.
         """
         string_pairs = (
-            ("In Re: Reaccreditation of the American Board of Certification as a Certifying Organization for Consumer Bankruptcy, Creditors' Rights and Business Bankruptcy", False),
-            ("Commonwealth v. Brown, M., Pet - No. 176 WAL 2014", True),
+            ("In Re: Reaccreditation of the American Board of Certification as"
+             " a Certifying Organization for Consumer Bankruptcy, Creditors' "
+             "Rights and Business Bankruptcy",
+             False),
+            ("Commonwealth v. Brown, M., Pet - No. 176 WAL 2014",
+             True),
         )
         site = pa.Site()
         for s, expectation in string_pairs:
@@ -463,9 +481,9 @@ class ScraperSpotTest(unittest.TestCase):
                 outcome,
                 msg="Did not get expected result ({expectation}) when parsing "
                     "string in 'pa' test. Instead got: {outcome}".format(
-                    expectation=expectation,
-                    outcome=outcome,
-                )
+                        expectation=expectation,
+                        outcome=outcome,
+                    )
             )
 
 
