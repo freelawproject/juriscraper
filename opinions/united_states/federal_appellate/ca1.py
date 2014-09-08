@@ -33,7 +33,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         regex = re.compile("(\d{2}-.*?\W)(.*)$")
-        return [regex.search(html.tostring(e, method='text')).group(1)
+        return [regex.search(html.tostring(e, method='text')).group(1).strip()
                 for e in self.html.xpath('//item/title')]
 
     def _get_precedential_statuses(self):
@@ -49,3 +49,12 @@ class Site(OpinionSite):
             else:
                 statuses.append("Unknown")
         return statuses
+
+    def _get_lower_court_numbers(self):
+        regex = re.compile("Originating Case Number:([^<]*)[<]")
+        return [regex.search(html.tostring(e)).group(1).strip()
+                for e in self.html.xpath('//item/description')]
+
+    def _get_lower_courts(self):
+        return [e.strip()
+                for e in self.html.xpath('//item/description/b[2]/text()')]
