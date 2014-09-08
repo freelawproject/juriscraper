@@ -79,7 +79,7 @@ class Site(OpinionSite):
 
         path = "//td[@class='center']/table[3]//tr/td[6]/div/a/@href"
         seed_urls = self.html.xpath(path)
-        if seed_urls:
+        if seed_urls and self.method != 'LOCAL':
             return DeferringList(seed=seed_urls, fetcher=fetcher)
         else:
-            return []
+            return None
