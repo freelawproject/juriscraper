@@ -6,9 +6,7 @@ History:
     2014-08-04: Created by Jon Andersen
 """
 
-import re
 from datetime import date
-from datetime import datetime
 
 from juriscraper.opinions.united_states.state import nc
 

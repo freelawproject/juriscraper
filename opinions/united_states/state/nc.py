@@ -45,61 +45,69 @@ class Site(OpinionSite):
                     case_date = datetime.strptime(date_str, '%d %B %Y').date()
                     # When a new date header appears, switch to Precedential
                     precedential_status = "Published"
-                    continue     # Row contained just the date, move on
-            except:
-                # Not a date header
+                    continue  # Row contained just the date, move on
+            except IndexError:
+                # No matching nodes; not a date header
                 pass
 
             path = "./td[contains(., 'Unpublished Opinions - Rule 30e')]"
             if row_el.xpath(path):
                 precedential_status = "Unpublished"
-                continue   # When this header appears, switch to Nonprecedential
+                # When this header appears, switch to Nonprecedential, then
+                # press on to the following rows.
+                continue
 
-            if (precedential_status == "Published"):
+            if precedential_status == "Published":
                 urls = row_el.xpath('./td/span/span[1]/@onclick')
                 # Like: viewOpinion("http://appellate.nccourts.org/opinions/?c=1&amp;pdf=31511")
-                if (len(urls) != 1 or urls[0].find('viewOpinion') != 0):
-                    continue    # Only interested in cases with a download link
-                download_url = urls[0][13:-2]
+                if len(urls) != 1 or urls[0].find('viewOpinion') != 0:
+                    continue  # Only interested in cases with a download link
+
+                # Pull the URL out of the javascript viewOpinion function.
+                download_url = re.search('viewopinion\("(.*)"', urls[0],
+                                         re.IGNORECASE).group(1)
 
                 path = "./td/span/span[contains(@class,'title')]/text()"
                 txt = row_el.xpath(path)[0]
-                (case_name, neutral_cit, dock_num) = self.parse_title(txt)
+                (case_name, neutral_cite, docket_number) = self.parse_title(txt)
 
                 summary = ""
                 path = "./td/span/span[contains(@class,'desc')]/text()"
                 summaries = row_el.xpath(path)
-                if (len(summaries) == 1):
-                    # Not all cases have a summary
+                try:
                     summary = summaries[0]
-
-                if (case_name.strip() == ""):
-                    continue    # A few cases are missing a name
+                except IndexError:
+                    # Not all cases have a summary
+                    pass
+                if case_name.strip() == "":
+                    continue  # A few cases are missing a name
 
                 case_dates.append(case_date)
                 self.my_download_urls.append(download_url)
                 self.my_case_names.append(case_name)
-                self.my_docket_numbers.append(dock_num)
+                self.my_docket_numbers.append(docket_number)
                 self.my_summaries.append(summary)
-                self.my_neutral_citations.append(neutral_cit)
+                self.my_neutral_citations.append(neutral_cite)
                 self.my_precedential_statuses.append(precedential_status)
 
-            elif (precedential_status == "Unpublished"):
+            elif precedential_status == "Unpublished":
                 for span in row_el.xpath('./td/span'):
                     if 'onclick' not in span.attrib.keys():
                         continue
-                    download_url = span.attrib['onclick'][13:-2]
+                    download_url = re.search('viewopinion\("(.*)"',
+                                             span.attrib['onclick'],
+                                             re.IGNORECASE).group(1)
 
                     txt = span.text_content().strip()
-                    (case_name, neutral_cit, dock_num) = self.parse_title(txt)
-                    if (case_name.strip() == ""):
-                        continue    # A few cases are missing a name
+                    (case_name, neutral_cite, docket_number) = self.parse_title(txt)
+                    if case_name.strip() == "":
+                        continue  # A few cases are missing a name
                     case_dates.append(case_date)
                     self.my_download_urls.append(download_url)
                     self.my_case_names.append(case_name)
-                    self.my_docket_numbers.append(dock_num)
+                    self.my_docket_numbers.append(docket_number)
                     self.my_summaries.append("")
-                    self.my_neutral_citations.append(neutral_cit)
+                    self.my_neutral_citations.append(neutral_cite)
                     self.my_precedential_statuses.append(precedential_status)
 
         return case_dates
@@ -107,12 +115,13 @@ class Site(OpinionSite):
     # Parses case titles like:
     # Fields v. Harnett Cnty., 367 NC 12 (13-761)
     # Clark v. Clark,  (13-612)
-    def parse_title(self, txt):
+    @staticmethod
+    def parse_title(txt):
         name_and_citation = txt.rsplit('(', 1)[0].strip()
-        dock_num = txt.rsplit('(', 1)[1].strip().strip(')')
+        docket_number = txt.rsplit('(', 1)[1].strip().strip(')')
         case_name = name_and_citation.rsplit(",", 1)[0].strip()
-        neutral_cit = name_and_citation.rsplit(",", 1)[1].strip()
-        return (case_name, neutral_cit, dock_num)
+        neutral_cite = name_and_citation.rsplit(",", 1)[1].strip()
+        return case_name, neutral_cite, docket_number
 
     def _get_download_urls(self):
         return self.my_download_urls
