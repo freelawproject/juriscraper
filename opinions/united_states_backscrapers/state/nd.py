@@ -22,6 +22,8 @@ class Site(nd.Site):
         """We use a fetcher and a DeferringList object and a HEAD request
         to test whether the wpd exists for a case"""
         def fetcher(html_link):
+            if (self.method == "LOCAL"):
+                return html_link    # Can't fetch remote during tests
             case_number = re.search('(\d+)', html_link).group(0)
             wpd_link = 'http://www.ndcourts.gov/wp/%s.wpd' % case_number
             r = requests.head(wpd_link,
