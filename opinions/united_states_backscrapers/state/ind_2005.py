@@ -5,7 +5,7 @@ Court Short Name: Ind.
 Auth: Mike Lissner <mike@freelawproject.org>
 Reviewer:
 History:
-    2014-09-03: Renamed to ind_2005.py
+    2014-09-03: Renamed to ind_2005.py by janderse
 """
 from juriscraper.OpinionSite import OpinionSite
 

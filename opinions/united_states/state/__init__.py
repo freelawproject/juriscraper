@@ -49,7 +49,7 @@ __all__ = [
     'illappct',
     'ind',
     'indctapp',
-    'indtax',
+    'indtc',
     'iowa',
     'iowactapp',
     'kan',

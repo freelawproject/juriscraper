@@ -3,7 +3,7 @@ Scraper for Indiana Supreme Court
 CourtID: ind
 Court Short Name: Ind.
 Auth: Jon Andersen <janderse@gmail.com>
-Reviewer:
+Reviewer: mlr
 History:
     2014-09-03: Created by Jon Andersen
 """
@@ -38,12 +38,12 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath('//dl/dd/dd/dd/text()'):
-            val = date_string.strip()
-            if val == '':
+            date_string = date_string.strip()
+            if date_string == '':
                 dates.append('')
             else:
                 dates.append(date.fromtimestamp(
-                    time.mktime(time.strptime(val, '%m/%d/%y'))))
+                    time.mktime(time.strptime(date_string, '%m/%d/%y'))))
         return dates
 
     def _get_docket_numbers(self):

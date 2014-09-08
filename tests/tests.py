@@ -124,7 +124,7 @@ class ScraperExampleTest(unittest.TestCase):
                 else:
                     msg = ''
 
-                print '(%s tests in %0.1f seconds%s)' % (num_tests, speed, msg)
+                print '(%s test(s) in %0.1f seconds%s)' % (num_tests, speed, msg)
 
         print ("\n{num_scrapers} scrapers tested successfully against "
                "{num_example_files} example files, with {num_warnings} "
