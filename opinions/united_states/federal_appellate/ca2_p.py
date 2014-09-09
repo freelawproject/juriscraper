@@ -4,6 +4,7 @@ from datetime import date
 from lxml import html
 import time
 
+
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
@@ -19,11 +20,13 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for e in self.html.xpath('//table/td[3]/text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(e, '%m-%d-%Y'))))
+            dates.append(date.fromtimestamp(
+                time.mktime(time.strptime(e, '%m-%d-%Y'))))
         return dates
 
     def _get_docket_numbers(self):
-        return [html.tostring(e, method='text', encoding='utf-8') for e in self.html.xpath('//table/td/b/a/nobr')]
+        return [html.tostring(e, method='text', encoding='utf-8') for e in
+                self.html.xpath('//table/td/b/a/nobr')]
 
     def _get_precedential_statuses(self):
         statuses = []

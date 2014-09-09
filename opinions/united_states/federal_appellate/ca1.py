@@ -56,5 +56,5 @@ class Site(OpinionSite):
                 for e in self.html.xpath('//item/description')]
 
     def _get_lower_courts(self):
-        return [e.strip()
-                for e in self.html.xpath('//item/description/b[2]/text()')]
+        return [e.strip() for e in
+                self.html.xpath('//item/description/b[2]/text()')]
