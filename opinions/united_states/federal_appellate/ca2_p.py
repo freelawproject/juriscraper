@@ -1,4 +1,5 @@
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import titlecase
 from datetime import date
 from lxml import html
 import time
@@ -10,7 +11,7 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [t for t in self.html.xpath('//table/td[2]/text()')]
+        return [titlecase(t) for t in self.html.xpath('//table/td[2]/text()')]
 
     def _get_download_urls(self):
         return [e for e in self.html.xpath('//table/td/b/a/@href')]
