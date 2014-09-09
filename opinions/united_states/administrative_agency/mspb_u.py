@@ -8,7 +8,7 @@ Type: Non-precedential
 """
 
 import random
-from juriscraper.opinions.united_states.federal_special import mspb_p
+from juriscraper.opinions.united_states.administrative_agency import mspb_p
 
 
 class Site(mspb_p.Site):
