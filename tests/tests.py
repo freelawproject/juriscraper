@@ -104,10 +104,6 @@ class ScraperExampleTest(unittest.TestCase):
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
-                    # do-nothing function, b/c we don't want to iterate over
-                    # items in a DeferringList. Otherwise, this function is
-                    # called as part of the parse() function.
-                    site._clean_attributes = lambda *a: None
                     site.parse()
                 t2 = time.time()
 
