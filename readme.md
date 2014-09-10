@@ -150,6 +150,15 @@ We got that! You can (and should) run the tests with `python tests/tests.py`.
 This will iterate over all of the *_example_* files and run the scrapers 
 against them.
 
+In addition, we use [Travis-CI][tci] to automatically run the tests whenever
+code is committed to the repository or whenever a pull request is created. You
+can make sure that your pull request is good to go by waiting for the automated
+tests to complete.
+
+The current status if Travis CI on our master branch is:
+
+[![Build Status](https://travis-ci.org/freelawproject/juriscraper.svg?branch=master)][12]
+
 
 Version History
 ===============
@@ -194,3 +203,4 @@ Juriscraper is licensed under the permissive BSD license.
 [10]: https://github.com/freelawproject/juriscraper/blob/master/opinions/opinion_template.py
 [11]: https://github.com/freelawproject/juriscraper/blob/master/oral_args/oral_argument_template.py
 [12]: https://travis-ci.org/freelawproject/juriscraper
+[tci]: https://travis-ci.org/
