@@ -3,8 +3,8 @@ python:
  - "2.7"
 install:
  - ln -s `pwd` $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
- - sudo mkdir -p /var/log/juriscraper
- - sudo touch /var/log/juriscraper/debug.log
+ - mkdir -p /var/log/juriscraper
+ - touch /var/log/juriscraper/debug.log
  - pip install -r requirements.txt
 script:
  - python tests/tests.py
