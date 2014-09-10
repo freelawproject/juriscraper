@@ -50,7 +50,7 @@ Installation & Dependencies
     git clone https://github.com/freelawproject/juriscraper.git .
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
-    sudo ln -s /usr/local/juriscraper /usr/lib/python2.7/dist-packages/juriscraper
+    sudo ln -s `pwd`/juriscraper $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
 
     # create a directory for logs
     sudo mkdir -p /var/log/juriscraper

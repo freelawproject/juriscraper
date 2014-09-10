@@ -3,6 +3,7 @@ python:
  - "2.7"
 install:
  - ln -s `pwd` $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
- - pip install -r requirements.txt --use-mirrors
+ - sudo mkdir -p /var/log/juriscraper
+ - pip install -r requirements.txt
 script:
  - python tests/tests.py
