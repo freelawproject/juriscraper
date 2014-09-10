@@ -2,7 +2,7 @@
 CourtID: bva
 Court Short Name: BVA
 Author: Jon Andersen
-Reviewer:
+Reviewer: mlr
 Type: Nonprecedential
 History:
     2014-09-09: Created by Jon Andersen
@@ -22,7 +22,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
-        self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB='+'&DB='.join(
+        self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=' + '&DB='.join(
             [str(n) for n in range(datetime.today().year, 1997-1, -1)])
         self.my_case_dates = []
         self.my_case_names = []
@@ -32,7 +32,7 @@ class Site(OpinionSite):
 
         def pager(incr):
             startat = 1+incr
-            while (not self.pager_stop):
+            while not self.pager_stop:
                 yield startat
                 startat += incr
         self.back_scrape_iterable = pager(50)
@@ -42,15 +42,15 @@ class Site(OpinionSite):
         regex = re.compile('^Citation Nr: (.*) Decision Date: (.*) ' +
                            'Archive Date: (.*) DOCKET NO. ([-0-9 ]+)')
         for txt in self.html.xpath(path):
-            (citationnr, decisiondate,
-                archivedate, docketno) = regex.match(txt).group(1, 2, 3, 4)
-            case_name = docketno
+            (citation_number, decision_date,
+                archive_date, docket_number) = regex.match(txt).group(1, 2, 3, 4)
+            case_name = docket_number
             self.my_case_names.append(case_name)
-            self.my_docket_numbers.append(docketno)
-            self.my_neutral_citations.append(citationnr)
+            self.my_docket_numbers.append(docket_number)
+            self.my_neutral_citations.append(citation_number)
             self.my_case_dates.append(date.fromtimestamp(time.mktime(
-                time.strptime(decisiondate, '%m/%d/%y'))))
-        if (len(self.my_case_dates) == 0):
+                time.strptime(decision_date, '%m/%d/%y'))))
+        if len(self.my_case_dates) == 0:
             self.pager_stop = True
         return self.my_case_dates
 
@@ -72,6 +72,6 @@ class Site(OpinionSite):
 
     def _download_backwards(self, startat):
         burl = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (startat,)
-        self.url = burl+'&DB='+'&DB='.join([str(n)
-            for n in range(datetime.today().year, 1997-1, -1)])
+        self.url = burl+'&DB='+'&DB='.join([str(n) for n in
+                                            range(datetime.today().year, 1997-1, -1)])
         self.html = self._download()
