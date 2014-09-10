@@ -20,6 +20,11 @@ from juriscraper.opinions.united_states.state import massappct, pa
 import sys
 
 
+class SlownessException(Exception):
+    def __init__(self, message):
+        Exception.__init__(self, message)
+
+
 class DateParserTest(unittest.TestCase):
     def test_various_date_extractions(self):
         test_pairs = (
@@ -102,16 +107,17 @@ class ScraperExampleTest(unittest.TestCase):
                     site.parse()
                 t2 = time.time()
 
-                max_speed = 2
+                max_speed = 10
                 warn_speed = 1
                 speed = t2 - t1
                 if speed > max_speed:
-                    print ("\nThis scraper took {speed}s to test, which is "
-                           "more than the allowed speed of {max_speed}s. "
-                           "Please speed it up before checking in.".format(
-                               speed=speed,
-                               max_speed=max_speed,
-                           ))
+                    raise SlownessException(
+                        "This scraper took {speed}s to test, which is more "
+                        "than the allowed speed of {max_speed}s. "
+                        "Please speed it up for tests to pass.".format(
+                            speed=speed,
+                            max_speed=max_speed,
+                        ))
                 elif speed > warn_speed:
                     msg = ' - WARNING: SLOW SCRAPER'
                     num_warnings += 1
@@ -125,10 +131,10 @@ class ScraperExampleTest(unittest.TestCase):
         print ("\n{num_scrapers} scrapers tested successfully against "
                "{num_example_files} example files, with {num_warnings} "
                "speed warnings.".format(
-                   num_scrapers=num_scrapers,
-                   num_example_files=num_example_files,
-                   num_warnings=num_warnings,
-               ))
+            num_scrapers=num_scrapers,
+            num_example_files=num_example_files,
+            num_warnings=num_warnings,
+        ))
         if num_warnings:
             print ("\nAt least one speed warning was triggered during the "
                    "tests. If this is due to a slow scraper you wrote, we "
@@ -473,9 +479,9 @@ class ScraperSpotTest(unittest.TestCase):
                 outcome,
                 msg="Did not get expected result ({expectation}) when parsing "
                     "string in 'pa' test. Instead got: {outcome}".format(
-                        expectation=expectation,
-                        outcome=outcome,
-                    )
+                    expectation=expectation,
+                    outcome=outcome,
+                )
             )
 
 
