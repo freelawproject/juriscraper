@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/freelawproject/juriscraper.svg?branch=master)][12]
+
 What is This?
 =============
 Juriscraper is a scraper library started several years ago that is gathers 
@@ -70,7 +72,8 @@ strong in this area and a license is available to interested contributors.
 
 For scrapers to be merged:
 
- - `python tests/tests.py` must pass, listing the results for any new scrapers
+ - `python tests/tests.py` must pass, listing the results for any new scrapers. 
+   This will be run automatically by [Travis-CI][12]. 
  - a *_example* file must be included (this is needed for the tests to
    run your code -- see examples of these files next to any current scraper).
  - your code should be [PEP8][4] compliant with no major Pylint problems or
@@ -190,3 +193,4 @@ Juriscraper is licensed under the permissive BSD license.
 [9]: http://phantomjs.org/download.html
 [10]: https://github.com/freelawproject/juriscraper/blob/master/opinions/opinion_template.py
 [11]: https://github.com/freelawproject/juriscraper/blob/master/oral_args/oral_argument_template.py
+[12]: https://travis-ci.org/freelawproject/juriscraper

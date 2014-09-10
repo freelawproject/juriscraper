@@ -20,11 +20,6 @@ from juriscraper.opinions.united_states.state import massappct, pa
 import sys
 
 
-class SlownessException(Exception):
-    def __init__(self, message):
-        Exception.__init__(self, message)
-
-
 class DateParserTest(unittest.TestCase):
     def test_various_date_extractions(self):
         test_pairs = (
@@ -111,13 +106,12 @@ class ScraperExampleTest(unittest.TestCase):
                 warn_speed = 1
                 speed = t2 - t1
                 if speed > max_speed:
-                    raise SlownessException(
-                        "This scraper took {speed}s to test, which is more "
-                        "than the allowed speed of {max_speed}s. "
-                        "Please speed it up for tests to pass.".format(
-                            speed=speed,
-                            max_speed=max_speed,
-                        ))
+                    print ("\nThis scraper took {speed}s to test, which is "
+                           "more than the allowed speed of {max_speed}s. "
+                           "Please speed it up before checking in.".format(
+                               speed=speed,
+                               max_speed=max_speed,
+                           ))
                 elif speed > warn_speed:
                     msg = ' - WARNING: SLOW SCRAPER'
                     num_warnings += 1
