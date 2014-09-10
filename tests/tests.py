@@ -115,7 +115,9 @@ class ScraperExampleTest(unittest.TestCase):
                         "This scraper took {speed}s to test, which is more "
                         "than the allowed speed of {max_speed}s. "
                         "Please speed it up for tests to pass.".format(
-                            max_speed=max_speed))
+                            speed=speed,
+                            max_speed=max_speed,
+                        ))
                 elif speed > warn_speed:
                     msg = ' - WARNING: SLOW SCRAPER'
                     num_warnings += 1
