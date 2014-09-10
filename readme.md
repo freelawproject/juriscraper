@@ -33,7 +33,7 @@ Some of the design goals for this project are:
 Installation & Dependencies
 ===========================
     # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is named libxslt-devel
+    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
     sudo pip -r requirements.txt
     
     # Install PhantomJS
