@@ -1,4 +1,4 @@
-What is this?
+What is This?
 =============
 Juriscraper is a scraper library started several years ago that is gathers 
 judicial opinions and oral arguments in the American court system. It is 
@@ -30,25 +30,13 @@ Some of the design goals for this project are:
  - friendly as possible to court websites
 
 
-Installation & dependencies
+Installation & Dependencies
 ===========================
     # install the dependencies
-    sudo apt-get install python-pip  # If you don't have it already...
     sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is named libxslt-devel
-    sudo pip install chardet==1.0.1
-    sudo pip install requests==2.2.1
-    sudo pip install lxml==3.0.1
-    sudo pip install python-dateutil==1.5  # Newer have known incompatibilities with Python < 3
+    sudo pip -r requirements.txt
     
-    # Optionally, you may install cchardet for faster tests and better 
-    # performance. Note that unless you have an extremely fast CPU, this is 
-    # a requirement for tests to pass as they have speed requirements.
-    sudo pip install cchardet==0.3.5
-    
-    # Create a directory for logs
-    sudo mkdir /var/log/juriscraper/
-
-    # Install selenium and PhantomJS
+    # Install PhantomJS
     sudo pip install selenium
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
     tar -x -f phantomjs-1.9.7-linux-x86_64.tar.bz2
@@ -68,7 +56,7 @@ Installation & dependencies
     sudo mkdir -p /var/log/juriscraper
 
 
-Joining the project as a developer
+Joining the Project as a Developer
 ==================================
 We use a few tools pretty frequently while building these scrapers. The first is
 [a sister project called xpath-tester][3] that helps debug XPath queries.
