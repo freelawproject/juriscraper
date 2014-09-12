@@ -120,17 +120,8 @@ class AbstractSite(object):
         text = re.sub('</br>', '<br/>', text)
 
         # Fix invalid bytes (http://stackoverflow.com/questions/8733233/filtering-out-certain-bytes-in-python)
-        def valid_xml_char_ordinal(c):
-            code_point = ord(c)
-            # conditions ordered by presumed frequency
-            return (
-                0x20 <= code_point <= 0xD7FF or
-                code_point in (0x9, 0xA, 0xD) or
-                0xE000 <= code_point <= 0xFFFD or
-                0x10000 <= code_point <= 0x10FFFF
-            )
-
-        text = ''.join(c for c in text if valid_xml_char_ordinal(c))
+        # Regular expression is much faster than a Python function
+        text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD\u10000-\u10FFFF]+', '', text)
 
         return text
 

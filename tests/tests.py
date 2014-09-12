@@ -298,6 +298,10 @@ class StringUtilTest(unittest.TestCase):
              u'papusa'],
             ['CUSANO',
              u'CUSANO'],
+
+             # Filter out invalid XML characters
+             [u'Special Counsel ex rel. Karla Saunders',
+              u'Special Counsel ex rel. Karla Saunders'],
         ]
         for pair in test_pairs:
             self.assertEqual(harmonize(clean_string(pair[0])), pair[1])
