@@ -1,4 +1,5 @@
 __all__ = [
+    'afcca',
     'armfor',
     'cavc',
     'cit',
