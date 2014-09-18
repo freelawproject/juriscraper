@@ -6,7 +6,8 @@ Author: Andrei Chelaru
 Reviewer: mlr
 History:
  - 2014-07-12: Created.
- - 2014-08-05: Updated by mlr.
+ - 2014-08-05, mlr: Updated regex.
+ - 2014-09-18, mlr: Updated regex.
 """
 
 import re
@@ -21,7 +22,7 @@ class Site(OpinionSite):
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.grouping_regex = re.compile("(.*) \((SJC \d+(?:, \d+)?)\) \((.+)\)")
+        self.grouping_regex = re.compile("(.*) \((SJC \d+(?:, \d+)*)\) \((.+)\)")
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
 
     def _get_case_names(self):
