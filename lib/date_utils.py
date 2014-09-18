@@ -3,7 +3,8 @@ from math import ceil
 
 from dateutil.parser import _timelex, parser, parserinfo
 
-# We import the entire datetime library because otherwise we run into conflicts in our isinstance statements.
+# We import the entire datetime library because otherwise we run into
+# conflicts in our isinstance statements.
 import datetime
 
 MISSPELLINGS = {
@@ -16,7 +17,8 @@ MISSPELLINGS = {
 
 
 class BetterInfo(parserinfo):
-    """Removes tokens to provide better support for splitting out multiple dates.
+    """Removes tokens to provide better support for splitting out multiple
+    dates.
 
     By default, the JUMP variable is:
 
@@ -24,13 +26,15 @@ class BetterInfo(parserinfo):
                 "at", "on", "and", "ad", "m", "t", "of",
                 "st", "nd", "rd", "th"]
 
-    This assumes that a single date is being sent to timesplit, and that that date might contain tokens like "and", ";",
-    or "on". But when you're sending multiple dates, you are more likely to have something like this:
+    This assumes that a single date is being sent to timesplit, and that that
+    date might contain tokens like "and", ";", or "on". But when you're
+    sending multiple dates, you are more likely to have something like this:
 
         'February 5, 1980; March 14, 1980 and May 28, 1980.
 
-    This uses the semicolon and the word "and" to separate dates, so we need to allow them for splitting. This class
-    makes that possible by removing them from the JUMP variable.
+    This uses the semicolon and the word "and" to separate dates, so we need
+    to allow them for splitting. This class makes that possible by removing
+    them from the JUMP variable.
     """
     # m from a.m/p.m, t from ISO T separator
     JUMP = [" ", ".", ",", "-", "/", "'",
@@ -51,9 +55,9 @@ def timetoken(token):
         return True
     except ValueError:
         pass
-    return any(f(token) for f in (info.jump, info.weekday, info.month, info.hms,
-                                  info.ampm, info.pertain, info.utczone,
-                                  info.tzoffset))
+    return any(f(token) for f in (info.jump, info.weekday, info.month,
+                                  info.hms, info.ampm, info.pertain,
+                                  info.utczone, info.tzoffset))
 
 
 def timesplit(input_string):
@@ -71,16 +75,21 @@ def timesplit(input_string):
         yield " ".join(batch)
 
 
-def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1), sane_end=datetime.datetime(2050, 1, 1)):
+def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1),
+                sane_end=datetime.datetime(2050, 1, 1)):
     """Parse dates out of a string
 
-    Based on http://stackoverflow.com/questions/7028689/, this method is a wrapper for the above two functions. It
-    simply takes a string, splits it accordingly and then finds dates within it.
+    Based on http://stackoverflow.com/questions/7028689/, this method is a
+    wrapper for the above two functions. It simply takes a string, splits it
+    accordingly and then finds dates within it.
 
-    Since this parser will use the DEFAULT value to fill in missing pieces of "partial" dates, we use a year way in the
-    past and Christmas to eliminate false positives. So if the parser finds the value "June 9th," it'll convert this to
-    June 9th, 1600, and it'll get punted out. If it finds just a year, that'll get converted to Christmas, and likewise
-    be punted out. Note that this means dates in the year 1600 or on Christmas are never returned.
+    Since this parser will use the DEFAULT value to fill in missing pieces of
+    "partial" dates, we use a year way in the past and Christmas to eliminate
+    false positives. So if the parser finds the value "June 9th," it'll
+    convert this to June 9th, 1600, and it'll get punted out. If it finds just
+    a year, that'll get converted to Christmas, and likewise be punted out.
+    Note that this means dates in the year 1600 or on Christmas are never
+    returned.
 
     returns a list of dates
     """
@@ -90,7 +99,8 @@ def parse_dates(s, debug=False, sane_start=datetime.datetime(1750, 1, 1), sane_e
     if isinstance(sane_end, datetime.date):
         sane_end = datetime.datetime.combine(sane_end, datetime.time())
 
-    # Ditch unicode (_timelex() flips out on unicode if the system has cStringIO installed -- the default)
+    # Ditch unicode (_timelex() flips out on unicode if the system has
+    # cStringIO installed -- the default)
     if isinstance(s, unicode):
         s = s.encode('ascii', 'ignore')
 
