@@ -5,9 +5,10 @@ Court Short Name: flaapp5
 Author: Andrei Chelaru
 Reviewer: mlr
 History:
- - 23 July 2014: Created.
- - 05 August 2014: Updated by mlr.
- - 06 August 2014: Updated by mlr.
+ - 2014-07-23, Andrei Chelaru: Created.
+ - 2014-08-05, mlr: Updated.
+ - 2014-08-06, mlr: Updated.
+ - 2014-09-18, mlr: Updated date parsing code to handle Sept.
 """
 
 from datetime import date
@@ -106,8 +107,15 @@ class Site(OpinionSite):
         path = "//*[starts-with(., 'Opinions')]/text()"
         dates = []
         text = html_tree.xpath(path)[0]
-        text = re.search('.* Week of (.*)', text).group(1)
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
+        text = re.search('.* Week of (.*)', text).group(1).strip()
+        for date_fmt in ['%B %d, %Y', '%b. %d, %Y']:
+            text = re.sub('Sept', 'Sep', text)
+            try:
+                case_date = date.fromtimestamp(
+                    time.mktime(time.strptime(text, date_fmt)))
+                break
+            except ValueError:
+                continue
         dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))
         return dates
 
