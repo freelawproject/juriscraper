@@ -2,7 +2,7 @@
 CourtID: asbca
 Court Short Name: ASBCA
 Author: Jon Andersen
-Reviewer:
+Reviewer: mlr
 History:
     2014-09-11: Created by Jon Andersen
 """
@@ -18,9 +18,9 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' \
-            % datetime.today().year
+                   % datetime.today().year
         self.columns = None
-        self.back_scrape_iterable = range(2013, 2000-1, -1)
+        self.back_scrape_iterable = range(2013, 2000 - 1, -1)
 
     # Fix broken month names and funky whitespace usage.
     def _clean_text(self, text):
@@ -45,35 +45,34 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         self.parse_column_names()
         path = "//table/tr[td/a]/td[%d]/text()" \
-            % (self.columns['Decision Date'])
+               % (self.columns['Decision Date'])
         return [datetime.strptime(date_string.strip().replace(" ,", ", "),
-                '%B %d, %Y').date()
-                    for date_string in self.html.xpath(path)]
+                                  '%B %d, %Y').date()
+                for date_string in self.html.xpath(path)]
 
     def _get_case_names(self):
         path = "//table/tr/td/a[1]"
         case_names = ["".join(txt.itertext()).strip()
-            for txt in self.html.xpath(path)]
+                      for txt in self.html.xpath(path)]
         return case_names
 
     def _get_download_urls(self):
         path = "//table/tr/td/a[1]/@href"
-        return [txt.strip() for txt in self.html.xpath(path)]
+        return [href.strip() for href in self.html.xpath(path)]
 
     def _get_judges(self):
         path = "//table/tr[td/a]/td[%d]/text()" \
-            % (self.columns['Judge'],)
+               % (self.columns['Judge'],)
         return [txt.strip() for txt in self.html.xpath(path)]
 
-    def _get_neutral_citations(self):
+    def _get_docket_numbers(self):
         if ("ASBCA Number" not in self.columns):
             return None
-        path = "//table/tr[td/a]/td[%d]/text()" \
-            % (self.columns['ASBCA Number'],)
-        return [("ASBCA No. "+txt) for txt in self.html.xpath(path)]
+        path = "//table/tr[td/a]/td[%d]/text()" % self.columns['ASBCA Number']
+        return [("ASBCA No. " + txt) for txt in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
-        return ["Unknown"] * len(self.case_dates)
+        return ["Published"] * len(self.case_dates)
 
     def _download_backwards(self, year):
         self.url = 'http://www.asbca.mil/Decisions/decisions%d.html' % year
