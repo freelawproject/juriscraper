@@ -1,8 +1,10 @@
 """Scraper for South Carolina Supreme Court
 CourtID: sc
 Court Short Name: S.C.
-Author: TBM
-Date created: 04-18-2014
+Author: TBM <-- Who art thou TBM? ONLY MLR gets to be initials!
+History:
+ - 04-18-2014: Created.
+ - 09-18-2014: Updated by mlr.
 """
 
 import re
@@ -18,14 +20,15 @@ class Site(OpinionSite):
         self.court_id = self.__module__
         today = date.today()
         self.url = 'http://www.judicial.state.sc.us/opinions/indexSCPub.cfm?year=%s&month=%s' % (today.year, today.month)
+        print self.url
 
     def _get_download_urls(self):
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles")]/@href'
+        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/@href'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles")]/text()'
+        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/text()'
         for txt in self.html.xpath(path):
             expression = '(.* - )(.*)'
             case_name = re.search(expression, txt, re.MULTILINE).group(2)
@@ -59,11 +62,13 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles")]/text()'
+        path = '//div[@id="pageContentOpinionList"]//a[contains(@href, "HTMLFiles") or contains(@href, "courtOrders")]/text()'
         for txt in self.html.xpath(path):
             expression = '(.* - )(.*)'
             docket_number = re.search(expression, txt,
                                       re.MULTILINE).group(1)
+            if 'order' in docket_number.lower():
+                docket_number = ''
             docket_numbers.append(docket_number)
         return docket_numbers
 
