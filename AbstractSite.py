@@ -120,7 +120,6 @@ class AbstractSite(object):
         text = re.sub('</br>', '<br/>', text)
 
         # Fix invalid bytes (http://stackoverflow.com/questions/8733233/filtering-out-certain-bytes-in-python)
-        # Regular expression is much faster than a Python function
         text = re.sub(u'[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD\u10000-\u10FFFF]+', '', text)
 
         return text
