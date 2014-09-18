@@ -1,17 +1,19 @@
 """Scraper for Connecticut Supreme Court
 CourtID: conn
 Court Short Name: Conn.
-Author: Asadullah Baig<asadullahbeg@outlook.com>
+Author: Asadullah Baig <asadullahbeg@outlook.com>
 
 History:
  - 2014-07-11: created
- - 2014-08-08: updated by mlr to fix InsanityError on case_dates
+ - 2014-08-08, mlr: updated to fix InsanityError on case_dates
+ - 2014-09-18, mlr: updated XPath to fix InsanityError on docket_numbers
 """
+
+from datetime import date, datetime
+import re
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
-from datetime import date, datetime
-import re
 
 
 class Site(OpinionSite):
@@ -43,7 +45,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for d in self.html.xpath("//a[contains(./@href, '.pdf')]/text()"):
+        for d in self.html.xpath("//a[contains(./@href, '.pdf')]//text()"):
             if re.search(r"(A?S?C\d{3,5})", d):
                 docket_numbers.append(d)
         return docket_numbers
