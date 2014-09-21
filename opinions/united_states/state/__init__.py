@@ -62,6 +62,8 @@ __all__ = [
     'mdctspecapp',
     'me',
     'mich',
+    'michctapp_p',
+    'michctapp_u',
     'minn',
     'minnctapp_p',
     'minnctapp_u',
