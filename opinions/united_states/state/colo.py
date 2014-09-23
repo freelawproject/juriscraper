@@ -2,7 +2,7 @@
 """Scraper for Colorado Supreme Court
 CourtID: colo
 Court Short Name: Colo.
-Author: Asadullah Baig<asadullahbeg@outlook.com>
+Author: Asadullah Baig <asadullahbeg@outlook.com>
 Reviewer: mlr
 Date created: 2014-07-11
 """
