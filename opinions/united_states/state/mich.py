@@ -2,6 +2,7 @@
 CourtID: mich
 Court Short Name: Mich.
 History:
+ - 2014-09-21: Updated by Jon Andersen to handle some fields being missing
  - 2014-08-05: Updated to have a dynamic URL, an oversight during check in.
 """
 
@@ -16,9 +17,12 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.today = date.today()
         self.a_while_ago = date.today() - timedelta(days=30)
-        self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4'
-                   '&Status_Advanced=sct&FirstDate_Advanced={start_month}%2f{start_day}%2f{start_year}'
-                   '&LastDate_Advanced={end_month}%2f{end_day}%2f{end_year}'.format(
+        self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/'
+                    'Pages/default.aspx?SearchType=4'
+                    '&Status_Advanced=sct&FirstDate_Advanced='
+                    '{start_month}%2f{start_day}%2f{start_year}'
+                    '&LastDate_Advanced='
+                    '{end_month}%2f{end_day}%2f{end_year}'.format(
             start_day=self.a_while_ago.day,
             start_month=self.a_while_ago.month,
             start_year=self.a_while_ago.year,
@@ -61,28 +65,32 @@ class Site(OpinionSite):
 
     def _get_lower_courts(self):
         lower_courts = []
-        for s in self.html.xpath('//li[@class = "casedetailsleft"]//li[@class="lowerCourt"]/text()'):
+        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
             try:
-                lower_courts.append(titlecase(s.strip().split(' ', 2)[2]))
+                s = el.xpath('//li[@class="casedetailsleft"]'
+                             '//li[@class="lowerCourt"]/text()')
+                lower_courts.append(titlecase(s[0].strip().split(' ', 2)[2]))
             except IndexError:
                 lower_courts.append('')
         return lower_courts
 
     def _get_dispositions(self):
         disps = []
-        for s in self.html.xpath('//li[@class="caseNature"]/text()'):
+        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
             try:
-                disps.append(s.strip().split(' ', 2)[2])
+                s = el.xpath('//li[@class="caseNature"]/text()')
+                disps.append(s[0].strip().split(' ', 2)[2])
             except IndexError:
-                # Happens when it's blank.
                 disps.append('')
         return disps
 
     def _get_lower_court_numbers(self):
         nums = []
-        for s in self.html.xpath('//li[@class = "casedetailsright"]//li[@class = "lowerCourt"]/text()'):
+        for el in self.html.xpath('//ul[@class="odd" or @class="even"]'):
             try:
-                nums.append(s.strip().split('No. ')[1])
+                s = el.xpath('//li[@class = "casedetailsright"]'
+                             '//li[@class = "lowerCourt"]/text()')
+                nums.append(s[0].strip().split('No. ')[1])
             except IndexError:
                 nums.append('')
         return nums
