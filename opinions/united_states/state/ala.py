@@ -34,13 +34,12 @@ Courts. The person to call about it is Myra Sabel. She's very helpful and her
 number is 334-229-0580.
 
 """
-from juriscraper.DeferringList import DeferringList
 import os
 import re
-
-import requests
 from datetime import datetime
 
+from juriscraper.DeferringList import DeferringList
+import requests
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from selenium import webdriver
@@ -114,7 +113,7 @@ class Site(OpinionSite):
         into JavaScript functions, where are then executed to create the page.
 
         A couple other notes:
-         1. When developing, if you stop this after dirver.get(), you can get
+         1. When developing, if you stop this after driver.get(), you can get
             the content of the page by doing this:
               https://stackoverflow.com/questions/22739514
         """

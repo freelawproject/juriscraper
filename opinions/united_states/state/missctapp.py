@@ -2,19 +2,16 @@
 CourtID: missctapp
 Court Short Name: Miss. Ct. App.
 Author: Jon Andersen
-Reviewer:
+Reviewer: mlr
 Type: Precedential
 History:
     2014-09-21: Created by Jon Andersen
 """
 
-
-import time
 from datetime import date
-from lxml import html
 
-from juriscraper.OpinionSite import OpinionSite
-import miss
+from juriscraper.opinions.united_states.state import miss
+
 
 class Site(miss.Site):
     def __init__(self):

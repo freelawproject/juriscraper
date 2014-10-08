@@ -2,13 +2,15 @@
 CourtID: michctapp
 Court Short Name: Mich. Ct. App.
 Type: Published
+Reviewer: mlr
 History:
  - 2014-09-19: Created by Jon Andersen
 """
 
-from juriscraper.opinions.united_states.state import mich
 import time
 from datetime import date, timedelta
+
+from juriscraper.opinions.united_states.state import mich
 
 
 class Site(mich.Site):
@@ -31,9 +33,6 @@ class Site(mich.Site):
         ))
         self.back_scrape_iterable = range(0, 200)
         self.court_id = self.__module__
-
-    def _get_precedential_statuses(self):
-        return ['Published'] * len(self.case_names)
 
     def _download_backwards(self, page):
         self.url = "http://courts.mi.gov/opinions_orders/opinions_orders/Pages/default.aspx?SearchType=4&Status_Advanced=coapub&FirstDate_Advanced=1%2f1%2f1900&LastDate_Advanced=9%2f19%2f2014&PageIndex=" + str(page)

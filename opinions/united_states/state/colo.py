@@ -7,10 +7,11 @@ Reviewer: mlr
 Date created: 2014-07-11
 """
 
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
 import re
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.string_utils import clean_string
 from lxml import html
 
 

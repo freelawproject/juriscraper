@@ -2,13 +2,15 @@
 CourtID: michctapp
 Court Short Name: Mich. Ct. App.
 Type: Unpublished
+Reviewer: mlr
 History:
  - 2014-09-19: Created by Jon Andersen
 """
 
-from juriscraper.opinions.united_states.state import mich
 import time
 from datetime import date, timedelta
+
+from juriscraper.opinions.united_states.state import mich
 
 
 class Site(mich.Site):
