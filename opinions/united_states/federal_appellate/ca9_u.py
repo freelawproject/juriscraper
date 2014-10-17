@@ -3,14 +3,15 @@ History:
  - 2014-08-07: Fixed due to InsanityError on docketnumber
 """
 
-import ca9_p
 import time
 from datetime import date
 
+import ca9_p
+
 
 class Site(ca9_p.Site):
-    '''The unpublished cases have one more column than the published. Thus some
-    overriding is done here. More than usual, but it's very slight tweaks.'''
+    """The unpublished cases have one more column than the published. Thus some
+    overriding is done here. More than usual, but it's very slight tweaks."""
     def __init__(self):
         super(Site, self).__init__()
         self.url = "http://www.ca9.uscourts.gov/memoranda/?o_mode=view&amp;o_sort_field=21&amp;o_sort_type=DESC&o_page_size=100"
