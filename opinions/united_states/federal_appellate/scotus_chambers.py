@@ -1,7 +1,10 @@
-from lxml import html
-import scotus_slip
 import time
 from datetime import date
+
+from lxml import html
+
+import scotus_slip
+
 
 class Site(scotus_slip.Site):
     # Note that scotus_relating inherits from this class.
@@ -12,8 +15,9 @@ class Site(scotus_slip.Site):
 
     def _get_case_dates(self):
         path = '//div[@id = "mainbody"]//table/tr/td[1]/text()'
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y')))
-                                                                for date_string in self.html.xpath(path)]
+        return [date.fromtimestamp(time.mktime(
+            time.strptime(date_string, '%m/%d/%y'))) for date_string in
+            self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         docket_numbers = []
