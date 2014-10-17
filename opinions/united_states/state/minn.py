@@ -5,11 +5,12 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
-from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
-from juriscraper.OpinionSite import OpinionSite
 import time
 import re
 from datetime import date
+
+from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
+from juriscraper.OpinionSite import OpinionSite
 from lxml import html
 from requests.exceptions import HTTPError
 
@@ -26,9 +27,9 @@ class Site(OpinionSite):
         # self.url = 'http://mn.gov/lawlib/archive/sct14q3.html'
 
     def _download(self, request_dict={}):
-        """Overrides the download function so that we can catch 404 errors silently.
-        This is necessary because these web pages simply do not exist for several days
-        at the beginning of each quarter.
+        """Overrides the download function so that we can catch 404 errors
+        silently. This is necessary because these web pages simply do not exist
+        for several days at the beginning of each quarter.
         """
         try:
             return super(Site, self)._download()
@@ -46,12 +47,14 @@ class Site(OpinionSite):
                 raise e
 
     def _get_case_names(self):
-        path = ("//ul//li/text()[not(contains(., 'ORDERS ON PETITIONS FOR FURTHER REVIEW')"
-                " or contains(., 'NO OPINIONS FILED'))]")
+        path = '''//ul//li[not(contains(text(), 'ORDER') or
+                               contains(text(), 'NO OPINIONS'))]/text()'''
+
         return list(self.html.xpath(path))
 
     def _get_download_urls(self):
-        path = '''//ul//li//@href[contains(.,'ORA') or contains(.,'OPA')]'''
+        path = '''//ul//li[not(contains(text(), 'ORDER') or
+                               contains(text(), 'NO OPINIONS'))]//@href'''
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
@@ -61,13 +64,19 @@ class Site(OpinionSite):
         case_dates = []
         for index, date_element in enumerate(dates):
             if index < last_date_index:
-                path_2 = "//h4[{c}]/following-sibling::li/text()[count(.|//h4[{n}]/preceding-sibling::li/text())" \
-                         "=count(//h4[{n}]/preceding-sibling::li/text()) and not(contains(., 'NO OPINIONS FILED') " \
-                         "or contains(., 'ORDERS ON PETITIONS FOR FURTHER REVIEW FILED'))]".format(c=index + 1,
-                                                                                                   n=index + 2)
+                path_2 = ("//h4[{c}]/following-sibling::li/text()[count("
+                          "  .|//h4[{n}]/preceding-sibling::li/text())="
+                          "count("
+                          "    //h4[{n}]/preceding-sibling::li/text()"
+                          ") and not("
+                          "    contains(., 'ORDER') or"
+                          "    contains(., 'NO OPINIONS')"
+                          ")]".format(c=index + 1,
+                                      n=index + 2))
             else:
-                path_2 = "//h4[{c}]/following-sibling::li/text()[not(contains(., 'NO OPINIONS FILED') " \
-                         "or contains(., 'ORDERS ON PETITIONS FOR FURTHER REVIEW FILED'))]".format(c=index + 1)
+                path_2 = ("//h4[{c}]/following-sibling::li/text()[not("
+                          "  contains(., 'ORDER') or"
+                          "  contains(., 'NO OPINIONS'))]").format(c=index + 1)
             d = date.fromtimestamp(time.mktime(time.strptime(re.sub(' ', '', str(date_element)), '%B%d,%Y')))
             case_dates.extend([d] * len(self.html.xpath(path_2)))
         return case_dates
@@ -76,5 +85,6 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//ul//li/a/text()[not(contains(., 'List'))]'''
+        path = '''//ul//li[not(contains(text(), 'ORDER') or
+                               contains(text(), 'NO OPINIONS'))]/a/text()'''
         return list(self.html.xpath(path))
