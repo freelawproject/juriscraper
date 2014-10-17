@@ -2,12 +2,13 @@ from datetime import date
 import hashlib
 import logging.handlers
 import re
-import requests
+from urlparse import urlsplit, urlunsplit, urljoin
 
+import requests
 from lxml import html
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
-from urlparse import urlsplit, urlunsplit, urljoin
+
 try:
     # Use cchardet for performance to detect the character encoding.
     import cchardet as chardet
@@ -148,9 +149,10 @@ class AbstractSite(object):
     def _check_sanity(self):
         """Check that the objects attributes make sense:
             1. Do all the attributes have the same length?
-            2. Do we have any content at all?
-            3. Is there a bare minimum of meta data?
-            4. Are the dates datetime objects, not strings?
+            1. Do we have any content at all?
+            1. Is there a bare minimum of meta data?
+            1. Are the dates datetime objects, not strings?
+            1. Are any dates from the 22nd century? (01-01-2104)
             5. Are case_names more than just empty whitespace?
             6. ?
 
@@ -188,6 +190,9 @@ class AbstractSite(object):
             if not isinstance(d, date):
                 raise InsanityException('%s: member of case_dates list not a valid date object. '
                                         'Instead it is: %s with value: %s' % (self.court_id, type(d), d))
+            if d.year > 2100:
+                raise InsanityException('%s: member of case_dates list is from the 22nd century. '
+                                        'with value %s' % (self.court_id, d.year))
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 
