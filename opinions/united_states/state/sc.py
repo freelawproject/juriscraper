@@ -5,6 +5,7 @@ Author: TBM <-- Who art thou TBM? ONLY MLR gets to be initials!
 History:
  - 04-18-2014: Created.
  - 09-18-2014: Updated by mlr.
+ - 10-17-2014: Updated by mlr to fix InsanityError
 """
 
 import re
@@ -70,7 +71,3 @@ class Site(OpinionSite):
                 docket_number = ''
             docket_numbers.append(docket_number)
         return docket_numbers
-
-    def _get_summaries(self):
-        path = '//div[@id="pageContentOpinionList"]/blockquote/text()'
-        return list(self.html.xpath(path))
