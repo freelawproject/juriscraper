@@ -7,11 +7,11 @@
 
 
 import os
+from datetime import date
+
 import requests
-from datetime import date, timedelta
 from lxml import html
 from selenium import webdriver
-
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
