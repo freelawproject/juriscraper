@@ -7,6 +7,7 @@ import logging
 import os
 import time
 import unittest
+import sys
 
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, \
@@ -16,8 +17,7 @@ from juriscraper.lib.string_utils import fix_camel_case
 from juriscraper.lib.string_utils import force_unicode
 from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
-from juriscraper.opinions.united_states.state import massappct, pa, mass
-import sys
+from juriscraper.opinions.united_states.state import massappct, pa, mass, nh
 
 
 class SlownessException(Exception):
@@ -509,6 +509,34 @@ class ScraperSpotTest(unittest.TestCase):
                     outcome=outcome,
                 )
             )
+
+    def test_nh(self):
+        """Ensures regex parses what we think it should."""
+        string_pairs = (
+            ('2012-644, State of New Hampshire v. Adam Mueller',
+             'State of New Hampshire v. Adam Mueller',),
+            ('2012-920, In re Trevor G.',
+             'In re Trevor G.',),
+            ('2012-313, State of New Hampshire v. John A. Smith',
+             'State of New Hampshire v. John A. Smith',),
+            ('2012-729, Appeal of the Local Government Center, Inc. & a . ',
+             'Appeal of the Local Government Center, Inc. & a .',),
+            ('2013-0343  In the Matter of Susan Spenard and David Spenard',
+             'In the Matter of Susan Spenard and David Spenard',),
+        )
+        regex = nh.Site().case_name_regex
+        for test, result in string_pairs:
+            try:
+                case_name = regex.search(test).group(2).strip()
+                self.assertEqual(
+                    case_name,
+                    result,
+                    msg="Did not get expected results when regex'ing: '%s'.\n"
+                        "  Expected: '%s'\n"
+                        "  Instead:  '%s'" % (test, result, case_name)
+                )
+            except AttributeError:
+                self.fail("Unable to parse nh string: '{s}'".format(s=test))
 
 
 if __name__ == '__main__':
