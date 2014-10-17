@@ -11,13 +11,13 @@ class Site(scotus_slip.Site):
         self.court_id = self.__module__
 
     def _get_case_dates(self):
-        path = '//div[@id = "maincolumn"]//table/tr/td[1]/text()'
+        path = '//div[@id = "mainbody"]//table/tr/td[1]/text()'
         return [date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y')))
                                                                 for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//div[@id = "maincolumn"]//table/tr/td[2]'):
+        for e in self.html.xpath('//div[@id = "mainbody"]//table/tr/td[2]'):
             s = html.tostring(e, method='text', encoding='unicode')
             docket_numbers.append(s)
 
