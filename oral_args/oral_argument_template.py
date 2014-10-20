@@ -3,14 +3,14 @@ CourtID: [unique abbreviation to be used by software/filesystem]
 Court Short Name: [standard abbreviation used in citations]
 Author:
 Reviewer:
-Date created:
+History:
+  YYYY-MM-DD: Created by XXX
 """
 
 # import re
-from datetime import date
 from datetime import datetime
-from lxml import html
 
+from lxml import html
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import titlecase
 
