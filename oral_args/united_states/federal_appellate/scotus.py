@@ -16,9 +16,10 @@ class Site(OralArgumentSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www.supremecourt.gov/oral_arguments/argument_audio.aspx'
+        self.back_scrape_iterable = range(2010, 2015)
 
     def _get_download_urls(self):
-        path = "id('maincontentbox')//tr//a/text()"
+        path = "id('mainbody')//tr//a/text()"
         return map(self._return_download_url, self.html.xpath(path))
 
     @staticmethod
@@ -31,13 +32,18 @@ class Site(OralArgumentSite):
         return download_url
 
     def _get_case_names(self):
-        path = "id('maincontentbox')//tr//a/text()/ancestor::tr[1]/td[1]/text()[2]"
+        path = "id('mainbody')//tr/td/span/text()"
         return [s.lstrip('. ') for s in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        path = "id('maincontentbox')//tr//a/text()/ancestor::tr[1]/td[2]/text()"
-        return [datetime.strptime(s, '%m/%d/%y').date() for s in self.html.xpath(path)]
+        path = "id('mainbody')//tr/td[2]//text()"
+        return [datetime.strptime(s, '%m/%d/%y').date() for s in
+                self.html.xpath(path) if not 'Date' in s]
 
     def _get_docket_numbers(self):
-        path = "id('maincontentbox')//tr//a/text()"
+        path = "id('mainbody')//tr//a/text()"
         return list(self.html.xpath(path))
+
+    def _download_backwards(self, year):
+        self.url = 'http://www.supremecourt.gov/oral_arguments/argument_audio/%s' % year
+        self.html = self._download()
