@@ -75,31 +75,31 @@ class Site(OralArgumentSite):
         are posted.
         """
         def fetcher(seed_url):
-            """Goes to second page, grabs the link and returns it."""
-            r = requests.get(
-                seed_url,
-                allow_redirects=False,
-                headers={'User-Agent': 'Juriscraper'}
-            )
-            r.raise_for_status()
-            html_tree = html.fromstring(r.text)
-            html_tree.make_links_absolute(self.url)
+            if self.method == 'LOCAL':
+                return "No case names fetched during tests."
+            else:
+                """Goes to second page, grabs the link and returns it."""
+                r = requests.get(
+                    seed_url,
+                    allow_redirects=False,
+                    headers={'User-Agent': 'Juriscraper'}
+                )
+                r.raise_for_status()
+                html_tree = html.fromstring(r.text)
+                html_tree.make_links_absolute(self.url)
 
-            path_to_audio_file = "//*[@class='padboxauto_MediaContent']//a/@href"
-            try:
-                url = html_tree.xpath(path_to_audio_file)[0]
-            except IndexError:
-                # The URL wasn't found, so something is wrong and we'll have to
-                # fix it in the _post_parse() method.
-                url = ''
-            return url
+                path_to_audio_file = "//*[@class='padboxauto_MediaContent']//a/@href"
+                try:
+                    url = html_tree.xpath(path_to_audio_file)[0]
+                except IndexError:
+                    # The URL wasn't found, so something is wrong and we'll have to
+                    # fix it in the _post_parse() method.
+                    url = ''
+                return url
 
         path = "//tr[@class='dg_tr']/td[6]//@href"
         seed_urls = self.html.xpath(path)
-        if seed_urls and self.method != 'LOCAL':
-            return DeferringList(seed=seed_urls, fetcher=fetcher)
-        else:
-            return None
+        return DeferringList(seed=seed_urls, fetcher=fetcher)
 
     def _get_download_urls_orig(self):
         """Note that the links from the root page go to a second page, where
