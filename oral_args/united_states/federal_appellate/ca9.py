@@ -6,7 +6,7 @@ Reviewer: mlr
 Date created: 20 July 2014
 """
 
-from datetime import date
+from datetime import date, datetime
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 from juriscraper.lib.string_utils import titlecase
@@ -16,8 +16,8 @@ class Site(OralArgumentSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.case_date = date.today()
-        #self.case_date = date(month=7, day=18, year=2014)
+        # self.case_date = date.today()
+        # self.case_date = date(month=7, day=18, year=2014)
         self.url = 'http://www.ca9.uscourts.gov/media/'
         self.parameters = {
             'c_page_size': '100',
@@ -36,7 +36,7 @@ class Site(OralArgumentSite):
             'c__ff_cms_media_hearing_loc_operator': 'like',
             'c__ff_cms_media_hearing_loc': '',
             'c__ff_cms_media_hearing_date_mod_operator': 'like',
-            'c__ff_cms_media_hearing_date_mod': '{date}'.format(date=self.case_date.strftime('%m/%d/%Y')),
+            'c__ff_cms_media_hearing_date_mod': '', #'{date}'.format(date=self.case_date.strftime('%m/%d/%Y')),
             'c__ff_selSearchType': '0',
             'c__ff_onSUBMIT_FILTER': 'Search',
         }
@@ -44,13 +44,16 @@ class Site(OralArgumentSite):
 
     def _get_download_urls(self):
         """Note that the links from the root page go to a second page, where the real links are posted."""
-        path = "//*[contains(concat(' ',@id,' '),' case_num')]/text()"
+        path = "//*[contains(concat(' ',@id,' '),' case_num')]"
         return map(self._return_download_url, self.html.xpath(path))
 
     def _return_download_url(self, e):
-        link = "http://cdn.ca9.uscourts.gov/datastore/media/{date}/{docket_nr}.wma".format(
-            date=self.case_date.strftime('%Y/%m/%d'),
-            docket_nr=e
+        docket = e.xpath('text()')[0]
+        date = e.xpath("following::label[contains(concat(' ',@id,' '),' mod_hearing_date')]/text()")[0]
+        month, day, year = date.split('/')
+        link = "http://cdn.ca9.uscourts.gov/datastore/media/{y}/{m}/{d}/{docket_nr}.wma".format(
+            y=year, m=month, d=day,
+            docket_nr=docket
         )
         return link
 
@@ -60,7 +63,8 @@ class Site(OralArgumentSite):
 
     def _get_case_dates(self):
         path = "//*[contains(concat(' ',@id,' '),' mod_hearing_date')]/text()"
-        return [self.case_date] * len(self.html.xpath(path))
+        return [datetime.strptime(s.strip(), '%m/%d/%Y').date() for s in self.html.xpath(path)]
+        # return [self.case_date] * len(self.html.xpath(path))
 
     def _get_judges(self):
         path = "//*[contains(concat(' ',@id,' '),' case_panel')]/text()"
