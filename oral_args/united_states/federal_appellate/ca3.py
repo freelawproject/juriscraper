@@ -17,6 +17,7 @@ class Site(OralArgumentSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://www2.ca3.uscourts.gov/oralargument/OralArguments.xml'
+        self.regex = '(\d{2}-\d{3,4})?(.+)\.(:?(wma)|(mp3))'
 
     def _get_download_urls(self):
         path = '//item/link'
@@ -30,7 +31,7 @@ class Site(OralArgumentSite):
         path = '//item/title/text()'
         case_names = []
         for s in self.html.xpath(path):
-            case_name = re.search('(\d{2}-\d{3,4})?(.+).wma', s).group(2)
+            case_name = re.search(self.regex, s).group(2)
             case_names.append(fix_camel_case(case_name))
         return case_names
 
@@ -46,9 +47,8 @@ class Site(OralArgumentSite):
         path = '//item/title/text()'
         return map(self._return_docket_number, self.html.xpath(path))
 
-    @staticmethod
-    def _return_docket_number(e):
-        case_name = re.search('(\d{2}.*\d{3,4})?(.+).wma', e)
+    def _return_docket_number(self, e):
+        case_name = re.search(self.regex, e)
         docket_number = case_name.group(1)
         if docket_number:
             # Surround ampersands with spaces and remove dup spaces if created
