@@ -20,6 +20,9 @@ class Site(OralArgumentSite):
         self.url = 'http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}'.format(
             yearmo=d.strftime('%Y%m')
         )
+        self.back_scrape_iterable = ["%s%02d" % (year, month) for year in
+                                     range(2007, d.year + 1) for month in
+                                     range(1, 13)]
 
     def _get_download_urls(self):
         path = "id('ViewBody')//div[contains(concat(' ',@class,' '),' row-entry')]//@href"
@@ -45,3 +48,11 @@ class Site(OralArgumentSite):
     def _get_judges(self):
         path = '//div[span[contains(., "Judges")]]/text()'
         return [' '.join(s.split()) for s in self.html.xpath(path)]
+
+    def _download_backwards(self, yearmo):
+        self.url = 'http://www.cadc.uscourts.gov/recordings/recordings.nsf/DocsByRDate?OpenView&count=100&SKey={yearmo}'.format(
+            yearmo=yearmo,
+        )
+        self.html = self._download()
+
+
