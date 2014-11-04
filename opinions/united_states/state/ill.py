@@ -2,11 +2,10 @@
 # Date created:2013-08-16
 # Reviewer: Mike Lissner
 
-import requests
-
 from datetime import datetime
-from lxml import html
 
+import requests
+from lxml import html
 from juriscraper.lib.html_utils import get_clean_body_content
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.DeferringList import DeferringList
@@ -61,12 +60,13 @@ class Site(OpinionSite):
 
     def _get_summaries(self):
         def fetcher(url):
-            r = requests.get(url,
-                             allow_redirects=False,
-                             headers={'User-Agent': 'Juriscraper'})
+            r = requests.get(
+                url,
+                allow_redirects=False,
+                headers={'User-Agent': 'Juriscraper'}
+            )
             # Throw an error if a bad status code is returned.
             r.raise_for_status()
-
             html_tree = html.fromstring(r.text)
             html_tree.make_links_absolute(self.url)
 
