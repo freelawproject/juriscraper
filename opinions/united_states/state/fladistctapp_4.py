@@ -3,15 +3,17 @@
 # Court Short Name: flaapp4
 # Author: Andrei Chelaru
 # Reviewer: mlr
-# Date created: 22 July 2014
+# History:
+# - 22 July 2014: Created by Andrei Chelaru
+# - 17 Oct. 2013: Added support for days with "Special Issuances"
 
 
 from datetime import date
 import re
 import time
+
 import requests
 from lxml import html
-
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -78,9 +80,14 @@ class Site(OpinionSite):
         return case_dates
 
     def _return_dates(self, html_tree):
-        path = "//*[starts-with(., 'OPINIONS RELEASED')]/text()"
+        path = "//*[starts-with(., 'OPINIONS RELEASED') or " \
+               "    starts-with(normalize-space(.), 'SPECIAL ISSUANCE')]"
         dates = []
-        text = html_tree.xpath(path)[0]
+        text = html.tostring(
+            html_tree.xpath(path)[0],
+            method='text',
+            encoding='utf-8'
+        )
         text = re.search('(\d{1,2}-\d{1,2}-\d{2})', text).group(1)
         case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%m-%d-%y')))
         dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))

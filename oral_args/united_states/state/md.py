@@ -1,13 +1,31 @@
 """Scraper for Maryland Supreme Court Oral Argument Audio
+
+This scraper has an interesting history. It was briefly running on the live
+site, but we realized shortly after starting it that the scraper was
+downloading video, not audio!
+
+Seeing that we weren't ready for video, we disabled this scraper and deleted
+any traces of it on the server.
+
+One interesting lesson though was that the OA system didn't crumble or budge
+when this was running. The video converted to mp3 just fine (each item took a
+few hours) and we began hosting it like nothing was different. Go figure.
+
+Your humble editor,
+
+Mike
+
+
 CourtID: md
 Court Short Name: Md.
 Author: Brian W. Carver
-Date created: 2014-10-17
+Reviewer: mlr
+History:
+  2014-10-17: Created by Brian Carver
+  2014-10-20: Some tweaks by mlr
 """
 
-from datetime import date
 from datetime import datetime
-from lxml import html
 
 from juriscraper.OralArgumentSite import OralArgumentSite
 
@@ -19,7 +37,6 @@ class Site(OralArgumentSite):
         self.url = 'http://www.courts.state.md.us/coappeals/webcasts/webcastarchive.html'
 
     def _get_download_urls(self):
-        # This excludes the recordings of "Bar Admissions" which aren't cases.
         path = "//table//tr/td[2]/strong/a/@href[not(contains(., 'baradmissions'))]"
         # This works because they usually link on docket number, but there's
         # one page where the audio must have been long and they link instead
@@ -27,24 +44,15 @@ class Site(OralArgumentSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        # We have to exclude the Bar Admissions lines.
         dates = []
-        rowpath = '//table/tr'
-        urlpath = './td[2]/strong/a/@href'
-        datepath = './td[1]/text()'
-        for row in self.html.xpath(rowpath):
-            urls = row.xpath(urlpath)
-            for url in urls:
-                if 'baradmissions' in url:
+        path = "//table/tr[not(contains(.//@href, 'baradmission'))]/td[1]/text()"
+        for s in self.html.xpath(path):
+            for date_format in ('%m-%d-%Y', '%m-%d-%y'):
+                try:
+                    d = datetime.strptime(s, date_format).date()
+                except ValueError:
                     continue
-                else:
-                    # The site is not consistent re date formats. We try a few:
-                    for date_string in row.xpath(datepath):
-                        try:
-                            date_obj = datetime.strptime(date_string, '%m-%d-%Y').date()
-                        except ValueError:
-                            date_obj = datetime.strptime(date_string, '%m-%d-%y').date()
-                        dates.append(date_obj)
+                dates.append(d)
         return dates
 
     def _get_case_names(self):
@@ -52,10 +60,7 @@ class Site(OralArgumentSite):
         path = '//table//tr/td[2]/strong/a/../../following-sibling::td/strong/text()'
         cases = []
         for case in self.html.xpath(path):
-            # Many results contain only a newline and must be discarded
-            if case.strip() is '':
-                continue
-            else:
+            if case.strip():
                 cases.append(case)
         return cases
 

@@ -46,8 +46,10 @@ class Site(OpinionSite):
         self.parse_column_names()
         path = "//table/tr[td/a]/td[%d]/text()" \
                % (self.columns['Decision Date'])
-        return [datetime.strptime(date_string.strip().replace(" ,", ", "),
-                                  '%B %d, %Y').date()
+
+        def sanitize_date(s):
+            return s.strip().replace(' ,', ', ').replace('2104', '2014')
+        return [datetime.strptime(sanitize_date(date_string), '%B %d, %Y').date()
                 for date_string in self.html.xpath(path)]
 
     def _get_case_names(self):

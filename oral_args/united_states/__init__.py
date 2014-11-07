@@ -1,2 +1,4 @@
-__all__ = ['federal_appellate',
-           'state']
+__all__ = [
+    'federal_appellate',
+    'state',
+]

@@ -7,11 +7,9 @@ History:
   YYYY-MM-DD: Created by XXX
 """
 
-import re
-from datetime import date
 from datetime import datetime
-from lxml import html
 
+from lxml import html
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
@@ -26,7 +24,7 @@ class Site(OpinionSite):
 
         # if a POST, use these two attributes, otherwise, delete them.
         self.parameters = {}
-        self.method = POST
+        self.method = 'POST'
 
 
     '''

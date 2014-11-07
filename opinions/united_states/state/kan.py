@@ -8,10 +8,10 @@
 
 from datetime import date
 import time
-from lxml import etree, html
-import requests
 import re
 
+from lxml import etree, html
+import requests
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import logger
 
@@ -97,7 +97,12 @@ class Site(OpinionSite):
         path = "//*[starts-with(., 'Kansas')][contains(., 'Released')]/text()[2]"
         text = html_tree.xpath(path)[0]
         text = re.sub('Opinions Released', '', text)
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
+        for date_format in ('%B %d, %Y', '%B %d. %Y'):
+            try:
+                case_date = date.fromtimestamp(
+                    time.mktime(time.strptime(text.strip(), date_format)))
+            except ValueError:
+                continue
         return [case_date] * int(html_tree.xpath("count(//a[contains(./@href, '.pdf')])"))
 
     def _get_precedential_statuses(self):
