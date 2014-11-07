@@ -7,6 +7,7 @@ import urllib2
 from lib.importer import build_module_list, site_yielder
 
 
+
 # for use in catching the SIGINT (Ctrl+4)
 from lib.string_utils import trunc
 
@@ -70,7 +71,7 @@ def scrape_court(site, binaries=False):
             if getattr(site, attr) is not None:
                 value = getattr(site, attr)[i]
                 if type(value) == unicode:
-                    value = trunc(value, 200, elipsize=True)
+                    value = trunc(value, 200, ellipsis='...')
                     v_print(1, '    %s: "%s"' % (attr, value.encode('utf-8')))
                 else:
                     # Dates and such...
