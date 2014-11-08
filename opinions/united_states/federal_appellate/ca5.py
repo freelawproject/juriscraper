@@ -1,36 +1,47 @@
+# History:
+# - Long ago: Created by mlr
+# - 2014-11-07: Updated by mlr to use new website.
+
+from datetime import datetime
+
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
+
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.ca5.uscourts.gov/Opinions.aspx?View=Last7'
+        self.url = 'http://www.ca5.uscourts.gov/rss.aspx?Feed=Opinions&Which=All&Style=Detail'
         self.court_id = self.__module__
 
-
     def _get_case_names(self):
-        return [e for e in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[3]//text()')]
+        path = '//item/description/text()[2]'
+        return [s for s in self.html.xpath(path)]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[1]//a/@href')]
+        path = '//item/link'
+        return [e.tail for e in self.html.xpath(path)]
 
     def _get_case_dates(self):
-        dates = []
-        for date_string in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[2]//text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%Y'))))
-        return dates
+        path = '//item/description/text()[5]'
+        return [datetime.strptime(date_string, '%m/%d/%Y').date()
+                for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        return [e for e in self.html.xpath('//table[@id = "tblPublished" or @id = "tblUnpublished"]//tr[position() > 1]/td[1]//a/text()')]
+        path = '//item/description/text()[1]'
+        return [s for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
+        path = '//item/description/text()[3]'
         statuses = []
-        for link in self.download_urls:
-            if "unpub" in link:
-                statuses.append("Unpublished")
-            elif "pub" in link:
-                statuses.append("Published")
+        for status in self.html.xpath(path):
+            if status == 'pub':
+                statuses.append('Published')
+            elif status == 'unpub':
+                statuses.append('Unpublished')
             else:
-                statuses.append("Unknown")
+                statuses.append('Unknown')
         return statuses
+
+    def _get_nature_of_suit(self):
+        path = '//item/description/text()[4]'
+        return [s for s in self.html.xpath(path)]
