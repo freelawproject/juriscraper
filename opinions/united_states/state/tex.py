@@ -1,9 +1,11 @@
 # Scraper for Texas Supreme Court
 # CourtID: tex
-#Court Short Name: TX
-#Author: Andrei Chelaru
-#Reviewer: mlr
-#Date: 2014-07-10
+# Court Short Name: TX
+# Author: Andrei Chelaru
+# Reviewer: mlr
+# History:
+#  - 2014-07-10: Created by Andrei Chelaru
+#  - 2014-11-07: Updated by mlr to account for new website.
 
 
 import os
@@ -44,16 +46,25 @@ class Site(OpinionSite):
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
             )
+            driver.set_window_size(1920, 1080)
             driver.get(self.url)
+
+            # Get a screenshot in testing
+            # driver.save_screenshot('out.png')
 
             # Set the cookie
             self._cookies = driver.get_cookies()
 
             driver.implicitly_wait(10)
-            search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
-                court_nr=self.courts[self.court_name])
-            )
-            search_court_type.click()
+            if self.court_name == 'sc':
+                # Supreme Court is checked by default, so we don't want to
+                # check it again.
+                pass
+            else:
+                search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
+                    court_nr=self.courts[self.court_name])
+                )
+                search_court_type.click()
 
             search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
             search_opinions.click()
@@ -122,15 +133,19 @@ class Site(OpinionSite):
             else:
                 r = requests.get(
                     url,
-                    allow_redirects=False,
+                    allow_redirects=True,
                     headers={'User-Agent': 'Juriscraper'},
                 )
                 r.raise_for_status()
 
                 html_tree = html.fromstring(r.text)
                 html_tree.make_links_absolute(self.url)
-                plaintiff = html_tree.xpath("//text()[contains(., 'Style')]/ancestor::tr[1]/td[2]/text()")[0]
-                defendant = html_tree.xpath("//text()[contains(., 'v.:')]/ancestor::tr[1]/td[2]/text()")[0]
+                plaintiff = html_tree.xpath(
+                    "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                )[0]
+                defendant = html_tree.xpath(
+                    "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                )[0]
 
                 if defendant.strip():
                     # If there's a defendant
