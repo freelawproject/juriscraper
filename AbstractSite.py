@@ -9,6 +9,7 @@ from lxml import html
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
 
+
 try:
     # Use cchardet for performance to detect the character encoding.
     import cchardet as chardet
@@ -250,7 +251,7 @@ class AbstractSite(object):
         if self.method == 'POST':
             truncated_params = {}
             for k, v in self.parameters.iteritems():
-                truncated_params[k] = trunc(v, 50, elipsize=True, elipsis='...[truncated]')
+                truncated_params[k] = trunc(v, 50, ellipsis='...[truncated]')
             logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
         else:
             logger.info("Now downloading case page at: %s" % self.url)
