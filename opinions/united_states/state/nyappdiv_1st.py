@@ -5,11 +5,11 @@
 #Reviewer: mlr
 #Date: 2014-07-04
 
-from juriscraper.opinions.united_states.state import ny
-
 import re
 import time
 from datetime import date
+
+from juriscraper.opinions.united_states.state import ny
 
 
 class Site(ny.Site):
@@ -26,11 +26,11 @@ class Site(ny.Site):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        path = '''//tr//a[contains(./@href, '3d')]/text()'''
+        path = '''//tr[td[4]]//a[contains(./@href, '3d')]/text()'''
         return self.html.xpath(path)
 
     def _get_download_urls(self):
-        path = '''//tr//a/@href[contains(., '3d')]'''
+        path = '''//tr[td[4]]//a/@href[contains(., '3d')]'''
         return self.html.xpath(path)
 
     def _get_case_dates(self):
