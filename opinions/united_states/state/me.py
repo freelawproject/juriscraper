@@ -9,8 +9,8 @@ Date created: June 20, 2014
 """
 
 from datetime import datetime
-from lxml import html
 
+from lxml import html
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -21,24 +21,24 @@ class Site(OpinionSite):
         self.url = 'http://www.courts.maine.gov/opinions_orders/supreme/publishedopinions.shtml'
 
     def _get_download_urls(self):
-        path = '//table//tr/td[2]/a/@href'
+        path = '//table//tr/td[2]/a[not(contains(., "Errata"))]/@href'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//table//tr/td[2]/a'):
+        for e in self.html.xpath('//table//tr/td[2]/a[not(contains(., "Errata"))]'):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
 
     def _get_case_dates(self):
         path = '//table//tr/td[3]/text()'
-        formats = ['%B %d, %Y', '%B %d,%Y']
+        date_styles = ['%B %d, %Y', '%B %d,%Y']
         dates = []
         for s in self.html.xpath(path):
-            for format in formats:
+            for date_style in date_styles:
                 try:
-                    d = datetime.strptime(s.strip(), format).date()
+                    d = datetime.strptime(s.strip(), date_style).date()
                 except ValueError:
                     continue
                 dates.append(d)
