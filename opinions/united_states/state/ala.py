@@ -42,6 +42,7 @@ from juriscraper.DeferringList import DeferringList
 import requests
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.cookie_utils import normalize_cookies
 from selenium import webdriver
 
 
@@ -64,8 +65,8 @@ class Site(OpinionSite):
                 data={'uid': 'juriscraper', 'pwd': 'freelaw'},
                 headers={'User-Agent': 'Juriscraper'}
             )
-            self._cookies = dict(r.cookies)
-            return super(Site, self)._download(request_dict={'cookies': self._cookies})
+            self.cookies = normalize_cookies(r.cookies)
+            return super(Site, self)._download(request_dict={'cookies': self.cookies})
 
     def _clean_text(self, text):
         """Alabama has some *nasty* code that generates an HTML table from
@@ -93,12 +94,6 @@ class Site(OpinionSite):
             xml_text += '  </row>\n'
         xml_text += '</rows>\n'
         return xml_text
-
-    def _get_cookies(self):
-        if self.status is None:
-            # Run the downloader if it hasn't been run already
-            self.html = self._download()
-        return self._cookies
 
     def _get_download_urls(self):
         path = "//value[2]/text()[not(contains(../../value[7]/text(), 'list of decisions'))]"
@@ -130,7 +125,7 @@ class Site(OpinionSite):
                 r = requests.get(
                     full_url,
                     headers={'User-Agent': 'Juriscraper'},
-                    cookies=self._cookies,
+                    cookies=self.cookies,
                 )
                 r.raise_for_status()
 

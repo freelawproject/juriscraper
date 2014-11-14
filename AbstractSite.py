@@ -57,7 +57,7 @@ class AbstractSite(object):
         self.use_sessions = False
         self.status = None
         self.back_scrape_iterable = None
-        self._cookies = []
+        self.cookies = {}
 
         # Upstream metadata
         self.court_id = None
@@ -154,8 +154,9 @@ class AbstractSite(object):
             1. Is there a bare minimum of meta data?
             1. Are the dates datetime objects, not strings?
             1. Are any dates from the 22nd century? (01-01-2104)
-            5. Are case_names more than just empty whitespace?
-            6. ?
+            1. Are case_names more than just empty whitespace?
+            1. Has the `cookies` attribute been normalized to a dict?
+            1. ?
 
         The signature of this method is subject to change as additional checks become
         convenient.
@@ -194,6 +195,11 @@ class AbstractSite(object):
             if d.year > 2100:
                 raise InsanityException('%s: member of case_dates list is from the 22nd century. '
                                         'with value %s' % (self.court_id, d.year))
+
+        # Is cookies a dict?
+        if type(self.cookies) != dict:
+            raise InsanityException('self.cookies not set to be a dict by '
+                                    'scraper.')
         logger.info("%s: Successfully found %s items." % (self.court_id,
                                                           len(self.case_names)))
 

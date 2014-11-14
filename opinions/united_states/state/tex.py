@@ -17,6 +17,7 @@ from selenium import webdriver
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.string_utils import titlecase
 
 
@@ -53,7 +54,7 @@ class Site(OpinionSite):
             # driver.save_screenshot('out.png')
 
             # Set the cookie
-            self._cookies = driver.get_cookies()
+            self.cookies = normalize_cookies(driver.get_cookies())
 
             driver.implicitly_wait(10)
             if self.court_name == 'sc':
@@ -216,9 +217,3 @@ class Site(OpinionSite):
     def _get_opinion_count(html_tree):
         return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
-
-    def _get_cookies(self):
-        if self.status is None:
-            # Run the downloader if it hasn't been run already
-            self.html = self._download()
-        return self._cookies

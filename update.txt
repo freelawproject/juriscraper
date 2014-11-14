@@ -8,6 +8,15 @@ will attempt to put them here, with the most recent at the top.
 
 ------------------------------
 
+2014-11-14:
+ - Refines the _get_cookies() method that was added back in July by converting
+   it to an attribute simply called cookies. This attribute should contain a
+   dict, and a check is in place to ensure that it does. All scrapers have been
+   updated to provide this value, and callers should be updated to use it.
+
+   The purpose of this change is to move cookie normalization to the scraper,
+   not the caller, simplifying use of Juriscraper.
+
 2014-07-04:
  - Adds a new method on the AbstractSite object that should be implemented by
    all calling libraries. This method is used to pass cookies from Juriscraper

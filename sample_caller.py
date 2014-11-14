@@ -8,6 +8,7 @@ from lib.importer import build_module_list, site_yielder
 
 
 
+
 # for use in catching the SIGINT (Ctrl+4)
 from lib.string_utils import trunc
 
@@ -47,7 +48,7 @@ def scrape_court(site, binaries=False):
         if binaries:
             try:
                 opener = urllib2.build_opener()
-                for cookie_dict in site._get_cookies():
+                for cookie_dict in site.cookies:
                     opener.addheaders.append(("Cookie", "%s=%s" % (cookie_dict['name'], cookie_dict['value'])))
                 data = opener.open(download_url).read()
                 # test for empty files (thank you CA1)
