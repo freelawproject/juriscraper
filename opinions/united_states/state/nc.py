@@ -10,8 +10,11 @@ History:
 import re
 from datetime import date
 from datetime import datetime
+import traceback
 
+from juriscraper.AbstractSite import InsanityException
 from juriscraper.OpinionSite import OpinionSite
+from lxml import html
 
 
 class Site(OpinionSite):
@@ -64,12 +67,17 @@ class Site(OpinionSite):
                     continue  # Only interested in cases with a download link
 
                 # Pull the URL out of the javascript viewOpinion function.
-                download_url = re.search('viewopinion\("(.*)"', urls[0],
-                                         re.IGNORECASE).group(1)
+                download_url = re.search(
+                    'viewopinion\("(.*)"',
+                    urls[0],
+                    re.IGNORECASE
+                ).group(1)
 
-                path = "./td/span/span[contains(@class,'title')]/text()"
-                txt = row_el.xpath(path)[0]
-                (case_name, neutral_cite, docket_number) = self.parse_title(txt)
+                path = "./td/span/span[contains(@class,'title')]"
+                txt = html.tostring(row_el.xpath(path)[0],
+                                    method='text',
+                                    encoding='unicode')
+                case_name, neutral_cite, docket_number = self.parse_title(txt)
 
                 summary = ""
                 path = "./td/span/span[contains(@class,'desc')]/text()"
@@ -117,10 +125,21 @@ class Site(OpinionSite):
     # Clark v. Clark,  (13-612)
     @staticmethod
     def parse_title(txt):
-        name_and_citation = txt.rsplit('(', 1)[0].strip()
-        docket_number = txt.rsplit('(', 1)[1].strip().strip(')')
-        case_name = name_and_citation.rsplit(",", 1)[0].strip()
-        neutral_cite = name_and_citation.rsplit(",", 1)[1].strip()
+        try:
+            name_and_citation = txt.rsplit('(', 1)[0].strip()
+            docket_number = re.search('(.*\d).*?',
+                                      txt.rsplit('(', 1)[1]).group(0).strip()
+            case_name = name_and_citation.rsplit(",", 1)[0].strip()
+            try:
+                neutral_cite = name_and_citation.rsplit(",", 1)[1].strip()
+                if not re.search('^\d\d.*\d\d$', neutral_cite):
+                    neutral_cite = ''
+            except IndexError:
+                # Unable to find comma to split on. No neutral cite.
+                neutral_cite = ''
+        except:
+            raise InsanityException("Unable to parse: %s\n%s" %
+                                    (txt, traceback.format_exc()))
         return case_name, neutral_cite, docket_number
 
     def _get_download_urls(self):
