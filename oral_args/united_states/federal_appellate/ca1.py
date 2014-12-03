@@ -18,9 +18,9 @@ class Site(OralArgumentSite):
         self.url = 'http://media.ca1.uscourts.gov/files/audio/audiorss.php'
 
     def _get_download_urls(self):
-        # For some reason, lxml is being weird while parsing this XML and is munging
-        # the link node into a text node. This xpath seems to work despite it being
-        # rather wonky.
+        # For some reason, lxml is being weird while parsing this XML and is
+        # munging the link node into a text node. This xpath seems to work
+        # despite it being rather wonky.
         path = '//item/link'
         download_urls = []
         for t in self.html.xpath(path):
