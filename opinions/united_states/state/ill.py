@@ -1,14 +1,11 @@
-# Author: Krist Jin
-# Date created:2013-08-16
-# Reviewer: Mike Lissner
+# History:
+#   2013-08-16: Created by Krist Jin
+#   2014-12-02: Updated by Mike Lissner to remove the summaries code.
 
 from datetime import datetime
 
-import requests
 from lxml import html
-from juriscraper.lib.html_utils import get_clean_body_content
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.DeferringList import DeferringList
 
 
 class Site(OpinionSite):
@@ -57,29 +54,3 @@ class Site(OpinionSite):
             s = html.tostring(e, method='text', encoding='unicode')
             neutral_citations.append(s)
         return neutral_citations
-
-    def _get_summaries(self):
-        def fetcher(url):
-            r = requests.get(
-                url,
-                allow_redirects=False,
-                headers={'User-Agent': 'Juriscraper'}
-            )
-            # Throw an error if a bad status code is returned.
-            r.raise_for_status()
-            html_tree = html.fromstring(r.text)
-            html_tree.make_links_absolute(self.url)
-
-            path = '//p[contains(@style, "justify")]/span[@style="font-weight: bold" ]/../following-sibling::p[not(contains(@style, "justify"))][position()=2]/following-sibling::p'
-            summary_string = ""
-            for e in html_tree.xpath(path):
-                s = html.tostring(e, method='html', encoding='unicode')
-                summary_string += s
-            return get_clean_body_content(summary_string, remove_extra_tags=['span'])
-
-        path = "//td[@class='center']/table[3]//tr/td[6]/div/a/@href"
-        seed_urls = self.html.xpath(path)
-        if seed_urls and self.method != 'LOCAL':
-            return DeferringList(seed=seed_urls, fetcher=fetcher)
-        else:
-            return None
