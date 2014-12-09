@@ -6,10 +6,11 @@
 # History:
 #  - 2014-07-10: Created by Andrei Chelaru
 #  - 2014-11-07: Updated by mlr to account for new website.
+#  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 
 
 import os
-from datetime import date
+from datetime import date, timedelta
 
 import requests
 from lxml import html
@@ -74,14 +75,16 @@ class Site(OpinionSite):
             search_orders.click()
 
             start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
-            start_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+            start_date.send_keys((self.case_date - timedelta(days=5)).strftime("%m/%d/%Y"))
 
             end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
+            # driver.save_screenshot('out2.png')
 
             submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
             submit.click()
             driver.implicitly_wait(20)
+            # driver.save_screenshot('out3.png')
 
             nr_of_pages = driver.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]')
