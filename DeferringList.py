@@ -17,6 +17,8 @@ class DeferringList(object):
         logger.warn("Using DeferringList object which cannot be sorted until "
                     "fetched. Note that in usual processing, the fetching "
                     "happens before the sorting, so this is OK.")
+        logger.info("DeferringList has %s entries to fetch." %
+                    len(kwargs['seed']))
         self._data = kwargs['seed']
         self._fetched_items = [False] * len(kwargs['seed'])
         self._fetching_function = kwargs['fetcher']
