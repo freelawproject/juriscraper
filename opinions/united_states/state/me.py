@@ -4,8 +4,11 @@ Court Short Name: Me.
 Author: Brian W. Carver
 Date created: June 20, 2014
 
-2014-06-25 (est): Added code for additional date formats.
-2014-07-02: Was receiving InsanityException and tweaked date code to get some missing dates.
+History:
+  2014-06-25 (est): Added code for additional date formats.
+  2014-07-02: Was receiving InsanityException and tweaked date code to get some
+              missing dates.
+  2014-12-15: Fixes insanity exception by tweaking the XPaths.
 """
 
 from datetime import datetime
@@ -21,12 +24,12 @@ class Site(OpinionSite):
         self.url = 'http://www.courts.maine.gov/opinions_orders/supreme/publishedopinions.shtml'
 
     def _get_download_urls(self):
-        path = '//table//tr/td[2]/a[not(contains(., "Errata"))]/@href'
+        path = '//table//tr/td[2]/a[1]/@href'
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//table//tr/td[2]/a[not(contains(., "Errata"))]'):
+        for e in self.html.xpath('//table//tr/td[2]/a[1]'):
             s = html.tostring(e, method='text', encoding='unicode')
             case_names.append(s)
         return case_names
