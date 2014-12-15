@@ -1,35 +1,42 @@
 """Scraper for Kentucky Supreme Court
 CourtID: ky
 Court Short Name: Ky.
-Author: mlr
-Reviewer: None
-Date created: 2014-08-07
 
-This scraper is unique. Kentucky does not provide case names in the search
-results pages, making them almost useless. They have a separate interface
-though that allows a lookup by case year and number, which *does* provide the
-case name (and lots of other information). Note that it only provides this
-information for supreme court cases, so extending this to do kyctapp won't be
-possible.
+History:
+    2014-08-07: Created by mlr.
+    2014-12-15: Updated to fetch 100 results instead of 30. For reasons unknown
+                this returns more recent results, while a smaller value leaves
+                out some of the most recent items.
+Notes:
+    This scraper is unique. Kentucky does not provide case names in the search
+    results pages, making them almost useless. They have a separate interface
+    though that allows a lookup by case year and number, which *does* provide
+    the case name (and lots of other information). Note that it only provides
+    this information for supreme court cases, so extending this to do kyctapp
+    won't be possible.
 
-Our process is therefore:
-1. Get anything we can from the search results.
-2. For extra meta data, query system number two and get back the case name.
-3. Merge it all.
+    Our process is therefore:
+      1. Get anything we can from the search results.
+      1. For extra meta data, query system number two and get back the case
+         name.
+      1. Merge it all.
 
-Also fun, they use IP addresses instead of DNS and hide them behind HTML
-frames hosted by real domains.
+    Also fun, they use IP addresses instead of DNS and hide them behind HTML
+    frames hosted by real domains.
 
-I tried calling to get more information, and though they've heard of us (a
-first!), they didn't want to help, and seemed downright aggressive in their
-opposition. Curious. Anyway, don't bother calling  again.
+    I tried calling to get more information, and though they've heard of us (a
+    first!), they didn't want to help, and seemed downright aggressive in their
+    opposition. Curious. Anyway, don't bother calling  again.
+
+    You can contact support@dtsearch.com with questions about the search
+    interface. Best of luck.
 """
 
 import re
-import requests
 from datetime import datetime
-from lxml import html
 
+import requests
+from lxml import html
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
@@ -48,7 +55,7 @@ class Site(OpinionSite):
             'index': 'D:\\Inetpub\\wwwroot\\indices\\SupremeCourt_Index',
             # This can be bumped as high as you dream to get back *massive*
             # result sets.
-            'maxFiles': '30',
+            'maxFiles': '100',
             # This is a dtSearch trick that brings back all results.
             'request': 'xfirstword',
             # This provides things in newest-first order, but indeed shows the
