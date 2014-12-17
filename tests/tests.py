@@ -416,7 +416,7 @@ class StringUtilTest(unittest.TestCase):
              'Tourchin v. Atty Gen USA'),
             ('USAv.Brown',
              'USA v. Brown'),
-            # Fix 'of', ',etal', and the problems
+            # Fix 'of', ',etal', 'the', and 'Inre' problems
             ('RawdinvTheAmericanBrdofPediatrics',
              'Rawdin v. The American Brd of Pediatrics'),
             ('Santomenno,etalv.JohnHancockLifeInsuranceCompany,etal',
@@ -425,6 +425,8 @@ class StringUtilTest(unittest.TestCase):
              'Baugh v. Secretary of the Navy'),
             ('Smallv.CamdenCountyetal',
              'Small v. Camden County'),
+            ('InreSCHCorpv.CFIClass',
+             'In Re SCH Corp v. CFI Class'),
         )
         for pair in test_pairs:
             self.assertEqual(pair[1], fix_camel_case(pair[0]))

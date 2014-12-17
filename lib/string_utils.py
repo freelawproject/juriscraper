@@ -221,6 +221,11 @@ def fix_camel_case(s):
         # Fix strings like Santomenno,etal v. John Hancock Life Ins
         if 'etal' in s_out:
             s_out = re.sub(r',?etal( |\Z)', ' ', s_out).strip()
+
+        # Fix strings like Inre SCH Corp v. CFI Class
+        if 'Inre' in s_out:
+            s_out = re.sub(r'^Inre ', 'In Re ', s_out)
+
     return s_out
 
 
