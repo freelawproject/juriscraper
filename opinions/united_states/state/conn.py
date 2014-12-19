@@ -1,3 +1,4 @@
+# coding=utf-8
 """Scraper for Connecticut Supreme Court
 CourtID: conn
 Court Short Name: Conn.
@@ -28,7 +29,7 @@ class Site(OpinionSite):
         case_names = []
         path = '//*[@id="AutoNumber1"]/tr[2]/td/table/tr/td//ul//text()'
         for s in self.html.xpath(path):
-            if '-' in s:
+            if re.search(u'[–-]', s):
                 case_names.append(clean_string(s))
         return case_names
 

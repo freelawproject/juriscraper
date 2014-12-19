@@ -337,7 +337,7 @@ def clean_string(string):
     # we don't know the order of the various punctuation items to be stripped.
     # We split on the v., and handle fixes at either end of plaintiff or
     # appellant.
-    bad_punctuation = r'(-|/|;|,|\s)*'
+    bad_punctuation = u'(-|–|/|;|,|\s)*'
     bad_endings = re.compile(r'%s$' % bad_punctuation)
     bad_beginnings = re.compile(r'^%s' % bad_punctuation)
 
