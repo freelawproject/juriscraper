@@ -5,14 +5,14 @@
 #Reviewer: mlr
 #Date: 2014-07-04
 
-from lxml import html
-from requests.exceptions import HTTPError
-
-from juriscraper.opinions.united_states.state import ny
 from datetime import date
 
+from lxml import html
+from requests.exceptions import HTTPError
+from juriscraper.OpinionSite import OpinionSite
 
-class Site(ny.Site):
+
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.crawl_date = date.today()
@@ -26,7 +26,9 @@ class Site(ny.Site):
         self.court_id = self.__module__
 
     def _download(self, request_dict={}):
-        """Overrides the download function so that we can catch 404 errors silently.
+        """Overrides the download function so that we can catch 404 errors
+        silently.
+
         This is necessary because these web pages appear randomly.
         """
         try:

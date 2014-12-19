@@ -5,10 +5,10 @@
 #Reviewer: mlr
 #Date: 2014-07-04
 
-from juriscraper.OpinionSite import OpinionSite
-
 import re
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -28,7 +28,13 @@ class Site(OpinionSite):
         for element in self.html.xpath(path):
             case_name_parts = []
             for t in element.xpath('./td[4]/p/font/text()'):
-                case_name_parts.append(t)
+                if t.strip():
+                    case_name_parts.append(t)
+            if not case_name_parts:
+                # No hits for first XPath, try another that sometimes works.
+                for t in element.xpath('./td[4]/text()'):
+                    if t.strip():
+                        case_name_parts.append(t)
             if case_name_parts:
                 case_names.append(', '.join(case_name_parts))
         return case_names
@@ -45,12 +51,12 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '''//*[count(td)=4]'''
+        path = '''//*[count(td)=4]/td[1]'''
         docket_numbers = []
-        for element in self.html.xpath(path):
-            docket_nr = []
-            for d_element in element.xpath('./td[1]/div/p/strong/font/text()'):
-                docket_nr.append(re.sub('[\t\n\r\f\v]', '', str(d_element)))
-            if docket_nr:
-                docket_numbers.append(', '.join(docket_nr))
+        for elem in self.html.xpath(path):
+            text_nodes = elem.xpath('.//text()')
+            t = ', '.join(text_nodes)
+            if re.search(r'\d', t):
+                docket_numbers.append(t)
+        print docket_numbers
         return docket_numbers

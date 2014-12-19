@@ -9,10 +9,10 @@ import re
 import time
 from datetime import date
 
-from juriscraper.opinions.united_states.state import ny
+from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(ny.Site):
+class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         # This is the URL for the past months
