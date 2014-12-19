@@ -14,11 +14,11 @@ from lxml import html
 class Site(okla.Site):
     def __init__(self):
         super(Site, self).__init__()
-        self.court_id = self.__module__
         d = date.today()
         self.url = 'http://www.oscn.net/applications/oscn/Index.asp?ftdb=STOKAG&year={year}&level=1'.format(
             year=d.year
         )
+        self.court_id = self.__module__
 
     def _get_precedential_statuses(self):
         return ['Unpublished'] * len(self.case_names)
