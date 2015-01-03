@@ -49,7 +49,7 @@ First step: Install Python 2.7.x, then:
     rm -r phantomjs-1.9.7*  # Cleanup
     
     # Finally, install the code
-    sudo mkdir /usr/local/juriscraper
+    sudo mkdir /usr/local/juriscraper  # or somewhere else
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
 
