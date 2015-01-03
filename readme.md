@@ -34,6 +34,8 @@ Some of the design goals for this project are:
 
 Installation & Dependencies
 ===========================
+First step: Install Python 2.7.x, then:
+    
     # install the dependencies
     sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
     sudo pip -r requirements.txt
