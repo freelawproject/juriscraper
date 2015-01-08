@@ -33,7 +33,7 @@ class Site(OpinionSite):
 
     def _get_precedential_statuses(self):
         statuses = []
-        for e in self.html.xpath(self.base_path + '/td[3]//strong[normalize-space(text())]'):
+        for e in self.html.xpath(self.base_path + '/td[3]'):
             s = html.tostring(e, method='text', encoding='unicode')
             if 'Rel' in s:
                 statuses.append('Unpublished')

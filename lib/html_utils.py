@@ -16,7 +16,8 @@ def get_clean_body_content(content, remove_extra_tags=[]):
     try:
         return cleaner.clean_html(content)
     except XMLSyntaxError:
-        return "Unable to extract the content from this file. Please try reading the original."
+        return "Unable to extract the content from this file. Please try " \
+               "reading the original."
 
 
 def get_visible_text(html_content):

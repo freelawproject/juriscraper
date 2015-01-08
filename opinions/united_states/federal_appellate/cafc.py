@@ -1,3 +1,7 @@
+"""2015-01-06, mlr:
+    A new RSS feed has been added: http://www.cafc.uscourts.gov/rss-opinions.php
+"""
+
 from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
