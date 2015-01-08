@@ -58,5 +58,4 @@ class Site(OpinionSite):
             t = ', '.join(text_nodes)
             if re.search(r'\d', t):
                 docket_numbers.append(t)
-        print docket_numbers
         return docket_numbers
