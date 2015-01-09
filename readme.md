@@ -34,9 +34,10 @@ Some of the design goals for this project are:
 
 Installation & Dependencies
 ===========================
+First step: Install Python 2.7.x, then:
+    
     # install the dependencies
     sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
-    sudo pip -r requirements.txt
     
     # Install PhantomJS
     sudo pip install selenium
@@ -47,9 +48,10 @@ Installation & Dependencies
     rm -r phantomjs-1.9.7*  # Cleanup
     
     # Finally, install the code
-    sudo mkdir /usr/local/juriscraper
+    sudo mkdir /usr/local/juriscraper  # or somewhere else
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
+    sudo pip -r requirements.txt
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
     sudo ln -s `pwd`/juriscraper $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
