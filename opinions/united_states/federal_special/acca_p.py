@@ -9,6 +9,7 @@ from datetime import datetime
 import re
 
 from juriscraper.OpinionSite import OpinionSite
+from lxml import html
 
 
 class Site(OpinionSite):
@@ -16,7 +17,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'https://www.jagcnet.army.mil/85257546006DF36B/ODD?OpenView&Count=-1'
-        self.docket_case_name_splitter = re.compile('(.*\d{7,8})(.*)')
+        self.docket_case_name_splitter = re.compile('(.*[\dX]{5,8})(.*)')
 
     def _download(self, **kwargs):
         # DoD uses an annoying certificate that isn't installed. Thus, we
@@ -28,10 +29,11 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
-        path = '//table//table//tr[position() > 2]/td[5]//a[2]/text()'
+        path = '//table//table//tr[position() > 2]/td[5]//a[2]'
         case_names = []
-        for t in self.html.xpath(path):
-            m = self.docket_case_name_splitter.search(t)
+        for e in self.html.xpath(path):
+            s = html.tostring(e, method='text', encoding='unicode')
+            m = self.docket_case_name_splitter.search(s)
             case_names.append(m.group(2))
         return case_names
 
@@ -44,9 +46,10 @@ class Site(OpinionSite):
         return ['Published'] * len(self.case_names)
 
     def _get_docket_numbers(self):
-        path = '//table//table//tr[position() > 2]/td[5]//a[2]/text()'
+        path = '//table//table//tr[position() > 2]/td[5]//a[2]'
         docket_numbers = []
-        for t in self.html.xpath(path):
-            m = self.docket_case_name_splitter.search(t)
+        for e in self.html.xpath(path):
+            s = html.tostring(e, method='text', encoding='unicode')
+            m = self.docket_case_name_splitter.search(s)
             docket_numbers.append(m.group(1))
         return docket_numbers
