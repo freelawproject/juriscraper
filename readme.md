@@ -54,7 +54,8 @@ First step: Install Python 2.7.x, then:
     sudo pip install -r requirements.txt
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
-    sudo ln -s `pwd`/juriscraper $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
+    PYTHON_SITES_PACKAGES_DIR=`python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`
+    sudo ln -s `pwd`/juriscraper $PYTHON_SITES_PACKAGES_DIR/juriscraper
 
     # create a directory for logs
     sudo mkdir -p /var/log/juriscraper
