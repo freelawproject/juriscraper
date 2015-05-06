@@ -51,7 +51,7 @@ First step: Install Python 2.7.x, then:
     sudo mkdir /usr/local/juriscraper  # or somewhere else
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
-    sudo pip -r requirements.txt
+    sudo pip install -r requirements.txt
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
     sudo ln -s `pwd`/juriscraper $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
