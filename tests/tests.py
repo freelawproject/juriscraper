@@ -530,7 +530,7 @@ class ScraperSpotTest(unittest.TestCase):
         regex = nh.Site().case_name_regex
         for test, result in string_pairs:
             try:
-                case_name = regex.search(test).group(2).strip()
+                case_name = regex.search(test).group(3).strip()
                 self.assertEqual(
                     case_name,
                     result,
