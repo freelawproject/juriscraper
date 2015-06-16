@@ -1,11 +1,11 @@
 from datetime import date
 import hashlib
-import logging.handlers
 import re
 from urlparse import urlsplit, urlunsplit, urljoin
 
 import requests
 from lxml import html
+from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
 
@@ -16,25 +16,7 @@ try:
 except ImportError:
     import chardet
 
-LOG_FILENAME = '/var/log/juriscraper/debug.log'
-
-# Set up a specific logger with our desired output level
-logger = logging.getLogger('Logger')
-logger.setLevel(logging.DEBUG)
-
-# make a formatter
-formatter = logging.Formatter('%(asctime)s - %(levelname)s: %(message)s')
-
-# Create a handler, and attach it to the logger
-handler = logging.handlers.RotatingFileHandler(LOG_FILENAME,
-                                               maxBytes=5120000,
-                                               backupCount=7)
-logger.addHandler(handler)
-handler.setFormatter(formatter)
-
-# logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s',
-#                    level=logging.DEBUG)
-
+logger = make_default_logger()
 
 class InsanityException(Exception):
     def __init__(self, message):

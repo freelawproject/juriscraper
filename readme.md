@@ -48,15 +48,15 @@ First step: Install Python 2.7.x, then:
     rm -r phantomjs-1.9.7*  # Cleanup
     
     # Finally, install the code
-    sudo mkdir /usr/local/juriscraper  # or somewhere else
+    sudo mkdir /usr/local/juriscraper  # or somewhere else or `mkvirtualenv juriscraper`
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
-    sudo pip -r requirements.txt
+    sudo pip install -r requirements.txt
 
     # add Juriscraper to your python path (in Ubuntu/Debian)
-    sudo ln -s `pwd`/juriscraper $(dirname `which python`)/../lib/python2.7/site-packages/juriscraper
+    sudo ln -s `pwd`/juriscraper `python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`/juriscraper
 
-    # create a directory for logs
+    # create a directory for logs (this can be skipped, and no logs will be created)
     sudo mkdir -p /var/log/juriscraper
 
 
