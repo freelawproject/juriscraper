@@ -2,7 +2,7 @@
 
 What is This?
 =============
-Juriscraper is a scraper library started several years ago that is gathers 
+Juriscraper is a scraper library started several years ago that gathers 
 judicial opinions and oral arguments in the American court system. It is 
 currently able to scrape:
 
