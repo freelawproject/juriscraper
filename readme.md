@@ -149,7 +149,7 @@ welcome contributions in this area.
 Tests
 =====
 We got that! You can (and should) run the tests with `python tests/tests.py`. 
-This will iterate over all of the `*_example_*` files and run the scrapers 
+This will iterate over all of the `*_example*` files and run the scrapers 
 against them.
 
 In addition, we use [Travis-CI][tci] to automatically run the tests whenever
