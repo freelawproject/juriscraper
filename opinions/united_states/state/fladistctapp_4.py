@@ -4,17 +4,20 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # History:
-# - 22 July 2014: Created by Andrei Chelaru
-# - 17 Oct. 2013: Added support for days with "Special Issuances"
+# - 2014-07-22: Created by Andrei Chelaru
+# - 2014-10-17, mlr: Added support for days with "Special Issuances"
+# - 2015-06-17, mlr: Fixes some regex problems and expands an XPath to be more
+#   lenient.
 
 
-from datetime import date
-import re
 import time
 
+import re
 import requests
 from lxml import html
 from juriscraper.OpinionSite import OpinionSite
+
+from datetime import date
 
 
 class Site(OpinionSite):
@@ -61,7 +64,7 @@ class Site(OpinionSite):
 
     def _return_case_names(self, html_tree):
         path = "{base}//text()".format(base=self.base_path)
-        return [re.search('(4D.*\d{2})([- ][A-Z].*)', e).group(2) for e in html_tree.xpath(path)]
+        return [re.search('(?:4D.*\d{2})([- ][A-Z\d].*)', s).group(1) for s in html_tree.xpath(path)]
 
     def _get_download_urls(self):
         download_urls = []
@@ -80,8 +83,9 @@ class Site(OpinionSite):
         return case_dates
 
     def _return_dates(self, html_tree):
-        path = "//*[starts-with(., 'OPINIONS RELEASED') or " \
-               "    starts-with(normalize-space(.), 'SPECIAL ISSUANCE')]"
+        path = ("//*[starts-with(., 'OPINIONS RELEASED') or "
+                "    starts-with(normalize-space(.), 'SPECIAL ISSUANCE') or "
+                "    starts-with(normalize-space(.), 'Special Issuance')]")
         dates = []
         text = html.tostring(
             html_tree.xpath(path)[0],
@@ -104,4 +108,4 @@ class Site(OpinionSite):
 
     def _return_docket_numbers(self, html_tree):
         path = "{base}//text()".format(base=self.base_path)
-        return [re.search('(4D.*\d{2})([- ][A-Z].*)', e).group(1) for e in html_tree.xpath(path)]
+        return [re.search('(4D.*\d{2})([- ][A-Z\d].*)', e).group(1) for e in html_tree.xpath(path)]
