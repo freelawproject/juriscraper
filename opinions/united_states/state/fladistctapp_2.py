@@ -8,13 +8,14 @@
 # - 2014-08-28: Updated by mlr.
 
 
-from datetime import date
 import time
+
 import requests
 from lxml import html
-
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
+
+from datetime import date
 
 
 class Site(OpinionSite):
@@ -82,7 +83,7 @@ class Site(OpinionSite):
 
     @staticmethod
     def _return_dates(html_tree):
-        path = "//h1/text()"
+        path = "//h1/text()|//h2/text()"
         dates = []
         text = html_tree.xpath(path)[0]
         case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%B %d, %Y')))
