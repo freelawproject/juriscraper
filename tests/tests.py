@@ -1,14 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import datetime
 import glob
 import logging
-import os
 import time
 import unittest
 import sys
 
+import os
 from juriscraper.lib.importer import build_module_list
 from juriscraper.lib.date_utils import parse_dates, quarter, \
     is_first_month_in_quarter
@@ -19,6 +18,8 @@ from juriscraper.lib.string_utils import harmonize
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.opinions.united_states.state import massappct, pa, mass, nh
 from juriscraper.oral_args.united_states.federal_appellate import ca6
+
+import datetime
 
 
 class SlownessException(Exception):
@@ -526,11 +527,13 @@ class ScraperSpotTest(unittest.TestCase):
              'Appeal of the Local Government Center, Inc. & a .',),
             ('2013-0343  In the Matter of Susan Spenard and David Spenard',
              'In the Matter of Susan Spenard and David Spenard',),
+            ('2013-0893, Stephen E. Forster d/b/a Forster’s Christmas Tree',
+             'Stephen E. Forster d/b/a Forster’s Christmas Tree'),
         )
         regex = nh.Site().case_name_regex
         for test, result in string_pairs:
             try:
-                case_name = regex.search(test).group(3).strip()
+                case_name = regex.search(test).group(2).strip()
                 self.assertEqual(
                     case_name,
                     result,
