@@ -8,6 +8,7 @@ History:
  - 2014-07-11: created
  - 2014-08-08, mlr: updated to fix InsanityError on case_dates
  - 2014-09-18, mlr: updated XPath to fix InsanityError on docket_numbers
+ - 2015-06-17, mlr: made it more lenient about date formatting
 """
 
 from datetime import date, datetime
@@ -41,7 +42,12 @@ class Site(OpinionSite):
         for title in self.html.xpath('//table[@id="AutoNumber1"]/tr[2]/td/table/tr/td//b//text()'):
             count = len(title.getparent().xpath("following::ul[1]//a/@href[contains(., 'pdf')]"))
             date_string = title.split()[-1].strip(':')
-            dates.extend([datetime.strptime(date_string, '%m/%d/%y').date()] * count)
+            for format in ['%m/%d/%y', '%m/%d/%Y', None]:
+                try:
+                    dates.extend([datetime.strptime(date_string, format).date()] * count)
+                    break
+                except ValueError:
+                    continue
         return dates
 
     def _get_docket_numbers(self):
