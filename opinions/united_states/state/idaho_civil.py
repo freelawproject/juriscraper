@@ -2,21 +2,32 @@
 
 """
 History:
- - 2014-08-05: Updated by mlr.
+ - 2014-08-05, mlr: Updated.
+ - 2015-06-19, mlr: Updated to simply the XPath expressions and to fix an OB1
+   problem that was causing an InsanityError. The cause was nasty HTML in their
+   page.
 """
 
-import re
 import time
+
+import re
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
-from datetime import date
 from lxml import html
+
+from datetime import date
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.isc.idaho.gov/appeals-court/sccivil'
+        self.base_path = '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li'
+        self.sub_paths = [
+            'a[./text()][1]',
+            'span/a[./text()][1]',
+            'span/span/a[./text()][1]'
+        ]
         self.court_id = self.__module__
 
     def tweak_request_object(self, r):
@@ -27,12 +38,12 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         case_names = []
-        for e in self.html.xpath('//div[@id = "block-system-main"]//li'):
-            paths = ['a[1]', 'span/a[1]']
-            for path in paths:
+        for e in self.html.xpath(self.base_path):
+            for path in self.sub_paths:
                 try:
-                    e = e.xpath(path)[0]
-                    s = html.tostring(e, method='text', encoding='unicode')
+                    sub_e = e.xpath(path)[0]
+                    s = html.tostring(sub_e, method='text', encoding='unicode')
+                    break
                 except IndexError:
                     continue
             s = ' '.join(s.split())
@@ -52,14 +63,18 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         download_urls = []
-        for e in self.html.xpath('//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li/a[1]/@href|'
-                                 '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li/span/a[1]/@href'):
-            download_urls.append(e)
+        for e in self.html.xpath(self.base_path):
+            for path in self.sub_paths:
+                try:
+                    sub_e = e.xpath('%s/@href' % path)[0]
+                except IndexError:
+                    continue
+            download_urls.append(sub_e)
         return download_urls
 
     def _get_case_dates(self):
         case_dates = []
-        for e in self.html.xpath('//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li'):
+        for e in self.html.xpath(self.base_path):
             s = html.tostring(e, method='text', encoding='unicode')
             s = re.search('(.*[0-9]{4})', s).group(1)
             date_formats = ['%B %d, %Y',
