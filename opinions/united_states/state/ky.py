@@ -81,7 +81,7 @@ class Site(OpinionSite):
             if self.method == 'LOCAL':
                 return "No case names fetched during tests."
             else:
-                ip_addresses = ['162.114.92.73', '162.114.92.78']
+                ip_addresses = ['162.114.92.72', '162.114.92.78']
                 for ip_address in ip_addresses:
                     last_item = ip_addresses.index(ip_address) == len(ip_addresses) - 1
                     url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
