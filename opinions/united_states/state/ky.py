@@ -33,13 +33,15 @@ Notes:
 """
 
 import re
-from datetime import datetime
-
 import requests
 from lxml import html
-from juriscraper.lib.string_utils import titlecase
+from requests.exceptions import HTTPError, ConnectionError, Timeout
+from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
+from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
+
+from datetime import datetime
 
 
 class Site(OpinionSite):
@@ -72,29 +74,53 @@ class Site(OpinionSite):
         return [e.xpath('./@href')[0] for e in elems]
 
     def _get_case_names(self):
-        def fetcher(e):
+        def fetcher(elem):
             """This reaches out to a secondary system and scrapes the correct
              info.
              """
             if self.method == 'LOCAL':
                 return "No case names fetched during tests."
             else:
-                url = 'http://162.114.92.78/dockets/SearchCaseDetail.asp'
-                anchor_text = html.tostring(e, method='text', encoding='unicode')
-                m = self.docket_number_regex.search(anchor_text)
+                ip_addresses = ['162.114.92.73', '162.114.92.78']
+                for ip_address in ip_addresses:
+                    last_item = ip_addresses.index(ip_address) == len(ip_addresses) - 1
+                    url = 'http://%s/dockets/SearchCaseDetail.asp' % ip_address
+                    anchor_text = html.tostring(elem, method='text', encoding='unicode')
+                    m = self.docket_number_regex.search(anchor_text)
 
-                r = requests.post(
-                    url,
-                    headers={'User-Agent': 'Juriscraper'},
-                    data={
-                        'txtyear': m.group('year'),
-                        'txtcasenumber': m.group('docket_num').strip('0'),
-                        'cmdnamesearh': 'Search',
-                    },
-                )
+                    try:
+                        r = requests.post(
+                            url,
+                            headers={'User-Agent': 'Juriscraper'},
+                            timeout=5,
+                            data={
+                                'txtyear': m.group('year'),
+                                'txtcasenumber': m.group('docket_num').strip('0'),
+                                'cmdnamesearh': 'Search',
+                            },
+                        )
 
-                # Throw an error if a bad status code is returned.
-                r.raise_for_status()
+                        # Throw an error if a bad status code is returned,
+                        # otherwise, break the loop so we don't try more ip
+                        # addresses than necessary.
+                        r.raise_for_status()
+                        break
+                    except HTTPError, e:
+                        logger.info("404 error connecting to: {ip}".format(
+                            ip=ip_address,
+                        ))
+                        if e.response.status_code == 404 and not last_item:
+                            continue
+                        else:
+                            raise e
+                    except (ConnectionError, Timeout), e:
+                        logger.info("Timeout/Connection error connecting to: {ip}".format(
+                            ip=ip_address,
+                        ))
+                        if not last_item:
+                            continue
+                        else:
+                            raise e
 
                 # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
                 if r.encoding == 'ISO-8859-1':
