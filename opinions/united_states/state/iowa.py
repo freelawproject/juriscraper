@@ -8,10 +8,11 @@
 
 from datetime import date
 import time
+
+import certifi
 from lxml import html
 import requests
 import re
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 
@@ -32,9 +33,12 @@ class Site(OpinionSite):
             s = requests.session()
             html_trees = []
             for url in html_l.xpath("//td[@width='49%']//tr[contains(., ', {year}')]/td[5]/a/@href".format(year=self.year)):
-                r = s.get(url,
-                          headers={'User-Agent': 'Juriscraper'},
-                          **request_dict)
+                r = s.get(
+                    url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    verify=certifi.where(),
+                    **request_dict
+                )
                 r.raise_for_status()
 
                 # If the encoding is iso-8859-1, switch it to cp1252 (a

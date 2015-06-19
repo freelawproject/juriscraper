@@ -8,6 +8,11 @@ will attempt to put them here, with the most recent at the top.
 
 ------------------------------
 
+2015-06-19:
+ - This adds a new dependency for certifi. Certifi brings our certificate store
+   up to date and should keep it there as time passes, by syncrhonizing with
+   Mozilla's certificate store.
+
 2014-11-14:
  - Refines the _get_cookies() method that was added back in July by converting
    it to an attribute simply called cookies. This attribute should contain a

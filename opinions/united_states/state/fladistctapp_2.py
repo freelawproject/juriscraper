@@ -10,12 +10,14 @@
 
 import time
 
+from datetime import date
+
+import certifi
+
 import requests
 from lxml import html
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-
-from datetime import date
 
 
 class Site(OpinionSite):
@@ -34,9 +36,12 @@ class Site(OpinionSite):
         html_trees = []
         for url in html_l.xpath("//*[@class='cen']/a/@href"):
             logger.info("Getting sub-url: {url}".format(url=url))
-            r = s.get(url,
-                      headers={'User-Agent': 'Juriscraper'},
-                      **request_dict)
+            r = s.get(
+                url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
+                **request_dict
+            )
             r.raise_for_status()
 
             # If the encoding is iso-8859-1, switch it to cp1252 (a superset)

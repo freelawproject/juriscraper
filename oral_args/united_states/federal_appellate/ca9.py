@@ -10,6 +10,7 @@ History:
 """
 from datetime import date, datetime
 
+import certifi
 import requests
 from lxml import html
 from juriscraper.AbstractSite import InsanityException
@@ -82,7 +83,8 @@ class Site(OralArgumentSite):
                 r = requests.get(
                     seed_url,
                     allow_redirects=False,
-                    headers={'User-Agent': 'Juriscraper'}
+                    headers={'User-Agent': 'Juriscraper'},
+                    verify=certifi.where(),
                 )
                 r.raise_for_status()
                 html_tree = html.fromstring(r.text)

@@ -7,11 +7,10 @@
 #  - 2014-07-10: Created by Andrei Chelaru
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
-
-
-import os
 from datetime import date, timedelta
 
+import certifi
+import os
 import requests
 from lxml import html
 from selenium import webdriver
@@ -139,6 +138,7 @@ class Site(OpinionSite):
                     url,
                     allow_redirects=True,
                     headers={'User-Agent': 'Juriscraper'},
+                    verify=certifi.where(),
                 )
                 r.raise_for_status()
 

@@ -7,6 +7,8 @@ Date created: 20 July 2014
 """
 
 from datetime import datetime, date
+
+import certifi
 from lxml import html
 import requests
 from juriscraper.OralArgumentSite import OralArgumentSite
@@ -42,8 +44,11 @@ class Site(OralArgumentSite):
         return download_urls
 
     def _get_case_page(self, url, session):
-        r = session.get(url,
-                  headers={'User-Agent': 'Juriscraper'})
+        r = session.get(
+            url,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=certifi.where(),
+        )
         r.raise_for_status()
 
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)

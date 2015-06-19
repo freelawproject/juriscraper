@@ -31,6 +31,9 @@ Notes:
     You can contact support@dtsearch.com with questions about the search
     interface. Best of luck.
 """
+from datetime import datetime
+
+import certifi
 
 import re
 import requests
@@ -40,8 +43,6 @@ from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
-
-from datetime import datetime
 
 
 class Site(OpinionSite):
@@ -93,6 +94,7 @@ class Site(OpinionSite):
                             url,
                             headers={'User-Agent': 'Juriscraper'},
                             timeout=5,
+                            verify=certifi.where(),
                             data={
                                 'txtyear': m.group('year'),
                                 'txtcasenumber': m.group('docket_num').strip('0'),

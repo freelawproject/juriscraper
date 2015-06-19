@@ -4,15 +4,15 @@
 # Author: Andrei Chelaru
 # Reviewer: mlr
 # Date: 2014-07-05
+import time
+from datetime import date
 
+import certifi
 from lxml import html
 import requests
-
 from juriscraper.lib.string_utils import titlecase
 from juriscraper.OpinionSite import OpinionSite
 import re
-import time
-from datetime import date
 
 
 class Site(OpinionSite):
@@ -28,9 +28,12 @@ class Site(OpinionSite):
         html_trees = []
         for url in html_l.xpath("//td[contains(./text(),'Opinion') or contains(./text(), 'PER CURIAM')]"
                                 "/preceding-sibling::td[1]//@href")[:2]:
-            r = s.get(url,
-                      headers={'User-Agent': 'Juriscraper'},
-                      **request_dict)
+            r = s.get(
+                url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
+                **request_dict
+            )
             r.raise_for_status()
 
             # If the encoding is iso-8859-1, switch it to cp1252 (a superset)

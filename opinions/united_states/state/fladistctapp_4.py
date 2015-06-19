@@ -12,12 +12,14 @@
 
 import time
 
+from datetime import date
+
+import certifi
+
 import re
 import requests
 from lxml import html
 from juriscraper.OpinionSite import OpinionSite
-
-from datetime import date
 
 
 class Site(OpinionSite):
@@ -37,9 +39,12 @@ class Site(OpinionSite):
         # to get all the dates in that page the following path can be used:
         # path = "id('opinions')//a[string-length()=10]"
         for url in html_l.xpath(path):
-            r = s.get(url,
-                      headers={'User-Agent': 'Juriscraper'},
-                      **request_dict)
+            r = s.get(
+                url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
+                **request_dict
+            )
             r.raise_for_status()
 
             # If the encoding is iso-8859-1, switch it to cp1252 (a superset)

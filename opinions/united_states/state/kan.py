@@ -8,8 +8,9 @@
 
 from datetime import date
 import time
-import re
 
+import certifi
+import re
 from lxml import etree, html
 import requests
 from juriscraper.OpinionSite import OpinionSite
@@ -39,9 +40,12 @@ class Site(OpinionSite):
             )
             for url in html_l.xpath(path)[0:4]:
                 logger.info("Downloading Kansas page at: {url}".format(url=url))
-                r = s.get(url,
-                          headers={'User-Agent': 'Juriscraper'},
-                          **request_dict)
+                r = s.get(
+                    url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    verify=certifi.where(),
+                    **request_dict
+                )
                 r.raise_for_status()
 
                 # If the encoding is iso-8859-1, switch it to cp1252 (a superset)

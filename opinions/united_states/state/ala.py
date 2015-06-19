@@ -34,10 +34,11 @@ Courts. The person to call about it is Myra Sabel. She's very helpful and her
 number is 334-229-0580.
 
 """
-import os
-import re
 from datetime import datetime
 
+import certifi
+import os
+import re
 from juriscraper.DeferringList import DeferringList
 import requests
 from juriscraper.AbstractSite import logger
@@ -63,7 +64,8 @@ class Site(OpinionSite):
             r = requests.post(
                 'http://2.alalinc.net/session/login/',
                 data={'uid': 'juriscraper', 'pwd': 'freelaw'},
-                headers={'User-Agent': 'Juriscraper'}
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
             )
             self.cookies = normalize_cookies(r.cookies)
             return super(Site, self)._download(request_dict={'cookies': self.cookies})
@@ -126,6 +128,7 @@ class Site(OpinionSite):
                     full_url,
                     headers={'User-Agent': 'Juriscraper'},
                     cookies=self.cookies,
+                    verify=certifi.where(),
                 )
                 r.raise_for_status()
 

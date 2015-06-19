@@ -1,14 +1,14 @@
 from datetime import date
 import hashlib
-import re
 from urlparse import urlsplit, urlunsplit, urljoin
 
+import re
+import certifi
 import requests
 from lxml import html
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import harmonize, clean_string, trunc
 from juriscraper.tests import MockRequest
-
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -246,14 +246,20 @@ class AbstractSite(object):
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
         if self.method == 'GET':
-            r = s.get(self.url,
-                      headers={'User-Agent': 'Juriscraper'},
-                      **request_dict)
+            r = s.get(
+                self.url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
+                **request_dict
+            )
         elif self.method == 'POST':
-            r = s.post(self.url,
-                       headers={'User-Agent': 'Juriscraper'},
-                       data=self.parameters,
-                       **request_dict)
+            r = s.post(
+                self.url,
+                headers={'User-Agent': 'Juriscraper'},
+                verify=certifi.where(),
+                data=self.parameters,
+                **request_dict
+            )
         elif self.method == 'LOCAL':
             mr = MockRequest(url=self.url)
             r = mr.get()
