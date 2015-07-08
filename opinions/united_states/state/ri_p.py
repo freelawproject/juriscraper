@@ -28,6 +28,9 @@ class Site(OpinionSite):
             current=self.current_year,
             next=self.current_year + 1,
         )
+
+        self.cached_records = None
+
         # The list of pages can be found here:
         # http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions%20and%20Orders%20Issued%20in%20Supreme%20Court%20Cases.aspx
 
@@ -59,7 +62,7 @@ class Site(OpinionSite):
         # reassemble the docket numbers into one string
         return ", ".join(result)
 
-    def _load(self):
+    def _do_load(self):
         results = []
         path = "//table[@id = 'onetidDoclibViewTbl0']/tr[position() > 1]"
         trs = list(self.html.xpath(path))
@@ -132,12 +135,16 @@ class Site(OpinionSite):
                                 'case_name' : case_name})
         return results
 
+    def _load(self):
+        if self.cached_records is None:
+            self.cached_records = self._do_load()
+        return self.cached_records
+
     def _filter(self, key):
         r = []
-        for dct in self._load():
-            for k, v in dct.items():
-                if k == key:
-                    r.append(v)
+        for d in self._load():
+            if d.get(key) is not None:
+                r.append(d[key])
         return r
 
     def _get_download_urls(self):
