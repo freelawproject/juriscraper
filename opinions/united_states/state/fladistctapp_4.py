@@ -58,12 +58,12 @@ class Site(OpinionSite):
 
             remove_anchors = lambda url: url.split('#')[0]
             html_tree.rewrite_links(remove_anchors)
-            html_trees.append(html_tree)
+            html_trees.append((html_tree, url))
         return html_trees
 
     def _get_case_names(self):
         case_names = []
-        for html_tree in self.html:
+        for html_tree,_ in self.html:
             case_names.extend(self._return_case_names(html_tree))
         return case_names
 
@@ -73,7 +73,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         download_urls = []
-        for html_tree in self.html:
+        for html_tree,_ in self.html:
             download_urls.extend(self._return_download_urls(html_tree))
         return download_urls
 
@@ -83,11 +83,11 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        for html_tree in self.html:
-            case_dates.extend(self._return_dates(html_tree))
+        for html_tree,url in self.html:
+            case_dates.extend(self._return_dates(html_tree, url))
         return case_dates
 
-    def _return_dates(self, html_tree):
+    def _return_dates(self, html_tree, url):
         path = ("//*[starts-with(., 'OPINIONS RELEASED') or "
                 "    starts-with(normalize-space(.), 'SPECIAL ISSUANCE') or "
                 "    starts-with(normalize-space(.), 'Special Issuance')]")
@@ -97,8 +97,14 @@ class Site(OpinionSite):
             method='text',
             encoding='utf-8'
         )
-        text = re.search('(\d{1,2}-\d{1,2}-\d{2})', text).group(1)
-        case_date = date.fromtimestamp(time.mktime(time.strptime(text.strip(), '%m-%d-%y')))
+        text = re.search('(\d{1,2}-\d{1,2}-\d{2})', text)
+        if text:
+            date_string = text.group(1)
+        else:
+            # use date from url
+            url_search = re.search('(\d{1,2}-\d{1,2}-\d{2})', url)
+            date_string = url_search.group(1)
+        case_date = date.fromtimestamp(time.mktime(time.strptime(date_string.strip(), '%m-%d-%y')))
         dates.extend([case_date] * int(html_tree.xpath("count({base})".format(base=self.base_path))))
         return dates
 
@@ -107,7 +113,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for html_tree in self.html:
+        for html_tree,_ in self.html:
             docket_numbers.extend(self._return_docket_numbers(html_tree))
         return docket_numbers
 
