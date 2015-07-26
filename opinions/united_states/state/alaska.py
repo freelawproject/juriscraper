@@ -18,14 +18,14 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_case_names(self):
-        return [e for e in self.html.xpath("//ul[position() > 1 and position() <= 10]/li[descendant::a/em]//em/text()")]
+        return [e for e in self.html.xpath("//ul/li[descendant::a/em]//em/text()")]
 
     def _get_download_urls(self):
-        return [h for h in self.html.xpath("//ul[position() > 1 and position() <= 10]/li/a[child::em]/@href")]
+        return [h for h in self.html.xpath("//ul/li/a[child::em]/@href")]
 
     def _get_case_dates(self):
         dates = []
-        for h2_element in self.html.xpath('//h2[position() <= 9][following-sibling::ul//a/em]'):
+        for h2_element in self.html.xpath('//h4[following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
             try:
                 date_obj = date.fromtimestamp(
@@ -41,7 +41,7 @@ class Site(OpinionSite):
         return dates
 
     def _get_docket_numbers(self):
-        return [t for t in self.html.xpath("//ul[position() > 1 and position() <= 10]/li[descendant::a/em]/text()[1]")]
+        return [t for t in self.html.xpath("//ul/li[descendant::a/em]/text()[1]")]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
