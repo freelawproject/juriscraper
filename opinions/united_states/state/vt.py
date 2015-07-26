@@ -38,9 +38,14 @@ class Site(OpinionSite):
         path = '//h4/a'
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode')
-            expression = '(\d+-\w{3}-\d{4})'
+            expression = '(\d+-\w{3,4}-\d{4})'
             date_string = re.search(expression, s, re.MULTILINE).group(1)
-            case_dates.append(datetime.strptime(date_string, '%d-%b-%Y').date())
+            try:
+                date_parsed = datetime.strptime(date_string, '%d-%b-%Y').date()
+            except ValueError:
+                # try full month name
+                date_parsed = datetime.strptime(date_string, '%d-%B-%Y').date()
+            case_dates.append(date_parsed)
         return case_dates
 
     def _get_precedential_statuses(self):
