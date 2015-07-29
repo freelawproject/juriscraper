@@ -8,12 +8,11 @@ History:
     2014-09-09: Created by Jon Andersen
 """
 
-import re
 import time
 from datetime import datetime
 from datetime import date
 
-
+import re
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -70,8 +69,13 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Unpublished"] * len(self.my_case_dates)
 
+    def _get_case_name_shorts(self):
+        # We don't (yet) support short case names for administrative bodies.
+        return None
+
     def _download_backwards(self, startat):
         burl = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=%d' % (startat,)
         self.url = burl+'&DB='+'&DB='.join([str(n) for n in
                                             range(datetime.today().year, 1997-1, -1)])
         self.html = self._download()
+

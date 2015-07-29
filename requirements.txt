@@ -1,7 +1,8 @@
 argparse==1.2.1
 cchardet==0.3.5
-certifi
+certifi==2015.4.28
 chardet==1.0.1
+geonamescache==0.18
 lxml==3.0.1
 python-dateutil==1.5
 requests==2.2.1

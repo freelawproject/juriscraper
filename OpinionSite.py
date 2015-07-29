@@ -21,7 +21,7 @@ class OpinionSite(AbstractSite):
             'summaries', 'west_citations', 'west_state_citations'
         ]
         self._req_attrs = ['case_dates', 'case_names', 'download_urls',
-                           'precedential_statuses']
+                           'precedential_statuses', 'case_name_shorts']
         # For date sorting to work, case_dates must be first in _all_attrs.
         self._all_attrs = self._req_attrs + self._opt_attrs
 

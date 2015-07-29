@@ -8,6 +8,11 @@ will attempt to put them here, with the most recent at the top.
 
 ------------------------------
 
+2015-07-28:
+ - This update adds another dependency, this time for geonamescache. This
+   package helps us to automatically generate short names for cases as we
+   scrape them. You can use pip to install it.
+
 2015-06-19:
  - This adds a new dependency for certifi. Certifi brings our certificate store
    up to date and should keep it there as time passes, by syncrhonizing with

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
+import geonamescache
 
 # For use in titlecase
 BIG = ('3D|AFL|AKA|A/K/A|BMG|CBS|CDC|CDT|CEO|CIO|CNMI|D/B/A|DOJ|DVA|EFF|FCC|'
@@ -430,3 +431,94 @@ def trunc(s, length, ellipsis=None):
             s = '%s%s' % (s, ellipsis)
         return s
 
+
+class CaseNameTweaker(object):
+    def __init__(self):
+        acros = ['a.g.p.', 'c.d.c.', 'c.i.a.', 'd.o.c.', 'e.e.o.c.', 'e.p.a.',
+                 'f.b.i.', 'f.c.c.', 'f.d.i.c.', 'f.s.b.', 'f.t.c.', 'i.c.c.',
+                 'i.n.s.', 'i.r.s.', 'n.a.a.c.p.', 'n.l.r.b.', 'p.l.c.',
+                 's.e.c.', 's.p.a.', 's.r.l.', 'u.s.', 'u.s.a.',
+                 'u.s.e.e.o.c.', 'u.s.e.p.a.']
+        acros_sans_dots = [acro.replace('.', '') for acro in acros]
+        # corp_acros = ['L.L.C.', 'L.L.L.P.', 'L.L.P.', 'L.P.', 'P.A.', 'P.C.',
+        #              'P.L.L.C.', ]
+        # corp_acros_sans_dots = [acro.replace('.', '') for acro in corp_acros]
+        common_names = ['state', 'people', 'smith', 'johnson']
+        ags = ['Akerman', 'Ashcroft', 'Barr', 'Bates', 'Bell', 'Berrien',
+               'Biddle', 'Black', 'Bonaparte', 'Bork', 'Bradford',
+               'Breckinridge', 'Brewster', 'Brownell', 'Butler', 'Civiletti',
+               'Clark', 'Clement', 'Clifford', 'Crittenden', 'Cummings',
+               'Cushing', 'Daugherty', 'Devens', 'Evarts', 'Filip', 'Garland',
+               'Gerson', 'Gilpin', 'Gonzales', 'Gregory', 'Griggs', 'Grundy',
+               'Harmon', 'Hoar', 'Holder', 'Jackson', 'Johnson', 'Katzenbach',
+               'Keisler', 'Kennedy', 'Kleindienst', 'Knox', 'Lee',
+               'Legaré', 'Levi', 'Lincoln', 'Lynch', 'MacVeagh', 'Mason',
+               'McGranery', 'McGrath', 'McKenna', 'McReynolds', 'Meese',
+               'Miller', 'Mitchell', 'Moody', 'Mukasey', 'Murphy', 'Nelson',
+               'Olney', 'Palmer', 'Pierrepont', 'Pinkney', 'Randolph', 'Reno',
+               'Richardson', 'Rodney', 'Rogers', 'Rush', 'Sargent', 'Saxbe',
+               'Smith', 'Speed', 'Stanbery', 'Stanton', 'Stone', 'Taft',
+               'Taney', 'Thornburgh', 'Toucey', 'Wickersham', 'Williams',
+               'Wirt']
+        # self.corp_acros = corp_acros + corp_acros_sans_dots
+        self.corp_identifiers = ['Co.', 'Corp.', 'Inc.', 'Ltd.']
+        bad_words = acros + acros_sans_dots + common_names + ags + \
+            self.make_geographies_list()
+        self.bad_words = [s.lower() for s in bad_words]
+
+        super(CaseNameTweaker, self).__init__()
+
+    @staticmethod
+    def make_geographies_list():
+        """Make a flat list of cities, counties and states that we can exclude
+        from short names.
+        """
+        geonames = geonamescache.GeonamesCache()
+
+        # Make a list of cities with big populations.
+        cities = [v['name'] for v in
+                  geonames.get_cities().values() if (
+                      v['countrycode'] == u'US' and
+                      int(v['population']) > 150000
+                  )]
+        counties = [v['name'] for v in
+                    geonames.get_us_counties()]
+        states = [v['name'] for v in
+                  geonames.get_us_states().values()]
+        return cities + counties + states
+
+    def make_case_name_short(self, s):
+        """Creates short case names where obvious ones can easily be made."""
+        parts = [part.strip().split() for part in s.split(' v. ')]
+        if len(parts) == 1:
+            # No v.
+            if s.lower().startswith('in re'):
+                # Starts with 'in re'
+                # In re Lissner --> In re Lissner
+                return s
+            if s.lower().startswith('matter of'):
+                # Starts with 'matter of' --> [['matter', 'of', 'lissner']]
+                return 'In re %s' % parts[0][2]
+        elif len(parts) == 2:
+            # X v. Y --> [['X'], ['Y']]
+            # X Y Z v. A B --> [['X', 'Y', 'Z'], ['A', 'B']]
+            if len(parts[0]) == 1:
+                if parts[0][0].lower() not in self.bad_words:
+                    # Simple case: Langley v. Google
+                    return parts[0][0]
+                elif len(parts[1]) == 1:
+                    # Plaintiff was a bad_word. Try the defendant.
+                    # Dallas v. Lissner
+                    if parts[1][0].lower() not in self.bad_words:
+                        return parts[1][0]
+            elif len(parts[0]) > 1:
+                # Plaintiff part is longer than a single word, focus on the
+                # defendant.
+                if len(parts[1]) == 1:
+                    # If the defendant is a single word.
+                    if parts[1][0].lower() not in self.bad_words:
+                        # That's not a bad word.
+                        return parts[1][0]
+
+        # More than 1 instance of v. or otherwise no matches --> Give up.
+        return ''

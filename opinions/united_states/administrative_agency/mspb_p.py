@@ -56,3 +56,7 @@ class Site(OpinionSite):
         """
         path = "//tr[@class='ITEMS']/td[2]/text()"
         return [s.replace('\u00A0', ' ') for s in self.html.xpath(path)]
+
+    def _get_case_name_shorts(self):
+        # We don't (yet) support short case names for administrative bodies.
+        return None

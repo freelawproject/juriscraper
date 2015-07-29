@@ -7,7 +7,8 @@ import certifi
 import requests
 from lxml import html
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import harmonize, clean_string, trunc
+from juriscraper.lib.string_utils import harmonize, clean_string, trunc, \
+    CaseNameTweaker
 from juriscraper.tests import MockRequest
 
 try:
@@ -332,3 +333,11 @@ class AbstractSite(object):
           ]
         """
         return self._cookies
+
+    def _get_case_name_shorts(self):
+        """Generates short case names for all the case names that we scrape."""
+        case_name_shorts = []
+        cst = CaseNameTweaker()
+        for case_name in self.case_names:
+            case_name_shorts.append(cst.make_case_name_short(case_name))
+        return case_name_shorts

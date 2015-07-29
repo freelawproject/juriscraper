@@ -8,8 +8,8 @@ History:
 """
 
 from datetime import datetime
-import re
 
+import re
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -81,3 +81,7 @@ class Site(OpinionSite):
         if (year == 2010):
             self.url = 'http://www.asbca.mil/Decisions/decisions.html'
         self.html = self._download()
+
+    def _get_case_name_shorts(self):
+        # We don't (yet) support short case names for administrative bodies.
+        return None
