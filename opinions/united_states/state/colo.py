@@ -7,9 +7,9 @@ Reviewer: mlr
 Date created: 2014-07-11
 """
 
-import re
 from datetime import date
 
+import re
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
 from lxml import html
@@ -27,6 +27,7 @@ class Site(OpinionSite):
         # For testing
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'
         self.court_id = self.__module__
+        self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{2})\. (?P<case_names>.*)\.')
 
     def _get_case_names(self):
         return self._get_data_by_grouping_name('case_names')
@@ -82,18 +83,17 @@ class Site(OpinionSite):
         return natures
 
     def _get_data_by_grouping_name(self, group_name):
-        """Returns the requested meta data from the HTML by finding the titles and extracting the requested piece of
-        meta data.
+        """Returns the requested meta data from the HTML by finding the titles
+        and extracting the requested piece of meta data.
 
         Titles look like:
            2014 COA 80. No. 07CA1217. People v. Schupper.
         """
         path = '//div[@id="opinion"]/p/a/b//text()'
         meta_data = []
-        regex = re.compile(r'(?P<neutral_citations>.*)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{2})\. (?P<case_names>.*)\.')
         for title in self.html.xpath(path):
             title = ' '.join(title.split())
-            value = regex.search(title).group(group_name)
+            value = self.title_regex.search(title).group(group_name)
             meta_data.append(value)
         return meta_data
 

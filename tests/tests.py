@@ -16,7 +16,8 @@ from juriscraper.lib.string_utils import (
     clean_string, fix_camel_case, force_unicode, harmonize, titlecase,
     CaseNameTweaker,
 )
-from juriscraper.opinions.united_states.state import massappct, pa, mass, nh
+from juriscraper.opinions.united_states.state import massappct, pa, mass, nh, \
+    colo
 from juriscraper.oral_args.united_states.federal_appellate import ca6
 
 
@@ -634,6 +635,24 @@ class ScraperSpotTest(unittest.TestCase):
     """Adds specific tests to specific courts that are more-easily tested
     without a full integration test.
     """
+
+    def test_colo(self):
+        strings = (
+            '2015 COA 101. No. 10CA2481. People v. DeGreat.',
+            '2015 COA 102. No. 12CA1589. People v. Froehler.',
+        )
+        attrs = (
+            'docket_numbers',
+            'case_names',
+            'neutral_citations'
+        )
+        site = colo.Site()
+        for s in strings:
+            for attr in attrs:
+                try:
+                    site.title_regex.search(s).group(attr)
+                except AttributeError:
+                    self.fail("Unable to parse string: '{s}'".format(s=s))
 
     def test_mass(self):
         strings = (
