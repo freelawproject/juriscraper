@@ -1,9 +1,10 @@
-from datetime import date
 import hashlib
+from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
-import re
 import certifi
+
+import re
 import requests
 from lxml import html
 from juriscraper.lib.log_tools import make_default_logger
@@ -126,6 +127,8 @@ class AbstractSite(object):
                     else:
                         if isinstance(sub_item, basestring):
                             sub_item = clean_string(sub_item)
+                        elif isinstance(sub_item, datetime):
+                            sub_item = sub_item.date()
                         if attr in ['case_names', 'docket_numbers']:
                             sub_item = harmonize(sub_item)
                     cleaned_item.append(sub_item)
