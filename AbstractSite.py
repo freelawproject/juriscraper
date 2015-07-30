@@ -249,20 +249,29 @@ class AbstractSite(object):
             logger.info("Now downloading case page at: %s (params: %s)" % (self.url, truncated_params))
         else:
             logger.info("Now downloading case page at: %s" % self.url)
+
+        # Set up verify here and remove it from request_dict so you don't send
+        # it to s.get or s.post in two kwargs.
+        if request_dict.get('verify') is not None:
+            verify = request_dict['verify']
+            del request_dict['verify']
+        else:
+            verify = certifi.where()
+
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
         if self.method == 'GET':
             r = s.get(
                 self.url,
                 headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
+                verify=verify,
                 **request_dict
             )
         elif self.method == 'POST':
             r = s.post(
                 self.url,
                 headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
+                verify=verify,
                 data=self.parameters,
                 **request_dict
             )
