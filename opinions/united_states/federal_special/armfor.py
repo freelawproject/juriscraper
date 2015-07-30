@@ -2,9 +2,9 @@
 CourtID: armfor
 Court Short Name: C.A.A.F."""
 
+from datetime import date, datetime
+
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
 from lxml import html
 
 
@@ -27,10 +27,15 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         dates = []
+        date_formats = ('%b %d, %Y', '%B %d, %Y')
         for s in self.html.xpath('//table//tr[descendant::a]/td[3]/font/text()'):
             s = s.strip()
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(
-                s, '%b %d, %Y'))))
+            for date_format in date_formats:
+                try:
+                    dates.append(datetime.strptime(s, date_format).date())
+                    break
+                except ValueError:
+                    continue
         return dates
 
     def _get_docket_numbers(self):
