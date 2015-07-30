@@ -184,6 +184,10 @@ class StringUtilTest(unittest.TestCase):
             # Long left, short right
             ('Many words here v. Langley', 'Langley'),
 
+            # Other manually added items
+            ('Ilarion v. State', 'Ilarion'),
+            ('Imery v. Vangil Ingenieros', 'Imery'),
+
             # Many more tests from real data!
             ('Bean v. City of Monahans', 'Bean'),
             ('Blanke v. Time, Inc.', 'Blanke'),

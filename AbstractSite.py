@@ -67,6 +67,11 @@ class AbstractSite(object):
             self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
 
         self._clean_attributes()
+        if 'case_name_shorts' in self._all_attrs:
+            # This needs to be done *after* _clean_attributes() has been run.
+            # The current architecture means this gets run twice. Once when we
+            # iterate over _all_attrs, and again here. It's pretty cheap though.
+            self.case_name_shorts = self._get_case_name_shorts()
         self._post_parse()
         self._check_sanity()
         self._date_sort()
@@ -89,8 +94,8 @@ class AbstractSite(object):
             5. ?
         """
         # Remove <![CDATA because it causes breakage in lxml.
-        text = re.sub(r'<!\[CDATA\[', '', text)
-        text = re.sub(r'\]\]>', '', text)
+        text = re.sub(r'<!\[CDATA\[', u'', text)
+        text = re.sub(r'\]\]>', u'', text)
 
         # Remove <?xml> declaration in Unicode objects, because it causes an error:
         # "ValueError: Unicode strings with encoding declaration are not supported."
@@ -278,17 +283,6 @@ class AbstractSite(object):
         # Provide the response in the Site object
         self.r = r
         self.status = r.status_code
-
-        if r.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
-            # (https://github.com/kennethreitz/requests/pull/814/)
-            r.encoding = chardet.detect(r.content)['encoding']
 
         # Grab the content
         text = self._clean_text(r.text)

@@ -8,7 +8,6 @@ from lib.importer import build_module_list, site_yielder
 
 
 
-
 # for use in catching the SIGINT (Ctrl+4)
 from lib.string_utils import trunc
 
@@ -67,8 +66,7 @@ def scrape_court(site, binaries=False):
 
         # Normally, you'd do your save routines here...
         v_print(1, 'Adding new document found at: %s' % download_url)
-        attributes = site._all_attrs
-        for attr in attributes:
+        for attr in site._all_attrs:
             if getattr(site, attr) is not None:
                 value = getattr(site, attr)[i]
                 if type(value) == unicode:
