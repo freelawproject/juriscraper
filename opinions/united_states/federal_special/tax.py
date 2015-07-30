@@ -5,9 +5,9 @@
 # Neutral Citation Format (Memorandum opinions): T.C. Memo 2012-1
 # Neutral Citation Format (Summary opinions: T.C. Summary Opinion 2012-1
 
+from datetime import datetime
+
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
 
 
 class Site(OpinionSite):
@@ -18,17 +18,17 @@ class Site(OpinionSite):
         self.court_id = self.__module__
 
     def _get_download_urls(self):
-        return [t for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/@href')]
+        return [t for t in self.html.xpath('//*[@id="Content_pnlOpinions"]//table/tr[position() > 1]/td/a/@href')]
 
     def _get_case_names(self):
         case_names = []
-        for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/text()'):
+        for t in self.html.xpath( '//*[@id="Content_pnlOpinions"]//table/tr[position() > 1]/td/a/text()'):
             case_names.append(t + ' v. Commissioner')
         return case_names
 
     def _get_precedential_statuses(self):
         statuses = []
-        for t in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td/a/@href'):
+        for t in self.html.xpath( '//*[@id="Content_pnlOpinions"]//table/tr[position() > 1]/td/a/@href'):
             if ".TC." in t:
                 statuses.append('Published')
             elif ".TCM." in t:
@@ -40,5 +40,6 @@ class Site(OpinionSite):
         return statuses
 
     def _get_case_dates(self):
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string.strip(), '%m/%d/%Y')))
-            for date_string in self.html.xpath('//table/tr[4]/td[2]/table/tr/td/table/tr/td/table/tr[position() > 1]/td[2]/text()')]
+        path = '//*[@id="Content_pnlOpinions"]//table/tr[position() > 1]/td[2]/text()'
+        return [datetime.strptime(date_string, '%m/%d/%Y').date()
+                for date_string in self.html.xpath(path)]
