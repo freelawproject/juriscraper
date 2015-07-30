@@ -2,11 +2,11 @@
 # Date created: 2013-06-06
 # Updated: 2013-07-01 (make it abort on 1st of month before 4pm)
 
-import re
 from datetime import date
 from datetime import datetime
-from lxml import html
 
+import re
+from lxml import html
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -96,6 +96,8 @@ class Site(OpinionSite):
                 del self.precedential_statuses[i]
                 del self.docket_numbers[i]
                 del self.neutral_citations[i]
+                del self.case_name_shorts[i]
         else:
-            # When there aren't any neutral cites that means everything is a supreme court case.
+            # When there aren't any neutral cites that means everything is a
+            # supreme court case.
             pass

@@ -18,10 +18,11 @@ class OpinionSite(AbstractSite):
             'docket_attachment_numbers', 'docket_document_numbers',
             'docket_numbers', 'judges', 'lower_courts', 'lower_court_judges',
             'lower_court_numbers', 'nature_of_suit', 'neutral_citations',
-            'summaries', 'west_citations', 'west_state_citations'
+            'summaries', 'west_citations', 'west_state_citations',
+            'case_name_shorts',
         ]
         self._req_attrs = ['case_dates', 'case_names', 'download_urls',
-                           'precedential_statuses', 'case_name_shorts']
+                           'precedential_statuses']
         # For date sorting to work, case_dates must be first in _all_attrs.
         self._all_attrs = self._req_attrs + self._opt_attrs
 

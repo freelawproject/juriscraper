@@ -280,6 +280,16 @@ class AbstractSite(object):
         if r.encoding == 'ISO-8859-1':
             r.encoding = 'cp1252'
 
+        if r.encoding is None:
+            # Requests detects the encoding when the item is GET'ed using
+            # HTTP headers, and then when r.text is accessed, if the encoding
+            # hasn't been set by that point. By setting the encoding here, we
+            # ensure that it's done by cchardet, if it hasn't been done with
+            # HTTP headers. This way it is done before r.text is accessed
+            # (which would do it with vanilla chardet). This is a big
+            # performance boon, and can be removed once requests is upgraded
+            r.encoding = chardet.detect(r.content)['encoding']
+
         # Provide the response in the Site object
         self.r = r
         self.status = r.status_code

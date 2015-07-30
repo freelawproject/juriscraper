@@ -4,10 +4,10 @@
 # result, years can go by without a case from this court.
 
 
-from juriscraper.opinions.united_states.state import nd
-
 from datetime import date
 from datetime import datetime
+
+from juriscraper.opinions.united_states.state import nd
 from lxml import html
 
 
@@ -19,9 +19,10 @@ class Site(nd.Site):
         now = datetime.now()
         self.url = 'http://www.ndcourts.gov/opinions/month/%s.htm' % (today.strftime("%b%Y"))
         if today.day == 1 and now.hour < 16:
-            # On the first of the month, the page doesn't exist until later in the day, so when that's the case,
-            # we don't do anything until after 16:00. If we try anyway, we get a 503 error. This simply aborts the
-            # crawler.
+            # On the first of the month, the page doesn't exist until later in
+            # the day, so when that's the case,  we don't do anything until
+            # after 16:00. If we try anyway, we get a 503 error. This simply
+            # aborts the crawler.
             self.status = 200
             self.html = html.fromstring('<html></html>')
 
@@ -40,6 +41,7 @@ class Site(nd.Site):
                 del self.precedential_statuses[i]
                 del self.docket_numbers[i]
                 del self.neutral_citations[i]
+                del self.case_name_shorts[i]
         else:
             # When there aren't any neutral cites that means everything is a
             # supreme court case, and it all gets deleted.
@@ -49,3 +51,4 @@ class Site(nd.Site):
             self.precedential_statuses = []
             self.docket_numbers = []
             self.neutral_citations = []
+            self.case_name_shorts = []
