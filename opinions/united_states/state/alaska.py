@@ -3,12 +3,14 @@ Auth: Jordan Atanasov <jordan.atanasov@commetric.com>
 History:
     2012-05-07: Written by Jordan.
     2012-07-06: Updated by mlr to only get the first ten items.
+    2015-07-28: Updated by m4h7 to have improved xpaths.
 Notes: Only queries first ten dates. Beyond that, they get messy.
 """
 
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):

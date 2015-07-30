@@ -1,10 +1,13 @@
-#  Scraper for Florida 3rd District Court of Appeal
-# CourtID: flaapp3
-# Court Short Name: flaapp3
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date created: 21 July 2014
+"""
+Scraper for Florida 3rd District Court of Appeal
+CourtID: flaapp3
+Court Short Name: flaapp3
 
+History:
+ - 2014-07-21: Written by Andrei Chelaru
+ - 2014-07-24: Reviewed by mlr
+ - 2015-07-28: Updated by m4h7
+"""
 
 from datetime import date
 import time

@@ -8,14 +8,13 @@
 # - 2014-10-17, mlr: Added support for days with "Special Issuances"
 # - 2015-06-17, mlr: Fixes some regex problems and expands an XPath to be more
 #   lenient.
+# - 2015-07-29, m4h7: Tweaks to work on new site.
 
 
 import time
-
 from datetime import date
 
 import certifi
-
 import re
 import requests
 from lxml import html
@@ -63,7 +62,7 @@ class Site(OpinionSite):
 
     def _get_case_names(self):
         case_names = []
-        for html_tree,_ in self.html:
+        for html_tree, _ in self.html:
             case_names.extend(self._return_case_names(html_tree))
         return case_names
 
@@ -73,7 +72,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         download_urls = []
-        for html_tree,_ in self.html:
+        for html_tree, _ in self.html:
             download_urls.extend(self._return_download_urls(html_tree))
         return download_urls
 
@@ -83,7 +82,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         case_dates = []
-        for html_tree,url in self.html:
+        for html_tree, url in self.html:
             case_dates.extend(self._return_dates(html_tree, url))
         return case_dates
 
@@ -113,7 +112,7 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for html_tree,_ in self.html:
+        for html_tree, _ in self.html:
             docket_numbers.extend(self._return_docket_numbers(html_tree))
         return docket_numbers
 
