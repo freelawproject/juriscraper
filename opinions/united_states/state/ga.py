@@ -1,15 +1,16 @@
 #  Scraper for Georgia Supreme Court
 # CourtID: ga
 # Court Short Name: ga
-# Author: Andrei Chelaru
-# Reviewer: mlr
-# Date created: 25 July 2014
+# History:
+#  - 2014-07-25: Created by Andrei Chelaru, reviewed by mlr
+#  - 2015-07-30: MLR: Added more lenient dates.
 
 
-from datetime import date, datetime
+from datetime import date
+
+from juriscraper.lib.date_utils import parse_dates
 from juriscraper.lib.string_utils import titlecase
 import re
-
 from juriscraper.OpinionSite import OpinionSite
 
 
@@ -33,9 +34,8 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         case_dates = []
         for e in self.html.xpath(self.base_path):
-            text = ' '.join(e.xpath(".//text()[not(contains(., 'SUMMARIES'))]"))
-            text = re.sub('-', '', text)
-            case_date = datetime.strptime(text.strip(), '%B %d, %Y').date()
+            s = ' '.join(e.xpath(".//text()"))
+            case_date = parse_dates(s)[0]
             case_dates.extend([case_date] * int(e.xpath("count(./following::ul[1]//li)")))
         return case_dates
 
