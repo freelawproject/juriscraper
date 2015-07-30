@@ -9,3 +9,5 @@ install:
  - pip install -r requirements.txt
 script:
  - python tests/tests.py
+notifications:
+  slack: flp-talk:iG0Qd1lAUJuXZlkcf2sbUC5P
