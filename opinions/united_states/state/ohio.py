@@ -6,11 +6,17 @@ Reviewer: mlr
 History:
  - Stubbed out by Brian Carver
  - 2014-07-30: Finished by Andrei Chelaru
+ - 2015-07-31: Redone by mlr to use ghost driver. Alas, their site used to be
+               great, but now it's terribly frustrating.
 """
+from datetime import date, datetime
 
+import os
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-import time
-from datetime import date
+from lxml import html
+from lxml.html import tostring
+from selenium import webdriver
 
 
 class Site(OpinionSite):
@@ -22,23 +28,60 @@ class Site(OpinionSite):
         # single day might yield more than 25 opinions and this scraper is
         # not designed to walk through multiple pages.
         self.court_index = 0
-        self.year = date.today().year
-        self.url = self.make_url(self.court_index, self.year)
+        self.year = str(date.today().year)
+        self.url = 'http://www.supremecourtofohio.gov/rod/docs/'
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(1992, 2014)
-        self.base_path = "id('Table1')//tr[position() > 1]/td[2][normalize-space(.//text())]"
+        self.base_path = "id('MainContent_gvResults')//tr[position() > 1]/td[2][string-length(normalize-space(text())) > 1]"
 
-    @staticmethod
-    def make_url(index, year):
-        return (
-            'http://www.sconet.state.oh.us/ROD/docs/default.asp?Page=1&Sort=docdecided%20DESC&PageSize=100&Source={court}&iaFilter={year}&ColumnMask=669'.format(
-            court=index,
-            year=year)
-        )
+    def _download(self, request_dict={}):
+        """This is another of the cursed MS asp.net pages with damned POST
+          parameters like __EVENTVALIDATION. These are near impossible to
+          scrape without using Selenium.
+        """
+        if self.method == 'LOCAL':
+            return super(Site, self)._download(request_dict=request_dict)
+        else:
+            driver = webdriver.PhantomJS(
+                executable_path='/usr/local/phantomjs/phantomjs',
+                service_log_path=os.path.devnull,  # Disable ghostdriver.log
+            )
+            driver.implicitly_wait(30)
+            logger.info("Now downloading case page at: %s" % self.url)
+            driver.get(self.url)
+
+            # Court drop down...
+            driver.find_element_by_xpath(
+                "//select[@id='MainContent_ddlCourt']"
+                "/option[@value='{court}']".format(court=self.court_index)
+            ).click()
+
+            # Year drop down...
+            driver.find_element_by_xpath(
+                "//select[@id='MainContent_ddlDecidedYear']"
+                "/option[@value='{year}']".format(year=self.year)
+            ).click()
+
+            # Hit submit
+            driver.find_element_by_xpath(
+                "//input[@id='MainContent_btnSubmit']"
+            ).click()
+
+            # Selenium doesn't give us the actual code, we have to hope.
+            self.status = 200
+
+            text = self._clean_text(driver.page_source)
+            html_tree = html.fromstring(text)
+            html_tree.rewrite_links(self._link_repl)
+        return html_tree
 
     def _get_case_names(self):
-        path = "{base}/preceding::td[1]//text()".format(base=self.base_path)
-        return list(self.html.xpath(path))
+        path = "{base}/preceding::td[1]".format(base=self.base_path)
+        case_names = []
+        for e in self.html.xpath(path):
+            case_names.append(
+                tostring(e, method='text', encoding='unicode').strip()
+            )
+        return case_names
 
     def _get_download_urls(self):
         path = "{base}/preceding::td[1]//a[1]/@href".format(base=self.base_path)
@@ -53,15 +96,14 @@ class Site(OpinionSite):
         return list(self.html.xpath(path))
 
     def _get_case_dates(self):
-        path = "{base}/following::td[3]//text()".format(base=self.base_path)
+        path = "{base}/following::td[4]//text()".format(base=self.base_path)
         dates = []
-        for txt in self.html.xpath(path):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(
-                txt.strip(), '%m/%d/%Y'))))
+        for s in self.html.xpath(path):
+            dates.append(datetime.strptime(s.strip(), '%m/%d/%Y').date())
         return dates
 
     def _get_neutral_citations(self):
-        path = "{base}/following::td[4]//text()".format(base=self.base_path)
+        path = "{base}/following::td[6]//text()".format(base=self.base_path)
         return [s.replace('-', ' ') for s in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
@@ -78,10 +120,3 @@ class Site(OpinionSite):
             return txt[0]
         else:
             return ''
-
-    def _download_backwards(self, i):
-        self.url = 'http://www.sconet.state.oh.us/ROD/docs/default.asp?Page={i}&Sort=docdecided%20DESC&PageSize=100&Source={court}&iaFilter=-2&ColumnMask=669'.format(
-            i=i,
-            court=self.court_index,
-        )
-        self.html = self._download()
