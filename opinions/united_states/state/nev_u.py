@@ -11,9 +11,10 @@ class Site(nev_p.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://supreme.nvcourts.gov/Supreme/Decisions/Unpublished_Orders/'
+        self.url = 'http://nvcourts.gov/Supreme/Decisions/Unpublished_Orders/'
         self.xpath_adjustment = -1
-        self.selector = 'ctl00_ContentPlaceHolderContent_UnpublishedOrders_GridView1'
+        self.table_number = 1
+        self.date_path = self._make_date_path()
 
     def _get_case_names(self):
         # Runs the code from super, but titlecases.
