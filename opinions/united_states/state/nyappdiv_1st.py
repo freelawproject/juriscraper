@@ -38,7 +38,7 @@ class Site(OpinionSite):
         dates = self.html.xpath(path)
         case_dates = []
         for index, case_date in enumerate(dates):
-            path_2 = "count(//table[./caption][{c}]//tr[.//@href])".format(c=index + 1)
+            path_2 = "count(//table[./caption][{c}]/tr[.//@href])".format(c=index + 1)
             d = date.fromtimestamp(time.mktime(time.strptime(re.sub('Cases Decided ', '', case_date), '%B %d, %Y')))
             case_dates.extend([d] * int(self.html.xpath(path_2)))
         return case_dates
