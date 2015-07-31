@@ -11,7 +11,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://supreme.nvcourts.gov/Supreme/Decisions/Advance_Opinions/'
+        self.url = 'http://nvcourts.gov/Supreme/Decisions/Advance_Opinions/'
         self.xpath_adjustment = 0
         self.selector = 'ctl00_ContentPlaceHolderContent_AdvanceOpinions_GridView1'
 
