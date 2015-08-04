@@ -519,4 +519,4 @@ class CaseNameTweaker(object):
                         return parts[1][0]
 
         # More than 1 instance of v. or otherwise no matches --> Give up.
-        return ''
+        return u''
