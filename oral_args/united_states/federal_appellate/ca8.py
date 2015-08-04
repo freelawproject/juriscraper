@@ -8,6 +8,7 @@ History:
 """
 
 from datetime import datetime
+
 from juriscraper.OralArgumentSite import OralArgumentSite
 
 
@@ -15,7 +16,7 @@ class Site(OralArgumentSite):
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
-        self.url = 'http://8cc-www.ca8.uscourts.gov/circ8rss.xml'
+        self.url = 'http://media-oa.ca8.uscourts.gov/circ8rss.xml'
 
     def _download(self, request_dict={}):
         """Go through the items and filter out ones that aren't complete.
@@ -46,7 +47,7 @@ class Site(OralArgumentSite):
             # I can't see it, but there's apparently whitespace or a newline
             # at the end of these dates that has to be removed or we error out.
             case_date = txt.split('about ', 1)[1].strip()
-            case_dates.append(datetime.strptime(case_date, '%m-%d-%Y').date())
+            case_dates.append(datetime.strptime(case_date, '%m/%d/%Y').date())
         return case_dates
 
     def _get_docket_numbers(self):
