@@ -84,9 +84,10 @@ Intellij inspection issues.
    speed warnings
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
-that makes sense and that nobody else is working on. Alternatively, we have
-[a list][6] of courts that you can browse yourself. There are templates for new
-scrapers [here][10] and [here][11].
+that makes sense and that nobody else is working on. If you're interested, we 
+have [a public slack channel you can join][slack], where we can chat. 
+Alternatively, we have [a list][6] of courts that you can browse yourself. 
+There are templates for new scrapers [here][10] and [here][11].
 
 When you're done with your scraper, fork this repository, push your changes 
 into your fork, and then send a pull request for your changes. Be sure to
@@ -99,6 +100,8 @@ root of the repository. While an annoying bit of paperwork, this license is for
 your protection as a Contributor as well as the protection of Free Law Project
 and our users; it does not change your rights to use your own Contributions for
 any other purpose.
+
+[![Slack Status](https://join-flp-talk.herokuapp.com/badge.svg)][slack]
 
 
 Usage
@@ -206,3 +209,4 @@ Juriscraper is licensed under the permissive BSD license.
 [11]: https://github.com/freelawproject/juriscraper/blob/master/oral_args/oral_argument_template.py
 [12]: https://travis-ci.org/freelawproject/juriscraper
 [tci]: https://travis-ci.org/
+[slack]: https://join-flp-talk.herokuapp.com/
