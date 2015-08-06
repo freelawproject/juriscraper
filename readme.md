@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/freelawproject/juriscraper.svg?branch=master)][12]
+[![Build Status](https://travis-ci.org/freelawproject/juriscraper.svg?branch=master)][12]  [![Slack Status](https://join-flp-talk.herokuapp.com/badge.svg)][slack]
 
 What is This?
 =============
