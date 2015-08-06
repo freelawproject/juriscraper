@@ -25,13 +25,15 @@ class Site(OpinionSite):
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'
         self.court_id = self.__module__
         self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{1,2})\. (?P<case_names>.*)\.')
+        self.path = "//table//td[1]/ul/li[position() <= 5]/strong/a"
+        # dummy sequence to force one call to _download_backwards
+        self.back_scrape_iterable = [ 'dummy' ]
 
     def _download(self, request_dict={}):
         html_l = super(Site, self)._download(request_dict)
         s = requests.session()
         html_trees = []
-        path = "//table//td[1]/ul/li/strong/a"
-        for ahref in html_l.xpath(path):
+        for ahref in html_l.xpath(self.path):
             text = ahref.xpath("./text()")[0]
             url = ahref.xpath("./@href")[0]
             parsed_date = datetime.strptime(text, "%B %d, %Y").date()
@@ -141,3 +143,10 @@ class Site(OpinionSite):
                 value = self.title_regex.search(title).group(group_name)
                 meta_data.append(value)
         return meta_data
+
+    def _download_backwards(self, _):
+        # dummy backscrape parameter is ignored
+        # should be called only once as it parses the whole page
+        # and all subpages on every call
+        self.path = "//table//td[1]/ul/li/strong/a"
+        self.html = self._download()
