@@ -27,5 +27,9 @@ class Site(okla.Site):
     def cleanup_content(content):
         tree = html.fromstring(content)
         core_element = tree.xpath('//div[contains(concat(" ", normalize-space(@class), " "), " main ")]')[0]
-        return html.tostring(core_element, pretty_print=True, encoding='unicode')
+        return html.tostring(
+            core_element,
+            pretty_print=True,
+            encoding='unicode'
+        )
 

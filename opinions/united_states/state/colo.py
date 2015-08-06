@@ -153,6 +153,15 @@ class Site(OpinionSite):
                 meta_data.append(value)
         return meta_data
 
+    @staticmethod
+    def cleanup_content(content):
+        tree = html.fromstring(content)
+        return html.tostring(
+            tree.xpath("//*[@id='opinion']")[0],
+            pretty_print=True,
+            encoding='unicode'
+        )
+
     def _download_backwards(self, _):
         # dummy backscrape parameter is ignored
         # should be called only once as it parses the whole page
