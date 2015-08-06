@@ -6,32 +6,59 @@ Author: mlr
 """
 
 from juriscraper.OpinionSite import OpinionSite
-from datetime import datetime
-
+from datetime import datetime, date
+import requests
+import certifi
+import time
+import re
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.courts.state.wy.us/Home/Opinions'
+        self.base_url = 'http://www.courts.state.wy.us'
+        self.url = self.base_url + '/Home/GetOpinions'
         self.court_id = self.__module__
 
+    def _download(self, request_dict={}):
+        r = requests.get(
+            self.url,
+            headers={'User-Agent': 'Juriscraper'},
+            verify=certifi.where(),
+            **request_dict
+            )
+        return r.json()
+
     def _get_case_names(self):
-        return list(self.html.xpath("id('tblOpinions')//tr/td[3]/text()"))
+        case_names = []
+        for v in self.html['Data']:
+            case_names.append('%s v. %s' % (v['appellant'], v['appellee']))
+        return case_names
 
     def _get_download_urls(self):
-        return [href for href in
-                self.html.xpath("id('tblOpinions')//tr/td[1]//@href")]
+        download_urls = []
+        for v in self.html['Data']:
+            relpath = v['DocumentName']
+            if relpath[:5] == '../..':
+                relpath = relpath[5:]
+            url = self.base_url + relpath
+            download_urls.append(url)
+        return download_urls
 
     def _get_case_dates(self):
-        path = "id('tblOpinions')//tr/td[2]/text()"
-        return [datetime.strptime(date_string, '%m/%d/%Y').date()
-                for date_string in self.html.xpath(path)]
+        case_dates = []
+        date_re = re.compile(r"^/Date\((\d+)\)/$")
+        for v in self.html['Data']:
+            m = date_re.match(v['date_heard'])
+            if m:
+                t = int(m.group(1)) / 1000
+                case_dates.append(datetime.fromtimestamp(t).date())
+        return case_dates
 
     def _get_docket_numbers(self):
-        return list(self.html.xpath("id('tblOpinions')//tr/td[5]/text()"))
+        return [v['DocketNumber'] for v in self.html['Data']]
 
     def _get_neutral_citations(self):
-        return list(self.html.xpath("id('tblOpinions')//tr/td[1]//text()"))
+        return [v['OpinionID'] for v in self.html['Data']]
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
