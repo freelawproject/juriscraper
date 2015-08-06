@@ -30,34 +30,43 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [ 'dummy' ]
 
     def _download(self, request_dict={}):
-        html_l = super(Site, self)._download(request_dict)
-        s = requests.session()
-        html_trees = []
-        for ahref in html_l.xpath(self.path):
-            text = ahref.xpath("./text()")[0]
-            url = ahref.xpath("./@href")[0]
-            parsed_date = datetime.strptime(text, "%B %d, %Y").date()
-            r = s.get(
-                url,
-                headers={'User-Agent': 'Juriscraper'},
-                verify=certifi.where(),
-                **request_dict
-            )
+        if self.method == 'LOCAL':
+            # Note that this is returning a list of HTML tree-date pairs.
+            html_trees = [
+                (
+                    super(Site, self)._download(request_dict=request_dict),
+                    date.today(),
+                ),
+            ]
+        else:
+            html_l = super(Site, self)._download(request_dict)
+            s = requests.session()
+            html_trees = []
+            for ahref in html_l.xpath(self.path):
+                text = ahref.xpath("./text()")[0]
+                url = ahref.xpath("./@href")[0]
+                parsed_date = datetime.strptime(text, "%B %d, %Y").date()
+                r = s.get(
+                    url,
+                    headers={'User-Agent': 'Juriscraper'},
+                    verify=certifi.where(),
+                    **request_dict
+                )
 
-            r.raise_for_status()
+                r.raise_for_status()
 
-            # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-            if r.encoding == 'ISO-8859-1':
-                r.encoding = 'cp1252'
+                # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+                if r.encoding == 'ISO-8859-1':
+                    r.encoding = 'cp1252'
 
-            # Grab the content
-            text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
-            html_tree.make_links_absolute(self.url)
+                # Grab the content
+                text = self._clean_text(r.text)
+                html_tree = html.fromstring(text)
+                html_tree.make_links_absolute(self.url)
 
-            remove_anchors = lambda url: url.split('#')[0]
-            html_tree.rewrite_links(remove_anchors)
-            html_trees.append((html_tree, parsed_date))
+                remove_anchors = lambda url: url.split('#')[0]
+                html_tree.rewrite_links(remove_anchors)
+                html_trees.append((html_tree, parsed_date))
         return html_trees
 
     def _get_case_names(self):
