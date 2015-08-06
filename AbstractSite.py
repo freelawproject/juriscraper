@@ -3,7 +3,6 @@ from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
 import certifi
-
 import re
 import requests
 from lxml import html
@@ -317,7 +316,7 @@ class AbstractSite(object):
         pass
 
     @staticmethod
-    def _cleanup_content(content):
+    def cleanup_content(content):
         """
           Given the HTML from a page, the binary PDF file, or similar, do any
           last-minute cleaning.

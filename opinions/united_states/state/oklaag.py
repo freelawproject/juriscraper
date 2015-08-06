@@ -24,7 +24,7 @@ class Site(okla.Site):
         return ['Unpublished'] * len(self.case_names)
 
     @staticmethod
-    def _cleanup_content(content):
+    def cleanup_content(content):
         tree = html.fromstring(content)
         core_element = tree.xpath('//div[contains(concat(" ", normalize-space(@class), " "), " main ")]')[0]
         return html.tostring(core_element, pretty_print=True, encoding='unicode')

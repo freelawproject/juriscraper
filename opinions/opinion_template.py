@@ -210,7 +210,7 @@ class Site(OpinionSite):
       Optional methods for special purposes
     """
     @staticmethod
-    def _cleanup_content(content):
+    def cleanup_content(content):
         """
           Given the HTML from a page, this method is used to strip it down to its bare essentials.
 

@@ -8,6 +8,7 @@ from lib.importer import build_module_list, site_yielder
 
 
 
+
 # for use in catching the SIGINT (Ctrl+4)
 from lib.string_utils import trunc
 
@@ -24,8 +25,8 @@ def signal_handler(signal, frame):
 
 
 def extract_doc_content(data):
-    # Your data extraction routines here.
-    pass
+    # Your data extraction routines here. (pdftotext, abiword, etc.)
+    return data
 
 
 def scrape_court(site, binaries=False):
@@ -60,9 +61,10 @@ def scrape_court(site, binaries=False):
                 v_print(3, traceback.format_exc())
                 continue
 
-            # Clean the data, then extract it using e.g. antiword, pdftotext, etc.
-            data = site._cleanup_content(data)
-            extract_doc_content(data)
+            # Extract the data using e.g. antiword, pdftotext, etc., then
+            # clean it up.
+            data = extract_doc_content(data)
+            data = site.cleanup_content(data)
 
         # Normally, you'd do your save routines here...
         v_print(1, 'Adding new document found at: %s' % download_url)
