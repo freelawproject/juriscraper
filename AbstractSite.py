@@ -306,10 +306,13 @@ class AbstractSite(object):
         self.status = r.status_code
 
         # Grab the content
-        text = self._clean_text(r.text)
-        html_tree = html.fromstring(text)
-        html_tree.rewrite_links(self._link_repl)
-        return html_tree
+        if 'json' in r.headers.get('content-type', ''):
+            return r.json()
+        else:
+            text = self._clean_text(r.text)
+            html_tree = html.fromstring(text)
+            html_tree.rewrite_links(self._link_repl)
+            return html_tree
 
     def _download_backwards(self):
         # methods for downloading the entire Site

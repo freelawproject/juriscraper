@@ -1,16 +1,16 @@
 """Scraper for Wyoming Supreme Court
 CourtID: wyo
 Court Short Name: Wyo.
-Author: mlr
-2014-07-02: Created new version when court got new website.
+History:
+ - 2014-07-02: mlr: Created new version when court got new website.
+ - 2015-07-06: m4h7: Updated to use JSON!
 """
 
+from datetime import datetime
+
 from juriscraper.OpinionSite import OpinionSite
-from datetime import datetime, date
-import requests
-import certifi
-import time
 import re
+
 
 class Site(OpinionSite):
     def __init__(self):
@@ -18,15 +18,6 @@ class Site(OpinionSite):
         self.base_url = 'http://www.courts.state.wy.us'
         self.url = self.base_url + '/Home/GetOpinions'
         self.court_id = self.__module__
-
-    def _download(self, request_dict={}):
-        r = requests.get(
-            self.url,
-            headers={'User-Agent': 'Juriscraper'},
-            verify=certifi.where(),
-            **request_dict
-            )
-        return r.json()
 
     def _get_case_names(self):
         case_names = []
