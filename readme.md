@@ -119,11 +119,18 @@ The scrapers are written in Python, and can can scrape a court as follows:
     # Print out the object
     print str(site)
     
+    # Print it out as JSON
+    print site.to_json()
+    
+    # Iterate over the item
+    for opinion in site:
+        print opinion
+    
 That will print out all the current meta data for a site, including links to 
 the objects you wish to download (typically opinions). If you download those
 opinions, we also recommend running the `_cleanup_content()` method against the
 items that you download (PDFs, HTML, etc.). See the `sample_caller.py` for an
-example.
+example and see `_cleanup_content()` for an explanation of what it does.
 
 It's also possible to iterate over all courts in a Python package, even if
 they're not known before starting the scraper. For example:
@@ -143,10 +150,6 @@ they're not known before starting the scraper. For example:
 This can be useful if you wish to create a command line scraper that iterates
 over all courts of a certain jurisdiction that is provided by a script or a user.
 See `lib/importer.py` for an example that's used in the sample caller.
-
-Development of a `to_xml()` or `to_json()` method has not yet been completed, as
-all callers have thus far been able to work directly with the Python objects. We
-welcome contributions in this area.
 
 
 Tests

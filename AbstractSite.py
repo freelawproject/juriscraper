@@ -1,4 +1,5 @@
 import hashlib
+import json
 from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
@@ -6,9 +7,11 @@ import certifi
 import re
 import requests
 from lxml import html
+from juriscraper.lib.date_utils import json_date_handler
 from juriscraper.lib.log_tools import make_default_logger
-from juriscraper.lib.string_utils import harmonize, clean_string, trunc, \
-    CaseNameTweaker
+from juriscraper.lib.string_utils import (
+    harmonize, clean_string, trunc, CaseNameTweaker
+)
 from juriscraper.tests import MockRequest
 
 try:
@@ -42,7 +45,7 @@ class AbstractSite(object):
         self.back_scrape_iterable = None
         self.cookies = {}
 
-        # Upstream metadata
+        # Sub-classed metadata
         self.court_id = None
         self.url = None
         self.parameters = None
@@ -52,9 +55,36 @@ class AbstractSite(object):
 
     def __str__(self):
         out = []
-        for attr, val in self.__dict__.iteritems():
+        for attr, val in self.__dict__.items():
             out.append('%s: %s' % (attr, val))
         return '\n'.join(out)
+
+    def __iter__(self):
+        for i in range(0, len(self.case_names)):
+            yield self._make_item(i)
+
+    def __getitem__(self, i):
+        return self._make_item(i)
+
+    def __len__(self):
+        return len(self.case_names)
+
+    def _make_item(self, i):
+        """Using i, convert a single item into a dict. This is effectively a
+        different view of the data.
+        """
+        item = {}
+        for attr_name in self._all_attrs:
+            attr_value = getattr(self, attr_name)
+            if attr_value is not None:
+                item[attr_name] = attr_value[i]
+        return item
+
+    def to_json(self):
+        return json.dumps(
+            [item for item in self],
+            default=json_date_handler,
+        )
 
     def parse(self):
         if self.status is None:

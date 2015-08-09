@@ -15,6 +15,12 @@ MISSPELLINGS = {
     'Term': '1',
 }
 
+json_date_handler = lambda obj: (
+    obj.isoformat()
+    if isinstance(obj, datetime.datetime)
+    or isinstance(obj, datetime.date)
+    else None
+)
 
 class BetterInfo(parserinfo):
     """Removes tokens to provide better support for splitting out multiple
