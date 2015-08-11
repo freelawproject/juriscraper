@@ -1,16 +1,11 @@
 import signal
 import sys
 import traceback
-from optparse import OptionParser
 import urllib2
+from optparse import OptionParser
 
-from lib.importer import build_module_list, site_yielder
-
-
-
-
-# for use in catching the SIGINT (Ctrl+4)
-from lib.string_utils import trunc
+from juriscraper.lib.importer import build_module_list, site_yielder
+from juriscraper.lib.string_utils import trunc
 
 die_now = False
 
@@ -41,9 +36,9 @@ def scrape_court(site, binaries=False):
     Nonetheless, this caller is useful for testing, and for demonstrating some
     basic pitfalls that a caller will run into.
     """
-    for i in range(0, len(site.case_names)):
+    for item in site:
         # Percent encode URLs (this is a Python wart)
-        download_url = urllib2.quote(site.download_urls[i], safe="%/:=&?~#+!$,;'@()*[]")
+        download_url = urllib2.quote(item['download_urls'], safe="%/:=&?~#+!$,;'@()*[]")
 
         if binaries:
             try:
@@ -68,15 +63,13 @@ def scrape_court(site, binaries=False):
 
         # Normally, you'd do your save routines here...
         v_print(1, 'Adding new document found at: %s' % download_url)
-        for attr in site._all_attrs:
-            if getattr(site, attr) is not None:
-                value = getattr(site, attr)[i]
-                if type(value) == unicode:
-                    value = trunc(value, 200, ellipsis='...')
-                    v_print(1, '    %s: "%s"' % (attr, value.encode('utf-8')))
-                else:
-                    # Dates and such...
-                    v_print(1, '    %s: %s' % (attr, value))
+        for k, v in item.items():
+            if type(v) == unicode:
+                value = trunc(v, 200, ellipsis='...')
+                v_print(1, '    %s: "%s"' % (k, value.encode('utf-8')))
+            else:
+                # Dates and such...
+                v_print(1, '    %s: %s' % (k, v))
 
     v_print(3, '%s: Successfully crawled.' % site.court_id)
 
