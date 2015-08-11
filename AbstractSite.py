@@ -389,3 +389,14 @@ class AbstractSite(object):
         for case_name in self.case_names:
             case_name_shorts.append(cst.make_case_name_short(case_name))
         return case_name_shorts
+
+    def _get_blocked_statuses(self):
+        """Should these items be blocked by search engines? Default is False for
+        all subclasses, indicating that the items should not be blocked.
+
+        This method is important because some courts (like family or asylum
+        courts) should choose privacy over openness. Note that we consider
+        these functions to be a hint to callers, so following these guidelines
+        is not guaranteed.
+        """
+        return [False] * len(self.case_names)

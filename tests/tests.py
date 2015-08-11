@@ -111,14 +111,18 @@ class ScraperExampleTest(unittest.TestCase):
                 max_speed = 10
                 warn_speed = 1
                 speed = t2 - t1
+                msg = ''
                 if speed > max_speed:
-                    raise SlownessException(
-                        "This scraper took {speed}s to test, which is more "
-                        "than the allowed speed of {max_speed}s. "
-                        "Please speed it up for tests to pass.".format(
-                            speed=speed,
-                            max_speed=max_speed,
-                        ))
+                    if sys.gettrace() is None:
+                        # Only do this if we're not debugging. Debuggers make
+                        # things slower and breakpoints make things stop.
+                        raise SlownessException(
+                            "This scraper took {speed}s to test, which is more "
+                            "than the allowed speed of {max_speed}s. "
+                            "Please speed it up for tests to pass.".format(
+                                speed=speed,
+                                max_speed=max_speed,
+                            ))
                 elif speed > warn_speed:
                     msg = ' - WARNING: SLOW SCRAPER'
                     num_warnings += 1

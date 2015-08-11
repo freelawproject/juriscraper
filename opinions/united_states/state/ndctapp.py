@@ -42,6 +42,7 @@ class Site(nd.Site):
                 del self.docket_numbers[i]
                 del self.neutral_citations[i]
                 del self.case_name_shorts[i]
+                del self.blocked_statuses[i]
         else:
             # When there aren't any neutral cites that means everything is a
             # supreme court case, and it all gets deleted.
@@ -52,3 +53,4 @@ class Site(nd.Site):
             self.docket_numbers = []
             self.neutral_citations = []
             self.case_name_shorts = []
+            self.blocked_statuses = []
