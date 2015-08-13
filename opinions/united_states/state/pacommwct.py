@@ -15,3 +15,5 @@ class Site(pa.Site):
         self.court_id = self.__module__
         self.regex = re.compile("(.*)- (\d+.*\d{4})")
         self.url = "http://www.pacourts.us/assets/rss/CommonwealthOpinionsRss.ashx"
+        self.base = "//item[not(contains(title/text(), 'Judgment List'))]" \
+                          "[not(contains(title/text(), 'Reargument Table'))]"
