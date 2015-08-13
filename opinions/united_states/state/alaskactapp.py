@@ -31,7 +31,7 @@ class Site(OpinionSite):
             "%B %d, %Y",
             "%B %Y",
         )
-        for h2_element in self.html.xpath('//h2[following-sibling::ul//a/em]'):
+        for h2_element in self.html.xpath('//h4[following-sibling::ul//a/em]'):
             date_string = str(h2_element.xpath('./text()')[0])
 
             if (date_string.find("-") > 0):
