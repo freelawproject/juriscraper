@@ -40,7 +40,7 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//table//tr/td[3]/font/text()'
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string.replace(' ', ''), '%Y-%m-%d')))
+        return [date.fromtimestamp(time.mktime(time.strptime(date_string.replace(' ', '').replace('\t', ''), '%Y-%m-%d')))
                 for date_string in self.html.xpath(path)]
 
     def _get_precedential_statuses(self):
