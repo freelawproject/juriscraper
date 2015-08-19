@@ -230,5 +230,7 @@ class Site(OpinionSite):
 
     def _download_backwards(self, d):
         self.crawl_date = d
+        logger.info("Running backscraper with date: %s" % d)
+        self.case_date = d
         self.backwards_days = 0
         self.html = self._download()
