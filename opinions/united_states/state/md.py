@@ -6,12 +6,9 @@ Author: Andrei Chelaru
 Date created: 06/27/2014
 """
 
+from datetime import date, datetime
 
 from juriscraper.OpinionSite import OpinionSite
-import re
-
-import time
-from datetime import date
 
 
 class Site(OpinionSite):
@@ -40,8 +37,12 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         path = '//table//tr/td[3]/font/text()'
-        return [date.fromtimestamp(time.mktime(time.strptime(date_string.replace(' ', '').replace('\t', ''), '%Y-%m-%d')))
-                for date_string in self.html.xpath(path)]
+        return [
+            datetime.strptime(
+                ''.join(date_string.split()),
+                '%Y-%m-%d'
+            ).date() for date_string in self.html.xpath(path)
+        ]
 
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
