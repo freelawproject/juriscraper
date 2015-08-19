@@ -22,7 +22,8 @@ class Site(OpinionSite):
         self.table = '1'  # Used as part of the paths to differentiate between appellate and supreme
 
     def _get_download_urls(self):
-        path = '//*[@id="content2col"]/table[%s]/tr/td[3]//a/@href' % self.table
+        # ignore <a> elements with empty text
+        path = '//*[@id="content2col"]/table[%s]/tr/td[3]//a[text()]/@href' % self.table
         return list(self.html.xpath(path))
 
     def _get_case_names(self):
