@@ -232,7 +232,3 @@ class Site(OpinionSite):
         self.crawl_date = d
         self.backwards_days = 0
         self.html = self._download()
-
-
-if __name__ == '__main__':
-    site = Site
