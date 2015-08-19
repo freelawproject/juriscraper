@@ -8,6 +8,7 @@
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 from datetime import date, timedelta
+from dateutil.rrule import rrule, DAILY
 
 import certifi
 import os
@@ -26,6 +27,12 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
+        self.backwards_days = 5
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            dtstart=date(2013, 01, 01),
+            until=date(2013, 12, 31),
+        )]
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
         self.courts = {'sc': 0, 'ccrimapp': 1, 'capp_1': 2, 'capp_2': 3, 'capp_3': 4,
@@ -74,7 +81,7 @@ class Site(OpinionSite):
             search_orders.click()
 
             start_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentFrom_dateInput")
-            start_date.send_keys((self.case_date - timedelta(days=5)).strftime("%m/%d/%Y"))
+            start_date.send_keys((self.case_date - timedelta(days=self.backwards_days)).strftime("%m/%d/%Y"))
 
             end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
@@ -220,3 +227,8 @@ class Site(OpinionSite):
     def _get_opinion_count(html_tree):
         return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
+
+    def _download_backwards(self, d):
+        self.crawl_date = d
+        self.backwards_days = 0
+        self.html = self._download()
