@@ -7,9 +7,10 @@
 #  - 2014-07-10: Created by Andrei Chelaru
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
+#  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 from datetime import date, timedelta
-from dateutil.rrule import rrule, DAILY
 
+from dateutil.rrule import rrule, DAILY
 import certifi
 import os
 import requests
