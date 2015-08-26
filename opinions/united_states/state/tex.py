@@ -31,7 +31,7 @@ class Site(OpinionSite):
         self.backwards_days = 5
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
-            dtstart=date(2010, 4, 9),
+            dtstart=date(2010, 1, 1),
             until=date(2015, 8, 30),
         )]
         #self.case_date = date(month=7, year=2014, day=11)
