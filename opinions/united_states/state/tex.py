@@ -102,7 +102,7 @@ class Site(OpinionSite):
             if nr_of_pages:
                 if nr_of_pages.text == '1':
                     text = driver.page_source
-                    driver.close()
+                    driver.quit()
 
                     html_tree = html.fromstring(text)
                     html_tree.make_links_absolute(self.url)
@@ -134,7 +134,7 @@ class Site(OpinionSite):
                         remove_anchors = lambda url: url.split('#')[0]
                         html_tree.rewrite_links(remove_anchors)
                         html_pages.append(html_tree)
-                    driver.close()
+                    driver.quit()
                     return html_pages
 
     def _get_case_names(self):

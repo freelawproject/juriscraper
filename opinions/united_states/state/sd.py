@@ -3,15 +3,13 @@
 # - 2013-06-11: Birth.
 # - 2013-08-06: Revised by Brian Carver
 # - 2014-08-05: Updated URL by mlr
-import os
-
-import re
 from datetime import datetime
 
+import os
+import re
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
-from urlparse import urlsplit, urljoin, urlunsplit
 from lxml import html
 from selenium import webdriver
 
@@ -84,7 +82,7 @@ class Site(OpinionSite):
             links[page_year[0] - 1].click()
 
         text = self._clean_text(driver.page_source)
-        driver.close()
+        driver.quit()
         html_tree = html.fromstring(text)
 
         html_tree.rewrite_links(self._link_repl)
