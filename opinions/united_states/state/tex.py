@@ -21,7 +21,6 @@ from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.string_utils import titlecase
-from selenium.common.exceptions import WebDriverException
 
 
 class Site(OpinionSite):
@@ -235,9 +234,8 @@ class Site(OpinionSite):
         logger.info("Running backscraper with date: %s" % d)
         self.case_date = d
         self.backwards_days = 0
-        try:
-            self.html = self._download()
-        except WebDriverException, e:
-            logger.info("Trying the download method a second time (WebDriverException)")
-            # try once more. This is a hack, but should solve the issue.
-            self.html = self._download()
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
