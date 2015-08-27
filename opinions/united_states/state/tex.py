@@ -7,9 +7,10 @@
 #  - 2014-07-10: Created by Andrei Chelaru
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
+#  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 from datetime import date, timedelta
-from dateutil.rrule import rrule, DAILY
 
+from dateutil.rrule import rrule, DAILY
 import certifi
 import os
 import requests
@@ -30,8 +31,8 @@ class Site(OpinionSite):
         self.backwards_days = 5
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
-            dtstart=date(2013, 01, 01),
-            until=date(2013, 12, 31),
+            dtstart=date(2010, 1, 1),
+            until=date(2015, 8, 30),
         )]
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -101,7 +102,7 @@ class Site(OpinionSite):
             if nr_of_pages:
                 if nr_of_pages.text == '1':
                     text = driver.page_source
-                    driver.close()
+                    driver.quit()
 
                     html_tree = html.fromstring(text)
                     html_tree.make_links_absolute(self.url)
@@ -133,7 +134,7 @@ class Site(OpinionSite):
                         remove_anchors = lambda url: url.split('#')[0]
                         html_tree.rewrite_links(remove_anchors)
                         html_pages.append(html_tree)
-                    driver.close()
+                    driver.quit()
                     return html_pages
 
     def _get_case_names(self):
@@ -234,3 +235,7 @@ class Site(OpinionSite):
         self.case_date = d
         self.backwards_days = 0
         self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
