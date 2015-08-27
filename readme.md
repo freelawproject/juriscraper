@@ -64,8 +64,7 @@ Joining the Project as a Developer
 ==================================
 We use a few tools pretty frequently while building these scrapers. The first is
 [a sister project called xpath-tester][3] that helps debug XPath queries.
-xpath-tester can be installed locally in a few minutes or is available at
-[http://xpath.courtlistener.com][7].
+xpath-tester can be installed locally in a few minutes.
 
 We also generally use Eclipse with the PyDev and Aptana tools installed or 
 Intellij with PyCharm installed. These are useful because they allow syntax 
@@ -81,13 +80,17 @@ For scrapers to be merged:
  - your code should be [PEP8][4] compliant with no major Pylint problems or
 Intellij inspection issues.
  - your code should efficiently parse a page, returning no exceptions or
-   speed warnings
+   speed warnings during tests.
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
 that makes sense and that nobody else is working on. If you're interested, we 
-have [a public slack channel you can join][slack], where we can chat. 
-Alternatively, we have [a list][6] of courts that you can browse yourself. 
-There are templates for new scrapers [here][10] and [here][11].
+have [a public slack channel you can join][slack], where we can chat. A summary
+of the day's errors and warnings is also sent to the [Juriscraper email 
+list][list], so by joining that you can help us identify failing scrapers. It 
+also has [an archive][archive], if you rather not join another mailing list. 
+Finally, we have [a wiki list][6] of courts that you can browse yourself. 
+There are templates for new scrapers [here (for opinions)][10] and [here (for 
+oral arguments)][11].
 
 When you're done with your scraper, fork this repository, push your changes 
 into your fork, and then send a pull request for your changes. Be sure to
@@ -213,3 +216,5 @@ Juriscraper is licensed under the permissive BSD license.
 [12]: https://travis-ci.org/freelawproject/juriscraper
 [tci]: https://travis-ci.org/
 [slack]: https://join-flp-talk.herokuapp.com/
+[list]: http://lists.freelawproject.org/cgi-bin/mailman/listinfo/juriscraper
+[archive]: http://lists.freelawproject.org/pipermail/juriscraper/
