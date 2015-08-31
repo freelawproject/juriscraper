@@ -7,19 +7,23 @@
 
 import time
 from datetime import date
+from dateutil.rrule import rrule, MONTHLY
 
 import re
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.AbstractSite import logger
 
 
 class Site(OpinionSite):
+
     def __init__(self):
         super(Site, self).__init__()
-        # This is the URL for the past months
-        # d = date.today()
-        # self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_1_{year}_{month}.shtml'.format(
-        #     year=d.year,
-        #     mon=d.strftime("%B"))
+
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            MONTHLY,
+            dtstart=date(2003, 11, 1),
+            until=date(2015, 8, 30),
+        )]
 
         # This is the URL for the current month
         self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_1.shtml'
@@ -61,3 +65,11 @@ class Site(OpinionSite):
             return string_list[0]
         else:
             return ''
+
+    def _download_backwards(self, d):
+        self.crawl_date = d
+        logger.info("Running backscraper with date: %s" % d)
+        self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_1_{year}_{month}.shtml'.format(
+            year=d.year,
+            month=d.strftime("%B")
+        )
