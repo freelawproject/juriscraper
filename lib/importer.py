@@ -45,9 +45,10 @@ def build_module_list(court_id):
 
 
 def site_yielder(iterable, mod):
+
+    site = mod.Site()
     for i in iterable:
         try:
-            site = mod.Site()
             site._download_backwards(i)
             yield site
         except HTTPError, e:
