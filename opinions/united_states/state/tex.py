@@ -51,6 +51,11 @@ class Site(OpinionSite):
                        'capp_13': 14, 'capp_14': 15}
         self.court_name = 'sc'
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
+        self.driver = webdriver.PhantomJS(
+            executable_path='/usr/local/phantomjs/phantomjs',
+            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+        )
+        self.driver.set_window_size(1920, 1080)
 
     def __del__(self):
         self.driver.quit()
@@ -67,7 +72,6 @@ class Site(OpinionSite):
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
             )
-            self.driver.set_window_size(1920, 1080)
 
             self.driver.get(self.url)
             # Get a screenshot in testing
@@ -202,7 +206,7 @@ class Site(OpinionSite):
             for html_tree in self.html:
                 page_records_count = self._get_opinion_count(html_tree)
                 for record in xrange(page_records_count):
-                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[2]//@href".format(n=record)
+                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[2]/text()".format(n=record)
                     case_dates.append(datetime.strptime(html_tree.xpath(path)[0], '%m/%d/%Y'))
             return case_dates
         else:
