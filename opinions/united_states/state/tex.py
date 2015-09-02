@@ -8,14 +8,21 @@
 #  - 2014-11-07: Updated by mlr to account for new website.
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
-from datetime import date, timedelta
+#  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
+from datetime import date, timedelta, datetime
+import time
 
-from dateutil.rrule import rrule, DAILY
+from dateutil.rrule import rrule, YEARLY
 import certifi
 import os
 import requests
 from lxml import html
 from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
@@ -24,16 +31,18 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
+    back_scrape_iterable = [i.date() for i in rrule(
+        YEARLY,
+        dtstart=date(1981, 1, 1),
+        until=date(2016, 1, 1),
+    )]
+
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
         self.backwards_days = 5
-        self.back_scrape_iterable = [i.date() for i in rrule(
-            DAILY,
-            dtstart=date(2010, 1, 1),
-            until=date(2015, 8, 30),
-        )]
+
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
         self.courts = {'sc': 0, 'ccrimapp': 1, 'capp_1': 2, 'capp_2': 3, 'capp_3': 4,
@@ -50,30 +59,38 @@ class Site(OpinionSite):
             self.records_nr = len(html_tree_list[0].xpath("//tr[@class='rgRow' or @class='rgAltRow']"))
             return html_tree_list
         else:
+            html_pages = []
             logger.info("Running Selenium browser PhantomJS...")
             driver = webdriver.PhantomJS(
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
             )
-            driver.set_window_size(1920, 1080)
-            driver.get(self.url)
 
+            driver.get(self.url)
             # Get a screenshot in testing
             # driver.save_screenshot('out.png')
 
             # Set the cookie
             self.cookies = normalize_cookies(driver.get_cookies())
 
-            driver.implicitly_wait(10)
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located((By.XPATH, "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_15']"))
+            )
             if self.court_name == 'sc':
                 # Supreme Court is checked by default, so we don't want to
                 # check it again.
                 pass
             else:
+                search_supreme_court = driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
+                    court_nr=self.courts['sc'])
+                )
+                if search_supreme_court.is_selected():
+                    ActionChains(driver).click(search_supreme_court).perform()
+
                 search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
                     court_nr=self.courts[self.court_name])
                 )
-                search_court_type.click()
+                ActionChains(driver).click(search_court_type).perform()
 
             search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
             search_opinions.click()
@@ -90,7 +107,11 @@ class Site(OpinionSite):
 
             submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
             submit.click()
-            driver.implicitly_wait(20)
+
+            WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.ID, "ctl00_ContentPlaceHolder1_grdDocuments"))
+            )
+            self.status = 200
             # driver.save_screenshot('out3.png')
 
             nr_of_pages = driver.find_element_by_xpath(
@@ -109,9 +130,8 @@ class Site(OpinionSite):
 
                     remove_anchors = lambda url: url.split('#')[0]
                     html_tree.rewrite_links(remove_anchors)
-                    return html_tree
+                    html_pages.append(html_tree)
                 else:
-                    html_pages = []
                     text = driver.page_source
 
                     html_tree = html.fromstring(text)
@@ -134,8 +154,8 @@ class Site(OpinionSite):
                         remove_anchors = lambda url: url.split('#')[0]
                         html_tree.rewrite_links(remove_anchors)
                         html_pages.append(html_tree)
-                    driver.quit()
-                    return html_pages
+            driver.quit()
+            return html_pages
 
     def _get_case_names(self):
         def fetcher(url):
@@ -166,63 +186,47 @@ class Site(OpinionSite):
                     return titlecase(plaintiff)
 
         seed_urls = []
-        if isinstance(self.html, list):
-            for html_tree in self.html:
-                page_records_count = self._get_opinion_count(html_tree)
-                for record in xrange(page_records_count):
-                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
-                    seed_urls.append(html_tree.xpath(path)[0])
-        else:
-            seed_urls = map(self._return_seed_url, range(self.records_nr))
+        for html_tree in self.html:
+            page_records_count = self._get_opinion_count(html_tree)
+            for record in range(page_records_count):
+                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(
+                    n=record
+                )
+                seed_urls.append(html_tree.xpath(path)[0])
         if seed_urls:
             return DeferringList(seed=seed_urls, fetcher=fetcher)
         else:
             return []
 
     def _get_case_dates(self):
-        return [self.case_date] * self.records_nr
+        for html_tree in self.html:
+            page_records_count = self._get_opinion_count(html_tree)
+            for record in range(page_records_count):
+                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[2]/text()".format(
+                    n=record
+                )
+                yield datetime.strptime(html_tree.xpath(path)[0], '%m/%d/%Y')
 
     def _get_precedential_statuses(self):
         return ['Published'] * self.records_nr
 
     def _get_download_urls(self):
-        if isinstance(self.html, list):
-            download_urls = []
-            for html_tree in self.html:
-                page_records_count = self._get_opinion_count(html_tree)
-                for record in xrange(page_records_count):
-                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
-                    download_urls.append(html_tree.xpath(path)[0])
-            return download_urls
-        else:
-            return map(self._return_download_url, range(self.records_nr))
+        for html_tree in self.html:
+            page_records_count = self._get_opinion_count(html_tree)
+            for record in range(page_records_count):
+                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(
+                    n=record
+                )
+                yield html_tree.xpath(path)[0]
 
     def _get_docket_numbers(self):
-        if isinstance(self.html, list):
-            docket_numbers = []
-            for html_tree in self.html:
-                page_records_count = self._get_opinion_count(html_tree)
-                for record in xrange(page_records_count):
-                    path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')" \
-                           "/td[5]//text()[contains(., '-')]".format(n=record)
-                    docket_numbers.append(html_tree.xpath(path)[0])
-            return docket_numbers
-        else:
-            return map(self._return_docket_number, range(self.records_nr))
-
-    def _return_docket_number(self, record):
-        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
-            n=record
-        )
-        return self.html.xpath(path)[0]
-
-    def _return_download_url(self, record):
-        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[4]//@href".format(n=record)
-        return self.html.xpath(path)[0]
-
-    def _return_seed_url(self, record):
-        path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(n=record)
-        return self.html.xpath(path)[0]
+        for html_tree in self.html:
+            page_records_count = self._get_opinion_count(html_tree)
+            for record in range(page_records_count):
+                path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//text()[contains(., '-')]".format(
+                    n=record
+                )
+                yield html_tree.xpath(path)[0]
 
     @staticmethod
     def _get_opinion_count(html_tree):
@@ -233,9 +237,4 @@ class Site(OpinionSite):
         self.crawl_date = d
         logger.info("Running backscraper with date: %s" % d)
         self.case_date = d
-        self.backwards_days = 0
-        self.html = self._download()
-        if self.html is not None:
-            # Setting status is important because it prevents the download
-            # function from being run a second time by the parse method.
-            self.status = 200
+        self.backwards_days = 365
