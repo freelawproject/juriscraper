@@ -10,6 +10,7 @@
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
 from datetime import date, timedelta, datetime
+import time
 
 from dateutil.rrule import rrule, YEARLY
 import certifi
@@ -17,6 +18,7 @@ import os
 import requests
 from lxml import html
 from selenium import webdriver
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -71,18 +73,24 @@ class Site(OpinionSite):
             # Set the cookie
             self.cookies = normalize_cookies(driver.get_cookies())
 
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.ID, "ctl00_ContentPlaceHolder1_chkListDocTypes_0"))
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located((By.XPATH, "//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_15']"))
             )
             if self.court_name == 'sc':
                 # Supreme Court is checked by default, so we don't want to
                 # check it again.
                 pass
             else:
+                search_supreme_court = driver.find_element_by_xpath("//*[@id='ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}']".format(
+                    court_nr=self.courts['sc'])
+                )
+                if search_supreme_court.is_selected():
+                    ActionChains(driver).click(search_supreme_court).perform()
+
                 search_court_type = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListCourts_{court_nr}".format(
                     court_nr=self.courts[self.court_name])
                 )
-                search_court_type.click()
+                ActionChains(driver).click(search_court_type).perform()
 
             search_opinions = driver.find_element_by_id("ctl00_ContentPlaceHolder1_chkListDocTypes_0")
             search_opinions.click()
