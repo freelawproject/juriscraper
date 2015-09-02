@@ -35,7 +35,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
-        self.backwards_days = 5
+        self.backwards_days = 30
 
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0

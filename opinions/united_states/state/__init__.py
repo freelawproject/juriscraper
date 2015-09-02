@@ -142,6 +142,7 @@ __all__ = [
     'texapp_12',
     'texapp_13',
     'texapp_14',
+    'texcrimapp',
     'utah',
     'va',
     'vactapp_u',
