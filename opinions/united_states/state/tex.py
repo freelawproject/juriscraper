@@ -9,20 +9,19 @@
 #  - 2014-12-09: Updated by mlr to make the date range wider and more thorough.
 #  - 2015-08-19: Updated by Andrei Chelaru to add backwards scraping support.
 #  - 2015-08-27: Updated by Andrei Chelaru to add explicit waits
-from datetime import date, timedelta, datetime
-import time
 
-from dateutil.rrule import rrule, YEARLY
+from datetime import date, timedelta, datetime
+
 import certifi
 import os
 import requests
+from dateutil.rrule import rrule, YEARLY
 from lxml import html
 from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
@@ -31,17 +30,12 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    back_scrape_iterable = [i.date() for i in rrule(
-        YEARLY,
-        dtstart=date(1981, 1, 1),
-        until=date(2016, 1, 1),
-    )]
 
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.case_date = date.today()
-        self.backwards_days = 5
+        self.backwards_days = 30
 
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -51,6 +45,11 @@ class Site(OpinionSite):
                        'capp_13': 14, 'capp_14': 15}
         self.court_name = 'sc'
         self.url = "http://www.search.txcourts.gov/CaseSearch.aspx?coa=cossup&d=1"
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            YEARLY,
+            dtstart=date(1981, 1, 1),
+            until=date(2010, 1, 1),
+        )]
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':
@@ -59,13 +58,13 @@ class Site(OpinionSite):
             self.records_nr = len(html_tree_list[0].xpath("//tr[@class='rgRow' or @class='rgAltRow']"))
             return html_tree_list
         else:
-            html_pages = []
             logger.info("Running Selenium browser PhantomJS...")
             driver = webdriver.PhantomJS(
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
             )
 
+            driver.set_window_size(1920, 1080)
             driver.get(self.url)
             # Get a screenshot in testing
             # driver.save_screenshot('out.png')
@@ -103,7 +102,7 @@ class Site(OpinionSite):
 
             end_date = driver.find_element_by_id("ctl00_ContentPlaceHolder1_dtDocumentTo_dateInput")
             end_date.send_keys(self.case_date.strftime("%m/%d/%Y"))
-            # driver.save_screenshot('out2.png')
+            #driver.save_screenshot('%s.png' % self.case_date)
 
             submit = driver.find_element_by_id("ctl00_ContentPlaceHolder1_btnSearchText")
             submit.click()
@@ -118,6 +117,7 @@ class Site(OpinionSite):
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[2]')
             records_nr = driver.find_element_by_xpath(
                 '//thead//*[contains(concat(" ", normalize-space(@class), " "), " rgInfoPart ")]/strong[1]')
+            html_pages = []
             if records_nr:
                 self.records_nr = int(records_nr.text)
             if nr_of_pages:
@@ -132,6 +132,9 @@ class Site(OpinionSite):
                     html_tree.rewrite_links(remove_anchors)
                     html_pages.append(html_tree)
                 else:
+                    logger.info("Paginating through %s pages of results." %
+                                nr_of_pages.text)
+                    logger.info("  Getting page 1")
                     text = driver.page_source
 
                     html_tree = html.fromstring(text)
@@ -142,6 +145,7 @@ class Site(OpinionSite):
                     html_pages.append(html_tree)
 
                     for i in xrange(int(nr_of_pages.text) - 1):
+                        logger.info("  Getting page %s" % (i + 2))
                         next_page = driver.find_element_by_class_name('rgPageNext')
                         next_page.click()
                         driver.implicitly_wait(5)
@@ -154,7 +158,7 @@ class Site(OpinionSite):
                         remove_anchors = lambda url: url.split('#')[0]
                         html_tree.rewrite_links(remove_anchors)
                         html_pages.append(html_tree)
-            driver.quit()
+                    driver.quit()
             return html_pages
 
     def _get_case_names(self):
@@ -234,7 +238,15 @@ class Site(OpinionSite):
                                    "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
 
     def _download_backwards(self, d):
-        self.crawl_date = d
-        logger.info("Running backscraper with date: %s" % d)
-        self.case_date = d
         self.backwards_days = 365
+        self.case_date = d
+        logger.info("Running backscraper with date range: %s to %s" % (
+            self.case_date - timedelta(days=self.backwards_days),
+            self.case_date,
+        ))
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
+
