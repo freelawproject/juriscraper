@@ -176,12 +176,17 @@ class Site(OpinionSite):
 
                 html_tree = html.fromstring(r.text)
                 html_tree.make_links_absolute(self.url)
-                plaintiff = html_tree.xpath(
-                    "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                )[0]
-                defendant = html_tree.xpath(
-                    "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                )[0]
+                plaintiff = ''
+                defendant = ''
+                try:
+                    plaintiff = html_tree.xpath(
+                        "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                    )[0]
+                    defendant = html_tree.xpath(
+                        "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                    )[0]
+                except IndexError:
+                    logger.warn("No title or defendant found for {}".format(url))
 
                 if defendant.strip():
                     # If there's a defendant
