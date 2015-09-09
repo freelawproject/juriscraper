@@ -11,17 +11,23 @@ class Site(scotus_slip.Site):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.supremecourt.gov/opinions/in-chambers.aspx'
+        self.back_scrape_url = 'http://www.supremecourt.gov/opinions/in-chambers/{}'
         self.court_id = self.__module__
 
     def _get_case_dates(self):
-        path = '//div[@id = "mainbody"]//table/tr/td[1]/text()'
-        return [date.fromtimestamp(time.mktime(
-            time.strptime(date_string, '%m/%d/%y'))) for date_string in
-            self.html.xpath(path)]
+        path = '//div[@id = "mainbody"]//table//tr/td[1]/text()'
+        case_dates = []
+        for date_string in self.html.xpath(path):
+            try:
+                case_date = date.fromtimestamp(time.mktime(time.strptime(date_string, '%m/%d/%y')))
+            except ValueError:
+                case_date = date.fromtimestamp(time.mktime(time.strptime(date_string, '%m-%d-%y')))
+            case_dates.append(case_date)
+        return case_dates
 
     def _get_docket_numbers(self):
         docket_numbers = []
-        for e in self.html.xpath('//div[@id = "mainbody"]//table/tr/td[2]'):
+        for e in self.html.xpath('//div[@id = "mainbody"]//table//tr/td[2]'):
             s = html.tostring(e, method='text', encoding='unicode')
             docket_numbers.append(s)
 

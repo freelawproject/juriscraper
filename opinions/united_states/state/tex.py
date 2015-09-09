@@ -176,12 +176,17 @@ class Site(OpinionSite):
 
                 html_tree = html.fromstring(r.text)
                 html_tree.make_links_absolute(self.url)
-                plaintiff = html_tree.xpath(
-                    "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                )[0]
-                defendant = html_tree.xpath(
-                    "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
-                )[0]
+                plaintiff = ''
+                defendant = ''
+                try:
+                    plaintiff = html_tree.xpath(
+                        "//text()[contains(., 'Style:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                    )[0]
+                    defendant = html_tree.xpath(
+                        "//text()[contains(., 'v.:')]/ancestor::div[@class='span2']/following-sibling::div/text()"
+                    )[0]
+                except IndexError:
+                    logger.warn("No title or defendant found for {}".format(url))
 
                 if defendant.strip():
                     # If there's a defendant
@@ -250,3 +255,16 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
+    def _post_parse(self):
+        """This will remove the cases without a case name"""
+        to_be_removed = [index for index, case_name in enumerate(self.case_names) if not case_name]
+
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                new_item = self.remove_elements(item, to_be_removed)
+                self.__setattr__(attr, new_item)
+
+    @staticmethod
+    def remove_elements(list_, indexes_to_be_removed):
+        return [i for j, i in enumerate(list_) if j not in indexes_to_be_removed]
