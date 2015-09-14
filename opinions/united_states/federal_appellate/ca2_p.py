@@ -1,15 +1,23 @@
+
+import time
+from datetime import date, timedelta
+from dateutil.rrule import rrule, DAILY
+from lxml import html
+
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
-from datetime import date
-from lxml import html
-import time
-
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100'
+        self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date'
         self.court_id = self.__module__
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            interval=30,
+            dtstart=date(2007, 1, 1),
+            until=date(2015, 1, 1),
+        )]
 
     def _get_case_names(self):
         return [titlecase(t) for t in self.html.xpath('//table/td[2]/text()')]
@@ -37,4 +45,17 @@ class Site(OpinionSite):
                 statuses.append('Unpublished')
             else:
                 statuses.append('Unknown')
+        print len(statuses)
         return statuses
+
+    def _download_backwards(self, d):
+
+        self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100&IW_FILTER_DATE_BEFORE={before}&IW_FILTER_DATE_After={after}'.format(
+            before=(d + timedelta(30)).strftime("%Y%m%d"),
+            after=d.strftime("%Y%m%d")
+        )
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
