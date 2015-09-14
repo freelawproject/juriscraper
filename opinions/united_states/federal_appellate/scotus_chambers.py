@@ -12,6 +12,7 @@ class Site(scotus_slip.Site):
         super(Site, self).__init__()
         self.url = 'http://www.supremecourt.gov/opinions/in-chambers.aspx'
         self.back_scrape_url = 'http://www.supremecourt.gov/opinions/in-chambers/{}'
+        self.back_scrape_iterable = range(5, 16)
         self.court_id = self.__module__
 
     def _get_case_dates(self):

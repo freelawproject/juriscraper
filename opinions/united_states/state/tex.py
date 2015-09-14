@@ -257,7 +257,9 @@ class Site(OpinionSite):
 
     def _post_parse(self):
         """This will remove the cases without a case name"""
-        to_be_removed = [index for index, case_name in enumerate(self.case_names) if not case_name]
+        to_be_removed = [index for index, case_name in
+                         enumerate(self.case_names)
+                         if not case_name]
 
         for attr in self._all_attrs:
             item = getattr(self, attr)

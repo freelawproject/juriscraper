@@ -11,8 +11,8 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.url = 'http://www.supremecourt.gov/opinions/slipopinions.aspx'
         self.court_id = self.__module__
-        self.back_scrape_url = ''
-        self.back_scrape_iterable = range(5, 16)
+        self.back_scrape_url = 'http://www.supremecourt.gov/opinions/slipopinion/{}'
+        self.back_scrape_iterable = range(6, 16)
 
     def _get_case_names(self):
         return [titlecase(text) for text in
@@ -45,7 +45,7 @@ class Site(OpinionSite):
         return [summary for summary in self.html.xpath(path)]
 
     def _download_backwards(self, d):
-        logger.info("Running backscraper for year: {}".format(d))
+        logger.info("Running backscraper for year: 20{}".format(d))
         self.url = self.back_scrape_url.format(d if d >= 10 else '0{}'.format(d))
         self.html = self._download()
         if self.html is not None:
