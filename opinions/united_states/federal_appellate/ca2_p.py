@@ -10,11 +10,12 @@ from juriscraper.lib.string_utils import titlecase
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
+        self.interval = 30
         self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date'
         self.court_id = self.__module__
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
-            interval=30,
+            interval=self.interval,
             dtstart=date(2007, 1, 1),
             until=date(2015, 1, 1),
         )]
@@ -51,7 +52,7 @@ class Site(OpinionSite):
     def _download_backwards(self, d):
 
         self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date&IW_BATCHSIZE=100&IW_FILTER_DATE_BEFORE={before}&IW_FILTER_DATE_After={after}'.format(
-            before=(d + timedelta(30)).strftime("%Y%m%d"),
+            before=(d + timedelta(self.interval)).strftime("%Y%m%d"),
             after=d.strftime("%Y%m%d")
         )
         self.html = self._download()
