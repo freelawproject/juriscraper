@@ -21,6 +21,7 @@ class Site(OpinionSite):
             'puid': ''
         })
         self.url = "{}/?{}".format(self.base_url, params)
+        # self.url = "http://media.ca1.uscourts.gov/cgi-bin/opinions.pl/?TODATE=06%2F24%2F1993&puid=&FROMDATE=05%2F25%2F1993"
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,
@@ -60,7 +61,13 @@ class Site(OpinionSite):
         return statuses
 
     def _get_lower_courts(self):
-        return [e.strip() for e in self.html.xpath('//tr[position() > 1]/td[4]/font/text()')]
+        lower_courts = []
+        for e in self.html.xpath('//tr[position() > 1]/td[4]/font'):
+            try:
+                lower_courts.append(e.xpath('./text()')[0].strip())
+            except IndexError:
+                lower_courts.append('')
+        return lower_courts
 
     def _download_backwards(self, d):
         params = urllib.urlencode({
@@ -75,3 +82,19 @@ class Site(OpinionSite):
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def _post_parse(self):
+        """This will remove the cases without a case name"""
+        to_be_removed = [index for index, case_name in
+                         enumerate(self.case_names)
+                         if not case_name.replace('v.', '').strip()]
+
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                new_item = self.remove_elements(item, to_be_removed)
+                self.__setattr__(attr, new_item)
+
+    @staticmethod
+    def remove_elements(list_, indexes_to_be_removed):
+        return [i for j, i in enumerate(list_) if j not in indexes_to_be_removed]
