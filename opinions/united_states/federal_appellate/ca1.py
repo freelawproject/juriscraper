@@ -1,11 +1,12 @@
-from juriscraper.OpinionSite import OpinionSite
-from juriscraper.AbstractSite import logger
 import re
 import time
-from datetime import date, timedelta
 import urllib
+
+from datetime import date, timedelta
 from dateutil.rrule import DAILY, rrule
-from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
+
 
 
 class Site(OpinionSite):
@@ -30,22 +31,24 @@ class Site(OpinionSite):
         )]
 
     def _get_case_names(self):
-        return [e.strip() for e in self.html.xpath("//tr[position() > 1]/td[4]/text()[contains(., 'v.')]")]
+        return [e.strip() for e in
+                self.html.xpath("//tr[position() > 1]/td[4]/text()[contains(., 'v.')]")]
 
     def _get_download_urls(self):
-        return [e for e in self.html.xpath('//tr[position() > 1]/td[2]//@href')]
+        return [e for e in
+                self.html.xpath('//tr[position() > 1]/td[2]//@href')]
 
     def _get_case_dates(self):
         dates = []
         for e in self.html.xpath('//tr[position() > 1]/td[1]//text()'):
-            print e
             dates.append(date.fromtimestamp(
                 time.mktime(time.strptime(e.strip(), '%Y/%m/%d'))))
         return dates
 
     def _get_docket_numbers(self):
         regex = re.compile("(\d{2}-.*?\W)(.*)$")
-        return [regex.search(e).group(1).strip() for e in self.html.xpath('//tr[position() > 1]/td[2]/a/text()')]
+        return [regex.search(e).group(1).strip() for e in
+                self.html.xpath('//tr[position() > 1]/td[2]/a/text()')]
 
     def _get_precedential_statuses(self):
         statuses = []

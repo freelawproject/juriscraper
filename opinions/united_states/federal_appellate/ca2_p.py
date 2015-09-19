@@ -1,11 +1,11 @@
-
 import time
 from datetime import date, timedelta
+
 from dateutil.rrule import rrule, DAILY
 from lxml import html
-
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
+
 
 class Site(OpinionSite):
     def __init__(self):
@@ -46,7 +46,6 @@ class Site(OpinionSite):
                 statuses.append('Unpublished')
             else:
                 statuses.append('Unknown')
-        print len(statuses)
         return statuses
 
     def _download_backwards(self, d):
