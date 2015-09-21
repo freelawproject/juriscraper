@@ -1,13 +1,13 @@
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date, timedelta
+
+from juriscraper.OpinionSite import OpinionSite
 from dateutil.rrule import rrule, DAILY
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.interval = 30
         self.url = 'http://www.ca6.uscourts.gov/cgi-bin/opinions.pl'
         self.method = 'POST'
         self.parameters = {
@@ -18,12 +18,12 @@ class Site(OpinionSite):
             'OPINNUM': ''
         }
         self.court_id = self.__module__
-
+        self.interval = 30
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,  # Every interval days
             dtstart=date(2000, 1, 1),
-            until=date(2015, 1, 1),
+            until=date(2016, 1, 1),
         )]
 
     def _get_case_names(self):
