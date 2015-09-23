@@ -34,11 +34,9 @@ Some of the design goals for this project are:
 
 Installation & Dependencies
 ===========================
-First step: Install Python 2.7.x, then:
-    
-    # install the dependencies
-    sudo apt-get install libxml2-dev libxslt-dev  # In Ubuntu prior to 14.04 this is libxslt-devel
-    
+
+Install Python 2.7.x, then:
+        
     # Install PhantomJS
     sudo pip install selenium
     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
@@ -47,7 +45,8 @@ First step: Install Python 2.7.x, then:
     sudo mv phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/phantomjs
     rm -r phantomjs-1.9.7*  # Cleanup
     
-    # Finally, install the code
+If you're a developer, install the code as follows: 
+
     sudo mkdir /usr/local/juriscraper  # or somewhere else or `mkvirtualenv juriscraper`
     cd /usr/local/juriscraper
     git clone https://github.com/freelawproject/juriscraper.git .
@@ -179,10 +178,11 @@ Version History
  - 0.2 - Supports opinions from all federal courts of special jurisdiction (Veterans, Tax, etc.)
  - 0.8 - Supports oral arguments for all possible Federal Circuit courts.
  - 0.9 - Supports all state courts of last resort (typically the "Supreme" court)
+ - 1.0 - Support opinions from for all possible federal bankruptcy appellate panels (9th and 10th Cir.) 
 
 **Current**
 
- - 1.0 - Support opinions from for all possible federal bankruptcy appellate panels (9th and 10th Cir.) 
+ - 1.1 - Juriscraper is now installable with pip.
 
 **Future Roadmap**
 
