@@ -2,18 +2,19 @@
 # CourtID: ca7
 # Court Short Name: 7th Cir.
 
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date, timedelta
 import urllib
+
 from dateutil.rrule import rrule, DAILY
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
-        self.interval = 30
         self.a_while_ago = date.today() - timedelta(days=60)
         self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=any&FromMonth={month}&FromDay={day}&FromYear={year}&' \
                    'ToMonth=&ToDay=&ToYear=&Author=any&AuthorName=&Case=any&CaseY1=&CaseY2=&CaseN1=&CaseN2=&CaseN3=&' \
@@ -24,6 +25,7 @@ class Site(OpinionSite):
         )
         self.court_id = self.__module__
 
+        self.interval = 30
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,  # Every interval days
@@ -71,7 +73,7 @@ class Site(OpinionSite):
         judges = []
         for e in self.html.xpath('//table//table/tr[position() >= 3]/td[6]'):
             s = html.tostring(e, method='text', encoding='unicode')
-            if s.lower() == 'percuriam':
+            if s.lower().strip() == 'percuriam':
                 s = "Per Curiam"
             judges.append(s)
         return judges
