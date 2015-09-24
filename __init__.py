@@ -1,6 +1,6 @@
 __all__ = [
-    'opinions',
-    'oral_args',
+    'juriscraper',
+    'tests',
 ]
 
 __version__ = "1.1"
