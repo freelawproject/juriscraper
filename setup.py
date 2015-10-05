@@ -27,7 +27,7 @@ CLASSIFIERS = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 INSTALL_REQUIRES = [
-    'argparse', #==1.2.1
+    'argparse', # 1.2.1
     'cchardet',
     'certifi',
     'chardet',
