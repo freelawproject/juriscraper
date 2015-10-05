@@ -34,7 +34,7 @@ INSTALL_REQUIRES = [
     'geonamescache', #==0.20
     'lxml', #==3.0.1
     'pkginfo', #==1.2.1
-    'python-dateutil', #==1.5
+    'python-dateutil==1.5', #==1.5
     'requests', #==2.2.1
     'selenium', #==2.43.0
     'twine', #==1.6.1
