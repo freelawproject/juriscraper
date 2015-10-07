@@ -91,4 +91,5 @@ if __name__ == "__main__":
         classifiers=CLASSIFIERS,
         install_requires=INSTALL_REQUIRES,
         include_package_data=True,
+        test_suite="juriscraper.tests.tests"
     )

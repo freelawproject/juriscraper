@@ -8,6 +8,6 @@ install:
  - sudo touch /var/log/juriscraper/debug.log
  - sudo chmod -R 777 /var/log/juriscraper
 script:
- - python juriscraper/tests/tests.py
+ - python setup.py test
 notifications:
   slack: flp-talk:iG0Qd1lAUJuXZlkcf2sbUC5P
