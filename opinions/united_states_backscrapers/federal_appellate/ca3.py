@@ -1,6 +1,7 @@
 import time
 from datetime import date
 
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
 import certifi
 from lxml import html
@@ -15,7 +16,7 @@ class Site(OpinionSite):
             year=date.today().year
         )
         self.court_id = self.__module__
-        self.back_scrape_iterable = range(1994, date.today().year + 1)
+        self.back_scrape_iterable = range(2003, date.today().year + 1)
         self.case_xpath = "//p[@class='article-listing']/a/@href"
         self.next_page_xpath = "//div[@class='adjacent-pagination']//li[@class='active']//following-sibling::li/a/@href"
 
@@ -37,8 +38,10 @@ class Site(OpinionSite):
         return html_trees
 
     def _get_case_html_page(self, html_trees, html_l, request_dict):
+        """Gets each of the individual case pages"""
         s = requests.session()
         for case_url in html_l.xpath(self.case_xpath):
+            logger.info("  Getting sub-page at: %s" % case_url)
             r = s.get(
                 case_url,
                 headers={'User-Agent': 'Juriscraper'},
@@ -123,10 +126,25 @@ class Site(OpinionSite):
         return data
 
     def _download_backwards(self, d):
-
         self.url = self.base_url.format(year=d)
         self.html = self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def _post_parse(self):
+        """This will remove the cases without a case name"""
+        to_be_removed = [index for index, case_name in
+                         enumerate(self.case_names)
+                         if not case_name]
+
+        for attr in self._all_attrs:
+            item = getattr(self, attr)
+            if item is not None:
+                new_item = self.remove_elements(item, to_be_removed)
+                self.__setattr__(attr, new_item)
+
+    @staticmethod
+    def remove_elements(list_, indexes_to_be_removed):
+        return [i for j, i in enumerate(list_) if j not in indexes_to_be_removed]
