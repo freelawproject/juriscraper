@@ -15,6 +15,7 @@ class Site(OpinionSite):
         super(Site, self).__init__()
         self.court_id = self.__module__
         self.url = 'http://media.ca11.uscourts.gov/opinions/pub/logname.php'
+        self.back_scrape_iterable = xrange(20, 10000, 20)
 
     def _get_case_names(self):
         return [e for e in self.html.xpath('//tr/td[1]//text()')]
@@ -39,3 +40,15 @@ class Site(OpinionSite):
 
     def _get_nature_of_suit(self):
         return [e for e in self.html.xpath('//tr/td[4]//text()')]
+
+    def _download_backwards(self, n):
+        self.url = 'http://media.ca11.uscourts.gov/opinions/pub/logname.php?begin={}&num={}&numBegin=1'.format(
+            n,
+            n/20 - 1
+        )
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
