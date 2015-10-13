@@ -203,18 +203,28 @@ class AbstractSite(object):
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
             i = 0
+            prior_case_name = None
             for name in self.case_names:
                 if not name.strip():
-                    raise InsanityException("Item with index %s has an empty case name." % i)
+                    raise InsanityException(
+                        "Item with index %s has an empty case name. The prior "
+                        "item had case name of: %s" % (i, prior_case_name)
+                    )
+                prior_case_name = name
                 i += 1
 
         for d in self.case_dates:
             if not isinstance(d, date):
-                raise InsanityException('%s: member of case_dates list not a valid date object. '
-                                        'Instead it is: %s with value: %s' % (self.court_id, type(d), d))
-            if d.year > 2100:
-                raise InsanityException('%s: member of case_dates list is from the 22nd century. '
-                                        'with value %s' % (self.court_id, d.year))
+                raise InsanityException(
+                    '%s: member of case_dates list not a valid date object. '
+                    'Instead it is: %s with value: %s' % (
+                        self.court_id, type(d), d)
+                )
+            if d.year > 2025:
+                raise InsanityException(
+                    '%s: member of case_dates list is from way in the future, '
+                    'with value %s' % (self.court_id, d.year)
+                )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
