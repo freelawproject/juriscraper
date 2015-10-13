@@ -1,7 +1,3 @@
-# History:
-# - Long ago: Created by mlr
-# - 2014-11-07: Updated by mlr to use new website.
-
 from datetime import datetime, timedelta, date
 
 import os
