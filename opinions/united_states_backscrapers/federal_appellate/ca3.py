@@ -1,6 +1,7 @@
-from juriscraper.OpinionSite import OpinionSite
 import time
-from datetime import date, datetime
+from datetime import date
+
+from juriscraper.OpinionSite import OpinionSite
 import certifi
 from lxml import html
 import requests
@@ -83,7 +84,7 @@ class Site(OpinionSite):
         data = []
         for html_tree in self.html:
             try:
-                date__ = html_tree.xpath("//div[@id='title']//a/@href")[0]
+                date__ = html_tree.xpath("//div[@id='publication_date']/p/text()")[0]
                 data.append(date.fromtimestamp(time.mktime(time.strptime(date__, '%m-%d-%Y'))))
             except IndexError:
                 data.append('')
