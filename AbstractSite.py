@@ -255,6 +255,24 @@ class AbstractSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
+    def _set_encoding(self, r):
+        """Set the encoding using a few heuristics"""
+        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+        if r.encoding == 'ISO-8859-1':
+            r.encoding = 'cp1252'
+
+        if r.encoding is None:
+            # Requests detects the encoding when the item is GET'ed using
+            # HTTP headers, and then when r.text is accessed, if the encoding
+            # hasn't been set by that point. By setting the encoding here, we
+            # ensure that it's done by cchardet, if it hasn't been done with
+            # HTTP headers. This way it is done before r.text is accessed
+            # (which would do it with vanilla chardet). This is a big
+            # performance boon, and can be removed once requests is upgraded
+            r.encoding = chardet.detect(r.content)['encoding']
+
+        return r
+
     def _link_repl(self, href):
         """Makes links absolute, working around buggy URLs and nuking anchors.
 
@@ -327,19 +345,8 @@ class AbstractSite(object):
         # Throw an error if a bad status code is returned.
         r.raise_for_status()
 
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
-
-        if r.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
-            r.encoding = chardet.detect(r.content)['encoding']
+        # Tweak or set the encoding if needed
+        r = self._set_encoding(r)
 
         # Provide the response in the Site object
         self.r = r
