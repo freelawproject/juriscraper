@@ -8,7 +8,7 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = 'http://www.cafc.uscourts.gov/opinions-orders?field_origin_value=All&field_report_type_value=All'
-        self.back_scrape_iterable = range(0, 185)
+        self.back_scrape_iterable = range(1, 700)
         self.court_id = self.__module__
 
     def _get_case_names(self):
@@ -36,3 +36,12 @@ class Site(OpinionSite):
             else:
                 statuses.append('Unknown')
         return statuses
+
+    def _download_backwards(self, n):
+        self.url = "http://www.cafc.uscourts.gov/opinions-orders?page={}".format(n)
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
