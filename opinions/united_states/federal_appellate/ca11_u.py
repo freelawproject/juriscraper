@@ -1,7 +1,7 @@
 import certifi
-from lxml.html import html5parser, fromstring, tostring
 import requests
-from AbstractSite import logger
+from juriscraper.AbstractSite import logger
+from lxml.html import html5parser, fromstring, tostring
 
 import ca11_p
 
