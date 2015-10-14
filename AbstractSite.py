@@ -13,6 +13,7 @@ from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
 from juriscraper.tests import MockRequest
+from requests.adapters import HTTPAdapter
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -255,6 +256,15 @@ class AbstractSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
+    def _get_adapter_instance(self):
+        """Hook for returning a custom HTTPAdapter
+
+        This function allows subclasses to do things like explicitly set
+        specific SSL configurations when being called. Certain courts don't work
+        unless you specify older versions of SSL.
+        """
+        return HTTPAdapter()
+
     def _set_encoding(self, r):
         """Set the encoding using a few heuristics"""
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
@@ -320,6 +330,7 @@ class AbstractSite(object):
 
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
+        s.mount('https://', self._get_adapter_instance())
         if self.method == 'GET':
             r = s.get(
                 self.url,
