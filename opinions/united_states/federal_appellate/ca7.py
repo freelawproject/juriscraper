@@ -2,10 +2,14 @@
 # CourtID: ca7
 # Court Short Name: 7th Cir.
 
-from juriscraper.OpinionSite import OpinionSite
 import time
 from datetime import date, timedelta
+import urllib
+
+from dateutil.rrule import rrule, DAILY
 from lxml import html
+
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -21,6 +25,14 @@ class Site(OpinionSite):
         )
         self.court_id = self.__module__
 
+        self.interval = 30
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            interval=self.interval,  # Every interval days
+            dtstart=date(1999, 10, 1),
+            until=date(2015, 1, 1),
+        )]
+
     def _get_case_names(self):
         case_names = []
         for e in self.html.xpath('//table//table/tr[position() >= 3]/td[2]'):
@@ -33,11 +45,11 @@ class Site(OpinionSite):
 
     def _get_case_dates(self):
         return [date.fromtimestamp(time.mktime(time.strptime(date_string.strip(), '%m/%d/%Y')))
-                    for date_string in self.html.xpath('//table//table/tr[position() >= 3]/td[4]/text()')]
+                for date_string in self.html.xpath('//table//table/tr[position() >= 3]/td[4]/text()')]
 
     def _get_docket_numbers(self):
         return [docket_number for docket_number in
-                    self.html.xpath('//table//table/tr[position() >= 3]/td[1]/text()')]
+                self.html.xpath('//table//table/tr[position() >= 3]/td[1]/text()')]
 
     def _get_precedential_statuses(self):
         statuses = []
@@ -61,7 +73,39 @@ class Site(OpinionSite):
         judges = []
         for e in self.html.xpath('//table//table/tr[position() >= 3]/td[6]'):
             s = html.tostring(e, method='text', encoding='unicode')
-            if s.lower() == 'percuriam':
+            if s.lower().strip() == 'percuriam':
                 s = "Per Curiam"
             judges.append(s)
         return judges
+
+    def _download_backwards(self, d):
+        to_date = d + timedelta(self.interval)
+        params = urllib.urlencode({
+            'Time': 'any',
+            'FromMonth': d.month,
+            'FromDay': d.day,
+            'FromYear': d.year,
+            'ToMonth': to_date.month,
+            'ToDay': to_date.day,
+            'ToYear': to_date.year,
+            'Author': 'any',
+            'AuthorName': '',
+            'Case': 'any',
+            'CaseY1': '',
+            'CaseY2': '',
+            'CaseN1': '',
+            'CaseN2': '',
+            'CaseN3': '',
+            'CaseN4': '',
+            'Submit': 'Submit',
+            'RssJudgeName': 'Easterbrook',
+            'OpsOnly': 'no'
+        })
+        self.base_url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl'
+        self.url = "{}?{}".format(self.base_url, params)
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200

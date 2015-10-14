@@ -9,6 +9,7 @@ History:
 import time
 from datetime import date
 
+from dateutil.rrule import DAILY, rrule
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import titlecase
 from lxml import html
@@ -18,10 +19,21 @@ class Site(OpinionSite):
     def __init__(self):
         super(Site, self).__init__()
         self.url = "http://www.ca9.uscourts.gov/opinions/index.php"
-        self.base = ('//table[@id = "c__contentTable"]//tr[not(@id="c_row_") and '
-                     'not(contains(child::td//text(), "NO OPINIONS") or'
-                     ' contains(child::td//text(), "NO MEMO"))]')
+        self.base = ('//table[@id = "c__contentTable"]//tr['
+                     '    not(@id="c_row_") and '
+                     '    not('
+                     '        contains(child::td//text(), "NO OPINIONS") or'
+                     '        contains(child::td//text(), "No Opinions") or'
+                     '        contains(child::td//text(), "NO MEMO") or'
+                     '        contains(child::td//text(), "No Memo")'
+                     '    )'
+                     ']')
         self.court_id = self.__module__
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            dtstart=date(2005, 1, 3),
+            until=date(2015, 1, 1),
+        )]
 
     def _get_case_names(self):
         path = '{base}/td[1]/a/text()'.format(base=self.base)
@@ -62,3 +74,25 @@ class Site(OpinionSite):
     def _get_lower_court(self):
         path = '{base}/td[3]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
+
+    def _download_backwards(self, d):
+        self.method = 'POST'
+        self.parameters = {
+            'c_page_size': '50',
+            'c__ff_cms_opinions_case_name_operator': 'like',
+            'c__ff_cms_opinions_case_num_operator': 'like',
+            'c__ff_cms_opinions_case_origin_operator': 'like',
+            'c__ff_cms_opinions_case_origin': 'like',
+            'c__ff_j1_name_operator': 'like%25',
+            'c__ff_j2_name_operator': 'like%25',
+            'c__ff_cms_opinions_case_type_operator': '%3D',
+            'c__ff_cms_opinion_date_published_operator': 'like',
+            'c__ff_cms_opinion_date_published': d.strftime('%m/%d/%Y'),
+            'c__ff_onSUBMIT_FILTER': 'Search'
+        }
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200
