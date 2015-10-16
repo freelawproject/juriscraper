@@ -5,14 +5,16 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
+from datetime import date
+import time
+
 from juriscraper.lib.date_utils import quarter
 from juriscraper.opinions.united_states.state import minn
-import time
 import re
-from datetime import date
 
 
 class Site(minn.Site):
+    # Only subclasses minn for the _download method.
     def __init__(self):
         super(Site, self).__init__()
         self.court_id = self.__module__
