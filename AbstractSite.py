@@ -1,18 +1,18 @@
+from datetime import date, datetime
 import hashlib
 import json
-from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
 import certifi
-import re
-import requests
-from lxml import html
 from juriscraper.lib.date_utils import json_date_handler
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
 from juriscraper.tests import MockRequest
+from lxml import html
+import re
+import requests
 from requests.adapters import HTTPAdapter
 
 try:
@@ -265,6 +265,17 @@ class AbstractSite(object):
         """
         return HTTPAdapter()
 
+    def _make_html_tree(self, text):
+        """Hook for custom HTML parsers
+
+        By default, the etree.html parser is used, but this allows support for
+        other parsers like the html5parser or even BeautifulSoup, if it's called
+        for.
+        """
+        html_tree = html.fromstring(text)
+
+        return html_tree
+
     def _set_encoding(self, r):
         """Set the encoding using a few heuristics"""
         # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
@@ -368,7 +379,7 @@ class AbstractSite(object):
             return r.json()
         else:
             text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
+            html_tree = self._make_html_tree(text)
             html_tree.rewrite_links(self._link_repl)
             return html_tree
 
