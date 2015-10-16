@@ -8,10 +8,10 @@
 
 from datetime import date
 
+from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.date_utils import parse_dates
 from juriscraper.lib.string_utils import titlecase
 import re
-from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -21,7 +21,7 @@ class Site(OpinionSite):
         d = date.today()
         self.base_path = "//p[contains(., 'SUMMARIES')]"
         self.regex = re.compile("(S\d{2}.*\d{4})\.?(.*)")
-        self.url = 'http://www.gasupreme.us/sc-op/opinion_lists/{year}_opinions.php'.format(year=d.year)
+        self.url = 'http://www.gasupreme.us/opinions/{year}-opinions/'.format(year=d.year)
 
     def _get_case_names(self):
         path = "{base}/following::ul[1]//li//a[1]/text()".format(base=self.base_path)
