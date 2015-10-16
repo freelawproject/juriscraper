@@ -13,20 +13,20 @@
 from datetime import date, timedelta, datetime
 
 import certifi
-import os
-import requests
 from dateutil.rrule import rrule, YEARLY
-from lxml import html
-from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.string_utils import titlecase
+from lxml import html
+import os
+import requests
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class Site(OpinionSite):
@@ -50,7 +50,6 @@ class Site(OpinionSite):
             dtstart=date(1981, 1, 1),
             until=date(2010, 1, 1),
         )]
-        self.audit = False
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':
@@ -121,14 +120,9 @@ class Site(OpinionSite):
             html_pages = []
             if records_nr:
                 self.records_nr = int(records_nr.text)
-
-            logger.info(str((nr_of_pages, self.records_nr)))
-
-            if nr_of_pages and self.records_nr:
-                if nr_of_pages.text == '1' or self.audit:
+            if nr_of_pages:
+                if nr_of_pages.text == '1':
                     text = driver.page_source
-
-                    driver.save_screenshot('%s.png' % self.case_date)
                     driver.quit()
 
                     html_tree = html.fromstring(text)
@@ -203,7 +197,6 @@ class Site(OpinionSite):
         seed_urls = []
         for html_tree in self.html:
             page_records_count = self._get_opinion_count(html_tree)
-            logger.info(str(page_records_count))
             for record in range(page_records_count):
                 path = "id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00__{n}')/td[5]//@href".format(
                     n=record
@@ -224,7 +217,7 @@ class Site(OpinionSite):
                 yield datetime.strptime(html_tree.xpath(path)[0], '%m/%d/%Y')
 
     def _get_precedential_statuses(self):
-        return ['Published'] * (1 if self.audit and self.records_nr else self.records_nr)
+        return ['Published'] * self.records_nr
 
     def _get_download_urls(self):
         for html_tree in self.html:
@@ -244,14 +237,13 @@ class Site(OpinionSite):
                 )
                 yield html_tree.xpath(path)[0]
 
-    def _get_opinion_count(self, html_tree):
-        count = int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
-                                "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
-        return 1 if count and self.audit else count
+    @staticmethod
+    def _get_opinion_count(html_tree):
+        return int(html_tree.xpath("count(id('ctl00_ContentPlaceHolder1_grdDocuments_ctl00')"
+                                   "//tr[contains(., 'Opinion') or contains(., 'Order')])"))
 
     def _download_backwards(self, d):
-        if not self.audit:
-            self.backwards_days = 365
+        self.backwards_days = 365
         self.case_date = d
         logger.info("Running backscraper with date range: %s to %s" % (
             self.case_date - timedelta(days=self.backwards_days),
