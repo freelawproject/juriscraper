@@ -13,8 +13,8 @@ History:
 
 from datetime import datetime
 
-from lxml import html
 from juriscraper.OpinionSite import OpinionSite
+from lxml import html
 
 
 class Site(OpinionSite):
@@ -51,5 +51,5 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = '//table//tr/td[1]/text()'
+        path = '//table[position() > 1]//tr/td[1]//text()'
         return list(self.html.xpath(path))
