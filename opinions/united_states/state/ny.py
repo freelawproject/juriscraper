@@ -15,8 +15,8 @@ class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
-        # http://www.courts.state.ny.us/ctapps/Decisions/2014/Jul14/Jul14.htm
-        self.url = 'http://www.courts.state.ny.us/ctapps/Decisions/{year}/{mon}{yr}/{mon}{yr}.htm'.format(
+        # http://www.nycourts.gov/ctapps/Decisions/2014/Jul14/Jul14.html
+        self.url = 'http://www.nycourts.gov/ctapps/Decisions/{year}/{mon}{yr}/{mon}{yr}.html'.format(
             year=self.crawl_date.year,
             yr=self.crawl_date.strftime("%y"),
             mon=self.crawl_date.strftime("%b"))
@@ -56,6 +56,6 @@ class Site(OpinionSite):
         for elem in self.html.xpath(path):
             text_nodes = elem.xpath('.//text()')
             t = ', '.join(text_nodes)
-            if re.search(r'\d', t):
+            if re.search(r'No\.', t):
                 docket_numbers.append(t)
         return docket_numbers
