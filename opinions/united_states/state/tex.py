@@ -50,6 +50,7 @@ class Site(OpinionSite):
             dtstart=date(1981, 1, 1),
             until=date(2010, 1, 1),
         )]
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':

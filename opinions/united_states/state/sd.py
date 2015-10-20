@@ -32,6 +32,7 @@ class Site(OpinionSite):
             (5, 2013),
             (6, 2013),
         ]
+        self.uses_selenium = True
 
     def _get_download_urls(self):
         path = "//table[@id = 'ContentPlaceHolder1_PageContent_gvOpinions']//a/@href[contains(.,'pdf')]"

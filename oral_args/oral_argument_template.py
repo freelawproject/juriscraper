@@ -20,6 +20,8 @@ class Site(OralArgumentSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://court-url.gov/some-path.html'
+        self.method = 'POST'
+        self.uses_selenium = False
 
     '''
       Required fields - InsanityExceptions will be thrown if omitted.

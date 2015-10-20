@@ -165,7 +165,9 @@ def main():
                         scrape_court(site, binaries)
                 else:
                     site = mod.Site()
-                    v_print(3, 'URL scraped is: %s' % site.url)
+                    v_print(3, 'Sent %s request to: %s' % (site.method, site.url))
+                    if site.uses_selenium:
+                        v_print(3, "Selenium will be used.")
                     site.parse()
                     scrape_court(site, binaries)
             except Exception:

@@ -27,6 +27,7 @@ class Site(OpinionSite):
         self.url = 'https://edca.1dca.org/opinions.aspx'
         self.opinion_type = 'Per Curiam'
         self.release_date = self.case_date.strftime("%m%Y")
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         """This is another of the cursed MS asp.net pages with damned POST

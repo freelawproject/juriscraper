@@ -15,6 +15,7 @@ class Site(OpinionSite):
         super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.sdjudicial.com/sc/scopinions.aspx'
+        self.uses_selenium = True
 
     def _get_download_urls(self):
         path = '//tr[contains(@id, "ctl00xmainCopyxWGOpinions_r")]//a[2]/@href'

@@ -32,6 +32,7 @@ class Site(OpinionSite):
         self.url = 'http://www.supremecourtofohio.gov/rod/docs/'
         self.court_id = self.__module__
         self.base_path = "id('MainContent_gvResults')//tr[position() > 1]/td[2][string-length(normalize-space(text())) > 1]"
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         """This is another of the cursed MS asp.net pages with damned POST
