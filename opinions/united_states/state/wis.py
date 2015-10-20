@@ -20,7 +20,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         return [href for href in
-                self.html.xpath('//form/table[1]/tr//td[4]/a[2]/@href')]
+                self.html.xpath('//form/table[1]/tr//td[4]/a[contains(.//text(), "PDF")]/@href')]
 
     def _get_case_dates(self):
         dates = []
