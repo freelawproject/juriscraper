@@ -15,8 +15,8 @@ import re
 
 class Site(minn.Site):
     # Only subclasses minn for the _download method.
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
         self.url = "http://mn.gov/lawlib/archive/cap{short_year}q{quarter}.html".format(

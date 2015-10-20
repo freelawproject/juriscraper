@@ -7,15 +7,15 @@ History:
 Notes: Only queries first ten dates. Beyond that, they get messy.
 """
 
-from datetime import date
 import time
+from datetime import date
 
 from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courtrecords.alaska.gov/webdocs/opinions/sp.htm'
         self.court_id = self.__module__
         # Test whether the selected node does NOT have the class

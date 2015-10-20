@@ -8,8 +8,8 @@ from dateutil.rrule import rrule, DAILY
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://pacer.ca4.uscourts.gov/cgi-bin/opinions.pl'
         self.court_id = self.__module__
         td = date.today()

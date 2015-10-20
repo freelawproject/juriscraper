@@ -78,6 +78,7 @@ class ScraperExampleTest(unittest.TestCase):
                                  if 'backscraper' not in mod) + 2
         num_example_files = 0
         num_warnings = 0
+        cnt = CaseNameTweaker()
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -101,7 +102,7 @@ class ScraperExampleTest(unittest.TestCase):
                     if path.endswith('~'):
                         # Text editor backup: Not interesting.
                         continue
-                    site = mod.Site()
+                    site = mod.Site(cnt=cnt)
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'

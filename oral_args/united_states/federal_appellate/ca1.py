@@ -12,8 +12,8 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://media.ca1.uscourts.gov/files/audio/audiorss.php'
 
@@ -38,8 +38,9 @@ class Site(OralArgumentSite):
         path = '//item/description/b/text()'
         dates = []
         for t in self.html.xpath(path):
-            t = re.sub('[\[\]\s]', '', t)
-            date_string = t.split(':', 1)[1].strip()
+            # t looks like: [Argued:91-1-2015]
+            t = re.sub('[\[\]\s]', '', t)             # Strip out [ and ].
+            date_string = t.split(':', 1)[1].strip()  # Then get the date part.
             dates.append(datetime.strptime(date_string, '%m-%d-%Y').date())
         return dates
 

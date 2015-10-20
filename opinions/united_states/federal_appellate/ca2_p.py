@@ -8,8 +8,8 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.interval = 30
         self.url = 'http://www.ca2.uscourts.gov/decisions?IW_DATABASE=OPN&IW_FIELD_TEXT=*&IW_SORT=-Date'
         self.court_id = self.__module__

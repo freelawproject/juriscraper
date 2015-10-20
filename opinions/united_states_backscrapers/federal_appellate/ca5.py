@@ -14,8 +14,8 @@ from juriscraper.lib.cookie_utils import normalize_cookies
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.ca5.uscourts.gov/electronic-case-filing/case-information/current-opinions'
         self.court_id = self.__module__
         self.interval = 5

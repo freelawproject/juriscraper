@@ -2,8 +2,8 @@ import cal
 
 
 class Site(cal.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courts.ca.gov/cms/npopinions.htm'
         self.court_id = self.__module__
 

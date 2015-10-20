@@ -12,8 +12,8 @@ import re
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # This court hears things from mid-September to end of June. This
         # defines the "term" for that year, which triggers the website updates.
@@ -26,7 +26,6 @@ class Site(OpinionSite):
             current=self.current_year,
             next=self.current_year + 1,
         )
-        print self.url
 
         self.cached_records = None
 

@@ -17,8 +17,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
         self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=' + '&DB='.join(

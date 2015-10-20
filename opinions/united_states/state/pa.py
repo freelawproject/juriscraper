@@ -13,8 +13,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.regex = re.compile("(.*)(?:[,-]?\s+Nos?\.)(.*)", re.MULTILINE)
         self.url = 'http://www.pacourts.us/assets/rss/SupremeOpinionsRss.ashx'

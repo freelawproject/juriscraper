@@ -10,8 +10,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://nvcourts.gov/Supreme/Decisions/Advance_Opinions/'
         self.xpath_adjustment = 0

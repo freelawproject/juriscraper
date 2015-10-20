@@ -19,8 +19,8 @@ from datetime import date
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.isc.idaho.gov/appeals-court/sccivil'
         self.base_path = '//div[@id = "block-system-main"]//div[contains(concat(" ", @class, " "), " field-items ")]//li'
         self.sub_paths = [

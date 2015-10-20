@@ -8,8 +8,8 @@ import scotus_slip
 
 class Site(scotus_slip.Site):
     # Note that scotus_relating inherits from this class.
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.supremecourt.gov/opinions/in-chambers.aspx'
         self.back_scrape_url = 'http://www.supremecourt.gov/opinions/in-chambers/{}'
         self.back_scrape_iterable = range(5, 16)

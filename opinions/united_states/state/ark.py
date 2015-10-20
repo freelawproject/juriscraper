@@ -10,8 +10,8 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://opinions.aoc.arkansas.gov/weblink8/Browse.aspx?startid=40626'
 

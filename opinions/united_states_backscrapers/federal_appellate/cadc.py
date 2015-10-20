@@ -9,8 +9,8 @@ from juriscraper.lib.ssl_adapters import SSLAdapter
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'https://www.cadc.uscourts.gov/internet/opinions.nsf/OpinionsByMonday?OpenView&StartKey=20151020150928&Count=2&scode=1'
         self.court_id = self.__module__
         self.back_scrape_iterable = [i.date() for i in rrule(

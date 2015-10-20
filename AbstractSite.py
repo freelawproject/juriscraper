@@ -34,7 +34,7 @@ class AbstractSite(object):
 
     Should not contain lists that can't be sorted by the _date_sort function."""
 
-    def __init__(self):
+    def __init__(self, cnt=None):
         super(AbstractSite, self).__init__()
 
         # Computed metadata
@@ -45,6 +45,7 @@ class AbstractSite(object):
         self.status = None
         self.back_scrape_iterable = None
         self.cookies = {}
+        self.cnt = cnt or CaseNameTweaker()
 
         # Sub-classed metadata
         self.court_id = None
@@ -424,9 +425,8 @@ class AbstractSite(object):
     def _get_case_name_shorts(self):
         """Generates short case names for all the case names that we scrape."""
         case_name_shorts = []
-        cst = CaseNameTweaker()
         for case_name in self.case_names:
-            case_name_shorts.append(cst.make_case_name_short(case_name))
+            case_name_shorts.append(self.cnt.make_case_name_short(case_name))
         return case_name_shorts
 
     def _get_blocked_statuses(self):

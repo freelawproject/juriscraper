@@ -9,8 +9,8 @@ import requests
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.base_url = 'http://digitalcommons.law.villanova.edu/thirdcircuit_{year}/'
         self.url = self.base_url.format(
             year=date.today().year

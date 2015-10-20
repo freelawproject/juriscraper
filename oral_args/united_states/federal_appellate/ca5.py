@@ -13,8 +13,8 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.ca5.uscourts.gov/rss.aspx?Feed=OralArgRecs'
 

@@ -20,8 +20,8 @@ from selenium import webdriver
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today() - timedelta(1)
         self.url = 'https://edca.1dca.org/opinions.aspx'

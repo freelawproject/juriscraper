@@ -6,8 +6,8 @@ import uscfc
 
 
 class Site(uscfc.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.uscfc.uscourts.gov/aggregator/sources/11'
         self.court_id = self.__module__
         self.back_scrape_iterable = range(1, 10)

@@ -6,8 +6,8 @@ from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         begin_date = date.strftime(date.today() - timedelta(15), '%m/%d/%Y')
         end_date = date.strftime(date.today(), '%m/%d/%Y')
         self.url = ('http://wicourts.gov/supreme/scopin.jsp?'

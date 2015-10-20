@@ -20,8 +20,8 @@ from selenium import webdriver
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         # Changing the page # in the url will get additional pages
         # Changing the source # (0-13) will get the 12 Courts of Appeals and
         # the Court of Claims. We do not use the "all sources" link because a

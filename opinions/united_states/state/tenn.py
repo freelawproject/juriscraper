@@ -10,8 +10,8 @@ from lxml import html
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.tsc.state.tn.us/courts/supreme-court/opinions'
         self.court_id = self.__module__
         self.back_scrape_iterable = range(0, 131)

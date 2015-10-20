@@ -15,8 +15,8 @@ import ca9_p
 class Site(ca9_p.Site):
     """The unpublished cases have one more column than the published. Thus some
     overriding is done here. More than usual, but it's very slight tweaks."""
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/memoranda/?o_mode=view&amp;o_sort_field=21&amp;o_sort_type=DESC&o_page_size=100"
         self.court_id = self.__module__
         self.back_scrape_iterable = [i.date() for i in rrule(

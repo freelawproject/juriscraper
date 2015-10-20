@@ -15,8 +15,8 @@ from selenium import webdriver
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://ujs.sd.gov/Supreme_Court/opinions.aspx'
         self.back_scrape_iterable = [
