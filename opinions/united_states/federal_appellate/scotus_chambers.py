@@ -1,5 +1,5 @@
-import time
 from datetime import date
+import time
 
 from lxml import html
 
@@ -29,8 +29,9 @@ class Site(scotus_slip.Site):
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath('//div[@id = "mainbody"]//table//tr/td[2]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            docket_numbers.append(s)
+            s = html.tostring(e, method='text', encoding='unicode').strip()
+            if s:
+                docket_numbers.append(s)
 
         return docket_numbers
 

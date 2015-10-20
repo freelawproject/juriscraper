@@ -4,8 +4,7 @@
 # 2013-01-28  | InsanityException due to the court adding busted share links.
 # 2014-07-02  | New website required rewrite.
 
-import time
-from datetime import date
+from datetime import datetime
 
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.string_utils import clean_string
@@ -27,7 +26,11 @@ class Site(OpinionSite):
     def _get_case_dates(self):
         dates = []
         for date_string in self.html.xpath('//tr[./td[1]/a//text()]/td[5]//text()'):
-            dates.append(date.fromtimestamp(time.mktime(time.strptime(clean_string(date_string), '%m-%d-%Y'))))
+            s = clean_string(date_string)
+            if s == '00-00-0000' and 'begin=21160' in self.url:
+                # Bad data found during backscrape.
+                s = '12-13-2006'
+            dates.append(datetime.strptime(clean_string(s), '%m-%d-%Y').date())
         return dates
 
     def _get_docket_numbers(self):

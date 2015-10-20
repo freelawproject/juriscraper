@@ -1,18 +1,19 @@
+from datetime import date, datetime
 import hashlib
 import json
-from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
 import certifi
-import re
-import requests
-from lxml import html
 from juriscraper.lib.date_utils import json_date_handler
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
 from juriscraper.tests import MockRequest
+from lxml import html
+import re
+import requests
+from requests.adapters import HTTPAdapter
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -255,6 +256,44 @@ class AbstractSite(object):
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
 
+    def _get_adapter_instance(self):
+        """Hook for returning a custom HTTPAdapter
+
+        This function allows subclasses to do things like explicitly set
+        specific SSL configurations when being called. Certain courts don't work
+        unless you specify older versions of SSL.
+        """
+        return HTTPAdapter()
+
+    def _make_html_tree(self, text):
+        """Hook for custom HTML parsers
+
+        By default, the etree.html parser is used, but this allows support for
+        other parsers like the html5parser or even BeautifulSoup, if it's called
+        for.
+        """
+        html_tree = html.fromstring(text)
+
+        return html_tree
+
+    def _set_encoding(self, r):
+        """Set the encoding using a few heuristics"""
+        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+        if r.encoding == 'ISO-8859-1':
+            r.encoding = 'cp1252'
+
+        if r.encoding is None:
+            # Requests detects the encoding when the item is GET'ed using
+            # HTTP headers, and then when r.text is accessed, if the encoding
+            # hasn't been set by that point. By setting the encoding here, we
+            # ensure that it's done by cchardet, if it hasn't been done with
+            # HTTP headers. This way it is done before r.text is accessed
+            # (which would do it with vanilla chardet). This is a big
+            # performance boon, and can be removed once requests is upgraded
+            r.encoding = chardet.detect(r.content)['encoding']
+
+        return r
+
     def _link_repl(self, href):
         """Makes links absolute, working around buggy URLs and nuking anchors.
 
@@ -302,6 +341,7 @@ class AbstractSite(object):
 
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
+        s.mount('https://', self._get_adapter_instance())
         if self.method == 'GET':
             r = s.get(
                 self.url,
@@ -327,19 +367,8 @@ class AbstractSite(object):
         # Throw an error if a bad status code is returned.
         r.raise_for_status()
 
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
-
-        if r.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
-            r.encoding = chardet.detect(r.content)['encoding']
+        # Tweak or set the encoding if needed
+        r = self._set_encoding(r)
 
         # Provide the response in the Site object
         self.r = r
@@ -350,7 +379,7 @@ class AbstractSite(object):
             return r.json()
         else:
             text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
+            html_tree = self._make_html_tree(text)
             html_tree.rewrite_links(self._link_repl)
             return html_tree
 

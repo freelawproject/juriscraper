@@ -49,8 +49,11 @@ class Site(OpinionSite):
                 for date_string in self.html.xpath(path)]
 
     def _get_docket_numbers(self):
-        path = '{base}/td[2]//text()'.format(base=self.base)
-        return list(self.html.xpath(path))
+        docket_numbers = []
+        for e in self.html.xpath('{}/td[2]'.format(self.base)):
+            s = html.tostring(e, method='text', encoding='unicode')
+            docket_numbers.append(s)
+        return docket_numbers
 
     def _get_precedential_statuses(self):
         statuses = []
@@ -68,6 +71,8 @@ class Site(OpinionSite):
         nos = []
         for e in self.html.xpath(path):
             t = html.tostring(e, method='text', encoding='unicode')
+            if t.lower().strip() == 'n/a':
+                t = ''
             nos.append(t)
         return nos
 

@@ -5,7 +5,9 @@ History:
 
 import time
 from datetime import date
+
 from dateutil.rrule import DAILY, rrule
+from lxml import html
 
 import ca9_p
 
@@ -29,8 +31,11 @@ class Site(ca9_p.Site):
                     for date_string in self.html.xpath(path)]
 
     def _get_nature_of_suit(self):
-        path = '{base}/td[5]//text()'.format(base=self.base)
-        return list(self.html.xpath(path))
+        nos = []
+        for e in self.html.xpath('{base}/td[5]'.format(base=self.base)):
+            s = html.tostring(e, method='text', encoding='unicode')
+            nos.append(s)
+        return nos
 
     def _get_lower_court(self):
         path = '{base}/td[4]//text()'.format(base=self.base)

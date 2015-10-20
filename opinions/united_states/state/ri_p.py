@@ -4,13 +4,11 @@ Court Short Name: R.I.
 Author: Brian W. Carver
 Date created: 2013-08-10
 """
-from juriscraper.AbstractSite import InsanityException
-
-import re
 from datetime import datetime
-from lxml import html
 
+from juriscraper.AbstractSite import InsanityException
 from juriscraper.OpinionSite import OpinionSite
+import re
 
 
 class Site(OpinionSite):
@@ -24,10 +22,11 @@ class Site(OpinionSite):
             self.current_year = today.year
         else:
             self.current_year = today.year - 1
-        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions-%28{current}-{next}%29.aspx'.format(
+        self.url = 'http://www.courts.ri.gov/Courts/SupremeCourt/Pages/Opinions/Opinions{current}-{next}.aspx'.format(
             current=self.current_year,
             next=self.current_year + 1,
         )
+        print self.url
 
         self.cached_records = None
 
