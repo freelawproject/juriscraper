@@ -165,6 +165,7 @@ def main():
                         scrape_court(site, binaries)
                 else:
                     site = mod.Site()
+                    v_print(3, 'URL scraped is: %s' % site.url)
                     site.parse()
                     scrape_court(site, binaries)
             except Exception:
