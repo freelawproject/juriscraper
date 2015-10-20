@@ -43,7 +43,7 @@ class Site(OpinionSite):
         for txt in self.html.xpath(path):
             (citation_number, decision_date,
                 archive_date, docket_number) = regex.match(txt).group(1, 2, 3, 4)
-            case_name = docket_number
+            case_name = docket_number  # Huh?
             self.my_case_names.append(case_name)
             self.my_docket_numbers.append(docket_number)
             self.my_neutral_citations.append(citation_number)
