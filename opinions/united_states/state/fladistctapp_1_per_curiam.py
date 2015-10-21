@@ -40,6 +40,10 @@ class Site(OpinionSite):
             driver = webdriver.PhantomJS(
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
+                # Without these args, when you get self.url, you'll still be at
+                # about:config because the SSL on this site is so terrible.
+                service_args=['--ignore-ssl-errors=true',
+                              '--ssl-protocol=tlsv1'],
             )
             driver.implicitly_wait(30)
             logger.info("Now downloading case page at: %s" % self.url)
