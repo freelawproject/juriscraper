@@ -31,7 +31,7 @@ class Site(OpinionSite):
     def _get_case_names(self):
 
         case_names = [' '.join(i.strip() for i in e.xpath('.//text()')).strip() for e in self.html.xpath(self.case_name_path)]
-        # logger.info('case_names: {}'.format(str(case_names)))
+        logger.info('case_names: {}'.format(str(case_names)))
         return case_names
 
     def _get_case_dates(self):
@@ -43,10 +43,10 @@ class Site(OpinionSite):
                 day = ''.join(e.xpath(self.case_dates_path_1)).strip()
                 case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
         else:
-            case_dates = [datetime.strptime(date_string, '%m/%d/%y').date()
-                          for date_string in self.html.xpath(self.case_dates_path)]
+            case_dates = [datetime.strptime(''.join(i.strip() for i in d.xpath('.//text()')), '%m/%d/%y').date()
+                          for d in self.html.xpath(self.case_dates_path)]
 
-        # logger.info('case_dates: {}'.format(str(case_dates)))
+        logger.info('case_dates: {}'.format(str(case_dates)))
         return case_dates
 
     def _get_precedential_statuses(self):
@@ -57,14 +57,14 @@ class Site(OpinionSite):
                 statuses.append('Unpublished')
             else:
                 statuses.append('Published')
-        # logger.info('statuses: {}'.format(str(statuses)))
+        logger.info('statuses: {}'.format(str(statuses)))
         return statuses
 
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath(self.docket_numbers_path):
             docket_numbers.append(' '.join(i.strip() for i in e.xpath(".//text()")).strip())
-        # logger.info('docket_numbers: {}'.format(str(docket_numbers)))
+        logger.info('docket_numbers: {}'.format(str(docket_numbers)))
         return docket_numbers
 
     def _get_neutral_citations(self):
@@ -74,7 +74,7 @@ class Site(OpinionSite):
             for e in self.html.xpath(self.neutral_citations_path):
                 neutral_citations.append(' '.join(i.strip() for i in e.xpath(".//text()")).strip())
 
-        # logger.info('neutral_citations: {}'.format(str(neutral_citations)))
+        logger.info('neutral_citations: {}'.format(str(neutral_citations)))
         return neutral_citations
 
     def _download_backwards(self, d):
@@ -92,7 +92,7 @@ class Site(OpinionSite):
         self.year = year
         if year < 2006:
             base_path = '//tr/td[4][a]'
-            self.download_url_path = '{}/a/@href'.format(base_path)
+            self.download_url_path = '{}/a[1]/@href'.format(base_path)
             self.case_name_path = '{}/preceding-sibling::td[1]'.format(base_path)
             self.case_dates_path = base_path
             self.case_dates_path_1 = './preceding-sibling::td[3]//text()'
@@ -107,22 +107,22 @@ class Site(OpinionSite):
                 self.case_name_path = '{}/div[1]/a[1]'.format(base_path)
             else:
                 base_path = '//tr/td[3][a]'
-                self.download_url_path = '{}/a/@href'.format(base_path)
-                self.case_name_path = '{}/a'.format(base_path)
+                self.download_url_path = '{}/a[1]/@href'.format(base_path)
+                self.case_name_path = '{}/a[1]'.format(base_path)
             if year == 2006:
                 self.case_dates_path = base_path
                 self.case_dates_path_1 = './preceding-sibling::td[2]//text()'
                 self.case_dates_path_2 = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][1]/td//text()'
             else:
-                self.case_dates_path = '{}/preceding-sibling::td[2]//text()'.format(base_path)
+                self.case_dates_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.precedential_statuses_path = '{}/preceding-sibling::td[1]'.format(base_path)
             self.docket_numbers_path = '{}/preceding-sibling::td[1]'.format(base_path)
             self.neutral_citations_path = None
         elif 2010 < year < 2015:
             base_path = '//tr/td[4][div/a/text()]'
-            self.download_url_path = '{}/div/a/@href'.format(base_path)
-            self.case_name_path = '{}/div/a'.format(base_path)
-            self.case_dates_path = '{}/preceding-sibling::td[3]//text()'.format(base_path)
+            self.download_url_path = '{}/div[1]/a[1]/@href'.format(base_path)
+            self.case_name_path = '{}/div[1]/a[1]'.format(base_path)
+            self.case_dates_path = '{}/preceding-sibling::td[3]'.format(base_path)
             self.precedential_statuses_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.docket_numbers_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.neutral_citations_path = '{}/preceding-sibling::td[1]'.format(base_path)
