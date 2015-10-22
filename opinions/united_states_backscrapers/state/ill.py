@@ -19,8 +19,8 @@ class Site(OpinionSite):
         self.download_url_path = None
         self.case_name_path = None
         self.case_dates_path = None
-        self.case_dates_path_1 = None
-        self.case_dates_path_2 = None
+        self.case_dates_path_day = None
+        self.case_dates_path_month = None
         self.precedential_statuses_path = None
         self.docket_numbers_path = None
         self.neutral_citations_path = None
@@ -31,7 +31,6 @@ class Site(OpinionSite):
     def _get_case_names(self):
 
         case_names = [' '.join(i.strip() for i in e.xpath('.//text()')).strip() for e in self.html.xpath(self.case_name_path)]
-        logger.info('case_names: {}'.format(str(case_names)))
         return case_names
 
     def _get_case_dates(self):
@@ -39,23 +38,17 @@ class Site(OpinionSite):
         if self.year <= 2006:
             case_dates = []
             for e in self.html.xpath(self.case_dates_path):
-                month = ''.join(e.xpath(self.case_dates_path_2)).strip()
-
-                day = ''.join(e.xpath(self.case_dates_path_1)).strip()
+                month = ''.join(e.xpath(self.case_dates_path_month)).strip()
+                day = ''.join(e.xpath(self.case_dates_path_day)).strip()
+                month = month.replace('Decemberr', 'December')
                 try:
                     case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
                 except ValueError:
-                    if month == 'Decemberr':
-                        month = 'December'
-                        case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
-                    else:
-                        raise
-                # case_dates.append(parser.parse('{} {} {}'.format(self.year, month, day)))
+                    raise
         else:
             case_dates = [parser.parse(''.join(i.strip() for i in d.xpath('.//text()')), fuzzy=True)
                           for d in self.html.xpath(self.case_dates_path)]
 
-        logger.info('case_dates: {}'.format(str(case_dates)))
         return case_dates
 
     def _get_precedential_statuses(self):
@@ -66,14 +59,14 @@ class Site(OpinionSite):
                 statuses.append('Unpublished')
             else:
                 statuses.append('Published')
-        logger.info('statuses: {}'.format(str(statuses)))
         return statuses
 
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath(self.docket_numbers_path):
-            docket_numbers.append(' '.join(i.strip() for i in e.xpath(".//text()")).strip())
-        logger.info('docket_numbers: {}'.format(str(docket_numbers)))
+            nums = ' '.join(i.strip() for i in e.xpath(".//text()"))
+            nums = nums.replace('Official Reports', '')
+            docket_numbers.append(nums)
         return docket_numbers
 
     def _get_neutral_citations(self):
@@ -83,11 +76,10 @@ class Site(OpinionSite):
             for e in self.html.xpath(self.neutral_citations_path):
                 neutral_citations.append(' '.join(i.strip() for i in e.xpath(".//text()")).strip())
 
-        logger.info('neutral_citations: {}'.format(str(neutral_citations)))
         return neutral_citations
 
     def _download_backwards(self, d):
-        self.set_base_path(d)
+        self.__set_paths(d)
 
         self.url = self.url_base.format(year=self.year)
         logger.info('Scraping year {}'.format(self.year))
@@ -97,15 +89,15 @@ class Site(OpinionSite):
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def set_base_path(self, year):
+    def __set_paths(self, year):
         self.year = year
         if year < 2006:
             base_path = '//tr/td[4][a]'
             self.download_url_path = '{}/a[1]/@href'.format(base_path)
             self.case_name_path = '{}/preceding-sibling::td[1]'.format(base_path)
             self.case_dates_path = base_path
-            self.case_dates_path_1 = './preceding-sibling::td[3]//text()'
-            self.case_dates_path_2 = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][td//strong][1]/td//text()'
+            self.case_dates_path_day = './preceding-sibling::td[3]//text()'
+            self.case_dates_path_month = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][td//strong][1]/td//text()'
             self.precedential_statuses_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.docket_numbers_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.neutral_citations_path = None
@@ -120,8 +112,8 @@ class Site(OpinionSite):
                 self.case_name_path = '{}/a[1]'.format(base_path)
             if year == 2006:
                 self.case_dates_path = base_path
-                self.case_dates_path_1 = './preceding-sibling::td[2]//text()'
-                self.case_dates_path_2 = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][1]/td//text()'
+                self.case_dates_path_day = './preceding-sibling::td[2]//text()'
+                self.case_dates_path_month = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][1]/td//text()'
             else:
                 self.case_dates_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.precedential_statuses_path = '{}/preceding-sibling::td[1]'.format(base_path)
