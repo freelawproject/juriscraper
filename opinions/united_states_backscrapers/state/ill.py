@@ -3,7 +3,7 @@
 
 from datetime import datetime
 from lxml import html
-
+from dateutil import parser
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.AbstractSite import logger
 
@@ -40,10 +40,19 @@ class Site(OpinionSite):
             case_dates = []
             for e in self.html.xpath(self.case_dates_path):
                 month = ''.join(e.xpath(self.case_dates_path_2)).strip()
+
                 day = ''.join(e.xpath(self.case_dates_path_1)).strip()
-                case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
+                try:
+                    case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
+                except ValueError:
+                    if month == 'Decemberr':
+                        month = 'December'
+                        case_dates.append(datetime.strptime('{} {} {}'.format(self.year, month, day), '%Y %B %d'))
+                    else:
+                        raise
+                # case_dates.append(parser.parse('{} {} {}'.format(self.year, month, day)))
         else:
-            case_dates = [datetime.strptime(''.join(i.strip() for i in d.xpath('.//text()')), '%m/%d/%y').date()
+            case_dates = [parser.parse(''.join(i.strip() for i in d.xpath('.//text()')), fuzzy=True)
                           for d in self.html.xpath(self.case_dates_path)]
 
         logger.info('case_dates: {}'.format(str(case_dates)))
@@ -96,7 +105,7 @@ class Site(OpinionSite):
             self.case_name_path = '{}/preceding-sibling::td[1]'.format(base_path)
             self.case_dates_path = base_path
             self.case_dates_path_1 = './preceding-sibling::td[3]//text()'
-            self.case_dates_path_2 = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][1]/td//text()'
+            self.case_dates_path_2 = './/ancestor::tr[1]/preceding-sibling::tr[count(./td) = 1][td//strong][1]/td//text()'
             self.precedential_statuses_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.docket_numbers_path = '{}/preceding-sibling::td[2]'.format(base_path)
             self.neutral_citations_path = None
