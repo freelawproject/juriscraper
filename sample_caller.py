@@ -62,7 +62,7 @@ def scrape_court(site, binaries=False):
             data = site.cleanup_content(data)
 
         # Normally, you'd do your save routines here...
-        v_print(1, 'Adding new document found at: %s' % download_url)
+        v_print(1, 'Adding new item:')
         for k, v in item.items():
             if type(v) == unicode:
                 value = trunc(v, 200, ellipsis='...')
