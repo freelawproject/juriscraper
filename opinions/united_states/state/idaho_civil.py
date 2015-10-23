@@ -7,6 +7,7 @@ History:
    problem that was causing an InsanityError. The cause was nasty HTML in their
    page.
  - 2015-10-20, mlr: Updated due to new page in use.
+ - 2015-10-23, mlr: Updated to handle annoying situation.
 """
 
 from juriscraper.OpinionSite import OpinionSite
@@ -26,7 +27,8 @@ class Site(OpinionSite):
         case_names = []
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode').strip()
-            case_names.append(s)
+            if s.strip():
+                case_names.append(s)
         return case_names
 
     def _get_download_urls(self):
@@ -41,7 +43,7 @@ class Site(OpinionSite):
         for e in self.html.xpath(path):
             s = html.tostring(e, method='text', encoding='unicode').strip()
             if not s:
-                # No content. Press on.
+                # No content. Press on."
                 continue
             s = s.replace('Sept', 'Sep')  # GIGO!
             date_formats = ['%B %d, %Y',
@@ -51,6 +53,7 @@ class Site(OpinionSite):
             for date_format in date_formats:
                 try:
                     case_date = datetime.strptime(s, date_format).date()
+                    break
                 except ValueError:
                     continue
             case_dates.append(case_date)
@@ -58,7 +61,11 @@ class Site(OpinionSite):
 
     def _get_docket_numbers(self):
         path = '//table//tr[position() > 1]/td[2]//text()'
-        return [s for s in self.html.xpath(path)]
+        docket_numbers = []
+        for s in self.html.xpath(path):
+            if s.strip():
+                docket_numbers.append(s)
+        return docket_numbers
 
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
