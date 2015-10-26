@@ -90,10 +90,24 @@ class ScraperExampleTest(unittest.TestCase):
                     '  %s ' % module_string.ljust(max_len_mod_string)
                 )
                 sys.stdout.flush()
-                paths = glob.glob(
-                    '%s_example*' % module_string.replace('.', '/'))
-                self.assertTrue(paths, "No example file found for: %s!" %
-                                module_string.rsplit('.', 1)[1])
+                # module_parts:
+                # [0]  - "juriscraper"
+                # [1]  - "opinions" or "oral_args"
+                # ...  - rest of the path
+                # [-1] - module name
+                module_parts = module_string.split('.')
+                example_path = os.path.join(
+                    "juriscraper", "tests", "examples", module_parts[1],
+                    "united_states", module_parts[-1],
+                )
+                paths = glob.glob('%s_example*' % example_path)
+                self.assertTrue(
+                    paths,
+                    "No example file found for: %s! \n\nThe test looked in: "
+                    "%s" % (
+                        module_string.rsplit('.', 1)[1],
+                        os.path.join(os.getcwd(), example_path),
+                    ))
                 num_example_files += len(paths)
                 t1 = time.time()
                 num_tests = len(paths)
