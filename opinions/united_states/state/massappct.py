@@ -10,8 +10,8 @@ import re
 
 
 class Site(mass.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.court_identifier = '(AC'
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(

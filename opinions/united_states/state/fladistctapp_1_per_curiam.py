@@ -20,13 +20,14 @@ from selenium import webdriver
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today() - timedelta(1)
         self.url = 'https://edca.1dca.org/opinions.aspx'
         self.opinion_type = 'Per Curiam'
         self.release_date = self.case_date.strftime("%m%Y")
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         """This is another of the cursed MS asp.net pages with damned POST
@@ -39,6 +40,10 @@ class Site(OpinionSite):
             driver = webdriver.PhantomJS(
                 executable_path='/usr/local/phantomjs/phantomjs',
                 service_log_path=os.path.devnull,  # Disable ghostdriver.log
+                # Without these args, when you get self.url, you'll still be at
+                # about:config because the SSL on this site is so terrible.
+                service_args=['--ignore-ssl-errors=true',
+                              '--ssl-protocol=tlsv1'],
             )
             driver.implicitly_wait(30)
             logger.info("Now downloading case page at: %s" % self.url)

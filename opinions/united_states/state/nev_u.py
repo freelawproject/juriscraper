@@ -8,8 +8,8 @@ from juriscraper.opinions.united_states.state import nev_p
 
 
 class Site(nev_p.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://nvcourts.gov/Supreme/Decisions/Unpublished_Orders/'
         self.xpath_adjustment = -1

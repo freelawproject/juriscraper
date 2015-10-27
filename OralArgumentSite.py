@@ -8,8 +8,8 @@ class OralArgumentSite(AbstractSite):
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self):
-        super(OralArgumentSite, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(OralArgumentSite, self).__init__(*args, **kwargs)
 
         self._opt_attrs = ['docket_numbers', 'judges', 'case_name_shorts',]
         self._req_attrs = ['case_dates', 'case_names', 'download_urls',

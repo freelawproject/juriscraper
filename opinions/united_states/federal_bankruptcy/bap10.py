@@ -15,8 +15,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.bap10.uscourts.gov/opinions/new/opinion.txt'
         self.court_id = self.__module__
         self.my_case_names = []

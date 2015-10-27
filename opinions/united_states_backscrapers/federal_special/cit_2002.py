@@ -9,8 +9,8 @@ from datetime import date
 from lxml import html
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
 # This is a special backscraper to deal with problems on the 2002 page.
         self.url = 'http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2002.html'
         self.court_id = self.__module__

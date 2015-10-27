@@ -18,8 +18,8 @@ import requests
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.cobar.org/opinions/index.cfm?courtid=2'
         # For testing
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'

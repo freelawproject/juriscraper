@@ -16,10 +16,12 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OralArgumentSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://court-url.gov/some-path.html'
+        self.method = 'POST'
+        self.uses_selenium = False
 
     '''
       Required fields - InsanityExceptions will be thrown if omitted.

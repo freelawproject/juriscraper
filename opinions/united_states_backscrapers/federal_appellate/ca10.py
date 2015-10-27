@@ -7,8 +7,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         today = date.today()
         self.url = 'http://www.ca10.uscourts.gov/opinion/search/results?query=%20date%3A{}'.format(
             today.strftime('%m/%d/%Y')

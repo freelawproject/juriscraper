@@ -15,8 +15,8 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.judiciary.state.nj.us/opinions/index.htm'
         self.table = '1'  # Used as part of the paths to differentiate between appellate and supreme

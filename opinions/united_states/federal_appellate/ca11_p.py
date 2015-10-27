@@ -11,8 +11,8 @@ from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://media.ca11.uscourts.gov/opinions/pub/logname.php'
         self.back_scrape_iterable = xrange(20, 10000, 20)

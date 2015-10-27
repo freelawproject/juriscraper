@@ -17,12 +17,12 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.mass.gov/courts/court-info/sjc/about/reporter-of-decisions/opinions.xml'
         self.court_id = self.__module__
         self.court_identifier = 'SJC'
-        self.grouping_regex = re.compile("(.*) \((SJC \d+(?:, \d+)*)\) \((.+)\)")
+        self.grouping_regex = re.compile("(.*)\s+\((SJC[-\s]+\d+(?:, \d+)*)\)\s+\((.+)\)")
         self.base_path = "//title[not(contains(., 'List of Un')) and contains(., '{id}')]".format(id=self.court_identifier)
 
     def _get_case_names(self):

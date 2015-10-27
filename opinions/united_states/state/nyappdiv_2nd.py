@@ -9,8 +9,8 @@ from juriscraper.opinions.united_states.state import nyappdiv_1st
 
 
 class Site(nyappdiv_1st.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         # This is the URL for the past months
         # d = date.today()
         # self.url = 'http://www.courts.state.ny.us/reporter/slipidx/aidxtable_2_{year}_{month}.shtml'.format(

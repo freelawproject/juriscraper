@@ -13,8 +13,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.a_while_ago = date.today() - timedelta(days=60)
         self.url = 'http://media.ca7.uscourts.gov/cgi-bin/rssExec.pl?Time=any&FromMonth={month}&FromDay={day}&FromYear={year}&' \
                    'ToMonth=&ToDay=&ToYear=&Author=any&AuthorName=&Case=any&CaseY1=&CaseY2=&CaseN1=&CaseN2=&CaseN3=&' \

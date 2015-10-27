@@ -31,11 +31,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class Site(OpinionSite):
 
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today()
-        self.backwards_days = 30
+        self.backwards_days = 7
 
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -50,6 +50,7 @@ class Site(OpinionSite):
             dtstart=date(1981, 1, 1),
             until=date(2010, 1, 1),
         )]
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':

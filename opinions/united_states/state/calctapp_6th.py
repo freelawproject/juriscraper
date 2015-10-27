@@ -5,8 +5,8 @@ from juriscraper.opinions.united_states.state import cal
 
 
 class Site(cal.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courtinfo.ca.gov/cgi-bin/opinions-blank.cgi?Courts=H'
         self.court_id = self.__module__
 

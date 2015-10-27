@@ -6,8 +6,8 @@ from dateutil.rrule import MONTHLY, rrule
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         today = date.today()
         self.url = 'http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions' % (today.month, today.year)
         self.court_id = self.__module__

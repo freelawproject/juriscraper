@@ -3,8 +3,8 @@ from datetime import datetime
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.utcourts.gov/opinions/supopin/index.htm'
         self.court_id = self.__module__
 

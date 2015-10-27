@@ -78,6 +78,7 @@ class ScraperExampleTest(unittest.TestCase):
                                  if 'backscraper' not in mod) + 2
         num_example_files = 0
         num_warnings = 0
+        cnt = CaseNameTweaker()
         for module_string in module_strings:
             package, module = module_string.rsplit('.', 1)
             mod = __import__("%s.%s" % (package, module),
@@ -89,10 +90,24 @@ class ScraperExampleTest(unittest.TestCase):
                     '  %s ' % module_string.ljust(max_len_mod_string)
                 )
                 sys.stdout.flush()
-                paths = glob.glob(
-                    '%s_example*' % module_string.replace('.', '/'))
-                self.assertTrue(paths, "No example file found for: %s!" %
-                                module_string.rsplit('.', 1)[1])
+                # module_parts:
+                # [0]  - "juriscraper"
+                # [1]  - "opinions" or "oral_args"
+                # ...  - rest of the path
+                # [-1] - module name
+                module_parts = module_string.split('.')
+                example_path = os.path.join(
+                    "juriscraper", "tests", "examples", module_parts[1],
+                    "united_states", module_parts[-1],
+                )
+                paths = glob.glob('%s_example*' % example_path)
+                self.assertTrue(
+                    paths,
+                    "No example file found for: %s! \n\nThe test looked in: "
+                    "%s" % (
+                        module_string.rsplit('.', 1)[1],
+                        os.path.join(os.getcwd(), example_path),
+                    ))
                 num_example_files += len(paths)
                 t1 = time.time()
                 num_tests = len(paths)
@@ -101,7 +116,7 @@ class ScraperExampleTest(unittest.TestCase):
                     if path.endswith('~'):
                         # Text editor backup: Not interesting.
                         continue
-                    site = mod.Site()
+                    site = mod.Site(cnt=cnt)
                     site.url = path
                     # Forces a local GET
                     site.method = 'LOCAL'
@@ -659,26 +674,85 @@ class ScraperSpotTest(unittest.TestCase):
                     self.fail("Unable to parse string: '{s}'".format(s=s))
 
     def test_mass(self):
-        strings = (
-            'Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc. (SJC 11545) (September 15, 2014)',
-            'Bower v. Bournay-Bower (SJC 11478) (September 15, 2014)',
-            'Commonwealth v. Holmes (SJC 11557) (September 12, 2014)',
-            'Superintendent-Director of Assabet Valley Regional School District v. Speicher (SJC 11563) (September 11, 2014)',
-            'Commonwealth v. Quinn (SJC 11554) (September 11, 2014)',
-            'Commonwealth v. Wall (SJC 09850) (September 11, 2014)',
-            'Commonwealth v. Letkowski (SJC 11556) (September 9, 2014)',
-            'Commonwealth v. Sullivan (SJC 11568) (September 9, 2014)',
-            'Plumb v. Casey (SJC 11519) (September 8, 2014)',
-            'A.J. Properties, LLC v. Stanley Black and Decker, Inc. (SJC 11424) (September 5, 2014)',
-            'Massachusetts Electric Co. v. Department of Public Utilities (SJC 11526, 11527, 11528) (September 4, 2014)',
-        )
+        strings = {
+            'Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc. (SJC 11545) (September 15, 2014)': [
+                'Massachusetts State Automobile Dealers Association, Inc. v. Tesla Motors MA, Inc.',
+                'SJC 11545',
+                'September 15, 2014',
+            ],
+            'Bower v. Bournay-Bower (SJC 11478) (September 15, 2014)': [
+                'Bower v. Bournay-Bower',
+                'SJC 11478',
+                'September 15, 2014',
+            ],
+            'Commonwealth v. Holmes (SJC 11557) (September 12, 2014)': [
+                'Commonwealth v. Holmes',
+                'SJC 11557',
+                'September 12, 2014',
+            ],
+            'Superintendent-Director of Assabet Valley Regional School District v. Speicher (SJC 11563) (September 11, 2014)': [
+                'Superintendent-Director of Assabet Valley Regional School District v. Speicher',
+                'SJC 11563',
+                'September 11, 2014',
+            ],
+            'Commonwealth v. Quinn (SJC 11554) (September 11, 2014)': [
+                'Commonwealth v. Quinn',
+                'SJC 11554',
+                'September 11, 2014',
+            ],
+            'Commonwealth v. Wall (SJC 09850) (September 11, 2014)': [
+                'Commonwealth v. Wall',
+                'SJC 09850',
+                'September 11, 2014',
+            ],
+            'Commonwealth v. Letkowski (SJC 11556) (September 9, 2014)': [
+                'Commonwealth v. Letkowski',
+                'SJC 11556',
+                'September 9, 2014',
+            ],
+            'Commonwealth v. Sullivan (SJC 11568) (September 9, 2014)': [
+                'Commonwealth v. Sullivan',
+                'SJC 11568',
+                'September 9, 2014',
+            ],
+            'Plumb v. Casey (SJC 11519) (September 8, 2014)': [
+                'Plumb v. Casey',
+                'SJC 11519',
+                'September 8, 2014',
+            ],
+            'A.J. Properties, LLC v. Stanley Black and Decker, Inc. (SJC 11424) (September 5, 2014)': [
+                'A.J. Properties, LLC v. Stanley Black and Decker, Inc.',
+                'SJC 11424',
+                'September 5, 2014',
+            ],
+            'Massachusetts Electric Co. v. Department of Public Utilities (SJC 11526, 11527, 11528) (September 4, 2014)': [
+                'Massachusetts Electric Co. v. Department of Public Utilities',
+                'SJC 11526, 11527, 11528',
+                'September 4, 2014',
+            ],
+            'Commonwealth v. Doe (SJC-11861) (October 22, 2015)': [
+                'Commonwealth v. Doe',
+                'SJC-11861',
+                'October 22, 2015',
+            ],
+        }
         site = mass.Site()
-        for s in strings:
+        for k, v in strings.items():
             try:
-                site.grouping_regex.search(s).group(3)
+                self.assertEqual(
+                    site.grouping_regex.search(k).group(1).strip(),
+                    v[0],
+                )
+                self.assertEqual(
+                    site.grouping_regex.search(k).group(2).strip(),
+                    v[1],
+                )
+                self.assertEqual(
+                    site.grouping_regex.search(k).group(3).strip(),
+                    v[2],
+                )
             except AttributeError:
-                self.fail(
-                    "Unable to parse mass string: '{s}'".format(s=s))
+                self.fail("Unable to parse mass string: '{s}'".format(s=k))
 
     def test_massappct(self):
         strings = (

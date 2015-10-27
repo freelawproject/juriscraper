@@ -16,8 +16,8 @@ from juriscraper.AbstractSite import logger
 
 class Site(OpinionSite):
 
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
 
         self.back_scrape_iterable = [i.date() for i in rrule(
             MONTHLY,

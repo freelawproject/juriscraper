@@ -12,8 +12,8 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.supremecourt.gov/oral_arguments/argument_audio.aspx'
         self.back_scrape_iterable = range(2010, 2015)

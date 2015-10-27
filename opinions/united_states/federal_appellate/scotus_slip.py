@@ -7,8 +7,8 @@ from juriscraper.AbstractSite import logger
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.supremecourt.gov/opinions/slipopinions.aspx'
         self.court_id = self.__module__
         self.back_scrape_url = 'http://www.supremecourt.gov/opinions/slipopinion/{}'

@@ -2,8 +2,8 @@ from juriscraper.opinions.united_states.state import va
 
 
 class Site(va.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courts.state.va.us/wpcau.htm'
         self.court_id = self.__module__
 
