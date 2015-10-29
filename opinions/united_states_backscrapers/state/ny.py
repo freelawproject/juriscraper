@@ -19,20 +19,21 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from lib.html_utils import add_delay
 
 
 class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
-        self.interval = 30
+        self.interval = 200
         # self.url = 'http://iapps.courts.state.ny.us/lawReporting/Search'
         self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch?searchType=opinion&dtStartDate=10/01/2015&dtEndDate=10/27/2015&Submit=true'
         self.court_id = self.__module__
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,
-            dtstart=date(1998, 1, 1),
+            dtstart=date(2005, 1, 1),
             # dtstart=date(2005, 1, 1),
             until=date(2016, 1, 1),
         )]
@@ -41,6 +42,7 @@ class Site(OpinionSite):
         self.download_regex = re.compile("funcNewWindow\('(.*\.htm)'\)")
         self.court = 'Court of Appeals'
         self.parameters = {}
+        self.use_sessions = True
 
     # def _download(self, request_dict={}):
     #     if self.method == 'LOCAL':
@@ -140,13 +142,67 @@ class Site(OpinionSite):
         return neutral_citations
 
     def _download_backwards(self, d):
+        add_delay(20, 5)
         self.crawl_date = d
-        self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch?searchType=opinion&dtStartDate={}5&dtEndDate={}&Submit=true'.format(
-            (d - timedelta(days=self.interval)).strftime("%m/%d%Y"),
-            d.strftime("%m/%d%Y")
-        )
-        self.html = self._download()
+        self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch'
+        # self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch?rbOpinionMotion=opinion&Pty=&and_or=and&dtStartDate={}&dtEndDate={}&docket=&judge=&slipYear=&slipNo=&OffVol=&OffPage=&fullText=&and_or2=and&Submit=Find&hidden1=&hidden2='.format(
+        #     (d - timedelta(days=self.interval)).strftime("%m/%d/%Y"),
+        #     d.strftime("%m/%d/%Y")
+        # )
+        self.method = 'POST'
+        self.parameters = {
+            'rbOpinionMotion': 'opinion',
+            'Pty': '',
+            'and_or': 'and',
+            'dtStartDate': (d - timedelta(days=self.interval)).strftime("%m/%d/%Y"),
+            'dtEndDate': d.strftime("%m/%d/%Y"),
+            'docket': '',
+            'judge': '',
+            'slipYear': '',
+            'slipNo': '',
+            'OffVol': '',
+            'OffPage': '',
+            'fullText': '',
+            'and_or2': 'and',
+            'Submit': 'Find',
+            'hidden1': '',
+            'hidden2': ''
+        }
+        cookies = self.get_cookies()
+        logger.info(str(cookies))
+        self.html = self._download(request_dict={'cookies': cookies})
+
+        i = 0
+        while not self.html.xpath('//table') and i < 10:
+            add_delay(20, 5)
+            self.html = self._download(request_dict={'cookies': cookies})
+            i += 1
+            logger.info("Bad responce {}".format(i))
+
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
+
+    def get_cookies(self, new=False):
+        """
+        if new is True it will open the self.url using selenium and return the cookies
+        else it returns self.cookies
+        """
+
+        # if not self.cookies or new:
+        logger.info("Running Selenium browser PhantomJS to get the cookies...")
+        driver = webdriver.PhantomJS(
+            executable_path='/usr/local/phantomjs/phantomjs',
+            service_log_path=os.path.devnull,  # Disable ghostdriver.log
+        )
+
+        driver.set_window_size(1920, 1080)
+        driver.get(self.url)
+        WebDriverWait(driver, 30).until(
+                EC.presence_of_element_located((By.NAME, "dtEndDate"))
+            )
+        self.cookies = normalize_cookies(driver.get_cookies())
+        driver.close()
+
+        return self.cookies
