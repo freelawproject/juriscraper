@@ -5,7 +5,7 @@ from datetime import date
 from dateutil.rrule import MONTHLY, rrule
 from juriscraper.OpinionSite import OpinionSite
 
-from juriscraper.lib.ssl_adapters import SSLAdapter
+from juriscraper.lib.network_utils import SSLAdapter
 
 
 class Site(OpinionSite):
