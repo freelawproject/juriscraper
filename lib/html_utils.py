@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # encoding: utf-8
-import random
 
 from lxml import html
 from lxml.etree import XMLSyntaxError
 from lxml.html.clean import Cleaner
-import time
 
 
 def get_clean_body_content(content, remove_extra_tags=[]):
@@ -29,9 +27,3 @@ def get_visible_text(html_content):
                                                                  parent::head |
                                                                  parent::script)]""")
     return " ".join(text)
-
-
-def add_delay(delay=0, deviation=0):
-    """you can set the amount of the delay and the range a random number of seconds will select from"""
-    duration = random.randrange(delay - deviation, delay + deviation)
-    time.sleep(duration)

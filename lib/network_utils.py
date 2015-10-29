@@ -1,5 +1,10 @@
+import random
+import time
+
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
+
+from juriscraper.AbstractSite import logger
 
 
 class SSLAdapter(HTTPAdapter):
@@ -15,3 +20,14 @@ class SSLAdapter(HTTPAdapter):
                                        maxsize=maxsize,
                                        block=block,
                                        ssl_version=self.ssl_version)
+
+
+def add_delay(delay=0, deviation=0):
+    """Create a semi-random delay.
+
+    Delay is the number of seconds your program will be stopped for, and
+    deviation is the number of seconds that the delay can vary.
+    """
+    duration = random.randrange(delay - deviation, delay + deviation)
+    logger.info("Adding a delay of %s seconds. Please wait." % duration)
+    time.sleep(duration)

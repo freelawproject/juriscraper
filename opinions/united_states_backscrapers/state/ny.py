@@ -5,21 +5,20 @@ Court Short Name: NY
 History:
  2015-10-27  Created by Andrei Chelaru
 """
-from juriscraper.lib.cookie_utils import normalize_cookies
 import os
 import re
 from datetime import date, datetime, timedelta
-from juriscraper.OpinionSite import OpinionSite
 from dateutil.rrule import rrule, DAILY
-from juriscraper.AbstractSite import logger
 from lxml import html
 from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from lib.html_utils import add_delay
+
+from juriscraper.lib.cookie_utils import normalize_cookies
+from juriscraper.lib.network_utils import add_delay
+from juriscraper.AbstractSite import logger
+from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
@@ -33,8 +32,8 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,
+            # dtstart=date(1998, 1, 1),
             dtstart=date(2005, 1, 1),
-            # dtstart=date(2005, 1, 1),
             until=date(2016, 1, 1),
         )]
         self.method = 'POST'
@@ -43,6 +42,7 @@ class Site(OpinionSite):
         self.court = 'Court of Appeals'
         self.parameters = {}
         self.use_sessions = True
+        self.uses_selenium = True
 
     # def _download(self, request_dict={}):
     #     if self.method == 'LOCAL':
@@ -101,10 +101,8 @@ class Site(OpinionSite):
     #         return html_tree
 
     def _get_case_names(self):
-        print(html.tostring(self.html))
         case_names = []
         for element in self.html.xpath(self.base_path):
-            logger.info('1')
             case_names.append(''.join(x.strip() for x in element.xpath('./td[1]//text()')))
         return case_names
 
@@ -142,7 +140,6 @@ class Site(OpinionSite):
         return neutral_citations
 
     def _download_backwards(self, d):
-        add_delay(20, 5)
         self.crawl_date = d
         self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch'
         # self.url = 'http://iapps.courts.state.ny.us/lawReporting/CourtOfAppealsSearch?rbOpinionMotion=opinion&Pty=&and_or=and&dtStartDate={}&dtEndDate={}&docket=&judge=&slipYear=&slipNo=&OffVol=&OffPage=&fullText=&and_or2=and&Submit=Find&hidden1=&hidden2='.format(
@@ -168,30 +165,29 @@ class Site(OpinionSite):
             'hidden1': '',
             'hidden2': ''
         }
-        cookies = self.get_cookies()
-        logger.info(str(cookies))
-        self.html = self._download(request_dict={'cookies': cookies})
+        self.set_cookies()
+        logger.info("Using cookies: %s" % self.cookies)
+        self.html = self._download(request_dict={'cookies': self.cookies})
 
         i = 0
         while not self.html.xpath('//table') and i < 10:
             add_delay(20, 5)
-            self.html = self._download(request_dict={'cookies': cookies})
+            self.html = self._download(request_dict={'cookies': self.cookies})
             i += 1
-            logger.info("Bad responce {}".format(i))
+            logger.info("Got a bad response {} time(s)".format(i))
 
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
             self.status = 200
 
-    def get_cookies(self, new=False):
-        """
-        if new is True it will open the self.url using selenium and return the cookies
-        else it returns self.cookies
-        """
+    def set_cookies(self):
+        """Hit the main URL, and get the cookies so we can use them elsewhere.
 
-        # if not self.cookies or new:
+        This gets around some of their throttling mechanisms.
+        """
         logger.info("Running Selenium browser PhantomJS to get the cookies...")
+        add_delay(20, 5)
         driver = webdriver.PhantomJS(
             executable_path='/usr/local/phantomjs/phantomjs',
             service_log_path=os.path.devnull,  # Disable ghostdriver.log
@@ -200,9 +196,7 @@ class Site(OpinionSite):
         driver.set_window_size(1920, 1080)
         driver.get(self.url)
         WebDriverWait(driver, 30).until(
-                EC.presence_of_element_located((By.NAME, "dtEndDate"))
-            )
+            EC.presence_of_element_located((By.NAME, "dtEndDate"))
+        )
         self.cookies = normalize_cookies(driver.get_cookies())
         driver.close()
-
-        return self.cookies
