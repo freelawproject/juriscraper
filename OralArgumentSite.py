@@ -22,13 +22,13 @@ class OralArgumentSite(AbstractSite):
             self.__setattr__(attr, None)
 
     def _get_download_urls(self):
-        return None
+        raise NotImplementedError('`_get_download_urls()` must be implemented.')
 
     def _get_case_dates(self):
-        return None
+        raise NotImplementedError('`_get_case_dates()` must be implemented.')
 
     def _get_case_names(self):
-        return None
+        raise NotImplementedError('`_get_case_names()` must be implemented.')
 
     def _get_docket_numbers(self):
         return None
