@@ -33,8 +33,7 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,
-            dtstart=date(1999, 7, 1),
-            # dtstart=date(2005, 1, 1),
+            dtstart=date(2003, 6, 1),
             until=date(2016, 1, 1),
         )]
         self.method = 'POST'
@@ -44,6 +43,24 @@ class Site(OpinionSite):
         self.parameters = {}
         self.use_sessions = True
         self.uses_selenium = True
+
+    def _download(self, request_dict={}):
+        """
+        We use selenium to get the cookies, and then we check if we got the correct page,
+        if not we retry for a total of 11 times
+        """
+        self.set_cookies()
+        logger.info("Using cookies: %s" % self.cookies)
+        request_dict.update({'cookies': self.cookies})
+
+        html__ = super(Site, self)._download(request_dict)
+        i = 0
+        while not html__.xpath('//table') and i < 10:
+            add_delay(20, 5)
+            html__ = super(Site, self)._download(request_dict)
+            i += 1
+            logger.info("Got a bad response {} time(s)".format(i))
+        return html__
 
     def _get_case_names(self):
         case_names = []
@@ -106,17 +123,7 @@ class Site(OpinionSite):
             'hidden1': '',
             'hidden2': ''
         }
-        self.set_cookies()
-        logger.info("Using cookies: %s" % self.cookies)
-        self.html = self._download(request_dict={'cookies': self.cookies})
-
-        i = 0
-        while not self.html.xpath('//table') and i < 10:
-            add_delay(20, 5)
-            self.html = self._download(request_dict={'cookies': self.cookies})
-            i += 1
-            logger.info("Got a bad response {} time(s)".format(i))
-
+        self.html = self._download()
         if self.html is not None:
             # Setting status is important because it prevents the download
             # function from being run a second time by the parse method.
