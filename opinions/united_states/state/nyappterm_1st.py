@@ -9,6 +9,7 @@ from datetime import date, timedelta
 from juriscraper.opinions.united_states_backscrapers.state.ny import Site as NySite
 from juriscraper.AbstractSite import logger
 from juriscraper.lib.network_utils import add_delay
+from dateutil.rrule import DAILY, rrule
 
 
 class Site(NySite):
@@ -16,13 +17,19 @@ class Site(NySite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.court = 'Appellate+Term,+1st+Dept'
-        self.interval = 30
+        self.interval = 365
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            interval=self.interval,
+            dtstart=date(2004, 1, 1),
+            until=date(2016, 1, 1),
+        )]
 
         self.parameters = {
             'rbOpinionMotion': 'opinion',
             'Pty': '',
             'and_or': 'and',
-            'dtStartDate': (date.today() - timedelta(days=self.interval)).strftime("%m/%d/%Y"),
+            'dtStartDate': (date.today() - timedelta(days=30)).strftime("%m/%d/%Y"),
             'dtEndDate': date.today().strftime("%m/%d/%Y"),
             'court': self.court,
             'docket': '',

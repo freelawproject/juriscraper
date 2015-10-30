@@ -5,6 +5,7 @@ Court Short Name: NY
 History:
  2015-10-27  Created by Andrei Chelaru
 """
+from lxml import html
 import os
 import re
 from datetime import date, datetime, timedelta
@@ -32,8 +33,8 @@ class Site(OpinionSite):
         self.back_scrape_iterable = [i.date() for i in rrule(
             DAILY,
             interval=self.interval,
-            # dtstart=date(1998, 7, 1),
-            dtstart=date(2005, 1, 1),
+            dtstart=date(1999, 7, 1),
+            # dtstart=date(2005, 1, 1),
             until=date(2016, 1, 1),
         )]
         self.method = 'POST'
@@ -140,3 +141,13 @@ class Site(OpinionSite):
         )
         self.cookies = normalize_cookies(driver.get_cookies())
         driver.close()
+
+    @staticmethod
+    def cleanup_content(content):
+        tree = html.fromstring(content)
+        core_element = tree.xpath('//partyblock')[0]
+        return html.tostring(
+            core_element,
+            pretty_print=True,
+            encoding='unicode'
+        )
