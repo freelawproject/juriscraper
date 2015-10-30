@@ -71,7 +71,7 @@ class Site(OpinionSite):
         correct page. If not we retry for a total of 11 times.
         """
         if self.method == 'LOCAL':
-            return super(Site, self)._download(request_dict=request_dict)
+            return super(Site, self)._download(request_dict)
 
         self.set_cookies()
         logger.info("Using cookies: %s" % self.cookies)
