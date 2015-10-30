@@ -9,6 +9,7 @@ import os
 import re
 from datetime import date, datetime, timedelta
 from dateutil.rrule import rrule, DAILY
+
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -17,7 +18,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from lib.network_utils import add_delay
+from juriscraper.lib.network_utils import add_delay
 
 
 class Site(OpinionSite):
