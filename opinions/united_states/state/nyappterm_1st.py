@@ -2,8 +2,9 @@
 # CourtID: nyappterm_1st
 # Court Short Name: NY
 # Author: Andrei Chelaru
-# Reviewer:
+# Reviewer: mlr
 # Date: 2015-10-30
+
 from datetime import date, timedelta, datetime
 from lxml import html
 import os
@@ -66,8 +67,8 @@ class Site(OpinionSite):
 
     def _download(self, request_dict={}):
         """
-        We use selenium to get the cookies, and then we check if we got the correct page,
-        if not we retry for a total of 11 times
+        We use selenium to get the cookies, and then we check if we got the
+        correct page. If not we retry for a total of 11 times.
         """
         if self.method == 'LOCAL':
             return super(Site, self)._download(request_dict=request_dict)
