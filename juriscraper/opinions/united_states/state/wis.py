@@ -6,8 +6,8 @@ from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         begin_date = date.strftime(date.today() - timedelta(15), '%m/%d/%Y')
         end_date = date.strftime(date.today(), '%m/%d/%Y')
         self.url = ('http://wicourts.gov/supreme/scopin.jsp?'
@@ -20,7 +20,7 @@ class Site(OpinionSite):
 
     def _get_download_urls(self):
         return [href for href in
-                self.html.xpath('//form/table[1]/tr//td[4]/a[2]/@href')]
+                self.html.xpath('//form/table[1]/tr//td[4]/a[contains(.//text(), "PDF")]/@href')]
 
     def _get_case_dates(self):
         dates = []

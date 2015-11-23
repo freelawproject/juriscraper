@@ -5,19 +5,19 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
-import time
-import re
 from datetime import date
+import time
 
-from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
 from juriscraper.OpinionSite import OpinionSite
+from juriscraper.lib.date_utils import quarter, is_first_month_in_quarter
 from lxml import html
+import re
 from requests.exceptions import HTTPError
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
         self.url = 'http://mn.gov/lawlib/archive/sct{short_year}q{quarter}.html'.format(
@@ -34,9 +34,11 @@ class Site(OpinionSite):
         try:
             return super(Site, self)._download()
         except HTTPError, e:
-            is_first_days_of_the_quarter = (date.today().day <= 15 and
-                                            is_first_month_in_quarter(date.today().month))
-            got_404 = e.response.status_code == 404
+            is_first_days_of_the_quarter = (
+                date.today().day <= 15 and
+                is_first_month_in_quarter(date.today().month)
+            )
+            got_404 = (e.response.status_code == 404)
             if got_404 and is_first_days_of_the_quarter:
                 # Do nothing; abort the crawler
                 self.status = 200

@@ -8,8 +8,8 @@ from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courtswv.gov/supreme-court/opinions.html'
         self.court_id = self.__module__
 

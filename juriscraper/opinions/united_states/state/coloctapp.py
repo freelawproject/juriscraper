@@ -14,8 +14,8 @@ from juriscraper.opinions.united_states.state import colo
 
 
 class Site(colo.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.cobar.org/opinions/index.cfm?courtid=1'
         # For testing
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=7/31/2014&courtid=1'

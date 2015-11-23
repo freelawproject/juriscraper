@@ -18,8 +18,8 @@ from lxml import html
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://appellate.nccourts.org/opinions/?c=sc&year=%s' % date.today().year
         self.back_scrape_iterable = range((date.today().year - 1), 1997, -1)

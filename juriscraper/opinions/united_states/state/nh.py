@@ -18,8 +18,8 @@ from datetime import date
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.courts.state.nh.us/supreme/opinions/{current_year}/index.htm'.format(
             current_year=date.today().year)
         self.court_id = self.__module__

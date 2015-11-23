@@ -13,13 +13,13 @@ History:
 
 from datetime import datetime
 
-from lxml import html
 from juriscraper.OpinionSite import OpinionSite
+from lxml import html
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www.courts.maine.gov/opinions_orders/supreme/publishedopinions.shtml'
 
@@ -51,5 +51,5 @@ class Site(OpinionSite):
         return ["Published"] * len(self.case_names)
 
     def _get_neutral_citations(self):
-        path = '//table//tr/td[1]/text()'
+        path = '//table[position() > 1]//tr/td[1]//text()'
         return list(self.html.xpath(path))

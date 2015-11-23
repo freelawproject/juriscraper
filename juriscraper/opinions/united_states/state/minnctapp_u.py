@@ -5,16 +5,18 @@
 #Reviewer: mlr
 #Date: 2014-07-03
 
+from datetime import date
+import time
+
 from juriscraper.lib.date_utils import quarter
 from juriscraper.opinions.united_states.state import minn
-import time
 import re
-from datetime import date
 
 
 class Site(minn.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    # Only subclasses minn for the _download method.
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         d = date.today()
         self.url = "http://mn.gov/lawlib/archive/cau{short_year}q{quarter}.html".format(

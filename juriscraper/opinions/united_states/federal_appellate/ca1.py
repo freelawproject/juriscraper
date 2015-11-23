@@ -7,8 +7,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.base_url = 'http://media.ca1.uscourts.gov/cgi-bin/opinions.pl'
         self.court_id = self.__module__
         today = date.today()

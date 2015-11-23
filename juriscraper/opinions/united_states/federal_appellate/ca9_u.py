@@ -6,16 +6,24 @@ History:
 import time
 from datetime import date
 
+from dateutil.rrule import DAILY, rrule
+from lxml import html
+
 import ca9_p
 
 
 class Site(ca9_p.Site):
     """The unpublished cases have one more column than the published. Thus some
     overriding is done here. More than usual, but it's very slight tweaks."""
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = "http://www.ca9.uscourts.gov/memoranda/?o_mode=view&amp;o_sort_field=21&amp;o_sort_type=DESC&o_page_size=100"
         self.court_id = self.__module__
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            DAILY,
+            dtstart=date(2009, 11, 11),
+            until=date(2015, 1, 1),
+        )]
 
     def _get_case_dates(self):
         path = '{base}/td[7]//text()'.format(base=self.base)
@@ -23,9 +31,33 @@ class Site(ca9_p.Site):
                     for date_string in self.html.xpath(path)]
 
     def _get_nature_of_suit(self):
-        path = '{base}/td[5]//text()'.format(base=self.base)
-        return list(self.html.xpath(path))
+        nos = []
+        for e in self.html.xpath('{base}/td[5]'.format(base=self.base)):
+            s = html.tostring(e, method='text', encoding='unicode')
+            nos.append(s)
+        return nos
 
     def _get_lower_court(self):
         path = '{base}/td[4]//text()'.format(base=self.base)
         return list(self.html.xpath(path))
+
+    def _download_backwards(self, d):
+        self.url = 'http://www.ca9.uscourts.gov/memoranda/'
+        self.method = 'POST'
+        self.parameters = {
+            'c_page_size': '50',
+            'c__ff_cms_memoranda_case_name_operator': 'like',
+            'c__ff_cms_memoranda_case_num_operator': 'like',
+            'c__ff_cms_memoranda_case_panel_operator': 'like',
+            'c__ff_cms_memoranda_case_origin_operator': 'like',
+            'c__ff_cms_memoranda_case_type_operator': '%3D',
+            'c__ff_cms_memoranda_filed_date_operator': 'like',
+            'c__ff_cms_memoranda_filed_date': d.strftime('%m/%d/%Y'),
+            'c__ff_onSUBMIT_FILTER': 'Search'
+        }
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200

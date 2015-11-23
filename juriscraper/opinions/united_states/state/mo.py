@@ -12,8 +12,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         self.url = 'https://www.courts.mo.gov/page.jsp?id=12086&dist=Opinions Supreme&date=all&year=%s#all' % today.year

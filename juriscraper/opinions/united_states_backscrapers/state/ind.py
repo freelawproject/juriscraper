@@ -15,8 +15,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.in.gov/judiciary/opinions/archsup.html'
         self.court_id = self.__module__
         self.my_precedential_statuses = []

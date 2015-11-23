@@ -1,18 +1,19 @@
+from datetime import date, datetime
 import hashlib
 import json
-from datetime import date, datetime
 from urlparse import urlsplit, urlunsplit, urljoin
 
 import certifi
-import re
-import requests
-from lxml import html
 from juriscraper.lib.date_utils import json_date_handler
 from juriscraper.lib.log_tools import make_default_logger
 from juriscraper.lib.string_utils import (
     harmonize, clean_string, trunc, CaseNameTweaker
 )
 from juriscraper.tests import MockRequest
+from lxml import html
+import re
+import requests
+from requests.adapters import HTTPAdapter
 
 try:
     # Use cchardet for performance to detect the character encoding.
@@ -33,7 +34,7 @@ class AbstractSite(object):
 
     Should not contain lists that can't be sorted by the _date_sort function."""
 
-    def __init__(self):
+    def __init__(self, cnt=None):
         super(AbstractSite, self).__init__()
 
         # Computed metadata
@@ -44,11 +45,13 @@ class AbstractSite(object):
         self.status = None
         self.back_scrape_iterable = None
         self.cookies = {}
+        self.cnt = cnt or CaseNameTweaker()
 
         # Sub-classed metadata
         self.court_id = None
         self.url = None
         self.parameters = None
+        self.uses_selenium = None
         self._opt_attrs = []
         self._req_attrs = []
         self._all_attrs = []
@@ -203,18 +206,28 @@ class AbstractSite(object):
                 if self.__getattribute__(field) is None:
                     raise InsanityException('%s: Required fields do not contain any data: %s' % (self.court_id, field))
             i = 0
+            prior_case_name = None
             for name in self.case_names:
                 if not name.strip():
-                    raise InsanityException("Item with index %s has an empty case name." % i)
+                    raise InsanityException(
+                        "Item with index %s has an empty case name. The prior "
+                        "item had case name of: %s" % (i, prior_case_name)
+                    )
+                prior_case_name = name
                 i += 1
 
         for d in self.case_dates:
             if not isinstance(d, date):
-                raise InsanityException('%s: member of case_dates list not a valid date object. '
-                                        'Instead it is: %s with value: %s' % (self.court_id, type(d), d))
-            if d.year > 2100:
-                raise InsanityException('%s: member of case_dates list is from the 22nd century. '
-                                        'with value %s' % (self.court_id, d.year))
+                raise InsanityException(
+                    '%s: member of case_dates list not a valid date object. '
+                    'Instead it is: %s with value: %s' % (
+                        self.court_id, type(d), d)
+                )
+            if d.year > 2025:
+                raise InsanityException(
+                    '%s: member of case_dates list is from way in the future, '
+                    'with value %s' % (self.court_id, d.year)
+                )
 
         # Is cookies a dict?
         if type(self.cookies) != dict:
@@ -244,6 +257,44 @@ class AbstractSite(object):
         trusted
         """
         self.hash = hashlib.sha1(str(self.case_names)).hexdigest()
+
+    def _get_adapter_instance(self):
+        """Hook for returning a custom HTTPAdapter
+
+        This function allows subclasses to do things like explicitly set
+        specific SSL configurations when being called. Certain courts don't work
+        unless you specify older versions of SSL.
+        """
+        return HTTPAdapter()
+
+    def _make_html_tree(self, text):
+        """Hook for custom HTML parsers
+
+        By default, the etree.html parser is used, but this allows support for
+        other parsers like the html5parser or even BeautifulSoup, if it's called
+        for.
+        """
+        html_tree = html.fromstring(text)
+
+        return html_tree
+
+    def _set_encoding(self, r):
+        """Set the encoding using a few heuristics"""
+        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
+        if r.encoding == 'ISO-8859-1':
+            r.encoding = 'cp1252'
+
+        if r.encoding is None:
+            # Requests detects the encoding when the item is GET'ed using
+            # HTTP headers, and then when r.text is accessed, if the encoding
+            # hasn't been set by that point. By setting the encoding here, we
+            # ensure that it's done by cchardet, if it hasn't been done with
+            # HTTP headers. This way it is done before r.text is accessed
+            # (which would do it with vanilla chardet). This is a big
+            # performance boon, and can be removed once requests is upgraded
+            r.encoding = chardet.detect(r.content)['encoding']
+
+        return r
 
     def _link_repl(self, href):
         """Makes links absolute, working around buggy URLs and nuking anchors.
@@ -292,6 +343,7 @@ class AbstractSite(object):
 
         # Get the response. Disallow redirects so they throw an error
         s = requests.session()
+        s.mount('https://', self._get_adapter_instance())
         if self.method == 'GET':
             r = s.get(
                 self.url,
@@ -317,19 +369,8 @@ class AbstractSite(object):
         # Throw an error if a bad status code is returned.
         r.raise_for_status()
 
-        # If the encoding is iso-8859-1, switch it to cp1252 (a superset)
-        if r.encoding == 'ISO-8859-1':
-            r.encoding = 'cp1252'
-
-        if r.encoding is None:
-            # Requests detects the encoding when the item is GET'ed using
-            # HTTP headers, and then when r.text is accessed, if the encoding
-            # hasn't been set by that point. By setting the encoding here, we
-            # ensure that it's done by cchardet, if it hasn't been done with
-            # HTTP headers. This way it is done before r.text is accessed
-            # (which would do it with vanilla chardet). This is a big
-            # performance boon, and can be removed once requests is upgraded
-            r.encoding = chardet.detect(r.content)['encoding']
+        # Tweak or set the encoding if needed
+        r = self._set_encoding(r)
 
         # Provide the response in the Site object
         self.r = r
@@ -340,7 +381,7 @@ class AbstractSite(object):
             return r.json()
         else:
             text = self._clean_text(r.text)
-            html_tree = html.fromstring(text)
+            html_tree = self._make_html_tree(text)
             html_tree.rewrite_links(self._link_repl)
             return html_tree
 
@@ -385,9 +426,8 @@ class AbstractSite(object):
     def _get_case_name_shorts(self):
         """Generates short case names for all the case names that we scrape."""
         case_name_shorts = []
-        cst = CaseNameTweaker()
         for case_name in self.case_names:
-            case_name_shorts.append(cst.make_case_name_short(case_name))
+            case_name_shorts.append(self.cnt.make_case_name_short(case_name))
         return case_name_shorts
 
     def _get_blocked_statuses(self):

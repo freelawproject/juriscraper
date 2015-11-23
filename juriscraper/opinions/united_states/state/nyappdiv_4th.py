@@ -13,8 +13,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
         # self.url = 'http://www.nycourts.gov/courts/ad4/Clerk/Decisions/2014/07-03-14/alpha-07-03-14.html'
         self.url = 'http://www.nycourts.gov/courts/ad4/Clerk/Decisions/{year_long}/{month}-{day}-{year_short}/alpha-{month}-{day}-{year_short}.html'.format(

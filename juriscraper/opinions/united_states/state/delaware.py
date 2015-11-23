@@ -14,8 +14,8 @@ from lxml import html
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://courts.delaware.gov/opinions/list.aspx?ag=supreme%20court'
         # Note that we can't do the usual thing here because 'del' is a Python keyword.
         self.court_id = 'juriscraper.opinions.united_states.state.del'
