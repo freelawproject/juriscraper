@@ -17,8 +17,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         # Cases before 1997 do not have a docket number to parse.
         self.url = 'http://www.index.va.gov/search/va/bva_search.jsp?RPP=50&RS=1&DB=' + '&DB='.join(
@@ -43,7 +43,7 @@ class Site(OpinionSite):
         for txt in self.html.xpath(path):
             (citation_number, decision_date,
                 archive_date, docket_number) = regex.match(txt).group(1, 2, 3, 4)
-            case_name = docket_number
+            case_name = docket_number  # Huh?
             self.my_case_names.append(case_name)
             self.my_docket_numbers.append(docket_number)
             self.my_neutral_citations.append(citation_number)

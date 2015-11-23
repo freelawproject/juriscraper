@@ -4,8 +4,8 @@ from datetime import date
 from lxml import html
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.cadc.uscourts.gov/internet/opinions.nsf/uscadcopinions.xml'
         self.court_id = self.__module__
 

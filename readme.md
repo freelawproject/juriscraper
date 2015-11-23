@@ -7,8 +7,8 @@ judicial opinions and oral arguments in the American court system. It is
 currently able to scrape:
 
   - opinions from all major appellate Federal courts
-  - opinions from all state courts of last resort (typically their "Supreme 
-    Court")
+  - opinions from all state courts of last resort except for Georgia (typically
+    their "Supreme Court")
   - oral arguments from all appellate federal courts that offer them
 
 Juriscraper is part of a two-part system. The second part is your code, which
@@ -62,24 +62,24 @@ If you're a developer, install the code as follows:
 Joining the Project as a Developer
 ==================================
 We use a few tools pretty frequently while building these scrapers. The first is
-[a sister project called xpath-tester][3] that helps debug XPath queries.
-xpath-tester can be installed locally in a few minutes.
+[a sister project called xpath-tester][3] that helps debug XPath queries. In a
+good operating system, xpath-tester can be installed locally in a few minutes.
 
 We also generally use Eclipse with the PyDev and Aptana tools installed or 
 Intellij with PyCharm installed. These are useful because they allow syntax 
 highlighting, code inspection, and PyLint integration. Intellij is particularly
-strong in this area and a license is available to interested contributors.
+strong in these areas and a license is available to interested contributors.
 
 For scrapers to be merged:
 
  - `python tests/tests.py` must pass, listing the results for any new scrapers. 
    This will be run automatically by [Travis-CI][12]. 
- - a *_example* file must be included (this is needed for the tests to
-   run your code -- see examples of these files next to any current scraper).
+ - a *_example* file must be included in the `tests/examples` directory (this is
+   needed for the tests to run your code).
  - your code should be [PEP8][4] compliant with no major Pylint problems or
-Intellij inspection issues.
+   Intellij inspection issues.
  - your code should efficiently parse a page, returning no exceptions or
-   speed warnings during tests.
+   speed warnings during tests on a modern machine.
 
 When you're ready to develop a scraper, get in touch, and we'll find you one
 that makes sense and that nobody else is working on. If you're interested, we 
@@ -89,7 +89,8 @@ list][list], so by joining that you can help us identify failing scrapers. It
 also has [an archive][archive], if you rather not join another mailing list. 
 Finally, we have [a wiki list][6] of courts that you can browse yourself. 
 There are templates for new scrapers [here (for opinions)][10] and [here (for 
-oral arguments)][11].
+oral arguments)][11]. Those are a lot of options, so we won't blame you if you
+just want to get in touch instead of figuring it all out yourself.
 
 When you're done with your scraper, fork this repository, push your changes 
 into your fork, and then send a pull request for your changes. Be sure to
@@ -137,17 +138,26 @@ example and see `_cleanup_content()` for an explanation of what it does.
 It's also possible to iterate over all courts in a Python package, even if
 they're not known before starting the scraper. For example:
 
+    # Start with an import path. This will do all federal courts.
     court_id = 'juriscraper.opinions.united_states.federal'
-    scrapers = __import__(court_id,
-                          globals(),
-                          locals(),
-                          ['*']).__all__
+    # Import all the scrapers
+    scrapers = __import__(
+        court_id,
+        globals(),
+        locals(),
+        ['*']
+    ).__all__
     for scraper in scrapers:
-        mod = __import__('%s.%s' % (court_id, scraper),
-                         globals(),
-                         locals(),
-                         [scraper])
+        mod = __import__(
+            '%s.%s' % (court_id, scraper),
+            globals(),
+            locals(),
+            [scraper]
+        )
+        # Create a Site instance, then get the contents
         site = mod.Site()
+        site.parse()
+        print str(site)
 
 This can be useful if you wish to create a command line scraper that iterates
 over all courts of a certain jurisdiction that is provided by a script or a user.
@@ -165,7 +175,7 @@ code is committed to the repository or whenever a pull request is created. You
 can make sure that your pull request is good to go by waiting for the automated
 tests to complete.
 
-The current status if Travis CI on our master branch is:
+The current status of Travis CI on our master branch is:
 
 [![Build Status](https://travis-ci.org/freelawproject/juriscraper.svg?branch=master)][12]
 

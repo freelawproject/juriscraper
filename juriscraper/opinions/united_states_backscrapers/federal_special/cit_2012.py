@@ -4,23 +4,23 @@ from datetime import date
 from lxml import html
 
 class Site(cit.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2012.html'
         self.court_id = self.__module__
 
     def _get_download_urls(self):
         return [t for t in self.html.xpath('//table[4]//tr/td[1]//a/@href')]
-    
+
     def _get_neutral_citations(self):
         return [t for t in self.html.xpath('//table[4]//tr/td[1]//a/text()')]
-    
+
     def _get_case_names(self):
         # Exclude confidential rows by ensuring there is a sibling row that
         # contains an anchor (which confidential cases do not)
         # There is also one stray case within a <p> tag we have to catch.
         return [s for s in self.html.xpath('//table[4]//tr[position() > 1]/td[2][../td//a]/text()[1] | //table[4]//tr[position() > 1]/td[2][../td//a]/p/text()[1]')]
-    
+
     def _get_precedential_statuses(self):
         return ['Published'] * len(self.case_names)
 

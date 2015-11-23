@@ -15,8 +15,8 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://court-url.gov/some-path.html'
         # Complete this variable if you create a backscraper.
@@ -25,6 +25,7 @@ class Site(OpinionSite):
         # if a POST, use these two attributes, otherwise, delete them.
         self.parameters = {}
         self.method = 'POST'
+        self.uses_selenium = False
 
 
     '''

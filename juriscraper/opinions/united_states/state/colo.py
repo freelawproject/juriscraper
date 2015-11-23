@@ -10,16 +10,16 @@ Date created: 2014-07-11
 from datetime import date, datetime
 
 import certifi
-import re
+from juriscraper.AbstractSite import logger
 from juriscraper.OpinionSite import OpinionSite
-from juriscraper.lib.string_utils import clean_string
 from lxml import html
+import re
 import requests
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.cobar.org/opinions/index.cfm?courtid=2'
         # For testing
         #self.url = 'http://www.cobar.org/opinions/opinionlist.cfm?casedate=6/30/2014&courtid=2'
@@ -27,7 +27,7 @@ class Site(OpinionSite):
         self.title_regex = re.compile(r'(?P<neutral_citations>.*?)\. (?P<docket_numbers>(?:Nos?\.)?.*\d{1,2})\. (?P<case_names>.*)\.')
         self.path = "//table//td[1]/ul/li[position() <= 5]/strong/a"
         # dummy sequence to force one call to _download_backwards
-        self.back_scrape_iterable = [ 'dummy' ]
+        self.back_scrape_iterable = ['dummy']
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':
@@ -46,6 +46,7 @@ class Site(OpinionSite):
                 text = ahref.xpath("./text()")[0]
                 url = ahref.xpath("./@href")[0]
                 parsed_date = datetime.strptime(text, "%B %d, %Y").date()
+                logger.info("Getting sub-url: %s" % url)
                 r = s.get(
                     url,
                     headers={'User-Agent': 'Juriscraper'},
@@ -95,39 +96,45 @@ class Site(OpinionSite):
     def _get_precedential_statuses(self):
         return ["Published"] * len(self.case_names)
 
-    def _get_summaries(self):
-        path_to_all_paras = '//div[@id="opinion"]/p'
-        summaries = []
-        for tree, _ in self.html:
-            summary_parts = ''
-            for elem in tree.xpath(path_to_all_paras):
-                el_summary = ''
-                # Check if it has a descendant with font[@size="2"].
-                for descendant in ('./font[@size="2"]',
-                                   './font[@size="1"]',
-                                   './font[@sizes="2"]'):
-                    el = elem.xpath(descendant)
-                    if el:
-                        # If so, then it's a summary paragraph.
-                        el_summary += '<p>%s</p>\n' % clean_string(html.tostring(el[0], method='text', encoding='unicode'))
-                        break
-                # Check if it's a title paragraph
-                if elem.xpath('./a/b//text()'):
-                    # If so, append previous values and start a new summary item.
-                    if summary_parts:
-                        summaries.append(summary_parts)
-                        summary_parts = ''
-                    if el_summary:
-                        summaries.append(el_summary)
-                        el_summary = ''
-                if el_summary:
-                    summary_parts += el_summary
-
-            # Append the tailing summary
-            if summary_parts:
-                # On days with no content, this winds up blank and shouldn't be appended.
-                summaries.append(summary_parts)
-        return summaries
+    # Removed by mlr on 2015-10-16. Unfortunately, this code is complicated and
+    # fails in practice. There's no easy way to identify what's a paragraph,
+    # and so covering every corner case is near impossible. We can bring it back
+    # someday, but make sure it works for 2015-09-14 as well as 2015-6-1.
+    # def _get_summaries(self):
+    #     path_to_all_paras = '//div[@id="opinion"]/p'
+    #     summaries = []
+    #     for tree, _ in self.html:
+    #         summary_parts = ''
+    #         paragraphs = tree.xpath(path_to_all_paras)
+    #         for elem in paragraphs:
+    #             el_summary = ''
+    #             # Check if it has a descendant with font[@size="2"].
+    #             for descendant in ('./font[@size="2"]',
+    #                                './font[@size="1"]',
+    #                                './font[@sizes="2"]'):
+    #                 el = elem.xpath(descendant)
+    #                 if el:
+    #                     # If so, then it's a summary paragraph.
+    #                     el_summary += '<p>%s</p>\n' % clean_string(html.tostring(el[0], method='text', encoding='unicode'))
+    #                     break
+    #             # Check if it's a title paragraph
+    #             if elem.xpath('./a/b//text()'):
+    #                 # If so, append previous values and start a new summary item
+    #                 if summary_parts:
+    #                     summaries.append(summary_parts)
+    #                     summary_parts = ''
+    #                 if el_summary:
+    #                     summaries.append(el_summary)
+    #                     el_summary = ''
+    #             if el_summary:
+    #                 summary_parts += el_summary
+    #
+    #         # Append the tailing summary
+    #         if summary_parts:
+    #             # On days with no content, this winds up blank and shouldn't be
+    #             # appended.
+    #             summaries.append(summary_parts)
+    #     return summaries
 
     def _get_nature_of_suit(self):
         path = '//div[@id="opinion"]//b/i/text()'

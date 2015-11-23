@@ -13,8 +13,8 @@ from juriscraper.OralArgumentSite import OralArgumentSite
 
 
 class Site(OralArgumentSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.url = 'http://www2.ca3.uscourts.gov/oralargument/OralArguments.xml'
         self.regex = '(\d{2}-\d{3,4})?(.+)\.(:?(wma)|(mp3))'

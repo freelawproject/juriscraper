@@ -12,8 +12,8 @@ from juriscraper.lib.string_utils import titlecase
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today()
         self.a_while_ago = date.today() - timedelta(days=20)

@@ -19,8 +19,8 @@ from juriscraper.lib.string_utils import clean_string
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.crawl_date = date.today()
         self.url = 'http://www.jud.ct.gov/external/supapp/archiveAROsup{year}.htm'.format(
             year=self.crawl_date.strftime("%y"))

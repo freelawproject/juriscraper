@@ -13,8 +13,8 @@ from juriscraper.opinions.united_states.state import nd
 
 
 class Site(nd.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         today = date.today()
         now = datetime.now()

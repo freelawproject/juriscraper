@@ -8,8 +8,8 @@ class OpinionSite(AbstractSite):
     Should not contain lists that can't be sorted by the _date_sort function.
     """
 
-    def __init__(self):
-        super(OpinionSite, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(OpinionSite, self).__init__(*args, **kwargs)
 
         # Order of attributes is important as it affects the order of parsing.
         # Some methods rely on others having already been run.
@@ -35,13 +35,13 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_download_urls(self):
-        return None
+        raise NotImplementedError('`_get_download_urls()` must be implemented.')
 
     def _get_case_dates(self):
-        return None
+        raise NotImplementedError('`_get_case_dates()` must be implemented.')
 
     def _get_case_names(self):
-        return None
+        raise NotImplementedError('`_get_case_names()` must be implemented.')
 
     def _get_causes(self):
         return None
@@ -80,7 +80,7 @@ class OpinionSite(AbstractSite):
         return None
 
     def _get_precedential_statuses(self):
-        return None
+        raise NotImplementedError('`_get_precedential_statuses()` must be implemented.')
 
     def _get_summaries(self):
         return None

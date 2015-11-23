@@ -13,8 +13,8 @@ from datetime import date, timedelta
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.today = date.today()
         self.a_while_ago = date.today() - timedelta(days=30)
         self.url = ('http://courts.mi.gov/opinions_orders/opinions_orders/'

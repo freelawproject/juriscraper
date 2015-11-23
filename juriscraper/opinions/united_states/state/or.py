@@ -10,8 +10,8 @@ from datetime import date
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.today = date.today()
         self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC{year}.aspx'.format(year=self.today.year)
         # self.url = 'http://www.publications.ojd.state.or.us/Pages/OpinionsSC2014.aspx'

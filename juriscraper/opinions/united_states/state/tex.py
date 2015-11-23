@@ -13,29 +13,29 @@
 from datetime import date, timedelta, datetime
 
 import certifi
-import os
-import requests
 from dateutil.rrule import rrule, YEARLY
-from lxml import html
-from selenium import webdriver
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from juriscraper.AbstractSite import logger
 from juriscraper.DeferringList import DeferringList
 from juriscraper.OpinionSite import OpinionSite
 from juriscraper.lib.cookie_utils import normalize_cookies
 from juriscraper.lib.string_utils import titlecase
+from lxml import html
+import os
+import requests
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class Site(OpinionSite):
 
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.case_date = date.today()
-        self.backwards_days = 30
+        self.backwards_days = 7
 
         #self.case_date = date(month=7, year=2014, day=11)
         self.records_nr = 0
@@ -50,6 +50,7 @@ class Site(OpinionSite):
             dtstart=date(1981, 1, 1),
             until=date(2010, 1, 1),
         )]
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         if self.method == 'LOCAL':

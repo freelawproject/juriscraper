@@ -2,14 +2,21 @@ from juriscraper.OpinionSite import OpinionSite
 import re
 import time
 from datetime import date
+from dateutil.rrule import MONTHLY, rrule
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         today = date.today()
         self.url = 'http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions' % (today.month, today.year)
         self.court_id = self.__module__
+
+        self.back_scrape_iterable = [i.date() for i in rrule(
+            MONTHLY,
+            dtstart=date(1995, 11, 1),
+            until=date(2015, 1, 1),
+        )]
 
     def _get_case_names(self):
         case_names = []
@@ -48,3 +55,16 @@ class Site(OpinionSite):
             else:
                 statuses.append('Unknown')
         return statuses
+
+    def _download_backwards(self, d):
+
+        self.url = 'http://media.ca8.uscourts.gov/cgi-bin/opnByMM.pl?theMM=%02d&theYY=%s&A1=Get+Opinions' % (
+            d.month,
+            d.year
+        )
+
+        self.html = self._download()
+        if self.html is not None:
+            # Setting status is important because it prevents the download
+            # function from being run a second time by the parse method.
+            self.status = 200

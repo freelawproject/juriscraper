@@ -11,8 +11,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
 # This is a special backscraper to deal with problems on the 2003 page.
         self.url = 'http://www.cit.uscourts.gov/SlipOpinions/SlipOps-2003.html'
         self.court_id = self.__module__

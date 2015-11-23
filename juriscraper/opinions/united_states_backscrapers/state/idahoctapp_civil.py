@@ -9,8 +9,8 @@ import time
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.isc.idaho.gov/opinions/cacivil.htm'
         self.court_id = self.__module__
 

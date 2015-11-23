@@ -13,8 +13,8 @@ import re
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.base_url = 'http://www.courts.state.wy.us'
         self.url = self.base_url + '/Home/GetOpinions'
         self.court_id = self.__module__

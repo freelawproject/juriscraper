@@ -12,8 +12,8 @@ from datetime import date
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://afcca.law.af.mil/content/opinions.php%%3Fyear=%d&sort=pub&tabid=3.html' % (date.today().year,)
         self.court_id = self.__module__
         self.back_scrape_iterable = range(2013, 2002 - 1, -1)

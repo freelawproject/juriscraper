@@ -4,8 +4,8 @@ from dateutil.rrule import rrule, MONTHLY
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.court_id = self.__module__
         self.start = date.today() - timedelta(days=60)
         self.end = date.today()

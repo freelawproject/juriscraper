@@ -11,8 +11,8 @@ from juriscraper.OpinionSite import OpinionSite
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.ustaxcourt.gov/UstcInOp/asp/Todays.asp'
         self.use_sessions = True
         self.court_id = self.__module__

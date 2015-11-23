@@ -20,8 +20,8 @@ from selenium import webdriver
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         # Changing the page # in the url will get additional pages
         # Changing the source # (0-13) will get the 12 Courts of Appeals and
         # the Court of Claims. We do not use the "all sources" link because a
@@ -32,6 +32,7 @@ class Site(OpinionSite):
         self.url = 'http://www.supremecourtofohio.gov/rod/docs/'
         self.court_id = self.__module__
         self.base_path = "id('MainContent_gvResults')//tr[position() > 1]/td[2][string-length(normalize-space(text())) > 1]"
+        self.uses_selenium = True
 
     def _download(self, request_dict={}):
         """This is another of the cursed MS asp.net pages with damned POST

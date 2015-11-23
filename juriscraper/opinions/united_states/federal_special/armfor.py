@@ -9,8 +9,8 @@ from lxml import html
 
 
 class Site(OpinionSite):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         today = date.today()
         if today.month > 8 and today.day > 4:
             url_year = today.year

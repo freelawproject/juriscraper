@@ -2,8 +2,8 @@ import scotus_chambers
 
 
 class Site(scotus_chambers.Site):
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.supremecourt.gov/opinions/relatingtoorders.aspx'
         self.court_id = self.__module__
         self.back_scrape_url = 'http://www.supremecourt.gov/opinions/relatingtoorders/{}'

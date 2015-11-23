@@ -1,5 +1,5 @@
-import time
 from datetime import date
+import time
 
 from lxml import html
 
@@ -8,8 +8,8 @@ import scotus_slip
 
 class Site(scotus_slip.Site):
     # Note that scotus_relating inherits from this class.
-    def __init__(self):
-        super(Site, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(Site, self).__init__(*args, **kwargs)
         self.url = 'http://www.supremecourt.gov/opinions/in-chambers.aspx'
         self.back_scrape_url = 'http://www.supremecourt.gov/opinions/in-chambers/{}'
         self.back_scrape_iterable = range(5, 16)
@@ -29,8 +29,9 @@ class Site(scotus_slip.Site):
     def _get_docket_numbers(self):
         docket_numbers = []
         for e in self.html.xpath('//div[@id = "mainbody"]//table//tr/td[2]'):
-            s = html.tostring(e, method='text', encoding='unicode')
-            docket_numbers.append(s)
+            s = html.tostring(e, method='text', encoding='unicode').strip()
+            if s:
+                docket_numbers.append(s)
 
         return docket_numbers
 

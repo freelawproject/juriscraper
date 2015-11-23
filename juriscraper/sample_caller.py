@@ -62,7 +62,7 @@ def scrape_court(site, binaries=False):
             data = site.cleanup_content(data)
 
         # Normally, you'd do your save routines here...
-        v_print(1, 'Adding new document found at: %s' % download_url)
+        v_print(1, 'Adding new item:')
         for k, v in item.items():
             if type(v) == unicode:
                 value = trunc(v, 200, ellipsis='...')
@@ -165,6 +165,9 @@ def main():
                         scrape_court(site, binaries)
                 else:
                     site = mod.Site()
+                    v_print(3, 'Sent %s request to: %s' % (site.method, site.url))
+                    if site.uses_selenium:
+                        v_print(3, "Selenium will be used.")
                     site.parse()
                     scrape_court(site, binaries)
             except Exception:
