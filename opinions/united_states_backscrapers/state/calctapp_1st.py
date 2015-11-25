@@ -42,7 +42,7 @@ class Site(OpinionSite):
         case_names = []
         for html_tree in self.html:
             for element in html_tree.xpath(self.base_path):
-                case_names.append(''.join(e.strip() for e in element.xpath('./td[5]//text()')))
+                case_names.append(''.join(e.strip() for e in element.xpath('./td[4]//text()')))
         return case_names
 
     def _get_download_urls(self):
