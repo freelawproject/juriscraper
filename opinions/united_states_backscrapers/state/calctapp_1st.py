@@ -5,10 +5,10 @@
 import urlparse
 from datetime import date, timedelta, datetime
 from dateutil.rrule import rrule, DAILY
-from juriscraper.opinions.united_states.state import cal
+from juriscraper.OpinionSite import OpinionSite
 
 
-class Site(cal.Site):
+class Site(OpinionSite):
     def __init__(self, *args, **kwargs):
         super(Site, self).__init__(*args, **kwargs)
         self.interval = 30
