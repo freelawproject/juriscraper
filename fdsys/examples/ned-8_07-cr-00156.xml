@@ -1,0 +1,897 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd"
+      version="3.3" ID="P0b002ee1817b9971">
+    <name type="corporate">
+        <namePart>United States Government Printing Office</namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+            <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+        </role>
+        <role>
+            <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+            <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+        </role>
+    </name>
+    <name type="corporate">
+        <namePart>United States</namePart>
+        <namePart>United States District Court District of Nebraska</namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">author</roleTerm>
+            <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+        </role>
+        <description>Government Organization</description>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+    </language>
+    <extension>
+        <collectionCode>USCOURTS</collectionCode>
+        <category>Judicial Publications</category>
+        <branch>judicial</branch>
+        <dateIngested>2012-01-17</dateIngested>
+    </extension>
+    <originInfo>
+        <publisher>Administrative Office of the United States Courts</publisher>
+        <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+        <issuance>monographic</issuance>
+    </originInfo>
+    <physicalDescription>
+        <note type="source content type">deposited</note>
+        <digitalOrigin>born digital</digitalOrigin>
+    </physicalDescription>
+    <classification authority="sudocs">JU 4.15</classification>
+    <identifier type="uri">
+        http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156
+    </identifier>
+    <identifier type="local">P0b002ee1817b9971</identifier>
+    <recordInfo>
+        <recordContentSource authority="marcorg">DGPO</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+        <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+        <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00156
+        </recordIdentifier>
+        <recordOrigin>machine generated</recordOrigin>
+        <languageOfCataloging>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    <accessCondition type="GPO scope determination">fdlp</accessCondition>
+    <extension>
+        <docClass>USCOURTS</docClass>
+        <accessId>USCOURTS-ned-8_07-cr-00156</accessId>
+        <courtType>District</courtType>
+        <courtCode>ned</courtCode>
+        <courtCircuit>8th</courtCircuit>
+        <courtState>Nebraska</courtState>
+        <courtSortOrder>2300</courtSortOrder>
+        <caseNumber>8:07-cr-00156</caseNumber>
+        <caseOffice>8 Omaha</caseOffice>
+        <caseType>criminal</caseType>
+        <party fullName="Black" lastName="Black" role="Defendant"></party>
+        <party firstName="Paul" fullName="Paul Burks III" generation="III"
+               lastName="Burks" role="Defendant"></party>
+        <party fullName="Mouse" lastName="Mouse" role="Defendant"></party>
+        <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+        <party firstName="Marshall" fullName="Marshall J. Washington"
+               lastName="Washington" middleName="J." role="Defendant"></party>
+        <party firstName="Andre" fullName="Andre D. Wright" lastName="Wright"
+               middleName="D." role="Defendant"></party>
+        <party fullName="Yani" lastName="Yani" role="Defendant"></party>
+    </extension>
+    <titleInfo>
+        <title>USA v. Washington et al</title>
+        <partNumber>8:07-cr-00156</partNumber>
+    </titleInfo>
+    <location>
+        <url access="object in context" displayLabel="Content Detail">
+            http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/content-detail.html
+        </url>
+    </location>
+    <classification authority="sudocs">JU 4.15</classification>
+    <identifier type="preferred citation">8:07-cr-00156;07-156</identifier>
+    <name type="corporate">
+        <namePart>United States District Court District of Nebraska</namePart>
+        <namePart>8th Circuit</namePart>
+        <namePart>8 Omaha</namePart>
+        <affiliation>U.S. Courts</affiliation>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <displayForm>Black</displayForm>
+        <namePart type="family">Black</namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Paul Burks III</displayForm>
+        <namePart type="family">Burks</namePart>
+        <namePart type="given">Paul</namePart>
+        <namePart type="termsOfAddress">III</namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Mouse</displayForm>
+        <namePart type="family">Mouse</namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>USA</displayForm>
+        <namePart type="family">USA</namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Marshall J. Washington</displayForm>
+        <namePart type="family">Washington</namePart>
+        <namePart type="given">Marshall</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Andre D. Wright</displayForm>
+        <namePart type="family">Wright</namePart>
+        <namePart type="given">Andre</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Yani</displayForm>
+        <namePart type="family">Yani</namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <extension>
+        <docClass>USCOURTS</docClass>
+        <accessId>USCOURTS-ned-8_07-cr-00156</accessId>
+        <courtType>District</courtType>
+        <courtCode>ned</courtCode>
+        <courtCircuit>8th</courtCircuit>
+        <courtState>Nebraska</courtState>
+        <courtSortOrder>2300</courtSortOrder>
+        <caseNumber>8:07-cr-00156</caseNumber>
+        <caseOffice>8 Omaha</caseOffice>
+        <caseType>criminal</caseType>
+        <party fullName="Black" lastName="Black" role="Defendant"></party>
+        <party firstName="Paul" fullName="Paul Burks III" generation="III"
+               lastName="Burks" role="Defendant"></party>
+        <party fullName="Mouse" lastName="Mouse" role="Defendant"></party>
+        <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+        <party firstName="Marshall" fullName="Marshall J. Washington"
+               lastName="Washington" middleName="J." role="Defendant"></party>
+        <party firstName="Andre" fullName="Andre D. Wright" lastName="Wright"
+               middleName="D." role="Defendant"></party>
+        <party fullName="Yani" lastName="Yani" role="Defendant"></party>
+        <state>Nebraska</state>
+    </extension>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-0"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-0/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender
+                appointed as counsel as to defendant Marshall J. Washington.
+                Ordered by Magistrate Judge F. A. Gossett.(MLF, )
+            </subTitle>
+            <partNumber>0</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-06-04</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-0.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de911</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-0
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_0.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-0/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-0.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-0</accessId>
+            <sequenceNumber>0</sequenceNumber>
+            <dateIssued>2007-06-04</dateIssued>
+            <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender
+                appointed as counsel as to defendant Marshall J. Washington.
+                Ordered by Magistrate Judge F. A. Gossett.(MLF, )
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-1"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-1/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER of Detention pending trial as to defendant Marshall
+                J. Washington. Ordered by Magistrate Judge F. A. Gossett. Copy
+                to US Marshal. (MLF, )
+            </subTitle>
+            <partNumber>1</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-06-05</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-1.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de912</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-1
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_1.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-1/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-1.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-1</accessId>
+            <sequenceNumber>1</sequenceNumber>
+            <dateIssued>2007-06-05</dateIssued>
+            <docketText>ORDER of Detention pending trial as to defendant
+                Marshall J. Washington. Ordered by Magistrate Judge F. A.
+                Gossett. Copy to US Marshal. (MLF, )
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-2"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-2/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER APPOINTING COUNSEL as to defendant Paul Burks, III -
+                Julie A. Frank is appointed to represent the defendant. Ordered
+                by Magistrate Judge Thomas D. Thalken. (MBB)
+            </subTitle>
+            <partNumber>2</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-07-10</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-2.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de476</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-2
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_2.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-2/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-2.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-2</accessId>
+            <sequenceNumber>2</sequenceNumber>
+            <dateIssued>2007-07-10</dateIssued>
+            <docketText>ORDER APPOINTING COUNSEL as to defendant Paul Burks, III
+                - Julie A. Frank is appointed to represent the defendant.
+                Ordered by Magistrate Judge Thomas D. Thalken. (MBB)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-3"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-3/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER as to defendant Marshall J. Washington scheduling
+                Rule 11 hearing for July 23, 2007, at 1:30 p.m. Ordered by Judge
+                Lyle E. Strom. (JDR)
+            </subTitle>
+            <partNumber>3</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-07-16</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-3.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de90c</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-3
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_3.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-3/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-3.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-3</accessId>
+            <sequenceNumber>3</sequenceNumber>
+            <dateIssued>2007-07-16</dateIssued>
+            <docketText>ORDER as to defendant Marshall J. Washington scheduling
+                Rule 11 hearing for July 23, 2007, at 1:30 p.m. Ordered by Judge
+                Lyle E. Strom. (JDR)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-4"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-4/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>PRELIMINARY ORDER OF FORFEITURE sustaining 28 Motion for
+                Preliminary Forfeiture. The US Marshal is authorized to seize
+                the $1,390.00 in US currency. Defendant&apos;s interest in said
+                property is forfeited to the USA. Upon adjudication of all
+                third-party interests, this Court will enter a Final Order of
+                Forfeiture as to Marshall J. Washington (1). Ordered by Judge
+                Lyle E. Strom. Certified copy to the USM. (JSF)
+            </subTitle>
+            <partNumber>4</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-07-30</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-4.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de913</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-4
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_4.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-4/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-4.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-4</accessId>
+            <sequenceNumber>4</sequenceNumber>
+            <dateIssued>2007-07-30</dateIssued>
+            <docketText>PRELIMINARY ORDER OF FORFEITURE sustaining 28 Motion for
+                Preliminary Forfeiture. The US Marshal is authorized to seize
+                the $1,390.00 in US currency. Defendant&apos;s interest in said
+                property is forfeited to the USA. Upon adjudication of all
+                third-party interests, this Court will enter a Final Order of
+                Forfeiture as to Marshall J. Washington (1). Ordered by Judge
+                Lyle E. Strom. Certified copy to the USM. (JSF)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-5"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-5/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER APPOINTING COUNSEL - Matthew M. Munderloh appointed
+                as counsel for the defendant Andre D. Wright. Ordered by
+                Magistrate Judge F. A. Gossett.(MLF, )
+            </subTitle>
+            <partNumber>5</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-08-15</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-5.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de910</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-5
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_5.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-5/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-5.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-5</accessId>
+            <sequenceNumber>5</sequenceNumber>
+            <dateIssued>2007-08-15</dateIssued>
+            <docketText>ORDER APPOINTING COUNSEL - Matthew M. Munderloh
+                appointed as counsel for the defendant Andre D. Wright. Ordered
+                by Magistrate Judge F. A. Gossett.(MLF, )
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-6"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-6/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER of Detention pending trial as to defendant Andre D.
+                Wright. Ordered by Magistrate Judge F. A. Gossett. Copy to US
+                Marshal. (MLF, )
+            </subTitle>
+            <partNumber>6</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-08-16</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-6.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de916</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-6
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_6.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-6/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-6.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-6</accessId>
+            <sequenceNumber>6</sequenceNumber>
+            <dateIssued>2007-08-16</dateIssued>
+            <docketText>ORDER of Detention pending trial as to defendant Andre
+                D. Wright. Ordered by Magistrate Judge F. A. Gossett. Copy to US
+                Marshal. (MLF, )
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-7"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-7/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER granting 40 motion to continue as to Marshall J.
+                Washington (1) - Sentencing set for 11/15/2007 09:30 AM in
+                Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered
+                by Judge Lyle E. Strom. (JDR)
+            </subTitle>
+            <partNumber>7</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-08-29</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-7.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de914</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-7
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_7.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-7/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-7.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-7</accessId>
+            <sequenceNumber>7</sequenceNumber>
+            <dateIssued>2007-08-29</dateIssued>
+            <docketText>ORDER granting 40 motion to continue as to Marshall J.
+                Washington (1) - Sentencing set for 11/15/2007 09:30 AM in
+                Courtroom 5 (Omaha) before Senior Judge Lyle E. Strom. Ordered
+                by Judge Lyle E. Strom. (JDR)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-8"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-8/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>FINAL ORDER OF FORFEITURE - Plaintiff&apos;s Motion for
+                Final Order of Forfeiture is hereby sustained. All right, title
+                and interest in and to the $1,390.00 in United States currency,
+                held by any person or entity, is hereby forever barred and
+                foreclosed. The $1,390.00 in United States currency, be, and the
+                same hereby is, forfeited to the United States of America. The
+                United States Marshal for the District of Nebraska is directed
+                to dispose of said property in accordance with law, as to
+                Marshall J. Washington (1). Ordered by Judge Lyle E. Strom.
+                Certified copy USM. (JAE, ) Modified on 10/4/2007 to correct
+                judge&apos;s name. (JAE, ).
+            </subTitle>
+            <partNumber>8</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-10-03</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-8.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de90f</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-8
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_8.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-8/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-8.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-8</accessId>
+            <sequenceNumber>8</sequenceNumber>
+            <dateIssued>2007-10-03</dateIssued>
+            <docketText>FINAL ORDER OF FORFEITURE - Plaintiff&apos;s Motion for
+                Final Order of Forfeiture is hereby sustained. All right, title
+                and interest in and to the $1,390.00 in United States currency,
+                held by any person or entity, is hereby forever barred and
+                foreclosed. The $1,390.00 in United States currency, be, and the
+                same hereby is, forfeited to the United States of America. The
+                United States Marshal for the District of Nebraska is directed
+                to dispose of said property in accordance with law, as to
+                Marshall J. Washington (1). Ordered by Judge Lyle E. Strom.
+                Certified copy USM. (JAE, ) Modified on 10/4/2007 to correct
+                judge&apos;s name. (JAE, ).
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-9"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-9/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>JUDGMENT as to Marshall J. Washington (1), Defendant plead
+                guilty to Counts I and II of the Information and is committed to
+                the Bureau of Prisons for 66 months; 4 years supervised release
+                with special conditions; $100 special assessment; the Indictment
+                is dismissed on the motion of the United States as to this
+                defendant only; final order of forfeiture filed on 8/27/07 as to
+                Count IV as to defendant Marshall J. Washington. Ordered by
+                Judge Lyle E. Strom. (4 certified copies to USM)(CJP)
+            </subTitle>
+            <partNumber>9</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-11-16</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-9.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de90d</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-9
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_9.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-9/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-9.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-9</accessId>
+            <sequenceNumber>9</sequenceNumber>
+            <dateIssued>2007-11-16</dateIssued>
+            <docketText>JUDGMENT as to Marshall J. Washington (1), Defendant
+                plead guilty to Counts I and II of the Information and is
+                committed to the Bureau of Prisons for 66 months; 4 years
+                supervised release with special conditions; $100 special
+                assessment; the Indictment is dismissed on the motion of the
+                United States as to this defendant only; final order of
+                forfeiture filed on 8/27/07 as to Count IV as to defendant
+                Marshall J. Washington. Ordered by Judge Lyle E. Strom. (4
+                certified copies to USM)(CJP)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-10"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-10/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>JUDGMENT as to Paul Burks, III (3), Defendant plead guilty
+                to Count I of the Indictment and is committed to the Bureau of
+                Prisons for 60 months; 4 years supervised release with special
+                conditions; $100 special assessment; Counts II and III of the
+                Indictment are dismissed on the motion of the United States as
+                to this defendant only; defendant shall surrender for service of
+                sentence at the institution designated by the Bureau of Prisons
+                before 2:00 p.m. on February 4, 2008 as to defendant Paul Burks,
+                III. Ordered by Senior Judge Lyle E. Strom. (4 certified copies
+                to USM)(CJP)
+            </subTitle>
+            <partNumber>10</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2007-12-11</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-10.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de915</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-10
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_10.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-10/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-10.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-10</accessId>
+            <sequenceNumber>10</sequenceNumber>
+            <dateIssued>2007-12-11</dateIssued>
+            <docketText>JUDGMENT as to Paul Burks, III (3), Defendant plead
+                guilty to Count I of the Indictment and is committed to the
+                Bureau of Prisons for 60 months; 4 years supervised release with
+                special conditions; $100 special assessment; Counts II and III
+                of the Indictment are dismissed on the motion of the United
+                States as to this defendant only; defendant shall surrender for
+                service of sentence at the institution designated by the Bureau
+                of Prisons before 2:00 p.m. on February 4, 2008 as to defendant
+                Paul Burks, III. Ordered by Senior Judge Lyle E. Strom. (4
+                certified copies to USM)(CJP)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-11"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-11/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>JUDGMENT as to Andre D. Wright (2), Defendant plead guilty
+                to Count I of the Indictment and is committed to the Bureau of
+                Prisons for 60 months; 5 years supervised release with special
+                conditions; $100 special assessment; Counts IV and V of the
+                Indictment are dismissed on the motion of the United States as
+                to this defendant only, Criminal Case Terminated as to defendant
+                Andre D. Wright. Ordered by Senior Judge Lyle E. Strom. (4
+                certified copies to USM)(CJP)
+            </subTitle>
+            <partNumber>11</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2008-01-15</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-11.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de475</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-11
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_11.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-11/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-11.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-11</accessId>
+            <sequenceNumber>11</sequenceNumber>
+            <dateIssued>2008-01-15</dateIssued>
+            <docketText>JUDGMENT as to Andre D. Wright (2), Defendant plead
+                guilty to Count I of the Indictment and is committed to the
+                Bureau of Prisons for 60 months; 5 years supervised release with
+                special conditions; $100 special assessment; Counts IV and V of
+                the Indictment are dismissed on the motion of the United States
+                as to this defendant only, Criminal Case Terminated as to
+                defendant Andre D. Wright. Ordered by Senior Judge Lyle E.
+                Strom. (4 certified copies to USM)(CJP)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-12"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-12/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS
+                SHOULD NOT BE DESTROYED as to defendant Marshall J. Washington.
+                Ordered by Senior Judge Lyle E. Strom. (CJP)
+            </subTitle>
+            <partNumber>12</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2008-02-29</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-12.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de474</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-12
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_12.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-12/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-12.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-12</accessId>
+            <sequenceNumber>12</sequenceNumber>
+            <dateIssued>2008-02-29</dateIssued>
+            <docketText>ORDER TO WITHDRAW EXHIBITS OR TO SHOW CAUSE WHY EXHIBITS
+                SHOULD NOT BE DESTROYED as to defendant Marshall J. Washington.
+                Ordered by Senior Judge Lyle E. Strom. (CJP)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00156-13"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-13/mods.xml">
+        <titleInfo>
+            <title>USA v. Washington et al</title>
+            <subTitle>ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK
+                COCAINE GUIDELINE AMENDMENT - granting 86 motion to reduce
+                sentence under 2011 Crack Cocaine guideline amendment and the
+                stipulation of the parties 87 is approved and adopted. The
+                sentence of the defendant is reduced to sixty (60) months.
+                Defendant shall receive credit for all time served. The
+                conditions of supervised release entered in the original
+                judgment and committal order dated 11/16/07 remain in full force
+                and effect as to Marshall J. Washington (1). Ordered by Senior
+                Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)
+            </subTitle>
+            <partNumber>13</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2012-01-09</dateIssued>
+        </originInfo>
+        <relatedItem
+                xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00156-13.pdf"
+                type="otherFormat">
+            <identifier type="FDsys Unique ID">D09002ee1818de90e</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-13
+        </identifier>
+        <identifier type="former granule identifier">ned-8_07-cr-00156_13.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00156/USCOURTS-ned-8_07-cr-00156-13/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00156/pdf/USCOURTS-ned-8_07-cr-00156-13.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:07-cr-00156; USA v. Washington et al;
+            </searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_07-cr-00156-13</accessId>
+            <sequenceNumber>13</sequenceNumber>
+            <dateIssued>2012-01-09</dateIssued>
+            <docketText>ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011
+                CRACK COCAINE GUIDELINE AMENDMENT - granting 86 motion to reduce
+                sentence under 2011 Crack Cocaine guideline amendment and the
+                stipulation of the parties 87 is approved and adopted. The
+                sentence of the defendant is reduced to sixty (60) months.
+                Defendant shall receive credit for all time served. The
+                conditions of supervised release entered in the original
+                judgment and committal order dated 11/16/07 remain in full force
+                and effect as to Marshall J. Washington (1). Ordered by Senior
+                Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)
+            </docketText>
+        </extension>
+    </relatedItem>
+</mods>

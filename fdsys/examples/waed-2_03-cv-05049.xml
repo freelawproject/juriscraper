@@ -1,0 +1,377 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd"
+      version="3.3" ID="P0b002ee18bdd0930">
+    <name type="corporate">
+        <namePart>United States Government Printing Office</namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+            <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+        </role>
+        <role>
+            <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+            <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+        </role>
+    </name>
+    <name type="corporate">
+        <namePart>United States</namePart>
+        <namePart>United States District Court Eastern District of Washington
+        </namePart>
+        <role>
+            <roleTerm type="text" authority="marcrelator">author</roleTerm>
+            <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+        </role>
+        <description>Government Organization</description>
+    </name>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+        <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+    </language>
+    <extension>
+        <collectionCode>USCOURTS</collectionCode>
+        <category>Judicial Publications</category>
+        <branch>judicial</branch>
+        <dateIngested>2015-03-26</dateIngested>
+    </extension>
+    <originInfo>
+        <publisher>Administrative Office of the United States Courts</publisher>
+        <dateIssued encoding="w3cdtf">2003-10-31</dateIssued>
+        <issuance>monographic</issuance>
+    </originInfo>
+    <physicalDescription>
+        <note type="source content type">deposited</note>
+        <digitalOrigin>born digital</digitalOrigin>
+    </physicalDescription>
+    <classification authority="sudocs">JU 4.15</classification>
+    <identifier type="uri">
+        http://www.gpo.gov/fdsys/pkg/USCOURTS-waed-2_03-cv-05049
+    </identifier>
+    <identifier type="local">P0b002ee18bdd0930</identifier>
+    <recordInfo>
+        <recordContentSource authority="marcorg">DGPO</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2015-03-26</recordCreationDate>
+        <recordChangeDate encoding="w3cdtf">2015-03-26</recordChangeDate>
+        <recordIdentifier source="DGPO">USCOURTS-waed-2_03-cv-05049
+        </recordIdentifier>
+        <recordOrigin>machine generated</recordOrigin>
+        <languageOfCataloging>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    <accessCondition type="GPO scope determination">fdlp</accessCondition>
+    <extension>
+        <docClass>USCOURTS</docClass>
+        <accessId>USCOURTS-waed-2_03-cv-05049</accessId>
+        <courtType>District</courtType>
+        <courtCode>waed</courtCode>
+        <courtCircuit>9th</courtCircuit>
+        <courtState>Washington</courtState>
+        <courtSortOrder>2531</courtSortOrder>
+        <caseNumber>2:03-cv-05049</caseNumber>
+        <caseOffice>Spokane</caseOffice>
+        <caseType>civil</caseType>
+        <natureSuitCode>555</natureSuitCode>
+        <natureSuit>Prisoner - Prison Condition</natureSuit>
+        <cause>28:1983 Civil Rights</cause>
+        <party fullName="All staff members including nurse lady that lies to me about medicine being paid for by crisis response unit"
+               lastName="All staff members including nurse lady that lies to me about medicine being paid for by crisis response unit"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Elzie" lastName="Elzie"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Forsythe" lastName="Forsythe"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Hilliard" lastName="Hilliard"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Knudson" lastName="Knudson"
+               role="Defendant"></party>
+        <party firstName="Frank" fullName="Frank Lewis" lastName="Lewis"
+               role="Plaintiff"></party>
+        <party firstName="Frankie" fullName="Frankie Sundance Lewis"
+               lastName="Lewis" middleName="Sundance" role="Plaintiff"></party>
+        <party firstName="-" fullName="- Mcdermitt" lastName="Mcdermitt"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Mercer" lastName="Mercer"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Mona" lastName="Mona"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- O&apos;brian" lastName="O&apos;brian"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Perez" lastName="Perez"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Ross" lastName="Ross"
+               role="Defendant"></party>
+        <party firstName="Frank" fullName="Frank Sargent" lastName="Sargent"
+               role="Plaintiff"></party>
+        <party firstName="Frank" fullName="Frank Edwin Sundance Sargent"
+               lastName="Sargent" middleName="Edwin Sundance"
+               role="Plaintiff"></party>
+        <party firstName="Frankie" fullName="Frankie Edwin Sundance Sargent"
+               lastName="Sargent" middleName="Edwin Sundance"
+               role="Plaintiff"></party>
+        <party fullName="Staff at Benton County Corrections Center"
+               lastName="Staff at Benton County Corrections Center"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Swift" lastName="Swift"
+               role="Defendant"></party>
+    </extension>
+    <titleInfo>
+        <title>Sargent v. Staff at Benton Cty, et al</title>
+        <partNumber>2:03-cv-05049</partNumber>
+    </titleInfo>
+    <location>
+        <url access="object in context" displayLabel="Content Detail">
+            http://www.gpo.gov/fdsys/pkg/USCOURTS-waed-2_03-cv-05049/content-detail.html
+        </url>
+    </location>
+    <classification authority="sudocs">JU 4.15</classification>
+    <identifier type="preferred citation">2:03-cv-05049;03-5049</identifier>
+    <name type="corporate">
+        <namePart>United States District Court Eastern District of Washington
+        </namePart>
+        <namePart>9th Circuit</namePart>
+        <namePart>Spokane</namePart>
+        <affiliation>U.S. Courts</affiliation>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <displayForm>All staff members including nurse lady that lies to me
+            about medicine being paid for by crisis response unit
+        </displayForm>
+        <namePart type="family">All staff members including nurse lady that lies
+            to me about medicine being paid for by crisis response unit
+        </namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Elzie</displayForm>
+        <namePart type="family">Elzie</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Forsythe</displayForm>
+        <namePart type="family">Forsythe</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Hilliard</displayForm>
+        <namePart type="family">Hilliard</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Knudson</displayForm>
+        <namePart type="family">Knudson</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Frank Lewis</displayForm>
+        <namePart type="family">Lewis</namePart>
+        <namePart type="given">Frank</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Frankie Sundance Lewis</displayForm>
+        <namePart type="family">Lewis</namePart>
+        <namePart type="given">Frankie</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Mcdermitt</displayForm>
+        <namePart type="family">Mcdermitt</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Mercer</displayForm>
+        <namePart type="family">Mercer</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Mona</displayForm>
+        <namePart type="family">Mona</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- O&apos;brian</displayForm>
+        <namePart type="family">O&apos;brian</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Perez</displayForm>
+        <namePart type="family">Perez</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Ross</displayForm>
+        <namePart type="family">Ross</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>Frank Sargent</displayForm>
+        <namePart type="family">Sargent</namePart>
+        <namePart type="given">Frank</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Frank Edwin Sundance Sargent</displayForm>
+        <namePart type="family">Sargent</namePart>
+        <namePart type="given">Frank</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Frankie Edwin Sundance Sargent</displayForm>
+        <namePart type="family">Sargent</namePart>
+        <namePart type="given">Frankie</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Staff at Benton County Corrections Center</displayForm>
+        <namePart type="family">Staff at Benton County Corrections Center
+        </namePart>
+        <namePart type="given"></namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>- Swift</displayForm>
+        <namePart type="family">Swift</namePart>
+        <namePart type="given">-</namePart>
+        <namePart type="termsOfAddress"></namePart>
+        <description>Defendant</description>
+    </name>
+    <extension>
+        <docClass>USCOURTS</docClass>
+        <accessId>USCOURTS-waed-2_03-cv-05049</accessId>
+        <courtType>District</courtType>
+        <courtCode>waed</courtCode>
+        <courtCircuit>9th</courtCircuit>
+        <courtState>Washington</courtState>
+        <courtSortOrder>2531</courtSortOrder>
+        <caseNumber>2:03-cv-05049</caseNumber>
+        <caseOffice>Spokane</caseOffice>
+        <caseType>civil</caseType>
+        <natureSuitCode>555</natureSuitCode>
+        <natureSuit>Prisoner - Prison Condition</natureSuit>
+        <cause>28:1983 Civil Rights</cause>
+        <party fullName="All staff members including nurse lady that lies to me about medicine being paid for by crisis response unit"
+               lastName="All staff members including nurse lady that lies to me about medicine being paid for by crisis response unit"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Elzie" lastName="Elzie"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Forsythe" lastName="Forsythe"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Hilliard" lastName="Hilliard"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Knudson" lastName="Knudson"
+               role="Defendant"></party>
+        <party firstName="Frank" fullName="Frank Lewis" lastName="Lewis"
+               role="Plaintiff"></party>
+        <party firstName="Frankie" fullName="Frankie Sundance Lewis"
+               lastName="Lewis" middleName="Sundance" role="Plaintiff"></party>
+        <party firstName="-" fullName="- Mcdermitt" lastName="Mcdermitt"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Mercer" lastName="Mercer"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Mona" lastName="Mona"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- O&apos;brian" lastName="O&apos;brian"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Perez" lastName="Perez"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Ross" lastName="Ross"
+               role="Defendant"></party>
+        <party firstName="Frank" fullName="Frank Sargent" lastName="Sargent"
+               role="Plaintiff"></party>
+        <party firstName="Frank" fullName="Frank Edwin Sundance Sargent"
+               lastName="Sargent" middleName="Edwin Sundance"
+               role="Plaintiff"></party>
+        <party firstName="Frankie" fullName="Frankie Edwin Sundance Sargent"
+               lastName="Sargent" middleName="Edwin Sundance"
+               role="Plaintiff"></party>
+        <party fullName="Staff at Benton County Corrections Center"
+               lastName="Staff at Benton County Corrections Center"
+               role="Defendant"></party>
+        <party firstName="-" fullName="- Swift" lastName="Swift"
+               role="Defendant"></party>
+        <state>Washington</state>
+    </extension>
+    <relatedItem type="constituent" ID="id-USCOURTS-waed-2_03-cv-05049-0"
+                 xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-waed-2_03-cv-05049/USCOURTS-waed-2_03-cv-05049-0/mods.xml">
+        <titleInfo>
+            <title>Sargent v. Staff at Benton Cty, et al</title>
+            <subTitle>JUDGMENT: the documents purporting to be amended
+                complaints and supplemental information (Ct. Recs. 6, 7 and 8)
+                are DISMISSED with prejudice UNDER 28 U.S.C.§ § 1915A(b) (1),
+                (2) and 1915 (e) (2). (SMP, Case Administrator)
+            </subTitle>
+            <partNumber>0</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>2003-10-31</dateIssued>
+        </originInfo>
+        <relatedItem type="otherFormat"
+                     xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-waed-2_03-cv-05049/pdf/USCOURTS-waed-2_03-cv-05049-0.pdf">
+            <identifier type="FDsys Unique ID">D09002ee18bdeb0b5</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            http://www.gpo.gov/fdsys/granule/USCOURTS-waed-2_03-cv-05049/USCOURTS-waed-2_03-cv-05049-0
+        </identifier>
+        <identifier type="former granule identifier">waed-2_03-cv-05049_0.pdf
+        </identifier>
+        <location>
+            <url access="object in context" displayLabel="Content Detail">
+                http://www.gpo.gov/fdsys/granule/USCOURTS-waed-2_03-cv-05049/USCOURTS-waed-2_03-cv-05049-0/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                http://www.gpo.gov/fdsys/pkg/USCOURTS-waed-2_03-cv-05049/pdf/USCOURTS-waed-2_03-cv-05049-0.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 2:03-cv-05049; Sargent v. Staff at Benton Cty,
+                et al;
+            </searchTitle>
+            <courtName>United States District Court Eastern District of
+                Washington
+            </courtName>
+            <state>Washington</state>
+            <accessId>USCOURTS-waed-2_03-cv-05049-0</accessId>
+            <sequenceNumber>0</sequenceNumber>
+            <dateIssued>2003-10-31</dateIssued>
+            <docketText>JUDGMENT: the documents purporting to be amended
+                complaints and supplemental information (Ct. Recs. 6, 7 and 8)
+                are DISMISSED with prejudice UNDER 28 U.S.C.§ § 1915A(b) (1),
+                (2) and 1915 (e) (2). (SMP, Case Administrator)
+            </docketText>
+        </extension>
+    </relatedItem>
+</mods>

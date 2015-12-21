@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:exslt="http://exslt.org/common"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.loc.gov/mods/v3" version="3.3"
+      xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd"
+      ID="P0b002ee1817b85e7">
+
+    <!-- INTRODUCTION
+
+        I have gone through and placed comments in all of the elements below,
+        indicating whether each node should be skipped or included. For
+        included nodes, I have listed what fields they should be part of.
+
+        Several of the fields will require new nodes in our database, and some
+        are complicated enough that I want to skip them for now (though we'll
+        be saving the mods file, so we can get them later too).
+    -->
+
+    <!-- SKIP THIS NODE -->
+    <name type="corporate">
+        <namePart>United States Government Publishing Office</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">publisher</roleTerm>
+            <roleTerm authority="marcrelator" type="code">pbl</roleTerm>
+        </role>
+        <role>
+            <roleTerm authority="marcrelator" type="text">distributor</roleTerm>
+            <roleTerm authority="marcrelator" type="code">dst</roleTerm>
+        </role>
+    </name>
+
+    <!-- GET THIS INFO FROM THE courtCode node, below, not the file path -->
+    <name type="corporate">
+        <namePart>United States</namePart>
+        <namePart>United States District Court District of Nebraska</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+            <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+        </role>
+        <description>Government Organization</description>
+    </name>
+
+
+    <!-- SKIP THESE NODES -->
+    <typeOfResource>text</typeOfResource>
+    <genre authority="marcgt">government publication</genre>
+    <language>
+        <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+    </language>
+    <extension>
+        <collectionCode>USCOURTS</collectionCode>
+        <category>Judicial Publications</category>
+        <branch>judicial</branch>
+        <dateIngested>2012-01-17</dateIngested>
+    </extension>
+
+
+    <!-- SKIP THIS NODE
+
+        The date listed here is vague, as it doesn't indicate which document
+        it's referring to (several are listed below).
+     -->
+    <originInfo>
+        <publisher>Administrative Office of the United States Courts</publisher>
+        <dateIssued encoding="w3cdtf">1982-03-29</dateIssued>
+        <issuance>monographic</issuance>
+    </originInfo>
+
+    <!-- SKIP THIS NODE -->
+    <physicalDescription>
+        <note type="source content type">deposited</note>
+        <digitalOrigin>born digital</digitalOrigin>
+    </physicalDescription>
+
+    <!-- SKIP THIS NODE.
+
+        JU 4.15 is a Superintendent of Documents Classification number, which
+        we don't care about. See: http://www.fdlp.gov/all-newsletters/featured-articles/1144-oyez-oyez-federal-court-opinions-in-fdsys
+     -->
+    <classification authority="sudocs">JU 4.15</classification>
+
+    <!-- This should be used as the download_url that we save to the DB. -->
+    <identifier type="uri">
+        https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051
+    </identifier>
+
+    <!-- XXX: SHA1? -->
+    <identifier type="local">P0b002ee1817b85e7</identifier>
+
+    <!-- SKIP THESE NODES -->
+    <recordInfo>
+        <recordContentSource authority="marcorg">DGPO</recordContentSource>
+        <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+        <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+        <recordIdentifier source="DGPO">USCOURTS-ned-8_81-cr-00051
+        </recordIdentifier>
+        <recordOrigin>machine generated</recordOrigin>
+        <languageOfCataloging>
+            <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </languageOfCataloging>
+    </recordInfo>
+    <accessCondition type="GPO scope determination">fdlp</accessCondition>
+
+
+    <extension>
+        <!-- SKIP THIS NODE -->
+        <docClass>USCOURTS</docClass>
+
+        <!-- This should be provided as fdsys_id -->
+        <accessId>USCOURTS-ned-8_81-cr-00051</accessId>
+
+        <!-- SKIP THIS NODE -->
+        <courtType>District</courtType>
+
+        <!-- Use this to return the jurisdiction, not the file path. -->
+        <courtCode>ned</courtCode>
+
+        <!-- SKIP THIS NODE -->
+        <courtCircuit>8th</courtCircuit>
+
+        <!-- SKIP THIS NODE -->
+        <courtState>Nebraska</courtState>
+
+        <!-- We have this same system in CourtListener, but use different values. In any case,
+            SKIP THIS NODE
+         -->
+        <courtSortOrder>2300</courtSortOrder>
+
+        <!-- This goes into the docket_number field -->
+        <caseNumber>8:81-cr-00051</caseNumber>
+
+        <!-- This should be: court_location
+
+            @brian: We don't yet have this in our database, but I propose a new
+            table that hangs off the court objects and which has this data.
+            We have run into and discarded this data before. Now seems like a
+            good time to start getting it.
+        -->
+        <caseOffice>8 Omaha</caseOffice>
+
+        <!-- @brian should we save this data? If so, what field name? It seems
+            to be strictly either criminal or civil (not surprisingly).
+         -->
+        <caseType>criminal</caseType>
+
+        <!-- Collect this data into a list called parties that takes the form:
+
+        parties = [
+            {
+                'name_first': "John",
+                'name_list': 'Christensen',
+                'name_middle': 'Edward',
+                'name_suffix': 'III',
+                'role': "Defendant',
+            },
+            {
+                'org_name': 'USA',
+                'role': 'Plaintiff',
+            },
+            ...more here...
+        ]
+
+        It looks like you can identify organizations because they will not have
+        first names, and their lastName will be the same as their fullName.
+        -->
+        <party firstName="John" fullName="John Edward Christensen"
+               lastName="Christensen" middleName="Edward" role="Defendant"
+               generation="III"
+        />
+        <party fullName="USA" lastName="USA" role="Plaintiff"/>
+        <party firstName="Freddie" fullName="Freddie Melton Vaught"
+               lastName="Vaught" middleName="Melton" role="Defendant"/>
+    </extension>
+    <titleInfo>
+        <!-- case_name -->
+        <title>USA v. Vaught</title>
+        <!-- SKIP. We already have this value -->
+        <partNumber>8:81-cr-00051</partNumber>
+    </titleInfo>
+
+    <!-- SKIP THESE NODES -->
+    <location>
+        <url displayLabel="Content Detail" access="object in context">
+            https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/content-detail.html
+        </url>
+    </location>
+    <classification authority="sudocs">JU 4.15</classification>
+    <identifier type="preferred citation">8:81-cr-00051;81-051</identifier>
+
+    <!-- We saw name nodes at the top of the file too. We can skip this node
+    about the court. -->
+    <name type="corporate">
+        <namePart>United States District Court District of Nebraska</namePart>
+        <namePart>8th Circuit</namePart>
+        <namePart>8 Omaha</namePart>
+        <affiliation>U.S. Courts</affiliation>
+        <role>
+            <roleTerm type="text" authority="marcrelator">author</roleTerm>
+            <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+        </role>
+    </name>
+
+    <!-- Looks like we can skip these too, but we should be careful to see if
+        we're getting all the info we need from the party nodes above.
+    -->
+    <name type="personal">
+        <displayForm>John Edward Christensen</displayForm>
+        <namePart type="family">Christensen</namePart>
+        <namePart type="given">John</namePart>
+        <namePart type="termsOfAddress"/>
+        <description>Defendant</description>
+    </name>
+    <name type="personal">
+        <displayForm>USA</displayForm>
+        <namePart type="family">USA</namePart>
+        <namePart type="given"/>
+        <namePart type="termsOfAddress"/>
+        <description>Plaintiff</description>
+    </name>
+    <name type="personal">
+        <displayForm>Freddie Melton Vaught</displayForm>
+        <namePart type="family">Vaught</namePart>
+        <namePart type="given">Freddie</namePart>
+        <namePart type="termsOfAddress"/>
+        <description>Defendant</description>
+    </name>
+
+
+    <!-- This is a duplicate of above and is identical, except that it has
+        the <state> node.
+    -->
+    <extension>
+        <docClass>USCOURTS</docClass>
+        <accessId>USCOURTS-ned-8_81-cr-00051</accessId>
+        <courtType>District</courtType>
+        <courtCode>ned</courtCode>
+        <courtCircuit>8th</courtCircuit>
+        <courtState>Nebraska</courtState>
+        <courtSortOrder>2300</courtSortOrder>
+        <caseNumber>8:81-cr-00051</caseNumber>
+        <caseOffice>8 Omaha</caseOffice>
+        <caseType>criminal</caseType>
+        <party firstName="John" fullName="John Edward Christensen"
+               lastName="Christensen" middleName="Edward" role="Defendant"/>
+        <party fullName="USA" lastName="USA" role="Plaintiff"/>
+        <party firstName="Freddie" fullName="Freddie Melton Vaught"
+               lastName="Vaught" middleName="Melton" role="Defendant"/>
+        <state>Nebraska</state>
+    </extension>
+
+
+    <!-- Finally we get to the documents!-->
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_81-cr-00051-0"
+                 xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-0/mods.xml">
+        <titleInfo>
+            <title>USA v. Vaught</title>
+            <subTitle>JUDGMENT-Defendant plead guilty to count II and III of the
+                Indictment and is sentenced to the Bureau of Prisons to 5 years
+                on count II and 5 years on Count III, said sentences to run
+                concurrently. Upon the oral motion of the government all
+                remaining counts are dismissed. IT IS FURTHER ORDERED that the
+                sentence the defendant received in the above captioned case
+                shall run concurrently with the sentences the defendant received
+                in CR 81-O-52, USA v. Christensen, John Edward, etc and CR
+                79-O-73, USA v. Christensen, John Edward, etc. as to defendant
+                Freddie Melton Vaught. Ordered by Judge Albert G. Schatz. (MKR)
+            </subTitle>
+            <partNumber>0</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>1981-10-30</dateIssued>
+        </originInfo>
+        <relatedItem type="otherFormat"
+                     xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-0.pdf">
+            <identifier type="FDsys Unique ID">D09002ee1818d5c32</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-0
+        </identifier>
+        <identifier type="former granule identifier">ned-8_81-cr-00051_0.pdf
+        </identifier>
+        <location>
+            <url displayLabel="Content Detail" access="object in context">
+                https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-0/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-0.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:81-cr-00051; USA v. Vaught;</searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_81-cr-00051-0</accessId>
+            <sequenceNumber>0</sequenceNumber>
+            <dateIssued>1981-10-30</dateIssued>
+            <docketText>JUDGMENT-Defendant plead guilty to count II and III of
+                the Indictment and is sentenced to the Bureau of Prisons to 5
+                years on count II and 5 years on Count III, said sentences to
+                run concurrently. Upon the oral motion of the government all
+                remaining counts are dismissed. IT IS FURTHER ORDERED that the
+                sentence the defendant received in the above captioned case
+                shall run concurrently with the sentences the defendant received
+                in CR 81-O-52, USA v. Christensen, John Edward, etc and CR
+                79-O-73, USA v. Christensen, John Edward, etc. as to defendant
+                Freddie Melton Vaught. Ordered by Judge Albert G. Schatz. (MKR)
+            </docketText>
+        </extension>
+    </relatedItem>
+    <relatedItem type="constituent" ID="id-USCOURTS-ned-8_81-cr-00051-1"
+                 xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-1/mods.xml">
+        <titleInfo>
+            <title>USA v. Vaught</title>
+            <subTitle>ORDER - that the sentence in 79-O-73, as to Count II, be
+                and the same is hereby reduced from 10 years to seven; otherwise
+                all sentences shall remain as previously imposed. That the
+                response of the plaintiff to the motion for reduction of
+                sentence (filing nos. 23, 10 and 10 respectively) be resealed
+                forthwith and opened only upon the order of the court as to
+                defendant Freddie Melton Vaught. Ordered by Judge Albert G.
+                Schatz. (MKR)
+            </subTitle>
+            <partNumber>1</partNumber>
+        </titleInfo>
+        <originInfo>
+            <dateIssued>1982-03-29</dateIssued>
+        </originInfo>
+        <relatedItem type="otherFormat"
+                     xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-1.pdf">
+            <identifier type="FDsys Unique ID">D09002ee1818d5c31</identifier>
+        </relatedItem>
+        <identifier type="uri">
+            https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-1
+        </identifier>
+        <identifier type="former granule identifier">ned-8_81-cr-00051_1.pdf
+        </identifier>
+        <location>
+            <url displayLabel="Content Detail" access="object in context">
+                https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-1/content-detail.html
+            </url>
+            <url access="raw object" displayLabel="PDF rendition">
+                https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-1.pdf
+            </url>
+        </location>
+        <extension>
+            <searchTitle>USCOURTS 8:81-cr-00051; USA v. Vaught;</searchTitle>
+            <courtName>United States District Court District of Nebraska
+            </courtName>
+            <state>Nebraska</state>
+            <accessId>USCOURTS-ned-8_81-cr-00051-1</accessId>
+            <sequenceNumber>1</sequenceNumber>
+            <dateIssued>1982-03-29</dateIssued>
+            <docketText>ORDER - that the sentence in 79-O-73, as to Count II, be
+                and the same is hereby reduced from 10 years to seven; otherwise
+                all sentences shall remain as previously imposed. That the
+                response of the plaintiff to the motion for reduction of
+                sentence (filing nos. 23, 10 and 10 respectively) be resealed
+                forthwith and opened only upon the order of the court as to
+                defendant Freddie Melton Vaught. Ordered by Judge Albert G.
+                Schatz. (MKR)
+            </docketText>
+        </extension>
+    </relatedItem>
+</mods>
