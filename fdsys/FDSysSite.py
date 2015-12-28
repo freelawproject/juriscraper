@@ -4,6 +4,7 @@ import json
 from collections import defaultdict
 from pprint import pprint
 
+import re
 import requests
 from juriscraper.AbstractSite import AbstractSite
 from datetime import date
@@ -123,8 +124,9 @@ class FDSysModsContent(object):
         """replaces content-detail.html with mods.xml"""
         return url.replace('content-detail.html', 'mods.xml')
 
-    def _get_document_type(self, document_node):
+    def _get_document_type(self, description):
         # todo, build it after the samples are downloaded
+        # get the first 5 words
         return ''
 
 
@@ -210,8 +212,39 @@ def get_court_locations_list():
         json.dump(cl, j)
 
 
+def get_the_first_5_words():
+    l = []
+    word_counter = defaultdict(int)
+    for f in glob.glob('./examples/*/*.xml'):
+        fm = FDSysModsContent(f)
+        print f, fm.court_id, fm.court_location
+        for document in fm.documents:
+            try:
+                words_to_use = document['description'].split()[:8]
+            except IndexError:
+                words_to_use = document['description'].split()
+            ws = []
+            for word in words_to_use:
+                try:
+                    w = re.findall('[a-zA-Z]+', word)[0]
+                except IndexError:
+                    w = None
+
+                if w:
+                    word_counter[w] += 1
+                ws.append(w)
+            l.append(ws)
+
+    with open('first_five_words.json', 'w') as j:
+        json.dump(l, j)
+
+    with open('first_five_words_counter.json', 'w') as c:
+        json.dump(word_counter, c)
+
+
 if __name__ == '__main__':
-    get_court_locations_list()
+    # get_court_locations_list()
+    get_the_first_5_words()
     # for f in glob.glob('./examples/*/*.xml'):
     #     fm = FDSysModsContent(f)
     #
