@@ -190,15 +190,22 @@ class FDSysSite(AbstractSite):
 
 
 def get_court_locations_list():
+    """
+    parses the examples directories and gets the court ids and the court locations
+    """
     court_locations_list = defaultdict(set)
+    # parse all the example files
     for f in glob.glob('./examples/*/*.xml'):
-        print f
         fm = FDSysModsContent(f)
+        print f, fm.court_id, fm.court_location
         court_locations_list[fm.court_id].add(fm.court_location)
-        print fm.court_id, fm.court_location
+
+    # change set to list
     cl = {}
     for k, v in court_locations_list.items():
         cl[k] = list(v)
+
+    # save as json
     with open('court_locations.json', 'w') as j:
         json.dump(cl, j)
 

@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e63c43-e780-41c1-b2af-09138988d33a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/caDC-01-07142.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/caed-1_13-cv-01908.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/caed-2_03-cv-00659.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/caed-6_13-mj-00080.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/laed-2_12-cv-02250.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/ned-8_07-cr-00156.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/ned-8_81-cr-00051.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/nynd-1_06-cv-00281.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/ohnd-1_07-cv-03357.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/ohnd-1_11-cv-00358.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/paed-2_07-cv-02746.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fdsys/examples/waed-2_03-cv-05049.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/fdsys/examples/2015_USCOURTS_sitemap.xml" afterPath="$PROJECT_DIR$/fdsys/sitemaps_examples/2015_USCOURTS_sitemap.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdsys/FDSysSite.py" afterPath="$PROJECT_DIR$/fdsys/FDSysSite.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdsys/annotated_mods.xml" afterPath="$PROJECT_DIR$/fdsys/annotated_mods.xml" />
     </list>
     <ignored path="juriscraper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/juriscraper$FDSysSite.coverage" NAME="FDSysSite Coverage Results" MODIFIED="1451294561613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fdsys" />
+    <SUITE FILE_PATH="coverage/juriscraper$FDSysSite.coverage" NAME="FDSysSite Coverage Results" MODIFIED="1451295010297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/fdsys" />
     <SUITE FILE_PATH="coverage/juriscraper$scrape_court_names.coverage" NAME="scrape_court_names Coverage Results" MODIFIED="1450457297024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -45,8 +31,8 @@
       <file leaf-file-name="FDSysSite.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fdsys/FDSysSite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4590985">
-              <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.639399">
+              <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -162,24 +148,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fdsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juriscraper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="juriscraper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fdsys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitemaps_examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,7 +464,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32142857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22280967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20021646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -890,16 +858,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fdsys/court_locations.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52797204">
-          <caret line="250" column="4" selection-start-line="250" selection-start-column="4" selection-end-line="250" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.37762237">
+          <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fdsys/FDSysSite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4590985">
-          <caret line="149" column="44" selection-start-line="149" selection-start-column="44" selection-end-line="149" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.639399">
+          <caret line="195" column="43" selection-start-line="195" selection-start-column="43" selection-end-line="195" selection-end-column="43" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
