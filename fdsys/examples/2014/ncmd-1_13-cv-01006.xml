@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a76491a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of North Carolina</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_13-cv-01006</identifier>
+<identifier type="local">P0b002ee18a76491a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ncmd-1_13-cv-01006</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ncmd-1_13-cv-01006</accessId>
+ <courtType>District</courtType>
+ <courtCode>ncmd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>2365</courtSortOrder>
+ <caseNumber>1:13-cv-01006</caseNumber>
+ <caseOffice>NCMD</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="GREGORY" fullName="GREGORY BARTKO" lastName="BARTKO" role="Plaintiff"></party>
+ <party firstName="GEORGE" fullName="GEORGE E.B. HOLDING" lastName="HOLDING" middleName="E.B." role="Defendant"></party>
+ <party firstName="SCOTT" fullName="SCOTT B. HOLLENBECK" lastName="HOLLENBECK" middleName="B." role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS G. WALKER" lastName="WALKER" middleName="G." role="Defendant"></party>
+ <party firstName="CLAY" fullName="CLAY CAMPBELL WHEELER" lastName="WHEELER" middleName="CAMPBELL" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BARTKO v. WHEELER et al</title>
+ <partNumber>1:13-cv-01006</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_13-cv-01006/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01006;13-1006</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of North Carolina</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>NCMD</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>GREGORY BARTKO</displayForm>
+ <namePart type="family">BARTKO</namePart>
+ <namePart type="given">GREGORY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>GEORGE E.B. HOLDING</displayForm>
+ <namePart type="family">HOLDING</namePart>
+ <namePart type="given">GEORGE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SCOTT B. HOLLENBECK</displayForm>
+ <namePart type="family">HOLLENBECK</namePart>
+ <namePart type="given">SCOTT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS G. WALKER</displayForm>
+ <namePart type="family">WALKER</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CLAY CAMPBELL WHEELER</displayForm>
+ <namePart type="family">WHEELER</namePart>
+ <namePart type="given">CLAY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ncmd-1_13-cv-01006</accessId>
+ <courtType>District</courtType>
+ <courtCode>ncmd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>2365</courtSortOrder>
+ <caseNumber>1:13-cv-01006</caseNumber>
+ <caseOffice>NCMD</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="GREGORY" fullName="GREGORY BARTKO" lastName="BARTKO" role="Plaintiff"></party>
+ <party firstName="GEORGE" fullName="GEORGE E.B. HOLDING" lastName="HOLDING" middleName="E.B." role="Defendant"></party>
+ <party firstName="SCOTT" fullName="SCOTT B. HOLLENBECK" lastName="HOLLENBECK" middleName="B." role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS G. WALKER" lastName="WALKER" middleName="G." role="Defendant"></party>
+ <party firstName="CLAY" fullName="CLAY CAMPBELL WHEELER" lastName="WHEELER" middleName="CAMPBELL" role="Defendant"></party>
+ <state>North Carolina</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ncmd-1_13-cv-01006-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_13-cv-01006/USCOURTS-ncmd-1_13-cv-01006-0/mods.xml">
+ <titleInfo>
+  <title>BARTKO v. WHEELER et al</title>
+  <subTitle>eedings. FURTHER that this order of transfer is stayed until January 27, 2014. If Plaintiff timely objects to the order of transfer, the stay shall continue beyond January 27, 2014, until disposition of such objection(s) or other order of the Court. If Plaintiff fails to file a timely objection to the order of transfer, the Clerk of this Court shall send the entire record of this action to the Clerk of the United States District Court for the Eastern District of North Carolina on January 28, 2014.(Taylor, Abby)MEMORANDUM OPINION AND ORDER signed by MAG/JUDGE L. PATRICK AULD on 01/03/2014 as set out herein. ORDERED that this action is transferred to the United States District Court for the Eastern District of North Carolina for further proc</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_13-cv-01006/pdf/USCOURTS-ncmd-1_13-cv-01006-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a787dd6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_13-cv-01006/USCOURTS-ncmd-1_13-cv-01006-0</identifier>
+ <identifier type="former granule identifier">ncmd-1_13-cv-01006_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ncmd-1_13-cv-01006/USCOURTS-ncmd-1_13-cv-01006-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ncmd-1_13-cv-01006/pdf/USCOURTS-ncmd-1_13-cv-01006-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01006; BARTKO v. WHEELER et al; </searchTitle>
+  <courtName>United States District Court Middle District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-ncmd-1_13-cv-01006-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>eedings. FURTHER that this order of transfer is stayed until January 27, 2014. If Plaintiff timely objects to the order of transfer, the stay shall continue beyond January 27, 2014, until disposition of such objection(s) or other order of the Court. If Plaintiff fails to file a timely objection to the order of transfer, the Clerk of this Court shall send the entire record of this action to the Clerk of the United States District Court for the Eastern District of North Carolina on January 28, 2014.(Taylor, Abby)MEMORANDUM OPINION AND ORDER signed by MAG/JUDGE L. PATRICK AULD on 01/03/2014 as set out herein. ORDERED that this action is transferred to the United States District Court for the Eastern District of North Carolina for further proc</docketText>
+</extension>
+</relatedItem>
+</mods>

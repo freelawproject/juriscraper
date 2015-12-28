@@ -1,0 +1,224 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814dad89">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-12214</identifier>
+<identifier type="local">P0b002ee1814dad89</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_09-cv-12214</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_09-cv-12214</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:09-cv-12214</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Petition for Removal</cause>
+ <party fullName="American Home Mortgage Servicing, Inc." lastName="American Home Mortgage Servicing, Inc." role="Defendant"></party>
+ <party fullName="Ameriquest Mortgage Company" lastName="Ameriquest Mortgage Company" role="Defendant"></party>
+ <party fullName="Citi Residential Lending Inc." lastName="Citi Residential Lending Inc." role="Defendant"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis M. Fraine" lastName="Fraine" middleName="M." role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon R. Fraine" lastName="Fraine" middleName="R." role="Plaintiff"></party>
+ <party fullName="IVZ" lastName="IVZ" role="Defendant"></party>
+ <party fullName="Investco PLC" lastName="Investco PLC" role="Defendant"></party>
+ <party fullName="Investco Private Capital, Inc." lastName="Investco Private Capital, Inc." role="Defendant"></party>
+ <party fullName="WL Ross&amp;Company LLC" lastName="WL Ross&amp;Company LLC" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fraine et al v. Deutsche Bank National Trust Company et al</title>
+ <partNumber>1:09-cv-12214</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-12214/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-12214;09-12214</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>American Home Mortgage Servicing, Inc.</displayForm>
+ <namePart type="family">American Home Mortgage Servicing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ameriquest Mortgage Company</displayForm>
+ <namePart type="family">Ameriquest Mortgage Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Citi Residential Lending Inc.</displayForm>
+ <namePart type="family">Citi Residential Lending Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Francis M. Fraine</displayForm>
+ <namePart type="family">Fraine</namePart>
+ <namePart type="given">Francis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sharon R. Fraine</displayForm>
+ <namePart type="family">Fraine</namePart>
+ <namePart type="given">Sharon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>IVZ</displayForm>
+ <namePart type="family">IVZ</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Investco PLC</displayForm>
+ <namePart type="family">Investco PLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Investco Private Capital, Inc.</displayForm>
+ <namePart type="family">Investco Private Capital, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WL Ross&amp;Company LLC</displayForm>
+ <namePart type="family">WL Ross&amp;Company LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_09-cv-12214</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:09-cv-12214</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Petition for Removal</cause>
+ <party fullName="American Home Mortgage Servicing, Inc." lastName="American Home Mortgage Servicing, Inc." role="Defendant"></party>
+ <party fullName="Ameriquest Mortgage Company" lastName="Ameriquest Mortgage Company" role="Defendant"></party>
+ <party fullName="Citi Residential Lending Inc." lastName="Citi Residential Lending Inc." role="Defendant"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis M. Fraine" lastName="Fraine" middleName="M." role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon R. Fraine" lastName="Fraine" middleName="R." role="Plaintiff"></party>
+ <party fullName="IVZ" lastName="IVZ" role="Defendant"></party>
+ <party fullName="Investco PLC" lastName="Investco PLC" role="Defendant"></party>
+ <party fullName="Investco Private Capital, Inc." lastName="Investco Private Capital, Inc." role="Defendant"></party>
+ <party fullName="WL Ross&amp;Company LLC" lastName="WL Ross&amp;Company LLC" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_09-cv-12214-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-12214/USCOURTS-mad-1_09-cv-12214-0/mods.xml">
+ <titleInfo>
+  <title>Fraine et al v. Deutsche Bank National Trust Company et al</title>
+  <subTitle>Judge Nancy Gertner: MEMORANDUM AND ORDER entered granting 11 Motion to Dismiss; granting 14 Motion to Dismiss. (GAM) Modified on 2/8/2011 (Gaudet, Jennifer).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_09-cv-12214-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18153dd64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-12214/USCOURTS-mad-1_09-cv-12214-0</identifier>
+ <identifier type="former granule identifier">mad-1_09-cv-12214_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-12214/USCOURTS-mad-1_09-cv-12214-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-12214/pdf/USCOURTS-mad-1_09-cv-12214-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-12214; Fraine et al v. Deutsche Bank National Trust Company et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_09-cv-12214-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>Judge Nancy Gertner: MEMORANDUM AND ORDER entered granting 11 Motion to Dismiss; granting 14 Motion to Dismiss. (GAM) Modified on 2/8/2011 (Gaudet, Jennifer).</docketText>
+</extension>
+</relatedItem>
+</mods>

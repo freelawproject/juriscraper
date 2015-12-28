@@ -1,0 +1,691 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195c4ae">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-13587</identifier>
+<identifier type="local">P0b002ee18195c4ae</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_10-cv-13587</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-13587</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-13587</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party fullName="&apos;J&apos;" lastName="&apos;J&apos;" role="Defendant"></party>
+ <party fullName="&apos;Q&apos;" lastName="&apos;Q&apos;" role="Defendant"></party>
+ <party firstName="Cathy" fullName="Cathy Aalto" lastName="Aalto" role="Defendant"></party>
+ <party firstName="Subrina" fullName="Subrina Aiken" lastName="Aiken" role="Defendant"></party>
+ <party firstName="James" fullName="James Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="David" fullName="David Bergh" lastName="Bergh" role="Defendant"></party>
+ <party fullName="Borhane" lastName="Borhane" role="Defendant"></party>
+ <party firstName="Dee" fullName="Dee Bostic" lastName="Bostic" role="Defendant"></party>
+ <party fullName="Brady" lastName="Brady" role="Defendant"></party>
+ <party fullName="Burch" lastName="Burch" role="Defendant"></party>
+ <party firstName="C" fullName="C O Burnett" lastName="Burnett" middleName="O" role="Defendant"></party>
+ <party firstName="S" fullName="S L Burt" lastName="Burt" middleName="L" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Caron" lastName="Caron" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Caruso" lastName="Caruso" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Cooke" lastName="Cooke" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Copella" lastName="Copella" role="Defendant"></party>
+ <party fullName="Craftsman" lastName="Craftsman" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Dickinson" lastName="Dickinson" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Veda" fullName="Veda Dove" lastName="Dove" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Dysert" lastName="Dysert" role="Defendant"></party>
+ <party fullName="Edelman" lastName="Edelman" role="Defendant"></party>
+ <party fullName="Fettig" lastName="Fettig" role="Defendant"></party>
+ <party firstName="Robyn" fullName="Robyn Finch" lastName="Finch" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Hall" lastName="Hall" role="Plaintiff"></party>
+ <party fullName="Haynes" lastName="Haynes" role="Defendant"></party>
+ <party firstName="Gloria" fullName="Gloria Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Houbauer" lastName="Houbauer" role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Hunter" lastName="Hunter" role="Defendant"></party>
+ <party fullName="Hussain" lastName="Hussain" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Jones" lastName="Jones" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie Jordan" lastName="Jordan" role="Defendant"></party>
+ <party firstName="L" fullName="L Kopka" lastName="Kopka" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Malone" lastName="Malone" role="Defendant"></party>
+ <party firstName="Vicki" fullName="Vicki McCabe" lastName="McCabe" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia McQueen" lastName="McQueen" role="Defendant"></party>
+ <party fullName="Miles" lastName="Miles" role="Defendant"></party>
+ <party fullName="Neimei" lastName="Neimei" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald L Nichols" lastName="Nichols" middleName="L" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Owen" lastName="Owen" role="Defendant"></party>
+ <party fullName="Petschow" lastName="Petschow" role="Defendant"></party>
+ <party firstName="William" fullName="William Ray" lastName="Ray" role="Defendant"></party>
+ <party fullName="Reitzel" lastName="Reitzel" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Rice" lastName="Rice" role="Defendant"></party>
+ <party firstName="D" fullName="D Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri Rodgers" lastName="Rodgers" role="Defendant"></party>
+ <party firstName="R" fullName="R Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Sandy" fullName="Sandy Shakur" lastName="Shakur" role="Defendant"></party>
+ <party firstName="Janya" fullName="Janya Sharpley" lastName="Sharpley" role="Defendant"></party>
+ <party firstName="Amy" fullName="Amy Shock" lastName="Shock" role="Defendant"></party>
+ <party firstName="Robyn" fullName="Robyn Stephens" lastName="Stephens" role="Defendant"></party>
+ <party firstName="Jeannie" fullName="Jeannie Stephenson" lastName="Stephenson" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Stevie" lastName="Stevie" role="Defendant"></party>
+ <party fullName="Stewart" lastName="Stewart" role="Defendant"></party>
+ <party firstName="Walt" fullName="Walt Sweigart" lastName="Sweigart" role="Defendant"></party>
+ <party firstName="Hampton" fullName="Hampton E Walker Jr" generation="Jr" lastName="Walker" middleName="E" role="Defendant"></party>
+ <party firstName="Lynda" fullName="Lynda Zeller" lastName="Zeller" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hall v. Edelman et al</title>
+ <partNumber>2:10-cv-13587</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-13587/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-13587;10-13587</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>&apos;J&apos;</displayForm>
+ <namePart type="family">&apos;J&apos;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>&apos;Q&apos;</displayForm>
+ <namePart type="family">&apos;Q&apos;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cathy Aalto</displayForm>
+ <namePart type="family">Aalto</namePart>
+ <namePart type="given">Cathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Subrina Aiken</displayForm>
+ <namePart type="family">Aiken</namePart>
+ <namePart type="given">Subrina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Armstrong</displayForm>
+ <namePart type="family">Armstrong</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Bergh</displayForm>
+ <namePart type="family">Bergh</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Borhane</displayForm>
+ <namePart type="family">Borhane</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dee Bostic</displayForm>
+ <namePart type="family">Bostic</namePart>
+ <namePart type="given">Dee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brady</displayForm>
+ <namePart type="family">Brady</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Burch</displayForm>
+ <namePart type="family">Burch</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C O Burnett</displayForm>
+ <namePart type="family">Burnett</namePart>
+ <namePart type="given">C</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S L Burt</displayForm>
+ <namePart type="family">Burt</namePart>
+ <namePart type="given">S</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Caron</displayForm>
+ <namePart type="family">Caron</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia Caruso</displayForm>
+ <namePart type="family">Caruso</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Cooke</displayForm>
+ <namePart type="family">Cooke</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Copella</displayForm>
+ <namePart type="family">Copella</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Craftsman</displayForm>
+ <namePart type="family">Craftsman</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Dickinson</displayForm>
+ <namePart type="family">Dickinson</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Veda Dove</displayForm>
+ <namePart type="family">Dove</namePart>
+ <namePart type="given">Veda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tony Dysert</displayForm>
+ <namePart type="family">Dysert</namePart>
+ <namePart type="given">Tony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Edelman</displayForm>
+ <namePart type="family">Edelman</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fettig</displayForm>
+ <namePart type="family">Fettig</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robyn Finch</displayForm>
+ <namePart type="family">Finch</namePart>
+ <namePart type="given">Robyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Haynes</displayForm>
+ <namePart type="family">Haynes</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gloria Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Gloria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffery Houbauer</displayForm>
+ <namePart type="family">Houbauer</namePart>
+ <namePart type="given">Jeffery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joyce Hunter</displayForm>
+ <namePart type="family">Hunter</namePart>
+ <namePart type="given">Joyce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hussain</displayForm>
+ <namePart type="family">Hussain</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfred Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Alfred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marie Jordan</displayForm>
+ <namePart type="family">Jordan</namePart>
+ <namePart type="given">Marie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>L Kopka</displayForm>
+ <namePart type="family">Kopka</namePart>
+ <namePart type="given">L</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathy Malone</displayForm>
+ <namePart type="family">Malone</namePart>
+ <namePart type="given">Kathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vicki McCabe</displayForm>
+ <namePart type="family">McCabe</namePart>
+ <namePart type="given">Vicki</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvia McQueen</displayForm>
+ <namePart type="family">McQueen</namePart>
+ <namePart type="given">Sylvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miles</displayForm>
+ <namePart type="family">Miles</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Neimei</displayForm>
+ <namePart type="family">Neimei</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald L Nichols</displayForm>
+ <namePart type="family">Nichols</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donna Owen</displayForm>
+ <namePart type="family">Owen</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Petschow</displayForm>
+ <namePart type="family">Petschow</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Ray</displayForm>
+ <namePart type="family">Ray</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Reitzel</displayForm>
+ <namePart type="family">Reitzel</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Rice</displayForm>
+ <namePart type="family">Rice</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">D</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terri Rodgers</displayForm>
+ <namePart type="family">Rodgers</namePart>
+ <namePart type="given">Terri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R Russell</displayForm>
+ <namePart type="family">Russell</namePart>
+ <namePart type="given">R</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sandy Shakur</displayForm>
+ <namePart type="family">Shakur</namePart>
+ <namePart type="given">Sandy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janya Sharpley</displayForm>
+ <namePart type="family">Sharpley</namePart>
+ <namePart type="given">Janya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amy Shock</displayForm>
+ <namePart type="family">Shock</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robyn Stephens</displayForm>
+ <namePart type="family">Stephens</namePart>
+ <namePart type="given">Robyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeannie Stephenson</displayForm>
+ <namePart type="family">Stephenson</namePart>
+ <namePart type="given">Jeannie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffery Stevie</displayForm>
+ <namePart type="family">Stevie</namePart>
+ <namePart type="given">Jeffery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stewart</displayForm>
+ <namePart type="family">Stewart</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walt Sweigart</displayForm>
+ <namePart type="family">Sweigart</namePart>
+ <namePart type="given">Walt</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hampton E Walker Jr</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">Hampton</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lynda Zeller</displayForm>
+ <namePart type="family">Zeller</namePart>
+ <namePart type="given">Lynda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_10-cv-13587</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:10-cv-13587</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party fullName="&apos;J&apos;" lastName="&apos;J&apos;" role="Defendant"></party>
+ <party fullName="&apos;Q&apos;" lastName="&apos;Q&apos;" role="Defendant"></party>
+ <party firstName="Cathy" fullName="Cathy Aalto" lastName="Aalto" role="Defendant"></party>
+ <party firstName="Subrina" fullName="Subrina Aiken" lastName="Aiken" role="Defendant"></party>
+ <party firstName="James" fullName="James Armstrong" lastName="Armstrong" role="Defendant"></party>
+ <party firstName="David" fullName="David Bergh" lastName="Bergh" role="Defendant"></party>
+ <party fullName="Borhane" lastName="Borhane" role="Defendant"></party>
+ <party firstName="Dee" fullName="Dee Bostic" lastName="Bostic" role="Defendant"></party>
+ <party fullName="Brady" lastName="Brady" role="Defendant"></party>
+ <party fullName="Burch" lastName="Burch" role="Defendant"></party>
+ <party firstName="C" fullName="C O Burnett" lastName="Burnett" middleName="O" role="Defendant"></party>
+ <party firstName="S" fullName="S L Burt" lastName="Burt" middleName="L" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Caron" lastName="Caron" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia Caruso" lastName="Caruso" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Cooke" lastName="Cooke" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Copella" lastName="Copella" role="Defendant"></party>
+ <party fullName="Craftsman" lastName="Craftsman" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Dickinson" lastName="Dickinson" role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Veda" fullName="Veda Dove" lastName="Dove" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Dysert" lastName="Dysert" role="Defendant"></party>
+ <party fullName="Edelman" lastName="Edelman" role="Defendant"></party>
+ <party fullName="Fettig" lastName="Fettig" role="Defendant"></party>
+ <party firstName="Robyn" fullName="Robyn Finch" lastName="Finch" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Hall" lastName="Hall" role="Plaintiff"></party>
+ <party fullName="Haynes" lastName="Haynes" role="Defendant"></party>
+ <party firstName="Gloria" fullName="Gloria Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Houbauer" lastName="Houbauer" role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Hunter" lastName="Hunter" role="Defendant"></party>
+ <party fullName="Hussain" lastName="Hussain" role="Defendant"></party>
+ <party firstName="Alfred" fullName="Alfred Jones" lastName="Jones" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie Jordan" lastName="Jordan" role="Defendant"></party>
+ <party firstName="L" fullName="L Kopka" lastName="Kopka" role="Defendant"></party>
+ <party firstName="Kathy" fullName="Kathy Malone" lastName="Malone" role="Defendant"></party>
+ <party firstName="Vicki" fullName="Vicki McCabe" lastName="McCabe" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia McQueen" lastName="McQueen" role="Defendant"></party>
+ <party fullName="Miles" lastName="Miles" role="Defendant"></party>
+ <party fullName="Neimei" lastName="Neimei" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald L Nichols" lastName="Nichols" middleName="L" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Owen" lastName="Owen" role="Defendant"></party>
+ <party fullName="Petschow" lastName="Petschow" role="Defendant"></party>
+ <party firstName="William" fullName="William Ray" lastName="Ray" role="Defendant"></party>
+ <party fullName="Reitzel" lastName="Reitzel" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Rice" lastName="Rice" role="Defendant"></party>
+ <party firstName="D" fullName="D Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Terri" fullName="Terri Rodgers" lastName="Rodgers" role="Defendant"></party>
+ <party firstName="R" fullName="R Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Sandy" fullName="Sandy Shakur" lastName="Shakur" role="Defendant"></party>
+ <party firstName="Janya" fullName="Janya Sharpley" lastName="Sharpley" role="Defendant"></party>
+ <party firstName="Amy" fullName="Amy Shock" lastName="Shock" role="Defendant"></party>
+ <party firstName="Robyn" fullName="Robyn Stephens" lastName="Stephens" role="Defendant"></party>
+ <party firstName="Jeannie" fullName="Jeannie Stephenson" lastName="Stephenson" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Stevie" lastName="Stevie" role="Defendant"></party>
+ <party fullName="Stewart" lastName="Stewart" role="Defendant"></party>
+ <party firstName="Walt" fullName="Walt Sweigart" lastName="Sweigart" role="Defendant"></party>
+ <party firstName="Hampton" fullName="Hampton E Walker Jr" generation="Jr" lastName="Walker" middleName="E" role="Defendant"></party>
+ <party firstName="Lynda" fullName="Lynda Zeller" lastName="Zeller" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-13587-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-0/mods.xml">
+ <titleInfo>
+  <title>Hall v. Edelman et al</title>
+  <subTitle>OPINION AND ORDER DISMISSING COMPLAINT WITHOUT PREJUDICE AND CONCLUDING THAT AN APPEAL CANNOT BE TAKEN IN GOOD FAITH Signed by District Judge Victoria A Roberts. (CPin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-13587-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a68efc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-0</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-13587_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-13587/pdf/USCOURTS-mied-2_10-cv-13587-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-13587; Hall v. Edelman et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-13587-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-12</dateIssued>
+  <docketText>OPINION AND ORDER DISMISSING COMPLAINT WITHOUT PREJUDICE AND CONCLUDING THAT AN APPEAL CANNOT BE TAKEN IN GOOD FAITH Signed by District Judge Victoria A Roberts. (CPin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_10-cv-13587-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-1/mods.xml">
+ <titleInfo>
+  <title>Hall v. Edelman et al</title>
+  <subTitle>OPINION AND ORDER denying 7 Motion for Rehearing; denying 8 Motion to Amend/Correct. Signed by District Judge Victoria A Roberts. (CPin)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_10-cv-13587-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a68f99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-1</identifier>
+ <identifier type="former granule identifier">mied-2_10-cv-13587_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_10-cv-13587/USCOURTS-mied-2_10-cv-13587-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_10-cv-13587/pdf/USCOURTS-mied-2_10-cv-13587-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-13587; Hall v. Edelman et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_10-cv-13587-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-07</dateIssued>
+  <docketText>OPINION AND ORDER denying 7 Motion for Rehearing; denying 8 Motion to Amend/Correct. Signed by District Judge Victoria A Roberts. (CPin)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,435 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a0046">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046</identifier>
+<identifier type="local">P0b002ee1817a0046</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cv-00046</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00046</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00046</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1331 Fed. Question: Tort Action</cause>
+ <party firstName="William L." fullName="William L. Biggs" lastName="Biggs" role="Defendant"></party>
+ <party fullName="Biggs&amp;Stoehr" lastName="Biggs&amp;Stoehr" role="Defendant"></party>
+ <party fullName="Brook Valley IV Joint Venture" lastName="Brook Valley IV Joint Venture" role="Plaintiff"></party>
+ <party fullName="Brook Valley VII Joint Venture" lastName="Brook Valley VII Joint Venture" role="Plaintiff"></party>
+ <party firstName="Leo A." fullName="Leo A. Dahlke" lastName="Dahlke" role="Plaintiff"></party>
+ <party firstName="Leo" fullName="Leo A. Dahlke, as a Partner/Debtor-in-Possession of" lastName="Dahlke, as a Partner/Debtor-in-Possession of" middleName="A." role="Plaintiff"></party>
+ <party fullName="Employers Reinsurance Corporation" lastName="Employers Reinsurance Corporation" role="Defendant"></party>
+ <party fullName="Greenwich Insurance Company" lastName="Greenwich Insurance Company" role="Defendant"></party>
+ <party fullName="Gross&amp;Welch" lastName="Gross&amp;Welch" role="Defendant"></party>
+ <party fullName="Phoenix Properties" lastName="Phoenix Properties" role="Plaintiff"></party>
+ <party fullName="Phoenix Properties of Brook Valley 1" lastName="Phoenix Properties of Brook Valley 1" role="Plaintiff"></party>
+ <party fullName="Phoenix Properties of Brook Valley 2" lastName="Phoenix Properties of Brook Valley 2" role="Plaintiff"></party>
+ <party fullName="R&amp;L Valley Properties" lastName="R&amp;L Valley Properties" role="Plaintiff"></party>
+ <party fullName="RCS&amp;Sons" lastName="RCS&amp;Sons" role="Plaintiff"></party>
+ <party firstName="Robert C." fullName="Robert C. Schropp" lastName="Schropp" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert C. Schropp, as a Partner/Debtor-in-Possession of" lastName="Schropp, as a Partner/Debtor-in-Possession of" middleName="C." role="Plaintiff"></party>
+ <party firstName="Jerry M." fullName="Jerry M. Slusky" lastName="Slusky" role="Defendant"></party>
+ <party fullName="Swiss Re America Holding Corporation" lastName="Swiss Re America Holding Corporation" role="Defendant"></party>
+ <party fullName="Swiss Re Solutions Holding Corporation" lastName="Swiss Re Solutions Holding Corporation" role="Defendant"></party>
+ <party fullName="Swiss Reinsurance Company" lastName="Swiss Reinsurance Company" role="Defendant"></party>
+ <party fullName="Westport Insurance Corporation" lastName="Westport Insurance Corporation" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Phoenix Properties et al v. Biggs et al</title>
+ <partNumber>8:07-cv-00046</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cv-00046;07-046</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>William L. Biggs</displayForm>
+ <namePart type="family">Biggs</namePart>
+ <namePart type="given">William L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Biggs&amp;Stoehr</displayForm>
+ <namePart type="family">Biggs&amp;Stoehr</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brook Valley IV Joint Venture</displayForm>
+ <namePart type="family">Brook Valley IV Joint Venture</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brook Valley VII Joint Venture</displayForm>
+ <namePart type="family">Brook Valley VII Joint Venture</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leo A. Dahlke</displayForm>
+ <namePart type="family">Dahlke</namePart>
+ <namePart type="given">Leo A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leo A. Dahlke, as a Partner/Debtor-in-Possession of</displayForm>
+ <namePart type="family">Dahlke, as a Partner/Debtor-in-Possession of</namePart>
+ <namePart type="given">Leo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Employers Reinsurance Corporation</displayForm>
+ <namePart type="family">Employers Reinsurance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Greenwich Insurance Company</displayForm>
+ <namePart type="family">Greenwich Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gross&amp;Welch</displayForm>
+ <namePart type="family">Gross&amp;Welch</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Phoenix Properties</displayForm>
+ <namePart type="family">Phoenix Properties</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Phoenix Properties of Brook Valley 1</displayForm>
+ <namePart type="family">Phoenix Properties of Brook Valley 1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Phoenix Properties of Brook Valley 2</displayForm>
+ <namePart type="family">Phoenix Properties of Brook Valley 2</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>R&amp;L Valley Properties</displayForm>
+ <namePart type="family">R&amp;L Valley Properties</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>RCS&amp;Sons</displayForm>
+ <namePart type="family">RCS&amp;Sons</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert C. Schropp</displayForm>
+ <namePart type="family">Schropp</namePart>
+ <namePart type="given">Robert C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert C. Schropp, as a Partner/Debtor-in-Possession of</displayForm>
+ <namePart type="family">Schropp, as a Partner/Debtor-in-Possession of</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry M. Slusky</displayForm>
+ <namePart type="family">Slusky</namePart>
+ <namePart type="given">Jerry M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Swiss Re America Holding Corporation</displayForm>
+ <namePart type="family">Swiss Re America Holding Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Swiss Re Solutions Holding Corporation</displayForm>
+ <namePart type="family">Swiss Re Solutions Holding Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Swiss Reinsurance Company</displayForm>
+ <namePart type="family">Swiss Reinsurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Westport Insurance Corporation</displayForm>
+ <namePart type="family">Westport Insurance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cv-00046</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cv-00046</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1331 Fed. Question: Tort Action</cause>
+ <party firstName="William L." fullName="William L. Biggs" lastName="Biggs" role="Defendant"></party>
+ <party fullName="Biggs&amp;Stoehr" lastName="Biggs&amp;Stoehr" role="Defendant"></party>
+ <party fullName="Brook Valley IV Joint Venture" lastName="Brook Valley IV Joint Venture" role="Plaintiff"></party>
+ <party fullName="Brook Valley VII Joint Venture" lastName="Brook Valley VII Joint Venture" role="Plaintiff"></party>
+ <party firstName="Leo A." fullName="Leo A. Dahlke" lastName="Dahlke" role="Plaintiff"></party>
+ <party firstName="Leo" fullName="Leo A. Dahlke, as a Partner/Debtor-in-Possession of" lastName="Dahlke, as a Partner/Debtor-in-Possession of" middleName="A." role="Plaintiff"></party>
+ <party fullName="Employers Reinsurance Corporation" lastName="Employers Reinsurance Corporation" role="Defendant"></party>
+ <party fullName="Greenwich Insurance Company" lastName="Greenwich Insurance Company" role="Defendant"></party>
+ <party fullName="Gross&amp;Welch" lastName="Gross&amp;Welch" role="Defendant"></party>
+ <party fullName="Phoenix Properties" lastName="Phoenix Properties" role="Plaintiff"></party>
+ <party fullName="Phoenix Properties of Brook Valley 1" lastName="Phoenix Properties of Brook Valley 1" role="Plaintiff"></party>
+ <party fullName="Phoenix Properties of Brook Valley 2" lastName="Phoenix Properties of Brook Valley 2" role="Plaintiff"></party>
+ <party fullName="R&amp;L Valley Properties" lastName="R&amp;L Valley Properties" role="Plaintiff"></party>
+ <party fullName="RCS&amp;Sons" lastName="RCS&amp;Sons" role="Plaintiff"></party>
+ <party firstName="Robert C." fullName="Robert C. Schropp" lastName="Schropp" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert C. Schropp, as a Partner/Debtor-in-Possession of" lastName="Schropp, as a Partner/Debtor-in-Possession of" middleName="C." role="Plaintiff"></party>
+ <party firstName="Jerry M." fullName="Jerry M. Slusky" lastName="Slusky" role="Defendant"></party>
+ <party fullName="Swiss Re America Holding Corporation" lastName="Swiss Re America Holding Corporation" role="Defendant"></party>
+ <party fullName="Swiss Re Solutions Holding Corporation" lastName="Swiss Re Solutions Holding Corporation" role="Defendant"></party>
+ <party fullName="Swiss Reinsurance Company" lastName="Swiss Reinsurance Company" role="Defendant"></party>
+ <party fullName="Westport Insurance Corporation" lastName="Westport Insurance Corporation" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00046-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-0/mods.xml">
+ <titleInfo>
+  <title>Phoenix Properties et al v. Biggs et al</title>
+  <subTitle>ORDER denying 11 Motion to Strike ; denying 14 Motion to Strike. Ordered by Magistrate Judge Thomas D. Thalken. (PAV)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00046-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181828901</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00046_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/pdf/USCOURTS-ned-8_07-cv-00046-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00046; Phoenix Properties et al v. Biggs et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00046-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-10</dateIssued>
+  <docketText>ORDER denying 11 Motion to Strike ; denying 14 Motion to Strike. Ordered by Magistrate Judge Thomas D. Thalken. (PAV)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00046-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-1/mods.xml">
+ <titleInfo>
+  <title>Phoenix Properties et al v. Biggs et al</title>
+  <subTitle>ORDER - This matter is before the court sua sponte. The defendant, Biggs&amp;Stoehr, shall have on or before October 26, 2007, to file its corporate disclosure statements or show cause why sanctions should not be imposed as against the defendant for failure to timely file its statements. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00046-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181828902</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00046_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/pdf/USCOURTS-ned-8_07-cv-00046-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00046; Phoenix Properties et al v. Biggs et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00046-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-19</dateIssued>
+  <docketText>ORDER - This matter is before the court sua sponte. The defendant, Biggs&amp;Stoehr, shall have on or before October 26, 2007, to file its corporate disclosure statements or show cause why sanctions should not be imposed as against the defendant for failure to timely file its statements. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00046-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-2/mods.xml">
+ <titleInfo>
+  <title>Phoenix Properties et al v. Biggs et al</title>
+  <subTitle>ORDER granting 32 Oral Motion ; The telephone planning conference with the undersigned magistrate judge is continued to December 28, 2007, at 9:00 a.m.. Plaintiffs&apos; counsel shall initiate the telephone conference. Ordered by Magistrate Judge Thomas D. Thalken. (ADB )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00046-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818284c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00046_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/pdf/USCOURTS-ned-8_07-cv-00046-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00046; Phoenix Properties et al v. Biggs et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00046-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-12-12</dateIssued>
+  <docketText>ORDER granting 32 Oral Motion ; The telephone planning conference with the undersigned magistrate judge is continued to December 28, 2007, at 9:00 a.m.. Plaintiffs&apos; counsel shall initiate the telephone conference. Ordered by Magistrate Judge Thomas D. Thalken. (ADB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00046-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-3/mods.xml">
+ <titleInfo>
+  <title>Phoenix Properties et al v. Biggs et al</title>
+  <subTitle>ORDER, - The telephone planning conference with the undersigned magistrate judge is continued to January 31, 2008 at 9:00a.m. Plaintiff&apos;s counsel shall initiate the telephone conference. ( Telephone Planning Conference set for 1/31/2008 at 09:00 AM before Magistrate Judge Thomas D. Thalken.) Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00046-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181828900</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00046_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/pdf/USCOURTS-ned-8_07-cv-00046-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00046; Phoenix Properties et al v. Biggs et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00046-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-12-28</dateIssued>
+  <docketText>ORDER, - The telephone planning conference with the undersigned magistrate judge is continued to January 31, 2008 at 9:00a.m. Plaintiff&apos;s counsel shall initiate the telephone conference. ( Telephone Planning Conference set for 1/31/2008 at 09:00 AM before Magistrate Judge Thomas D. Thalken.) Ordered by Magistrate Judge Thomas D. Thalken. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cv-00046-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-4/mods.xml">
+ <titleInfo>
+  <title>Phoenix Properties et al v. Biggs et al</title>
+  <subTitle>ORDER approving Stipulation35 and for Dismissal without predjudice. IT IS ORDERED that the Stipulation of the parties is approved and this action is hereby dismissed without prejudice for the reason that the claims made in the Complaint will be litigated in the District Court of Douglas County, Nebraska, in a case caption Phoenix Properties, et al. v. Biggs, et al., at Doc. 1068, No. 701. The Court further finds and approves the conditions of the dismissal contained in the Stipulation, that being that if any court determines that jurisdiction for this dispute is properly vested in this Court, by virtue of 28 U.S.C. §1334(b) as constituting a proceeding under Title 11, or arising in or related to cases filed under Title 11, or for any other reason, then Plaintiffs may refile this action in the United States District Court for the District of Nebraska and the commencement date shall be deemed to be February 2, 2007, the date of filing the instant action. Ordered by Chief Judge Joseph F. Bataillon. (TCL)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cv-00046-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818284c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cv-00046_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cv-00046/USCOURTS-ned-8_07-cv-00046-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cv-00046/pdf/USCOURTS-ned-8_07-cv-00046-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cv-00046; Phoenix Properties et al v. Biggs et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cv-00046-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>ORDER approving Stipulation35 and for Dismissal without predjudice. IT IS ORDERED that the Stipulation of the parties is approved and this action is hereby dismissed without prejudice for the reason that the claims made in the Complaint will be litigated in the District Court of Douglas County, Nebraska, in a case caption Phoenix Properties, et al. v. Biggs, et al., at Doc. 1068, No. 701. The Court further finds and approves the conditions of the dismissal contained in the Stipulation, that being that if any court determines that jurisdiction for this dispute is properly vested in this Court, by virtue of 28 U.S.C. §1334(b) as constituting a proceeding under Title 11, or arising in or related to cases filed under Title 11, or for any other reason, then Plaintiffs may refile this action in the United States District Court for the District of Nebraska and the commencement date shall be deemed to be February 2, 2007, the date of filing the instant action. Ordered by Chief Judge Joseph F. Bataillon. (TCL)</docketText>
+</extension>
+</relatedItem>
+</mods>

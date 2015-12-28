@@ -1,0 +1,142 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18b9c2f0e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eleventh Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca11-12-16082</identifier>
+<identifier type="local">P0b002ee18b9c2f0e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca11-12-16082</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca11-12-16082</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca11</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtSortOrder>1110</courtSortOrder>
+ <caseNumber>12-16082</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Michael" fullName="Michael Lesinski" lastName="Lesinski" role="Appellant"></party>
+ <party fullName="South Florida Water Management District" lastName="South Florida Water Management District" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Michael Lesinski v. South Florida Water Management</title>
+ <partNumber>12-16082</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca11-12-16082/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-16082;12-16082</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eleventh Circuit</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael Lesinski</displayForm>
+ <namePart type="family">Lesinski</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>South Florida Water Management District</displayForm>
+ <namePart type="family">South Florida Water Management District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca11-12-16082</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca11</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtSortOrder>1110</courtSortOrder>
+ <caseNumber>12-16082</caseNumber>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Michael" fullName="Michael Lesinski" lastName="Lesinski" role="Appellant"></party>
+ <party fullName="South Florida Water Management District" lastName="South Florida Water Management District" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca11-12-16082-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca11-12-16082/USCOURTS-ca11-12-16082-0/mods.xml">
+ <titleInfo>
+  <title>Michael Lesinski v. South Florida Water Management</title>
+  <subTitle>Opinion issued by court as to Appellant Michael Lesinski. Decision: Affirmed. Opinion type: Published. Opinion method: Signed.--[Edited 01/08/2014 by JRP]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca11-12-16082/pdf/USCOURTS-ca11-12-16082-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ba714e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca11-12-16082/USCOURTS-ca11-12-16082-0</identifier>
+ <identifier type="former granule identifier">ca11-12-16082_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca11-12-16082/USCOURTS-ca11-12-16082-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca11-12-16082/pdf/USCOURTS-ca11-12-16082-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-16082; Michael Lesinski v. South Florida Water Management; </searchTitle>
+  <courtName>United States Court of Appeals for the Eleventh Circuit</courtName>
+  <accessId>USCOURTS-ca11-12-16082-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Opinion issued by court as to Appellant Michael Lesinski. Decision: Affirmed. Opinion type: Published. Opinion method: Signed.--[Edited 01/08/2014 by JRP]</docketText>
+</extension>
+</relatedItem>
+</mods>

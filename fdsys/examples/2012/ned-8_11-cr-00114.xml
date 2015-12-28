@@ -1,0 +1,760 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181e4d9a2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114</identifier>
+<identifier type="local">P0b002ee181e4d9a2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00114</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00114</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gerardo" fullName="Gerardo Chavez-Munoz" lastName="Chavez-Munoz" role="Defendant"></party>
+ <party firstName="Gilberto" fullName="Gilberto Chavez-Munoz" lastName="Chavez-Munoz" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia Duhart" lastName="Duhart" role="Defendant"></party>
+ <party firstName="Silvia" fullName="Silvia Susana Duhart-Orea" lastName="Duhart-Orea" middleName="Susana" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Fernandez-Roustand" lastName="Fernandez-Roustand" role="Defendant"></party>
+ <party fullName="Gordo" lastName="Gordo" role="Defendant"></party>
+ <party firstName="Allan" fullName="Allan Roustand-Rolon" lastName="Roustand-Rolon" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Duhart-Orea et al</title>
+ <partNumber>8:11-cr-00114</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00114;11-114</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gerardo Chavez-Munoz</displayForm>
+ <namePart type="family">Chavez-Munoz</namePart>
+ <namePart type="given">Gerardo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gilberto Chavez-Munoz</displayForm>
+ <namePart type="family">Chavez-Munoz</namePart>
+ <namePart type="given">Gilberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvia Duhart</displayForm>
+ <namePart type="family">Duhart</namePart>
+ <namePart type="given">Sylvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Silvia Susana Duhart-Orea</displayForm>
+ <namePart type="family">Duhart-Orea</namePart>
+ <namePart type="given">Silvia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jorge Fernandez-Roustand</displayForm>
+ <namePart type="family">Fernandez-Roustand</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gordo</displayForm>
+ <namePart type="family">Gordo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allan Roustand-Rolon</displayForm>
+ <namePart type="family">Roustand-Rolon</namePart>
+ <namePart type="given">Allan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00114</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gerardo" fullName="Gerardo Chavez-Munoz" lastName="Chavez-Munoz" role="Defendant"></party>
+ <party firstName="Gilberto" fullName="Gilberto Chavez-Munoz" lastName="Chavez-Munoz" role="Defendant"></party>
+ <party firstName="Sylvia" fullName="Sylvia Duhart" lastName="Duhart" role="Defendant"></party>
+ <party firstName="Silvia" fullName="Silvia Susana Duhart-Orea" lastName="Duhart-Orea" middleName="Susana" role="Defendant"></party>
+ <party firstName="Jorge" fullName="Jorge Fernandez-Roustand" lastName="Fernandez-Roustand" role="Defendant"></party>
+ <party fullName="Gordo" lastName="Gordo" role="Defendant"></party>
+ <party firstName="Allan" fullName="Allan Roustand-Rolon" lastName="Roustand-Rolon" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender is appointed as counsel as to defendant Jane Doe. Ordered by Magistrate Judge F.A. Gossett. (SLP, )[8:11-mj-00056-FG3]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-03-16</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender is appointed as counsel as to defendant Jane Doe. Ordered by Magistrate Judge F.A. Gossett. (SLP, )[8:11-mj-00056-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jane Doe. Ordered by Magistrate Judge F.A. Gossett. (MLF, )[8:11-mj-00056-FG3]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec90</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-03-18</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jane Doe. Ordered by Magistrate Judge F.A. Gossett. (MLF, )[8:11-mj-00056-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - CJA Panel Attorney Michael J. Decker is appointed as attorney of record in this matter as to defendant Allan Roustand-Rolon. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00064-FG3]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - CJA Panel Attorney Michael J. Decker is appointed as attorney of record in this matter as to defendant Allan Roustand-Rolon. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00064-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Allan Roustand-Rolon. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00064-FG3]</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Allan Roustand-Rolon. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00064-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Gerardo Chavez-Munoz. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00065-FG3]</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-4</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Gerardo Chavez-Munoz. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00065-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Gilberto Chavez-Munoz. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00066-FG3]</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-5</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Gilberto Chavez-Munoz. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00066-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - CJA Panel Attorney Nicole L. Cavanaugh is appointed as counsel to represent the defendant, Jorge Fernandez-Roustand, in this matter. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00067-FG3]</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eba1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-6</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - CJA Panel Attorney Nicole L. Cavanaugh is appointed as counsel to represent the defendant, Jorge Fernandez-Roustand, in this matter. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00067-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jorge Fernandez-Roustand. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00067-FG3]</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ea25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-7</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-03-29</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jorge Fernandez-Roustand. Ordered by Magistrate Judge F.A. Gossett. (SLP)[8:11-mj-00067-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 38 and 41 unopposed Motions to Extend Time to File Pretrial Motions as to Gilberto Chavez-Munoz and Gerardo Chavez-Munoz. The deadline for filing pretrial motions is extended to May 27, 2011 The time between May 12, 2011 and May 27, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 38 and 41 unopposed Motions to Extend Time to File Pretrial Motions as to Gilberto Chavez-Munoz and Gerardo Chavez-Munoz. The deadline for filing pretrial motions is extended to May 27, 2011 The time between May 12, 2011 and May 27, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec92</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-8</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-05-12</dateIssued>
+  <docketText>ORDER granting 38 and 41 unopposed Motions to Extend Time to File Pretrial Motions as to Gilberto Chavez-Munoz and Gerardo Chavez-Munoz. The deadline for filing pretrial motions is extended to May 27, 2011 The time between May 12, 2011 and May 27, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )ORDER granting 38 and 41 unopposed Motions to Extend Time to File Pretrial Motions as to Gilberto Chavez-Munoz and Gerardo Chavez-Munoz. The deadline for filing pretrial motions is extended to May 27, 2011 The time between May 12, 2011 and May 27, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. ( MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 47 Motion for Extension of Brief Date as to Allan Roustand-Rolon. Pretrial Motion Deadline set for 5/26/2011. The time between May 12, 2011 and May 26, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-9</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-05-16</dateIssued>
+  <docketText>ORDER granting 47 Motion for Extension of Brief Date as to Allan Roustand-Rolon. Pretrial Motion Deadline set for 5/26/2011. The time between May 12, 2011 and May 26, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F.A. Gossett. (SLP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 79 Defendant&apos;s Unopposed Motion to Extend as to Gilberto Chavez-Munoz (4). Defendant shall have until September 26, 2011, to comply with Paragraph 6 of the order on sentencing schedule. Sentencing continued to 10/12/2011 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JAB)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-10</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-09-21</dateIssued>
+  <docketText>ORDER granting 79 Defendant&apos;s Unopposed Motion to Extend as to Gilberto Chavez-Munoz (4). Defendant shall have until September 26, 2011, to comply with Paragraph 6 of the order on sentencing schedule. Sentencing continued to 10/12/2011 09:00 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 80 Defendant&apos;s Unopposed Motion to Extend as to Gerardo Chavez-Munoz (5). Defendant shall have until September 26, 2011, to comply with Paragraph 6 of the order on sentencing schedule. Sentencing continued to 10/12/2011 09:30 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JAB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eba0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-11</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-09-21</dateIssued>
+  <docketText>ORDER granting 80 Defendant&apos;s Unopposed Motion to Extend as to Gerardo Chavez-Munoz (5). Defendant shall have until September 26, 2011, to comply with Paragraph 6 of the order on sentencing schedule. Sentencing continued to 10/12/2011 09:30 AM in Courtroom 5, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER - Defendant&apos;s motion to dismiss current counsel and to appoint new counsel, filing 83, is denied as to Silvia Susana Duhart-Orea (1). Ordered by Senior Judge Lyle E. Strom. (GJG)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-12</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-09-28</dateIssued>
+  <docketText>ORDER - Defendant&apos;s motion to dismiss current counsel and to appoint new counsel, filing 83, is denied as to Silvia Susana Duhart-Orea (1). Ordered by Senior Judge Lyle E. Strom. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER - The motion to withdraw as counsel 104 is granted. Jeffrey L. Thomas and the office of the Federal Public Defender for the District of Nebraska are deemed withdrawn as counsel for defendant as to Silvia Susana Duhart-Orea. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-13</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-09-29</dateIssued>
+  <docketText>ORDER - The motion to withdraw as counsel 104 is granted. Jeffrey L. Thomas and the office of the Federal Public Defender for the District of Nebraska are deemed withdrawn as counsel for defendant as to Silvia Susana Duhart-Orea. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 125 Motion to Withdraw as Attorney. Nichole L.Cavanaugh is deemed withdrawn as counsel of record for defendant, Jorge Fernandez-Roustand (2). Ordered by Senior Judge Lyle E. Strom. ( GJG)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-14</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>ORDER granting 125 Motion to Withdraw as Attorney. Nichole L.Cavanaugh is deemed withdrawn as counsel of record for defendant, Jorge Fernandez-Roustand (2). Ordered by Senior Judge Lyle E. Strom. ( GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 135 Motion to Extend to File Objections to Presentence Investigation Report as to Allan Roustand-Rolon. Defendant shall have until December 19, 2011, to file objections to the presentence investigation report and a supporting brief. Ordered by Senior Judge Lyle E. Strom. (JAE)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-15</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2011-12-09</dateIssued>
+  <docketText>ORDER granting 135 Motion to Extend to File Objections to Presentence Investigation Report as to Allan Roustand-Rolon. Defendant shall have until December 19, 2011, to file objections to the presentence investigation report and a supporting brief. Ordered by Senior Judge Lyle E. Strom. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER granting 158 Motion for Leave to Appeal In Forma Pauperis as to Silvia Susana Duhart-Orea (1). Defendant may proceed on appeal without prepayment of costs. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-16</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-12-28</dateIssued>
+  <docketText>ORDER granting 158 Motion for Leave to Appeal In Forma Pauperis as to Silvia Susana Duhart-Orea (1). Defendant may proceed on appeal without prepayment of costs. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER as to defendant Silvia Susana Duhart-Orea. Bilal A. Khaleeq, 4832 South 24th Street, Suite 200, Omaha, Nebraska, is appointed to represent defendant during sentencing proceedings involving a co-defendant. Ordered by Senior Judge Lyle E. Strom. (copy to Federal Public Defender&apos;s Office)(ADB)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb9e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-17</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER as to defendant Silvia Susana Duhart-Orea. Bilal A. Khaleeq, 4832 South 24th Street, Suite 200, Omaha, Nebraska, is appointed to represent defendant during sentencing proceedings involving a co-defendant. Ordered by Senior Judge Lyle E. Strom. (copy to Federal Public Defender&apos;s Office)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>JUDGMENT as to Allan Roustand-Rolon (3), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of fifty-seven (57) months; the defendant shall be given credit for timeserved since March 15, 2011; 3 years supervised release with special conditions; $100.00 special assessment as to defendant Allan Roustand-Rolon. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(ADB)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec93</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-18</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>JUDGMENT as to Allan Roustand-Rolon (3), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of fifty-seven (57) months; the defendant shall be given credit for timeserved since March 15, 2011; 3 years supervised release with special conditions; $100.00 special assessment as to defendant Allan Roustand-Rolon. Ordered by Senior Judge Lyle E. Strom. (4 Certified copies to USM)(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Allan Roustand-Rolon. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4eb9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-19</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-01-17</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Allan Roustand-Rolon. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00114-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Duhart-Orea et al</title>
+  <subTitle>ORDER denying as moot 174 Motion to Quash as to Silvia Susana Duhart-Orea (1). Ordered by Senior Judge Lyle E. Strom. (ADB)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00114-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4ec2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-20</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00114_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00114/USCOURTS-ned-8_11-cr-00114-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00114/pdf/USCOURTS-ned-8_11-cr-00114-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00114; USA v. Duhart-Orea et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00114-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-02-10</dateIssued>
+  <docketText>ORDER denying as moot 174 Motion to Quash as to Silvia Susana Duhart-Orea (1). Ordered by Senior Judge Lyle E. Strom. (ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

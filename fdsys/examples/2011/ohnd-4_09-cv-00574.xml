@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181559fbb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_09-cv-00574</identifier>
+<identifier type="local">P0b002ee181559fbb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_09-cv-00574</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_09-cv-00574</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:09-cv-00574</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Mike" fullName="Mike Bruno" lastName="Bruno" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Kline M.D." generation="M.D." lastName="Kline" role="Defendant"></party>
+ <party firstName="Ramon" fullName="Ramon Perez" lastName="Perez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bruno v. Kline et al</title>
+ <partNumber>4:09-cv-00574</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_09-cv-00574/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cv-00574;09-574</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mike Bruno</displayForm>
+ <namePart type="family">Bruno</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. Kline M.D.</displayForm>
+ <namePart type="family">Kline</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress">M.D.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ramon Perez</displayForm>
+ <namePart type="family">Perez</namePart>
+ <namePart type="given">Ramon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_09-cv-00574</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:09-cv-00574</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Mike" fullName="Mike Bruno" lastName="Bruno" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Kline M.D." generation="M.D." lastName="Kline" role="Defendant"></party>
+ <party firstName="Ramon" fullName="Ramon Perez" lastName="Perez" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_09-cv-00574-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-0/mods.xml">
+ <titleInfo>
+  <title>Bruno v. Kline et al</title>
+  <subTitle>Report and Recommendation: It is recommended that the Court grant defendant Dr. J. Kline&apos;s motion to strike plaintiff&apos;s &quot;response&quot; to defendant&apos;s reply; further, it is recommended that the Court grant defendant Dr. J. Kline&apos;s motion for summary judgment, and dismiss this case in its entirety with prejudice at plaintiff&apos;s cost (Related documents 28 and 23). Signed by Magistrate Judge George J. Limbert on 8/12/10. (S,AA)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_09-cv-00574-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815ef50a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_09-cv-00574_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_09-cv-00574/pdf/USCOURTS-ohnd-4_09-cv-00574-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00574; Bruno v. Kline et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_09-cv-00574-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-08-12</dateIssued>
+  <docketText>Report and Recommendation: It is recommended that the Court grant defendant Dr. J. Kline&apos;s motion to strike plaintiff&apos;s &quot;response&quot; to defendant&apos;s reply; further, it is recommended that the Court grant defendant Dr. J. Kline&apos;s motion for summary judgment, and dismiss this case in its entirety with prejudice at plaintiff&apos;s cost (Related documents 28 and 23). Signed by Magistrate Judge George J. Limbert on 8/12/10. (S,AA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_09-cv-00574-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-1/mods.xml">
+ <titleInfo>
+  <title>Bruno v. Kline et al</title>
+  <subTitle>Memorandum Opinion: Plaintiff has failed to meet his burden of proof to overcome defendant&apos;s motion for summary judgment. (Related Doc # 23, 32). Having conducted a de novo review of the portions of the R&amp;R objected to by plaintiff, the Court hereby adopts the recommendation of the magistrate judge to grant defendant&apos;s motion for summary judgment and the Court will issue such order by separate judgment entry. (Related Doc # 30). As already noted, the Court rejects the recommendation that dismissal should be at plaintiff&apos;s costs. Instead, each party will bear its own costs. Finally, as recommended by the magistrate judge, defendant&apos;s motion to strike plaintiff&apos;s response to defendant&apos;s reply memorandum is granted. (Related Doc # 28). Judge Sara Lioi on 1/12/2011. (P,J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_09-cv-00574-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815ef50b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-1</identifier>
+ <identifier type="former granule identifier">ohnd-4_09-cv-00574_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_09-cv-00574/USCOURTS-ohnd-4_09-cv-00574-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_09-cv-00574/pdf/USCOURTS-ohnd-4_09-cv-00574-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cv-00574; Bruno v. Kline et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_09-cv-00574-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-12</dateIssued>
+  <docketText>Memorandum Opinion: Plaintiff has failed to meet his burden of proof to overcome defendant&apos;s motion for summary judgment. (Related Doc # 23, 32). Having conducted a de novo review of the portions of the R&amp;R objected to by plaintiff, the Court hereby adopts the recommendation of the magistrate judge to grant defendant&apos;s motion for summary judgment and the Court will issue such order by separate judgment entry. (Related Doc # 30). As already noted, the Court rejects the recommendation that dismissal should be at plaintiff&apos;s costs. Instead, each party will bear its own costs. Finally, as recommended by the magistrate judge, defendant&apos;s motion to strike plaintiff&apos;s response to defendant&apos;s reply memorandum is granted. (Related Doc # 28). Judge Sara Lioi on 1/12/2011. (P,J)</docketText>
+</extension>
+</relatedItem>
+</mods>

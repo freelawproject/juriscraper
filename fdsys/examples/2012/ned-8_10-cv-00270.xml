@@ -1,0 +1,747 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1825ebf7d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-04-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270</identifier>
+<identifier type="local">P0b002ee1825ebf7d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-04-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-04-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00270</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00270</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00270</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Juan" fullName="Juan Armenta" lastName="Armenta" role="Plaintiff"></party>
+ <party fullName="City of Fremont" lastName="City of Fremont" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Doe" lastName="Doe" role="Plaintiff"></party>
+ <party firstName="Juana" fullName="Juana Doe" lastName="Doe" role="Plaintiff"></party>
+ <party firstName="Juana" fullName="Juana Doe #2" lastName="Doe #2" role="Plaintiff"></party>
+ <party firstName="Fred" fullName="Fred H. Keller Jr." generation="Jr." lastName="Keller" middleName="H." role="Plaintiff"></party>
+ <party firstName="Yamileth" fullName="Yamileth Leiva" lastName="Leiva" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Mullen" lastName="Mullen" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Shotkoski" lastName="Shotkoski" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Keller et al v. City of Fremont</title>
+ <partNumber>8:10-cv-00270</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00270;10-270</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Juan Armenta</displayForm>
+ <namePart type="family">Armenta</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>City of Fremont</displayForm>
+ <namePart type="family">City of Fremont</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juan Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Juana Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Juana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Juana Doe #2</displayForm>
+ <namePart type="family">Doe #2</namePart>
+ <namePart type="given">Juana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Fred H. Keller Jr.</displayForm>
+ <namePart type="family">Keller</namePart>
+ <namePart type="given">Fred</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Yamileth Leiva</displayForm>
+ <namePart type="family">Leiva</namePart>
+ <namePart type="given">Yamileth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Mullen</displayForm>
+ <namePart type="family">Mullen</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Shotkoski</displayForm>
+ <namePart type="family">Shotkoski</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00270</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00270</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Juan" fullName="Juan Armenta" lastName="Armenta" role="Plaintiff"></party>
+ <party fullName="City of Fremont" lastName="City of Fremont" role="Defendant"></party>
+ <party firstName="Juan" fullName="Juan Doe" lastName="Doe" role="Plaintiff"></party>
+ <party firstName="Juana" fullName="Juana Doe" lastName="Doe" role="Plaintiff"></party>
+ <party firstName="Juana" fullName="Juana Doe #2" lastName="Doe #2" role="Plaintiff"></party>
+ <party firstName="Fred" fullName="Fred H. Keller Jr." generation="Jr." lastName="Keller" middleName="H." role="Plaintiff"></party>
+ <party firstName="Yamileth" fullName="Yamileth Leiva" lastName="Leiva" role="Plaintiff"></party>
+ <party firstName="Timothy" fullName="Timothy Mullen" lastName="Mullen" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Shotkoski" lastName="Shotkoski" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-0/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>MEMORANDUM AND ORDER that Counsel for the parties will confer to determine whether agreement can be reached among them on the wording of a question to be certified to the Nebraska Supreme Court to determine whether the Ordinance is invalid as a matter of state law; and On or before September 1, 2010, counsel for the parties will submit to the Court their joint, or separate, proposals for the question to be so certified. Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed783</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-08-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that Counsel for the parties will confer to determine whether agreement can be reached among them on the wording of a question to be certified to the Nebraska Supreme Court to determine whether the Ordinance is invalid as a matter of state law; and On or before September 1, 2010, counsel for the parties will submit to the Court their joint, or separate, proposals for the question to be so certified. Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-1/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>CONSOLIDATION ORDER that Case No. 8:10CV270 and Case No. 4:10CV3140 are hereby consolidated for purposes of the pending motions for temporary restraining order and preliminary injunction, and for discovery; Case No. 8:10CV270 is hereby designated as the &quot;Lead Case,&quot; Case No. 4:10CV3140 is hereby designated as a &quot;Member Case; The parties are instructed to file in the Lead Case, No. 8:10CV270. Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-09-02</dateIssued>
+  <docketText>CONSOLIDATION ORDER that Case No. 8:10CV270 and Case No. 4:10CV3140 are hereby consolidated for purposes of the pending motions for temporary restraining order and preliminary injunction, and for discovery; Case No. 8:10CV270 is hereby designated as the &quot;Lead Case,&quot; Case No. 4:10CV3140 is hereby designated as a &quot;Member Case; The parties are instructed to file in the Lead Case, No. 8:10CV270. Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-2/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER that by 9/21/201, the Plaintiffs in Case No. 8:10CV270 and Case No. 4:10CV3140 will pay the docketing fee of $125.00 to the Nebraska Supreme Court consistent with Nebraska Revised Statutes and the rules of the Nebraska Supreme Court. Upon paying the docketing fee to the Nebraska Supreme Court, the Plaintiffs will immediately file a notification in this Court that the docketing fee has been paid. Upon notice from either Plaintiff that the docketing fee has been paid in full to the Nebraska Supreme Court, the Clerk of this Court is directed to forward the following documents to the Nebraska Supreme Court: a. The original petition under the Court&apos;s official seal in accordance with Neb. Rev. Stat. § 24-222 (Reissue 2008); and b. Seven (7) certified copies of the signed original petition. (Attachments: # (1) Certification Request) Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3 Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed784</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-09-07</dateIssued>
+  <docketText>ORDER that by 9/21/201, the Plaintiffs in Case No. 8:10CV270 and Case No. 4:10CV3140 will pay the docketing fee of $125.00 to the Nebraska Supreme Court consistent with Nebraska Revised Statutes and the rules of the Nebraska Supreme Court. Upon paying the docketing fee to the Nebraska Supreme Court, the Plaintiffs will immediately file a notification in this Court that the docketing fee has been paid. Upon notice from either Plaintiff that the docketing fee has been paid in full to the Nebraska Supreme Court, the Clerk of this Court is directed to forward the following documents to the Nebraska Supreme Court: a. The original petition under the Court&apos;s official seal in accordance with Neb. Rev. Stat. § 24-222 (Reissue 2008); and b. Seven (7) certified copies of the signed original petition. (Attachments: # (1) Certification Request) Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3 Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-3/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>MEMORANDUM AND ORDER that plaintiff&apos;s (13) Motion for Temporary Restraining Order is denied, and the Court reserves ruling on the Preliminary Injunction within the same filing in case 4:10-cv-03140-LSC -FG3; The Plaintiffs Motion for Temporary Restraining Order in Case No. 8:10CV270 (Filing No. 13) is denied; Defendants will respond to the Plaintiffs Motions for Preliminary Injunctions (Filing No. 13 in Case No. 4:10cv3140, and Filing No. (7) in case 8:10-cv-00270-LSC -FG3); and The Plaintiffs may reply to the Defendants briefs and evidence on or before December 17, 2010. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-3</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-11-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that plaintiff&apos;s (13) Motion for Temporary Restraining Order is denied, and the Court reserves ruling on the Preliminary Injunction within the same filing in case 4:10-cv-03140-LSC -FG3; The Plaintiffs Motion for Temporary Restraining Order in Case No. 8:10CV270 (Filing No. 13) is denied; Defendants will respond to the Plaintiffs Motions for Preliminary Injunctions (Filing No. 13 in Case No. 4:10cv3140, and Filing No. (7) in case 8:10-cv-00270-LSC -FG3); and The Plaintiffs may reply to the Defendants briefs and evidence on or before December 17, 2010. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-4/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting (45) Motion to Extend in case 8:10cv270 and granting (43) Motion to Extend in case 4:10-cv-03140-LSC -FG3 ; Defendants will file on or before January 21, 2011 their brief and any evidence in opposition to the Plaintiffs (7) Motion for Preliminary Injunction in case 8:10-cv-00270-LSC -FG3 and (13) Motion for Preliminary Injunction in 4:10cv3140; Plaintiffs may file any reply briefs on or before February 18, 2011. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed785</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-4</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-11-24</dateIssued>
+  <docketText>ORDER granting (45) Motion to Extend in case 8:10cv270 and granting (43) Motion to Extend in case 4:10-cv-03140-LSC -FG3 ; Defendants will file on or before January 21, 2011 their brief and any evidence in opposition to the Plaintiffs (7) Motion for Preliminary Injunction in case 8:10-cv-00270-LSC -FG3 and (13) Motion for Preliminary Injunction in 4:10cv3140; Plaintiffs may file any reply briefs on or before February 18, 2011. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-5/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting 6 Motion for leave to proceed under fictitious names. The movants may proceed under fictitious names or anonymously. To the extent that the movants request the entry of a protective order governing discovery, the issue must be raised by separate motion. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-5</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>ORDER granting 6 Motion for leave to proceed under fictitious names. The movants may proceed under fictitious names or anonymously. To the extent that the movants request the entry of a protective order governing discovery, the issue must be raised by separate motion. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-6/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>STIPULATION AND ORDER terminating (7) Motion for Preliminary Injunction in case 8:10-cv-00270-LSC -FG3; terminating (13) Motion for Preliminary Injunction in case 4:10-cv-03140-LSC -FG3. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ecc89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-6</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-01-21</dateIssued>
+  <docketText>STIPULATION AND ORDER terminating (7) Motion for Preliminary Injunction in case 8:10-cv-00270-LSC -FG3; terminating (13) Motion for Preliminary Injunction in case 4:10-cv-03140-LSC -FG3. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Judge Laurie Smith Camp. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-7/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>TRIAL ORDER - Non-Jury Trial set for 3/15/2011 at 9:00 AM in Courtroom 2, Federal Building, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp. Final Pretrial Conference set for 2/17/2011 at 11:00 AM in Chambers before Magistrate Judge F.A. Gossett. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Magistrate Judge F.A. Gossett. (CLS, ) Modified on 1/25/2011 to correct trial time (CLS, ).</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-7</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-01-25</dateIssued>
+  <docketText>TRIAL ORDER - Non-Jury Trial set for 3/15/2011 at 9:00 AM in Courtroom 2, Federal Building, 111 South 18th Plaza, Omaha, NE before Judge Laurie Smith Camp. Final Pretrial Conference set for 2/17/2011 at 11:00 AM in Chambers before Magistrate Judge F.A. Gossett. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Magistrate Judge F.A. Gossett. (CLS, ) Modified on 1/25/2011 to correct trial time (CLS, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-8/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER - These consolidated cases are set for a telephonic Rule 16 planning conference to be held Thursday, 2/17/2011 at 11:00 a.m. (the time previously reserved for the final pretrial conference), for the purpose of scheduling the case to trial. Plaintiffs&apos; counsel, Alan E. Peterson, shall initiate the conference call to the undersigned magistrate judge at 402-661-7340. The 3/15/2011 trial date is vacated. A new trial date will be set during the planning conference. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed787</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-8</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>ORDER - These consolidated cases are set for a telephonic Rule 16 planning conference to be held Thursday, 2/17/2011 at 11:00 a.m. (the time previously reserved for the final pretrial conference), for the purpose of scheduling the case to trial. Plaintiffs&apos; counsel, Alan E. Peterson, shall initiate the conference call to the undersigned magistrate judge at 402-661-7340. The 3/15/2011 trial date is vacated. A new trial date will be set during the planning conference. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3. Ordered by Magistrate Judge F.A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-9/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting (104) Motion to Withdraw as Attorney in case 4:10-cv-03140-LSC-FG3. The Clerk shall terminate the appearance of Tanaz Moghadam in this matter. The Clerk shall terminate future notices to Tanaz Moghadam in this matter. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed782</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-9</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER granting (104) Motion to Withdraw as Attorney in case 4:10-cv-03140-LSC-FG3. The Clerk shall terminate the appearance of Tanaz Moghadam in this matter. The Clerk shall terminate future notices to Tanaz Moghadam in this matter. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-10/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>PROTECTIVE ORDER granting (110) Motion for Protective Order in case 8:10-cv-00270-LSC-FG3; granting (115) Motion for Protective Order in case 4:10-cv-03140-LSC-FG3. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-10</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-10-13</dateIssued>
+  <docketText>PROTECTIVE ORDER granting (110) Motion for Protective Order in case 8:10-cv-00270-LSC-FG3; granting (115) Motion for Protective Order in case 4:10-cv-03140-LSC-FG3. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-11/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>AMENDED ORDER SETTING FINAL SCHEDULE FOR PROGRESSION OF CASE, granting (116) Motion to Amend in case 8:10-cv-00270-LSC-FG3; granting (121) Motion to Extend in case 4:10-cv-03140-LSC-FG3. Deadlines extended as requested. Expert deposition deadline set for 12/9/2011. The 3/8/2012 final pretrial conference with Magistrate Judge Gossett, and the 4/10/2012 non-jury trial before Judge Laurie Smith Camp, remain unchanged. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Magistrate Judge F.A. Gossett. (ARL, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-11</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2011-10-31</dateIssued>
+  <docketText>AMENDED ORDER SETTING FINAL SCHEDULE FOR PROGRESSION OF CASE, granting (116) Motion to Amend in case 8:10-cv-00270-LSC-FG3; granting (121) Motion to Extend in case 4:10-cv-03140-LSC-FG3. Deadlines extended as requested. Expert deposition deadline set for 12/9/2011. The 3/8/2012 final pretrial conference with Magistrate Judge Gossett, and the 4/10/2012 non-jury trial before Judge Laurie Smith Camp, remain unchanged. Member Cases: 8:10-cv-00270-LSC -FG3, 4:10-cv-03140-LSC -FG3Ordered by Magistrate Judge F.A. Gossett. (ARL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-12/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting in part (120) Motion to Extend to File a Motion for Summary Judgment in case 8:10-cv-00270-LSC-FG3; granting in part (136) Motion to Extend Time to File a Motion for Summary Judgemtn in case 4:10-cv-03140-LSC-FG3. Any Motion for Summary Judgment the Defendants or Plaintiffs intend to submit shall be filed by or before January 3, 2012. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3Ordered by Chief Judge Laurie Smith Camp. (JAE)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-12</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-12-09</dateIssued>
+  <docketText>ORDER granting in part (120) Motion to Extend to File a Motion for Summary Judgment in case 8:10-cv-00270-LSC-FG3; granting in part (136) Motion to Extend Time to File a Motion for Summary Judgemtn in case 4:10-cv-03140-LSC-FG3. Any Motion for Summary Judgment the Defendants or Plaintiffs intend to submit shall be filed by or before January 3, 2012. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3Ordered by Chief Judge Laurie Smith Camp. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-13/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendants&apos; Motion in Limine to Preclude Testimony of Plaintiffs&apos; Expert Witness, Stephen W. Yale-Loehr, Esquire (Filing No. 131 in case 4:10-cv-03140 ) is granted in part as follows: Yale-Loehr may not testify about immigration law or regulations, or offer any opinion about the legality of the Fremont Ordinance at issue in this case. Defendants&apos; expert witness, Jan C. Ting, is similarly precluded, in limine, from testifying about immigration law or regulations, or offering any opinion about the legality of the Fremont Ordinance at issue in this case. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (AOA)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ecc86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-13</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendants&apos; Motion in Limine to Preclude Testimony of Plaintiffs&apos; Expert Witness, Stephen W. Yale-Loehr, Esquire (Filing No. 131 in case 4:10-cv-03140 ) is granted in part as follows: Yale-Loehr may not testify about immigration law or regulations, or offer any opinion about the legality of the Fremont Ordinance at issue in this case. Defendants&apos; expert witness, Jan C. Ting, is similarly precluded, in limine, from testifying about immigration law or regulations, or offering any opinion about the legality of the Fremont Ordinance at issue in this case. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-14/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting (170) Joint Motion to Amend Progression Order in case 8:10-cv-00270-LSC-FG3; granting (182) Joint Motion to Amend Progression Order in case 4:10-cv-03140-LSC-FG3. The responses to the motions for summary judgment will be due February 10, 2012. Any reply will be due February 17, 2012. Non-Jury Trial set for 5/15/2012 at 08:30 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. Pretrial Conference set for 4/30/2012 at 11:00 AM in Chambers before Magistrate Judge F.A. Gossett. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed786</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-14</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-01-23</dateIssued>
+  <docketText>ORDER granting (170) Joint Motion to Amend Progression Order in case 8:10-cv-00270-LSC-FG3; granting (182) Joint Motion to Amend Progression Order in case 4:10-cv-03140-LSC-FG3. The responses to the motions for summary judgment will be due February 10, 2012. Any reply will be due February 17, 2012. Non-Jury Trial set for 5/15/2012 at 08:30 AM in Courtroom 2, Roman L. Hruska Federal Courthouse, 111 South 18th Plaza, Omaha, NE before Chief Judge Laurie Smith Camp. Pretrial Conference set for 4/30/2012 at 11:00 AM in Chambers before Magistrate Judge F.A. Gossett. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-15/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>MEMORANDUM AND ORDER ON MOTIONS FOR SUMMARY JUDGMENT. IT IS ORDERED that:1. The Plaintiffs Motions for Summary Judgment (Filing No. 151 in Case No. 4:10cv3140, and Filing No. 161 in Case No. 8:10cv270) are granted in part, as follows:a. Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance, prohibiting the harboring of illegal aliens, providing for the revocation of occupancy licenses, and providing for certain penalties following the revocation of occupancy licenses, is declared void because those provisions are conflict-preempted by the Immigration and Nationality Act, 8 U.S.C. § 1101 et seq., in general, and § 1324, specifically, with respect to harboring, and violate the Fair Housing Act, 42 U.S.C. § 3604; b. All Defendants are permanently enjoined from taking any action to enforce Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance; the Motions are otherwise denied; 2. The Defendants Motions for Summary Judgment (Filing No. 157 in Case No. 4:10cv3140, and Filing No. 130 in Case No. 8:10cv270) are granted, except as provided in paragraph 1, above;3. All other pending motions are denied as moot; and 4. A separate Judgment will be entered. Ordered by Chief Judge Laurie Smith Camp. (JB )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ecc88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-15</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-02-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ON MOTIONS FOR SUMMARY JUDGMENT. IT IS ORDERED that:1. The Plaintiffs Motions for Summary Judgment (Filing No. 151 in Case No. 4:10cv3140, and Filing No. 161 in Case No. 8:10cv270) are granted in part, as follows:a. Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance, prohibiting the harboring of illegal aliens, providing for the revocation of occupancy licenses, and providing for certain penalties following the revocation of occupancy licenses, is declared void because those provisions are conflict-preempted by the Immigration and Nationality Act, 8 U.S.C. § 1101 et seq., in general, and § 1324, specifically, with respect to harboring, and violate the Fair Housing Act, 42 U.S.C. § 3604; b. All Defendants are permanently enjoined from taking any action to enforce Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance; the Motions are otherwise denied; 2. The Defendants Motions for Summary Judgment (Filing No. 157 in Case No. 4:10cv3140, and Filing No. 130 in Case No. 8:10cv270) are granted, except as provided in paragraph 1, above;3. All other pending motions are denied as moot; and 4. A separate Judgment will be entered. Ordered by Chief Judge Laurie Smith Camp. (JB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-16/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>DECLARATORY JUDGMENT AND PERMANENT INJUNCTION. For the reasons set out in the Memorandum and Order (Filing No. 231 in Case No. 4:10cv3140 and Filing No. 219 in Case No. 8:10cv270) entered this day, 1. Declaratory Judgment is entered in favor of all Plaintiffs in Case No. 8:10cv270, and all Plaintiffs except ACLU Nebraska Foundation and United Food and Commercial Workers Union Local 22 in Case No. 4:10cv3140, as follows: a. Section 1, Part 2, Part 3.L., and Part 4.D., of Fremont Municipal Ordinance No. 5165, prohibiting the harboring of illegal aliens, providing for the revocation of occupancy licenses, and providing for certain penalties following the revocation of occupancy licenses, is declared void because those provisions are conflict-preempted by the Immigration and Nationality Act, 8 U.S.C. § 1101 et seq., in general, and § 1324, specifically, with respect to harboring, and violate the Fair Housing Act, 42 U.S.C. § 3604;b. All Defendants are permanently enjoined from taking any action to enforce Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance; 2. All other claims of all Plaintiffs in Case No. 8:10cv270 and Case No. 4:10cv3140 are dismissed, with prejudice; and 3. Any motions for attorney fees and costs shall be filed pursuant to Fed. R. Civ. P. 54(d)(2) within fourteen days of the entry of this Judgment. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-16</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-02-20</dateIssued>
+  <docketText>DECLARATORY JUDGMENT AND PERMANENT INJUNCTION. For the reasons set out in the Memorandum and Order (Filing No. 231 in Case No. 4:10cv3140 and Filing No. 219 in Case No. 8:10cv270) entered this day, 1. Declaratory Judgment is entered in favor of all Plaintiffs in Case No. 8:10cv270, and all Plaintiffs except ACLU Nebraska Foundation and United Food and Commercial Workers Union Local 22 in Case No. 4:10cv3140, as follows: a. Section 1, Part 2, Part 3.L., and Part 4.D., of Fremont Municipal Ordinance No. 5165, prohibiting the harboring of illegal aliens, providing for the revocation of occupancy licenses, and providing for certain penalties following the revocation of occupancy licenses, is declared void because those provisions are conflict-preempted by the Immigration and Nationality Act, 8 U.S.C. § 1101 et seq., in general, and § 1324, specifically, with respect to harboring, and violate the Fair Housing Act, 42 U.S.C. § 3604;b. All Defendants are permanently enjoined from taking any action to enforce Section 1, Part 2, Part 3.L., and Part 4.D., of the Ordinance; 2. All other claims of all Plaintiffs in Case No. 8:10cv270 and Case No. 4:10cv3140 are dismissed, with prejudice; and 3. Any motions for attorney fees and costs shall be filed pursuant to Fed. R. Civ. P. 54(d)(2) within fourteen days of the entry of this Judgment. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-17/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER - Because Notices of Appeal have been filed by all parties to these actions that may substantially alter the parties&apos; respective claims to attorney fees; and because any delay in the processing of the parties&apos; appeals may substantially affect the rights of the parties; and because the time to appeal was not extended under Fed. R. Civ. P. 58; all pending motions are terminated, without prejudice. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (TEL)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-17</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER - Because Notices of Appeal have been filed by all parties to these actions that may substantially alter the parties&apos; respective claims to attorney fees; and because any delay in the processing of the parties&apos; appeals may substantially affect the rights of the parties; and because the time to appeal was not extended under Fed. R. Civ. P. 58; all pending motions are terminated, without prejudice. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Chief Judge Laurie Smith Camp. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-18/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>y Chief Judge Laurie Smith Camp. (TEL)ORDER - The Joint Motion to Stay Briefing and Judgment on Costs (Case No. 8:10CV270, Filing No. 247; Case No. 4:10CV3140, Filing No. 264) is granted; All further proceedings on the Bills of Costs that have been filed by the parties are stayed pending the conclusion of the appeal of this matter; and The Motion for Attorney Fees and Costs (Case No. 8:10CV270, Filing No. 248) is terminated, without prejudice. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered b</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ed6c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-18</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2012-04-02</dateIssued>
+  <docketText>y Chief Judge Laurie Smith Camp. (TEL)ORDER - The Joint Motion to Stay Briefing and Judgment on Costs (Case No. 8:10CV270, Filing No. 247; Case No. 4:10CV3140, Filing No. 264) is granted; All further proceedings on the Bills of Costs that have been filed by the parties are stayed pending the conclusion of the appeal of this matter; and The Motion for Attorney Fees and Costs (Case No. 8:10CV270, Filing No. 248) is terminated, without prejudice. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered b</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00270-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-19/mods.xml">
+ <titleInfo>
+  <title>Keller et al v. City of Fremont</title>
+  <subTitle>ORDER granting (255) Motion to Withdraw as Attorney in case 8:10-cv-00270-LSC-FG3; granting (268) Motion to Withdraw as Attorney in case 4:10-cv-03140-LSC-FG3 - The Clerk shall terminate the appearance of Kenneth Sugarman in this matter. The Clerk shall terminate future notices to Kenneth Sugarman in this matter. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00270-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1825ecc87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-19</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00270_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00270/USCOURTS-ned-8_10-cv-00270-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00270/pdf/USCOURTS-ned-8_10-cv-00270-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00270; Keller et al v. City of Fremont; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00270-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-04-26</dateIssued>
+  <docketText>ORDER granting (255) Motion to Withdraw as Attorney in case 8:10-cv-00270-LSC-FG3; granting (268) Motion to Withdraw as Attorney in case 4:10-cv-03140-LSC-FG3 - The Clerk shall terminate the appearance of Kenneth Sugarman in this matter. The Clerk shall terminate future notices to Kenneth Sugarman in this matter. Member Cases: 8:10-cv-00270-LSC-FG3, 4:10-cv-03140-LSC-FG3 Ordered by Magistrate Judge F.A. Gossett. (TEL)</docketText>
+</extension>
+</relatedItem>
+</mods>

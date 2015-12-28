@@ -1,0 +1,192 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1873d12e2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156</identifier>
+<identifier type="local">P0b002ee1873d12e2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_03-cr-20156</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_03-cr-20156</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:03-cr-20156</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Seneca" fullName="Seneca Williams" lastName="Williams" role="Defendant"></party>
+ <party firstName="Senca" fullName="Senca J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+ <party firstName="Seneca" fullName="Seneca J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Williams</title>
+ <partNumber>2:03-cr-20156</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:03-cr-20156;03-20156</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Seneca Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Seneca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Senca J. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Senca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Seneca J. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Seneca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_03-cr-20156</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:03-cr-20156</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Seneca" fullName="Seneca Williams" lastName="Williams" role="Defendant"></party>
+ <party firstName="Senca" fullName="Senca J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+ <party firstName="Seneca" fullName="Seneca J. Williams" lastName="Williams" middleName="J." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cr-20156-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Williams</title>
+  <subTitle>MEMORANDUM AND ORDER taking under advisement 23 Motion to Vacate (2255) and 25 Motion to Enforce as to Seneca J. Williams (1). Signed by Judge John W. Lungstrum on 11/09/05. (mg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156/pdf/USCOURTS-ksd-2_03-cr-20156-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875bfa8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-0</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cr-20156_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156/pdf/USCOURTS-ksd-2_03-cr-20156-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-20156; USA v. Williams; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cr-20156-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-11-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER taking under advisement 23 Motion to Vacate (2255) and 25 Motion to Enforce as to Seneca J. Williams (1). Signed by Judge John W. Lungstrum on 11/09/05. (mg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cr-20156-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Williams</title>
+  <subTitle>ORDER granting as unopposed Plaintiff&apos;s 25 Motion to Enforce the Plea Agreement as to Seneca J. Williams (1) and further, denying Defendant&apos;s 23 Motion to Vacate (2255) as to Seneca J. Williams (1). Signed by Judge John W. Lungstrum on 01/27/06. (mg)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156/pdf/USCOURTS-ksd-2_03-cr-20156-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875bfa8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-1</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cr-20156_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cr-20156/USCOURTS-ksd-2_03-cr-20156-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cr-20156/pdf/USCOURTS-ksd-2_03-cr-20156-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cr-20156; USA v. Williams; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cr-20156-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-27</dateIssued>
+  <docketText>ORDER granting as unopposed Plaintiff&apos;s 25 Motion to Enforce the Plea Agreement as to Seneca J. Williams (1) and further, denying Defendant&apos;s 23 Motion to Vacate (2255) as to Seneca J. Williams (1). Signed by Judge John W. Lungstrum on 01/27/06. (mg)</docketText>
+</extension>
+</relatedItem>
+</mods>

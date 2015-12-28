@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a01af8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_12-cv-01690</identifier>
+<identifier type="local">P0b002ee183a01af8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_12-cv-01690</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_12-cv-01690</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:12-cv-01690</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Clyde" fullName="Clyde G. Bennett" lastName="Bennett" middleName="G." role="Respondent"></party>
+ <party firstName="Carmencita" fullName="Carmencita Bruno" lastName="Bruno" role="Petitioner"></party>
+ <party firstName="Cia" fullName="Cia Bruno, Esq." lastName="Bruno, Esq." role="Petitioner"></party>
+ <party firstName="Christian" fullName="Christian H. Dribusch" lastName="Dribusch" middleName="H." role="Trustee"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+</extension>
+<titleInfo>
+ <title>Bruno v. Bennett</title>
+ <partNumber>1:12-cv-01690</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_12-cv-01690/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-01690;12-1690</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Clyde G. Bennett</displayForm>
+ <namePart type="family">Bennett</namePart>
+ <namePart type="given">Clyde</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Carmencita Bruno</displayForm>
+ <namePart type="family">Bruno</namePart>
+ <namePart type="given">Carmencita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Cia Bruno, Esq.</displayForm>
+ <namePart type="family">Bruno, Esq.</namePart>
+ <namePart type="given">Cia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Christian H. Dribusch</displayForm>
+ <namePart type="family">Dribusch</namePart>
+ <namePart type="given">Christian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_12-cv-01690</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:12-cv-01690</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Clyde" fullName="Clyde G. Bennett" lastName="Bennett" middleName="G." role="Respondent"></party>
+ <party firstName="Carmencita" fullName="Carmencita Bruno" lastName="Bruno" role="Petitioner"></party>
+ <party firstName="Cia" fullName="Cia Bruno, Esq." lastName="Bruno, Esq." role="Petitioner"></party>
+ <party firstName="Christian" fullName="Christian H. Dribusch" lastName="Dribusch" middleName="H." role="Trustee"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_12-cv-01690-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_12-cv-01690/USCOURTS-nynd-1_12-cv-01690-0/mods.xml">
+ <titleInfo>
+  <title>Bruno v. Bennett</title>
+  <subTitle>MEMORANDUM-DECISION&amp;ORDER that Plaintiff/Appellant&apos;s 1 Motion for Leave to Appeal is DENIED. Signed by Judge David N. Hurd on 1/3/2013. (see)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_12-cv-01690-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a06404</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_12-cv-01690/USCOURTS-nynd-1_12-cv-01690-0</identifier>
+ <identifier type="former granule identifier">nynd-1_12-cv-01690_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_12-cv-01690/USCOURTS-nynd-1_12-cv-01690-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_12-cv-01690/pdf/USCOURTS-nynd-1_12-cv-01690-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-01690; Bruno v. Bennett; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_12-cv-01690-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM-DECISION&amp;ORDER that Plaintiff/Appellant&apos;s 1 Motion for Leave to Appeal is DENIED. Signed by Judge David N. Hurd on 1/3/2013. (see)</docketText>
+</extension>
+</relatedItem>
+</mods>

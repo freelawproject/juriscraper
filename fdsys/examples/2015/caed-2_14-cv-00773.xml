@@ -1,0 +1,525 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c275e87">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-04-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-04-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773</identifier>
+<identifier type="local">P0b002ee18c275e87</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-04-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-04-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-00773</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00773</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00773</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Amy" fullName="Amy Alward" lastName="Alward" role="Defendant"></party>
+ <party firstName="Cara" fullName="Cara Beatty" lastName="Beatty" role="Defendant"></party>
+ <party firstName="Deanna" fullName="Deanna Bradsford" lastName="Bradsford" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Cox" lastName="Cox" role="Defendant"></party>
+ <party fullName="Diaz" lastName="Diaz" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Edwards" lastName="Edwards" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Adam" fullName="Adam Grace" lastName="Grace" role="Defendant"></party>
+ <party firstName="John" fullName="John Gray" lastName="Gray" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Haney" lastName="Haney" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Harper" lastName="Harper" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Heriford" lastName="Heriford" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Hubbard" lastName="Hubbard" role="Defendant"></party>
+ <party firstName="M." fullName="M. Hudson" lastName="Hudson" role="Defendant"></party>
+ <party firstName="Krista" fullName="Krista Hymas" lastName="Hymas" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Johnson" lastName="Johnson" role="Defendant"></party>
+ <party fullName="Kalustian" lastName="Kalustian" role="Defendant"></party>
+ <party firstName="William" fullName="William Lamb" lastName="Lamb" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="William" fullName="William Malloy" lastName="Malloy" role="Defendant"></party>
+ <party fullName="Marshal Service" lastName="Marshal Service" role="Defendant"></party>
+ <party firstName="Roseanna" fullName="Roseanna McCall" lastName="McCall" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia A. McColm" lastName="McColm" middleName="A." role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Murray" lastName="Murray" role="Defendant"></party>
+ <party fullName="Padrotti" lastName="Padrotti" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Roberson" lastName="Roberson" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rosenberg" lastName="Rosenberg" role="Defendant"></party>
+ <party fullName="Trinity County" lastName="Trinity County" role="Defendant"></party>
+ <party fullName="Trinity County Board of Supervisors" lastName="Trinity County Board of Supervisors" role="Defendant"></party>
+ <party firstName="Laurie" fullName="Laurie Willis" lastName="Willis" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) McColm v. Trinity County, et al.</title>
+ <partNumber>2:14-cv-00773</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00773;14-773</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Amy Alward</displayForm>
+ <namePart type="family">Alward</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cara Beatty</displayForm>
+ <namePart type="family">Beatty</namePart>
+ <namePart type="given">Cara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deanna Bradsford</displayForm>
+ <namePart type="family">Bradsford</namePart>
+ <namePart type="given">Deanna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lori Cook</displayForm>
+ <namePart type="family">Cook</namePart>
+ <namePart type="given">Lori</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Cox</displayForm>
+ <namePart type="family">Cox</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Diaz</displayForm>
+ <namePart type="family">Diaz</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Edwards</displayForm>
+ <namePart type="family">Edwards</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas Gardner</displayForm>
+ <namePart type="family">Gardner</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adam Grace</displayForm>
+ <namePart type="family">Grace</namePart>
+ <namePart type="given">Adam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Gray</displayForm>
+ <namePart type="family">Gray</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Haney</displayForm>
+ <namePart type="family">Haney</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Harper</displayForm>
+ <namePart type="family">Harper</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Heriford</displayForm>
+ <namePart type="family">Heriford</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Hubbard</displayForm>
+ <namePart type="family">Hubbard</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Hudson</displayForm>
+ <namePart type="family">Hudson</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Krista Hymas</displayForm>
+ <namePart type="family">Hymas</namePart>
+ <namePart type="given">Krista</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kalustian</displayForm>
+ <namePart type="family">Kalustian</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Lamb</displayForm>
+ <namePart type="family">Lamb</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Lee</displayForm>
+ <namePart type="family">Lee</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Malloy</displayForm>
+ <namePart type="family">Malloy</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marshal Service</displayForm>
+ <namePart type="family">Marshal Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roseanna McCall</displayForm>
+ <namePart type="family">McCall</namePart>
+ <namePart type="given">Roseanna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patricia A. McColm</displayForm>
+ <namePart type="family">McColm</namePart>
+ <namePart type="given">Patricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Padrotti</displayForm>
+ <namePart type="family">Padrotti</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darlene Roberson</displayForm>
+ <namePart type="family">Roberson</namePart>
+ <namePart type="given">Darlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Rosenberg</displayForm>
+ <namePart type="family">Rosenberg</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trinity County</displayForm>
+ <namePart type="family">Trinity County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trinity County Board of Supervisors</displayForm>
+ <namePart type="family">Trinity County Board of Supervisors</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Laurie Willis</displayForm>
+ <namePart type="family">Willis</namePart>
+ <namePart type="given">Laurie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-00773</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-00773</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Amy" fullName="Amy Alward" lastName="Alward" role="Defendant"></party>
+ <party firstName="Cara" fullName="Cara Beatty" lastName="Beatty" role="Defendant"></party>
+ <party firstName="Deanna" fullName="Deanna Bradsford" lastName="Bradsford" role="Defendant"></party>
+ <party firstName="Lori" fullName="Lori Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Cox" lastName="Cox" role="Defendant"></party>
+ <party fullName="Diaz" lastName="Diaz" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Edwards" lastName="Edwards" role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas Gardner" lastName="Gardner" role="Defendant"></party>
+ <party firstName="Adam" fullName="Adam Grace" lastName="Grace" role="Defendant"></party>
+ <party firstName="John" fullName="John Gray" lastName="Gray" role="Defendant"></party>
+ <party firstName="Bruce" fullName="Bruce Haney" lastName="Haney" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Harper" lastName="Harper" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Heriford" lastName="Heriford" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Hubbard" lastName="Hubbard" role="Defendant"></party>
+ <party firstName="M." fullName="M. Hudson" lastName="Hudson" role="Defendant"></party>
+ <party firstName="Krista" fullName="Krista Hymas" lastName="Hymas" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth Johnson" lastName="Johnson" role="Defendant"></party>
+ <party fullName="Kalustian" lastName="Kalustian" role="Defendant"></party>
+ <party firstName="William" fullName="William Lamb" lastName="Lamb" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="William" fullName="William Malloy" lastName="Malloy" role="Defendant"></party>
+ <party fullName="Marshal Service" lastName="Marshal Service" role="Defendant"></party>
+ <party firstName="Roseanna" fullName="Roseanna McCall" lastName="McCall" role="Defendant"></party>
+ <party firstName="Patricia" fullName="Patricia A. McColm" lastName="McColm" middleName="A." role="Plaintiff"></party>
+ <party firstName="Dennis" fullName="Dennis Murray" lastName="Murray" role="Defendant"></party>
+ <party fullName="Padrotti" lastName="Padrotti" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Roberson" lastName="Roberson" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rosenberg" lastName="Rosenberg" role="Defendant"></party>
+ <party fullName="Trinity County" lastName="Trinity County" role="Defendant"></party>
+ <party fullName="Trinity County Board of Supervisors" lastName="Trinity County Board of Supervisors" role="Defendant"></party>
+ <party firstName="Laurie" fullName="Laurie Willis" lastName="Willis" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00773-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-0/mods.xml">
+ <titleInfo>
+  <title>(PC) McColm v. Trinity County, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 4/7/14 ORDERING that Plaintiffs application to proceed in forma pauperis (ECF No. 2) is dismissed without prejudice; The Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within thirty days from the date of this order, a completed application to proceed in forma pauperis.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28dda0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00773_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00773; (PC) McColm v. Trinity County, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00773-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-04-07</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 4/7/14 ORDERING that Plaintiffs application to proceed in forma pauperis (ECF No. 2) is dismissed without prejudice; The Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within thirty days from the date of this order, a completed application to proceed in forma pauperis.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00773-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-1/mods.xml">
+ <titleInfo>
+  <title>(PC) McColm v. Trinity County, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/29/14 ORDERING that Plaintiffs request for leave to proceed in forma pauperis is granted. Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint is DISMISSED with 30 days leave to amend. (Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28ddab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00773_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00773; (PC) McColm v. Trinity County, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00773-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-05-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Carolyn K. Delaney on 5/29/14 ORDERING that Plaintiffs request for leave to proceed in forma pauperis is granted. Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. Plaintiff&apos;s complaint is DISMISSED with 30 days leave to amend. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00773-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-2/mods.xml">
+ <titleInfo>
+  <title>(PC) McColm v. Trinity County, et al.</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Carolyn K. Delaney on 5/29/14 ORDERING the Director of the CDC to collect and forward payment from the trust account of Patricia McColm and forward payment to the court until the balance is paid in full. Clerk of the Court is directed to serve a copy of this order and a copy of plaintiff&apos;s signed in forma pauperis affidavit to the Director of the CDC; and the Clerk of the Court is further directed to serve a copy of this order on the Financial Department of the court. (cc CDC, Financial). (Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28dda3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00773_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00773; (PC) McColm v. Trinity County, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00773-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-05-29</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Carolyn K. Delaney on 5/29/14 ORDERING the Director of the CDC to collect and forward payment from the trust account of Patricia McColm and forward payment to the court until the balance is paid in full. Clerk of the Court is directed to serve a copy of this order and a copy of plaintiff&apos;s signed in forma pauperis affidavit to the Director of the CDC; and the Clerk of the Court is further directed to serve a copy of this order on the Financial Department of the court. (cc CDC, Financial). (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00773-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-3/mods.xml">
+ <titleInfo>
+  <title>(PC) McColm v. Trinity County, et al.</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 1/6/2015 DENYING plaintiff&apos;s 20 motion for extension of time; and RECOMMENDING that this action be dismissed. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28dda6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00773_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00773; (PC) McColm v. Trinity County, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00773-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 1/6/2015 DENYING plaintiff&apos;s 20 motion for extension of time; and RECOMMENDING that this action be dismissed. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-00773-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-4/mods.xml">
+ <titleInfo>
+  <title>(PC) McColm v. Trinity County, et al.</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 4/28/15 ORDERING that Plaintiff&apos;s Motion for Reconsideration 25 is DENIED. (Mena-Sanchez, L)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c28dda9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-4</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-00773_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-00773/USCOURTS-caed-2_14-cv-00773-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-00773/pdf/USCOURTS-caed-2_14-cv-00773-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00773; (PC) McColm v. Trinity County, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-00773-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-04-28</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 4/28/15 ORDERING that Plaintiff&apos;s Motion for Reconsideration 25 is DENIED. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

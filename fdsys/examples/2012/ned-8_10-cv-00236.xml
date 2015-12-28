@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179cef1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236</identifier>
+<identifier type="local">P0b002ee18179cef1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00236</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00236</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00236</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Terron" fullName="Terron Brown" lastName="Brown" role="Petitioner"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Brown v. State of Nebraska</title>
+ <partNumber>8:10-cv-00236</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00236;10-236</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Terron Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Terron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Attorney General</displayForm>
+ <namePart type="family">Nebraska Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00236</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00236</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Terron" fullName="Terron Brown" lastName="Brown" role="Petitioner"></party>
+ <party fullName="Nebraska Attorney General" lastName="Nebraska Attorney General" role="Interested Party"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Respondent"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00236-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-0/mods.xml">
+ <titleInfo>
+  <title>Brown v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER - The petitioners application to proceed in forma pauperis (filing no. 2) is denied; Terron Brown is granted until August 20, 2010, to pay the $5.00 filing fee. Terron Brown is warned that if the fee is not paid as required, the court may dismiss this case without further notice; The clerk of the court is directed to set a pro se case management deadline in this case with the following text: August 20, 2010: deadline for payment of $5.00 filing fee; and no further review of this case will take place until the filing fee is paid. Pro Se Case Management Deadline set for 8/20/2010: deadline for payment of $5.00 filing fee. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00236-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181813282</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00236_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/pdf/USCOURTS-ned-8_10-cv-00236-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00236; Brown v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00236-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-07-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The petitioners application to proceed in forma pauperis (filing no. 2) is denied; Terron Brown is granted until August 20, 2010, to pay the $5.00 filing fee. Terron Brown is warned that if the fee is not paid as required, the court may dismiss this case without further notice; The clerk of the court is directed to set a pro se case management deadline in this case with the following text: August 20, 2010: deadline for payment of $5.00 filing fee; and no further review of this case will take place until the filing fee is paid. Pro Se Case Management Deadline set for 8/20/2010: deadline for payment of $5.00 filing fee. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00236-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-1/mods.xml">
+ <titleInfo>
+  <title>Brown v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER - Upon initial review of the Petition (filing no. 1), the court preliminarily determines that the petitioners claims, as set forth in this memorandum and order, are potentially cognizable in federal court. The clerk of the court is directed to mail copies of this memorandum and order and the petition to respondents and the Attorney General for the State of Nebraska by regular first-class mail. By September 16, 2010, the respondent shall file a motion for summary judgment or state court records in support of an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: September 16, 2010: deadline for the respondent to file state court records in support of answer or motion for summary judgment. If the respondent elects to file a motion for summary judgment, the procedures set forth within the order shall be followed. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: October 18, 2010: check for the respondent to file answer and separate brief. The petitioners Motion to Appoint Counsel (filing no. 3) is denied without prejudice to reassertion. ***Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 9/16/2010 deadline for the respondent to file state court records in support of answer or motion for summary judgment). Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and as directed)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00236-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181813283</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00236_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/pdf/USCOURTS-ned-8_10-cv-00236-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00236; Brown v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00236-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-08-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Upon initial review of the Petition (filing no. 1), the court preliminarily determines that the petitioners claims, as set forth in this memorandum and order, are potentially cognizable in federal court. The clerk of the court is directed to mail copies of this memorandum and order and the petition to respondents and the Attorney General for the State of Nebraska by regular first-class mail. By September 16, 2010, the respondent shall file a motion for summary judgment or state court records in support of an answer. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: September 16, 2010: deadline for the respondent to file state court records in support of answer or motion for summary judgment. If the respondent elects to file a motion for summary judgment, the procedures set forth within the order shall be followed. The clerk of the court is directed to set a pro se case management deadline in this case using the following text: October 18, 2010: check for the respondent to file answer and separate brief. The petitioners Motion to Appoint Counsel (filing no. 3) is denied without prejudice to reassertion. ***Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 9/16/2010 deadline for the respondent to file state court records in support of answer or motion for summary judgment). Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00236-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-2/mods.xml">
+ <titleInfo>
+  <title>Brown v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER - the Petitioner Terron Brown&apos;s Petition Under 28 U.S.C. § 2254 For a Writ of Habeas Corpus 1 is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order on Petition under 28 U.S.C. § 2254 for a Writ of HabeasCorpus. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(JAE)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00236-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181813284</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00236_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/pdf/USCOURTS-ned-8_10-cv-00236-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00236; Brown v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00236-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-08-31</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - the Petitioner Terron Brown&apos;s Petition Under 28 U.S.C. § 2254 For a Writ of Habeas Corpus 1 is dismissed with prejudice. A separate judgment will be entered in accordance with this Memorandum and Order on Petition under 28 U.S.C. § 2254 for a Writ of HabeasCorpus. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00236-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-3/mods.xml">
+ <titleInfo>
+  <title>Brown v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER granting Brown&apos;s 34 Application and Affidavit in Support of Application to Proceed In Forma Pauperis. Brown is relieved from paying the appellate filing fee at this time. Brown shall have until October 27, 2011, to file a motion for certificate of appealability and brief in support. In the event that Brown fails to file a motion and brief as set forth in this Memorandum and Order on Application and Affidavit in Support of Application to Proceed in Forma Pauperis, the court will deny the issuance of a certificate of appealability without further notice. The clerk of the court is directed to set a pro se case management deadline in this case with the following text: October 27, 2011: check for COA and separate brief and deny if none filed. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00236-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181813285</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-3</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00236_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/pdf/USCOURTS-ned-8_10-cv-00236-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00236; Brown v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00236-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-09-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting Brown&apos;s 34 Application and Affidavit in Support of Application to Proceed In Forma Pauperis. Brown is relieved from paying the appellate filing fee at this time. Brown shall have until October 27, 2011, to file a motion for certificate of appealability and brief in support. In the event that Brown fails to file a motion and brief as set forth in this Memorandum and Order on Application and Affidavit in Support of Application to Proceed in Forma Pauperis, the court will deny the issuance of a certificate of appealability without further notice. The clerk of the court is directed to set a pro se case management deadline in this case with the following text: October 27, 2011: check for COA and separate brief and deny if none filed. Ordered by Senior Judge Warren K. Urbom. (Copy mailed/e-mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00236-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-4/mods.xml">
+ <titleInfo>
+  <title>Brown v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER ON MOTION FOR CERTIFICATION OF APPEALABILITY - Brown&apos;s Motion for Certification of Appealability (filing no. 39) is denied without prejudice to reassertion before the Eighth Circuit. All other pending motions are denied. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and the 8th Circuit)(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00236-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181813286</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-4</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00236_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00236/USCOURTS-ned-8_10-cv-00236-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00236/pdf/USCOURTS-ned-8_10-cv-00236-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00236; Brown v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00236-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ON MOTION FOR CERTIFICATION OF APPEALABILITY - Brown&apos;s Motion for Certification of Appealability (filing no. 39) is denied without prejudice to reassertion before the Eighth Circuit. All other pending motions are denied. Ordered by Senior Judge Warren K. Urbom. (Copy mailed to pro se party and the 8th Circuit)(JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,207 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817ac567">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00565</identifier>
+<identifier type="local">P0b002ee1817ac567</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00565</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00565</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00565</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Tort/Motor Vehicle (P.I.)</cause>
+ <party firstName="Gary" fullName="Gary Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Qadir" fullName="Qadir Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Tria" fullName="Tria Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Marcin" fullName="Marcin Rapacz" lastName="Rapacz" role="Defendant"></party>
+ <party fullName="Road Runner Express" lastName="Road Runner Express" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Eshelbrenner et al v. Rapacz et al</title>
+ <partNumber>8:05-cv-00565</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00565/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00565;05-565</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gary Eshelbrenner</displayForm>
+ <namePart type="family">Eshelbrenner</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Qadir Eshelbrenner</displayForm>
+ <namePart type="family">Eshelbrenner</namePart>
+ <namePart type="given">Qadir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tria Eshelbrenner</displayForm>
+ <namePart type="family">Eshelbrenner</namePart>
+ <namePart type="given">Tria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marcin Rapacz</displayForm>
+ <namePart type="family">Rapacz</namePart>
+ <namePart type="given">Marcin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Road Runner Express</displayForm>
+ <namePart type="family">Road Runner Express</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00565</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00565</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>350</natureSuitCode>
+ <natureSuit>Motor Vehicle Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Tort/Motor Vehicle (P.I.)</cause>
+ <party firstName="Gary" fullName="Gary Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Qadir" fullName="Qadir Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Tria" fullName="Tria Eshelbrenner" lastName="Eshelbrenner" role="Plaintiff"></party>
+ <party firstName="Marcin" fullName="Marcin Rapacz" lastName="Rapacz" role="Defendant"></party>
+ <party fullName="Road Runner Express" lastName="Road Runner Express" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00565-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-0/mods.xml">
+ <titleInfo>
+  <title>Eshelbrenner et al v. Rapacz et al</title>
+  <subTitle>ORDER granting 52 Motion for Leave to file a Third Amended Complaint and finding as moot 27 Motion for Leave to File a Third Amended Complaint; Amended Complaint due by 2/8/2006; the defendants shall have to on or before February 22, 2006 to file an answer or otherwise respond. Signed by Magistrate Judge Thomas D. Thalken on 2/1/2006. (PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00565-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b7fe7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00565_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00565/pdf/USCOURTS-ned-8_05-cv-00565-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00565; Eshelbrenner et al v. Rapacz et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00565-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-02-01</dateIssued>
+  <docketText>ORDER granting 52 Motion for Leave to file a Third Amended Complaint and finding as moot 27 Motion for Leave to File a Third Amended Complaint; Amended Complaint due by 2/8/2006; the defendants shall have to on or before February 22, 2006 to file an answer or otherwise respond. Signed by Magistrate Judge Thomas D. Thalken on 2/1/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00565-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-1/mods.xml">
+ <titleInfo>
+  <title>Eshelbrenner et al v. Rapacz et al</title>
+  <subTitle>ORDER OF DISMISSAL granting 72 Stipulation. Theplaintiffs&apos; cause of action against the defendants is hereby dismissed in its entirety, withprejudice, and with the parties to be responsible for their own costs and attorney fees. Ordered by Judge Joseph F. Bataillon.(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00565-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b7fe8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00565_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00565/USCOURTS-ned-8_05-cv-00565-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00565/pdf/USCOURTS-ned-8_05-cv-00565-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00565; Eshelbrenner et al v. Rapacz et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00565-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-17</dateIssued>
+  <docketText>ORDER OF DISMISSAL granting 72 Stipulation. Theplaintiffs&apos; cause of action against the defendants is hereby dismissed in its entirety, withprejudice, and with the parties to be responsible for their own costs and attorney fees. Ordered by Judge Joseph F. Bataillon.(ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

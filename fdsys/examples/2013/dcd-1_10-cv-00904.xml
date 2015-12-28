@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a026a5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Columbia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcd-1_10-cv-00904</identifier>
+<identifier type="local">P0b002ee183a026a5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-dcd-1_10-cv-00904</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-dcd-1_10-cv-00904</accessId>
+ <courtType>District</courtType>
+ <courtCode>dcd</courtCode>
+ <courtCircuit>DC</courtCircuit>
+ <courtState>District of Columbia</courtState>
+ <courtSortOrder>2100</courtSortOrder>
+ <caseNumber>1:10-cv-00904</caseNumber>
+ <caseOffice>Washington, DC</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="DISTRICT OF COLUMBIA" lastName="DISTRICT OF COLUMBIA" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT JEFFERSON" lastName="JEFFERSON" role="Defendant"></party>
+ <party firstName="LENA" fullName="LENA T. KONAH" lastName="KONAH" middleName="T." role="Plaintiff"></party>
+ <party fullName="UNITY HEALTH CARE, INC." lastName="UNITY HEALTH CARE, INC." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>KONAH v. DISTRICT OF COLUMBIA et al</title>
+ <partNumber>1:10-cv-00904</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcd-1_10-cv-00904/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-00904;10-904</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Columbia</namePart>
+ <namePart>DC Circuit</namePart>
+ <namePart>Washington, DC</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>DISTRICT OF COLUMBIA</displayForm>
+ <namePart type="family">DISTRICT OF COLUMBIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT JEFFERSON</displayForm>
+ <namePart type="family">JEFFERSON</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LENA T. KONAH</displayForm>
+ <namePart type="family">KONAH</namePart>
+ <namePart type="given">LENA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>UNITY HEALTH CARE, INC.</displayForm>
+ <namePart type="family">UNITY HEALTH CARE, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-dcd-1_10-cv-00904</accessId>
+ <courtType>District</courtType>
+ <courtCode>dcd</courtCode>
+ <courtCircuit>DC</courtCircuit>
+ <courtState>District of Columbia</courtState>
+ <courtSortOrder>2100</courtSortOrder>
+ <caseNumber>1:10-cv-00904</caseNumber>
+ <caseOffice>Washington, DC</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="DISTRICT OF COLUMBIA" lastName="DISTRICT OF COLUMBIA" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT JEFFERSON" lastName="JEFFERSON" role="Defendant"></party>
+ <party firstName="LENA" fullName="LENA T. KONAH" lastName="KONAH" middleName="T." role="Plaintiff"></party>
+ <party fullName="UNITY HEALTH CARE, INC." lastName="UNITY HEALTH CARE, INC." role="Defendant"></party>
+ <state>District of Columbia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-dcd-1_10-cv-00904-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-0/mods.xml">
+ <titleInfo>
+  <title>KONAH v. DISTRICT OF COLUMBIA et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Ricardo M. Urbina on 9/14/2011. (lcrmu2)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-dcd-1_10-cv-00904-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a051fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-0</identifier>
+ <identifier type="former granule identifier">dcd-1_10-cv-00904_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcd-1_10-cv-00904/pdf/USCOURTS-dcd-1_10-cv-00904-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-00904; KONAH v. DISTRICT OF COLUMBIA et al; </searchTitle>
+  <courtName>United States District Court District of Columbia</courtName>
+  <state>District of Columbia</state>
+  <accessId>USCOURTS-dcd-1_10-cv-00904-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-09-14</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Ricardo M. Urbina on 9/14/2011. (lcrmu2)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-dcd-1_10-cv-00904-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-1/mods.xml">
+ <titleInfo>
+  <title>KONAH v. DISTRICT OF COLUMBIA et al</title>
+  <subTitle>MEMORANDUM AND OPINION. Signed by Judge Rosemary M. Collyer on 1/3/2013.(lcrmc2)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-dcd-1_10-cv-00904-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a051fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-1</identifier>
+ <identifier type="former granule identifier">dcd-1_10-cv-00904_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-dcd-1_10-cv-00904/USCOURTS-dcd-1_10-cv-00904-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-dcd-1_10-cv-00904/pdf/USCOURTS-dcd-1_10-cv-00904-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-00904; KONAH v. DISTRICT OF COLUMBIA et al; </searchTitle>
+  <courtName>United States District Court District of Columbia</courtName>
+  <state>District of Columbia</state>
+  <accessId>USCOURTS-dcd-1_10-cv-00904-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. Signed by Judge Rosemary M. Collyer on 1/3/2013.(lcrmc2)</docketText>
+</extension>
+</relatedItem>
+</mods>

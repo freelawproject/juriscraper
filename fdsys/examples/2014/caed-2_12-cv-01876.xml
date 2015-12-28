@@ -1,0 +1,426 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1895f327d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-04-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876</identifier>
+<identifier type="local">P0b002ee1895f327d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01876</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01876</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01876</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>42:4321 Review of Agency Action-Environment</cause>
+ <party fullName="Central Sierra Environmental Resource Center" lastName="Central Sierra Environmental Resource Center" role="Neutral"></party>
+ <party fullName="Forest Issues Group" lastName="Forest Issues Group" role="Intervenor Defendant"></party>
+ <party fullName="Friends of Greenhorn" lastName="Friends of Greenhorn" role="Plaintiff"></party>
+ <party fullName="Friends of Tahoe Forest Access" lastName="Friends of Tahoe Forest Access" role="Plaintiff"></party>
+ <party fullName="Grass Valley 4-Wheel Drive Club" lastName="Grass Valley 4-Wheel Drive Club" role="Plaintiff"></party>
+ <party fullName="High Sierra Motorcycle Club" lastName="High Sierra Motorcycle Club" role="Plaintiff"></party>
+ <party fullName="Kyra" lastName="Kyra" role="Plaintiff"></party>
+ <party firstName="Randy" fullName="Randy Moore" lastName="Moore" role="Defendant"></party>
+ <party fullName="Mother Lode Chapter of the Sierra Club" lastName="Mother Lode Chapter of the Sierra Club" role="Intervenor Defendant"></party>
+ <party fullName="Nevada County Woods Riders" lastName="Nevada County Woods Riders" role="Plaintiff"></party>
+ <party fullName="Public Employees for Environmental Responsibility" lastName="Public Employees for Environmental Responsibility" role="Intervenor Defendant"></party>
+ <party firstName="Tom" fullName="Tom Quinn" lastName="Quinn" role="Defendant"></party>
+ <party fullName="Sierra Foothills Audubon Society" lastName="Sierra Foothills Audubon Society" role="Intervenor Defendant"></party>
+ <party fullName="The Wilderness Society" lastName="The Wilderness Society" role="Intervenor Defendant"></party>
+ <party firstName="Tom" fullName="Tom Tidwell" lastName="Tidwell" role="Defendant"></party>
+ <party fullName="United States Department of Agriculture" lastName="United States Department of Agriculture" role="Defendant"></party>
+ <party fullName="United States Forest Service" lastName="United States Forest Service" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Vilsack" lastName="Vilsack" role="Defendant"></party>
+ <party fullName="Webilt Four Wheel Drive Club" lastName="Webilt Four Wheel Drive Club" role="Plaintiff"></party>
+ <party firstName="David" fullName="David C. Wood" lastName="Wood" middleName="C." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+ <partNumber>2:12-cv-01876</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01876;12-1876</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Central Sierra Environmental Resource Center</displayForm>
+ <namePart type="family">Central Sierra Environmental Resource Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Neutral</description>
+</name>
+<name type="personal">
+ <displayForm>Forest Issues Group</displayForm>
+ <namePart type="family">Forest Issues Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Friends of Greenhorn</displayForm>
+ <namePart type="family">Friends of Greenhorn</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Friends of Tahoe Forest Access</displayForm>
+ <namePart type="family">Friends of Tahoe Forest Access</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Grass Valley 4-Wheel Drive Club</displayForm>
+ <namePart type="family">Grass Valley 4-Wheel Drive Club</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>High Sierra Motorcycle Club</displayForm>
+ <namePart type="family">High Sierra Motorcycle Club</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kyra</displayForm>
+ <namePart type="family">Kyra</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mother Lode Chapter of the Sierra Club</displayForm>
+ <namePart type="family">Mother Lode Chapter of the Sierra Club</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nevada County Woods Riders</displayForm>
+ <namePart type="family">Nevada County Woods Riders</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Public Employees for Environmental Responsibility</displayForm>
+ <namePart type="family">Public Employees for Environmental Responsibility</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sierra Foothills Audubon Society</displayForm>
+ <namePart type="family">Sierra Foothills Audubon Society</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>The Wilderness Society</displayForm>
+ <namePart type="family">The Wilderness Society</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Tidwell</displayForm>
+ <namePart type="family">Tidwell</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Department of Agriculture</displayForm>
+ <namePart type="family">United States Department of Agriculture</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States Forest Service</displayForm>
+ <namePart type="family">United States Forest Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Vilsack</displayForm>
+ <namePart type="family">Vilsack</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Webilt Four Wheel Drive Club</displayForm>
+ <namePart type="family">Webilt Four Wheel Drive Club</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David C. Wood</displayForm>
+ <namePart type="family">Wood</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01876</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01876</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>42:4321 Review of Agency Action-Environment</cause>
+ <party fullName="Central Sierra Environmental Resource Center" lastName="Central Sierra Environmental Resource Center" role="Neutral"></party>
+ <party fullName="Forest Issues Group" lastName="Forest Issues Group" role="Intervenor Defendant"></party>
+ <party fullName="Friends of Greenhorn" lastName="Friends of Greenhorn" role="Plaintiff"></party>
+ <party fullName="Friends of Tahoe Forest Access" lastName="Friends of Tahoe Forest Access" role="Plaintiff"></party>
+ <party fullName="Grass Valley 4-Wheel Drive Club" lastName="Grass Valley 4-Wheel Drive Club" role="Plaintiff"></party>
+ <party fullName="High Sierra Motorcycle Club" lastName="High Sierra Motorcycle Club" role="Plaintiff"></party>
+ <party fullName="Kyra" lastName="Kyra" role="Plaintiff"></party>
+ <party firstName="Randy" fullName="Randy Moore" lastName="Moore" role="Defendant"></party>
+ <party fullName="Mother Lode Chapter of the Sierra Club" lastName="Mother Lode Chapter of the Sierra Club" role="Intervenor Defendant"></party>
+ <party fullName="Nevada County Woods Riders" lastName="Nevada County Woods Riders" role="Plaintiff"></party>
+ <party fullName="Public Employees for Environmental Responsibility" lastName="Public Employees for Environmental Responsibility" role="Intervenor Defendant"></party>
+ <party firstName="Tom" fullName="Tom Quinn" lastName="Quinn" role="Defendant"></party>
+ <party fullName="Sierra Foothills Audubon Society" lastName="Sierra Foothills Audubon Society" role="Intervenor Defendant"></party>
+ <party fullName="The Wilderness Society" lastName="The Wilderness Society" role="Intervenor Defendant"></party>
+ <party firstName="Tom" fullName="Tom Tidwell" lastName="Tidwell" role="Defendant"></party>
+ <party fullName="United States Department of Agriculture" lastName="United States Department of Agriculture" role="Defendant"></party>
+ <party fullName="United States Forest Service" lastName="United States Forest Service" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Vilsack" lastName="Vilsack" role="Defendant"></party>
+ <party fullName="Webilt Four Wheel Drive Club" lastName="Webilt Four Wheel Drive Club" role="Plaintiff"></party>
+ <party firstName="David" fullName="David C. Wood" lastName="Wood" middleName="C." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01876-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-0/mods.xml">
+ <titleInfo>
+  <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+  <subTitle>ORDER re 13 Notice of Related Case signed by Judge Kimberly J. Mueller on 11/1/12. Although both cases concern challenges to the Forest Service&apos;s management of off-road vehicles and involve similar questions of law, the challenged actions affect different geographical areas and involve review of entirely separate administrative records. Thus, assigning both cases to the same judge would not result in a substantial savings of judicial effort. The court DECLINES to reassign Friends of Tahoe Forest Access under Local Rule 123(c).(Meuleman, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189601dd4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01876_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01876; Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01876-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-02</dateIssued>
+  <docketText>ORDER re 13 Notice of Related Case signed by Judge Kimberly J. Mueller on 11/1/12. Although both cases concern challenges to the Forest Service&apos;s management of off-road vehicles and involve similar questions of law, the challenged actions affect different geographical areas and involve review of entirely separate administrative records. Thus, assigning both cases to the same judge would not result in a substantial savings of judicial effort. The court DECLINES to reassign Friends of Tahoe Forest Access under Local Rule 123(c).(Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01876-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-1/mods.xml">
+ <titleInfo>
+  <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+  <subTitle>CASE MANAGEMENT ORDER signed by Judge John A. Mendez on 4/5/13. (Meuleman, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189601dd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01876_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01876; Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01876-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-04-08</dateIssued>
+  <docketText>CASE MANAGEMENT ORDER signed by Judge John A. Mendez on 4/5/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01876-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-2/mods.xml">
+ <titleInfo>
+  <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+  <subTitle>STIPULATION AND ORDER signed by Judge John A. Mendez on 10/8/2013 ORDERING 31, 32 Motions Hearing CONTINUED to 11/14/2013 at 01:30 PM in Courtroom 6 (JAM) before Judge John A. Mendez. (Reader, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189601dd3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01876_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01876; Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01876-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-10-08</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Judge John A. Mendez on 10/8/2013 ORDERING 31, 32 Motions Hearing CONTINUED to 11/14/2013 at 01:30 PM in Courtroom 6 (JAM) before Judge John A. Mendez. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01876-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-3/mods.xml">
+ <titleInfo>
+  <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 1/6/14 DENYING 31 Plaintiffs&apos; Motion for Summary Judgment and GRANTING 32 Defendants&apos; Cross-Motion for Summary Judgment for the reasons stated in the transcript of the proceedings held on 48. Accordingly, the Clerk is DIRECTED to enter judgment in favor of defendants and against plaintiffs. CASE CLOSED. (Meuleman, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189601dd2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01876_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01876; Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01876-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 1/6/14 DENYING 31 Plaintiffs&apos; Motion for Summary Judgment and GRANTING 32 Defendants&apos; Cross-Motion for Summary Judgment for the reasons stated in the transcript of the proceedings held on 48. Accordingly, the Clerk is DIRECTED to enter judgment in favor of defendants and against plaintiffs. CASE CLOSED. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01876-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-4/mods.xml">
+ <titleInfo>
+  <title>Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 4/16/2014 OVERRULING 53 Objections to 52 Bill of Costs; GRANTING the defendants&apos; costs; AWARDING costs in the amount of $14,875.23. (Michel, G)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189601dd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01876_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01876/USCOURTS-caed-2_12-cv-01876-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01876/pdf/USCOURTS-caed-2_12-cv-01876-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01876; Friends of Tahoe Forest Access et al v. United States Department of Agriculture et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01876-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-04-17</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 4/16/2014 OVERRULING 53 Objections to 52 Bill of Costs; GRANTING the defendants&apos; costs; AWARDING costs in the amount of $14,875.23. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+</mods>

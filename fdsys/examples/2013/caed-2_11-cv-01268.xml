@@ -1,0 +1,488 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d332b0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268</identifier>
+<identifier type="local">P0b002ee183d332b0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01268</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01268</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01268</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Bryon" fullName="Bryon Ames" lastName="Ames" role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Avilla" lastName="Avilla" role="Defendant"></party>
+ <party firstName="David" fullName="David Baker" lastName="Baker" role="Defendant"></party>
+ <party fullName="Barret" lastName="Barret" role="Defendant"></party>
+ <party firstName="Yvette" fullName="Yvette Borden" lastName="Borden" role="Defendant"></party>
+ <party fullName="Brener" lastName="Brener" role="Defendant"></party>
+ <party firstName="Liere" fullName="Liere Chrasta" lastName="Chrasta" role="Defendant"></party>
+ <party firstName="Gregg" fullName="Gregg Cohen" lastName="Cohen" role="Defendant"></party>
+ <party fullName="Davidson" lastName="Davidson" role="Defendant"></party>
+ <party fullName="Dodd" lastName="Dodd" role="Defendant"></party>
+ <party firstName="Williams" fullName="Williams Goodwin" lastName="Goodwin" role="Defendant"></party>
+ <party fullName="Greer" lastName="Greer" role="Defendant"></party>
+ <party firstName="W." fullName="W. Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Maher" lastName="Maher" role="Defendant"></party>
+ <party firstName="Ray" fullName="Ray Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Olsen" lastName="Olsen" role="Defendant"></party>
+ <party firstName="Clay" fullName="Clay Parker" lastName="Parker" role="Defendant"></party>
+ <party firstName="Heidi" fullName="Heidi Patchen" lastName="Patchen" role="Defendant"></party>
+ <party firstName="Daryl" fullName="Daryl Plemons" lastName="Plemons" role="Defendant"></party>
+ <party firstName="Irene" fullName="Irene Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rogers" lastName="Rogers" role="Defendant"></party>
+ <party firstName="George" fullName="George Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Scheuler" lastName="Scheuler" role="Defendant"></party>
+ <party firstName="Arminda" fullName="Arminda Searcy" lastName="Searcy" role="Defendant"></party>
+ <party firstName="Gina" fullName="Gina Setter" lastName="Setter" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Skillman" lastName="Skillman" role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Warner" lastName="Warner" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Willard" lastName="Willard" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Ames v. Rogers et al</title>
+ <partNumber>2:11-cv-01268</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01268;11-1268</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bryon Ames</displayForm>
+ <namePart type="family">Ames</namePart>
+ <namePart type="given">Bryon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gregg Avilla</displayForm>
+ <namePart type="family">Avilla</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Baker</displayForm>
+ <namePart type="family">Baker</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barret</displayForm>
+ <namePart type="family">Barret</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Yvette Borden</displayForm>
+ <namePart type="family">Borden</namePart>
+ <namePart type="given">Yvette</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brener</displayForm>
+ <namePart type="family">Brener</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Liere Chrasta</displayForm>
+ <namePart type="family">Chrasta</namePart>
+ <namePart type="given">Liere</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregg Cohen</displayForm>
+ <namePart type="family">Cohen</namePart>
+ <namePart type="given">Gregg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Davidson</displayForm>
+ <namePart type="family">Davidson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dodd</displayForm>
+ <namePart type="family">Dodd</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Williams Goodwin</displayForm>
+ <namePart type="family">Goodwin</namePart>
+ <namePart type="given">Williams</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Greer</displayForm>
+ <namePart type="family">Greer</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Hawkins</displayForm>
+ <namePart type="family">Hawkins</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sandra Lee</displayForm>
+ <namePart type="family">Lee</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Maher</displayForm>
+ <namePart type="family">Maher</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ray Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Ray</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Olsen</displayForm>
+ <namePart type="family">Olsen</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Clay Parker</displayForm>
+ <namePart type="family">Parker</namePart>
+ <namePart type="given">Clay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heidi Patchen</displayForm>
+ <namePart type="family">Patchen</namePart>
+ <namePart type="given">Heidi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daryl Plemons</displayForm>
+ <namePart type="family">Plemons</namePart>
+ <namePart type="given">Daryl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Irene Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Irene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Rogers</displayForm>
+ <namePart type="family">Rogers</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Russell</displayForm>
+ <namePart type="family">Russell</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Scheuler</displayForm>
+ <namePart type="family">Scheuler</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arminda Searcy</displayForm>
+ <namePart type="family">Searcy</namePart>
+ <namePart type="given">Arminda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gina Setter</displayForm>
+ <namePart type="family">Setter</namePart>
+ <namePart type="given">Gina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Skillman</displayForm>
+ <namePart type="family">Skillman</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Warner</displayForm>
+ <namePart type="family">Warner</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Willard</displayForm>
+ <namePart type="family">Willard</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01268</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01268</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Bryon" fullName="Bryon Ames" lastName="Ames" role="Plaintiff"></party>
+ <party firstName="Gregg" fullName="Gregg Avilla" lastName="Avilla" role="Defendant"></party>
+ <party firstName="David" fullName="David Baker" lastName="Baker" role="Defendant"></party>
+ <party fullName="Barret" lastName="Barret" role="Defendant"></party>
+ <party firstName="Yvette" fullName="Yvette Borden" lastName="Borden" role="Defendant"></party>
+ <party fullName="Brener" lastName="Brener" role="Defendant"></party>
+ <party firstName="Liere" fullName="Liere Chrasta" lastName="Chrasta" role="Defendant"></party>
+ <party firstName="Gregg" fullName="Gregg Cohen" lastName="Cohen" role="Defendant"></party>
+ <party fullName="Davidson" lastName="Davidson" role="Defendant"></party>
+ <party fullName="Dodd" lastName="Dodd" role="Defendant"></party>
+ <party firstName="Williams" fullName="Williams Goodwin" lastName="Goodwin" role="Defendant"></party>
+ <party fullName="Greer" lastName="Greer" role="Defendant"></party>
+ <party firstName="W." fullName="W. Hawkins" lastName="Hawkins" role="Defendant"></party>
+ <party firstName="Sandra" fullName="Sandra Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Maher" lastName="Maher" role="Defendant"></party>
+ <party firstName="Ray" fullName="Ray Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Olsen" lastName="Olsen" role="Defendant"></party>
+ <party firstName="Clay" fullName="Clay Parker" lastName="Parker" role="Defendant"></party>
+ <party firstName="Heidi" fullName="Heidi Patchen" lastName="Patchen" role="Defendant"></party>
+ <party firstName="Daryl" fullName="Daryl Plemons" lastName="Plemons" role="Defendant"></party>
+ <party firstName="Irene" fullName="Irene Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rogers" lastName="Rogers" role="Defendant"></party>
+ <party firstName="George" fullName="George Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Scheuler" lastName="Scheuler" role="Defendant"></party>
+ <party firstName="Arminda" fullName="Arminda Searcy" lastName="Searcy" role="Defendant"></party>
+ <party firstName="Gina" fullName="Gina Setter" lastName="Setter" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Skillman" lastName="Skillman" role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Warner" lastName="Warner" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Willard" lastName="Willard" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Williams" lastName="Williams" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01268-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Ames v. Rogers et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge John F. Moulds on 11/7/11 ORDERING that 4 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. It is RECOMMENDED that this action be dismissed without prejudice. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01268-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d330d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01268_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268/pdf/USCOURTS-caed-2_11-cv-01268-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01268; (PC) Ames v. Rogers et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01268-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-08</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge John F. Moulds on 11/7/11 ORDERING that 4 Motion to Proceed IFP is GRANTED; Plaintiff is obligated to pay the statutory filing fee of $350.00 for this action. It is RECOMMENDED that this action be dismissed without prejudice. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01268-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Ames v. Rogers et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge John F. Moulds on 11/7/11 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Bryon Ames to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01268-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d330d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01268_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268/pdf/USCOURTS-caed-2_11-cv-01268-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01268; (PC) Ames v. Rogers et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01268-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-08</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge John F. Moulds on 11/7/11 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Bryon Ames to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01268-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Ames v. Rogers et al</title>
+  <subTitle>ORDER signed by Magistrate Judge John F. Moulds on 01/03/13 ordering that within 15 days from the date of this order plaintiff shall show cause in writing, if any he has, why this action should not be dismissed for the reasons set forth in this order. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01268-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d330d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01268_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268/pdf/USCOURTS-caed-2_11-cv-01268-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01268; (PC) Ames v. Rogers et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01268-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge John F. Moulds on 01/03/13 ordering that within 15 days from the date of this order plaintiff shall show cause in writing, if any he has, why this action should not be dismissed for the reasons set forth in this order. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01268-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Ames v. Rogers et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge John F. Moulds on 2/20/2013 RECOMMENDING that this action be dismissed for lack of jurisdiction. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01268-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d330d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01268_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01268/USCOURTS-caed-2_11-cv-01268-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01268/pdf/USCOURTS-caed-2_11-cv-01268-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01268; (PC) Ames v. Rogers et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01268-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-02-20</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge John F. Moulds on 2/20/2013 RECOMMENDING that this action be dismissed for lack of jurisdiction. Referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

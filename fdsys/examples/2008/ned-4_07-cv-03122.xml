@@ -1,0 +1,459 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179f3e9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122</identifier>
+<identifier type="local">P0b002ee18179f3e9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03122</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03122</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Rodney" fullName="Rodney A. Ballard" lastName="Ballard" middleName="A." role="Plaintiff"></party>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party firstName="David" fullName="David Heineman" lastName="Heineman" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Meyer" lastName="Meyer" role="Defendant"></party>
+ <party fullName="Trooper No. 371" lastName="Trooper No. 371" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ballard v. Heineman et al</title>
+ <partNumber>4:07-cv-03122</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03122;07-3122</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Rodney A. Ballard</displayForm>
+ <namePart type="family">Ballard</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jon Bruning</displayForm>
+ <namePart type="family">Bruning</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Heineman</displayForm>
+ <namePart type="family">Heineman</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Meyer</displayForm>
+ <namePart type="family">Meyer</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trooper No. 371</displayForm>
+ <namePart type="family">Trooper No. 371</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03122</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Rodney" fullName="Rodney A. Ballard" lastName="Ballard" middleName="A." role="Plaintiff"></party>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party firstName="David" fullName="David Heineman" lastName="Heineman" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Meyer" lastName="Meyer" role="Defendant"></party>
+ <party fullName="Trooper No. 371" lastName="Trooper No. 371" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-0/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER - The Plaintiff&apos;s motion for an enlargement of time to respond to Defendant Jeffrey Meyer&apos;s motion to dismiss 12 is granted. The Plaintiff shall file his response to Defendant Jeffrey Meyer&apos;s motion to dismiss on or before July 2, 2007. Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836beb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-05-30</dateIssued>
+  <docketText>ORDER - The Plaintiff&apos;s motion for an enlargement of time to respond to Defendant Jeffrey Meyer&apos;s motion to dismiss 12 is granted. The Plaintiff shall file his response to Defendant Jeffrey Meyer&apos;s motion to dismiss on or before July 2, 2007. Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-1/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER granting 15 Motion to Stay, pending the district court&apos;s rulings on Motions 9 and 17. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-07-02</dateIssued>
+  <docketText>ORDER granting 15 Motion to Stay, pending the district court&apos;s rulings on Motions 9 and 17. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-2/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The Motion of Defendant Lincoln County Attorney Jeffrey Meyer to Dismiss 9 Is denied as moot. The Motion of Defendants Attorney General Jon Bruning, Governor David Heineman, and Trooper No. 371, to Dismiss 17 is denied as moot. The Motion of Defendants Attorney General Jon Bruning, Governor David Heineman, and Trooper No. 371, to Strike the Plaintiff&apos;s AmendedComplaint, or in the Alternative, for an Enlargement of Time to Respond to the Amended Complaint 25, is denied in part and granted in part as follows: a. The Motion to Strike the Amended Complaint is denied; b. The Defendants shall respond to the Amended Complaint within 20 days of the filing of this Memorandum and Order. The Plaintiff Rodney A. Ballards Objection to Defendants&apos; Motion to Strike 26 is construed as a brief in opposition to the Motion to Strike,and his Motion for Costs and Fees (also within Filing No. 26) is denied. All Defendants will respond to the Amended Complaint within 20 days of the filing of this Memorandum and Order. Ordered by Judge Laurie Smith Camp.(JAE, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-07-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The Motion of Defendant Lincoln County Attorney Jeffrey Meyer to Dismiss 9 Is denied as moot. The Motion of Defendants Attorney General Jon Bruning, Governor David Heineman, and Trooper No. 371, to Dismiss 17 is denied as moot. The Motion of Defendants Attorney General Jon Bruning, Governor David Heineman, and Trooper No. 371, to Strike the Plaintiff&apos;s AmendedComplaint, or in the Alternative, for an Enlargement of Time to Respond to the Amended Complaint 25, is denied in part and granted in part as follows: a. The Motion to Strike the Amended Complaint is denied; b. The Defendants shall respond to the Amended Complaint within 20 days of the filing of this Memorandum and Order. The Plaintiff Rodney A. Ballards Objection to Defendants&apos; Motion to Strike 26 is construed as a brief in opposition to the Motion to Strike,and his Motion for Costs and Fees (also within Filing No. 26) is denied. All Defendants will respond to the Amended Complaint within 20 days of the filing of this Memorandum and Order. Ordered by Judge Laurie Smith Camp.(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-3/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER DISMISSING DEFENDANT JEFFREY MEYER WITHOUT PREJUDICE- The Plaintiffs motion to dismiss all claims in this action against theDefendant Jeffrey Meyer (Filing No. 33) is granted; The Amended Complaint and all claims are dismissed without prejudice as to Defendant Jeffrey Meyer only; Unless otherwise agreed by and between them, the Plaintiff and Defendant Jeffrey Meyer shall pay their own costs and attorney fees; and The remaining defendants shall respond to the Amended Complaint on or before Thursday, July 26, 2007.Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-07-19</dateIssued>
+  <docketText>ORDER DISMISSING DEFENDANT JEFFREY MEYER WITHOUT PREJUDICE- The Plaintiffs motion to dismiss all claims in this action against theDefendant Jeffrey Meyer (Filing No. 33) is granted; The Amended Complaint and all claims are dismissed without prejudice as to Defendant Jeffrey Meyer only; Unless otherwise agreed by and between them, the Plaintiff and Defendant Jeffrey Meyer shall pay their own costs and attorney fees; and The remaining defendants shall respond to the Amended Complaint on or before Thursday, July 26, 2007.Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-4/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER granting 40 Motion to Stay Discovery. A Rule 26(f) reporting deadline will be entered, if necessary, by further order after the Motion to Dismiss 42is decided. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-4</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-07-23</dateIssued>
+  <docketText>ORDER granting 40 Motion to Stay Discovery. A Rule 26(f) reporting deadline will be entered, if necessary, by further order after the Motion to Dismiss 42is decided. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-5/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 42 Motion to Dismiss Plaintiff&apos;s Amended Complaint. All claims in the Amended Complaint against Defendants Jon Bruning, David Heineman and Trooper No. 371 in their official capacities are dismissed. The Plaintiff&apos;s First and Second Causes of Action are dismissed as to Defendants Jon Bruning and David Heineman. The Plaintiff&apos;s Third Cause of Action is dismissed as to all Defendants. The Plaintiff&apos;s Fourth Cause of Action is dismissed as to Defendant Trooper No. 371. The Clerk will amend the caption to remove the reference to Lincoln County Attorney Jeffrey Meyer, individually and in his official capacity, in accordance with the Court&apos;s Order of 7/19/07 37, and to remove the reference &quot;and in his official capacity&quot; with respect to Defendants Jon Bruning, David Heineman, and Trooper No. 371. Defendant Trooper No. 371 will respond to the First and Second Causes of Action, and Defendants Jon Bruning and David Heineman will respond to the Fourth Cause of Action, on or before 9/14/07. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836af0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-5</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-08-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 42 Motion to Dismiss Plaintiff&apos;s Amended Complaint. All claims in the Amended Complaint against Defendants Jon Bruning, David Heineman and Trooper No. 371 in their official capacities are dismissed. The Plaintiff&apos;s First and Second Causes of Action are dismissed as to Defendants Jon Bruning and David Heineman. The Plaintiff&apos;s Third Cause of Action is dismissed as to all Defendants. The Plaintiff&apos;s Fourth Cause of Action is dismissed as to Defendant Trooper No. 371. The Clerk will amend the caption to remove the reference to Lincoln County Attorney Jeffrey Meyer, individually and in his official capacity, in accordance with the Court&apos;s Order of 7/19/07 37, and to remove the reference &quot;and in his official capacity&quot; with respect to Defendants Jon Bruning, David Heineman, and Trooper No. 371. Defendant Trooper No. 371 will respond to the First and Second Causes of Action, and Defendants Jon Bruning and David Heineman will respond to the Fourth Cause of Action, on or before 9/14/07. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-6/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>SCHEDULING ORDER. Counsel for the remaining parties shall confer pursuant to Fed. R. Civ. P. 26(f) and file the report of their planning conference no later than October 1, 2007. Ordered by Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836aef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-6</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2007-08-27</dateIssued>
+  <docketText>SCHEDULING ORDER. Counsel for the remaining parties shall confer pursuant to Fed. R. Civ. P. 26(f) and file the report of their planning conference no later than October 1, 2007. Ordered by Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-7/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER granting 56 Motion to Stay Discovery. All discovery, including the requirement to meet and confer pursuant to Fed. R. Civ. P. 26(f) and initial disclosures pursuant to Fed. R. Civ. P. 26(a)(1), is stayed until further order. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-7</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2007-10-01</dateIssued>
+  <docketText>ORDER granting 56 Motion to Stay Discovery. All discovery, including the requirement to meet and confer pursuant to Fed. R. Civ. P. 26(f) and initial disclosures pursuant to Fed. R. Civ. P. 26(a)(1), is stayed until further order. Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-8/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER - The Plaintiff&apos;s objection to the stay and motion for an extension of time to conduct discovery 61 is denied. Plaintiff shall respond to the motions for summary judgment filed by Defendants Bruning and Heineman on or before Monday, October 15, 2007. Ordered by Judge Laurie Smith Camp. (JAE, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-8</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2007-10-05</dateIssued>
+  <docketText>ORDER - The Plaintiff&apos;s objection to the stay and motion for an extension of time to conduct discovery 61 is denied. Plaintiff shall respond to the motions for summary judgment filed by Defendants Bruning and Heineman on or before Monday, October 15, 2007. Ordered by Judge Laurie Smith Camp. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-9/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The Plaintiff Rodney A. Ballard&apos;s Motion for Summary Judgment Against Defendant Trooper No. 371 69 is denied. The Defendant Attorney General Jon Bruning&apos;s Motion for Summary Judgment 53 is granted. The Defendant Governor David Heineman&apos;s Motion for Summary Judgment 54 is granted. The Defendant Trooper No. 371 a/k/a Dean Riedel&apos;s Motion for Summary Judgment 62 is granted. The Plaintiff&apos;s Amended Complaint is dismissed, with prejudice. A separate judgment will be entered. Ordered by Judge Laurie Smith Camp. (JAE, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836bea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-9</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2007-11-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The Plaintiff Rodney A. Ballard&apos;s Motion for Summary Judgment Against Defendant Trooper No. 371 69 is denied. The Defendant Attorney General Jon Bruning&apos;s Motion for Summary Judgment 53 is granted. The Defendant Governor David Heineman&apos;s Motion for Summary Judgment 54 is granted. The Defendant Trooper No. 371 a/k/a Dean Riedel&apos;s Motion for Summary Judgment 62 is granted. The Plaintiff&apos;s Amended Complaint is dismissed, with prejudice. A separate judgment will be entered. Ordered by Judge Laurie Smith Camp. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03122-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-10/mods.xml">
+ <titleInfo>
+  <title>Ballard v. Heineman et al</title>
+  <subTitle>ORDER that the Plaintiff Rodney A. Ballard&apos;s Motion to Proceed on Appeal in forma Pauperis 79 is granted; The Plaintiff, Rodney A. Ballard, may proceed on appeal without prepaying or giving security for fees and costs. Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03122-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181836be8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-10</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03122_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03122/USCOURTS-ned-4_07-cv-03122-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03122/pdf/USCOURTS-ned-4_07-cv-03122-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03122; Ballard v. Heineman et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03122-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-01-03</dateIssued>
+  <docketText>ORDER that the Plaintiff Rodney A. Ballard&apos;s Motion to Proceed on Appeal in forma Pauperis 79 is granted; The Plaintiff, Rodney A. Ballard, may proceed on appeal without prepaying or giving security for fees and costs. Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

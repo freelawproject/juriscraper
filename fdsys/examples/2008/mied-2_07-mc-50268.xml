@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195ea61">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-mc-50268</identifier>
+<identifier type="local">P0b002ee18195ea61</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-mc-50268</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-mc-50268</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-mc-50268</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Joseph" fullName="Joseph M. Claxton" lastName="Claxton" middleName="M." role="Petitioner"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Claxton v. Social Security Administration</title>
+ <partNumber>2:07-mc-50268</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-mc-50268/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-mc-50268;07-50268</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Joseph M. Claxton</displayForm>
+ <namePart type="family">Claxton</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-mc-50268</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-mc-50268</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party firstName="Joseph" fullName="Joseph M. Claxton" lastName="Claxton" middleName="M." role="Petitioner"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Respondent"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-mc-50268-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-0/mods.xml">
+ <titleInfo>
+  <title>Claxton v. Social Security Administration</title>
+  <subTitle>REPORT AND RECOMMENDATION Signed by Honorable R. Steven Whalen. (GWil, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-mc-50268-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7c490</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-mc-50268_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-mc-50268/pdf/USCOURTS-mied-2_07-mc-50268-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-mc-50268; Claxton v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-mc-50268-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-17</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION Signed by Honorable R. Steven Whalen. (GWil, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-mc-50268-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-1/mods.xml">
+ <titleInfo>
+  <title>Claxton v. Social Security Administration</title>
+  <subTitle>ORDER Adopting 10 Report and Recommendation Denying 3 Motion to Quash filed by Joseph M. Claxton, Denying 1 Motion to Quash filed by Joseph M. Claxton, Granting 8 Motion for Summary Enforcement Relief filed by Social Security Administration, and Denying 2 Motion to Quash filed by Joseph M. Claxton Signed by Honorable Robert H Cleland. (LHac)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-mc-50268-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7c3fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-mc-50268_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-mc-50268/USCOURTS-mied-2_07-mc-50268-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-mc-50268/pdf/USCOURTS-mied-2_07-mc-50268-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-mc-50268; Claxton v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-mc-50268-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-15</dateIssued>
+  <docketText>ORDER Adopting 10 Report and Recommendation Denying 3 Motion to Quash filed by Joseph M. Claxton, Denying 1 Motion to Quash filed by Joseph M. Claxton, Granting 8 Motion for Summary Enforcement Relief filed by Social Security Administration, and Denying 2 Motion to Quash filed by Joseph M. Claxton Signed by Honorable Robert H Cleland. (LHac)</docketText>
+</extension>
+</relatedItem>
+</mods>

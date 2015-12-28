@@ -1,0 +1,243 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18170632e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126</identifier>
+<identifier type="local">P0b002ee18170632e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_08-cv-01126</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_08-cv-01126</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:08-cv-01126</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Jose" fullName="Jose Alvarado" lastName="Alvarado" role="Plaintiff"></party>
+ <party fullName="New York State Department of Correctional Services" lastName="New York State Department of Correctional Services" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ramineni" lastName="Ramineni" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Alvarado v. Ramineni et al</title>
+ <partNumber>9:08-cv-01126</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:08-cv-01126;08-1126</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose Alvarado</displayForm>
+ <namePart type="family">Alvarado</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New York State Department of Correctional Services</displayForm>
+ <namePart type="family">New York State Department of Correctional Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Ramineni</displayForm>
+ <namePart type="family">Ramineni</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_08-cv-01126</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:08-cv-01126</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Jose" fullName="Jose Alvarado" lastName="Alvarado" role="Plaintiff"></party>
+ <party fullName="New York State Department of Correctional Services" lastName="New York State Department of Correctional Services" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ramineni" lastName="Ramineni" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_08-cv-01126-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-0/mods.xml">
+ <titleInfo>
+  <title>Alvarado v. Ramineni et al</title>
+  <subTitle>REPORT-RECOMMENDATION: RECOMMENDED that Defendants&apos; motion to dismiss for failure to state a claim (Dkt. No. [10-2]) be GRANTED in part and DENIED in part. It is recommended that Plaintiff&apos;s ADA and Rehabilitation Act claims against DOCS be dismissed without prejudice to Plaintiff amending his claim regarding the failure to transfer him to a flat facility and that Defendants Ramineni and DOCS be directed to answer Plaintiff&apos;s Eighth Amendment claim. Objections to R&amp;R due by 3/29/2010 Case Review Deadline 4/5/2010. Signed by Magistrate Judge George H. Lowe on 3/15/10. (report-recommendation served on plaintiff by regular mail)(mnc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_08-cv-01126-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707bc0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-0</identifier>
+ <identifier type="former granule identifier">nynd-9_08-cv-01126_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126/pdf/USCOURTS-nynd-9_08-cv-01126-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-cv-01126; Alvarado v. Ramineni et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_08-cv-01126-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-03-15</dateIssued>
+  <docketText>REPORT-RECOMMENDATION: RECOMMENDED that Defendants&apos; motion to dismiss for failure to state a claim (Dkt. No. [10-2]) be GRANTED in part and DENIED in part. It is recommended that Plaintiff&apos;s ADA and Rehabilitation Act claims against DOCS be dismissed without prejudice to Plaintiff amending his claim regarding the failure to transfer him to a flat facility and that Defendants Ramineni and DOCS be directed to answer Plaintiff&apos;s Eighth Amendment claim. Objections to R&amp;R due by 3/29/2010 Case Review Deadline 4/5/2010. Signed by Magistrate Judge George H. Lowe on 3/15/10. (report-recommendation served on plaintiff by regular mail)(mnc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_08-cv-01126-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-1/mods.xml">
+ <titleInfo>
+  <title>Alvarado v. Ramineni et al</title>
+  <subTitle>DECISION AND ORDER adopting Magistrate Judge Lowe&apos;s 17 Report and Recommendations in its entirety; granting in part Defts&apos; 10 Motion to Dismiss; Plaintiff&apos;s claim against DOCS is dismissed as to the ADA and Rehabilitation Act without prejudice to Pltf to amend his claim. Signed by Senior Judge Thomas J. McAvoy on 7/22/2010. (amt) [Pltf served via reg. mail]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_08-cv-01126-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707b3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-1</identifier>
+ <identifier type="former granule identifier">nynd-9_08-cv-01126_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126/pdf/USCOURTS-nynd-9_08-cv-01126-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-cv-01126; Alvarado v. Ramineni et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_08-cv-01126-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-07-22</dateIssued>
+  <docketText>DECISION AND ORDER adopting Magistrate Judge Lowe&apos;s 17 Report and Recommendations in its entirety; granting in part Defts&apos; 10 Motion to Dismiss; Plaintiff&apos;s claim against DOCS is dismissed as to the ADA and Rehabilitation Act without prejudice to Pltf to amend his claim. Signed by Senior Judge Thomas J. McAvoy on 7/22/2010. (amt) [Pltf served via reg. mail]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_08-cv-01126-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-2/mods.xml">
+ <titleInfo>
+  <title>Alvarado v. Ramineni et al</title>
+  <subTitle>REPORT - RECOMMENDATION AND ORDER: RECOMMENDED that Defendants&apos; motion for summary judgment (Dkt. No. 31) be GRANTED; and it is further ORDERED that the Clerk provide Plaintiff with a copy of Chavis v. Goord, No. 07- 4787-pr, 2009 U.S. App. LEXIS 13681, 2009 WL 1803454 (2d Cir. June 25, 2009); Murray v. Ramineni, No. 08-CV-809, 2011 U.S. Dist. LEXIS 35734, 2011 WL 1315777 (N.D.N.Y. Mar. 3, 2011); and Nelson v. Rodas, No. 01-CV-7887, 2002 U.S. Dist. LEXIS 17359, 2002 WL 31075804 (S.D.N.Y. Sept. 17, 2002). Objections to R&amp;R due by 12/20/2011. Case Review Deadline 12/27/2011. Signed by Magistrate Judge George H. Lowe on 12/6/2011. (Attachments: # (1) Nelson Caselaw, # (2) Chavis Caselaw, # (3) Murray Caselaw) (ptm) (copy served on plaintiff with attachements by regular mail)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_08-cv-01126-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707b3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-2</identifier>
+ <identifier type="former granule identifier">nynd-9_08-cv-01126_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126/pdf/USCOURTS-nynd-9_08-cv-01126-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-cv-01126; Alvarado v. Ramineni et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_08-cv-01126-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-06</dateIssued>
+  <docketText>REPORT - RECOMMENDATION AND ORDER: RECOMMENDED that Defendants&apos; motion for summary judgment (Dkt. No. 31) be GRANTED; and it is further ORDERED that the Clerk provide Plaintiff with a copy of Chavis v. Goord, No. 07- 4787-pr, 2009 U.S. App. LEXIS 13681, 2009 WL 1803454 (2d Cir. June 25, 2009); Murray v. Ramineni, No. 08-CV-809, 2011 U.S. Dist. LEXIS 35734, 2011 WL 1315777 (N.D.N.Y. Mar. 3, 2011); and Nelson v. Rodas, No. 01-CV-7887, 2002 U.S. Dist. LEXIS 17359, 2002 WL 31075804 (S.D.N.Y. Sept. 17, 2002). Objections to R&amp;R due by 12/20/2011. Case Review Deadline 12/27/2011. Signed by Magistrate Judge George H. Lowe on 12/6/2011. (Attachments: # (1) Nelson Caselaw, # (2) Chavis Caselaw, # (3) Murray Caselaw) (ptm) (copy served on plaintiff with attachements by regular mail)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_08-cv-01126-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-3/mods.xml">
+ <titleInfo>
+  <title>Alvarado v. Ramineni et al</title>
+  <subTitle>DECISION AND ORDER adopting Magistrate Judge Lowe&apos;s 37 Report and Recommendations; granting Defendant&apos;s 31 Motion for Summary Judgment and dismissing the Complaint. Signed by Senior Judge Thomas J. McAvoy on 1/3/2012. (amt) [Pltf served via reg. and cert. mail]</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_08-cv-01126-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707b3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-3</identifier>
+ <identifier type="former granule identifier">nynd-9_08-cv-01126_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_08-cv-01126/USCOURTS-nynd-9_08-cv-01126-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_08-cv-01126/pdf/USCOURTS-nynd-9_08-cv-01126-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-cv-01126; Alvarado v. Ramineni et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_08-cv-01126-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>DECISION AND ORDER adopting Magistrate Judge Lowe&apos;s 37 Report and Recommendations; granting Defendant&apos;s 31 Motion for Summary Judgment and dismissing the Complaint. Signed by Senior Judge Thomas J. McAvoy on 1/3/2012. (amt) [Pltf served via reg. and cert. mail]</docketText>
+</extension>
+</relatedItem>
+</mods>

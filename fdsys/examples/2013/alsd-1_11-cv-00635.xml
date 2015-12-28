@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18683590d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00635</identifier>
+<identifier type="local">P0b002ee18683590d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_11-cv-00635</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cv-00635</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cv-00635</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000rt Job Discrimination/Retaliation</cause>
+ <party fullName="Board of Water &amp; Sewer Commission" lastName="Board of Water &amp; Sewer Commission" role="Defendant"></party>
+ <party firstName="Winfred" fullName="Winfred July" lastName="July" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>July v. Board of Water &amp; Sewer Commission</title>
+ <partNumber>1:11-cv-00635</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00635/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00635;11-635</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Board of Water &amp; Sewer Commission</displayForm>
+ <namePart type="family">Board of Water &amp; Sewer Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Winfred July</displayForm>
+ <namePart type="family">July</namePart>
+ <namePart type="given">Winfred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cv-00635</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cv-00635</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000rt Job Discrimination/Retaliation</cause>
+ <party fullName="Board of Water &amp; Sewer Commission" lastName="Board of Water &amp; Sewer Commission" role="Defendant"></party>
+ <party firstName="Winfred" fullName="Winfred July" lastName="July" role="Plaintiff"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00635-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-0/mods.xml">
+ <titleInfo>
+  <title>July v. Board of Water &amp; Sewer Commission</title>
+  <subTitle>ORDER granting 20 Motion for Summary Judgment; finding as moot 26 Motion to Strike. There being no genuine issues of material fact as to any claim or cause of action asserted herein, this action is dismissed with prejudice. Signed by Chief Judge William H. Steele on 11/29/2012. (tgw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00635-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18689a65a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-0</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00635_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00635/pdf/USCOURTS-alsd-1_11-cv-00635-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00635; July v. Board of Water &amp; Sewer Commission; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00635-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>ORDER granting 20 Motion for Summary Judgment; finding as moot 26 Motion to Strike. There being no genuine issues of material fact as to any claim or cause of action asserted herein, this action is dismissed with prejudice. Signed by Chief Judge William H. Steele on 11/29/2012. (tgw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cv-00635-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-1/mods.xml">
+ <titleInfo>
+  <title>July v. Board of Water &amp; Sewer Commission</title>
+  <subTitle>ORDER denying 32 Motion for Reconsideration or Appeal of District Judge Order. Signed by Chief Judge William H. Steele on 1/4/2013. Copy mailed to Plaintiff at the address set out in the motion. (tgw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_11-cv-00635-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18689a65b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-1</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cv-00635_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cv-00635/USCOURTS-alsd-1_11-cv-00635-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cv-00635/pdf/USCOURTS-alsd-1_11-cv-00635-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00635; July v. Board of Water &amp; Sewer Commission; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cv-00635-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER denying 32 Motion for Reconsideration or Appeal of District Judge Order. Signed by Chief Judge William H. Steele on 1/4/2013. Copy mailed to Plaintiff at the address set out in the motion. (tgw)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aa94d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441</identifier>
+<identifier type="local">P0b002ee18a8aa94d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cr-00441</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00441</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00441</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlos" fullName="Carlos Joseph Lopez" lastName="Lopez" middleName="Joseph" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lopez</title>
+ <partNumber>1:12-cr-00441</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00441;12-441</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carlos Joseph Lopez</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">Carlos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00441</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00441</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Carlos" fullName="Carlos Joseph Lopez" lastName="Lopez" middleName="Joseph" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00441-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>DETENTION ORDER as to Carlos Joseph Lopez, signed by Magistrate Judge Sheila K. Oberto on 12/11/2012. (Gaumnitz, R)[1:12-mj-00289-GSA]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afd15</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00441_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00441; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00441-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-11</dateIssued>
+  <docketText>DETENTION ORDER as to Carlos Joseph Lopez, signed by Magistrate Judge Sheila K. Oberto on 12/11/2012. (Gaumnitz, R)[1:12-mj-00289-GSA]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00441-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER as to Carlos Joseph Lopez, ( Status Conference set for 7/21/14 is continued to 8/11/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 7/17/14. (Nazaroff, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afd14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00441_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00441; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00441-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-07-18</dateIssued>
+  <docketText>ORDER as to Carlos Joseph Lopez, ( Status Conference set for 7/21/14 is continued to 8/11/2014 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) signed by District Judge Anthony W. Ishii on 7/17/14. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00441-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 9/24/2014. (Gaumnitz, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afd12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00441_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00441; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00441-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-09-24</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 9/24/2014. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00441-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 12/8/2014. (Gaumnitz, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afd13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00441_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00441; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00441-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-12-08</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 12/8/2014. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00441-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>FINAL ORDER of FORFEITURE as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 1/2/2015. (Gaumnitz, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afd16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00441_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00441/USCOURTS-caed-1_12-cr-00441-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00441/pdf/USCOURTS-caed-1_12-cr-00441-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00441; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00441-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>FINAL ORDER of FORFEITURE as to Carlos Joseph Lopez, signed by District Judge Anthony W. Ishii on 1/2/2015. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

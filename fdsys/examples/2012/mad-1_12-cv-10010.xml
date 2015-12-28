@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817097cc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10010</identifier>
+<identifier type="local">P0b002ee1817097cc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_12-cv-10010</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_12-cv-10010</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:12-cv-10010</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="A" fullName="A Amico" lastName="Amico" role="Defendant"></party>
+ <party fullName="Brooks" lastName="Brooks" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis De La Cruz" lastName="De La Cruz" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="Federal Bureau of Prisons" lastName="Federal Bureau of Prisons" role="Defendant"></party>
+ <party firstName="Lindsey" fullName="Lindsey Olden" lastName="Olden" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>De La Cruz v. Federal Bureau of Prisons, et al.</title>
+ <partNumber>1:12-cv-10010</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10010/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-10010;12-10010</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>A Amico</displayForm>
+ <namePart type="family">Amico</namePart>
+ <namePart type="given">A</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brooks</displayForm>
+ <namePart type="family">Brooks</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis De La Cruz</displayForm>
+ <namePart type="family">De La Cruz</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Bureau of Prisons</displayForm>
+ <namePart type="family">Federal Bureau of Prisons</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lindsey Olden</displayForm>
+ <namePart type="family">Olden</namePart>
+ <namePart type="given">Lindsey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_12-cv-10010</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:12-cv-10010</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="A" fullName="A Amico" lastName="Amico" role="Defendant"></party>
+ <party fullName="Brooks" lastName="Brooks" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis De La Cruz" lastName="De La Cruz" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party fullName="Federal Bureau of Prisons" lastName="Federal Bureau of Prisons" role="Defendant"></party>
+ <party firstName="Lindsey" fullName="Lindsey Olden" lastName="Olden" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_12-cv-10010-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10010/USCOURTS-mad-1_12-cv-10010-0/mods.xml">
+ <titleInfo>
+  <title>De La Cruz v. Federal Bureau of Prisons, et al.</title>
+  <subTitle>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket No. 2) is DENIED; Plaintiff&apos;s Motion for a Temporary Restraining Order (Docket No. 1) is DENIED; Plaintiff&apos;s Motion for Appointment of Counsel (Docket No. 3) is DENIED; and This action is DISMISSED sua sponte in its entirety.(PSSA, 1)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_12-cv-10010-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181709f3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10010/USCOURTS-mad-1_12-cv-10010-0</identifier>
+ <identifier type="former granule identifier">mad-1_12-cv-10010_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_12-cv-10010/USCOURTS-mad-1_12-cv-10010-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_12-cv-10010/pdf/USCOURTS-mad-1_12-cv-10010-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-10010; De La Cruz v. Federal Bureau of Prisons, et al.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_12-cv-10010-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>Judge Richard G. Stearns: MEMORANDUM AND ORDER entered: Plaintiff&apos;s Motion for Leave to Proceed in forma pauperis (Docket No. 2) is DENIED; Plaintiff&apos;s Motion for a Temporary Restraining Order (Docket No. 1) is DENIED; Plaintiff&apos;s Motion for Appointment of Counsel (Docket No. 3) is DENIED; and This action is DISMISSED sua sponte in its entirety.(PSSA, 1)</docketText>
+</extension>
+</relatedItem>
+</mods>

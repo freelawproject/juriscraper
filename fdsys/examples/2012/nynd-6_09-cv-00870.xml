@@ -1,0 +1,159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18170969b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00870</identifier>
+<identifier type="local">P0b002ee18170969b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-6_09-cv-00870</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_09-cv-00870</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:09-cv-00870</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Catherine" fullName="Catherine M. Daviau" lastName="Daviau" middleName="M." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Daviau v. Commissioner of Social Security</title>
+ <partNumber>6:09-cv-00870</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00870/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:09-cv-00870;09-870</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Utica</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Catherine M. Daviau</displayForm>
+ <namePart type="family">Daviau</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-6_09-cv-00870</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>6:09-cv-00870</caseNumber>
+ <caseOffice>Utica</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Catherine" fullName="Catherine M. Daviau" lastName="Daviau" middleName="M." role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-6_09-cv-00870-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00870/USCOURTS-nynd-6_09-cv-00870-0/mods.xml">
+ <titleInfo>
+  <title>Daviau v. Commissioner of Social Security</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER. ORDERED that the ALJs decision be REVERSED and this matter be REMANDED tothe Commissioner, pursuant to 42 U.S.C. § 405(g) for further proceedings consistent with the above; and it is further ORDERED that pursuant to General Order # 32, the parties are advised that the referralto a Magistrate Judge as provided for under Local Rule 72.3 has been RESCINDED, as such, any appeal taken from this Order will be to the Court of Appeals for the Second Circuit; and it is further ORDERED that the Clerk of Court enter judgment in this case. Signed by U.S. District Judge Mae A. D&apos;Agostino on 1/4/12. (ban)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-6_09-cv-00870-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170b63e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00870/USCOURTS-nynd-6_09-cv-00870-0</identifier>
+ <identifier type="former granule identifier">nynd-6_09-cv-00870_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-6_09-cv-00870/USCOURTS-nynd-6_09-cv-00870-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-6_09-cv-00870/pdf/USCOURTS-nynd-6_09-cv-00870-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:09-cv-00870; Daviau v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-6_09-cv-00870-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER. ORDERED that the ALJs decision be REVERSED and this matter be REMANDED tothe Commissioner, pursuant to 42 U.S.C. § 405(g) for further proceedings consistent with the above; and it is further ORDERED that pursuant to General Order # 32, the parties are advised that the referralto a Magistrate Judge as provided for under Local Rule 72.3 has been RESCINDED, as such, any appeal taken from this Order will be to the Court of Appeals for the Second Circuit; and it is further ORDERED that the Clerk of Court enter judgment in this case. Signed by U.S. District Judge Mae A. D&apos;Agostino on 1/4/12. (ban)</docketText>
+</extension>
+</relatedItem>
+</mods>

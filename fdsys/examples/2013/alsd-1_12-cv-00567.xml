@@ -1,0 +1,235 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1866e4f42">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_12-cv-00567</identifier>
+<identifier type="local">P0b002ee1866e4f42</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_12-cv-00567</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_12-cv-00567</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:12-cv-00567</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Baldwin County District Attorney&apos;s Office" lastName="Baldwin County District Attorney&apos;s Office" role="Defendant"></party>
+ <party fullName="Baldwin County Sheriff&apos;s Department" lastName="Baldwin County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Channel 10 - WALA" lastName="Channel 10 - WALA" role="Defendant"></party>
+ <party firstName="Rhonda" fullName="Rhonda Frazier" lastName="Frazier" role="Plaintiff"></party>
+ <party fullName="State of Alabama" lastName="State of Alabama" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Frazier v. State of Alabama et al</title>
+ <partNumber>1:12-cv-00567</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_12-cv-00567/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00567;12-567</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Baldwin County District Attorney&apos;s Office</displayForm>
+ <namePart type="family">Baldwin County District Attorney&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baldwin County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Baldwin County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Channel 10 - WALA</displayForm>
+ <namePart type="family">Channel 10 - WALA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rhonda Frazier</displayForm>
+ <namePart type="family">Frazier</namePart>
+ <namePart type="given">Rhonda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State of Alabama</displayForm>
+ <namePart type="family">State of Alabama</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_12-cv-00567</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:12-cv-00567</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Baldwin County District Attorney&apos;s Office" lastName="Baldwin County District Attorney&apos;s Office" role="Defendant"></party>
+ <party fullName="Baldwin County Sheriff&apos;s Department" lastName="Baldwin County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Channel 10 - WALA" lastName="Channel 10 - WALA" role="Defendant"></party>
+ <party firstName="Rhonda" fullName="Rhonda Frazier" lastName="Frazier" role="Plaintiff"></party>
+ <party fullName="State of Alabama" lastName="State of Alabama" role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_12-cv-00567-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-0/mods.xml">
+ <titleInfo>
+  <title>Frazier v. State of Alabama et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Rhonda Frazier. It is recommended that this action be dismissed with prejudice, as further set out. Objections to R&amp;R due by 12/19/2012. Signed by Magistrate Judge Bert W. Milling, Jr on 11/27/2012. Copy mailed to Plaintiff. (clr)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_12-cv-00567-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f5242</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-0</identifier>
+ <identifier type="former granule identifier">alsd-1_12-cv-00567_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_12-cv-00567/pdf/USCOURTS-alsd-1_12-cv-00567-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00567; Frazier v. State of Alabama et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_12-cv-00567-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-27</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Rhonda Frazier. It is recommended that this action be dismissed with prejudice, as further set out. Objections to R&amp;R due by 12/19/2012. Signed by Magistrate Judge Bert W. Milling, Jr on 11/27/2012. Copy mailed to Plaintiff. (clr)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_12-cv-00567-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-1/mods.xml">
+ <titleInfo>
+  <title>Frazier v. State of Alabama et al</title>
+  <subTitle>ORDER ADOPTING the 8 REPORT AND RECOMMENDATIONS. It is ORDERED that this action be and is hereby DISMISSED with prejudice for failure to prosecute and to obey the Court&apos;s Order. Signed by Chief Judge William H. Steele on 1/2/2013. Copy mailed to Plaintiff. (tgw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_12-cv-00567-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f5243</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-1</identifier>
+ <identifier type="former granule identifier">alsd-1_12-cv-00567_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_12-cv-00567/pdf/USCOURTS-alsd-1_12-cv-00567-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00567; Frazier v. State of Alabama et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_12-cv-00567-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER ADOPTING the 8 REPORT AND RECOMMENDATIONS. It is ORDERED that this action be and is hereby DISMISSED with prejudice for failure to prosecute and to obey the Court&apos;s Order. Signed by Chief Judge William H. Steele on 1/2/2013. Copy mailed to Plaintiff. (tgw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_12-cv-00567-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-2/mods.xml">
+ <titleInfo>
+  <title>Frazier v. State of Alabama et al</title>
+  <subTitle>JUDGMENT: It is ORDERED, ADJUDGED, and DECREED that this action be and is hereby DISMISSED with prejudice. Signed by Chief Judge William H. Steele on 1/2/2013. Copy mailed to Plaintiff. (tgw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_12-cv-00567-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f5241</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-2</identifier>
+ <identifier type="former granule identifier">alsd-1_12-cv-00567_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_12-cv-00567/USCOURTS-alsd-1_12-cv-00567-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_12-cv-00567/pdf/USCOURTS-alsd-1_12-cv-00567-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00567; Frazier v. State of Alabama et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_12-cv-00567-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>JUDGMENT: It is ORDERED, ADJUDGED, and DECREED that this action be and is hereby DISMISSED with prejudice. Signed by Chief Judge William H. Steele on 1/2/2013. Copy mailed to Plaintiff. (tgw)</docketText>
+</extension>
+</relatedItem>
+</mods>

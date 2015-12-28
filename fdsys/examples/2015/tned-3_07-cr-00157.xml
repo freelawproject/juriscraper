@@ -1,0 +1,397 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8be626">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157</identifier>
+<identifier type="local">P0b002ee18a8be626</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-3_07-cr-00157</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-3_07-cr-00157</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>3:07-cr-00157</caseNumber>
+ <caseOffice>Knoxville</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Joseph" fullName="Joseph Dejon Manning" lastName="Manning" middleName="Dejon" role="Defendant"></party>
+ <party firstName="Ajakibiani" fullName="Ajakibiani Earth McBayne" lastName="McBayne" middleName="Earth" role="Defendant"></party>
+ <party firstName="Amanda" fullName="Amanda Crystal Stigall" lastName="Stigall" middleName="Crystal" role="Defendant"></party>
+ <party firstName="Titus" fullName="Titus L Stigall" lastName="Stigall" middleName="L" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. McBayne et al</title>
+ <partNumber>3:07-cr-00157</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:07-cr-00157;07-157</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Knoxville</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Joseph Dejon Manning</displayForm>
+ <namePart type="family">Manning</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ajakibiani Earth McBayne</displayForm>
+ <namePart type="family">McBayne</namePart>
+ <namePart type="given">Ajakibiani</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amanda Crystal Stigall</displayForm>
+ <namePart type="family">Stigall</namePart>
+ <namePart type="given">Amanda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Titus L Stigall</displayForm>
+ <namePart type="family">Stigall</namePart>
+ <namePart type="given">Titus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-3_07-cr-00157</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>3:07-cr-00157</caseNumber>
+ <caseOffice>Knoxville</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Joseph" fullName="Joseph Dejon Manning" lastName="Manning" middleName="Dejon" role="Defendant"></party>
+ <party firstName="Ajakibiani" fullName="Ajakibiani Earth McBayne" lastName="McBayne" middleName="Earth" role="Defendant"></party>
+ <party firstName="Amanda" fullName="Amanda Crystal Stigall" lastName="Stigall" middleName="Crystal" role="Defendant"></party>
+ <party firstName="Titus" fullName="Titus L Stigall" lastName="Stigall" middleName="L" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-0/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>MEMORANDUM AND ORDER OF DETENTION as to Joseph Dejon Manning signed by Magistrate Judge C Clifford Shirley on 12/21/2007. (JDH) (Additional attachment(s) added pursuant to Chambers on 5/27/2008: # (1) Transcript) (KMK)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6d76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-0</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER OF DETENTION as to Joseph Dejon Manning signed by Magistrate Judge C Clifford Shirley on 12/21/2007. (JDH) (Additional attachment(s) added pursuant to Chambers on 5/27/2008: # (1) Transcript) (KMK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-1/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 28 Motion to Withdraw Documents as to Amanda Crystal Stigall (3)and denying as moot the following motions: 22 Motion for Release of Brady Materials; 23 Motion for Notice; 24 Motion for on the Record Findings; 25 Motion for 30 Day Pretrial Notice; 26 Motion for Pretrial Notice of FRE Rule 608; 27 Motion for Pretrial Hearing. Signed by Magistrate Judge C Clifford Shirley on January 25, 2008. (CRS)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6d79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-1</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 28 Motion to Withdraw Documents as to Amanda Crystal Stigall (3)and denying as moot the following motions: 22 Motion for Release of Brady Materials; 23 Motion for Notice; 24 Motion for on the Record Findings; 25 Motion for 30 Day Pretrial Notice; 26 Motion for Pretrial Notice of FRE Rule 608; 27 Motion for Pretrial Hearing. Signed by Magistrate Judge C Clifford Shirley on January 25, 2008. (CRS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-2/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ce7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-2</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-03-04</dateIssued>
+  <docketText>MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.MEMORANDUM ORDER granting Defendant Titus Stigall&apos;s 36 Motion to Continue. The trial of this matter is reset to 5/19/08 at 9:00 a.m. before the Honorable Thomas W. Phillips. Pretrial motions on the issue of severance or that may arise as the result of the newly disclosed Walmart records shall be filed on or before 3/12/08. The deadline for responses to any motions will be 3/26/08. This court will conduct a hearing on these pretrial motions 3/31/08 at 1:00 p.m.. Signed by Magistrate Judge C Clifford Shirley on 3/4/08. (DCP) Modified on 3/18/2008 (DCP) for text.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-3/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ce6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-3</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-04-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)MEMORANDUM AND ORDER Severing Defendants as to Joseph Dejon Manning, Amanda Crystal Stigall, Titus L Stigall as to Joseph Manning&apos;s Motion for Severance [Doc.44]; and the government&apos;s oral motion for severance of the remaining defendants proceeding to trial is GRANTED. The trials of defendants Joseph Manning, Amanda Stigall and Titus Stigall are hereby SEVERED. Titus Stigall shall proceed to trial as scheduled on May 19, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips. Joseph Manning shall proceed to trial on September 29, 2008 at 9:00 a.m. before the Honorable Thomas W. Phillips and Amanda Stigall shall proceed to trial on October 6, 2008 at 9:00 before the Honorable Thomas W. Phillips. All time between the initial motion for severance on Marcy 4, 2008 and the new trial dates, including through October 6, 2008 is fully excludable from operation of the Speedy Trial Act pursuant to 18 U.S.C. §3161(h)(1)(F) and (h)(3)(7) and (h)(8)(B)(i),(iv). Signed by Magistrate Judge C Clifford Shirley on 4/4/08. (DCP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-4/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6d77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-4</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-04-24</dateIssued>
+  <docketText>ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)ORDER denying 48 Motion for Release of Brady Materials as to Amanda Crystal Stigall (3); denying 49 Motion to Suppress as to Amanda Crystal Stigall (3); denying 50 Motion for on the Record Findings Pursuant to Rules 403 and 404 as to Amanda Crystal Stigall (3); denying 51 Motion for 30-day Pretrial Notice of Government&apos;s Intention to Use 404(b)-Type Evidence as to Amanda Crystal Stigall (3); denying 52 Motion for Pretrial Notice of FRE Rule 608 Evidence of Character or Conduct the Government Intends to Offer for FRE 609 Impeachment Evidence as to Amanda Crystal Stigall and (3); denying 53 Motion for Pretrial Hearing to Determine the Admissibility of Evidence the Government Intends to Introduce Under FRE 702,703, and/or 705 as to Amanda Crystal Stigall (3). Signed by Magistrate Judge C Clifford Shirley on 4/24/08. (DCP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-5/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS as to Joseph Dejon Manning recommending to DENY 45 MOTION to Suppress alleged statement of the defendant in that the court does not conclude there is a basis for suppression of Manning&apos;s statement at trial as more fully set out in this order. (Objections due by 5/22/2008.) Signed by Magistrate Judge C Clifford Shirley on 5/5/08. (DCP)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-05-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ce5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-5</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-05-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS as to Joseph Dejon Manning recommending to DENY 45 MOTION to Suppress alleged statement of the defendant in that the court does not conclude there is a basis for suppression of Manning&apos;s statement at trial as more fully set out in this order. (Objections due by 5/22/2008.) Signed by Magistrate Judge C Clifford Shirley on 5/5/08. (DCP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-6/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS as to Joseph Dejon Manning. There being no timely objection by defendant, and the court being in complete agreement with the magistrate judge, the Report and Recommendation Doc. 68 filed by the Honorable C. Clifford Shirley, United States Magistrate Judge, on May 5, 2008, is hereby ACCEPTED IN WHOLE whereby defendant&apos;s motion to suppress Doc. 45 is DENIED. Signed by District Judge Thomas W Phillips on June 11, 2008. (RLK)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ce4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-6</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-06-11</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS as to Joseph Dejon Manning. There being no timely objection by defendant, and the court being in complete agreement with the magistrate judge, the Report and Recommendation Doc. 68 filed by the Honorable C. Clifford Shirley, United States Magistrate Judge, on May 5, 2008, is hereby ACCEPTED IN WHOLE whereby defendant&apos;s motion to suppress Doc. 45 is DENIED. Signed by District Judge Thomas W Phillips on June 11, 2008. (RLK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-7/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>MEMORANDUM AND ORDER as to Joseph Dejon Manning re 73 Letter to the extent his letter request of the Court to compel disclosure of material, alter his trial date and to release him to a halfway house, Mr. Manning&apos;s request is DENIED. Signed by Magistrate Judge C Clifford Shirley on 6/12/08. (DCP)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-06-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6ce8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-7</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-06-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to Joseph Dejon Manning re 73 Letter to the extent his letter request of the Court to compel disclosure of material, alter his trial date and to release him to a halfway house, Mr. Manning&apos;s request is DENIED. Signed by Magistrate Judge C Clifford Shirley on 6/12/08. (DCP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_07-cr-00157-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-8/mods.xml">
+ <titleInfo>
+  <title>USA v. McBayne et al</title>
+  <subTitle>REVOCATION JUDGMENT as to Joseph Dejon Manning: The defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a total term of 18 months with no term of supervised release to follow. This sentence shall be served consecutively with the 51 month sentence imposed in case number 3:13-CR-012-2 in the United States District Court for the Eastern District of Tennessee. Signed by District Judge R Leon Jordan on 1/6/2015. [USPO notified for designation] (JDH)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6d78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-8</identifier>
+ <identifier type="former granule identifier">tned-3_07-cr-00157_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_07-cr-00157/USCOURTS-tned-3_07-cr-00157-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_07-cr-00157/pdf/USCOURTS-tned-3_07-cr-00157-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:07-cr-00157; USA v. McBayne et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_07-cr-00157-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>REVOCATION JUDGMENT as to Joseph Dejon Manning: The defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a total term of 18 months with no term of supervised release to follow. This sentence shall be served consecutively with the 51 month sentence imposed in case number 3:13-CR-012-2 in the United States District Court for the Eastern District of Tennessee. Signed by District Judge R Leon Jordan on 1/6/2015. [USPO notified for designation] (JDH)</docketText>
+</extension>
+</relatedItem>
+</mods>

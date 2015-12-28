@@ -1,0 +1,266 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815b0dc4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182</identifier>
+<identifier type="local">P0b002ee1815b0dc4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_09-cr-00182</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_09-cr-00182</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:09-cr-00182</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John E. Gray" lastName="Gray" middleName="E." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert E. McBroom" lastName="McBroom" middleName="E." role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Savage" lastName="Savage" role="Interested Party"></party>
+ <party firstName="Jay" fullName="Jay M. Schmeltz" lastName="Schmeltz" middleName="M." role="Defendant"></party>
+ <party firstName="James" fullName="James A. Telb" lastName="Telb" middleName="A." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Gray et al</title>
+ <partNumber>3:09-cr-00182</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:09-cr-00182;09-182</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John E. Gray</displayForm>
+ <namePart type="family">Gray</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert E. McBroom</displayForm>
+ <namePart type="family">McBroom</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Savage</displayForm>
+ <namePart type="family">Savage</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Jay M. Schmeltz</displayForm>
+ <namePart type="family">Schmeltz</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James A. Telb</displayForm>
+ <namePart type="family">Telb</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_09-cr-00182</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:09-cr-00182</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="John" fullName="John E. Gray" lastName="Gray" middleName="E." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert E. McBroom" lastName="McBroom" middleName="E." role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Savage" lastName="Savage" role="Interested Party"></party>
+ <party firstName="Jay" fullName="Jay M. Schmeltz" lastName="Schmeltz" middleName="M." role="Defendant"></party>
+ <party firstName="James" fullName="James A. Telb" lastName="Telb" middleName="A." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_09-cr-00182-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Gray et al</title>
+  <subTitle>Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_09-cr-00182-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167ed77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_09-cr-00182_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182/pdf/USCOURTS-ohnd-3_09-cr-00182-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:09-cr-00182; United States of America v. Gray et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_09-cr-00182-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-04-13</dateIssued>
+  <docketText>Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)Order denying 61 Motion to Suppress as to John E. Gray (1); denying 62 Motion to Suppress as to John E. Gray (1); denying 63 Motion to Suppress as to Jay M. Schmeltz (2); denying 65 Motion to Suppress as to James A. Telb (4). Judge David A. Katz on 4/13/10. (G,C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_09-cr-00182-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Gray et al</title>
+  <subTitle>Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_09-cr-00182-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167ed76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-1</identifier>
+ <identifier type="former granule identifier">ohnd-3_09-cr-00182_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182/pdf/USCOURTS-ohnd-3_09-cr-00182-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:09-cr-00182; United States of America v. Gray et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_09-cr-00182-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-09-03</dateIssued>
+  <docketText>Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).Memorandum Opinion and Order: Defendant Telbs motion in limine 115 regarding evidence of the 2004 reelection campaign is denied. The government&apos;s motion in limine 116 regarding reference to the nature and detail of the victims alleged crimes is granted. Defendant Schmeltzs&apos; motion in limine 120 regarding other crimes, wrongs or bad acts is granted. Defendants&apos; joint motion regarding expert testimony 127 is granted as to the second branch regarding the Defendants&apos; duties and responsibilities but denied 127 as to branches one, three, four and five. Judge David A. Katz on 9/3/2010. (C,D) Modified on 9/7/2010 (C,D).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_09-cr-00182-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Gray et al</title>
+  <subTitle>ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_09-cr-00182-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167eb97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-2</identifier>
+ <identifier type="former granule identifier">ohnd-3_09-cr-00182_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182/pdf/USCOURTS-ohnd-3_09-cr-00182-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:09-cr-00182; United States of America v. Gray et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_09-cr-00182-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-10-05</dateIssued>
+  <docketText>ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)ORDER granting 163 Motion for Reconsideration as stated herein as to James A. Telb (4). Judge David A. Katz on 10/5/10. (G,C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_09-cr-00182-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Gray et al</title>
+  <subTitle>Order denying 260 Motion for Acquittal as to John E. Gray (1). Judge David A. Katz on 1/20/11. (G,C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_09-cr-00182-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167ed75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-3</identifier>
+ <identifier type="former granule identifier">ohnd-3_09-cr-00182_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_09-cr-00182/USCOURTS-ohnd-3_09-cr-00182-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_09-cr-00182/pdf/USCOURTS-ohnd-3_09-cr-00182-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:09-cr-00182; United States of America v. Gray et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_09-cr-00182-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>Order denying 260 Motion for Acquittal as to John E. Gray (1). Judge David A. Katz on 1/20/11. (G,C)</docketText>
+</extension>
+</relatedItem>
+</mods>

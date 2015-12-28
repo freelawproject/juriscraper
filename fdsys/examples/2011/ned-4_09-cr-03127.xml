@@ -1,0 +1,426 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179b9fc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127</identifier>
+<identifier type="local">P0b002ee18179b9fc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_09-cr-03127</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cr-03127</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cr-03127</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sophia" fullName="Sophia K. Morris" lastName="Morris" middleName="K." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Morris</title>
+ <partNumber>4:09-cr-03127</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:09-cr-03127;09-3127</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sophia K. Morris</displayForm>
+ <namePart type="family">Morris</namePart>
+ <namePart type="given">Sophia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_09-cr-03127</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:09-cr-03127</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Sophia" fullName="Sophia K. Morris" lastName="Morris" middleName="K." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER APPOINTING COUNSEL - John F. Aman appointed as counsel as to defendant Sophia K. Morris as ordered by Judge Richard G. Kopf. (SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-0</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - John F. Aman appointed as counsel as to defendant Sophia K. Morris as ordered by Judge Richard G. Kopf. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER granting 27 Motion to Continue. Jury Trial set for 3/15/2010 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-1</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-26</dateIssued>
+  <docketText>ORDER granting 27 Motion to Continue. Jury Trial set for 3/15/2010 at 09:00 AM in Courtroom 4, Federal Building, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Sophia K. Morris. Due to a medical issue, defendant&apos;s appointed counsel, John Aman, cannot represent the defendant at this time. On the courts own motion, John Aman is withdrawn as counsel for the defendant, Sophia Morris. The Clerk is directed to remove Mr. Aman from all future ECF notifications in this case. Korey Reiman is hereby appointed as counsel for the defendant. Mr. Reiman shall promptly forward a copy of this memorandum and order to the defendant. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy to Karen Burks) (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-2</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-02-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Sophia K. Morris. Due to a medical issue, defendant&apos;s appointed counsel, John Aman, cannot represent the defendant at this time. On the courts own motion, John Aman is withdrawn as counsel for the defendant, Sophia Morris. The Clerk is directed to remove Mr. Aman from all future ECF notifications in this case. Korey Reiman is hereby appointed as counsel for the defendant. Mr. Reiman shall promptly forward a copy of this memorandum and order to the defendant. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy to Karen Burks) (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER as to defendant Sophia K. Morris. Counsel John Aman is reinstated as counsel for the defendant. Defense counsel shall confer and determine who will act as lead counsel in the case, and shall file a notice with the court stating who will be lead counsel. Lead counsel shall apprise co-counsel of any case developments until the completion of the case or until co-counsel has withdrawn from the case with leave of the court as ordered by Magistrate Judge Cheryl R. Zwart. (SED)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a292</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-3</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-03-12</dateIssued>
+  <docketText>ORDER as to defendant Sophia K. Morris. Counsel John Aman is reinstated as counsel for the defendant. Defense counsel shall confer and determine who will act as lead counsel in the case, and shall file a notice with the court stating who will be lead counsel. Lead counsel shall apprise co-counsel of any case developments until the completion of the case or until co-counsel has withdrawn from the case with leave of the court as ordered by Magistrate Judge Cheryl R. Zwart. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>MEMORANDUM AND ORDER as to Sophia K. Morris that the Federal Public Defender is authorized to process a CJA 20 voucher for services provided by counsel Korey Reiman upon receipt of the voucher, and prior to final resolution of this case or submission of CJA 20 voucher by counsel John F. Aman as to defendant Sophia K. Morris. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy provided to FPD)(MKR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-4</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-04-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to Sophia K. Morris that the Federal Public Defender is authorized to process a CJA 20 voucher for services provided by counsel Korey Reiman upon receipt of the voucher, and prior to final resolution of this case or submission of CJA 20 voucher by counsel John F. Aman as to defendant Sophia K. Morris. Ordered by Magistrate Judge Cheryl R. Zwart. (Copy provided to FPD)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER that the Sealed Memorandum and Order 32 as to defendant Sophia K. Morris is withdrawn. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-5</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-04-19</dateIssued>
+  <docketText>ORDER that the Sealed Memorandum and Order 32 as to defendant Sophia K. Morris is withdrawn. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER GRANTING MOTION FOR ENLARGEMENT OF TIME AND AMENDED ORDER ON SENTENCING SCHEDULE 49 as to Sophia K. Morris (1). Written objections to initial presentence report due on or before May 17, 2010; Probation Officer&apos;s submission of the initial or revised presentence report due on or before May 24, 2010; statements by counsel due on or before June 1, 2010; Judge&apos;s tentative findings due on or before June 7, 2010; Sentencing hearing June 15, 2010, at 12:15 p.m. Ordered by Senior Judge Warren K. Urbom. ( EJL)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-6</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-05-13</dateIssued>
+  <docketText>ORDER GRANTING MOTION FOR ENLARGEMENT OF TIME AND AMENDED ORDER ON SENTENCING SCHEDULE 49 as to Sophia K. Morris (1). Written objections to initial presentence report due on or before May 17, 2010; Probation Officer&apos;s submission of the initial or revised presentence report due on or before May 24, 2010; statements by counsel due on or before June 1, 2010; Judge&apos;s tentative findings due on or before June 7, 2010; Sentencing hearing June 15, 2010, at 12:15 p.m. Ordered by Senior Judge Warren K. Urbom. ( EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) Sophia K. Morris. Ordered by Senior Judge Warren K. Urbom. (EJL)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-7</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-06-03</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant(s) Sophia K. Morris. Ordered by Senior Judge Warren K. Urbom. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER, rescheduling sentencing hearing to 6/16/2010 at 12:15 PM in Courtroom 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom as to defendant(s) Sophia K. Morris. The defendant shall be present for the hearing. Ordered by Senior Judge Warren K. Urbom. (EJL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a293</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-8</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-06-09</dateIssued>
+  <docketText>ORDER, rescheduling sentencing hearing to 6/16/2010 at 12:15 PM in Courtroom 4, U.S. Courthouse, 100 Centennial Mall North, Lincoln, NE before Senior Judge Warren K. Urbom as to defendant(s) Sophia K. Morris. The defendant shall be present for the hearing. Ordered by Senior Judge Warren K. Urbom. (EJL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>MEMORANDUM AND ORDER - Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35 (b) motion 61. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw; The Federal Public Defender shall provide CJA counsel with a new voucher; The Clerk of the Court shall mail a copy of this order to the Federal Public Defender as to Sophia K. Morris. Ordered by Senior Judge Warren K. Urbom. (Copies mailed as directed)(KBJ)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-9</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35 (b) motion 61. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw; The Federal Public Defender shall provide CJA counsel with a new voucher; The Clerk of the Court shall mail a copy of this order to the Federal Public Defender as to Sophia K. Morris. Ordered by Senior Judge Warren K. Urbom. (Copies mailed as directed)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_09-cr-03127-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Morris</title>
+  <subTitle>ORDER granting 64 Motion to Restrict pursuant to the E-Government Act as to Sophia K. Morris (1). Ordered by Senior Judge Warren K. Urbom. ( EJL )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_09-cr-03127-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18180a2db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-10</identifier>
+ <identifier type="former granule identifier">ned-4_09-cr-03127_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_09-cr-03127/USCOURTS-ned-4_09-cr-03127-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_09-cr-03127/pdf/USCOURTS-ned-4_09-cr-03127-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:09-cr-03127; USA v. Morris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_09-cr-03127-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>ORDER granting 64 Motion to Restrict pursuant to the E-Government Act as to Sophia K. Morris (1). Ordered by Senior Judge Warren K. Urbom. ( EJL )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,195 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181928180">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-72687</identifier>
+<identifier type="local">P0b002ee181928180</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_04-cv-72687</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-72687</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-72687</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Jomar" fullName="Jomar Beck" lastName="Beck" role="Plaintiff"></party>
+ <party fullName="Cynowa" lastName="Cynowa" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Burton" fullName="Burton Hewlett" lastName="Hewlett" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Price" lastName="Price" role="Defendant"></party>
+ <party fullName="St. Clair Shores, City of" lastName="St. Clair Shores, City of" role="Defendant"></party>
+ <party fullName="Wierzbiski" lastName="Wierzbiski" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Beck v. St. Clair Shores, City of et al</title>
+ <partNumber>2:04-cv-72687</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-72687/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-72687;04-72687</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jomar Beck</displayForm>
+ <namePart type="family">Beck</namePart>
+ <namePart type="given">Jomar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cynowa</displayForm>
+ <namePart type="family">Cynowa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Burton Hewlett</displayForm>
+ <namePart type="family">Hewlett</namePart>
+ <namePart type="given">Burton</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Price</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Clair Shores, City of</displayForm>
+ <namePart type="family">St. Clair Shores, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wierzbiski</displayForm>
+ <namePart type="family">Wierzbiski</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-72687</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-72687</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Jomar" fullName="Jomar Beck" lastName="Beck" role="Plaintiff"></party>
+ <party fullName="Cynowa" lastName="Cynowa" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Burton" fullName="Burton Hewlett" lastName="Hewlett" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Price" lastName="Price" role="Defendant"></party>
+ <party fullName="St. Clair Shores, City of" lastName="St. Clair Shores, City of" role="Defendant"></party>
+ <party fullName="Wierzbiski" lastName="Wierzbiski" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_04-cv-72687-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-72687/USCOURTS-mied-2_04-cv-72687-0/mods.xml">
+ <titleInfo>
+  <title>Beck v. St. Clair Shores, City of et al</title>
+  <subTitle>ORDER denying 43 Motion for Costs- Signed by Honorable George Caram Steeh. (MBea, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_04-cv-72687-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819b3b7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-72687/USCOURTS-mied-2_04-cv-72687-0</identifier>
+ <identifier type="former granule identifier">mied-2_04-cv-72687_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-72687/USCOURTS-mied-2_04-cv-72687-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-72687/pdf/USCOURTS-mied-2_04-cv-72687-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-72687; Beck v. St. Clair Shores, City of et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_04-cv-72687-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-17</dateIssued>
+  <docketText>ORDER denying 43 Motion for Costs- Signed by Honorable George Caram Steeh. (MBea, )</docketText>
+</extension>
+</relatedItem>
+</mods>

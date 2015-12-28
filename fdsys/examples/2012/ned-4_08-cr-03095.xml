@@ -1,0 +1,743 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18295f71a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-06-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-06-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095</identifier>
+<identifier type="local">P0b002ee18295f71a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-06-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-06-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cr-03095</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03095</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03095</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabiola" fullName="Fabiola Bernal" lastName="Bernal" role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Mendivil" lastName="Mendivil" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Mendivil et al</title>
+ <partNumber>4:08-cr-03095</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cr-03095;08-3095</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fabiola Bernal</displayForm>
+ <namePart type="family">Bernal</namePart>
+ <namePart type="given">Fabiola</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesus Mendivil</displayForm>
+ <namePart type="family">Mendivil</namePart>
+ <namePart type="given">Jesus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cr-03095</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cr-03095</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Fabiola" fullName="Fabiola Bernal" lastName="Bernal" role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Mendivil" lastName="Mendivil" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Michael D. Nelson appointed as counsel as to defendant Jesus Mendibil as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960850</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-07-14</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Michael D. Nelson appointed as counsel as to defendant Jesus Mendibil as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Korey L. Reiman appointed as counsel as to defendant Fabiola Bernal as ordered by Magistrate Judge David L. Piester. (SED)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960916</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-07-14</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Korey L. Reiman appointed as counsel as to defendant Fabiola Bernal as ordered by Magistrate Judge David L. Piester. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jesus Mendibil. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960918</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-07-21</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jesus Mendibil. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Fabiola Bernal. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-07-21</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Fabiola Bernal. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 31 Motion to Withdraw as Attorney filed by attorney Michael D. Nelson as to defendant Jesus Mendibil (1). The Federal Public Defender shall forthwith provide the court with a draft appointment order (CJA Form 20) bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. Ordered by Magistrate Judge David L. Piester. (Copy to Karen Burks)(JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-09-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 31 Motion to Withdraw as Attorney filed by attorney Michael D. Nelson as to defendant Jesus Mendibil (1). The Federal Public Defender shall forthwith provide the court with a draft appointment order (CJA Form 20) bearing the name and other identifying information of the CJA Panel attorney identified in accordance with the Criminal Justice Act Plan for this district. Ordered by Magistrate Judge David L. Piester. (Copy to Karen Burks)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER granting 36 Motion to Continue Trial as to Jesus Mendibil (1). Trial of this matter as to both defendants is continued to 9:00 a.m., October 6, 2008 before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester. The time between September 9, 2008 and October 6, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. (JAB)ORDER granting 36 Motion to Continue Trial as to Jesus Mendibil (1). Trial of this matter as to both defendants is continued to 9:00 a.m., October 6, 2008 before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester. The time between September 9, 2008 and October 6, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960922</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-09-10</dateIssued>
+  <docketText>ORDER granting 36 Motion to Continue Trial as to Jesus Mendibil (1). Trial of this matter as to both defendants is continued to 9:00 a.m., October 6, 2008 before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester. The time between September 9, 2008 and October 6, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. (JAB)ORDER granting 36 Motion to Continue Trial as to Jesus Mendibil (1). Trial of this matter as to both defendants is continued to 9:00 a.m., October 6, 2008 before the Honorable Richard G. Kopf in Courtroom 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. Ordered by Magistrate Judge David L. Piester. The time between September 9, 2008 and October 6, 2008 shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to defendant Jesus Mendibil. Based upon the prior representations of defense counsel, IT IS ORDERED that Defendant Mendibil&apos;s case is removed from the undersigned&apos;s October 6, 2008 trial docket. Defense counsel shall contact Magistrate Judge Piester&apos;s chambers at his earliest convenience to schedule this case for a plea hearing. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960920</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-6</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2008-10-03</dateIssued>
+  <docketText>ORDER as to defendant Jesus Mendibil. Based upon the prior representations of defense counsel, IT IS ORDERED that Defendant Mendibil&apos;s case is removed from the undersigned&apos;s October 6, 2008 trial docket. Defense counsel shall contact Magistrate Judge Piester&apos;s chambers at his earliest convenience to schedule this case for a plea hearing. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>AMENDED ORDER as to defendant Jesus Mendibil. Based upon the prior representations of defense counsel,IT IS ORDERED that Defendant Mendibil&apos;s case is removed from the undersigned&apos;s October 6, 2008 trial docket. Defense counsel shall contact Magistrate Judge Piester&apos;s chambers at his earliest convenience to schedule this case for a plea hearing. For this defendant, the time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. sec. 3161(h)(1)(I)&amp;(h)(8)(A)(B). Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960848</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-7</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2008-10-03</dateIssued>
+  <docketText>AMENDED ORDER as to defendant Jesus Mendibil. Based upon the prior representations of defense counsel,IT IS ORDERED that Defendant Mendibil&apos;s case is removed from the undersigned&apos;s October 6, 2008 trial docket. Defense counsel shall contact Magistrate Judge Piester&apos;s chambers at his earliest convenience to schedule this case for a plea hearing. For this defendant, the time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. sec. 3161(h)(1)(I)&amp;(h)(8)(A)(B). Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER granting 46 Motion to Continue as to Fabiola Bernal (2). Change of Plea Hearing continued to 12/11/2008 01:30 PM in Courtroom 2 - Lincoln before Magistrate Judge David L. Piester. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-8</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>ORDER granting 46 Motion to Continue as to Fabiola Bernal (2). Change of Plea Hearing continued to 12/11/2008 01:30 PM in Courtroom 2 - Lincoln before Magistrate Judge David L. Piester. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER granting 45 Motion to Continue as to Jesus Mendibil (1). Change of Plea Hearing continued to 12/9/2008 01:30 PM in Courtroom 2 - Lincoln before Magistrate Judge David L. Piester. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (JAB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960917</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-9</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>ORDER granting 45 Motion to Continue as to Jesus Mendibil (1). Change of Plea Hearing continued to 12/9/2008 01:30 PM in Courtroom 2 - Lincoln before Magistrate Judge David L. Piester. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excludable time in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge David L. Piester. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER sustaining 64 Motion for Preliminary Forfeiture as to defendants Jesus Mendivil (1) and Fabiola Bernal (2). Based upon Counts VI and VII of the Superceding Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $12,723.00 in United States currency and the Colt.38 Special revolver. Defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)ORDER sustaining 64 Motion for Preliminary Forfeiture as to defendants Jesus Mendivil (1) and Fabiola Bernal (2). Based upon Counts VI and VII of the Superceding Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $12,723.00 in United States currency and the Colt.38 Special revolver. Defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-10</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2008-12-15</dateIssued>
+  <docketText>ORDER sustaining 64 Motion for Preliminary Forfeiture as to defendants Jesus Mendivil (1) and Fabiola Bernal (2). Based upon Counts VI and VII of the Superceding Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $12,723.00 in United States currency and the Colt.38 Special revolver. Defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)ORDER sustaining 64 Motion for Preliminary Forfeiture as to defendants Jesus Mendivil (1) and Fabiola Bernal (2). Based upon Counts VI and VII of the Superceding Indictment and the Defendants&apos; pleas of guilty, the United States is hereby authorized to seize the $12,723.00 in United States currency and the Colt.38 Special revolver. Defendants&apos; interest in said properties are hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C., § 853(n), in which all interests will be addressed. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to defendant Jesus Mendivil. It is ordered that:(1)The government&apos;s motion to continue sentencing 72 is granted.(2)Defendant Mendibil&apos;s sentencing is continued to Wednesday, March 11, 2009, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-11</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2009-02-17</dateIssued>
+  <docketText>ORDER as to defendant Jesus Mendivil. It is ordered that:(1)The government&apos;s motion to continue sentencing 72 is granted.(2)Defendant Mendibil&apos;s sentencing is continued to Wednesday, March 11, 2009, at 12:00 noon, before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Jesus Mendivil. It is ordered that:... (2) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960921</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-12</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2009-02-17</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Jesus Mendivil. It is ordered that:... (2) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Fabiola Bernal. It is ordered that:... (2) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-13</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2009-02-17</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Fabiola Bernal. It is ordered that:... (2) There are no disputed matters regarding the presentence report and the proper computation of the advisory Guidelines ranges.(3)Except to the extent (if at all) that I have sustained an objection or granted a motion or reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to defendant Fabiola Bernal. It is ordered that: (1)The government&apos;s motion to continue sentencing 71 is granted.(2)Defendant Bernal&apos;s sentencing is continued to Wednesday, March 11, 2009, at 12:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-14</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2009-02-17</dateIssued>
+  <docketText>ORDER as to defendant Fabiola Bernal. It is ordered that: (1)The government&apos;s motion to continue sentencing 71 is granted.(2)Defendant Bernal&apos;s sentencing is continued to Wednesday, March 11, 2009, at 12:30 p.m., before the undersigned United States district judge, in Courtroom No. 1, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska. The defendant shall be present unless excused by the court. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE sustaining 78 Motion as to Jesus Mendivil (1) and Fabiola Bernal (2). All right, title and interest in and to the $12,723.00 in United States Currency and a Colt.38 Special revolver, held by any person or entity, is hereby forever barred and foreclosed and forfeited to the United States of America to dispose of in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)FINAL ORDER OF FORFEITURE sustaining 78 Motion as to Jesus Mendivil (1) and Fabiola Bernal (2). All right, title and interest in and to the $12,723.00 in United States Currency and a Colt.38 Special revolver, held by any person or entity, is hereby forever barred and foreclosed and forfeited to the United States of America to dispose of in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-15</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2009-03-11</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE sustaining 78 Motion as to Jesus Mendivil (1) and Fabiola Bernal (2). All right, title and interest in and to the $12,723.00 in United States Currency and a Colt.38 Special revolver, held by any person or entity, is hereby forever barred and foreclosed and forfeited to the United States of America to dispose of in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)FINAL ORDER OF FORFEITURE sustaining 78 Motion as to Jesus Mendivil (1) and Fabiola Bernal (2). All right, title and interest in and to the $12,723.00 in United States Currency and a Colt.38 Special revolver, held by any person or entity, is hereby forever barred and foreclosed and forfeited to the United States of America to dispose of in accordance with law. Ordered by Judge Richard G. Kopf. (1 Certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>JUDGMENT as to defendant Jesus Mendivil (1). Defendant pleaded guilty to counts I, IV, VI, and VII of the Superseding Indictment and is committed to the U.S. Bureau of Prisons for 135 months; supervised release with special conditions for 5 years as to Count I and 3 years as to Count IV, said terms to run concurrent; $200 special assessment. Final order of forfeiture filed on 3/11/09 as to Count VI and VII. Counts 1, 2-3, 2s-3s, 5s, Dismissed on motion of the United States. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960919</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-16</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2009-03-13</dateIssued>
+  <docketText>JUDGMENT as to defendant Jesus Mendivil (1). Defendant pleaded guilty to counts I, IV, VI, and VII of the Superseding Indictment and is committed to the U.S. Bureau of Prisons for 135 months; supervised release with special conditions for 5 years as to Count I and 3 years as to Count IV, said terms to run concurrent; $200 special assessment. Final order of forfeiture filed on 3/11/09 as to Count VI and VII. Counts 1, 2-3, 2s-3s, 5s, Dismissed on motion of the United States. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>JUDGMENT as to defendant Fabiola Bernal (2). Defendant pleaded guilty to counts I, IV, VI, and VII of the Superseding Indictment and is committed to the U.S. Bureau of Prisons for 120 months; supervised release with special conditions for 5 years as to Count I and 3 years as to Count IV, said terms to run concurrent; $200 special assessment. Final order of forfeiture filed on 3/11/09 as to Count VI and VII. Counts 1, 2-3, 2s-3s, 5s, Dismissed on the motion of the United States. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-17</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2009-03-13</dateIssued>
+  <docketText>JUDGMENT as to defendant Fabiola Bernal (2). Defendant pleaded guilty to counts I, IV, VI, and VII of the Superseding Indictment and is committed to the U.S. Bureau of Prisons for 120 months; supervised release with special conditions for 5 years as to Count I and 3 years as to Count IV, said terms to run concurrent; $200 special assessment. Final order of forfeiture filed on 3/11/09 as to Count VI and VII. Counts 1, 2-3, 2s-3s, 5s, Dismissed on the motion of the United States. Ordered by Judge Richard G. Kopf. (4 Certified copies to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to Jesus Mendivil. It is ordered that: (1)Counsel for the government shall notify the court when the motion for reduction in sentence pursuant to Rule 35(b) 96 is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe;(2)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw;(3)The Federal Public Defender shall provide CJA counsel with a new voucher;(4)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182960849</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-18</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2010-03-24</dateIssued>
+  <docketText>ORDER as to Jesus Mendivil. It is ordered that: (1)Counsel for the government shall notify the court when the motion for reduction in sentence pursuant to Rule 35(b) 96 is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe;(2)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw;(3)The Federal Public Defender shall provide CJA counsel with a new voucher;(4)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to Fabiola Bernal. It is ordered that: (1)Counsel for the government shall notify the court when the motion for reduction in sentence pursuant to Rule 35(b) 95 is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe;(2)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw;(3)The Federal Public Defender shall provide CJA counsel with a new voucher;(4)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. ( KLL, )</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296091b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-19</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2010-03-24</dateIssued>
+  <docketText>ORDER as to Fabiola Bernal. It is ordered that: (1)Counsel for the government shall notify the court when the motion for reduction in sentence pursuant to Rule 35(b) 95 is ripe for decision. The motion shall not be decided until counsel for the government certifies that the motion is ripe;(2)Counsel for the defendant, if previously appointed pursuant to the Criminal Justice Act, is reappointed to represent the defendant for purposes of the Rule 35(b) motion. If retained, counsel for the defendant remains as counsel for the defendant until the Rule 35(b) motion is resolved or until given leave to withdraw;(3)The Federal Public Defender shall provide CJA counsel with a new voucher;(4)The Clerk of the Court shall provide a copy of this order to counsel for the government and counsel for the defendant. The undersigned&apos;s judicial assistant will provide a copy to the Federal Public Defender. Ordered by Judge Richard G. Kopf. ( KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to defendant Jesus Mendivil. It is ordered that: (1)The government&apos;s request for hearing 105 is granted.(2)A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 96 has been set before the undersigned United States district judge on Wednesday, January 18, 2012, at 11:00 a.m., 5th Floor, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)At the request of the defendant through his counsel, the defendant will participate in the hearing by telephone.(4)The Marshal is directed not to return the defendant to the district.(5)The defendant is held to have waived his right to be present. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-20</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER as to defendant Jesus Mendivil. It is ordered that: (1)The government&apos;s request for hearing 105 is granted.(2)A hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 96 has been set before the undersigned United States district judge on Wednesday, January 18, 2012, at 11:00 a.m., 5th Floor, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)At the request of the defendant through his counsel, the defendant will participate in the hearing by telephone.(4)The Marshal is directed not to return the defendant to the district.(5)The defendant is held to have waived his right to be present. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cr-03095-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendivil et al</title>
+  <subTitle>ORDER as to defendant Fabiola Bernal. It is ordered that: (1)The plaintiff&apos;s request for hearing 101 is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 95 has been scheduled before the undersigned United States district judge on Friday, July 13, 2012, at 11:30 a.m., in Courtroom No. 2, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)At the request of the defendant through her counsel, the defendant will participate in the hearing by telephone. (4)Defense counsel shall make the telephone arrangements with the Bureau of Prisons. Defense counsel shall then provide the undersigned&apos;s chambers with the contact information (including name and telephone number) of the Bureau of Prison&apos;s official the courtroom deputy should call the day and time of the hearing.(5)The Marshal is directed not to return the defendant to the district.(6)The defendant is held to have waived her right to be present. Ordered by Senior Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cr-03095-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18296084b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-21</identifier>
+ <identifier type="former granule identifier">ned-4_08-cr-03095_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cr-03095/USCOURTS-ned-4_08-cr-03095-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cr-03095/pdf/USCOURTS-ned-4_08-cr-03095-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cr-03095; USA v. Mendivil et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cr-03095-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-06-13</dateIssued>
+  <docketText>ORDER as to defendant Fabiola Bernal. It is ordered that: (1)The plaintiff&apos;s request for hearing 101 is granted.(2)The hearing on the government&apos;s motion for reduction of sentence pursuant to Rule 35(b) 95 has been scheduled before the undersigned United States district judge on Friday, July 13, 2012, at 11:30 a.m., in Courtroom No. 2, United States Courthouse and Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.(3)At the request of the defendant through her counsel, the defendant will participate in the hearing by telephone. (4)Defense counsel shall make the telephone arrangements with the Bureau of Prisons. Defense counsel shall then provide the undersigned&apos;s chambers with the contact information (including name and telephone number) of the Bureau of Prison&apos;s official the courtroom deputy should call the day and time of the hearing.(5)The Marshal is directed not to return the defendant to the district.(6)The defendant is held to have waived her right to be present. Ordered by Senior Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+</mods>

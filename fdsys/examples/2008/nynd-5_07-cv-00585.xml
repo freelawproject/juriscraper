@@ -1,0 +1,249 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118aba7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-00585</identifier>
+<identifier type="local">P0b002ee18118aba7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_07-cv-00585</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_07-cv-00585</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:07-cv-00585</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <party firstName="Michael" fullName="Michael Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Aventis Pharmaceuticals Inc." lastName="Aventis Pharmaceuticals Inc." role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick Brouillete" lastName="Brouillete" role="Defendant"></party>
+ <party fullName="Crouse Hospital" lastName="Crouse Hospital" role="Defendant"></party>
+ <party fullName="Crouse Irving Memorial Hospital" lastName="Crouse Irving Memorial Hospital" role="Defendant"></party>
+ <party firstName="James" fullName="James Elrod" lastName="Elrod" role="Defendant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Kronenberg" lastName="Kronenberg" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian A. Markinson" lastName="Markinson" middleName="A." role="Defendant"></party>
+ <party fullName="Monarch Pharmaceuticals, Inc." lastName="Monarch Pharmaceuticals, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Squicciarino" lastName="Squicciarino" role="Defendant"></party>
+ <party fullName="U.S. of A" lastName="U.S. of A" role="Defendant"></party>
+ <party firstName="Saundra" fullName="Saundra V. White" lastName="White" middleName="V." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>White v. Monarch Pharmaceuticals, Inc. et al</title>
+ <partNumber>5:07-cv-00585</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-00585/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:07-cv-00585;07-585</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aventis Pharmaceuticals Inc.</displayForm>
+ <namePart type="family">Aventis Pharmaceuticals Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Brouillete</displayForm>
+ <namePart type="family">Brouillete</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Crouse Hospital</displayForm>
+ <namePart type="family">Crouse Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Crouse Irving Memorial Hospital</displayForm>
+ <namePart type="family">Crouse Irving Memorial Hospital</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Elrod</displayForm>
+ <namePart type="family">Elrod</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>King Pharmaceuticals, Inc.</displayForm>
+ <namePart type="family">King Pharmaceuticals, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Kronenberg</displayForm>
+ <namePart type="family">Kronenberg</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian A. Markinson</displayForm>
+ <namePart type="family">Markinson</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Monarch Pharmaceuticals, Inc.</displayForm>
+ <namePart type="family">Monarch Pharmaceuticals, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Squicciarino</displayForm>
+ <namePart type="family">Squicciarino</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. of A</displayForm>
+ <namePart type="family">U.S. of A</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saundra V. White</displayForm>
+ <namePart type="family">White</namePart>
+ <namePart type="given">Saundra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_07-cv-00585</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:07-cv-00585</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>362</natureSuitCode>
+ <natureSuit>Medical Malpractice</natureSuit>
+ <party firstName="Michael" fullName="Michael Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Aventis Pharmaceuticals Inc." lastName="Aventis Pharmaceuticals Inc." role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick Brouillete" lastName="Brouillete" role="Defendant"></party>
+ <party fullName="Crouse Hospital" lastName="Crouse Hospital" role="Defendant"></party>
+ <party fullName="Crouse Irving Memorial Hospital" lastName="Crouse Irving Memorial Hospital" role="Defendant"></party>
+ <party firstName="James" fullName="James Elrod" lastName="Elrod" role="Defendant"></party>
+ <party fullName="King Pharmaceuticals, Inc." lastName="King Pharmaceuticals, Inc." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Kronenberg" lastName="Kronenberg" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian A. Markinson" lastName="Markinson" middleName="A." role="Defendant"></party>
+ <party fullName="Monarch Pharmaceuticals, Inc." lastName="Monarch Pharmaceuticals, Inc." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Squicciarino" lastName="Squicciarino" role="Defendant"></party>
+ <party fullName="U.S. of A" lastName="U.S. of A" role="Defendant"></party>
+ <party firstName="Saundra" fullName="Saundra V. White" lastName="White" middleName="V." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_07-cv-00585-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-00585/USCOURTS-nynd-5_07-cv-00585-0/mods.xml">
+ <titleInfo>
+  <title>White v. Monarch Pharmaceuticals, Inc. et al</title>
+  <subTitle>JUDGMENT the Court finds that the plaintiff&apos;s amended complaint fails to state a claim upon which relief may be granted. The Court dismisses the action. Dated January 17, 2008, signed by Deputy Clerk, Marie Marra. Plaintiff served via USPS.(mnm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_07-cv-00585-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181400509</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-00585/USCOURTS-nynd-5_07-cv-00585-0</identifier>
+ <identifier type="former granule identifier">nynd-5_07-cv-00585_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_07-cv-00585/USCOURTS-nynd-5_07-cv-00585-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_07-cv-00585/pdf/USCOURTS-nynd-5_07-cv-00585-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:07-cv-00585; White v. Monarch Pharmaceuticals, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_07-cv-00585-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-17</dateIssued>
+  <docketText>JUDGMENT the Court finds that the plaintiff&apos;s amended complaint fails to state a claim upon which relief may be granted. The Court dismisses the action. Dated January 17, 2008, signed by Deputy Clerk, Marie Marra. Plaintiff served via USPS.(mnm)</docketText>
+</extension>
+</relatedItem>
+</mods>

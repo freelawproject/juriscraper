@@ -1,0 +1,262 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bd0da">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Central District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900</identifier>
+<identifier type="local">P0b002ee18a8bd0da</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-cacb-2_12-bk-15900</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-cacb-2_12-bk-15900</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>cacb</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>3066</courtSortOrder>
+ <caseNumber>2:12-bk-15900</caseNumber>
+ <caseOffice>Los Angeles</caseOffice>
+ <party firstName="Martin" fullName="Martin Pemstein" lastName="Pemstein" role="Debtor"></party>
+ <party firstName="Diana" fullName="Diana Pemstein" lastName="Pemstein" role="Joint Debtor"></party>
+ <party fullName="United States Trustee (SA)" lastName="United States Trustee (SA)" role="U.S. Trustee"></party>
+ <party fullName="Courtesy NEF" lastName="Courtesy NEF" role="Interested Party"></party>
+ <party firstName="Harold" fullName="Harold Pemstein" lastName="Pemstein" role="Creditor"></party>
+ <party fullName="Manahan Flashman &amp; Brandon, LLP" lastName="Manahan Flashman &amp; Brandon, LLP" role="Special Counsel"></party>
+ <party fullName="Toyota Motor Credit Corporation" lastName="Toyota Motor Credit Corporation" role="Creditor"></party>
+ <party fullName="Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc." lastName="Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc." role="Creditor"></party>
+ <party fullName="United States Trustee (LA)" lastName="United States Trustee (LA)" role="U.S. Trustee"></party>
+ <party fullName="ORANGE COUNTY TAX COLLECTOR" lastName="ORANGE COUNTY TAX COLLECTOR" role="Creditor"></party>
+ <party fullName="Qicken Loans" lastName="Qicken Loans" role="Creditor"></party>
+ <party fullName="Redfin Corporation" lastName="Redfin Corporation" role="Realtor"></party>
+</extension>
+<titleInfo>
+ <title>Martin Pemstein and Diana Pemstein</title>
+ <partNumber>2:12-bk-15900</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">2:12-bk-15900;12-15900</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Central District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Los Angeles</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Martin Pemstein</displayForm>
+ <namePart type="family">Pemstein</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Diana Pemstein</displayForm>
+ <namePart type="family">Pemstein</namePart>
+ <namePart type="given">Diana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Joint Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee (SA)</displayForm>
+ <namePart type="family">United States Trustee (SA)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Courtesy NEF</displayForm>
+ <namePart type="family">Courtesy NEF</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Harold Pemstein</displayForm>
+ <namePart type="family">Pemstein</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Manahan Flashman &amp; Brandon, LLP</displayForm>
+ <namePart type="family">Manahan Flashman &amp; Brandon, LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Toyota Motor Credit Corporation</displayForm>
+ <namePart type="family">Toyota Motor Credit Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc.</displayForm>
+ <namePart type="family">Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>United States Trustee (LA)</displayForm>
+ <namePart type="family">United States Trustee (LA)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>ORANGE COUNTY TAX COLLECTOR</displayForm>
+ <namePart type="family">ORANGE COUNTY TAX COLLECTOR</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Qicken Loans</displayForm>
+ <namePart type="family">Qicken Loans</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Redfin Corporation</displayForm>
+ <namePart type="family">Redfin Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Realtor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-cacb-2_12-bk-15900</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>cacb</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>3066</courtSortOrder>
+ <caseNumber>2:12-bk-15900</caseNumber>
+ <caseOffice>Los Angeles</caseOffice>
+ <party firstName="Martin" fullName="Martin Pemstein" lastName="Pemstein" role="Debtor"></party>
+ <party firstName="Diana" fullName="Diana Pemstein" lastName="Pemstein" role="Joint Debtor"></party>
+ <party fullName="United States Trustee (SA)" lastName="United States Trustee (SA)" role="U.S. Trustee"></party>
+ <party fullName="Courtesy NEF" lastName="Courtesy NEF" role="Interested Party"></party>
+ <party firstName="Harold" fullName="Harold Pemstein" lastName="Pemstein" role="Creditor"></party>
+ <party fullName="Manahan Flashman &amp; Brandon, LLP" lastName="Manahan Flashman &amp; Brandon, LLP" role="Special Counsel"></party>
+ <party fullName="Toyota Motor Credit Corporation" lastName="Toyota Motor Credit Corporation" role="Creditor"></party>
+ <party fullName="Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc." lastName="Wells Fargo Home Mortgage, a division of Wells Fargo Bank, N.A, successor by merger to Wells Fargo Home Mortgage, Inc." role="Creditor"></party>
+ <party fullName="United States Trustee (LA)" lastName="United States Trustee (LA)" role="U.S. Trustee"></party>
+ <party fullName="ORANGE COUNTY TAX COLLECTOR" lastName="ORANGE COUNTY TAX COLLECTOR" role="Creditor"></party>
+ <party fullName="Qicken Loans" lastName="Qicken Loans" role="Creditor"></party>
+ <party fullName="Redfin Corporation" lastName="Redfin Corporation" role="Realtor"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-cacb-2_12-bk-15900-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-0/mods.xml">
+ <titleInfo>
+  <title>Martin Pemstein and Diana Pemstein</title>
+  <subTitle>Memorandum of Decision Re: Debtors&apos; Objection to Proof of Claim of Harold Pemstein Related to Lost Inventory (Related Doc # 123) Signed on 10/17/2012 (Gae, Hannah)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900/pdf/USCOURTS-cacb-2_12-bk-15900-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6393</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-0</identifier>
+ <identifier type="former granule identifier">cacb-2_12-bk-15900_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900/pdf/USCOURTS-cacb-2_12-bk-15900-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-bk-15900; Martin Pemstein and Diana Pemstein; </searchTitle>
+  <courtName>United States Bankruptcy Court Central District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-cacb-2_12-bk-15900-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>Memorandum of Decision Re: Debtors&apos; Objection to Proof of Claim of Harold Pemstein Related to Lost Inventory (Related Doc # 123) Signed on 10/17/2012 (Gae, Hannah)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-cacb-2_12-bk-15900-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-1/mods.xml">
+ <titleInfo>
+  <title>Martin Pemstein and Diana Pemstein</title>
+  <subTitle>Order of Abstention on Debtor Martin Pemstein&apos;s Motion to Recover Excess Payments (BNC-PDF) (Related Doc # 433) Signed on 1/6/2015 (Gae, Hannah)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900/pdf/USCOURTS-cacb-2_12-bk-15900-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c6394</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-1</identifier>
+ <identifier type="former granule identifier">cacb-2_12-bk-15900_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-cacb-2_12-bk-15900/USCOURTS-cacb-2_12-bk-15900-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-cacb-2_12-bk-15900/pdf/USCOURTS-cacb-2_12-bk-15900-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-bk-15900; Martin Pemstein and Diana Pemstein; </searchTitle>
+  <courtName>United States Bankruptcy Court Central District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-cacb-2_12-bk-15900-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>Order of Abstention on Debtor Martin Pemstein&apos;s Motion to Recover Excess Payments (BNC-PDF) (Related Doc # 433) Signed on 1/6/2015 (Gae, Hannah)</docketText>
+</extension>
+</relatedItem>
+</mods>

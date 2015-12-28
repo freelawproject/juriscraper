@@ -1,0 +1,218 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18194ff83">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_88-cr-80091</identifier>
+<identifier type="local">P0b002ee18194ff83</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_88-cr-80091</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_88-cr-80091</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:88-cr-80091</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Juanita" fullName="Juanita Fontao" lastName="Fontao" role="Defendant"></party>
+ <party firstName="Miriam" fullName="Miriam Juana Fontao" lastName="Fontao" middleName="Juana" role="Defendant"></party>
+ <party fullName="Gallego" lastName="Gallego" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Hills" lastName="Hills" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert James Hills" lastName="Hills" middleName="James" role="Defendant"></party>
+ <party fullName="Juanita" lastName="Juanita" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Pagani" lastName="Pagani" role="Defendant"></party>
+ <party firstName="Eric Fernando" fullName="Eric Fernando Rodriquez Pagani" lastName="Pagani" middleName="Rodriquez" role="Defendant"></party>
+ <party firstName="Erik" fullName="Erik Pagani-Gallego" lastName="Pagani-Gallego" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA, et al v. Fontao, et al</title>
+ <partNumber>2:88-cr-80091</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_88-cr-80091/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:88-cr-80091;88-80091</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Juanita Fontao</displayForm>
+ <namePart type="family">Fontao</namePart>
+ <namePart type="given">Juanita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miriam Juana Fontao</displayForm>
+ <namePart type="family">Fontao</namePart>
+ <namePart type="given">Miriam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gallego</displayForm>
+ <namePart type="family">Gallego</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Hills</displayForm>
+ <namePart type="family">Hills</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert James Hills</displayForm>
+ <namePart type="family">Hills</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Juanita</displayForm>
+ <namePart type="family">Juanita</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Pagani</displayForm>
+ <namePart type="family">Pagani</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Fernando Rodriquez Pagani</displayForm>
+ <namePart type="family">Pagani</namePart>
+ <namePart type="given">Eric Fernando</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Erik Pagani-Gallego</displayForm>
+ <namePart type="family">Pagani-Gallego</namePart>
+ <namePart type="given">Erik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_88-cr-80091</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:88-cr-80091</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Juanita" fullName="Juanita Fontao" lastName="Fontao" role="Defendant"></party>
+ <party firstName="Miriam" fullName="Miriam Juana Fontao" lastName="Fontao" middleName="Juana" role="Defendant"></party>
+ <party fullName="Gallego" lastName="Gallego" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Hills" lastName="Hills" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert James Hills" lastName="Hills" middleName="James" role="Defendant"></party>
+ <party fullName="Juanita" lastName="Juanita" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Pagani" lastName="Pagani" role="Defendant"></party>
+ <party firstName="Eric Fernando" fullName="Eric Fernando Rodriquez Pagani" lastName="Pagani" middleName="Rodriquez" role="Defendant"></party>
+ <party firstName="Erik" fullName="Erik Pagani-Gallego" lastName="Pagani-Gallego" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_88-cr-80091-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_88-cr-80091/USCOURTS-mied-2_88-cr-80091-0/mods.xml">
+ <titleInfo>
+  <title>USA, et al v. Fontao, et al</title>
+  <subTitle>ORDER transferring case to USCA for the Sixth Circuit. Signed by Honorable Avern Cohn. (DPer)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_88-cr-80091-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a06fe8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_88-cr-80091/USCOURTS-mied-2_88-cr-80091-0</identifier>
+ <identifier type="former granule identifier">mied-2_88-cr-80091_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_88-cr-80091/USCOURTS-mied-2_88-cr-80091-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_88-cr-80091/pdf/USCOURTS-mied-2_88-cr-80091-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:88-cr-80091; USA, et al v. Fontao, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_88-cr-80091-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-02</dateIssued>
+  <docketText>ORDER transferring case to USCA for the Sixth Circuit. Signed by Honorable Avern Cohn. (DPer)</docketText>
+</extension>
+</relatedItem>
+</mods>

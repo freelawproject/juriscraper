@@ -1,0 +1,219 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8b335">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_02-cr-00075</identifier>
+<identifier type="local">P0b002ee180e8b335</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_02-cr-00075</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_02-cr-00075</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:02-cr-00075</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Eddie" fullName="Eddie Benzant" lastName="Benzant" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose R. Delgado Gonzalez" lastName="Delgado Gonzalez" middleName="R." role="Defendant"></party>
+ <party firstName="Amaury" fullName="Amaury Gonzalez" lastName="Gonzalez" role="Defendant"></party>
+ <party firstName="Lenaur" fullName="Lenaur Hidalgo" lastName="Hidalgo" role="Defendant"></party>
+ <party fullName="Jimmy" lastName="Jimmy" role="Defendant"></party>
+ <party firstName="Julian" fullName="Julian . Martinez" lastName="Martinez" middleName="." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Gonzalez et al</title>
+ <partNumber>1:02-cr-00075</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_02-cr-00075/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:02-cr-00075;02-075</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eddie Benzant</displayForm>
+ <namePart type="family">Benzant</namePart>
+ <namePart type="given">Eddie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose R. Delgado Gonzalez</displayForm>
+ <namePart type="family">Delgado Gonzalez</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amaury Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Amaury</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lenaur Hidalgo</displayForm>
+ <namePart type="family">Hidalgo</namePart>
+ <namePart type="given">Lenaur</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jimmy</displayForm>
+ <namePart type="family">Jimmy</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julian . Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Julian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_02-cr-00075</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:02-cr-00075</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Eddie" fullName="Eddie Benzant" lastName="Benzant" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose R. Delgado Gonzalez" lastName="Delgado Gonzalez" middleName="R." role="Defendant"></party>
+ <party firstName="Amaury" fullName="Amaury Gonzalez" lastName="Gonzalez" role="Defendant"></party>
+ <party firstName="Lenaur" fullName="Lenaur Hidalgo" lastName="Hidalgo" role="Defendant"></party>
+ <party fullName="Jimmy" lastName="Jimmy" role="Defendant"></party>
+ <party firstName="Julian" fullName="Julian . Martinez" lastName="Martinez" middleName="." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_02-cr-00075-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Gonzalez et al</title>
+  <subTitle>ORDER as to Amaury Gonzalez re 81 MOTION Writ of Audita Querela Pursuant to 28 U.S.C. 1651 filed by Amaury Gonzalez. So Ordered by Judge Ernest C. Torres on 1/11/09. (Jackson, Ryan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_02-cr-00075-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-0</identifier>
+ <identifier type="former granule identifier">rid-1_02-cr-00075_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_02-cr-00075/pdf/USCOURTS-rid-1_02-cr-00075-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:02-cr-00075; USA v. Gonzalez et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_02-cr-00075-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-12</dateIssued>
+  <docketText>ORDER as to Amaury Gonzalez re 81 MOTION Writ of Audita Querela Pursuant to 28 U.S.C. 1651 filed by Amaury Gonzalez. So Ordered by Judge Ernest C. Torres on 1/11/09. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_02-cr-00075-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Gonzalez et al</title>
+  <subTitle>ORDER OF REASSIGNMENT as to Amaury Gonzalez. So Ordered by Judge Ernest C. Torres on 1/15/09. (Jackson, Ryan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_02-cr-00075-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-1</identifier>
+ <identifier type="former granule identifier">rid-1_02-cr-00075_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_02-cr-00075/USCOURTS-rid-1_02-cr-00075-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_02-cr-00075/pdf/USCOURTS-rid-1_02-cr-00075-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:02-cr-00075; USA v. Gonzalez et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_02-cr-00075-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>ORDER OF REASSIGNMENT as to Amaury Gonzalez. So Ordered by Judge Ernest C. Torres on 1/15/09. (Jackson, Ryan)</docketText>
+</extension>
+</relatedItem>
+</mods>

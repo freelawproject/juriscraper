@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817af0a3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114</identifier>
+<identifier type="local">P0b002ee1817af0a3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_04-cr-03114</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cr-03114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cr-03114</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Brigido" fullName="Brigido Torres" lastName="Torres" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Torres</title>
+ <partNumber>4:04-cr-03114</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:04-cr-03114;04-3114</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brigido Torres</displayForm>
+ <namePart type="family">Torres</namePart>
+ <namePart type="given">Brigido</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cr-03114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cr-03114</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Brigido" fullName="Brigido Torres" lastName="Torres" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>MEMORANDUM AND ORDER as to defendant Brigido Torres. Michael Gooch is appointed to serve standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decide to grant the motion to withdraw as defense counsel. Mr. Gooch is requested to promptly enter his appearance. The Federal Public Defender shall provide Mr. Gooch with a CJA voucher. Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Gooch. A hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is set for Tuesday, June 7, 2005 at 12:30 PM in Courtroom Number One, Lincoln, Nebraska. The defendant shall be present as shall Mr. Gooch, Mr. Aman and Ms. Wagner. The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Gooch, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. Signed by Judge Richard G. Kopf on 4/27/2005. (Copy to FPD and USM) (CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-04-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e43</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-0</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-04-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to defendant Brigido Torres. Michael Gooch is appointed to serve standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decide to grant the motion to withdraw as defense counsel. Mr. Gooch is requested to promptly enter his appearance. The Federal Public Defender shall provide Mr. Gooch with a CJA voucher. Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Gooch. A hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is set for Tuesday, June 7, 2005 at 12:30 PM in Courtroom Number One, Lincoln, Nebraska. The defendant shall be present as shall Mr. Gooch, Mr. Aman and Ms. Wagner. The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Gooch, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. Signed by Judge Richard G. Kopf on 4/27/2005. (Copy to FPD and USM) (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>ORDER as to Brigido Torres. It is ordered that: (1) Michael D. Gooch&apos;s motion to withdraw as standby counsel 36 is granted. (2) At the nomination of the Federal Public Defender, Jerry M. Hug is appointed to serve as standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decided to grant the motion to withdraw as defense counsel 26. (3) Mr. Hug is requested to promptly enter his appearance. (4) The Federal Public Defender shall provide Mr. Hug with a CJA voucher. (5) Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Hug. (6) The hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, remains set for Tuesday, June 7, 2005, at 12:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Hug, Mr. Aman and Ms. Wagner. (7) The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Gooch, Mr. Hug, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. (Judge Kopf&apos;s judicial assistant provided a faxed copy to Mr. Hug and an email copy to the FPD and Marshal.) Signed by Judge Richard G. Kopf on 5/10/2005. (KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e42</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-1</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-10</dateIssued>
+  <docketText>ORDER as to Brigido Torres. It is ordered that: (1) Michael D. Gooch&apos;s motion to withdraw as standby counsel 36 is granted. (2) At the nomination of the Federal Public Defender, Jerry M. Hug is appointed to serve as standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decided to grant the motion to withdraw as defense counsel 26. (3) Mr. Hug is requested to promptly enter his appearance. (4) The Federal Public Defender shall provide Mr. Hug with a CJA voucher. (5) Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Hug. (6) The hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, remains set for Tuesday, June 7, 2005, at 12:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Hug, Mr. Aman and Ms. Wagner. (7) The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Gooch, Mr. Hug, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. (Judge Kopf&apos;s judicial assistant provided a faxed copy to Mr. Hug and an email copy to the FPD and Marshal.) Signed by Judge Richard G. Kopf on 5/10/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>ORDER as to defendant Brigido Torres. It is ordered that: (1) Jerry M. Hug&apos;s request to withdraw as standby counsel is granted. (2) At the nomination of the Federal Public Defender, Michael F. Maloney is appointed to serve as standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decided to grant the motion to withdraw as defense counsel 26. (3) Mr. Maloney is requested to promptly enter his appearance. (4) The Federal Public Defender shall provide Mr. Maloney with a CJA voucher. (5) Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Maloney. (6) The hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, remains set for Tuesday, June 7, 2005, at 12:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner. (7) The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Maloney, Mr. Hug, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. [Judge Kopf&apos;s judicial assistant provided a faxed copy to Mr. Maloney and an email copy to the FPD&amp;Marshal.] Signed by Judge Richard G. Kopf on 5/18/2005. (KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-2</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-05-18</dateIssued>
+  <docketText>ORDER as to defendant Brigido Torres. It is ordered that: (1) Jerry M. Hug&apos;s request to withdraw as standby counsel is granted. (2) At the nomination of the Federal Public Defender, Michael F. Maloney is appointed to serve as standby counsel to advise and represent the defendant regarding pending motions and to take over the case should I decided to grant the motion to withdraw as defense counsel 26. (3) Mr. Maloney is requested to promptly enter his appearance. (4) The Federal Public Defender shall provide Mr. Maloney with a CJA voucher. (5) Defense counsel, Mr. Aman, is ordered to cooperate with Mr. Maloney. (6) The hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, remains set for Tuesday, June 7, 2005, at 12:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner. (7) The Clerk of the Court shall provide copies of this memorandum and order by CM/ECF or otherwise to Mr. Maloney, Mr. Hug, Mr. Aman, Ms. Wagner, the Federal Public Defender and the United States Marshal. [Judge Kopf&apos;s judicial assistant provided a faxed copy to Mr. Maloney and an email copy to the FPD&amp;Marshal.] Signed by Judge Richard G. Kopf on 5/18/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>ORDER as to defendant Brigido Torres. On the oral motion of stand-by counsel Mike Maloney, and with the agreement of government&apos;s counsel and John Aman, it is ordered that the hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is rescheduled to Wednesday, June 15, 2005, at 4:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner. Signed by Judge Richard G. Kopf on 6/6/2005. (KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e3e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-3</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-06-06</dateIssued>
+  <docketText>ORDER as to defendant Brigido Torres. On the oral motion of stand-by counsel Mike Maloney, and with the agreement of government&apos;s counsel and John Aman, it is ordered that the hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is rescheduled to Wednesday, June 15, 2005, at 4:30 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner. Signed by Judge Richard G. Kopf on 6/6/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>ORDER as to defendant Brigido Torres. It is ordered that the hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is rescheduled to Tuesday, June 21, 2005, at 12:00 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner.Signed by Judge Richard G. Kopf on 6/13/2005. (KLL, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-4</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-06-13</dateIssued>
+  <docketText>ORDER as to defendant Brigido Torres. It is ordered that the hearing on the motion to withdraw 26 and on the motion to withdraw the guilty plea 28, with sentencing to follow, if possible, is rescheduled to Tuesday, June 21, 2005, at 12:00 p.m., in Courtroom No. 1, Robert V. Denney Federal Building and United States Courthouse, Lincoln, Nebraska. The defendant shall be present, as shall be Mr. Maloney, Mr. Aman and Ms. Wagner.Signed by Judge Richard G. Kopf on 6/13/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>JUDGMENT as to Brigido Torres (1) - Defendant pleaded guilty to Count I of the Indictment and is committed to the Bureau of Prisons for a term of 70 months, followed by 5 years supervised release with special conditions, and pay $100 Special Assessment and $1300 Restitution; Count II of the Indictment is Dismissed on the motion of the United States as to defendant Brigido Torres. Defendant remanded to the custody of the U.S. Marshal. Signed by Judge Richard G. Kopf on 6/22/2005. (5 certified copies to USM) (CS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-5</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-06-22</dateIssued>
+  <docketText>JUDGMENT as to Brigido Torres (1) - Defendant pleaded guilty to Count I of the Indictment and is committed to the Bureau of Prisons for a term of 70 months, followed by 5 years supervised release with special conditions, and pay $100 Special Assessment and $1300 Restitution; Count II of the Indictment is Dismissed on the motion of the United States as to defendant Brigido Torres. Defendant remanded to the custody of the U.S. Marshal. Signed by Judge Richard G. Kopf on 6/22/2005. (5 certified copies to USM) (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cr-03114-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Torres</title>
+  <subTitle>ORDER that the motion of Michael Gooch for payment, filing 48, is granted and the office of the Federal Public Defender is directed to complete the applicable vouchers for counsel to be paid in this case as soon as possible without awaiting other appointed counsel&apos;s billings as to Brigido Torres (1). Signed by Magistrate Judge David L. Piester on 1/4/2006. (Copy to FPD) (CS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cr-03114-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181891e44</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-6</identifier>
+ <identifier type="former granule identifier">ned-4_04-cr-03114_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cr-03114/USCOURTS-ned-4_04-cr-03114-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cr-03114/pdf/USCOURTS-ned-4_04-cr-03114-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cr-03114; USA v. Torres; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cr-03114-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-04</dateIssued>
+  <docketText>ORDER that the motion of Michael Gooch for payment, filing 48, is granted and the office of the Federal Public Defender is directed to complete the applicable vouchers for counsel to be paid in this case as soon as possible without awaiting other appointed counsel&apos;s billings as to Brigido Torres (1). Signed by Magistrate Judge David L. Piester on 1/4/2006. (Copy to FPD) (CS, )</docketText>
+</extension>
+</relatedItem>
+</mods>

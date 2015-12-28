@@ -1,0 +1,357 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd1f48">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_09-cv-00014</identifier>
+<identifier type="local">P0b002ee180fd1f48</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_09-cv-00014</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_09-cv-00014</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:09-cv-00014</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Jesus" fullName="Jesus Ayala" lastName="Ayala" role="Plaintiff"></party>
+ <party firstName="Kayla" fullName="Kayla Arsenia Ayala" lastName="Ayala" middleName="Arsenia" role="Plaintiff"></party>
+ <party firstName="Jesse" fullName="Jesse George Ayala" lastName="Ayala" middleName="George" role="Plaintiff"></party>
+ <party firstName="Kassie" fullName="Kassie Linda Ayala" lastName="Ayala" middleName="Linda" role="Plaintiff"></party>
+ <party firstName="Dana" fullName="Dana Marie Fejardo Ayala" lastName="Ayala" middleName="Marie Fejardo" role="Plaintiff"></party>
+ <party firstName="Susie" fullName="Susie Barr" lastName="Barr" role="Defendant"></party>
+ <party fullName="Blaine County" lastName="Blaine County" role="Defendant"></party>
+ <party fullName="Blaine County Sheriff Deputies John/Jane Does 1-10" lastName="Blaine County Sheriff Deputies John/Jane Does 1-10" role="Defendant"></party>
+ <party fullName="Blaine County Sheriff&apos;s Office" lastName="Blaine County Sheriff&apos;s Office" role="Defendant"></party>
+ <party firstName="Boyd" fullName="Boyd G Briggs" lastName="Briggs" middleName="G" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Carpita" lastName="Carpita" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Chertoff" lastName="Chertoff" role="Defendant"></party>
+ <party firstName="Felix" fullName="Felix C Cruz" lastName="Cruz" middleName="C" role="Defendant"></party>
+ <party firstName="J.E." fullName="J.E. &quot;Walt&amp;quot Femling" lastName="Femling" middleName="&quot;Walt&amp;quot" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew McLees" lastName="McLees" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian D Nyland" lastName="Nyland" middleName="D" role="Defendant"></party>
+ <party firstName="Ernesto" fullName="Ernesto Ozuna" lastName="Ozuna" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory D Switzer" lastName="Switzer" middleName="D" role="Defendant"></party>
+ <party firstName="John" fullName="John P. Torres" lastName="Torres" middleName="P." role="Defendant"></party>
+ <party fullName="US ICE Agents John/Jane Does 1-20" lastName="US ICE Agents John/Jane Does 1-20" role="Defendant"></party>
+ <party fullName="USA Department of Homeland Security" lastName="USA Department of Homeland Security" role="Defendant"></party>
+ <party fullName="USA ICE" lastName="USA ICE" role="Defendant"></party>
+ <party fullName="Unitted States of America" lastName="Unitted States of America" role="Defendant"></party>
+ <party firstName="Marc" fullName="Marc A Walker" lastName="Walker" middleName="A" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ayala et al v. USA Department of Homeland Security et al</title>
+ <partNumber>1:09-cv-00014</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_09-cv-00014/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-00014;09-014</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jesus Ayala</displayForm>
+ <namePart type="family">Ayala</namePart>
+ <namePart type="given">Jesus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kayla Arsenia Ayala</displayForm>
+ <namePart type="family">Ayala</namePart>
+ <namePart type="given">Kayla</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jesse George Ayala</displayForm>
+ <namePart type="family">Ayala</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kassie Linda Ayala</displayForm>
+ <namePart type="family">Ayala</namePart>
+ <namePart type="given">Kassie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dana Marie Fejardo Ayala</displayForm>
+ <namePart type="family">Ayala</namePart>
+ <namePart type="given">Dana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Susie Barr</displayForm>
+ <namePart type="family">Barr</namePart>
+ <namePart type="given">Susie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blaine County</displayForm>
+ <namePart type="family">Blaine County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blaine County Sheriff Deputies John/Jane Does 1-10</displayForm>
+ <namePart type="family">Blaine County Sheriff Deputies John/Jane Does 1-10</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blaine County Sheriff&apos;s Office</displayForm>
+ <namePart type="family">Blaine County Sheriff&apos;s Office</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Boyd G Briggs</displayForm>
+ <namePart type="family">Briggs</namePart>
+ <namePart type="given">Boyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Carpita</displayForm>
+ <namePart type="family">Carpita</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Chertoff</displayForm>
+ <namePart type="family">Chertoff</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Felix C Cruz</displayForm>
+ <namePart type="family">Cruz</namePart>
+ <namePart type="given">Felix</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.E. &quot;Walt&amp;quot Femling</displayForm>
+ <namePart type="family">Femling</namePart>
+ <namePart type="given">J.E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew McLees</displayForm>
+ <namePart type="family">McLees</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Napolitano</displayForm>
+ <namePart type="family">Napolitano</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian D Nyland</displayForm>
+ <namePart type="family">Nyland</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ernesto Ozuna</displayForm>
+ <namePart type="family">Ozuna</namePart>
+ <namePart type="given">Ernesto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gregory D Switzer</displayForm>
+ <namePart type="family">Switzer</namePart>
+ <namePart type="given">Gregory</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John P. Torres</displayForm>
+ <namePart type="family">Torres</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>US ICE Agents John/Jane Does 1-20</displayForm>
+ <namePart type="family">US ICE Agents John/Jane Does 1-20</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA Department of Homeland Security</displayForm>
+ <namePart type="family">USA Department of Homeland Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA ICE</displayForm>
+ <namePart type="family">USA ICE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unitted States of America</displayForm>
+ <namePart type="family">Unitted States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marc A Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">Marc</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_09-cv-00014</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:09-cv-00014</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Jesus" fullName="Jesus Ayala" lastName="Ayala" role="Plaintiff"></party>
+ <party firstName="Kayla" fullName="Kayla Arsenia Ayala" lastName="Ayala" middleName="Arsenia" role="Plaintiff"></party>
+ <party firstName="Jesse" fullName="Jesse George Ayala" lastName="Ayala" middleName="George" role="Plaintiff"></party>
+ <party firstName="Kassie" fullName="Kassie Linda Ayala" lastName="Ayala" middleName="Linda" role="Plaintiff"></party>
+ <party firstName="Dana" fullName="Dana Marie Fejardo Ayala" lastName="Ayala" middleName="Marie Fejardo" role="Plaintiff"></party>
+ <party firstName="Susie" fullName="Susie Barr" lastName="Barr" role="Defendant"></party>
+ <party fullName="Blaine County" lastName="Blaine County" role="Defendant"></party>
+ <party fullName="Blaine County Sheriff Deputies John/Jane Does 1-10" lastName="Blaine County Sheriff Deputies John/Jane Does 1-10" role="Defendant"></party>
+ <party fullName="Blaine County Sheriff&apos;s Office" lastName="Blaine County Sheriff&apos;s Office" role="Defendant"></party>
+ <party firstName="Boyd" fullName="Boyd G Briggs" lastName="Briggs" middleName="G" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Carpita" lastName="Carpita" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Chertoff" lastName="Chertoff" role="Defendant"></party>
+ <party firstName="Felix" fullName="Felix C Cruz" lastName="Cruz" middleName="C" role="Defendant"></party>
+ <party firstName="J.E." fullName="J.E. &quot;Walt&amp;quot Femling" lastName="Femling" middleName="&quot;Walt&amp;quot" role="Defendant"></party>
+ <party firstName="Andrew" fullName="Andrew McLees" lastName="McLees" role="Defendant"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian D Nyland" lastName="Nyland" middleName="D" role="Defendant"></party>
+ <party firstName="Ernesto" fullName="Ernesto Ozuna" lastName="Ozuna" role="Defendant"></party>
+ <party firstName="Gregory" fullName="Gregory D Switzer" lastName="Switzer" middleName="D" role="Defendant"></party>
+ <party firstName="John" fullName="John P. Torres" lastName="Torres" middleName="P." role="Defendant"></party>
+ <party fullName="US ICE Agents John/Jane Does 1-20" lastName="US ICE Agents John/Jane Does 1-20" role="Defendant"></party>
+ <party fullName="USA Department of Homeland Security" lastName="USA Department of Homeland Security" role="Defendant"></party>
+ <party fullName="USA ICE" lastName="USA ICE" role="Defendant"></party>
+ <party fullName="Unitted States of America" lastName="Unitted States of America" role="Defendant"></party>
+ <party firstName="Marc" fullName="Marc A Walker" lastName="Walker" middleName="A" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_09-cv-00014-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_09-cv-00014/USCOURTS-idd-1_09-cv-00014-0/mods.xml">
+ <titleInfo>
+  <title>Ayala et al v. USA Department of Homeland Security et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting in part and denying in part 41 Motion to Dismiss. The motion hearing set for 1/21/10 is hereby vacated. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_09-cv-00014-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181001c41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_09-cv-00014/USCOURTS-idd-1_09-cv-00014-0</identifier>
+ <identifier type="former granule identifier">idd-1_09-cv-00014_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_09-cv-00014/USCOURTS-idd-1_09-cv-00014-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_09-cv-00014/pdf/USCOURTS-idd-1_09-cv-00014-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-00014; Ayala et al v. USA Department of Homeland Security et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_09-cv-00014-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting in part and denying in part 41 Motion to Dismiss. The motion hearing set for 1/21/10 is hereby vacated. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+</mods>

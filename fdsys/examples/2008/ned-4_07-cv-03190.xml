@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b706e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190</identifier>
+<identifier type="local">P0b002ee1817b706e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03190</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03190</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03190</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Sandra" fullName="Sandra S. Benes" lastName="Benes" middleName="S." role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean M. Cockson" lastName="Cockson" middleName="M." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Cockson v. Benes</title>
+ <partNumber>4:07-cv-03190</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03190;07-3190</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sandra S. Benes</displayForm>
+ <namePart type="family">Benes</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sean M. Cockson</displayForm>
+ <namePart type="family">Cockson</namePart>
+ <namePart type="given">Sean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03190</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03190</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Sandra" fullName="Sandra S. Benes" lastName="Benes" middleName="S." role="Defendant"></party>
+ <party firstName="Sean" fullName="Sean M. Cockson" lastName="Cockson" middleName="M." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03190-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-0/mods.xml">
+ <titleInfo>
+  <title>Cockson v. Benes</title>
+  <subTitle>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. THEREFORE, IT IS ORDERED: 1. That filing 2, the plaintiff&apos;s motion to proceed IFP, is granted; 2. That the plaintiff shall pay an initial partial filing fee of $85.65 by October 11, 2007, unless an enlargement of time is granted in response to a written motion; in the absence of the initial partial filing fee by the specified deadline, this case may be subject to dismissal. Ordered by Judge Richard G. Kopf. (Copy mailed to plaintiff and Lincoln Correctional Center)(JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03190-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e73d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03190_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190/pdf/USCOURTS-ned-4_07-cv-03190-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03190; Cockson v. Benes; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03190-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-09-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. THEREFORE, IT IS ORDERED: 1. That filing 2, the plaintiff&apos;s motion to proceed IFP, is granted; 2. That the plaintiff shall pay an initial partial filing fee of $85.65 by October 11, 2007, unless an enlargement of time is granted in response to a written motion; in the absence of the initial partial filing fee by the specified deadline, this case may be subject to dismissal. Ordered by Judge Richard G. Kopf. (Copy mailed to plaintiff and Lincoln Correctional Center)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03190-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-1/mods.xml">
+ <titleInfo>
+  <title>Cockson v. Benes</title>
+  <subTitle>MEMORANDUM AND ORDER regarding: Order on Motion for Leave to Proceed in forma pauperis, 7. In this case, Plaintiff was granted leave to proceed IFP on September 11, 2007, and the court assessed an initial partial filing fee in the amount of $85.65 to be paid by October 11, 2007. This deadline has now passed and Plaintiff failed to pay the initial partial filing fee. IT IS ORDERED: 1. By November 28, 2007, Plaintiff shall file a document entitled &quot;Response to Order to Show Cause&quot;, explaining any reason Plaintiff may have why the above-entitled case should not be dismissed without prejudice for lack of prosecution; 2. That in the absence of cause shown by the deadline stated above, this case will be subject, without further notice, to dismissal without prejudice. ***Pro Se Case Management Deadlines: Show cause deadline for failure to pay initial filing fee is November 28, 2007. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03190-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e73d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03190_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190/pdf/USCOURTS-ned-4_07-cv-03190-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03190; Cockson v. Benes; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03190-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding: Order on Motion for Leave to Proceed in forma pauperis, 7. In this case, Plaintiff was granted leave to proceed IFP on September 11, 2007, and the court assessed an initial partial filing fee in the amount of $85.65 to be paid by October 11, 2007. This deadline has now passed and Plaintiff failed to pay the initial partial filing fee. IT IS ORDERED: 1. By November 28, 2007, Plaintiff shall file a document entitled &quot;Response to Order to Show Cause&quot;, explaining any reason Plaintiff may have why the above-entitled case should not be dismissed without prejudice for lack of prosecution; 2. That in the absence of cause shown by the deadline stated above, this case will be subject, without further notice, to dismissal without prejudice. ***Pro Se Case Management Deadlines: Show cause deadline for failure to pay initial filing fee is November 28, 2007. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03190-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-2/mods.xml">
+ <titleInfo>
+  <title>Cockson v. Benes</title>
+  <subTitle>MEMORANDUM AND ORDER, The plaintiff shall have until January 7, 2008, to file an amended complaint alleging sufficient facts to establish the court&apos;s subject matter jurisdiction. In the absence of such filing, this case will be dismissed without further notice. The Clerk of the court is directed to terminate the previous pro se case management deadline in this case and to set a new deadline using the following text: January 7, 2008: plaintiffs deadline for filing amended complaint. ***Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 1/7/2008.) Ordered by Judge Richard G. Kopf. (Copies mailed to pro se party)(GJG, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03190-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e73d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03190_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190/pdf/USCOURTS-ned-4_07-cv-03190-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03190; Cockson v. Benes; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03190-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-12-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER, The plaintiff shall have until January 7, 2008, to file an amended complaint alleging sufficient facts to establish the court&apos;s subject matter jurisdiction. In the absence of such filing, this case will be dismissed without further notice. The Clerk of the court is directed to terminate the previous pro se case management deadline in this case and to set a new deadline using the following text: January 7, 2008: plaintiffs deadline for filing amended complaint. ***Pro Se Case Management Deadlines: ( Pro Se Case Management Deadline set for 1/7/2008.) Ordered by Judge Richard G. Kopf. (Copies mailed to pro se party)(GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03190-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-3/mods.xml">
+ <titleInfo>
+  <title>Cockson v. Benes</title>
+  <subTitle>MEMORANDUM AND ORDER - This action and Plaintiff&apos;s Complaint are dismissed without prejudice. A separate judgment will be entered in accordance with this memorandum and order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(GJG, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03190-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e73d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03190_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03190/USCOURTS-ned-4_07-cv-03190-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03190/pdf/USCOURTS-ned-4_07-cv-03190-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03190; Cockson v. Benes; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03190-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This action and Plaintiff&apos;s Complaint are dismissed without prejudice. A separate judgment will be entered in accordance with this memorandum and order. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party)(GJG, )</docketText>
+</extension>
+</relatedItem>
+</mods>

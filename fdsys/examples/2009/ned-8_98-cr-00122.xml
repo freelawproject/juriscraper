@@ -1,0 +1,247 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b3c7c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00122</identifier>
+<identifier type="local">P0b002ee1817b3c7c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_98-cr-00122</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_98-cr-00122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:98-cr-00122</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Demarcus" fullName="Demarcus Bell" lastName="Bell" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Cooke" lastName="Cooke" role="Defendant"></party>
+ <party firstName="Johnny" fullName="Johnny Newman" lastName="Newman" role="Defendant"></party>
+ <party firstName="Andre" fullName="Andre Perkins" lastName="Perkins" role="Defendant"></party>
+ <party firstName="Quinten" fullName="Quinten Turner" lastName="Turner" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Brown, et al</title>
+ <partNumber>8:98-cr-00122</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00122/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:98-cr-00122;98-122</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Demarcus Bell</displayForm>
+ <namePart type="family">Bell</namePart>
+ <namePart type="given">Demarcus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willie Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Willie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Cooke</displayForm>
+ <namePart type="family">Cooke</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny Newman</displayForm>
+ <namePart type="family">Newman</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andre Perkins</displayForm>
+ <namePart type="family">Perkins</namePart>
+ <namePart type="given">Andre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Quinten Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Quinten</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_98-cr-00122</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:98-cr-00122</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Demarcus" fullName="Demarcus Bell" lastName="Bell" role="Defendant"></party>
+ <party firstName="Willie" fullName="Willie Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald Cooke" lastName="Cooke" role="Defendant"></party>
+ <party firstName="Johnny" fullName="Johnny Newman" lastName="Newman" role="Defendant"></party>
+ <party firstName="Andre" fullName="Andre Perkins" lastName="Perkins" role="Defendant"></party>
+ <party firstName="Quinten" fullName="Quinten Turner" lastName="Turner" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00122-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown, et al</title>
+  <subTitle>ORDER - This matter is on the Court&apos;s own motion: IT IS HEREBY ORDERED that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition as to defendant(s) Ronald Cooke Ordered by Judge Joseph F. Bataillon.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00122-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b2a5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-0</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00122_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00122/pdf/USCOURTS-ned-8_98-cr-00122-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00122; USA v. Brown, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00122-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-05-24</dateIssued>
+  <docketText>ORDER - This matter is on the Court&apos;s own motion: IT IS HEREBY ORDERED that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition as to defendant(s) Ronald Cooke Ordered by Judge Joseph F. Bataillon.(PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00122-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown, et al</title>
+  <subTitle>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) - The defendant&apos;s motion to reduce sentence is denied 198 for Johnny Newman (5). Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00122-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b2a5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-1</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00122_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00122/pdf/USCOURTS-ned-8_98-cr-00122-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00122; USA v. Brown, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00122-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-12-29</dateIssued>
+  <docketText>ORDER REGARDING MOTION FOR SENTENCE REDUCTION PURSUANT TO 18:3582(c)(2) - The defendant&apos;s motion to reduce sentence is denied 198 for Johnny Newman (5). Ordered by Senior Judge Lyle E. Strom. (Copy mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_98-cr-00122-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Brown, et al</title>
+  <subTitle>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Johnny Newman. Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_98-cr-00122-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b2a5f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-2</identifier>
+ <identifier type="former granule identifier">ned-8_98-cr-00122_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_98-cr-00122/USCOURTS-ned-8_98-cr-00122-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_98-cr-00122/pdf/USCOURTS-ned-8_98-cr-00122-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:98-cr-00122; USA v. Brown, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_98-cr-00122-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-01-13</dateIssued>
+  <docketText>ORDER permitting the defendant to proceed on appeal in forma pauperis as to defendant Johnny Newman. Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

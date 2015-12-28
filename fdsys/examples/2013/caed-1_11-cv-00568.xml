@@ -1,0 +1,691 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186445b37">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-10-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-10-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568</identifier>
+<identifier type="local">P0b002ee186445b37</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-10-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-10-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-00568</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-00568</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-00568</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Contract Dispute</cause>
+ <party firstName="John" fullName="John C. Brisbin" lastName="Brisbin" middleName="C." role="Plaintiff"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Counter Claimant"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Counter Defendant"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Defendant"></party>
+ <party fullName="Construction Development Systems" lastName="Construction Development Systems" role="Plaintiff"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Counter Claimant"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Counter Defendant"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Defendant"></party>
+ <party fullName="Western Surety Company" lastName="Western Surety Company" role="Counter Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brisbin v. Vulcan Materials Company</title>
+ <partNumber>1:11-cv-00568</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00568;11-568</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John C. Brisbin</displayForm>
+ <namePart type="family">Brisbin</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Calmat Co.</displayForm>
+ <namePart type="family">Calmat Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Calmat Co.</displayForm>
+ <namePart type="family">Calmat Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Calmat Co.</displayForm>
+ <namePart type="family">Calmat Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Construction Development Systems</displayForm>
+ <namePart type="family">Construction Development Systems</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vulcan Materials Company - Western Division</displayForm>
+ <namePart type="family">Vulcan Materials Company - Western Division</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Vulcan Materials Company - Western Division</displayForm>
+ <namePart type="family">Vulcan Materials Company - Western Division</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vulcan Materials Company - Western Division</displayForm>
+ <namePart type="family">Vulcan Materials Company - Western Division</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Western Surety Company</displayForm>
+ <namePart type="family">Western Surety Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-00568</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-00568</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Contract Dispute</cause>
+ <party firstName="John" fullName="John C. Brisbin" lastName="Brisbin" middleName="C." role="Plaintiff"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Counter Claimant"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Counter Defendant"></party>
+ <party fullName="Calmat Co." lastName="Calmat Co." role="Defendant"></party>
+ <party fullName="Construction Development Systems" lastName="Construction Development Systems" role="Plaintiff"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Counter Claimant"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Counter Defendant"></party>
+ <party fullName="Vulcan Materials Company - Western Division" lastName="Vulcan Materials Company - Western Division" role="Defendant"></party>
+ <party fullName="Western Surety Company" lastName="Western Surety Company" role="Counter Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-0/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION and ORDER Regarding the Proper Name of Defendant signed by Magistrate Judge Sheila K. Oberto on 7/6/2011. The proper name of Defendant is Calmat Co. dba Vulcan Materials Company - Western Division (not Vulcan Materials Company, a New Jersey corporation). (Jessen, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450255</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-07</dateIssued>
+  <docketText>STIPULATION and ORDER Regarding the Proper Name of Defendant signed by Magistrate Judge Sheila K. Oberto on 7/6/2011. The proper name of Defendant is Calmat Co. dba Vulcan Materials Company - Western Division (not Vulcan Materials Company, a New Jersey corporation). (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-1/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION and ORDER to amend scheduling order. The deadline for completion of non-expert discovery shall be continued from October 31, 2011, to January 31, 2012. No other provisions of the Scheduling Order dated July 12, 2011, are otherwise modified herein. Order signed by Magistrate Judge Sheila K. Oberto on 10/14/2011. (Timken, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1864501b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-10-17</dateIssued>
+  <docketText>STIPULATION and ORDER to amend scheduling order. The deadline for completion of non-expert discovery shall be continued from October 31, 2011, to January 31, 2012. No other provisions of the Scheduling Order dated July 12, 2011, are otherwise modified herein. Order signed by Magistrate Judge Sheila K. Oberto on 10/14/2011. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-2/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER GRANTING 18 the parties&apos; stipulated request to modify the scheduling order. Discovery due by 3/16/2012. Non-Dispositive Motions filed by 3/21/2012. Dispositive Motions filed by 4/27/2012. Settlement Conference set for 5/17/2012, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Pretrial Conference set for 7/25/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Trial set for 9/18/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Oberto on 1/4/2012. (Timken, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450256</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>ORDER GRANTING 18 the parties&apos; stipulated request to modify the scheduling order. Discovery due by 3/16/2012. Non-Dispositive Motions filed by 3/21/2012. Dispositive Motions filed by 4/27/2012. Settlement Conference set for 5/17/2012, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. Pretrial Conference set for 7/25/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Trial set for 9/18/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Oberto on 1/4/2012. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-3/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>o on 2/2/2012. (Timken, A)STIPULATION and ORDER to AMEND SCHEDULING ORDER. The parties&apos; amended schedule is as follows: Completion of non-expert and expert discovery is 5/16/2012; Dispositive Motions shall be filed by 6/27/2012; Non-Dispositive Motions shall be filed by 5/21/2012; the Settlement Conference currently set for 5/17/2012, is RESET to 7/17/2012, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. the Pretrial Conference currently set for 7/25/2012, is RESET to 9/26/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; the Trial currently set for 9/18/2012, is RESET to 11/27/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Obert</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450257</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-02-03</dateIssued>
+  <docketText>o on 2/2/2012. (Timken, A)STIPULATION and ORDER to AMEND SCHEDULING ORDER. The parties&apos; amended schedule is as follows: Completion of non-expert and expert discovery is 5/16/2012; Dispositive Motions shall be filed by 6/27/2012; Non-Dispositive Motions shall be filed by 5/21/2012; the Settlement Conference currently set for 5/17/2012, is RESET to 7/17/2012, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. the Pretrial Conference currently set for 7/25/2012, is RESET to 9/26/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; the Trial currently set for 9/18/2012, is RESET to 11/27/2012, at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Obert</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-4/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 6/11/2012. (Timken, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450259</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-06-11</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 6/11/2012. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-5/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION 30 to Continue Trial and Related Dates; ORDER thereon - (1) Jury Trial set for 11/27/2012 is CONTINUED to March 26, 2013 at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; (2) The PRETRIAL CONFERENCE (was 9/26/2012) is CONTINUED to January 29, 2013 at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; (3) The Settlement Conference currently set for October 9, 2012 is VACATED and shall be reset once the parties have had an opportunity to meet and confer regarding their availability on November 29, 2012, or January 8, 2013; and (4) By no later than August 31, 2012, the parties shall meet and confer and file a further stipulation or statement regarding the remaining deadlines in the case, as discussed above. signed by Magistrate Judge Sheila K. Oberto on 8/24/2012. (Herman, H)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450254</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-08-24</dateIssued>
+  <docketText>STIPULATION 30 to Continue Trial and Related Dates; ORDER thereon - (1) Jury Trial set for 11/27/2012 is CONTINUED to March 26, 2013 at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; (2) The PRETRIAL CONFERENCE (was 9/26/2012) is CONTINUED to January 29, 2013 at 08:30 AM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii; (3) The Settlement Conference currently set for October 9, 2012 is VACATED and shall be reset once the parties have had an opportunity to meet and confer regarding their availability on November 29, 2012, or January 8, 2013; and (4) By no later than August 31, 2012, the parties shall meet and confer and file a further stipulation or statement regarding the remaining deadlines in the case, as discussed above. signed by Magistrate Judge Sheila K. Oberto on 8/24/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-6/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION and ORDER to reset the Settlement Conference date and extend remaining trial deadlines. Settlement Conference set for 1/8/2013, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. The Parties shall exchange supplemental expert disclosures on or before 10/1/2012, and expert discovery shall be completed by 12/14/2012. Order signed by Magistrate Judge Sheila K. Oberto on 9/4/2012. (Timken, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450258</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-09-04</dateIssued>
+  <docketText>STIPULATION and ORDER to reset the Settlement Conference date and extend remaining trial deadlines. Settlement Conference set for 1/8/2013, at 10:30 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto. The Parties shall exchange supplemental expert disclosures on or before 10/1/2012, and expert discovery shall be completed by 12/14/2012. Order signed by Magistrate Judge Sheila K. Oberto on 9/4/2012. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-7/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER GRANTING Request for Substitution of Counsel, signed by Magistrate Judge Sheila K. Oberto on 12/2/12. Attorney James David Burnside, III for Western Surety Company added. Attorney Matthew W. Quall terminated. (Martin-Gill, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450253</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-7</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>ORDER GRANTING Request for Substitution of Counsel, signed by Magistrate Judge Sheila K. Oberto on 12/2/12. Attorney James David Burnside, III for Western Surety Company added. Attorney Matthew W. Quall terminated. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-8/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 12/6/2012. (Gaumnitz, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1864501b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-8</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-12-06</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 12/6/2012. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-9/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION to Continue Mandatory Settlement Conference and ORDER Thereon, signed by Magistrate Judge Sheila K. Oberto on 1/2/2013. (Settlement Conference currently set for 1/8/2013, has been CONTINUED to 3/8/2013, at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto.) (Gaumnitz, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1864501b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-9</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>STIPULATION to Continue Mandatory Settlement Conference and ORDER Thereon, signed by Magistrate Judge Sheila K. Oberto on 1/2/2013. (Settlement Conference currently set for 1/8/2013, has been CONTINUED to 3/8/2013, at 10:00 AM in Courtroom 7 (SKO) before Magistrate Judge Sheila K. Oberto.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-10/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 1/29/2013. (Timken, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1864501b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-10</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-01-29</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE, signed by Magistrate Judge Sheila K. Oberto on 1/29/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-11/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER CONTINUING Pretrial Conference and Trial Dates. Pretrial Conference is CONTINUED to 6/26/2013, at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. The Trial is CONTINUED to 8/20/2013, at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Oberto on 1/31/2013. (Timken, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1864501b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-11</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-01-31</dateIssued>
+  <docketText>ORDER CONTINUING Pretrial Conference and Trial Dates. Pretrial Conference is CONTINUED to 6/26/2013, at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. The Trial is CONTINUED to 8/20/2013, at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. Order signed by Magistrate Judge Sheila K. Oberto on 1/31/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-12/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 3/7/2013. (Timken, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450269</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-12</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-03-07</dateIssued>
+  <docketText>ORDER re SETTLEMENT CONFERENCE signed by Magistrate Judge Sheila K. Oberto on 3/7/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-13/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER re Plaintiff&apos;s Ex Parte Application to Modify Order And/Or Enlarge Time to Respond 49. The Court VACATES the Settlement Conference set for March 29, 2013. Should the parties wish to reschedule the Settlement Conference, Brisbin must expressly set forth the intent to engage in serious settlement discussions. Order signed by Magistrate Judge Sheila K. Oberto on 3/19/2013. (Timken, A)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450268</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-13</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>ORDER re Plaintiff&apos;s Ex Parte Application to Modify Order And/Or Enlarge Time to Respond 49. The Court VACATES the Settlement Conference set for March 29, 2013. Should the parties wish to reschedule the Settlement Conference, Brisbin must expressly set forth the intent to engage in serious settlement discussions. Order signed by Magistrate Judge Sheila K. Oberto on 3/19/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-14/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER DENYING 53 Calmat&apos;s Motion to Compel Attendance at Deposition and Request for Sanctions. The hearing set for 7/3/2013, is VACATED. Order signed by Magistrate Judge Sheila K. Oberto on 6/28/2013. (Timken, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450251</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-14</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-07-01</dateIssued>
+  <docketText>ORDER DENYING 53 Calmat&apos;s Motion to Compel Attendance at Deposition and Request for Sanctions. The hearing set for 7/3/2013, is VACATED. Order signed by Magistrate Judge Sheila K. Oberto on 6/28/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-15/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>AMENDED PRETRIAL ORDER; RULES of CONDUCT, signed by District Judge Anthony W. Ishii on 7/8/13. Motions in Limine and Trial Confirmation Hearing set for 10/28/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 11/13/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Verduzco, M)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18645025a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-15</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-07-08</dateIssued>
+  <docketText>AMENDED PRETRIAL ORDER; RULES of CONDUCT, signed by District Judge Anthony W. Ishii on 7/8/13. Motions in Limine and Trial Confirmation Hearing set for 10/28/2013 at 01:30 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 11/13/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-16/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>STIPULATION and ORDER to amend the scheduling order to allow depositions ofo expert witnesses. The Scheduling Order in this case shall be amended to allow for VULCAN to take the depositions of Brian Hall, Tim Kempkes and John Brisbin, the expert witnesses designated by BRISBIN; BRISBIN shall make said witnesses available for deposition on or before August 30, 2013; and no other provisions of the Scheduling Order or the Pretrial Order are amended by this Stipulation. Order signed by Magistrate Judge Sheila K. Oberto on 7/16/2013. (Timken, A)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18645026a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-16</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-07-16</dateIssued>
+  <docketText>STIPULATION and ORDER to amend the scheduling order to allow depositions ofo expert witnesses. The Scheduling Order in this case shall be amended to allow for VULCAN to take the depositions of Brian Hall, Tim Kempkes and John Brisbin, the expert witnesses designated by BRISBIN; BRISBIN shall make said witnesses available for deposition on or before August 30, 2013; and no other provisions of the Scheduling Order or the Pretrial Order are amended by this Stipulation. Order signed by Magistrate Judge Sheila K. Oberto on 7/16/2013. (Timken, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-00568-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-17/mods.xml">
+ <titleInfo>
+  <title>Brisbin v. Vulcan Materials Company</title>
+  <subTitle>ORDER DISMISSING ACTIONS and Closing Case signed by District Judge Anthony W. Ishii on 10/18/2013. CASE CLOSED.(Flores, E)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-00568-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186450252</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-17</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-00568_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-00568/USCOURTS-caed-1_11-cv-00568-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-00568/pdf/USCOURTS-caed-1_11-cv-00568-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00568; Brisbin v. Vulcan Materials Company; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-00568-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-10-21</dateIssued>
+  <docketText>ORDER DISMISSING ACTIONS and Closing Case signed by District Judge Anthony W. Ishii on 10/18/2013. CASE CLOSED.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

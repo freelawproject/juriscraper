@@ -1,0 +1,463 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183f91332">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291</identifier>
+<identifier type="local">P0b002ee183f91332</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cr-00291</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00291</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00291</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mario" fullName="Mario Alfonso Madrigal-Felix" lastName="Madrigal-Felix" middleName="Alfonso" role="Defendant"></party>
+ <party firstName="Sergio" fullName="Sergio Alonso Madrigal-Felix" lastName="Madrigal-Felix" middleName="Alonso" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Madrigal-Felix et al</title>
+ <partNumber>2:12-cr-00291</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cr-00291;12-291</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mario Alfonso Madrigal-Felix</displayForm>
+ <namePart type="family">Madrigal-Felix</namePart>
+ <namePart type="given">Mario</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sergio Alonso Madrigal-Felix</displayForm>
+ <namePart type="family">Madrigal-Felix</namePart>
+ <namePart type="given">Sergio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00291</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00291</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Mario" fullName="Mario Alfonso Madrigal-Felix" lastName="Madrigal-Felix" middleName="Alfonso" role="Defendant"></party>
+ <party firstName="Sergio" fullName="Sergio Alonso Madrigal-Felix" lastName="Madrigal-Felix" middleName="Alonso" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 7/27/2012 GRANTING 5 Motion to Unseal the case. The 1 unredacted Complaint will remain SEALED and the redacted version of the complaint shall be UNSEALED and placed in the public record. (Donati, J)[3:12-mj-00016-CMK]ORDER signed by Magistrate Judge Gregory G. Hollows on 7/27/2012 GRANTING 5 Motion to Unseal the case. The 1 unredacted Complaint will remain SEALED and the redacted version of the complaint shall be UNSEALED and placed in the public record. (Donati, J)[3:12-mj-00016-CMK]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 7/27/2012 GRANTING 5 Motion to Unseal the case. The 1 unredacted Complaint will remain SEALED and the redacted version of the complaint shall be UNSEALED and placed in the public record. (Donati, J)[3:12-mj-00016-CMK]ORDER signed by Magistrate Judge Gregory G. Hollows on 7/27/2012 GRANTING 5 Motion to Unseal the case. The 1 unredacted Complaint will remain SEALED and the redacted version of the complaint shall be UNSEALED and placed in the public record. (Donati, J)[3:12-mj-00016-CMK]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>DETENTION ORDER as to Mario Alfonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]DETENTION ORDER as to Mario Alfonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-27</dateIssued>
+  <docketText>DETENTION ORDER as to Mario Alfonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]DETENTION ORDER as to Mario Alfonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>DETENTION ORDER as to Sergio Alonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-27</dateIssued>
+  <docketText>DETENTION ORDER as to Sergio Alonso Madrigal-Felix signed by Magistrate Judge Gregory G. Hollows on 7/27/12. (Kaminski, H)[3:12-mj-00016-CMK]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>STIPULATION and ORDER as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Judge William B. Shubb on 9/10/2012 CONTINUING the Status Conference to 10/9/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb; EXCLUDING TIME as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: XT4 Start: 7/17/2012 Stop: 10/9/2012. (Michel, G)STIPULATION and ORDER as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Judge William B. Shubb on 9/10/2012 CONTINUING the Status Conference to 10/9/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb; EXCLUDING TIME as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: XT4 Start: 7/17/2012 Stop: 10/9/2012. (Michel, G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-09-11</dateIssued>
+  <docketText>STIPULATION and ORDER as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Judge William B. Shubb on 9/10/2012 CONTINUING the Status Conference to 10/9/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb; EXCLUDING TIME as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: XT4 Start: 7/17/2012 Stop: 10/9/2012. (Michel, G)STIPULATION and ORDER as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Judge William B. Shubb on 9/10/2012 CONTINUING the Status Conference to 10/9/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb; EXCLUDING TIME as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: XT4 Start: 7/17/2012 Stop: 10/9/2012. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge William B. Shubb on 10/10/12 CONTINUING the Status Conference as to both defendants to 11/05/12 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. TIME EXCLUDED: 10/09/12-11/05/12. (Benson, A.)STIPULATION and ORDER signed by Judge William B. Shubb on 10/10/12 CONTINUING the Status Conference as to both defendants to 11/05/12 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. TIME EXCLUDED: 10/09/12-11/05/12. (Benson, A.)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-10-11</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge William B. Shubb on 10/10/12 CONTINUING the Status Conference as to both defendants to 11/05/12 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. TIME EXCLUDED: 10/09/12-11/05/12. (Benson, A.)STIPULATION and ORDER signed by Judge William B. Shubb on 10/10/12 CONTINUING the Status Conference as to both defendants to 11/05/12 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. TIME EXCLUDED: 10/09/12-11/05/12. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>STIPULATION and ORDER 21 signed by Judge William B. Shubb on 10/23/12; The Status Conference is reset for 11/19/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: T4 Start: 10/23/12 Stop: 11/19/12. (Matson, R)STIPULATION and ORDER 21 signed by Judge William B. Shubb on 10/23/12; The Status Conference is reset for 11/19/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: T4 Start: 10/23/12 Stop: 11/19/12. (Matson, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-10-24</dateIssued>
+  <docketText>STIPULATION and ORDER 21 signed by Judge William B. Shubb on 10/23/12; The Status Conference is reset for 11/19/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: T4 Start: 10/23/12 Stop: 11/19/12. (Matson, R)STIPULATION and ORDER 21 signed by Judge William B. Shubb on 10/23/12; The Status Conference is reset for 11/19/2012 at 09:30 AM in Courtroom 5 (WBS) before Judge William B. Shubb. Excludable started as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix: T4 Start: 10/23/12 Stop: 11/19/12. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE signed by Senior Judge William B. Shubb on 12/28/12 as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix re 30 Application. (Matson, R)PRELIMINARY ORDER OF FORFEITURE signed by Senior Judge William B. Shubb on 12/28/12 as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix re 30 Application. (Matson, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE signed by Senior Judge William B. Shubb on 12/28/12 as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix re 30 Application. (Matson, R)PRELIMINARY ORDER OF FORFEITURE signed by Senior Judge William B. Shubb on 12/28/12 as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix re 30 Application. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Sergio Alonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/11/2013. (Michel, G)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-11</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Sergio Alonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/11/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/11/2013. (Michel, G)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-03-11</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/11/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/14/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/14/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Sergio Alonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/14/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Sergio Alonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/14/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00291-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Madrigal-Felix et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/25/13. (Kaminski, H)FINAL ORDER OF FORFEITURE as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/25/13. (Kaminski, H)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00291-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f96b77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00291_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00291/USCOURTS-caed-2_12-cr-00291-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00291/pdf/USCOURTS-caed-2_12-cr-00291-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00291; USA v. Madrigal-Felix et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00291-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/25/13. (Kaminski, H)FINAL ORDER OF FORFEITURE as to Sergio Alonso Madrigal-Felix, Mario Alfonso Madrigal-Felix signed by Senior Judge William B. Shubb on 3/25/13. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,392 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68882">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126</identifier>
+<identifier type="local">P0b002ee186c68882</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-4_10-cv-40126</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_10-cv-40126</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:10-cv-40126</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Beckman" lastName="Beckman" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Guy" fullName="Guy Glodis" lastName="Glodis" role="Defendant"></party>
+ <party fullName="Hall" lastName="Hall" role="Defendant"></party>
+ <party fullName="J.D. Early, Jr." lastName="J.D. Early, Jr." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Landgren" lastName="Landgren" role="Defendant"></party>
+ <party fullName="Medical Provider" lastName="Medical Provider" role="Defendant"></party>
+ <party fullName="Michael Johnson" lastName="Michael Johnson" role="Plaintiff"></party>
+ <party firstName="Wayne" fullName="Wayne Thompson" lastName="Thompson" role="Plaintiff"></party>
+ <party fullName="Worcester County" lastName="Worcester County" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Thompson v. Early et al</title>
+ <partNumber>4:10-cv-40126</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:10-cv-40126;10-40126</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Worcester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Beckman</displayForm>
+ <namePart type="family">Beckman</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guy Glodis</displayForm>
+ <namePart type="family">Glodis</namePart>
+ <namePart type="given">Guy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.D. Early, Jr.</displayForm>
+ <namePart type="family">J.D. Early, Jr.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Landgren</displayForm>
+ <namePart type="family">Landgren</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Medical Provider</displayForm>
+ <namePart type="family">Medical Provider</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Johnson</displayForm>
+ <namePart type="family">Michael Johnson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne Thompson</displayForm>
+ <namePart type="family">Thompson</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Worcester County</displayForm>
+ <namePart type="family">Worcester County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_10-cv-40126</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:10-cv-40126</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Beckman" lastName="Beckman" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Guy" fullName="Guy Glodis" lastName="Glodis" role="Defendant"></party>
+ <party fullName="Hall" lastName="Hall" role="Defendant"></party>
+ <party fullName="J.D. Early, Jr." lastName="J.D. Early, Jr." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Landgren" lastName="Landgren" role="Defendant"></party>
+ <party fullName="Medical Provider" lastName="Medical Provider" role="Defendant"></party>
+ <party fullName="Michael Johnson" lastName="Michael Johnson" role="Plaintiff"></party>
+ <party firstName="Wayne" fullName="Wayne Thompson" lastName="Thompson" role="Plaintiff"></party>
+ <party fullName="Worcester County" lastName="Worcester County" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-0/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered granting 16 Motion for More Definite Statement; granting 20 Motion to Dismiss for Lack of Jurisdiction; and denying 22 Motion to Compel. (Castles, Martin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c744cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-0</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-01</dateIssued>
+  <docketText>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered granting 16 Motion for More Definite Statement; granting 20 Motion to Dismiss for Lack of Jurisdiction; and denying 22 Motion to Compel. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-1/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered denying 35 Motion to Dismiss and denying 37 Motion for Discovery. (Castles, Martin)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c744c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-1</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-10-11</dateIssued>
+  <docketText>Judge F. Dennis Saylor, IV: MEMORANDUM AND ORDER entered denying 35 Motion to Dismiss and denying 37 Motion for Discovery. (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-2/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Magistrate Judge David H. Hennessy: ORDER entered denying 69 Motion for Sanctions. (Belpedio, Lisa)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74458</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-2</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-05-31</dateIssued>
+  <docketText>Magistrate Judge David H. Hennessy: ORDER entered denying 69 Motion for Sanctions. (Belpedio, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-3/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Magistrate Judge David H. Hennessy: ORDER entered granting in part and denying in part 79 Motion for appointment of an Investigator and assistance with service of process by Wayne Thompson. &quot;Within 21 days of the date of this Order, the Worcester County Sheriffs Department shall submit, ex parte and under seal, the last known address at which Defendant Hall may be personally served.&quot; (Belpedio, Lisa)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74456</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-3</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-07-15</dateIssued>
+  <docketText>Magistrate Judge David H. Hennessy: ORDER entered granting in part and denying in part 79 Motion for appointment of an Investigator and assistance with service of process by Wayne Thompson. &quot;Within 21 days of the date of this Order, the Worcester County Sheriffs Department shall submit, ex parte and under seal, the last known address at which Defendant Hall may be personally served.&quot; (Belpedio, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-4/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Magistrate Judge David H. Hennessy: ORDER entered granting 86 Motion to Substitute Party. Beckman added. John Doe (Correctional Officer) terminated (Belpedio, Lisa)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c744ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-4</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-10-02</dateIssued>
+  <docketText>Magistrate Judge David H. Hennessy: ORDER entered granting 86 Motion to Substitute Party. Beckman added. John Doe (Correctional Officer) terminated (Belpedio, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-5/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>Magistrate Judge David H. Hennessy: ORDER entered re: Service on C.O Beckman. (Belpedio, Lisa)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c74457</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-5</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-11-04</dateIssued>
+  <docketText>Magistrate Judge David H. Hennessy: ORDER entered re: Service on C.O Beckman. (Belpedio, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_10-cv-40126-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-6/mods.xml">
+ <titleInfo>
+  <title>Thompson v. Early et al</title>
+  <subTitle>District Judge Timothy S Hillman: ORDER entered denying 74 Motion for Entry of Judgment under Rule 54(b). (Castles, Martin)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_10-cv-40126-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c744c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-6</identifier>
+ <identifier type="former granule identifier">mad-4_10-cv-40126_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_10-cv-40126/USCOURTS-mad-4_10-cv-40126-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_10-cv-40126/pdf/USCOURTS-mad-4_10-cv-40126-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:10-cv-40126; Thompson v. Early et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_10-cv-40126-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>District Judge Timothy S Hillman: ORDER entered denying 74 Motion for Entry of Judgment under Rule 54(b). (Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+</mods>

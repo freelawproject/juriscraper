@@ -1,0 +1,427 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813cdef4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310</identifier>
+<identifier type="local">P0b002ee1813cdef4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-5_09-cv-00310</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_09-cv-00310</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:09-cv-00310</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="ANNE" fullName="ANNE BAEZ" lastName="BAEZ" role="Plaintiff"></party>
+ <party firstName="MARY" fullName="MARY ANN CIARLONE" lastName="CIARLONE" middleName="ANN" role="Plaintiff"></party>
+ <party fullName="CITY OF READING" lastName="CITY OF READING" role="Defendant"></party>
+ <party firstName="ORAZIO" fullName="ORAZIO GERBINO" lastName="GERBINO" role="Plaintiff"></party>
+ <party firstName="RYAN" fullName="RYAN HOTTENSTINE" lastName="HOTTENSTINE" role="Defendant"></party>
+ <party firstName="JATINDER" fullName="JATINDER SINGH KHOKHAR" lastName="KHOKHAR" middleName="SINGH" role="Defendant"></party>
+ <party firstName="IRENE" fullName="IRENE LORA" lastName="LORA" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS MCMAHON" lastName="MCMAHON" role="Defendant"></party>
+ <party firstName="JAMES" fullName="JAMES ORRS" lastName="ORRS" role="Defendant"></party>
+ <party firstName="BRAD" fullName="BRAD REINHART" lastName="REINHART" role="Defendant"></party>
+ <party firstName="WALLACE" fullName="WALLACE S. SCOTT" lastName="SCOTT" middleName="S." role="Movant"></party>
+</extension>
+<titleInfo>
+ <title>CIARLONE et al v. CITY OF READING</title>
+ <partNumber>5:09-cv-00310</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:09-cv-00310;09-310</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Allentown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ANNE BAEZ</displayForm>
+ <namePart type="family">BAEZ</namePart>
+ <namePart type="given">ANNE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MARY ANN CIARLONE</displayForm>
+ <namePart type="family">CIARLONE</namePart>
+ <namePart type="given">MARY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CITY OF READING</displayForm>
+ <namePart type="family">CITY OF READING</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ORAZIO GERBINO</displayForm>
+ <namePart type="family">GERBINO</namePart>
+ <namePart type="given">ORAZIO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>RYAN HOTTENSTINE</displayForm>
+ <namePart type="family">HOTTENSTINE</namePart>
+ <namePart type="given">RYAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JATINDER SINGH KHOKHAR</displayForm>
+ <namePart type="family">KHOKHAR</namePart>
+ <namePart type="given">JATINDER</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IRENE LORA</displayForm>
+ <namePart type="family">LORA</namePart>
+ <namePart type="given">IRENE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS MCMAHON</displayForm>
+ <namePart type="family">MCMAHON</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAMES ORRS</displayForm>
+ <namePart type="family">ORRS</namePart>
+ <namePart type="given">JAMES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BRAD REINHART</displayForm>
+ <namePart type="family">REINHART</namePart>
+ <namePart type="given">BRAD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>WALLACE S. SCOTT</displayForm>
+ <namePart type="family">SCOTT</namePart>
+ <namePart type="given">WALLACE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_09-cv-00310</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:09-cv-00310</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="ANNE" fullName="ANNE BAEZ" lastName="BAEZ" role="Plaintiff"></party>
+ <party firstName="MARY" fullName="MARY ANN CIARLONE" lastName="CIARLONE" middleName="ANN" role="Plaintiff"></party>
+ <party fullName="CITY OF READING" lastName="CITY OF READING" role="Defendant"></party>
+ <party firstName="ORAZIO" fullName="ORAZIO GERBINO" lastName="GERBINO" role="Plaintiff"></party>
+ <party firstName="RYAN" fullName="RYAN HOTTENSTINE" lastName="HOTTENSTINE" role="Defendant"></party>
+ <party firstName="JATINDER" fullName="JATINDER SINGH KHOKHAR" lastName="KHOKHAR" middleName="SINGH" role="Defendant"></party>
+ <party firstName="IRENE" fullName="IRENE LORA" lastName="LORA" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS MCMAHON" lastName="MCMAHON" role="Defendant"></party>
+ <party firstName="JAMES" fullName="JAMES ORRS" lastName="ORRS" role="Defendant"></party>
+ <party firstName="BRAD" fullName="BRAD REINHART" lastName="REINHART" role="Defendant"></party>
+ <party firstName="WALLACE" fullName="WALLACE S. SCOTT" lastName="SCOTT" middleName="S." role="Movant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-0/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM/OPINION THAT THE MOTION TO QUASH AND MOTION FOR PROTECTIVE ORDER WILL BE GRANTED. SIGNED BY MAGISTRATE JUDGE HENRY S. PERKIN ON 10/28/09. 10/29/09 ENTERED AND COPIES E-MAILED.(ky, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad5af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-0</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-10-28</dateIssued>
+  <docketText>MEMORANDUM/OPINION THAT THE MOTION TO QUASH AND MOTION FOR PROTECTIVE ORDER WILL BE GRANTED. SIGNED BY MAGISTRATE JUDGE HENRY S. PERKIN ON 10/28/09. 10/29/09 ENTERED AND COPIES E-MAILED.(ky, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-1/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM/ORDER THAT THE MOTION TO QUASH A SUBPOENA AND FOR PROTECTIVE ORDER IS GRANTED, AND PLAINTIFFS AND ALL OTHER PARTIES ARE BARRED FROM SERVING ANY OTHER DISCOVERY REQUESTS UPON JUDGE SCOTT RELATED TO THIS MATTER. SIGNED BY MAGISTRATE JUDGE HENRY S. PERKIN ON 10/28/09. 10/29/09 ENTERED AND COPIES E-MAILED.(ky, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad7a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-1</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-10-28</dateIssued>
+  <docketText>MEMORANDUM/ORDER THAT THE MOTION TO QUASH A SUBPOENA AND FOR PROTECTIVE ORDER IS GRANTED, AND PLAINTIFFS AND ALL OTHER PARTIES ARE BARRED FROM SERVING ANY OTHER DISCOVERY REQUESTS UPON JUDGE SCOTT RELATED TO THIS MATTER. SIGNED BY MAGISTRATE JUDGE HENRY S. PERKIN ON 10/28/09. 10/29/09 ENTERED AND COPIES E-MAILED.(ky, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-2/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 11/18/09. 11/18/09 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad5b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-2</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-11-18</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 11/18/09. 11/18/09 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-3/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTION TO DISMISS IS DENIED. AN ANSWER TO THE COMPLAINT SHALL BE FILED WITHIN FOURTEEN (14) DAYS OF THIS ORDER. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 11/18/09. 11/18/09 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad7a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-3</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-11-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS&apos; MOTION TO DISMISS IS DENIED. AN ANSWER TO THE COMPLAINT SHALL BE FILED WITHIN FOURTEEN (14) DAYS OF THIS ORDER. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 11/18/09. 11/18/09 ENTERED AND COPIES MAILED, E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-4/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad5ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-4</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-5/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS, JATINDER KHOKHAR, RYAN HOTTENSTEIN, AND THOMAS MCMAHON&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad7a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-5</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS, JATINDER KHOKHAR, RYAN HOTTENSTEIN, AND THOMAS MCMAHON&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-6/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad7a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-6</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_09-cv-00310-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-7/mods.xml">
+ <titleInfo>
+  <title>CIARLONE et al v. CITY OF READING</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANTS BRAD REINHART, JAMES ORRS, AND THE CITY OF READING&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED IN PART AND DENIED IN PART. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_09-cv-00310-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814ad7a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-7</identifier>
+ <identifier type="former granule identifier">paed-5_09-cv-00310_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_09-cv-00310/USCOURTS-paed-5_09-cv-00310-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_09-cv-00310/pdf/USCOURTS-paed-5_09-cv-00310-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-00310; CIARLONE et al v. CITY OF READING; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_09-cv-00310-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANTS BRAD REINHART, JAMES ORRS, AND THE CITY OF READING&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED IN PART AND DENIED IN PART. SIGNED BY HONORABLE LAWRENCE F. STENGEL ON 1/20/11. 1/21/11 ENTERED AND COPIES E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+</mods>

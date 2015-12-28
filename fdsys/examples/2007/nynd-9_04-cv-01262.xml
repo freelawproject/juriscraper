@@ -1,0 +1,269 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18115a77d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-01262</identifier>
+<identifier type="local">P0b002ee18115a77d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_04-cv-01262</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-01262</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-01262</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Christopher" fullName="Christopher D. Ariola" lastName="Ariola" middleName="D." role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose L. Massa" lastName="Massa" middleName="L." role="Defendant"></party>
+ <party fullName="Onondaga County Correctional Medical and Behavioral Health Services" lastName="Onondaga County Correctional Medical and Behavioral Health Services" role="Defendant"></party>
+ <party fullName="Onondaga County Sheriff&apos;s Department" lastName="Onondaga County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Schaubroeck" lastName="Schaubroeck" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Marilyn" fullName="Marilyn S. Ward" lastName="Ward" middleName="S." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ariola v. Onondaga County Sheriff&apos;s Department et al</title>
+ <partNumber>9:04-cv-01262</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-01262/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:04-cv-01262;04-1262</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Christopher D. Ariola</displayForm>
+ <namePart type="family">Ariola</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose L. Massa</displayForm>
+ <namePart type="family">Massa</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Onondaga County Correctional Medical and Behavioral Health Services</displayForm>
+ <namePart type="family">Onondaga County Correctional Medical and Behavioral Health Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Onondaga County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Onondaga County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick Schaubroeck</displayForm>
+ <namePart type="family">Schaubroeck</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marilyn S. Ward</displayForm>
+ <namePart type="family">Ward</namePart>
+ <namePart type="given">Marilyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-01262</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-01262</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Christopher" fullName="Christopher D. Ariola" lastName="Ariola" middleName="D." role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose L. Massa" lastName="Massa" middleName="L." role="Defendant"></party>
+ <party fullName="Onondaga County Correctional Medical and Behavioral Health Services" lastName="Onondaga County Correctional Medical and Behavioral Health Services" role="Defendant"></party>
+ <party fullName="Onondaga County Sheriff&apos;s Department" lastName="Onondaga County Sheriff&apos;s Department" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick Schaubroeck" lastName="Schaubroeck" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Marilyn" fullName="Marilyn S. Ward" lastName="Ward" middleName="S." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-01262-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-0/mods.xml">
+ <titleInfo>
+  <title>Ariola v. Onondaga County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER that &quot;County of Onondaga Correctional Medical and Behavioral Health Services&quot; and &quot;Jane Doe&quot; are dismissed as defendants; ORDERED that the Clerk revise the docket to add &quot;Patrick Schaubroek, CW&quot; as a defendant. ORDERED that service of the amended complaint is directed. Signed by Judge David N. Hurd on 5/5/05. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-01262-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142f555</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-0</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-01262_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-01262/pdf/USCOURTS-nynd-9_04-cv-01262-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-01262; Ariola v. Onondaga County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-01262-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-05</dateIssued>
+  <docketText>ORDER that &quot;County of Onondaga Correctional Medical and Behavioral Health Services&quot; and &quot;Jane Doe&quot; are dismissed as defendants; ORDERED that the Clerk revise the docket to add &quot;Patrick Schaubroek, CW&quot; as a defendant. ORDERED that service of the amended complaint is directed. Signed by Judge David N. Hurd on 5/5/05. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-01262-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-1/mods.xml">
+ <titleInfo>
+  <title>Ariola v. Onondaga County Sheriff&apos;s Department et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 22 MOTION to Dismiss filed by defendants be GRANTED and that plaintiff&apos;s amended complaint (dk tno. 10) be dismissed with prejudice and that the Court&apos;s Order of Dismissal indicate that the dismissal constitute a &quot;strike&quot; for purposes of 28 USC 1915(g). ORDERED that 24 MOTION for a subpoena and for direction of service filed by Christopher D. Ariola be denied and denying 23 MOTION to Appoint Counsel filed by Christopher D. Ariola. Objections to R&amp;R due by 9/25/2006 Case Review Deadline 10/2/2006. Signed by Judge George H. Lowe on 8/11/06. (nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-01262-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142f554</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-1</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-01262_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-01262/pdf/USCOURTS-nynd-9_04-cv-01262-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-01262; Ariola v. Onondaga County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-01262-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-09-11</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 22 MOTION to Dismiss filed by defendants be GRANTED and that plaintiff&apos;s amended complaint (dk tno. 10) be dismissed with prejudice and that the Court&apos;s Order of Dismissal indicate that the dismissal constitute a &quot;strike&quot; for purposes of 28 USC 1915(g). ORDERED that 24 MOTION for a subpoena and for direction of service filed by Christopher D. Ariola be denied and denying 23 MOTION to Appoint Counsel filed by Christopher D. Ariola. Objections to R&amp;R due by 9/25/2006 Case Review Deadline 10/2/2006. Signed by Judge George H. Lowe on 8/11/06. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-01262-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-2/mods.xml">
+ <titleInfo>
+  <title>Ariola v. Onondaga County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER that 27 Report and Recommendations is accepted and adopted. ORDERED that 22 Motion to Dismiss is granted; plaintiff&apos;s amended complaint is DISMISSED with prejudice; The dismissal of this action constitutes a strike for purposes of 28 USC Sect. 1915(g). Signed by Judge David N. Hurd on 1/10/07. (nas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-01262-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142f0aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-2</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-01262_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-01262/USCOURTS-nynd-9_04-cv-01262-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-01262/pdf/USCOURTS-nynd-9_04-cv-01262-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-01262; Ariola v. Onondaga County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-01262-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-10</dateIssued>
+  <docketText>ORDER that 27 Report and Recommendations is accepted and adopted. ORDERED that 22 Motion to Dismiss is granted; plaintiff&apos;s amended complaint is DISMISSED with prejudice; The dismissal of this action constitutes a strike for purposes of 28 USC Sect. 1915(g). Signed by Judge David N. Hurd on 1/10/07. (nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

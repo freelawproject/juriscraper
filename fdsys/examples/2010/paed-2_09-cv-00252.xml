@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d14f2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00252</identifier>
+<identifier type="local">P0b002ee1813d14f2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_09-cv-00252</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-00252</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-00252</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party firstName="MICHAEL" fullName="MICHAEL J. ASTRUE" lastName="ASTRUE" middleName="J." role="Defendant"></party>
+ <party firstName="PAUL" fullName="PAUL K. COMISKEY" lastName="COMISKEY" middleName="K." role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION" lastName="SOCIAL SECURITY ADMINISTRATION" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>COMISKEY v. ASTRUE</title>
+ <partNumber>2:09-cv-00252</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00252/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-00252;09-252</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL J. ASTRUE</displayForm>
+ <namePart type="family">ASTRUE</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PAUL K. COMISKEY</displayForm>
+ <namePart type="family">COMISKEY</namePart>
+ <namePart type="given">PAUL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SOCIAL SECURITY ADMINISTRATION</displayForm>
+ <namePart type="family">SOCIAL SECURITY ADMINISTRATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_09-cv-00252</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:09-cv-00252</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <party firstName="MICHAEL" fullName="MICHAEL J. ASTRUE" lastName="ASTRUE" middleName="J." role="Defendant"></party>
+ <party firstName="PAUL" fullName="PAUL K. COMISKEY" lastName="COMISKEY" middleName="K." role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION" lastName="SOCIAL SECURITY ADMINISTRATION" role="Interested Party"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-00252-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-0/mods.xml">
+ <titleInfo>
+  <title>COMISKEY v. ASTRUE</title>
+  <subTitle>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE WILLIAM H. YOHN, JR ON 1/27/2010. 1/27/2010 ENTERED AND COPIES E-MAILED.(ap, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-00252-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c674a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-0</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-00252_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00252/pdf/USCOURTS-paed-2_09-cv-00252-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00252; COMISKEY v. ASTRUE; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-00252-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION. SIGNED BY HONORABLE WILLIAM H. YOHN, JR ON 1/27/2010. 1/27/2010 ENTERED AND COPIES E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_09-cv-00252-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-1/mods.xml">
+ <titleInfo>
+  <title>COMISKEY v. ASTRUE</title>
+  <subTitle>ORDER THAT THE COMMISSIONER&apos;S OBJECTIONS ARE OVERRULED; THE REPORT AND RECOMMENDATION OF US MAGISTRATE JUDGE LINDA K. CARACAPPA IS APPROVED AND ADOPTED; PLAITNIFF&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED IN PART AND DENIED IN PART; THE MATTER IS REMANDED TO THE COMMISSIONER OF SOCIAL SECURITY, ETC.. SIGNED BY HONORABLE WILLIAM H. YOHN, JR ON 1/27/2010. 1/27/2010 ENTERED AND COPIES E-MAILED.(ap, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_09-cv-00252-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c674b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-1</identifier>
+ <identifier type="former granule identifier">paed-2_09-cv-00252_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_09-cv-00252/USCOURTS-paed-2_09-cv-00252-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_09-cv-00252/pdf/USCOURTS-paed-2_09-cv-00252-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-00252; COMISKEY v. ASTRUE; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_09-cv-00252-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-27</dateIssued>
+  <docketText>ORDER THAT THE COMMISSIONER&apos;S OBJECTIONS ARE OVERRULED; THE REPORT AND RECOMMENDATION OF US MAGISTRATE JUDGE LINDA K. CARACAPPA IS APPROVED AND ADOPTED; PLAITNIFF&apos;S MOTION FOR SUMMARY JUDGMENT IS GRANTED IN PART AND DENIED IN PART; THE MATTER IS REMANDED TO THE COMMISSIONER OF SOCIAL SECURITY, ETC.. SIGNED BY HONORABLE WILLIAM H. YOHN, JR ON 1/27/2010. 1/27/2010 ENTERED AND COPIES E-MAILED.(ap, )</docketText>
+</extension>
+</relatedItem>
+</mods>

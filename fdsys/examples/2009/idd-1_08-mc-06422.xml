@@ -1,0 +1,192 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd08c0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-mc-06422</identifier>
+<identifier type="local">P0b002ee180fd08c0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_08-mc-06422</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-mc-06422</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-mc-06422</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType></caseType>
+ <party firstName="Sam" fullName="Sam Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Conroy" lastName="Conroy" role="Defendant"></party>
+ <party fullName="IRS" lastName="IRS" role="Defendant"></party>
+ <party firstName="George" fullName="George K Pragovich" lastName="Pragovich" middleName="K" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Pragovich v. IRS et al</title>
+ <partNumber>1:08-mc-06422</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-mc-06422/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-mc-06422;08-6422</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sam Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Sam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Conroy</displayForm>
+ <namePart type="family">Conroy</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IRS</displayForm>
+ <namePart type="family">IRS</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George K Pragovich</displayForm>
+ <namePart type="family">Pragovich</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-mc-06422</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-mc-06422</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType></caseType>
+ <party firstName="Sam" fullName="Sam Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph Conroy" lastName="Conroy" role="Defendant"></party>
+ <party fullName="IRS" lastName="IRS" role="Defendant"></party>
+ <party firstName="George" fullName="George K Pragovich" lastName="Pragovich" middleName="K" role="Plaintiff"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-mc-06422-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-0/mods.xml">
+ <titleInfo>
+  <title>Pragovich v. IRS et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 1 MOTION to Quash Third Party Summonses. Objections to R&amp;R due by 1/5/2009. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-mc-06422-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181005ed2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-0</identifier>
+ <identifier type="former granule identifier">idd-1_08-mc-06422_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-mc-06422/pdf/USCOURTS-idd-1_08-mc-06422-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-mc-06422; Pragovich v. IRS et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-mc-06422-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-17</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 1 MOTION to Quash Third Party Summonses. Objections to R&amp;R due by 1/5/2009. Signed by Judge Larry M. Boyle. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-mc-06422-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-1/mods.xml">
+ <titleInfo>
+  <title>Pragovich v. IRS et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS for 8 Report and Recommendations; denying 1 Motion to Quash Third Party Summonses. This case is dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-mc-06422-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181005ed1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-1</identifier>
+ <identifier type="former granule identifier">idd-1_08-mc-06422_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-mc-06422/USCOURTS-idd-1_08-mc-06422-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-mc-06422/pdf/USCOURTS-idd-1_08-mc-06422-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-mc-06422; Pragovich v. IRS et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-mc-06422-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-08</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS for 8 Report and Recommendations; denying 1 Motion to Quash Third Party Summonses. This case is dismissed in its entirety. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jlg)</docketText>
+</extension>
+</relatedItem>
+</mods>

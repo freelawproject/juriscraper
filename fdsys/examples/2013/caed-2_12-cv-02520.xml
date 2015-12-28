@@ -1,0 +1,320 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183ff21af">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520</identifier>
+<identifier type="local">P0b002ee183ff21af</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02520</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02520</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02520</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Theodore" fullName="Theodore Heinemann" lastName="Heinemann" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Williams" lastName="Williams" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Heinemann v. Williams</title>
+ <partNumber>2:12-cv-02520</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02520;12-2520</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Theodore Heinemann</displayForm>
+ <namePart type="family">Heinemann</namePart>
+ <namePart type="given">Theodore</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>M. Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02520</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02520</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="Theodore" fullName="Theodore Heinemann" lastName="Heinemann" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Williams" lastName="Williams" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER DENYING WITHOUT PREJUDICE MOTION FOR SUMMARY JUDGMENT 6. Signed by Magistrate Judge Nathanael M. Cousins on 7/2/12. (Attachments: # (1) Certificate/Proof of Service)(lmh, COURT STAFF) (Filed on 7/2/2012) [Transferred from cand on 10/9/2012.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff5490</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-02</dateIssued>
+  <docketText>ORDER DENYING WITHOUT PREJUDICE MOTION FOR SUMMARY JUDGMENT 6. Signed by Magistrate Judge Nathanael M. Cousins on 7/2/12. (Attachments: # (1) Certificate/Proof of Service)(lmh, COURT STAFF) (Filed on 7/2/2012) [Transferred from cand on 10/9/2012.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER TO SHOW CAUSE RE: VENUE TRANSFER. Response due by 9/19/2012. Signed by Judge Nathanael M. Cousins on 8/22/12. (nclc1S, COURT STAFF) (Filed on 8/22/2012) (Additional attachment(s) added on 8/23/2012: # (1) Certificate/Proof of Service) (lmh, COURT STAFF). [Transferred from cand on 10/9/2012.]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE RE: VENUE TRANSFER. Response due by 9/19/2012. Signed by Judge Nathanael M. Cousins on 8/22/12. (nclc1S, COURT STAFF) (Filed on 8/22/2012) (Additional attachment(s) added on 8/23/2012: # (1) Certificate/Proof of Service) (lmh, COURT STAFF). [Transferred from cand on 10/9/2012.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER TRANSFERRING CASE FOR IMPROPER VENUE. Signed by Judge Nathanael Cousins on 10/5/2012. (Attachments: # (1) Certificate/Proof of Service)(lmh, COURT STAFF) (Filed on 10/5/2012) [Transferred from cand on 10/9/2012.]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-05</dateIssued>
+  <docketText>ORDER TRANSFERRING CASE FOR IMPROPER VENUE. Signed by Judge Nathanael Cousins on 10/5/2012. (Attachments: # (1) Certificate/Proof of Service)(lmh, COURT STAFF) (Filed on 10/5/2012) [Transferred from cand on 10/9/2012.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 11/9/12 ORDERING that A Status (Pretrial Scheduling) Conference is SET for Friday 1/4/2013 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Plaintiff shall file and serve his own separate Status Report on or before 12/21/2012, and defendant shall file and serve his own separate Status Report on or before 12/28/2012. (Mena-Sanchez, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 11/9/12 ORDERING that A Status (Pretrial Scheduling) Conference is SET for Friday 1/4/2013 at 10:00 AM in Courtroom 27 (DAD) before Magistrate Judge Dale A. Drozd. Plaintiff shall file and serve his own separate Status Report on or before 12/21/2012, and defendant shall file and serve his own separate Status Report on or before 12/28/2012. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 1/2/2013 ORDERING that the Status (Pretrial Scheduling) Conference set for 1/4/2013 at 10:00 a.m. before the undersigned is VACATED. (Waggoner, D)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 1/2/2013 ORDERING that the Status (Pretrial Scheduling) Conference set for 1/4/2013 at 10:00 a.m. before the undersigned is VACATED. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Dale A. Drozd on 2/1/13 ORDERING plaintiff to SHOW CAUSE in writing within 21 days of the date of this order why this case should not be dismissed for lack of prosecution. Failure to timely file the required writing will result in a recommendation that this case be dismissed. (Meuleman, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-04</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Dale A. Drozd on 2/1/13 ORDERING plaintiff to SHOW CAUSE in writing within 21 days of the date of this order why this case should not be dismissed for lack of prosecution. Failure to timely file the required writing will result in a recommendation that this case be dismissed. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02520-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-6/mods.xml">
+ <titleInfo>
+  <title>(PS) Heinemann v. Williams</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS, recommending that defendant&apos;s 12/24/2012 28 Motion to Dismiss be denied as moot; plaintiff&apos;s claims be dismissed without prejudice due to lack of prosecution; and case be closed, signed by Magistrate Judge Dale A. Drozd on 4/2/2013. These Findings and Recommendations are REFERRED to Senior District Judge Lawrence K. Karlton. Within 14 days after being served with these F/Rs, any party may file written Objections with Court. (Marciel, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02520-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183ff54be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02520_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02520/USCOURTS-caed-2_12-cv-02520-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02520/pdf/USCOURTS-caed-2_12-cv-02520-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02520; (PS) Heinemann v. Williams; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02520-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS, recommending that defendant&apos;s 12/24/2012 28 Motion to Dismiss be denied as moot; plaintiff&apos;s claims be dismissed without prejudice due to lack of prosecution; and case be closed, signed by Magistrate Judge Dale A. Drozd on 4/2/2013. These Findings and Recommendations are REFERRED to Senior District Judge Lawrence K. Karlton. Within 14 days after being served with these F/Rs, any party may file written Objections with Court. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

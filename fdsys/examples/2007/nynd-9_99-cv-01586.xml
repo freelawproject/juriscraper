@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118f367">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01586</identifier>
+<identifier type="local">P0b002ee18118f367</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_99-cv-01586</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_99-cv-01586</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:99-cv-01586</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="James" fullName="James Fullwood" lastName="Fullwood" role="Plaintiff"></party>
+ <party firstName="Glenn" fullName="Glenn Goord" lastName="Goord" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. O&apos;Rourke" lastName="O&apos;Rourke" role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Portuondo" lastName="Portuondo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert N. Vosper Jr." generation="Jr." lastName="Vosper" middleName="N." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fullwood v. Goord, et al</title>
+ <partNumber>9:99-cv-01586</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01586/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:99-cv-01586;99-1586</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James Fullwood</displayForm>
+ <namePart type="family">Fullwood</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Goord</displayForm>
+ <namePart type="family">Goord</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lt. O&apos;Rourke</displayForm>
+ <namePart type="family">O&apos;Rourke</namePart>
+ <namePart type="given">Lt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonard Portuondo</displayForm>
+ <namePart type="family">Portuondo</namePart>
+ <namePart type="given">Leonard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert N. Vosper Jr.</displayForm>
+ <namePart type="family">Vosper</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_99-cv-01586</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:99-cv-01586</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="James" fullName="James Fullwood" lastName="Fullwood" role="Plaintiff"></party>
+ <party firstName="Glenn" fullName="Glenn Goord" lastName="Goord" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. O&apos;Rourke" lastName="O&apos;Rourke" role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Portuondo" lastName="Portuondo" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert N. Vosper Jr." generation="Jr." lastName="Vosper" middleName="N." role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_99-cv-01586-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01586/USCOURTS-nynd-9_99-cv-01586-0/mods.xml">
+ <titleInfo>
+  <title>Fullwood v. Goord, et al</title>
+  <subTitle>MEMORANDUM OPINION granting 112 Motion for Summary Judgment. Signed by Judge Lyle E. Strom on 1/9/07. (rjb, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_99-cv-01586-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814358ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01586/USCOURTS-nynd-9_99-cv-01586-0</identifier>
+ <identifier type="former granule identifier">nynd-9_99-cv-01586_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01586/USCOURTS-nynd-9_99-cv-01586-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01586/pdf/USCOURTS-nynd-9_99-cv-01586-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:99-cv-01586; Fullwood v. Goord, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_99-cv-01586-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-09</dateIssued>
+  <docketText>MEMORANDUM OPINION granting 112 Motion for Summary Judgment. Signed by Judge Lyle E. Strom on 1/9/07. (rjb, )</docketText>
+</extension>
+</relatedItem>
+</mods>

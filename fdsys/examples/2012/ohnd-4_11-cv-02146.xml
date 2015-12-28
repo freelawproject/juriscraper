@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea0bf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_11-cv-02146</identifier>
+<identifier type="local">P0b002ee1818ea0bf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_11-cv-02146</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_11-cv-02146</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:11-cv-02146</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="M." fullName="M. Burns" lastName="Burns" role="Respondent"></party>
+ <party firstName="Robert" fullName="Robert L. Farley" lastName="Farley" middleName="L." role="Respondent"></party>
+ <party firstName="Donell" fullName="Donell Raglin" lastName="Raglin" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Raglin v. Farley et al</title>
+ <partNumber>4:11-cv-02146</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_11-cv-02146/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cv-02146;11-2146</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>M. Burns</displayForm>
+ <namePart type="family">Burns</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Robert L. Farley</displayForm>
+ <namePart type="family">Farley</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Donell Raglin</displayForm>
+ <namePart type="family">Raglin</namePart>
+ <namePart type="given">Donell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_11-cv-02146</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:11-cv-02146</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus (federa</cause>
+ <party firstName="M." fullName="M. Burns" lastName="Burns" role="Respondent"></party>
+ <party firstName="Robert" fullName="Robert L. Farley" lastName="Farley" middleName="L." role="Respondent"></party>
+ <party firstName="Donell" fullName="Donell Raglin" lastName="Raglin" role="Petitioner"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_11-cv-02146-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_11-cv-02146/USCOURTS-ohnd-4_11-cv-02146-0/mods.xml">
+ <titleInfo>
+  <title>Raglin v. Farley et al</title>
+  <subTitle>kton&quot;), and F.C.I. Elkton Unit Manager M. Burns. Petitioner, who was incarcerated at F.C.I. Elkton when he filed this Petition, asserts the Respondents are depriving him of his &quot;Fourteenth Amendment Due Process Liberty Interest&quot; underMemorandum Opinion and Order: Pro se petitioner Donell Raglin filed the above-captioned habeas corpus action under 28 U.S.C. § 2241 against Robert L. Farley, Warden at the Federal Correctional Institution in Elkton, Ohio (&quot;F.C.I. El the Second Chance Act of 2008 (&quot;the Act&quot;) by failing to provide more than six months placement in a Residential Re-entry Center (RRC) or home confinement. The Petition is dismissed as moot. The Court certifies an appeal from this decision could not be taken in good faith. Judge Patricia A. Gaughan on 1/12/12. (LC,S) re 1 Modified text on 1/13/2012 (B,B).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_11-cv-02146-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818fb0f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_11-cv-02146/USCOURTS-ohnd-4_11-cv-02146-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_11-cv-02146_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_11-cv-02146/USCOURTS-ohnd-4_11-cv-02146-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_11-cv-02146/pdf/USCOURTS-ohnd-4_11-cv-02146-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-02146; Raglin v. Farley et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_11-cv-02146-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>kton&quot;), and F.C.I. Elkton Unit Manager M. Burns. Petitioner, who was incarcerated at F.C.I. Elkton when he filed this Petition, asserts the Respondents are depriving him of his &quot;Fourteenth Amendment Due Process Liberty Interest&quot; underMemorandum Opinion and Order: Pro se petitioner Donell Raglin filed the above-captioned habeas corpus action under 28 U.S.C. § 2241 against Robert L. Farley, Warden at the Federal Correctional Institution in Elkton, Ohio (&quot;F.C.I. El the Second Chance Act of 2008 (&quot;the Act&quot;) by failing to provide more than six months placement in a Residential Re-entry Center (RRC) or home confinement. The Petition is dismissed as moot. The Court certifies an appeal from this decision could not be taken in good faith. Judge Patricia A. Gaughan on 1/12/12. (LC,S) re 1 Modified text on 1/13/2012 (B,B).</docketText>
+</extension>
+</relatedItem>
+</mods>

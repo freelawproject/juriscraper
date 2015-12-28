@@ -1,0 +1,183 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8198e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-06058</identifier>
+<identifier type="local">P0b002ee180e8198e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-10-06058</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-06058</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-06058</caseNumber>
+ <party firstName="Norman" fullName="Norman E. Rouse" lastName="Rouse" middleName="E." role="Not Party"></party>
+ <party fullName="Standard Insurance Company" lastName="Standard Insurance Company" role="Appellant"></party>
+ <party firstName="Joseph" fullName="Joseph Warren Terry" lastName="Terry" middleName="Warren" role="Appellee"></party>
+ <party firstName="Joseph" fullName="Joseph Warren Terry" lastName="Terry" middleName="Warren" role="Not Party"></party>
+</extension>
+<titleInfo>
+ <title>Joseph Terry v. Standard Insurance Company</title>
+ <partNumber>10-06058</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-06058/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">10-06058;10-6058</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Norman E. Rouse</displayForm>
+ <namePart type="family">Rouse</namePart>
+ <namePart type="given">Norman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<name type="personal">
+ <displayForm>Standard Insurance Company</displayForm>
+ <namePart type="family">Standard Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Warren Terry</displayForm>
+ <namePart type="family">Terry</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Warren Terry</displayForm>
+ <namePart type="family">Terry</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Not Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-06058</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-06058</caseNumber>
+ <party firstName="Norman" fullName="Norman E. Rouse" lastName="Rouse" middleName="E." role="Not Party"></party>
+ <party fullName="Standard Insurance Company" lastName="Standard Insurance Company" role="Appellant"></party>
+ <party firstName="Joseph" fullName="Joseph Warren Terry" lastName="Terry" middleName="Warren" role="Appellee"></party>
+ <party firstName="Joseph" fullName="Joseph Warren Terry" lastName="Terry" middleName="Warren" role="Not Party"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-10-06058-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-0/mods.xml">
+ <titleInfo>
+  <title>Joseph Terry v. Standard Insurance Company</title>
+  <subTitle>OPINION FILED - THE COURT: THOMAS L. SALADINO, ROBERT J. KRESSEL and CHARLES L. NAIL, JR.. Robert Kressel, Authoring Judge DISSENT BY: THOMAS L. SALADINO, (PUBLISHED) [3749763] [10-6058]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-10-06058-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e852ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-0</identifier>
+ <identifier type="former granule identifier">ca8-10-06058_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-06058/pdf/USCOURTS-ca8-10-06058-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 10-06058; Joseph Terry v. Standard Insurance Company; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-10-06058-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>OPINION FILED - THE COURT: THOMAS L. SALADINO, ROBERT J. KRESSEL and CHARLES L. NAIL, JR.. Robert Kressel, Authoring Judge DISSENT BY: THOMAS L. SALADINO, (PUBLISHED) [3749763] [10-6058]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-10-06058-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-1/mods.xml">
+ <titleInfo>
+  <title>Joseph Terry v. Standard Insurance Company</title>
+  <subTitle>&lt;b&gt;CORRECTED OPINION FILED&lt;/b&gt; - THE COURT: THOMAS L. SALADINO, ROBERT J. KRESSEL and CHARLES L. NAIL, JR. &lt;br&gt; Original Opinion filed on: 01/28/2011. Correction to opinion: On the last sentence of the first full paragraph on page 3, the word &quot;court&quot; was inserted after the word &quot;bankruptcy&quot;, so that the sentence now reads &quot;After the bankruptcy court noted its concern...&quot; [3750014] [10-6058]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-10-06058-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e852ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-1</identifier>
+ <identifier type="former granule identifier">ca8-10-06058_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-06058/USCOURTS-ca8-10-06058-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-06058/pdf/USCOURTS-ca8-10-06058-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 10-06058; Joseph Terry v. Standard Insurance Company; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-10-06058-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>&lt;b&gt;CORRECTED OPINION FILED&lt;/b&gt; - THE COURT: THOMAS L. SALADINO, ROBERT J. KRESSEL and CHARLES L. NAIL, JR. &lt;br&gt; Original Opinion filed on: 01/28/2011. Correction to opinion: On the last sentence of the first full paragraph on page 3, the word &quot;court&quot; was inserted after the word &quot;bankruptcy&quot;, so that the sentence now reads &quot;After the bankruptcy court noted its concern...&quot; [3750014] [10-6058]</docketText>
+</extension>
+</relatedItem>
+</mods>

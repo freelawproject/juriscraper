@@ -1,0 +1,205 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811662c8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00095</identifier>
+<identifier type="local">P0b002ee1811662c8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_06-cv-00095</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00095</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00095</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="BGA, LLC" lastName="BGA, LLC" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis Kirschner" lastName="Kirschner" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Spada" lastName="Spada" role="Defendant"></party>
+ <party fullName="Ulster County" lastName="Ulster County" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BGA, LLC v. Ulster County et al</title>
+ <partNumber>1:06-cv-00095</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00095/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-00095;06-095</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BGA, LLC</displayForm>
+ <namePart type="family">BGA, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Louis Kirschner</displayForm>
+ <namePart type="family">Kirschner</namePart>
+ <namePart type="given">Louis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albert Spada</displayForm>
+ <namePart type="family">Spada</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ulster County</displayForm>
+ <namePart type="family">Ulster County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_06-cv-00095</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:06-cv-00095</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="BGA, LLC" lastName="BGA, LLC" role="Plaintiff"></party>
+ <party firstName="Louis" fullName="Louis Kirschner" lastName="Kirschner" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Spada" lastName="Spada" role="Defendant"></party>
+ <party fullName="Ulster County" lastName="Ulster County" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00095-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-0/mods.xml">
+ <titleInfo>
+  <title>BGA, LLC v. Ulster County et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER, that the plaintiff&apos;s 19 Motion for Summary Judgment is DENIED as moot; that the complaint is DISMISSED IN ITS ENTIRETY (Dkt. No. 1) because the court lacks subject matter jurisdiction over the case. Signed by Judge Gary L. Sharpe on 8/22/2007. (jel, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00095-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e4768</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-0</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00095_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00095/pdf/USCOURTS-nynd-1_06-cv-00095-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00095; BGA, LLC v. Ulster County et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00095-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-08-23</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER, that the plaintiff&apos;s 19 Motion for Summary Judgment is DENIED as moot; that the complaint is DISMISSED IN ITS ENTIRETY (Dkt. No. 1) because the court lacks subject matter jurisdiction over the case. Signed by Judge Gary L. Sharpe on 8/22/2007. (jel, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_06-cv-00095-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-1/mods.xml">
+ <titleInfo>
+  <title>BGA, LLC v. Ulster County et al</title>
+  <subTitle>MEMORANDUM-DECISION and ORDER, that plaintiffs&apos; 46 Motion for Reconsideration is GRANTED; that the Court&apos;s August 23, 2007 Memorandum-Decision and Order is AFFIRMED. Signed by Judge Gary L. Sharpe on 1/7/2008. (jel, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_06-cv-00095-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813e4767</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-1</identifier>
+ <identifier type="former granule identifier">nynd-1_06-cv-00095_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_06-cv-00095/USCOURTS-nynd-1_06-cv-00095-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_06-cv-00095/pdf/USCOURTS-nynd-1_06-cv-00095-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-00095; BGA, LLC v. Ulster County et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_06-cv-00095-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-07</dateIssued>
+  <docketText>MEMORANDUM-DECISION and ORDER, that plaintiffs&apos; 46 Motion for Reconsideration is GRANTED; that the Court&apos;s August 23, 2007 Memorandum-Decision and Order is AFFIRMED. Signed by Judge Gary L. Sharpe on 1/7/2008. (jel, )</docketText>
+</extension>
+</relatedItem>
+</mods>

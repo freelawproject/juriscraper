@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d58a4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_06-cv-00071</identifier>
+<identifier type="local">P0b002ee1812d58a4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-3_06-cv-00071</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_06-cv-00071</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:06-cv-00071</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="MICHAEL" fullName="MICHAEL J ASTRUE" lastName="ASTRUE" middleName="J" role="Defendant"></party>
+ <party firstName="Ursula" fullName="Ursula Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Brianna" fullName="Brianna M. Lee" lastName="Lee" middleName="M." role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+</extension>
+<titleInfo>
+ <title>Johnson v. Astrue</title>
+ <partNumber>3:06-cv-00071</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_06-cv-00071/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:06-cv-00071;06-071</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Athens</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL J ASTRUE</displayForm>
+ <namePart type="family">ASTRUE</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ursula Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Ursula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brianna M. Lee</displayForm>
+ <namePart type="family">Lee</namePart>
+ <namePart type="given">Brianna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SOCIAL SECURITY ADMINISTRATION (NOTICE)</displayForm>
+ <namePart type="family">SOCIAL SECURITY ADMINISTRATION (NOTICE)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_06-cv-00071</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:06-cv-00071</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:405 Review of HHS Decision (SSID)</cause>
+ <party firstName="MICHAEL" fullName="MICHAEL J ASTRUE" lastName="ASTRUE" middleName="J" role="Defendant"></party>
+ <party firstName="Ursula" fullName="Ursula Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Brianna" fullName="Brianna M. Lee" lastName="Lee" middleName="M." role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_06-cv-00071-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_06-cv-00071/USCOURTS-gamd-3_06-cv-00071-0/mods.xml">
+ <titleInfo>
+  <title>Johnson v. Astrue</title>
+  <subTitle>ORDER adopting Report and Recommendations re 11 Report and Recommendations.Ordered by Judge Clay D. Land on 1/11/2008. (ggs)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_06-cv-00071-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812f9d20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_06-cv-00071/USCOURTS-gamd-3_06-cv-00071-0</identifier>
+ <identifier type="former granule identifier">gamd-3_06-cv-00071_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_06-cv-00071/USCOURTS-gamd-3_06-cv-00071-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_06-cv-00071/pdf/USCOURTS-gamd-3_06-cv-00071-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:06-cv-00071; Johnson v. Astrue; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_06-cv-00071-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-11</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 11 Report and Recommendations.Ordered by Judge Clay D. Land on 1/11/2008. (ggs)</docketText>
+</extension>
+</relatedItem>
+</mods>

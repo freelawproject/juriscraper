@@ -1,0 +1,318 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c3613a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740</identifier>
+<identifier type="local">P0b002ee186c3613a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-00740</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00740</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00740</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="Allied Property and Casualty Insurance Company" lastName="Allied Property and Casualty Insurance Company" role="Plaintiff"></party>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party firstName="Alfonso" fullName="Alfonso Garcia" lastName="Garcia" role="Defendant"></party>
+ <party firstName="Manuel" fullName="Manuel A.P. Gonzalez" lastName="Gonzalez" middleName="A.P." role="Defendant"></party>
+ <party firstName="Jessie" fullName="Jessie Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Hung" lastName="Hung" role="Defendant"></party>
+ <party firstName="Alvin" fullName="Alvin Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Shirley" fullName="Shirley Roberts" lastName="Roberts" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+ <partNumber>2:11-cv-00740</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-00740;11-740</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Allied Property and Casualty Insurance Company</displayForm>
+ <namePart type="family">Allied Property and Casualty Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Allstate Insurance Company</displayForm>
+ <namePart type="family">Allstate Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alfonso Garcia</displayForm>
+ <namePart type="family">Garcia</namePart>
+ <namePart type="given">Alfonso</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Manuel A.P. Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Manuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jessie Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Jessie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albert Hung</displayForm>
+ <namePart type="family">Hung</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alvin Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shirley Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Shirley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-00740</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-00740</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="Allied Property and Casualty Insurance Company" lastName="Allied Property and Casualty Insurance Company" role="Plaintiff"></party>
+ <party fullName="Allstate Insurance Company" lastName="Allstate Insurance Company" role="Defendant"></party>
+ <party firstName="Alfonso" fullName="Alfonso Garcia" lastName="Garcia" role="Defendant"></party>
+ <party firstName="Manuel" fullName="Manuel A.P. Gonzalez" lastName="Gonzalez" middleName="A.P." role="Defendant"></party>
+ <party firstName="Jessie" fullName="Jessie Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Hung" lastName="Hung" role="Defendant"></party>
+ <party firstName="Alvin" fullName="Alvin Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Shirley" fullName="Shirley Roberts" lastName="Roberts" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00740-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-0/mods.xml">
+ <titleInfo>
+  <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 05/27/11 ORDERING that an extension to file the joint status report is GRANTED and the deadline to file the joint status report is Friday, 06/10/11.(Benson, A.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00740-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c5a71a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00740_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/pdf/USCOURTS-caed-2_11-cv-00740-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00740; Allied Property and Casualty Insurance Company v. Roberts et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00740-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-05-31</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Morrison C. England, Jr. on 05/27/11 ORDERING that an extension to file the joint status report is GRANTED and the deadline to file the joint status report is Friday, 06/10/11.(Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00740-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-1/mods.xml">
+ <titleInfo>
+  <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+  <subTitle>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr on 6/20/11: Defendant&apos;s Motion to Dismiss Plaintiff&apos;s Complaint is DENIED 6. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00740-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c5a71b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00740_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/pdf/USCOURTS-caed-2_11-cv-00740-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00740; Allied Property and Casualty Insurance Company v. Roberts et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00740-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-06-21</dateIssued>
+  <docketText>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr on 6/20/11: Defendant&apos;s Motion to Dismiss Plaintiff&apos;s Complaint is DENIED 6. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00740-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-2/mods.xml">
+ <titleInfo>
+  <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+  <subTitle>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr on 6/20/11: Defendants&apos; Motion to Stay is GRANTED 11. Case stayed. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00740-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c5aedf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00740_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/pdf/USCOURTS-caed-2_11-cv-00740-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00740; Allied Property and Casualty Insurance Company v. Roberts et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00740-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-06-21</dateIssued>
+  <docketText>MEMORANDUM and ORDER signed by Judge Morrison C. England, Jr on 6/20/11: Defendants&apos; Motion to Stay is GRANTED 11. Case stayed. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00740-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-3/mods.xml">
+ <titleInfo>
+  <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Chief Judge Morrison C. England, Jr. on 9/12/2013 DENYING 30 Motion to Lift Stay. (Michel, G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00740-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c5a718</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00740_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/pdf/USCOURTS-caed-2_11-cv-00740-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00740; Allied Property and Casualty Insurance Company v. Roberts et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00740-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-09-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Chief Judge Morrison C. England, Jr. on 9/12/2013 DENYING 30 Motion to Lift Stay. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-00740-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-4/mods.xml">
+ <titleInfo>
+  <title>Allied Property and Casualty Insurance Company v. Roberts et al</title>
+  <subTitle>A. Drozd no longer assigned to case 2:13-CV-530. New Case Number: 2:13-CV-530 MCE KJN. (Reader, L)ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2014 ORDERING Relating case(s) 2:11-CV-740 MCE KJN, 2:13-CV-530 MCE DAD REASSIGNING CASE 2:13-CV-530 to Magistrate Judge Kendall J. Newman for all further proceedings. Magistrate Judge Dale</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-00740-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c5a719</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-00740_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-00740/USCOURTS-caed-2_11-cv-00740-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-00740/pdf/USCOURTS-caed-2_11-cv-00740-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-00740; Allied Property and Casualty Insurance Company v. Roberts et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-00740-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>A. Drozd no longer assigned to case 2:13-CV-530. New Case Number: 2:13-CV-530 MCE KJN. (Reader, L)ORDER signed by Chief Judge Morrison C. England, Jr. on 1/3/2014 ORDERING Relating case(s) 2:11-CV-740 MCE KJN, 2:13-CV-530 MCE DAD REASSIGNING CASE 2:13-CV-530 to Magistrate Judge Kendall J. Newman for all further proceedings. Magistrate Judge Dale</docketText>
+</extension>
+</relatedItem>
+</mods>

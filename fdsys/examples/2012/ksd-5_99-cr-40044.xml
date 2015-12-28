@@ -1,0 +1,219 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181b66e87">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_99-cr-40044</identifier>
+<identifier type="local">P0b002ee181b66e87</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_99-cr-40044</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_99-cr-40044</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:99-cr-40044</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Latique" fullName="Latique Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Chandler" lastName="Chandler" role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil W. Chandler III" generation="III" lastName="Chandler" middleName="W." role="Defendant"></party>
+ <party firstName="John" fullName="John Dillinger" lastName="Dillinger" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Ford" lastName="Ford" role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil Johnson" lastName="Johnson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Chandler</title>
+ <partNumber>5:99-cr-40044</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_99-cr-40044/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:99-cr-40044;99-40044</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Latique Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Latique</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher Chandler</displayForm>
+ <namePart type="family">Chandler</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cecil W. Chandler III</displayForm>
+ <namePart type="family">Chandler</namePart>
+ <namePart type="given">Cecil</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Dillinger</displayForm>
+ <namePart type="family">Dillinger</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Ford</displayForm>
+ <namePart type="family">Ford</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cecil Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Cecil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_99-cr-40044</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:99-cr-40044</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Latique" fullName="Latique Brown" lastName="Brown" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher Chandler" lastName="Chandler" role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil W. Chandler III" generation="III" lastName="Chandler" middleName="W." role="Defendant"></party>
+ <party firstName="John" fullName="John Dillinger" lastName="Dillinger" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Ford" lastName="Ford" role="Defendant"></party>
+ <party firstName="Cecil" fullName="Cecil Johnson" lastName="Johnson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_99-cr-40044-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Chandler</title>
+  <subTitle>ORDER denying 133 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 for Cecil W. Chandler, III (1). Signed by District Judge Richard D. Rogers on 1/10/2012.Mailed to pro se party Cecil Chandler by regular mail (meh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_99-cr-40044-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b83333</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-0</identifier>
+ <identifier type="former granule identifier">ksd-5_99-cr-40044_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_99-cr-40044/pdf/USCOURTS-ksd-5_99-cr-40044-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:99-cr-40044; USA v. Chandler; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_99-cr-40044-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER denying 133 Motion to Reduce Sentence re Crack Cocaine Offense - 18:3582 for Cecil W. Chandler, III (1). Signed by District Judge Richard D. Rogers on 1/10/2012.Mailed to pro se party Cecil Chandler by regular mail (meh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_99-cr-40044-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Chandler</title>
+  <subTitle>ORDER as to Cecil W. Chandler, III re 137 Reply to Response to Motion filed by Cecil W. Chandler, III. The court has considered the arguments in defendant&apos;s response to the government&apos;s response to his motion for reduction of sentence. Treating the response as a motion for reconsideration, the motion shall be denied. Signed by District Judge Richard D. Rogers on 1/20/2012.Mailed to pro se party Cecil Chandler by regular mail (meh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_99-cr-40044-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181b83334</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-1</identifier>
+ <identifier type="former granule identifier">ksd-5_99-cr-40044_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_99-cr-40044/USCOURTS-ksd-5_99-cr-40044-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_99-cr-40044/pdf/USCOURTS-ksd-5_99-cr-40044-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:99-cr-40044; USA v. Chandler; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_99-cr-40044-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-20</dateIssued>
+  <docketText>ORDER as to Cecil W. Chandler, III re 137 Reply to Response to Motion filed by Cecil W. Chandler, III. The court has considered the arguments in defendant&apos;s response to the government&apos;s response to his motion for reduction of sentence. Treating the response as a motion for reconsideration, the motion shall be denied. Signed by District Judge Richard D. Rogers on 1/20/2012.Mailed to pro se party Cecil Chandler by regular mail (meh)</docketText>
+</extension>
+</relatedItem>
+</mods>

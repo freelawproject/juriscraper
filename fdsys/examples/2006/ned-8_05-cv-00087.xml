@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a17e3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087</identifier>
+<identifier type="local">P0b002ee1817a17e3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00087</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00087</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00087</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>09:1 U.S. Arbitration Act</cause>
+ <party fullName="NASD Dispute Resolution" lastName="NASD Dispute Resolution" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael J. Riddle" lastName="Riddle" middleName="J." role="Plaintiff"></party>
+ <party fullName="Wachovia Securities" lastName="Wachovia Securities" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Riddle v. Wachovia Securities et al</title>
+ <partNumber>8:05-cv-00087</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00087;05-087</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>NASD Dispute Resolution</displayForm>
+ <namePart type="family">NASD Dispute Resolution</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael J. Riddle</displayForm>
+ <namePart type="family">Riddle</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Wachovia Securities</displayForm>
+ <namePart type="family">Wachovia Securities</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00087</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00087</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>09:1 U.S. Arbitration Act</cause>
+ <party fullName="NASD Dispute Resolution" lastName="NASD Dispute Resolution" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael J. Riddle" lastName="Riddle" middleName="J." role="Plaintiff"></party>
+ <party fullName="Wachovia Securities" lastName="Wachovia Securities" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00087-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-0/mods.xml">
+ <titleInfo>
+  <title>Riddle v. Wachovia Securities et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Riddle&apos;s Motion to Vacate and to Stay Proceedings in the Matter of the Arbitration Between Michael J. Riddle and Wachovia Securities, LLC, No. 03-07914, filing 7 is denied as moot. Wachovia&apos;s Motion to Dismiss Plaintiff&apos;s Complaint, filing 15 is denied as moot Wachovia&apos;s Motion to Strike Plaintiff&apos;s Motion to Vacate, filing 17 is denied as moot. Riddle&apos;s Motion for Leave to File Transcript and Defer Ruling on Plaintiff&apos;s Amended Motion Until It Has Been Fully Submitted, filing 21 is granted to this extent: Riddle is granted leave to submit a transcript of the arbitration proceedings that has been prepared and certified by an independent transcriber. After this transcript has been submitted, the parties will be permitted to file briefs, evidence, and indices of evidence in support of their positions with respect to Riddle&apos;s Amended Motion to Vacate and to Stay Proceedings in the Matter of the Arbitration Between Michael J. Riddle and Wachovia Securities, LLC, No. 03-07914, filing 19 as follows: Riddle&apos;s brief and evidence index shall be filed and served within 20 days after the transcript is filed: Wachovia&apos;s shall have 20 days thereafter to respond; and Riddle may reply within 10 days thereafter. Signed by Judge Richard G. Kopf on 6/29/2005. (GJG, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00087-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832cf2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00087_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/pdf/USCOURTS-ned-8_05-cv-00087-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00087; Riddle v. Wachovia Securities et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00087-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-06-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Riddle&apos;s Motion to Vacate and to Stay Proceedings in the Matter of the Arbitration Between Michael J. Riddle and Wachovia Securities, LLC, No. 03-07914, filing 7 is denied as moot. Wachovia&apos;s Motion to Dismiss Plaintiff&apos;s Complaint, filing 15 is denied as moot Wachovia&apos;s Motion to Strike Plaintiff&apos;s Motion to Vacate, filing 17 is denied as moot. Riddle&apos;s Motion for Leave to File Transcript and Defer Ruling on Plaintiff&apos;s Amended Motion Until It Has Been Fully Submitted, filing 21 is granted to this extent: Riddle is granted leave to submit a transcript of the arbitration proceedings that has been prepared and certified by an independent transcriber. After this transcript has been submitted, the parties will be permitted to file briefs, evidence, and indices of evidence in support of their positions with respect to Riddle&apos;s Amended Motion to Vacate and to Stay Proceedings in the Matter of the Arbitration Between Michael J. Riddle and Wachovia Securities, LLC, No. 03-07914, filing 19 as follows: Riddle&apos;s brief and evidence index shall be filed and served within 20 days after the transcript is filed: Wachovia&apos;s shall have 20 days thereafter to respond; and Riddle may reply within 10 days thereafter. Signed by Judge Richard G. Kopf on 6/29/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00087-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-1/mods.xml">
+ <titleInfo>
+  <title>Riddle v. Wachovia Securities et al</title>
+  <subTitle>ORDER granting 34 Motion to Extend. Plaintiff&apos;s brief and evidence index shall be filed by October 10, 2005. Defendant&apos;s brief and evidence index shall be filed by November 14, 2005. Plaintiff may submit a reply brief by November 30, 2005. Plaintiff&apos;s amended motion to vacate arbitration award filing 19 shall be ripe for decision on December 1, 2005. Signed by Judge Richard G. Kopf on 8/30/2005. (GJG, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00087-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832cf1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00087_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/pdf/USCOURTS-ned-8_05-cv-00087-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00087; Riddle v. Wachovia Securities et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00087-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-08-30</dateIssued>
+  <docketText>ORDER granting 34 Motion to Extend. Plaintiff&apos;s brief and evidence index shall be filed by October 10, 2005. Defendant&apos;s brief and evidence index shall be filed by November 14, 2005. Plaintiff may submit a reply brief by November 30, 2005. Plaintiff&apos;s amended motion to vacate arbitration award filing 19 shall be ripe for decision on December 1, 2005. Signed by Judge Richard G. Kopf on 8/30/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00087-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-2/mods.xml">
+ <titleInfo>
+  <title>Riddle v. Wachovia Securities et al</title>
+  <subTitle>ORDER granting 40 Motion to Withdraw as Attorney. The motion of counsel for defendant Wachovia Securities, filing 40, is granted and the appearance of Robert C. Scremin as counsel of record is withdrawn, effective upon the filing of a certificate of service or affidavit indicating that defendant Wachovia Securities has been served with a copy of this order. Signed by Magistrate Judge David L. Piester on 10/26/2005. (GJG, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00087-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832cf3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00087_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/pdf/USCOURTS-ned-8_05-cv-00087-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00087; Riddle v. Wachovia Securities et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00087-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-10-26</dateIssued>
+  <docketText>ORDER granting 40 Motion to Withdraw as Attorney. The motion of counsel for defendant Wachovia Securities, filing 40, is granted and the appearance of Robert C. Scremin as counsel of record is withdrawn, effective upon the filing of a certificate of service or affidavit indicating that defendant Wachovia Securities has been served with a copy of this order. Signed by Magistrate Judge David L. Piester on 10/26/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00087-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-3/mods.xml">
+ <titleInfo>
+  <title>Riddle v. Wachovia Securities et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s motion for entry of judgment filing 36 is denied. Plaintiff&apos;s amended motion to vacate arbitration award filing 19 isdenied. Judgment shall be entered by separate document, providing that theaction is dismissed with prejudice. Signed by Judge Richard G. Kopf on 12/12/2005. (GJG, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00087-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832cf5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00087_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/pdf/USCOURTS-ned-8_05-cv-00087-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00087; Riddle v. Wachovia Securities et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00087-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s motion for entry of judgment filing 36 is denied. Plaintiff&apos;s amended motion to vacate arbitration award filing 19 isdenied. Judgment shall be entered by separate document, providing that theaction is dismissed with prejudice. Signed by Judge Richard G. Kopf on 12/12/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00087-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-4/mods.xml">
+ <titleInfo>
+  <title>Riddle v. Wachovia Securities et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendant&apos;s motion to alter or amend judgment (filing 49 ) is denied without prejudice to Defendant refiling a motion under 9 U.S.C. section 9 for confirmation of the arbitration award in a separate action. Plaintiff&apos;s &quot;opposition&quot; (filing 51 ) is hereby stricken. Signed by Judge Richard G. Kopf on 1/12/2006. (GJG, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00087-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181832cf4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00087_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00087/USCOURTS-ned-8_05-cv-00087-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00087/pdf/USCOURTS-ned-8_05-cv-00087-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00087; Riddle v. Wachovia Securities et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00087-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendant&apos;s motion to alter or amend judgment (filing 49 ) is denied without prejudice to Defendant refiling a motion under 9 U.S.C. section 9 for confirmation of the arbitration award in a separate action. Plaintiff&apos;s &quot;opposition&quot; (filing 51 ) is hereby stricken. Signed by Judge Richard G. Kopf on 1/12/2006. (GJG, )</docketText>
+</extension>
+</relatedItem>
+</mods>

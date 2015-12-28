@@ -1,0 +1,279 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181712d42">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622</identifier>
+<identifier type="local">P0b002ee181712d42</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_01-cv-01622</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_01-cv-01622</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:01-cv-01622</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="HANKIN FAMILY PARTNERSHIP" lastName="HANKIN FAMILY PARTNERSHIP" role="Plaintiff"></party>
+ <party fullName="KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C." lastName="KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C." role="Respondent"></party>
+ <party fullName="REALEN VALLEY FORGE GREENES ASSOCIATES" lastName="REALEN VALLEY FORGE GREENES ASSOCIATES" role="Plaintiff"></party>
+ <party fullName="THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP" lastName="THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP" role="Defendant"></party>
+ <party fullName="THE UPPER MERION TOWNSHIP ZONING HEARING BOARD" lastName="THE UPPER MERION TOWNSHIP ZONING HEARING BOARD" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS J. TIMONEY" lastName="TIMONEY" middleName="J." role="Plaintiff"></party>
+ <party fullName="UPPER MERION TOWNSHIP" lastName="UPPER MERION TOWNSHIP" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al</title>
+ <partNumber>2:01-cv-01622</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:01-cv-01622;01-1622</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>HANKIN FAMILY PARTNERSHIP</displayForm>
+ <namePart type="family">HANKIN FAMILY PARTNERSHIP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C.</displayForm>
+ <namePart type="family">KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>REALEN VALLEY FORGE GREENES ASSOCIATES</displayForm>
+ <namePart type="family">REALEN VALLEY FORGE GREENES ASSOCIATES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP</displayForm>
+ <namePart type="family">THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THE UPPER MERION TOWNSHIP ZONING HEARING BOARD</displayForm>
+ <namePart type="family">THE UPPER MERION TOWNSHIP ZONING HEARING BOARD</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS J. TIMONEY</displayForm>
+ <namePart type="family">TIMONEY</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>UPPER MERION TOWNSHIP</displayForm>
+ <namePart type="family">UPPER MERION TOWNSHIP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_01-cv-01622</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:01-cv-01622</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="HANKIN FAMILY PARTNERSHIP" lastName="HANKIN FAMILY PARTNERSHIP" role="Plaintiff"></party>
+ <party fullName="KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C." lastName="KAPLIN, STEWART, MELOFF, REITER AND STEIN, P.C." role="Respondent"></party>
+ <party fullName="REALEN VALLEY FORGE GREENES ASSOCIATES" lastName="REALEN VALLEY FORGE GREENES ASSOCIATES" role="Plaintiff"></party>
+ <party fullName="THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP" lastName="THE BOARD OF SUPERVISORS OF UPPER MERION TOWNSHIP" role="Defendant"></party>
+ <party fullName="THE UPPER MERION TOWNSHIP ZONING HEARING BOARD" lastName="THE UPPER MERION TOWNSHIP ZONING HEARING BOARD" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS J. TIMONEY" lastName="TIMONEY" middleName="J." role="Plaintiff"></party>
+ <party fullName="UPPER MERION TOWNSHIP" lastName="UPPER MERION TOWNSHIP" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_01-cv-01622-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-0/mods.xml">
+ <titleInfo>
+  <title>HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al</title>
+  <subTitle>MEMORANDUM AND ORDER OPINION THAT PLAINTIFF TIMONEY&apos;S MOTION TO FILE A SUPPLEMENTAL COMPLAINT AND CROSS CLAIM WILL BE DENIED; ETC.. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(jl, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_01-cv-01622-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817149b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-0</identifier>
+ <identifier type="former granule identifier">paed-2_01-cv-01622_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622/pdf/USCOURTS-paed-2_01-cv-01622-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:01-cv-01622; HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_01-cv-01622-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER OPINION THAT PLAINTIFF TIMONEY&apos;S MOTION TO FILE A SUPPLEMENTAL COMPLAINT AND CROSS CLAIM WILL BE DENIED; ETC.. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(jl, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_01-cv-01622-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-1/mods.xml">
+ <titleInfo>
+  <title>HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al</title>
+  <subTitle>ORDER THAT PLAINTIFF TIMONEY&apos;S MOTION TO FILE A SUPPLEMENTAL COMPLAINT AND CROSS CLAIMS WILL BE DENIED; ETC.. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(jl, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_01-cv-01622-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817149b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-1</identifier>
+ <identifier type="former granule identifier">paed-2_01-cv-01622_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622/pdf/USCOURTS-paed-2_01-cv-01622-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:01-cv-01622; HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_01-cv-01622-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER THAT PLAINTIFF TIMONEY&apos;S MOTION TO FILE A SUPPLEMENTAL COMPLAINT AND CROSS CLAIMS WILL BE DENIED; ETC.. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(jl, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_01-cv-01622-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-2/mods.xml">
+ <titleInfo>
+  <title>HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al</title>
+  <subTitle>MEMORANDUM AND OPINION. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(fdc)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_01-cv-01622-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817149b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-2</identifier>
+ <identifier type="former granule identifier">paed-2_01-cv-01622_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622/pdf/USCOURTS-paed-2_01-cv-01622-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:01-cv-01622; HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_01-cv-01622-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>MEMORANDUM AND OPINION. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_01-cv-01622-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-3/mods.xml">
+ <titleInfo>
+  <title>HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT DEFENDANT&apos;S MOTION FOR SUMMARY JUDGMENT IS DENIED ON COUNTS I, II, AND III. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND COPIES E-MAILED.(fdc)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_01-cv-01622-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817149b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-3</identifier>
+ <identifier type="former granule identifier">paed-2_01-cv-01622_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_01-cv-01622/USCOURTS-paed-2_01-cv-01622-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_01-cv-01622/pdf/USCOURTS-paed-2_01-cv-01622-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:01-cv-01622; HANKIN FAMILY PART., et al v. UPPER MERION TOWN., et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_01-cv-01622-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT DEFENDANT&apos;S MOTION FOR SUMMARY JUDGMENT IS DENIED ON COUNTS I, II, AND III. SIGNED BY HONORABLE JOEL H. SLOMSKY ON 1/5/12. 1/6/12 ENTERED AND COPIES E-MAILED.(fdc)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179c34c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00067</identifier>
+<identifier type="local">P0b002ee18179c34c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00067</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00067</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00067</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Jay" fullName="Jay Schuster" lastName="Schuster" role="Defendant"></party>
+ <party fullName="Scoular Company, The" lastName="Scoular Company, The" role="Defendant"></party>
+ <party fullName="Scoular International Sales Corp." lastName="Scoular International Sales Corp." role="Defendant"></party>
+ <party firstName="Dirk" fullName="Dirk B. Volkmer" lastName="Volkmer" middleName="B." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Volkmer v. Scoular International Sales Corp., et al</title>
+ <partNumber>8:10-cv-00067</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00067/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00067;10-067</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jay Schuster</displayForm>
+ <namePart type="family">Schuster</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scoular Company, The</displayForm>
+ <namePart type="family">Scoular Company, The</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scoular International Sales Corp.</displayForm>
+ <namePart type="family">Scoular International Sales Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dirk B. Volkmer</displayForm>
+ <namePart type="family">Volkmer</namePart>
+ <namePart type="given">Dirk</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00067</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00067</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>445</natureSuitCode>
+ <natureSuit>Americans with Disabilities Act - Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Jay" fullName="Jay Schuster" lastName="Schuster" role="Defendant"></party>
+ <party fullName="Scoular Company, The" lastName="Scoular Company, The" role="Defendant"></party>
+ <party fullName="Scoular International Sales Corp." lastName="Scoular International Sales Corp." role="Defendant"></party>
+ <party firstName="Dirk" fullName="Dirk B. Volkmer" lastName="Volkmer" middleName="B." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00067-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00067/USCOURTS-ned-8_10-cv-00067-0/mods.xml">
+ <titleInfo>
+  <title>Volkmer v. Scoular International Sales Corp., et al</title>
+  <subTitle>ORDER AND FINAL JUDGMENT - The parties&apos; Joint Motion and Stipulation for Dismissal 24 is approved; This action is dismissed with prejudice; and The parties will pay their own costs and attorney&apos;s fees. Ordered by Judge Laurie Smith Camp. (KBJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00067-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181810888</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00067/USCOURTS-ned-8_10-cv-00067-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00067_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00067/USCOURTS-ned-8_10-cv-00067-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00067/pdf/USCOURTS-ned-8_10-cv-00067-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00067; Volkmer v. Scoular International Sales Corp., et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00067-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-28</dateIssued>
+  <docketText>ORDER AND FINAL JUDGMENT - The parties&apos; Joint Motion and Stipulation for Dismissal 24 is approved; This action is dismissed with prejudice; and The parties will pay their own costs and attorney&apos;s fees. Ordered by Judge Laurie Smith Camp. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

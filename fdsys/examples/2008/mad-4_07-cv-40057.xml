@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1814e686e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40057</identifier>
+<identifier type="local">P0b002ee1814e686e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-4_07-cv-40057</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40057</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40057</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Builders Resource, Inc." lastName="Builders Resource, Inc." role="Plaintiff"></party>
+ <party fullName="Coreslab Structures Conn, Inc." lastName="Coreslab Structures Conn, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Builders Resource, Inc. v. Coreslab Structures Conn, Inc.</title>
+ <partNumber>4:07-cv-40057</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40057/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-40057;07-40057</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Worcester</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Builders Resource, Inc.</displayForm>
+ <namePart type="family">Builders Resource, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Coreslab Structures Conn, Inc.</displayForm>
+ <namePart type="family">Coreslab Structures Conn, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-4_07-cv-40057</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>4:07-cv-40057</caseNumber>
+ <caseOffice>Worcester</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="Builders Resource, Inc." lastName="Builders Resource, Inc." role="Plaintiff"></party>
+ <party fullName="Coreslab Structures Conn, Inc." lastName="Coreslab Structures Conn, Inc." role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-4_07-cv-40057-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40057/USCOURTS-mad-4_07-cv-40057-0/mods.xml">
+ <titleInfo>
+  <title>Builders Resource, Inc. v. Coreslab Structures Conn, Inc.</title>
+  <subTitle>Judge F. Dennis Saylor, IV: ORDER entered. CORRECTED MEMORANDUM AND ORDER.(Castles, Martin)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-4_07-cv-40057-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815a3635</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40057/USCOURTS-mad-4_07-cv-40057-0</identifier>
+ <identifier type="former granule identifier">mad-4_07-cv-40057_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-4_07-cv-40057/USCOURTS-mad-4_07-cv-40057-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-4_07-cv-40057/pdf/USCOURTS-mad-4_07-cv-40057-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-40057; Builders Resource, Inc. v. Coreslab Structures Conn, Inc.; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-4_07-cv-40057-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-23</dateIssued>
+  <docketText>Judge F. Dennis Saylor, IV: ORDER entered. CORRECTED MEMORANDUM AND ORDER.(Castles, Martin)</docketText>
+</extension>
+</relatedItem>
+</mods>

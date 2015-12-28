@@ -1,0 +1,368 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195233e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10845</identifier>
+<identifier type="local">P0b002ee18195233e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-10845</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10845</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10845</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Gordon" fullName="Gordon Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Annie" fullName="Annie Carter" lastName="Carter" role="Defendant"></party>
+ <party firstName="Marvis" fullName="Marvis Cofield" lastName="Cofield" role="Defendant"></party>
+ <party firstName="William" fullName="William F. Coleman" lastName="Coleman" middleName="F." role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Brenda" fullName="Brenda Gatlin" lastName="Gatlin" role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Hayes-Giles" lastName="Hayes-Giles" role="Defendant"></party>
+ <party firstName="Paula" fullName="Paula Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Cleveland Kinloch" lastName="Kinloch" middleName="Cleveland" role="Defendant"></party>
+ <party firstName="David" fullName="David Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Nada" fullName="Nada Saab" lastName="Saab" role="Plaintiff"></party>
+ <party firstName="Carla" fullName="Carla D. Scott" lastName="Scott" middleName="D." role="Defendant"></party>
+ <party firstName="Ida" fullName="Ida Short" lastName="Short" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie L. Thornton" lastName="Thornton" middleName="L." role="Defendant"></party>
+ <party firstName="Naddine" fullName="Naddine Tibbs-Stallworth" lastName="Tibbs-Stallworth" role="Defendant"></party>
+ <party firstName="Lauri" fullName="Lauri D. Washington" lastName="Washington" middleName="D." role="Defendant"></party>
+ <party firstName="Tyrone" fullName="Tyrone Winfrey" lastName="Winfrey" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Wolf" lastName="Wolf" role="Defendant"></party>
+ <party firstName="Jimmy" fullName="Jimmy Womack" lastName="Womack" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Saab v. Womack et al</title>
+ <partNumber>2:07-cv-10845</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10845/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-10845;07-10845</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gordon Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Gordon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Annie Carter</displayForm>
+ <namePart type="family">Carter</namePart>
+ <namePart type="given">Annie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marvis Cofield</displayForm>
+ <namePart type="family">Cofield</namePart>
+ <namePart type="given">Marvis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William F. Coleman</displayForm>
+ <namePart type="family">Coleman</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brenda Gatlin</displayForm>
+ <namePart type="family">Gatlin</namePart>
+ <namePart type="given">Brenda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joyce Hayes-Giles</displayForm>
+ <namePart type="family">Hayes-Giles</namePart>
+ <namePart type="given">Joyce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paula Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Paula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Cleveland Kinloch</displayForm>
+ <namePart type="family">Kinloch</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nada Saab</displayForm>
+ <namePart type="family">Saab</namePart>
+ <namePart type="given">Nada</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carla D. Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Carla</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ida Short</displayForm>
+ <namePart type="family">Short</namePart>
+ <namePart type="given">Ida</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marie L. Thornton</displayForm>
+ <namePart type="family">Thornton</namePart>
+ <namePart type="given">Marie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Naddine Tibbs-Stallworth</displayForm>
+ <namePart type="family">Tibbs-Stallworth</namePart>
+ <namePart type="given">Naddine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lauri D. Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">Lauri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tyrone Winfrey</displayForm>
+ <namePart type="family">Winfrey</namePart>
+ <namePart type="given">Tyrone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julie Wolf</displayForm>
+ <namePart type="family">Wolf</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jimmy Womack</displayForm>
+ <namePart type="family">Womack</namePart>
+ <namePart type="given">Jimmy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-10845</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-10845</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Gordon" fullName="Gordon Anderson" lastName="Anderson" role="Defendant"></party>
+ <party firstName="Annie" fullName="Annie Carter" lastName="Carter" role="Defendant"></party>
+ <party firstName="Marvis" fullName="Marvis Cofield" lastName="Cofield" role="Defendant"></party>
+ <party firstName="William" fullName="William F. Coleman" lastName="Coleman" middleName="F." role="Defendant"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="Brenda" fullName="Brenda Gatlin" lastName="Gatlin" role="Defendant"></party>
+ <party firstName="Joyce" fullName="Joyce Hayes-Giles" lastName="Hayes-Giles" role="Defendant"></party>
+ <party firstName="Paula" fullName="Paula Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Jonathan" fullName="Jonathan Cleveland Kinloch" lastName="Kinloch" middleName="Cleveland" role="Defendant"></party>
+ <party firstName="David" fullName="David Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Nada" fullName="Nada Saab" lastName="Saab" role="Plaintiff"></party>
+ <party firstName="Carla" fullName="Carla D. Scott" lastName="Scott" middleName="D." role="Defendant"></party>
+ <party firstName="Ida" fullName="Ida Short" lastName="Short" role="Defendant"></party>
+ <party firstName="Marie" fullName="Marie L. Thornton" lastName="Thornton" middleName="L." role="Defendant"></party>
+ <party firstName="Naddine" fullName="Naddine Tibbs-Stallworth" lastName="Tibbs-Stallworth" role="Defendant"></party>
+ <party firstName="Lauri" fullName="Lauri D. Washington" lastName="Washington" middleName="D." role="Defendant"></party>
+ <party firstName="Tyrone" fullName="Tyrone Winfrey" lastName="Winfrey" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Wolf" lastName="Wolf" role="Defendant"></party>
+ <party firstName="Jimmy" fullName="Jimmy Womack" lastName="Womack" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10845-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-0/mods.xml">
+ <titleInfo>
+  <title>Saab v. Womack et al</title>
+  <subTitle>ORDER denying 27 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10845-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a18ae7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10845_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10845/pdf/USCOURTS-mied-2_07-cv-10845-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10845; Saab v. Womack et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10845-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-11-21</dateIssued>
+  <docketText>ORDER denying 27 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10845-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-1/mods.xml">
+ <titleInfo>
+  <title>Saab v. Womack et al</title>
+  <subTitle>ORDER granting in part and denying in part 28 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10845-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a18ae8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10845_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10845/pdf/USCOURTS-mied-2_07-cv-10845-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10845; Saab v. Womack et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10845-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-11-21</dateIssued>
+  <docketText>ORDER granting in part and denying in part 28 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-10845-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-2/mods.xml">
+ <titleInfo>
+  <title>Saab v. Womack et al</title>
+  <subTitle>ORDER granting 25 Motion for Summary Judgment. Signed by Honorable Sean F Cox. (JHer)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-10845-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a18ae9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-2</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-10845_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-10845/USCOURTS-mied-2_07-cv-10845-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-10845/pdf/USCOURTS-mied-2_07-cv-10845-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-10845; Saab v. Womack et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-10845-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-01-28</dateIssued>
+  <docketText>ORDER granting 25 Motion for Summary Judgment. Signed by Honorable Sean F Cox. (JHer)</docketText>
+</extension>
+</relatedItem>
+</mods>

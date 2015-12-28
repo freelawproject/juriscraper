@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186ecb29e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028</identifier>
+<identifier type="local">P0b002ee186ecb29e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca5-09-70028</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-09-70028</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>09-70028</caseNumber>
+ <natureSuitCode>535</natureSuitCode>
+ <natureSuit>Habeas Corpus - Death Penalty</natureSuit>
+ <party firstName="William" fullName="William Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division" lastName="Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division" role="Appellee"></party>
+ <party firstName="Rick" fullName="Rick Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division" lastName="Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division" role="Appellee"></party>
+ <party firstName="Willie" fullName="Willie Terion Washington" lastName="Washington" middleName="Terion" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Willie Washington v. William Stephens, Director</title>
+ <partNumber>09-70028</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">09-70028;09-70028</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fifth Circuit</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>William Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division</displayForm>
+ <namePart type="family">Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division</displayForm>
+ <namePart type="family">Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Willie Terion Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">Willie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca5-09-70028</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca5</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtSortOrder>1050</courtSortOrder>
+ <caseNumber>09-70028</caseNumber>
+ <natureSuitCode>535</natureSuitCode>
+ <natureSuit>Habeas Corpus - Death Penalty</natureSuit>
+ <party firstName="William" fullName="William Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division" lastName="Stephens, Director, Texas Department of Criminal Justice, Correctional Institutions Division" role="Appellee"></party>
+ <party firstName="Rick" fullName="Rick Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division" lastName="Thaler, Director, Texas Department of Criminal Justice, Correctional Institutions Division" role="Appellee"></party>
+ <party firstName="Willie" fullName="Willie Terion Washington" lastName="Washington" middleName="Terion" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-09-70028-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-0/mods.xml">
+ <titleInfo>
+  <title>Willie Washington v. William Stephens, Director</title>
+  <subTitle>REVISED UNPUBLISHED OPINION FILED. [7002546-2] [09-70028]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028/pdf/USCOURTS-ca5-09-70028-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186f58341</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-0</identifier>
+ <identifier type="former granule identifier">ca5-09-70028_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028/pdf/USCOURTS-ca5-09-70028-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-70028; Willie Washington v. William Stephens, Director; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-09-70028-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-27</dateIssued>
+  <docketText>REVISED UNPUBLISHED OPINION FILED. [7002546-2] [09-70028]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca5-09-70028-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-1/mods.xml">
+ <titleInfo>
+  <title>Willie Washington v. William Stephens, Director</title>
+  <subTitle>UNPUBLISHED OPINION ORDER FILED. [09-70028 Remanded] Judge: EBC , Judge: PRO , Judge: JEG. rescinding order ruling on motion for additional COA issues filed by Appellant Mr. Willie Terion Washington [6651916-2]; granting motion for additional COA issues filed by Appellant Mr. Willie Terion Washington [6651916-2] ISSUED AS AND FOR THE MANDATE. [09-70028]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028/pdf/USCOURTS-ca5-09-70028-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186f5a9c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-1</identifier>
+ <identifier type="former granule identifier">ca5-09-70028_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca5-09-70028/USCOURTS-ca5-09-70028-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca5-09-70028/pdf/USCOURTS-ca5-09-70028-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 09-70028; Willie Washington v. William Stephens, Director; </searchTitle>
+  <courtName>United States Court of Appeals for the Fifth Circuit</courtName>
+  <accessId>USCOURTS-ca5-09-70028-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>UNPUBLISHED OPINION ORDER FILED. [09-70028 Remanded] Judge: EBC , Judge: PRO , Judge: JEG. rescinding order ruling on motion for additional COA issues filed by Appellant Mr. Willie Terion Washington [6651916-2]; granting motion for additional COA issues filed by Appellant Mr. Willie Terion Washington [6651916-2] ISSUED AS AND FOR THE MANDATE. [09-70028]</docketText>
+</extension>
+</relatedItem>
+</mods>

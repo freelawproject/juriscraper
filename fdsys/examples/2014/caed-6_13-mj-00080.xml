@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18712df82">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-02-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080</identifier>
+<identifier type="local">P0b002ee18712df82</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-6_13-mj-00080</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-6_13-mj-00080</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>6:13-mj-00080</caseNumber>
+ <caseOffice>Yosemite</caseOffice>
+ <caseType></caseType>
+ <party firstName="Christopher" fullName="Christopher Glenn Cline" lastName="Cline" middleName="Glenn" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Cline</title>
+ <partNumber>6:13-mj-00080</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:13-mj-00080;13-080</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Yosemite</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Christopher Glenn Cline</displayForm>
+ <namePart type="family">Cline</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-6_13-mj-00080</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>6:13-mj-00080</caseNumber>
+ <caseOffice>Yosemite</caseOffice>
+ <caseType></caseType>
+ <party firstName="Christopher" fullName="Christopher Glenn Cline" lastName="Cline" middleName="Glenn" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>STIPULATION and ORDER GRANTING the parties&apos; request for a continuance of the Initial Appearance currently set for 8/21/2013 and CONTINUING it to 9/24/2013 at 10:00 AM in Yosemite (MJS) before Magistrate Judge Michael J. Seng. Order signed by Magistrate Judge Stanley A. Boone on 8/19/2013. (Rooney, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1871369aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-0</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-19</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING the parties&apos; request for a continuance of the Initial Appearance currently set for 8/21/2013 and CONTINUING it to 9/24/2013 at 10:00 AM in Yosemite (MJS) before Magistrate Judge Michael J. Seng. Order signed by Magistrate Judge Stanley A. Boone on 8/19/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>ORDER DENYING Christopher Cline&apos;s request for Waiver of Appearance signed by Magistrate Judge Michael J. Seng on 09/06/2013. (Yu, L)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1871369ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-1</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-06</dateIssued>
+  <docketText>ORDER DENYING Christopher Cline&apos;s request for Waiver of Appearance signed by Magistrate Judge Michael J. Seng on 09/06/2013. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>ORDER GRANTING DEFENDANT&apos;S WAIVER OF APPEARANCE as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 09/10/2013. (Yu, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1871369a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-2</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-09-10</dateIssued>
+  <docketText>ORDER GRANTING DEFENDANT&apos;S WAIVER OF APPEARANCE as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 09/10/2013. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>STIPULATION TO VACATE TRIAL DATE AND SET FOR PLEA AND SENTENCE and ORDER THEREON, signed by Magistrate Judge Michael J. Seng on 12/23/2013. (Yu, L)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187136019</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-3</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-12-23</dateIssued>
+  <docketText>STIPULATION TO VACATE TRIAL DATE AND SET FOR PLEA AND SENTENCE and ORDER THEREON, signed by Magistrate Judge Michael J. Seng on 12/23/2013. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>ORDER on Defendant&apos;s Motion to Appear Telephonically for Change of Plea and Sentencing as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 1/2/2014. (Yu, L)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1871369a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-4</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER on Defendant&apos;s Motion to Appear Telephonically for Change of Plea and Sentencing as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 1/2/2014. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-6_13-mj-00080-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Cline</title>
+  <subTitle>JUDGMENT and ORDER TO PAY as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 2/11/2014. (Yu, L)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1871369a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-5</identifier>
+ <identifier type="former granule identifier">caed-6_13-mj-00080_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-6_13-mj-00080/USCOURTS-caed-6_13-mj-00080-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-6_13-mj-00080/pdf/USCOURTS-caed-6_13-mj-00080-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:13-mj-00080; USA v. Cline; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-6_13-mj-00080-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-02-11</dateIssued>
+  <docketText>JUDGMENT and ORDER TO PAY as to Christopher Glenn Cline signed by Magistrate Judge Michael J. Seng on 2/11/2014. (Yu, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

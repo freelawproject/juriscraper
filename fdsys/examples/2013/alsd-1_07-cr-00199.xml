@@ -1,0 +1,229 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1866e4645">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_07-cr-00199</identifier>
+<identifier type="local">P0b002ee1866e4645</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_07-cr-00199</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_07-cr-00199</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:07-cr-00199</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Andre" fullName="Andre Clarence McQuay" lastName="McQuay" middleName="Clarence" role="Defendant"></party>
+ <party fullName="Peanut" lastName="Peanut" role="Defendant"></party>
+ <party firstName="Jermaine" fullName="Jermaine Antonio Pugh" lastName="Pugh" middleName="Antonio" role="Defendant"></party>
+ <party firstName="Ganester" fullName="Ganester Lethiro Sales" lastName="Sales" middleName="Lethiro" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. McQuay et al</title>
+ <partNumber>1:07-cr-00199</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_07-cr-00199/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cr-00199;07-199</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Andre Clarence McQuay</displayForm>
+ <namePart type="family">McQuay</namePart>
+ <namePart type="given">Andre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Peanut</displayForm>
+ <namePart type="family">Peanut</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jermaine Antonio Pugh</displayForm>
+ <namePart type="family">Pugh</namePart>
+ <namePart type="given">Jermaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ganester Lethiro Sales</displayForm>
+ <namePart type="family">Sales</namePart>
+ <namePart type="given">Ganester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_07-cr-00199</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:07-cr-00199</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Andre" fullName="Andre Clarence McQuay" lastName="McQuay" middleName="Clarence" role="Defendant"></party>
+ <party fullName="Peanut" lastName="Peanut" role="Defendant"></party>
+ <party firstName="Jermaine" fullName="Jermaine Antonio Pugh" lastName="Pugh" middleName="Antonio" role="Defendant"></party>
+ <party firstName="Ganester" fullName="Ganester Lethiro Sales" lastName="Sales" middleName="Lethiro" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_07-cr-00199-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-0/mods.xml">
+ <titleInfo>
+  <title>USA v. McQuay et al</title>
+  <subTitle>ORDER entered denying 68 Motion for nunc pro tunc designation for service of concurrent federal and state sentences as to Jermaine Antonio Pugh. Signed by Judge Kristi K. DuBose on 3/8/2010. copy mailed to defendant (mca)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_07-cr-00199-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f1b86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-0</identifier>
+ <identifier type="former granule identifier">alsd-1_07-cr-00199_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_07-cr-00199/pdf/USCOURTS-alsd-1_07-cr-00199-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cr-00199; USA v. McQuay et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_07-cr-00199-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-03-09</dateIssued>
+  <docketText>ORDER entered denying 68 Motion for nunc pro tunc designation for service of concurrent federal and state sentences as to Jermaine Antonio Pugh. Signed by Judge Kristi K. DuBose on 3/8/2010. copy mailed to defendant (mca)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_07-cr-00199-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-1/mods.xml">
+ <titleInfo>
+  <title>USA v. McQuay et al</title>
+  <subTitle>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM. The Court REVOKES the supervised release term and sentences the offender to the custody of the Bureau of Prisons for seven months; credit for time served (2 weeks). Upon release from custody, the offender shall be placed on re-supervised release for a term of 24 months. The Court re-imposes all of the original and special conditions that were initially imposed on January 18, 2008: the offender shall participate in a program of testing and treatment for drug and/or alcohol abuse, as directed by the Probation Office. Defendant remanded to the custody of the USM. Signed by Judge Kristi K. DuBose on 12/23/2010. (mca)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_07-cr-00199-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f1b85</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-1</identifier>
+ <identifier type="former granule identifier">alsd-1_07-cr-00199_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_07-cr-00199/pdf/USCOURTS-alsd-1_07-cr-00199-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cr-00199; USA v. McQuay et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_07-cr-00199-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-12-23</dateIssued>
+  <docketText>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM. The Court REVOKES the supervised release term and sentences the offender to the custody of the Bureau of Prisons for seven months; credit for time served (2 weeks). Upon release from custody, the offender shall be placed on re-supervised release for a term of 24 months. The Court re-imposes all of the original and special conditions that were initially imposed on January 18, 2008: the offender shall participate in a program of testing and treatment for drug and/or alcohol abuse, as directed by the Probation Office. Defendant remanded to the custody of the USM. Signed by Judge Kristi K. DuBose on 12/23/2010. (mca)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_07-cr-00199-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-2/mods.xml">
+ <titleInfo>
+  <title>USA v. McQuay et al</title>
+  <subTitle>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM as to Andre Clarence McQuay. The Court REVOKES the supervised release term and sentences the offender to the custody of the Bureau of Prisons for a term of three months. Upon release from imprisonment, the offender shall be placed on re-supervised release for a term of 27 months. The Court re-imposes all of the original and special conditions that were initially imposed on January 25, 2008: the offender shall participate in a program of testing and treatment for drug and/or alcohol abuse, as directed by the Probation Office; and, the offender shall participate in a program of mental health treatment and/or counseling, as directed by the Probation Office. Defendant remanded to the custody of the USM. Signed by Judge Kristi K. DuBose on 1/4/2013. (mca)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_07-cr-00199-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1866f1b87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-2</identifier>
+ <identifier type="former granule identifier">alsd-1_07-cr-00199_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_07-cr-00199/USCOURTS-alsd-1_07-cr-00199-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_07-cr-00199/pdf/USCOURTS-alsd-1_07-cr-00199-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cr-00199; USA v. McQuay et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_07-cr-00199-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM as to Andre Clarence McQuay. The Court REVOKES the supervised release term and sentences the offender to the custody of the Bureau of Prisons for a term of three months. Upon release from imprisonment, the offender shall be placed on re-supervised release for a term of 27 months. The Court re-imposes all of the original and special conditions that were initially imposed on January 25, 2008: the offender shall participate in a program of testing and treatment for drug and/or alcohol abuse, as directed by the Probation Office; and, the offender shall participate in a program of mental health treatment and/or counseling, as directed by the Probation Office. Defendant remanded to the custody of the USM. Signed by Judge Kristi K. DuBose on 1/4/2013. (mca)</docketText>
+</extension>
+</relatedItem>
+</mods>

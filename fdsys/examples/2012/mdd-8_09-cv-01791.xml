@@ -1,0 +1,241 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18170dd04">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_09-cv-01791</identifier>
+<identifier type="local">P0b002ee18170dd04</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-8_09-cv-01791</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_09-cv-01791</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:09-cv-01791</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Adey" lastName="Adey" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary L. Barnett" lastName="Barnett" middleName="L." role="Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk Bond Jr." generation="Jr." lastName="Bond" role="Plaintiff"></party>
+ <party fullName="City of Seat Pleasant, Maryland" lastName="City of Seat Pleasant, Maryland" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher T. Howard" lastName="Howard" middleName="T." role="Plaintiff"></party>
+ <party fullName="Lowery" lastName="Lowery" role="Defendant"></party>
+ <party fullName="Maryland National Capital Park&amp;Planning Commission" lastName="Maryland National Capital Park&amp;Planning Commission" role="Objector"></party>
+ <party fullName="Prince George&apos;s County, MD" lastName="Prince George&apos;s County, MD" role="Defendant"></party>
+ <party firstName="Marqus" fullName="Marqus L. Stevenson" lastName="Stevenson" middleName="L." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Stevenson et al v. City of Seat Pleasant, Maryland et al</title>
+ <partNumber>8:09-cv-01791</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_09-cv-01791/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-01791;09-1791</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Greenbelt</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Adey</displayForm>
+ <namePart type="family">Adey</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary L. Barnett</displayForm>
+ <namePart type="family">Barnett</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kirk Bond Jr.</displayForm>
+ <namePart type="family">Bond</namePart>
+ <namePart type="given">Kirk</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>City of Seat Pleasant, Maryland</displayForm>
+ <namePart type="family">City of Seat Pleasant, Maryland</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Christopher T. Howard</displayForm>
+ <namePart type="family">Howard</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lowery</displayForm>
+ <namePart type="family">Lowery</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maryland National Capital Park&amp;Planning Commission</displayForm>
+ <namePart type="family">Maryland National Capital Park&amp;Planning Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Objector</description>
+</name>
+<name type="personal">
+ <displayForm>Prince George&apos;s County, MD</displayForm>
+ <namePart type="family">Prince George&apos;s County, MD</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marqus L. Stevenson</displayForm>
+ <namePart type="family">Stevenson</namePart>
+ <namePart type="given">Marqus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-8_09-cv-01791</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>8:09-cv-01791</caseNumber>
+ <caseOffice>Greenbelt</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="Adey" lastName="Adey" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary L. Barnett" lastName="Barnett" middleName="L." role="Plaintiff"></party>
+ <party firstName="Kirk" fullName="Kirk Bond Jr." generation="Jr." lastName="Bond" role="Plaintiff"></party>
+ <party fullName="City of Seat Pleasant, Maryland" lastName="City of Seat Pleasant, Maryland" role="Defendant"></party>
+ <party firstName="Christopher" fullName="Christopher T. Howard" lastName="Howard" middleName="T." role="Plaintiff"></party>
+ <party fullName="Lowery" lastName="Lowery" role="Defendant"></party>
+ <party fullName="Maryland National Capital Park&amp;Planning Commission" lastName="Maryland National Capital Park&amp;Planning Commission" role="Objector"></party>
+ <party fullName="Prince George&apos;s County, MD" lastName="Prince George&apos;s County, MD" role="Defendant"></party>
+ <party firstName="Marqus" fullName="Marqus L. Stevenson" lastName="Stevenson" middleName="L." role="Plaintiff"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_09-cv-01791-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-0/mods.xml">
+ <titleInfo>
+  <title>Stevenson et al v. City of Seat Pleasant, Maryland et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Roger W Titus on 5/19/2011. (rank, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-8_09-cv-01791-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170f3b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-0</identifier>
+ <identifier type="former granule identifier">mdd-8_09-cv-01791_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_09-cv-01791/pdf/USCOURTS-mdd-8_09-cv-01791-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-01791; Stevenson et al v. City of Seat Pleasant, Maryland et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_09-cv-01791-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-05-19</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Roger W Titus on 5/19/2011. (rank, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-8_09-cv-01791-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-1/mods.xml">
+ <titleInfo>
+  <title>Stevenson et al v. City of Seat Pleasant, Maryland et al</title>
+  <subTitle>MEMORANDUM/ORDER rescheduling hearing on renewed motion for judgment to 1/12/12 at 2p.m.. Signed by Judge Roger W Titus on 1/4/12. (jnls, Deputy Clerk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-8_09-cv-01791-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170f3b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-1</identifier>
+ <identifier type="former granule identifier">mdd-8_09-cv-01791_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-8_09-cv-01791/USCOURTS-mdd-8_09-cv-01791-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-8_09-cv-01791/pdf/USCOURTS-mdd-8_09-cv-01791-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-01791; Stevenson et al v. City of Seat Pleasant, Maryland et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-8_09-cv-01791-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>MEMORANDUM/ORDER rescheduling hearing on renewed motion for judgment to 1/12/12 at 2p.m.. Signed by Judge Roger W Titus on 1/4/12. (jnls, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

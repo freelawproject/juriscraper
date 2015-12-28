@@ -1,0 +1,138 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c63cb0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-13-01417</identifier>
+<identifier type="local">P0b002ee186c63cb0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca4-13-01417</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-13-01417</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>13-01417</caseNumber>
+ <party firstName="Eric" fullName="Eric H. Holder Jr." generation="Jr." lastName="Holder" middleName="H." role="Respondent"></party>
+ <party firstName="Yuhua" fullName="Yuhua Liu" lastName="Liu" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Yuhua Liu v. Eric Holder, Jr.</title>
+ <partNumber>13-01417</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-13-01417/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">13-01417;13-1417</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Fourth Circuit</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eric H. Holder Jr.</displayForm>
+ <namePart type="family">Holder</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Yuhua Liu</displayForm>
+ <namePart type="family">Liu</namePart>
+ <namePart type="given">Yuhua</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca4-13-01417</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca4</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtSortOrder>1040</courtSortOrder>
+ <caseNumber>13-01417</caseNumber>
+ <party firstName="Eric" fullName="Eric H. Holder Jr." generation="Jr." lastName="Holder" middleName="H." role="Respondent"></party>
+ <party firstName="Yuhua" fullName="Yuhua Liu" lastName="Liu" role="Petitioner"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca4-13-01417-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-13-01417/USCOURTS-ca4-13-01417-0/mods.xml">
+ <titleInfo>
+  <title>Yuhua Liu v. Eric Holder, Jr.</title>
+  <subTitle>UNPUBLISHED PER CURIAM OPINION filed. Originating case number: A098-719-411. Copies to all parties and the district court/agency. [999271035]. [13-1417]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca4-13-01417-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c69f63</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-13-01417/USCOURTS-ca4-13-01417-0</identifier>
+ <identifier type="former granule identifier">ca4-13-01417_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca4-13-01417/USCOURTS-ca4-13-01417-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca4-13-01417/pdf/USCOURTS-ca4-13-01417-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 13-01417; Yuhua Liu v. Eric Holder, Jr.; </searchTitle>
+  <courtName>United States Court of Appeals for the Fourth Circuit</courtName>
+  <accessId>USCOURTS-ca4-13-01417-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>UNPUBLISHED PER CURIAM OPINION filed. Originating case number: A098-719-411. Copies to all parties and the district court/agency. [999271035]. [13-1417]</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,375 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68ecc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902</identifier>
+<identifier type="local">P0b002ee186c68ecc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00902</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00902</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00902</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="America&apos;s Servicing Company" lastName="America&apos;s Servicing Company" role="Defendant"></party>
+ <party firstName="Gurvinder" fullName="Gurvinder Ghuman" lastName="Ghuman" role="Plaintiff"></party>
+ <party firstName="Parminder" fullName="Parminder K Ghuman" lastName="Ghuman" middleName="K" role="Plaintiff"></party>
+ <party fullName="NDeX West, LLC" lastName="NDeX West, LLC" role="Defendant"></party>
+ <party fullName="Wells Fargo Bank, N.A." lastName="Wells Fargo Bank, N.A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ghuman et al v. Wells Fargo Bank</title>
+ <partNumber>1:12-cv-00902</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00902;12-902</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>America&apos;s Servicing Company</displayForm>
+ <namePart type="family">America&apos;s Servicing Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gurvinder Ghuman</displayForm>
+ <namePart type="family">Ghuman</namePart>
+ <namePart type="given">Gurvinder</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Parminder K Ghuman</displayForm>
+ <namePart type="family">Ghuman</namePart>
+ <namePart type="given">Parminder</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>NDeX West, LLC</displayForm>
+ <namePart type="family">NDeX West, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Bank, N.A.</displayForm>
+ <namePart type="family">Wells Fargo Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00902</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00902</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="America&apos;s Servicing Company" lastName="America&apos;s Servicing Company" role="Defendant"></party>
+ <party firstName="Gurvinder" fullName="Gurvinder Ghuman" lastName="Ghuman" role="Plaintiff"></party>
+ <party firstName="Parminder" fullName="Parminder K Ghuman" lastName="Ghuman" middleName="K" role="Plaintiff"></party>
+ <party fullName="NDeX West, LLC" lastName="NDeX West, LLC" role="Defendant"></party>
+ <party fullName="Wells Fargo Bank, N.A." lastName="Wells Fargo Bank, N.A." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-0/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER re: Ex Parte 7 Motion for Temporary Restraining Order, signed by Chief Judge Anthony W. Ishii on 6/8/2012. (Defendant&apos;s Opposition due by 6/13/2012; Plaintiff&apos;s Replies due by 6/15/2012; Oral Arguments for Motion set for 6/19/2012 at 01:30 PM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75219</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-06-08</dateIssued>
+  <docketText>ORDER re: Ex Parte 7 Motion for Temporary Restraining Order, signed by Chief Judge Anthony W. Ishii on 6/8/2012. (Defendant&apos;s Opposition due by 6/13/2012; Plaintiff&apos;s Replies due by 6/15/2012; Oral Arguments for Motion set for 6/19/2012 at 01:30 PM in Courtroom 2 (AWI) before Chief Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-1/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER Re: 7 Motion For Preliminary Injunction, signed by Chief Judge Anthony W. Ishii on 6/15/2012. (Plaintiffs motion for a preliminary injunction is DENIED. Accordingly, the hearing date of 6/19/2012 is hereby VACATED.)(Gaumnitz, R)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75218</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-06-15</dateIssued>
+  <docketText>ORDER Re: 7 Motion For Preliminary Injunction, signed by Chief Judge Anthony W. Ishii on 6/15/2012. (Plaintiffs motion for a preliminary injunction is DENIED. Accordingly, the hearing date of 6/19/2012 is hereby VACATED.)(Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-2/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER Re: 11 Motion to Dismiss Complaint, signed by Chief Judge Anthony W. Ishii on 7/24/2012. The hearing date of August 6, 2012 is hereby VACATED. ( Amended Complaint due by 8/28/2012) (Figueroa, O)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75214</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-24</dateIssued>
+  <docketText>ORDER Re: 11 Motion to Dismiss Complaint, signed by Chief Judge Anthony W. Ishii on 7/24/2012. The hearing date of August 6, 2012 is hereby VACATED. ( Amended Complaint due by 8/28/2012) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-3/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER vacating hearing of November 26, 2012 and taking matter under submission. signed by District Judge Anthony W. Ishii on 11/20/12. (Nazaroff, H)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c7521a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-20</dateIssued>
+  <docketText>ORDER vacating hearing of November 26, 2012 and taking matter under submission. signed by District Judge Anthony W. Ishii on 11/20/12. (Nazaroff, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-4/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER RE: Motion to Dismiss First Amended Complaint 17, signed by District Judge Anthony W. Ishii on 2/12/13: Defendant&apos;s Motion to Dismiss is GRANTED with leave to amend; Plaintiff&apos;s shall have one final opportunity to amend. (Hellings, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75215</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>ORDER RE: Motion to Dismiss First Amended Complaint 17, signed by District Judge Anthony W. Ishii on 2/12/13: Defendant&apos;s Motion to Dismiss is GRANTED with leave to amend; Plaintiff&apos;s shall have one final opportunity to amend. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-5/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>Order to Show Cause, signed by Magistrate Judge Barbara A. McAuliffe on 04/10/2013. Show Cause Response due by 4/15/2013. (Figueroa, O) (DISCHARGED per Minute Order 36)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75216</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-04-10</dateIssued>
+  <docketText>Order to Show Cause, signed by Magistrate Judge Barbara A. McAuliffe on 04/10/2013. Show Cause Response due by 4/15/2013. (Figueroa, O) (DISCHARGED per Minute Order 36)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-6/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER VACATING July 8, 2013 hearing date and taking matter 39 under submission, signed by District Judge Anthony W. Ishii on 07/02/2013. (Figueroa, O)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75217</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-07-02</dateIssued>
+  <docketText>ORDER VACATING July 8, 2013 hearing date and taking matter 39 under submission, signed by District Judge Anthony W. Ishii on 07/02/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00902-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-7/mods.xml">
+ <titleInfo>
+  <title>Ghuman et al v. Wells Fargo Bank</title>
+  <subTitle>ORDER GRANTING 39 Defendant&apos;s Motion to Dismiss Second Amended Complaint signed by District Judge Anthony W. Ishii on 1/3/2014. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00902-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c75213</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00902_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00902/USCOURTS-caed-1_12-cv-00902-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00902/pdf/USCOURTS-caed-1_12-cv-00902-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00902; Ghuman et al v. Wells Fargo Bank; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00902-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER GRANTING 39 Defendant&apos;s Motion to Dismiss Second Amended Complaint signed by District Judge Anthony W. Ishii on 1/3/2014. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

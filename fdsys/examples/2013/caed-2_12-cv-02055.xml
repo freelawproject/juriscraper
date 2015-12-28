@@ -1,0 +1,374 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184f56caa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-06-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055</identifier>
+<identifier type="local">P0b002ee184f56caa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-06-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-06-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02055</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02055</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02055</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Paula" fullName="Paula Baca" lastName="Baca" role="Plaintiff"></party>
+ <party fullName="County of Siskiyou" lastName="County of Siskiyou" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Guarino" lastName="Guarino" role="Defendant"></party>
+ <party firstName="Rose Ann" fullName="Rose Ann Herrick" lastName="Herrick" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian McDermott" lastName="McDermott" role="Defendant"></party>
+ <party firstName="David" fullName="David Prentice" lastName="Prentice" role="Defendant"></party>
+ <party fullName="Siskiyou County Board of Supervisors" lastName="Siskiyou County Board of Supervisors" role="Defendant"></party>
+ <party firstName="Ann" fullName="Ann Waite" lastName="Waite" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Baca v. County of Siskiyou et al</title>
+ <partNumber>2:12-cv-02055</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02055;12-2055</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Paula Baca</displayForm>
+ <namePart type="family">Baca</namePart>
+ <namePart type="given">Paula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>County of Siskiyou</displayForm>
+ <namePart type="family">County of Siskiyou</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Guarino</displayForm>
+ <namePart type="family">Guarino</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rose Ann Herrick</displayForm>
+ <namePart type="family">Herrick</namePart>
+ <namePart type="given">Rose Ann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian McDermott</displayForm>
+ <namePart type="family">McDermott</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Prentice</displayForm>
+ <namePart type="family">Prentice</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Siskiyou County Board of Supervisors</displayForm>
+ <namePart type="family">Siskiyou County Board of Supervisors</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ann Waite</displayForm>
+ <namePart type="family">Waite</namePart>
+ <namePart type="given">Ann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02055</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02055</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1331 Fed. Question: Employment Discrimination</cause>
+ <party firstName="Paula" fullName="Paula Baca" lastName="Baca" role="Plaintiff"></party>
+ <party fullName="County of Siskiyou" lastName="County of Siskiyou" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Guarino" lastName="Guarino" role="Defendant"></party>
+ <party firstName="Rose Ann" fullName="Rose Ann Herrick" lastName="Herrick" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian McDermott" lastName="McDermott" role="Defendant"></party>
+ <party firstName="David" fullName="David Prentice" lastName="Prentice" role="Defendant"></party>
+ <party fullName="Siskiyou County Board of Supervisors" lastName="Siskiyou County Board of Supervisors" role="Defendant"></party>
+ <party firstName="Ann" fullName="Ann Waite" lastName="Waite" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-0/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 10/17/12 CONTINUING Scheduling Conference to 2/4/2013 at 03:30 PM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. The parties shall file updated status reports no later than 14 days prior to the status conference. (Meuleman, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60954</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-18</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 10/17/12 CONTINUING Scheduling Conference to 2/4/2013 at 03:30 PM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. The parties shall file updated status reports no later than 14 days prior to the status conference. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-1/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 11/16/12: MOTION HEARING as to 11 Motion to Dismiss is RESET for 12/17/2012 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Plaintiff shall have until 12/3/12 to file a response to the motion. (Manzer, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60952</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-16</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 11/16/12: MOTION HEARING as to 11 Motion to Dismiss is RESET for 12/17/2012 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Plaintiff shall have until 12/3/12 to file a response to the motion. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-2/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/3/13: HEARING as to 11 Motion to Dismiss RESET for 1/28/2013 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60951</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/3/13: HEARING as to 11 Motion to Dismiss RESET for 1/28/2013 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-3/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/29/13 GRANTING 24 Motion to Disqualify counsel. The two separate 11 and 23 Motions to Dismiss are STAYED pending substitution of counsel. The County defendants are given no more than 30 days to find new counsel. New counsel is given 15 days thereafter to either re-notice or withdraw the pending motion to dismiss. Defendant Guarino&apos;s motion will be set for hearing the same day as any motion re-noticed by County defendants. The Scheduling Conference is CONTINUED to 5/13/2013 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Updated status reports due no later than 14 days prior to conference. (Manzer, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60953</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-29</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/29/13 GRANTING 24 Motion to Disqualify counsel. The two separate 11 and 23 Motions to Dismiss are STAYED pending substitution of counsel. The County defendants are given no more than 30 days to find new counsel. New counsel is given 15 days thereafter to either re-notice or withdraw the pending motion to dismiss. Defendant Guarino&apos;s motion will be set for hearing the same day as any motion re-noticed by County defendants. The Scheduling Conference is CONTINUED to 5/13/2013 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Updated status reports due no later than 14 days prior to conference. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-4/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 3/13/13: The dispositional documents disposing of the case shall be filed no later than thirty (30) days from the effective date of this order. All hearing dates heretofore set in this matter are hereby VACATED. (Kaminski, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60a08</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 3/13/13: The dispositional documents disposing of the case shall be filed no later than thirty (30) days from the effective date of this order. All hearing dates heretofore set in this matter are hereby VACATED. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-5/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 4/15/13 ORDERING the parties Stipulation and Order on Dispositional Documents is hereby approved and ordered. Dispositional documents disposing of the case shall be filed within forty-five (45) days of the date of this Order. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60950</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-04-15</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 4/15/13 ORDERING the parties Stipulation and Order on Dispositional Documents is hereby approved and ordered. Dispositional documents disposing of the case shall be filed within forty-five (45) days of the date of this Order. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02055-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-6/mods.xml">
+ <titleInfo>
+  <title>Baca v. County of Siskiyou et al</title>
+  <subTitle>ORDER DISMISSING CASE signed by Judge Lawrence K. Karlton on May 30, 2013. It is hereby stipulated by and between the parties to this action through their designated counsel that the action be and hereby is DISMISSED with prejudice pursuant to FRCP 41(a)(1). CASE CLOSED.(Rivas, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02055-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f60a07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02055_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02055/USCOURTS-caed-2_12-cv-02055-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02055/pdf/USCOURTS-caed-2_12-cv-02055-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02055; Baca v. County of Siskiyou et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02055-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-05-31</dateIssued>
+  <docketText>ORDER DISMISSING CASE signed by Judge Lawrence K. Karlton on May 30, 2013. It is hereby stipulated by and between the parties to this action through their designated counsel that the action be and hereby is DISMISSED with prejudice pursuant to FRCP 41(a)(1). CASE CLOSED.(Rivas, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

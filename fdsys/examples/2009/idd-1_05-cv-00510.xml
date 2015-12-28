@@ -1,0 +1,304 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd3f58">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00510</identifier>
+<identifier type="local">P0b002ee180fd3f58</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_05-cv-00510</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_05-cv-00510</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:05-cv-00510</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Gary" fullName="Gary Eugene Allison" lastName="Allison" middleName="Eugene" role="Petitioner"></party>
+ <party firstName="Robin" fullName="Robin Babbitt" lastName="Babbitt" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Beauclair" lastName="Beauclair" role="Respondent"></party>
+ <party firstName="Randy" fullName="Randy Blades" lastName="Blades" role="Respondent"></party>
+ <party fullName="Correctional Medical Services, Inc" lastName="Correctional Medical Services, Inc" role="Respondent"></party>
+ <party firstName="Larry" fullName="Larry Hines" lastName="Hines" role="Respondent"></party>
+ <party fullName="Idaho Board of Corrections" lastName="Idaho Board of Corrections" role="Respondent"></party>
+ <party fullName="Idaho State Correctional Institute" lastName="Idaho State Correctional Institute" role="Respondent"></party>
+ <party fullName="John/Jane Does" lastName="John/Jane Does" role="Respondent"></party>
+ <party firstName="Governor" fullName="Governor Kempthorne" lastName="Kempthorne" role="Respondent"></party>
+ <party firstName="Jeff" fullName="Jeff Kirkman" lastName="Kirkman" role="Respondent"></party>
+ <party firstName="Ted" fullName="Ted Lucas" lastName="Lucas" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Lucas" lastName="Lucas" role="Respondent"></party>
+ <party fullName="Prison Health Services" lastName="Prison Health Services" role="Respondent"></party>
+ <party fullName="State Attorney General" lastName="State Attorney General" role="Respondent"></party>
+ <party fullName="State of Idaho" lastName="State of Idaho" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Allison v. Blades et al</title>
+ <partNumber>1:05-cv-00510</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00510/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00510;05-510</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gary Eugene Allison</displayForm>
+ <namePart type="family">Allison</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Robin Babbitt</displayForm>
+ <namePart type="family">Babbitt</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Beauclair</displayForm>
+ <namePart type="family">Beauclair</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Blades</displayForm>
+ <namePart type="family">Blades</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Correctional Medical Services, Inc</displayForm>
+ <namePart type="family">Correctional Medical Services, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Hines</displayForm>
+ <namePart type="family">Hines</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Idaho Board of Corrections</displayForm>
+ <namePart type="family">Idaho Board of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Idaho State Correctional Institute</displayForm>
+ <namePart type="family">Idaho State Correctional Institute</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>John/Jane Does</displayForm>
+ <namePart type="family">John/Jane Does</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Governor Kempthorne</displayForm>
+ <namePart type="family">Kempthorne</namePart>
+ <namePart type="given">Governor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Kirkman</displayForm>
+ <namePart type="family">Kirkman</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Ted Lucas</displayForm>
+ <namePart type="family">Lucas</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ted Lucas</displayForm>
+ <namePart type="family">Lucas</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Prison Health Services</displayForm>
+ <namePart type="family">Prison Health Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>State Attorney General</displayForm>
+ <namePart type="family">State Attorney General</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>State of Idaho</displayForm>
+ <namePart type="family">State of Idaho</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_05-cv-00510</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:05-cv-00510</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Gary" fullName="Gary Eugene Allison" lastName="Allison" middleName="Eugene" role="Petitioner"></party>
+ <party firstName="Robin" fullName="Robin Babbitt" lastName="Babbitt" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Beauclair" lastName="Beauclair" role="Respondent"></party>
+ <party firstName="Randy" fullName="Randy Blades" lastName="Blades" role="Respondent"></party>
+ <party fullName="Correctional Medical Services, Inc" lastName="Correctional Medical Services, Inc" role="Respondent"></party>
+ <party firstName="Larry" fullName="Larry Hines" lastName="Hines" role="Respondent"></party>
+ <party fullName="Idaho Board of Corrections" lastName="Idaho Board of Corrections" role="Respondent"></party>
+ <party fullName="Idaho State Correctional Institute" lastName="Idaho State Correctional Institute" role="Respondent"></party>
+ <party fullName="John/Jane Does" lastName="John/Jane Does" role="Respondent"></party>
+ <party firstName="Governor" fullName="Governor Kempthorne" lastName="Kempthorne" role="Respondent"></party>
+ <party firstName="Jeff" fullName="Jeff Kirkman" lastName="Kirkman" role="Respondent"></party>
+ <party firstName="Ted" fullName="Ted Lucas" lastName="Lucas" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Lucas" lastName="Lucas" role="Respondent"></party>
+ <party fullName="Prison Health Services" lastName="Prison Health Services" role="Respondent"></party>
+ <party fullName="State Attorney General" lastName="State Attorney General" role="Respondent"></party>
+ <party fullName="State of Idaho" lastName="State of Idaho" role="Respondent"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00510-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-0/mods.xml">
+ <titleInfo>
+  <title>Allison v. Blades et al</title>
+  <subTitle>MEMORANDUM ORDER finding as moot 24 Motion to Compel; conditionally granting 26 Motion to Amend complaint, pla to file comprehensive amended complaint by 8/31/07; granting 26 Motion for Extension of Time to Complete Discovery ; granting 30 Motion for Extension of Time to File Response ; granting 28 Motion for Summary Judgment, all claims against Warden Blades are dismissed with prejudice;. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by wm, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00510-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180feedac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-0</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00510_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00510/pdf/USCOURTS-idd-1_05-cv-00510-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00510; Allison v. Blades et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00510-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-08-16</dateIssued>
+  <docketText>MEMORANDUM ORDER finding as moot 24 Motion to Compel; conditionally granting 26 Motion to Amend complaint, pla to file comprehensive amended complaint by 8/31/07; granting 26 Motion for Extension of Time to Complete Discovery ; granting 30 Motion for Extension of Time to File Response ; granting 28 Motion for Summary Judgment, all claims against Warden Blades are dismissed with prejudice;. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by wm, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_05-cv-00510-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-1/mods.xml">
+ <titleInfo>
+  <title>Allison v. Blades et al</title>
+  <subTitle>MEMORANDUM ORDER Granting 63 MOTION for Summary Judgment filed by Correctional Medical Services, Granting 64 MOTION for Summary Judgment filed by Prison Health Services, Inc. filed by Prison Health Services, Denying 68 MOTION to Strike 67 Reply to Response to Motion filed by Gary Eugene Allison. Plaintiff&apos;s claims against Ted Lucas,Larry Hynes, and Robin Babbitt are DISMISSED. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_05-cv-00510-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180feedab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-1</identifier>
+ <identifier type="former granule identifier">idd-1_05-cv-00510_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_05-cv-00510/USCOURTS-idd-1_05-cv-00510-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_05-cv-00510/pdf/USCOURTS-idd-1_05-cv-00510-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00510; Allison v. Blades et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_05-cv-00510-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>MEMORANDUM ORDER Granting 63 MOTION for Summary Judgment filed by Correctional Medical Services, Granting 64 MOTION for Summary Judgment filed by Prison Health Services, Inc. filed by Prison Health Services, Denying 68 MOTION to Strike 67 Reply to Response to Motion filed by Gary Eugene Allison. Plaintiff&apos;s claims against Ted Lucas,Larry Hynes, and Robin Babbitt are DISMISSED. Signed by Judge Edward J. Lodge. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by jm)</docketText>
+</extension>
+</relatedItem>
+</mods>

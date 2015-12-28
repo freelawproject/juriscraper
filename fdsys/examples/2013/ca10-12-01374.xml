@@ -1,0 +1,160 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a3fd552">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-01374</identifier>
+<identifier type="local">P0b002ee18a3fd552</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca10-12-01374</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-01374</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-01374</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Timothy" fullName="Timothy Campbell" lastName="Campbell" role="Appellee"></party>
+ <party fullName="The City and County of Denver" lastName="The City and County of Denver" role="Appellee"></party>
+ <party firstName="Vicki" fullName="Vicki Lynn Trujillo" lastName="Trujillo" middleName="Lynn" role="Appellant"></party>
+ <party firstName="Gerald" fullName="Gerald R. Whitman" lastName="Whitman" middleName="R." role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Trujillo v. Campbell, et al</title>
+ <partNumber>12-01374</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-01374/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-01374;12-1374</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Timothy Campbell</displayForm>
+ <namePart type="family">Campbell</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>The City and County of Denver</displayForm>
+ <namePart type="family">The City and County of Denver</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Vicki Lynn Trujillo</displayForm>
+ <namePart type="family">Trujillo</namePart>
+ <namePart type="given">Vicki</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Gerald R. Whitman</displayForm>
+ <namePart type="family">Whitman</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-01374</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-01374</caseNumber>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Timothy" fullName="Timothy Campbell" lastName="Campbell" role="Appellee"></party>
+ <party fullName="The City and County of Denver" lastName="The City and County of Denver" role="Appellee"></party>
+ <party firstName="Vicki" fullName="Vicki Lynn Trujillo" lastName="Trujillo" middleName="Lynn" role="Appellant"></party>
+ <party firstName="Gerald" fullName="Gerald R. Whitman" lastName="Whitman" middleName="R." role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca10-12-01374-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-01374/USCOURTS-ca10-12-01374-0/mods.xml">
+ <titleInfo>
+  <title>Trujillo v. Campbell, et al</title>
+  <subTitle>[10032965] Frap 42; Procedural termination without judicial action. [12-1374]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-01374/pdf/USCOURTS-ca10-12-01374-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a44a491</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-01374/USCOURTS-ca10-12-01374-0</identifier>
+ <identifier type="former granule identifier">ca10-12-01374_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-01374/USCOURTS-ca10-12-01374-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-01374/pdf/USCOURTS-ca10-12-01374-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-01374; Trujillo v. Campbell, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Tenth Circuit</courtName>
+  <accessId>USCOURTS-ca10-12-01374-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>[10032965] Frap 42; Procedural termination without judicial action. [12-1374]</docketText>
+</extension>
+</relatedItem>
+</mods>

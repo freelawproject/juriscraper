@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02f4c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-po-03001</identifier>
+<identifier type="local">P0b002ee183a02f4c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-po-03001</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-po-03001</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-po-03001</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType></caseType>
+ <party firstName="Kethan" fullName="Kethan S. Mercure" lastName="Mercure" middleName="S." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Mercure</title>
+ <partNumber>4:12-po-03001</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-po-03001/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-po-03001;12-3001</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kethan S. Mercure</displayForm>
+ <namePart type="family">Mercure</namePart>
+ <namePart type="given">Kethan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-po-03001</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-po-03001</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType></caseType>
+ <party firstName="Kethan" fullName="Kethan S. Mercure" lastName="Mercure" middleName="S." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-po-03001-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Mercure</title>
+  <subTitle>MOTION TO CONTINUE AND ORDER as to defendant Kethan S. Mercure. Upon request of the parties, Initial Appearance continued to 9/6/2012 at 08:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-po-03001-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04040</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-po-03001_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-po-03001/pdf/USCOURTS-ned-4_12-po-03001-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-po-03001; USA v. Mercure; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-po-03001-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-27</dateIssued>
+  <docketText>MOTION TO CONTINUE AND ORDER as to defendant Kethan S. Mercure. Upon request of the parties, Initial Appearance continued to 9/6/2012 at 08:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-po-03001-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Mercure</title>
+  <subTitle>ORDER as to defendant Kethan S. Mercure. - The defendant is entitled to proceed before a district judge on at least one of the charges currently pending against him. 1) On or before October 5, 2012, the defendant shall file a notice, signed by both the defendant and his counsel, advising the court as to whether the defendant will consent to final disposition by a magistrate judge as to all eight violations/counts currently pending against him.2) In the absence of timely filed consent to proceed before the undersigned magistrate judge, this case will be reassigned to a district judge. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-po-03001-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0403f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-po-03001_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-po-03001/pdf/USCOURTS-ned-4_12-po-03001-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-po-03001; USA v. Mercure; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-po-03001-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-21</dateIssued>
+  <docketText>ORDER as to defendant Kethan S. Mercure. - The defendant is entitled to proceed before a district judge on at least one of the charges currently pending against him. 1) On or before October 5, 2012, the defendant shall file a notice, signed by both the defendant and his counsel, advising the court as to whether the defendant will consent to final disposition by a magistrate judge as to all eight violations/counts currently pending against him.2) In the absence of timely filed consent to proceed before the undersigned magistrate judge, this case will be reassigned to a district judge. Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed as directed)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-po-03001-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Mercure</title>
+  <subTitle>JUDGMENT as to defendant Kethan S. Mercure. Defendant pleaded guilty to the allegation listed in CVB violation numbers W0909984 and W0909905 on 11/13/2012. The defendant is hereby sentenced to probation for a term of 2 years with special conditions and ordered to pay a $600.00 fine, $20.00 special assessment, and a $50.00 processing fee. The remaining violations, W0909901, W0909902, W0909904, W0909982, W0909983, W0909988 and W0909989 are dismissed on the motion of the United States as to this defendant only. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to CVB, copy to defendant). Ordered by Magistrate Judge Cheryl R. Zwart. (CCB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-po-03001-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0403e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-po-03001_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-po-03001/USCOURTS-ned-4_12-po-03001-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-po-03001/pdf/USCOURTS-ned-4_12-po-03001-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-po-03001; USA v. Mercure; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-po-03001-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>JUDGMENT as to defendant Kethan S. Mercure. Defendant pleaded guilty to the allegation listed in CVB violation numbers W0909984 and W0909905 on 11/13/2012. The defendant is hereby sentenced to probation for a term of 2 years with special conditions and ordered to pay a $600.00 fine, $20.00 special assessment, and a $50.00 processing fee. The remaining violations, W0909901, W0909902, W0909904, W0909982, W0909983, W0909988 and W0909989 are dismissed on the motion of the United States as to this defendant only. Ordered by Magistrate Judge Cheryl R. Zwart. (E-mailed to CVB, copy to defendant). Ordered by Magistrate Judge Cheryl R. Zwart. (CCB)</docketText>
+</extension>
+</relatedItem>
+</mods>

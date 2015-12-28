@@ -1,0 +1,280 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a18460">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671</identifier>
+<identifier type="local">P0b002ee183a18460</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_12-cv-10671</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-10671</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-10671</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Christopher" fullName="Christopher Imelmann" lastName="Imelmann" role="Plaintiff"></party>
+ <party fullName="Jackson County Board of Commissioners" lastName="Jackson County Board of Commissioners" role="Defendant"></party>
+ <party fullName="Michigan Department of Corrections" lastName="Michigan Department of Corrections" role="Defendant"></party>
+ <party firstName="H." fullName="H. Washington" lastName="Washington" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Imelmann v. Michigan Department of Corrections et al</title>
+ <partNumber>2:12-cv-10671</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-10671;12-10671</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Christopher Imelmann</displayForm>
+ <namePart type="family">Imelmann</namePart>
+ <namePart type="given">Christopher</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jackson County Board of Commissioners</displayForm>
+ <namePart type="family">Jackson County Board of Commissioners</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan Department of Corrections</displayForm>
+ <namePart type="family">Michigan Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H. Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-10671</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-10671</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Christopher" fullName="Christopher Imelmann" lastName="Imelmann" role="Plaintiff"></party>
+ <party fullName="Jackson County Board of Commissioners" lastName="Jackson County Board of Commissioners" role="Defendant"></party>
+ <party fullName="Michigan Department of Corrections" lastName="Michigan Department of Corrections" role="Defendant"></party>
+ <party firstName="H." fullName="H. Washington" lastName="Washington" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-10671-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-0/mods.xml">
+ <titleInfo>
+  <title>Imelmann v. Michigan Department of Corrections et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that 4 MOTION for Preliminary Injunction filed by Christopher Imelmann be denied; all claims against Defendant Washington be dismissed; all claims for injunctive relief be dismissed; and Complaint be served on remaining defendants. Signed by Magistrate Judge Charles E. Binder. (JBro)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-10671-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20b74</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-0</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-10671_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/pdf/USCOURTS-mied-2_12-cv-10671-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-10671; Imelmann v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-10671-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-05-16</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that 4 MOTION for Preliminary Injunction filed by Christopher Imelmann be denied; all claims against Defendant Washington be dismissed; all claims for injunctive relief be dismissed; and Complaint be served on remaining defendants. Signed by Magistrate Judge Charles E. Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-10671-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-1/mods.xml">
+ <titleInfo>
+  <title>Imelmann v. Michigan Department of Corrections et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER accepting and adopting 11 Report and Recommendation, denying 4 Motion for preliminary injunction, dismissing claims against defendant H. Washington, and directing service upon the remaining defendants. Signed by District Judge Bernard A. Friedman. (DPer)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-10671-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20b76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-1</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-10671_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/pdf/USCOURTS-mied-2_12-cv-10671-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-10671; Imelmann v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-10671-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-06-19</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER accepting and adopting 11 Report and Recommendation, denying 4 Motion for preliminary injunction, dismissing claims against defendant H. Washington, and directing service upon the remaining defendants. Signed by District Judge Bernard A. Friedman. (DPer)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-10671-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-2/mods.xml">
+ <titleInfo>
+  <title>Imelmann v. Michigan Department of Corrections et al</title>
+  <subTitle>ORDER denying 15 Motion for Leave to File; and denying 16 Motion for Reconsideration filed by Christopher Imelmann. Signed by Magistrate Judge Charles E. Binder. (JBro)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-10671-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20b75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-2</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-10671_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/pdf/USCOURTS-mied-2_12-cv-10671-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-10671; Imelmann v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-10671-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-17</dateIssued>
+  <docketText>ORDER denying 15 Motion for Leave to File; and denying 16 Motion for Reconsideration filed by Christopher Imelmann. Signed by Magistrate Judge Charles E. Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-10671-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-3/mods.xml">
+ <titleInfo>
+  <title>Imelmann v. Michigan Department of Corrections et al</title>
+  <subTitle>REPORT AND RECOMMENDATION that 1 Complaint filed by Christopher Imelmann be sua sponte dismissed for want of prosecution. Signed by Magistrate Judge Charles E. Binder. (JBro)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-10671-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20b72</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-3</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-10671_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/pdf/USCOURTS-mied-2_12-cv-10671-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-10671; Imelmann v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-10671-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-11-30</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that 1 Complaint filed by Christopher Imelmann be sua sponte dismissed for want of prosecution. Signed by Magistrate Judge Charles E. Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-10671-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-4/mods.xml">
+ <titleInfo>
+  <title>Imelmann v. Michigan Department of Corrections et al</title>
+  <subTitle>ORDER Adopting 24 Report and Recommendation dismissing case Signed by District Judge Bernard A. Friedman. (CMul)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-10671-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a20b73</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-4</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-10671_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-10671/USCOURTS-mied-2_12-cv-10671-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-10671/pdf/USCOURTS-mied-2_12-cv-10671-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-10671; Imelmann v. Michigan Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-10671-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER Adopting 24 Report and Recommendation dismissing case Signed by District Judge Bernard A. Friedman. (CMul)</docketText>
+</extension>
+</relatedItem>
+</mods>

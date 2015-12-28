@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import glob
+import json
+from collections import defaultdict
 from pprint import pprint
 
 import requests
@@ -64,7 +66,7 @@ class FDSysModsContent(object):
             self.__setattr__(attr, getattr(self, '_get_%s' % attr)())
 
     def _get_download_url(self):
-        return ''.join(xpath(self.tree, "(//m:identifier[@type='uri'])[1]/text()"))
+        return ''.join(xpath(self.tree, "(//m:identifier[@type='uri'])[1]/text()")).strip()
 
     def _get_fdsys_id(self):
         return ''.join(xpath(self.tree, "(//m:accessId/text())[1]"))
@@ -103,18 +105,27 @@ class FDSysModsContent(object):
 
         return map(self._get_document, document_nodes)
 
-    @staticmethod
-    def _get_document(document_node):
+    def _get_document(self, document_node):
+        desription = ' '.join(''.join(
+                            xpath(document_node, './/m:subTitle/text()')
+                    ).split()
+                              )
         return {
-            'download_url': ''.join(xpath(document_node, './m:relatedItem/@xlink:href')),
-            'description': ''.join(xpath(document_node, './/m:subTitle/text()')),
-            'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()'))
+            'download_url': ''.join(xpath(document_node, './m:relatedItem/@xlink:href')).strip(),
+            'description': desription,
+            'date_filed': ''.join(xpath(document_node, './m:originInfo/m:dateIssued/text()')),
+            'type': self._get_document_type(desription),
+            'number': ''.join(xpath(document_node, './/m:partNumber/text()')),
         }
 
     @staticmethod
     def _get_mods_file_url(url):
         """replaces content-detail.html with mods.xml"""
         return url.replace('content-detail.html', 'mods.xml')
+
+    def _get_document_type(self, document_node):
+        # todo, build it after the samples are downloaded
+        return ''
 
 
 class FDSysSite(AbstractSite):
@@ -134,7 +145,8 @@ class FDSysSite(AbstractSite):
         self.back_scrape_iterable = range(1982, current_year + 1)
 
     def __iter__(self):
-        for url in xpath(self.html, "//s:loc/text()"):
+        for i, url in enumerate(xpath(self.html, "//s:loc/text()")):
+            self.save_mods_file(url)
             mods_file = FDSysModsContent(url)
             yield mods_file.get_content()
 
@@ -144,6 +156,14 @@ class FDSysSite(AbstractSite):
 
     def __len__(self):
         return len(xpath(self.html, "//s:loc/text()"))
+
+    def save_mods_file(self, url):
+        mods_url = FDSysModsContent._get_mods_file_url(url)
+        name = '-'.join(mods_url.split("/")[-2].split('-')[1:])
+        with open("./examples/2006/{}.xml".format(name), 'w') as handle:
+            response = requests.get(mods_url, stream=True)
+            for block in response.iter_content(1024):
+                handle.write(block)
 
     def _download(self, request_dict={}):
         """
@@ -169,14 +189,30 @@ class FDSysSite(AbstractSite):
         return self
 
 
+def get_court_locations_list():
+    court_locations_list = defaultdict(set)
+    for f in glob.glob('./examples/*/*.xml'):
+        print f
+        fm = FDSysModsContent(f)
+        court_locations_list[fm.court_id].add(fm.court_location)
+        print fm.court_id, fm.court_location
+    cl = {}
+    for k, v in court_locations_list.items():
+        cl[k] = list(v)
+    with open('court_locations.json', 'w') as j:
+        json.dump(cl, j)
+
+
 if __name__ == '__main__':
-    # for f in glob.glob('./examples/*.xml'):
-    #     print f
+    get_court_locations_list()
+    # for f in glob.glob('./examples/*/*.xml'):
     #     fm = FDSysModsContent(f)
+    #
     #     pprint(fm.get_content())
-    f = FDSysSite()
-    # f.url = "./examples/2015_USCOURTS_sitemap.xml"
-    f.parse()
-    for i in f:
-        pprint(i)
+    # f = FDSysSite()
+    # f.url = "./sitemaps_examples/2006_USCOURTS_sitemap.xml"
+    # f.parse()
+    # for i in f:
+    #     print i
+    # #     pprint(i)0
 

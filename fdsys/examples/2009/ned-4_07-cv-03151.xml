@@ -1,0 +1,301 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b41ac">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151</identifier>
+<identifier type="local">P0b002ee1817b41ac</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03151</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03151</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03151</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="William" fullName="William E. Hewitt II" generation="II" lastName="Hewitt" middleName="E." role="Plaintiff"></party>
+ <party fullName="Office of General Counsel Social Security Administration" lastName="Office of General Counsel Social Security Administration" role="Interested Party"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hewitt v. Social Security Administration</title>
+ <partNumber>4:07-cv-03151</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03151;07-3151</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>William E. Hewitt II</displayForm>
+ <namePart type="family">Hewitt</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Office of General Counsel Social Security Administration</displayForm>
+ <namePart type="family">Office of General Counsel Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03151</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03151</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:0405 Review of HHS Decision</cause>
+ <party firstName="William" fullName="William E. Hewitt II" generation="II" lastName="Hewitt" middleName="E." role="Plaintiff"></party>
+ <party fullName="Office of General Counsel Social Security Administration" lastName="Office of General Counsel Social Security Administration" role="Interested Party"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-0/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER - This matter is before the court on its own motion. IT IS ORDERED: 1. That the undersigned hereby withdraws from this case pursuant to 28 U.S.C. § 455(a); and 2. The Clerk of the United States District Court for the District of Nebraska shall direct this case to Chief Judge Bataillon for reassignment. Ordered by Judge Richard G. Kopf. (JAR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b4979</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - This matter is before the court on its own motion. IT IS ORDERED: 1. That the undersigned hereby withdraws from this case pursuant to 28 U.S.C. § 455(a); and 2. The Clerk of the United States District Court for the District of Nebraska shall direct this case to Chief Judge Bataillon for reassignment. Ordered by Judge Richard G. Kopf. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-1/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>ORDER granting 3 Motion for Leave to Proceed in forma pauperis. Ordered by Judge Joseph F. Bataillon.(ADB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b497b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-25</dateIssued>
+  <docketText>ORDER granting 3 Motion for Leave to Proceed in forma pauperis. Ordered by Judge Joseph F. Bataillon.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-2/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>ORDER granting 15 Motion to Extend. Plaintiff is granted until November 5, 2007 to file a brief in this case. Ordered by Judge Joseph F. Bataillon.(ADB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-09-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b497c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-09-24</dateIssued>
+  <docketText>ORDER granting 15 Motion to Extend. Plaintiff is granted until November 5, 2007 to file a brief in this case. Ordered by Judge Joseph F. Bataillon.(ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-3/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>ORDER - Defendant&apos;s motion for an extension of time 29, is granted until April 21, 2008. No further extensions will be granted, absent good cause.Ordered by Chief Judge Joseph F. Bataillon. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b49a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-03-20</dateIssued>
+  <docketText>ORDER - Defendant&apos;s motion for an extension of time 29, is granted until April 21, 2008. No further extensions will be granted, absent good cause.Ordered by Chief Judge Joseph F. Bataillon. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-4/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER - THEREFORE, IT IS ORDERED that the ALJ&apos;s determination is reversed. The court orders this case remanded for a determination of benefits. A separate judgment will be entered in accordance with this Memorandum and Order.Ordered by Chief Judge Joseph F. Bataillon. (TCL)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b4978</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-4</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-07-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - THEREFORE, IT IS ORDERED that the ALJ&apos;s determination is reversed. The court orders this case remanded for a determination of benefits. A separate judgment will be entered in accordance with this Memorandum and Order.Ordered by Chief Judge Joseph F. Bataillon. (TCL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03151-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-5/mods.xml">
+ <titleInfo>
+  <title>Hewitt v. Social Security Administration</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s motion for attorney fees 34 is granted. The court orders the defendant to pay plaintiff&apos;s attorney, Mary Stoughton Wenzl, the EAJA fee in the amount of $4,636.50. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03151-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818b497a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-5</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03151_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03151/USCOURTS-ned-4_07-cv-03151-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03151/pdf/USCOURTS-ned-4_07-cv-03151-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03151; Hewitt v. Social Security Administration; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03151-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s motion for attorney fees 34 is granted. The court orders the defendant to pay plaintiff&apos;s attorney, Mary Stoughton Wenzl, the EAJA fee in the amount of $4,636.50. Ordered by Chief Judge Joseph F. Bataillon. (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

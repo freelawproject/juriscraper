@@ -1,0 +1,159 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ee3263">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_05-cv-01288</identifier>
+<identifier type="local">P0b002ee180ee3263</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_05-cv-01288</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_05-cv-01288</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:05-cv-01288</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Ngulwe" fullName="Ngulwe K. Alfani" lastName="Alfani" middleName="K." role="Plaintiff"></party>
+ <party fullName="Bureau of Citizenship&amp;Immigration" lastName="Bureau of Citizenship&amp;Immigration" role="Defendant"></party>
+ <party fullName="U.S. Department of Homeland Security" lastName="U.S. Department of Homeland Security" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Alfani v. U.S. Department of Homeland Security et al</title>
+ <partNumber>6:05-cv-01288</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_05-cv-01288/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:05-cv-01288;05-1288</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ngulwe K. Alfani</displayForm>
+ <namePart type="family">Alfani</namePart>
+ <namePart type="given">Ngulwe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bureau of Citizenship&amp;Immigration</displayForm>
+ <namePart type="family">Bureau of Citizenship&amp;Immigration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Department of Homeland Security</displayForm>
+ <namePart type="family">U.S. Department of Homeland Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_05-cv-01288</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:05-cv-01288</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Ngulwe" fullName="Ngulwe K. Alfani" lastName="Alfani" middleName="K." role="Plaintiff"></party>
+ <party fullName="Bureau of Citizenship&amp;Immigration" lastName="Bureau of Citizenship&amp;Immigration" role="Defendant"></party>
+ <party fullName="U.S. Department of Homeland Security" lastName="U.S. Department of Homeland Security" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_05-cv-01288-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_05-cv-01288/USCOURTS-ksd-6_05-cv-01288-0/mods.xml">
+ <titleInfo>
+  <title>Alfani v. U.S. Department of Homeland Security et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 11 Motion to Dismiss . Signed by Judge J. Thomas Marten on 1/19/06. (rt)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-6_05-cv-01288-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f881a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_05-cv-01288/USCOURTS-ksd-6_05-cv-01288-0</identifier>
+ <identifier type="former granule identifier">ksd-6_05-cv-01288_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_05-cv-01288/USCOURTS-ksd-6_05-cv-01288-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_05-cv-01288/pdf/USCOURTS-ksd-6_05-cv-01288-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:05-cv-01288; Alfani v. U.S. Department of Homeland Security et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_05-cv-01288-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 11 Motion to Dismiss . Signed by Judge J. Thomas Marten on 1/19/06. (rt)</docketText>
+</extension>
+</relatedItem>
+</mods>

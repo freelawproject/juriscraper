@@ -1,0 +1,336 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18766a866">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552</identifier>
+<identifier type="local">P0b002ee18766a866</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_06-cv-02552</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_06-cv-02552</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:06-cv-02552</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party firstName="David" fullName="David Albert" lastName="Albert" role="Counter Claimant"></party>
+ <party firstName="David" fullName="David Albert" lastName="Albert" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Goldstein" lastName="Goldstein" role="Defendant"></party>
+ <party fullName="Radiant Systems, Inc." lastName="Radiant Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Radiant Systems, Inc." lastName="Radiant Systems, Inc." role="Defendant"></party>
+ <party fullName="Retail Control Systems, Inc." lastName="Retail Control Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Retail Control Systems, Inc." lastName="Retail Control Systems, Inc." role="Defendant"></party>
+ <party fullName="Strasburg-Jarvis, Inc." lastName="Strasburg-Jarvis, Inc." role="Counter Defendant"></party>
+ <party fullName="Strasburg-Jarvis, Inc." lastName="Strasburg-Jarvis, Inc." role="Plaintiff"></party>
+ <party fullName="Synchronics, Inc." lastName="Synchronics, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+ <partNumber>2:06-cv-02552</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-02552;06-2552</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Albert</displayForm>
+ <namePart type="family">Albert</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>David Albert</displayForm>
+ <namePart type="family">Albert</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffery Goldstein</displayForm>
+ <namePart type="family">Goldstein</namePart>
+ <namePart type="given">Jeffery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Radiant Systems, Inc.</displayForm>
+ <namePart type="family">Radiant Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Radiant Systems, Inc.</displayForm>
+ <namePart type="family">Radiant Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Retail Control Systems, Inc.</displayForm>
+ <namePart type="family">Retail Control Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Retail Control Systems, Inc.</displayForm>
+ <namePart type="family">Retail Control Systems, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Strasburg-Jarvis, Inc.</displayForm>
+ <namePart type="family">Strasburg-Jarvis, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Strasburg-Jarvis, Inc.</displayForm>
+ <namePart type="family">Strasburg-Jarvis, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Synchronics, Inc.</displayForm>
+ <namePart type="family">Synchronics, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_06-cv-02552</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:06-cv-02552</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Other Contract</cause>
+ <party firstName="David" fullName="David Albert" lastName="Albert" role="Counter Claimant"></party>
+ <party firstName="David" fullName="David Albert" lastName="Albert" role="Defendant"></party>
+ <party firstName="Jeffery" fullName="Jeffery Goldstein" lastName="Goldstein" role="Defendant"></party>
+ <party fullName="Radiant Systems, Inc." lastName="Radiant Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Radiant Systems, Inc." lastName="Radiant Systems, Inc." role="Defendant"></party>
+ <party fullName="Retail Control Systems, Inc." lastName="Retail Control Systems, Inc." role="Counter Claimant"></party>
+ <party fullName="Retail Control Systems, Inc." lastName="Retail Control Systems, Inc." role="Defendant"></party>
+ <party fullName="Strasburg-Jarvis, Inc." lastName="Strasburg-Jarvis, Inc." role="Counter Defendant"></party>
+ <party fullName="Strasburg-Jarvis, Inc." lastName="Strasburg-Jarvis, Inc." role="Plaintiff"></party>
+ <party fullName="Synchronics, Inc." lastName="Synchronics, Inc." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02552-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-0/mods.xml">
+ <titleInfo>
+  <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+  <subTitle>ORDER denying 9 Motion to Dismiss. Signed by Judge Carlos Murguia on 4/30/2007. (js)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767fef1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-0</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02552_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02552; Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02552-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-30</dateIssued>
+  <docketText>ORDER denying 9 Motion to Dismiss. Signed by Judge Carlos Murguia on 4/30/2007. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02552-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-1/mods.xml">
+ <titleInfo>
+  <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+  <subTitle>ORDER denying 37 Motion to Dismiss; denying 41 Motion to Dismiss. Signed by District Judge Carlos Murguia on 11/19/2007. (js)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767fef3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-1</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02552_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02552; Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02552-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-11-19</dateIssued>
+  <docketText>ORDER denying 37 Motion to Dismiss; denying 41 Motion to Dismiss. Signed by District Judge Carlos Murguia on 11/19/2007. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02552-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-2/mods.xml">
+ <titleInfo>
+  <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+  <subTitle>ORDER granting in part and denying in part 61 Motion to Dismiss. Signed by District Judge Carlos Murguia on 2/15/08. (js)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767fef2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-2</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02552_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02552; Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02552-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-02-15</dateIssued>
+  <docketText>ORDER granting in part and denying in part 61 Motion to Dismiss. Signed by District Judge Carlos Murguia on 2/15/08. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02552-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-3/mods.xml">
+ <titleInfo>
+  <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+  <subTitle>ORDER granting in part and denying in part 65 Motion to Dismiss. Signed by District Judge Carlos Murguia on 3/4/08. (js)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767feef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-3</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02552_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02552; Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02552-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-03-04</dateIssued>
+  <docketText>ORDER granting in part and denying in part 65 Motion to Dismiss. Signed by District Judge Carlos Murguia on 3/4/08. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_06-cv-02552-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-4/mods.xml">
+ <titleInfo>
+  <title>Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al</title>
+  <subTitle>ORDER granting in part and denying in part 124 plaintiff&apos;s motion to compel. Signed by Magistrate Judge James P. O&apos;Hara on 1/20/09. (mt)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18767fef0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-4</identifier>
+ <identifier type="former granule identifier">ksd-2_06-cv-02552_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_06-cv-02552/USCOURTS-ksd-2_06-cv-02552-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_06-cv-02552/pdf/USCOURTS-ksd-2_06-cv-02552-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-02552; Strasburg-Jarvis, Inc. v. Radiant Systems, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_06-cv-02552-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>ORDER granting in part and denying in part 124 plaintiff&apos;s motion to compel. Signed by Magistrate Judge James P. O&apos;Hara on 1/20/09. (mt)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18170e14d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-00948</identifier>
+<identifier type="local">P0b002ee18170e14d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_11-cv-00948</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-cv-00948</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-cv-00948</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="Brit Insurance Holdings N.V." lastName="Brit Insurance Holdings N.V." role="Counter-Defendant"></party>
+ <party fullName="Brit Insurance Holdings N.V." lastName="Brit Insurance Holdings N.V." role="Plaintiff"></party>
+ <party fullName="Hiscox Dedicated Corporate Member Ltd." lastName="Hiscox Dedicated Corporate Member Ltd." role="Counter-Defendant"></party>
+ <party fullName="Hiscox Dedicated Corporate Member Ltd." lastName="Hiscox Dedicated Corporate Member Ltd." role="Plaintiff"></party>
+ <party fullName="Kohrman Jackson&amp;Krantz, P.L.L." lastName="Kohrman Jackson&amp;Krantz, P.L.L." role="Counter-Claimant"></party>
+ <party fullName="Kohrman Jackson&amp;Krantz, P.L.L." lastName="Kohrman Jackson&amp;Krantz, P.L.L." role="Defendant"></party>
+ <party firstName="Marc" fullName="Marc C. Krantz" lastName="Krantz" middleName="C." role="Counter-Claimant"></party>
+ <party firstName="Marc" fullName="Marc C. Krantz" lastName="Krantz" middleName="C." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas J. Scanlon" lastName="Scanlon" middleName="J." role="Mediator"></party>
+</extension>
+<titleInfo>
+ <title>Brit Insurance Holdings N.V. et al v. Krantz et al</title>
+ <partNumber>1:11-cv-00948</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-00948/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-00948;11-948</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brit Insurance Holdings N.V.</displayForm>
+ <namePart type="family">Brit Insurance Holdings N.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brit Insurance Holdings N.V.</displayForm>
+ <namePart type="family">Brit Insurance Holdings N.V.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hiscox Dedicated Corporate Member Ltd.</displayForm>
+ <namePart type="family">Hiscox Dedicated Corporate Member Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hiscox Dedicated Corporate Member Ltd.</displayForm>
+ <namePart type="family">Hiscox Dedicated Corporate Member Ltd.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kohrman Jackson&amp;Krantz, P.L.L.</displayForm>
+ <namePart type="family">Kohrman Jackson&amp;Krantz, P.L.L.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Kohrman Jackson&amp;Krantz, P.L.L.</displayForm>
+ <namePart type="family">Kohrman Jackson&amp;Krantz, P.L.L.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marc C. Krantz</displayForm>
+ <namePart type="family">Krantz</namePart>
+ <namePart type="given">Marc</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter-Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Marc C. Krantz</displayForm>
+ <namePart type="family">Krantz</namePart>
+ <namePart type="given">Marc</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas J. Scanlon</displayForm>
+ <namePart type="family">Scanlon</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-cv-00948</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-cv-00948</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Insurance Contract</cause>
+ <party fullName="Brit Insurance Holdings N.V." lastName="Brit Insurance Holdings N.V." role="Counter-Defendant"></party>
+ <party fullName="Brit Insurance Holdings N.V." lastName="Brit Insurance Holdings N.V." role="Plaintiff"></party>
+ <party fullName="Hiscox Dedicated Corporate Member Ltd." lastName="Hiscox Dedicated Corporate Member Ltd." role="Counter-Defendant"></party>
+ <party fullName="Hiscox Dedicated Corporate Member Ltd." lastName="Hiscox Dedicated Corporate Member Ltd." role="Plaintiff"></party>
+ <party fullName="Kohrman Jackson&amp;Krantz, P.L.L." lastName="Kohrman Jackson&amp;Krantz, P.L.L." role="Counter-Claimant"></party>
+ <party fullName="Kohrman Jackson&amp;Krantz, P.L.L." lastName="Kohrman Jackson&amp;Krantz, P.L.L." role="Defendant"></party>
+ <party firstName="Marc" fullName="Marc C. Krantz" lastName="Krantz" middleName="C." role="Counter-Claimant"></party>
+ <party firstName="Marc" fullName="Marc C. Krantz" lastName="Krantz" middleName="C." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas J. Scanlon" lastName="Scanlon" middleName="J." role="Mediator"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-cv-00948-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-00948/USCOURTS-ohnd-1_11-cv-00948-0/mods.xml">
+ <titleInfo>
+  <title>Brit Insurance Holdings N.V. et al v. Krantz et al</title>
+  <subTitle>Memorandum Opinion and Order: Plaintiffs&apos; motion to dismiss defendants&apos; amended counterclaim is granted in part and denied in part. Plaintiffs&apos; motion to dismiss is granted as to defendants&apos; counterclaims for breach of contract, negligence, and breach of fiduciary duty (counts three through five of the amended counterclaim). In addition, plaintiffs&apos; motion to dismiss is granted as to plaintiffs&apos; motion to dismiss the invasion of privacy counterclaim (count two) brought by KJK. These counterclaims are hereby dismissed. Plaintiffs&apos; motion to dismiss is denied as to defendants&apos; amended counterclaim for breach of the duty of good faith and fair dealing (count one) and as to the invasion of privacy counterclaim (count two) insofar as it is brought by Mr. Krantz. These counterclaims remain in the case. Judge Patricia A. Gaughan on 1/5/12. (LC,S) re 25</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-cv-00948-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170e428</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-00948/USCOURTS-ohnd-1_11-cv-00948-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-cv-00948_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-cv-00948/USCOURTS-ohnd-1_11-cv-00948-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-cv-00948/pdf/USCOURTS-ohnd-1_11-cv-00948-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-00948; Brit Insurance Holdings N.V. et al v. Krantz et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-cv-00948-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-05</dateIssued>
+  <docketText>Memorandum Opinion and Order: Plaintiffs&apos; motion to dismiss defendants&apos; amended counterclaim is granted in part and denied in part. Plaintiffs&apos; motion to dismiss is granted as to defendants&apos; counterclaims for breach of contract, negligence, and breach of fiduciary duty (counts three through five of the amended counterclaim). In addition, plaintiffs&apos; motion to dismiss is granted as to plaintiffs&apos; motion to dismiss the invasion of privacy counterclaim (count two) brought by KJK. These counterclaims are hereby dismissed. Plaintiffs&apos; motion to dismiss is denied as to defendants&apos; amended counterclaim for breach of the duty of good faith and fair dealing (count one) and as to the invasion of privacy counterclaim (count two) insofar as it is brought by Mr. Krantz. These counterclaims remain in the case. Judge Patricia A. Gaughan on 1/5/12. (LC,S) re 25</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,178 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811493bd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-00498</identifier>
+<identifier type="local">P0b002ee1811493bd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-8_05-cv-00498</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-8_05-cv-00498</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>8:05-cv-00498</caseNumber>
+ <caseOffice>Plattsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>865</natureSuitCode>
+ <natureSuit>Social Security - RSI (405(g))</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Poupore" lastName="Poupore" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Poupore v. Commissioner of Social Security</title>
+ <partNumber>8:05-cv-00498</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-00498/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00498;05-498</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Plattsburgh</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Poupore</displayForm>
+ <namePart type="family">Poupore</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-8_05-cv-00498</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>8:05-cv-00498</caseNumber>
+ <caseOffice>Plattsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>865</natureSuitCode>
+ <natureSuit>Social Security - RSI (405(g))</natureSuit>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Poupore" lastName="Poupore" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-8_05-cv-00498-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-0/mods.xml">
+ <titleInfo>
+  <title>Poupore v. Commissioner of Social Security</title>
+  <subTitle>ORDER granting Deft&apos;s motion for judgment on the pleadings, affirming the Commissioner&apos;s determination, and dismissing 1 Complaint filed by Paul Poupore in its entirety. Signed by Judge David E. Peebles on 1/25/08. (lmp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-8_05-cv-00498-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181415a61</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-0</identifier>
+ <identifier type="former granule identifier">nynd-8_05-cv-00498_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-00498/pdf/USCOURTS-nynd-8_05-cv-00498-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00498; Poupore v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-8_05-cv-00498-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-25</dateIssued>
+  <docketText>ORDER granting Deft&apos;s motion for judgment on the pleadings, affirming the Commissioner&apos;s determination, and dismissing 1 Complaint filed by Paul Poupore in its entirety. Signed by Judge David E. Peebles on 1/25/08. (lmp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-8_05-cv-00498-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-1/mods.xml">
+ <titleInfo>
+  <title>Poupore v. Commissioner of Social Security</title>
+  <subTitle>JUDGMENT in favor of Commissioner of Social Security against Paul Poupore. (lmp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-8_05-cv-00498-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181415a60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-1</identifier>
+ <identifier type="former granule identifier">nynd-8_05-cv-00498_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-8_05-cv-00498/USCOURTS-nynd-8_05-cv-00498-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-8_05-cv-00498/pdf/USCOURTS-nynd-8_05-cv-00498-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00498; Poupore v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-8_05-cv-00498-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-25</dateIssued>
+  <docketText>JUDGMENT in favor of Commissioner of Social Security against Paul Poupore. (lmp)</docketText>
+</extension>
+</relatedItem>
+</mods>

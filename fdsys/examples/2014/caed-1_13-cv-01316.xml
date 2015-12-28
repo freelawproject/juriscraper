@@ -1,0 +1,264 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e96f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316</identifier>
+<identifier type="local">P0b002ee186c2e96f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-01316</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01316</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01316</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Fresno County Jail" lastName="Fresno County Jail" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Everett Pellum Sr." generation="Sr." lastName="Pellum" middleName="Everett" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Pellum v. Fresno County Jail</title>
+ <partNumber>1:13-cv-01316</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-01316;13-1316</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Fresno County Jail</displayForm>
+ <namePart type="family">Fresno County Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason Everett Pellum Sr.</displayForm>
+ <namePart type="family">Pellum</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-01316</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-01316</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Fresno County Jail" lastName="Fresno County Jail" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Everett Pellum Sr." generation="Sr." lastName="Pellum" middleName="Everett" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01316-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Pellum v. Fresno County Jail</title>
+  <subTitle>ORDER to Submit Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Michael J. Seng on 8/21/2013. (Attachments: # (1) IFP Application)(Marrujo, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-01316-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3f9c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01316_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/pdf/USCOURTS-caed-1_13-cv-01316-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01316; (PC) Pellum v. Fresno County Jail; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01316-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-22</dateIssued>
+  <docketText>ORDER to Submit Application to Proceed In Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Michael J. Seng on 8/21/2013. (Attachments: # (1) IFP Application)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01316-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Pellum v. Fresno County Jail</title>
+  <subTitle>ORDER GRANTING 4 Motion to Proceed IFP and DIRECTING Payment of Inmate Filing Fee by Fresno County Sheriff, signed by Magistrate Judge Michael J. Seng on 9/4/2013. (Attachments: # (1) IFP APPLICATION) (Martin-Gill, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-01316-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3f9c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01316_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/pdf/USCOURTS-caed-1_13-cv-01316-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01316; (PC) Pellum v. Fresno County Jail; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01316-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-09-05</dateIssued>
+  <docketText>ORDER GRANTING 4 Motion to Proceed IFP and DIRECTING Payment of Inmate Filing Fee by Fresno County Sheriff, signed by Magistrate Judge Michael J. Seng on 9/4/2013. (Attachments: # (1) IFP APPLICATION) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01316-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Pellum v. Fresno County Jail</title>
+  <subTitle>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Michael J. Seng on 9/25/2013. Amended Complaint Due in Thirty Days. (Attachments: # (1) Amended Complaint Form)(Marrujo, C)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-01316-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3f89e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01316_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/pdf/USCOURTS-caed-1_13-cv-01316-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01316; (PC) Pellum v. Fresno County Jail; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01316-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-09-26</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT WITH LEAVE TO AMEND, signed by Magistrate Judge Michael J. Seng on 9/25/2013. Amended Complaint Due in Thirty Days. (Attachments: # (1) Amended Complaint Form)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01316-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Pellum v. Fresno County Jail</title>
+  <subTitle>ORDER to SHOW CAUSE why Action Should not be Dismissed with Prejudice for Failure to Obey a Court Order and Failure to Prosecute signed by Magistrate Judge Michael J. Seng on 11/23/2013. Show Cause Response due by 12/30/2013. (Flores, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-01316-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3f89f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01316_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/pdf/USCOURTS-caed-1_13-cv-01316-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01316; (PC) Pellum v. Fresno County Jail; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01316-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-11-25</dateIssued>
+  <docketText>ORDER to SHOW CAUSE why Action Should not be Dismissed with Prejudice for Failure to Obey a Court Order and Failure to Prosecute signed by Magistrate Judge Michael J. Seng on 11/23/2013. Show Cause Response due by 12/30/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-01316-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Pellum v. Fresno County Jail</title>
+  <subTitle>ORDER DISMISSING Action (Strike) with Prejudice for Failure to Obey Court Orders and Failure to Prosecute; DISMISSAL COUNTS AS A STRIKE Pursuant to 28 U.S.C. 1915(g); Clerk to CLOSE CASE signed by Magistrate Judge Michael J. Seng on 1/2/2014. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-01316-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3f9c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-01316_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-01316/USCOURTS-caed-1_13-cv-01316-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-01316/pdf/USCOURTS-caed-1_13-cv-01316-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-01316; (PC) Pellum v. Fresno County Jail; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-01316-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER DISMISSING Action (Strike) with Prejudice for Failure to Obey Court Orders and Failure to Prosecute; DISMISSAL COUNTS AS A STRIKE Pursuant to 28 U.S.C. 1915(g); Clerk to CLOSE CASE signed by Magistrate Judge Michael J. Seng on 1/2/2014. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

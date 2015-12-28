@@ -1,0 +1,1036 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184f2b764">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886</identifier>
+<identifier type="local">P0b002ee184f2b764</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_07-cv-00886</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_07-cv-00886</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:07-cv-00886</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="JW" fullName="JW Andrews" lastName="Andrews" role="Defendant"></party>
+ <party firstName="E." fullName="E. Castro" lastName="Castro" role="Defendant"></party>
+ <party firstName="Efren" fullName="Efren Castro" lastName="Castro" role="Defendant"></party>
+ <party firstName="B." fullName="B. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="F." fullName="F. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="G." fullName="G. Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="R." fullName="R. Rosenthal" lastName="Rosenthal" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Washington" lastName="Washington" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Washington v. Andrews et al</title>
+ <partNumber>1:07-cv-00886</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:07-cv-00886;07-886</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>JW Andrews</displayForm>
+ <namePart type="family">Andrews</namePart>
+ <namePart type="given">JW</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. Castro</displayForm>
+ <namePart type="family">Castro</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Efren Castro</displayForm>
+ <namePart type="family">Castro</namePart>
+ <namePart type="given">Efren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Lopez</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>F. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">F.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G. Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Rosenthal</displayForm>
+ <namePart type="family">Rosenthal</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesse Washington</displayForm>
+ <namePart type="family">Washington</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_07-cv-00886</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:07-cv-00886</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="JW" fullName="JW Andrews" lastName="Andrews" role="Defendant"></party>
+ <party firstName="E." fullName="E. Castro" lastName="Castro" role="Defendant"></party>
+ <party firstName="Efren" fullName="Efren Castro" lastName="Castro" role="Defendant"></party>
+ <party firstName="B." fullName="B. Hernandez" lastName="Hernandez" role="Defendant"></party>
+ <party firstName="C." fullName="C. Lopez" lastName="Lopez" role="Defendant"></party>
+ <party firstName="F." fullName="F. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="J." fullName="J. Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="G." fullName="G. Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party firstName="R." fullName="R. Rosenthal" lastName="Rosenthal" role="Defendant"></party>
+ <party firstName="Jesse" fullName="Jesse Washington" lastName="Washington" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>FIRST INFORMATIONAL ORDER. Signed by Judge William M. Wunderlich on 6/25/07. (Hellings, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3614e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-0</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-06-25</dateIssued>
+  <docketText>FIRST INFORMATIONAL ORDER. Signed by Judge William M. Wunderlich on 6/25/07. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER, signed by District Judge Cindy K. Jorgenson on 5/20/2009. It is ORDERED that: Defendants Rodriguez, Castro, Hernandez, Rosenthal, Martinez, Moore, Lopez, and Andrews must answer Counts One through Seven. (Enclosed: (1) Copy of Complaint 1, (1) Copy of this Order 12, a Notice of Submission of Documents form, an instruction sheet, and (8) Summons and (8) USM-285 forms.) Service Documents Due: 6/24/2009. (Scrivner, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36153</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-1</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-05-21</dateIssued>
+  <docketText>ORDER, signed by District Judge Cindy K. Jorgenson on 5/20/2009. It is ORDERED that: Defendants Rodriguez, Castro, Hernandez, Rosenthal, Martinez, Moore, Lopez, and Andrews must answer Counts One through Seven. (Enclosed: (1) Copy of Complaint 1, (1) Copy of this Order 12, a Notice of Submission of Documents form, an instruction sheet, and (8) Summons and (8) USM-285 forms.) Service Documents Due: 6/24/2009. (Scrivner, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER DIRECTING Clerk to Send Plaintiff a Modified Service Packet and ORDERING Plaintiff to Submit a Completed Notice of Submission of Documents and Service Packet, Signed by District Judge Cindy K. Jorgenson on 7/13/2009. (Arellano, S.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3614f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-2</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-14</dateIssued>
+  <docketText>ORDER DIRECTING Clerk to Send Plaintiff a Modified Service Packet and ORDERING Plaintiff to Submit a Completed Notice of Submission of Documents and Service Packet, Signed by District Judge Cindy K. Jorgenson on 7/13/2009. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER to SHOW CAUSE, signed by District Judge Cindy K. Jorgenson on 12/17/09: Plaintiff is ORDERED TO SHOW CAUSE why this case should not be DISMISSED WITHOUT PREJUDICE as to C. Lopez and B. Hernandez; Should Plaintiff fail to timely comply with this Order, Defendants C. Lopez and B. Hernandez will be dismissed without prejudice, without further notice; Show Cause Response due by 1/22/2010.(Hellings, J)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36157</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-3</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-12-17</dateIssued>
+  <docketText>ORDER to SHOW CAUSE, signed by District Judge Cindy K. Jorgenson on 12/17/09: Plaintiff is ORDERED TO SHOW CAUSE why this case should not be DISMISSED WITHOUT PREJUDICE as to C. Lopez and B. Hernandez; Should Plaintiff fail to timely comply with this Order, Defendants C. Lopez and B. Hernandez will be dismissed without prejudice, without further notice; Show Cause Response due by 1/22/2010.(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER DISMISSING DEFENDANT C. Lopez, WIthout Prejudice; ORDER DIRECTING the U.S. Marshal&apos;s Office to File a Summons Returned Executed, a Summons Returned Unexecuted, a Waiver of Service Returned Executed, or a Status Repor as to the Service of B. Hernandez Within 20 Days, signed by District Judge Cindy K. Jorgenson on 2/8/2010. Status Report from USM due by 3/4/2010. (cc: USM Sacramento) (Jessen, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3614d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-4</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-02-09</dateIssued>
+  <docketText>ORDER DISMISSING DEFENDANT C. Lopez, WIthout Prejudice; ORDER DIRECTING the U.S. Marshal&apos;s Office to File a Summons Returned Executed, a Summons Returned Unexecuted, a Waiver of Service Returned Executed, or a Status Repor as to the Service of B. Hernandez Within 20 Days, signed by District Judge Cindy K. Jorgenson on 2/8/2010. Status Report from USM due by 3/4/2010. (cc: USM Sacramento) (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER signed by District Judge Cindy K. Jorgenson on 2/26/2010. Plaintiff is hereby ORDERED TO SHOW CAUSE why this case should not be DISMISSED WITHOUT PREJUDICE as to B. Hernandez pursuant to Rule 4(m), Fed.R.Civ.P., by filing a writing with this Court on or before March 31, 2010. (Bradley, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36159</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-5</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-03-01</dateIssued>
+  <docketText>ORDER signed by District Judge Cindy K. Jorgenson on 2/26/2010. Plaintiff is hereby ORDERED TO SHOW CAUSE why this case should not be DISMISSED WITHOUT PREJUDICE as to B. Hernandez pursuant to Rule 4(m), Fed.R.Civ.P., by filing a writing with this Court on or before March 31, 2010. (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER GRANTING Defendants&apos; 34 Request to Take Plaintiff&apos;s Deposition Via Video Conference signed by District Judge Cindy K. Jorgenson on 3/22/2010. (Sant Agata, S)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36154</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-6</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-03-22</dateIssued>
+  <docketText>ORDER GRANTING Defendants&apos; 34 Request to Take Plaintiff&apos;s Deposition Via Video Conference signed by District Judge Cindy K. Jorgenson on 3/22/2010. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER for Counsel for Co-Defendants shall PROVIDE to the Court UNDER SEAL the last known Address of Defendant B. Hernandez if the Information is known to him, is in his Possession, or is Under his Control signed by District Judge Cindy K. Jorgenson on 4/5/2010. Information or Notification due by 5/10/2010.(Sant Agata, S)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36156</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-7</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-04-05</dateIssued>
+  <docketText>ORDER for Counsel for Co-Defendants shall PROVIDE to the Court UNDER SEAL the last known Address of Defendant B. Hernandez if the Information is known to him, is in his Possession, or is Under his Control signed by District Judge Cindy K. Jorgenson on 4/5/2010. Information or Notification due by 5/10/2010.(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER signed by District Judge Cindy K. Jorgenson on 5/11/2010. Defendants 41 Motion to Modify Scheduling Order and Request for Extension of Time to Respond to Plaintiffs Propounded Discovery is GRANTED. Deadline to submit jointly prepared letter on the parties settlement positions: 7/1/2010; Deadline for Defendants to respond to Plaintiffs interrogatories: 7/20/2010; Discovery due by 7/30/2010; Dispositive Motions due by 9/10/2010. (Bradley, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36137</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-8</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-05-12</dateIssued>
+  <docketText>ORDER signed by District Judge Cindy K. Jorgenson on 5/11/2010. Defendants 41 Motion to Modify Scheduling Order and Request for Extension of Time to Respond to Plaintiffs Propounded Discovery is GRANTED. Deadline to submit jointly prepared letter on the parties settlement positions: 7/1/2010; Deadline for Defendants to respond to Plaintiffs interrogatories: 7/20/2010; Discovery due by 7/30/2010; Dispositive Motions due by 9/10/2010. (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER signed by District Judge Cindy K. Jorgenson on 5/11/2010. IT IS ORDERED Defendant B. Hernandez is DISMISSED WITHOUT PREJUDICE from this action pursuant to Fed.R.Civ.P. 4(m). (Bradley, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3615a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-9</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-05-12</dateIssued>
+  <docketText>ORDER signed by District Judge Cindy K. Jorgenson on 5/11/2010. IT IS ORDERED Defendant B. Hernandez is DISMISSED WITHOUT PREJUDICE from this action pursuant to Fed.R.Civ.P. 4(m). (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>Discovery due by 7/20/2010. (Flores, E)ORDER that Eloy Castro is Dismissed with Prejudice from this Action; Efren Castro shall be named as Defendant in this matter, in place of Eloy Castro, signed by District Judge Cindy K. Jorgenson on 05/18/2010. Response to Complaint due by 6/21/2010;</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-10</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-05-18</dateIssued>
+  <docketText>Discovery due by 7/20/2010. (Flores, E)ORDER that Eloy Castro is Dismissed with Prejudice from this Action; Efren Castro shall be named as Defendant in this matter, in place of Eloy Castro, signed by District Judge Cindy K. Jorgenson on 05/18/2010. Response to Complaint due by 6/21/2010;</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER GRANTING Defendants&apos; Second 51 Motion to Modify Discovery Cut-Off Date signed by District Judge Cindy K. Jorgenson on 8/11/2010. Response to Plaintiff&apos;s discovery requests due by 8/20/2010; Discovery deadline: 8/30/2010; Dispositive Motions deadline: 10/1/2010. (Bradley, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36139</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-11</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-08-11</dateIssued>
+  <docketText>ORDER GRANTING Defendants&apos; Second 51 Motion to Modify Discovery Cut-Off Date signed by District Judge Cindy K. Jorgenson on 8/11/2010. Response to Plaintiff&apos;s discovery requests due by 8/20/2010; Discovery deadline: 8/30/2010; Dispositive Motions deadline: 10/1/2010. (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER DENYING 50 Ex Parte Notice and Motion for Protective Order signed by District Judge Cindy K. Jorgenson on 8/11/2010. (Bradley, A)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36138</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-12</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-08-11</dateIssued>
+  <docketText>ORDER DENYING 50 Ex Parte Notice and Motion for Protective Order signed by District Judge Cindy K. Jorgenson on 8/11/2010. (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER GRANTING 54 Motion to Modify Discovery Cut-Off Date signed by District Judge Cindy K. Jorgenson on 8/24/2010. Response to Plaintiff&apos;s Discovery Requests due by 9/3/2010; Discovery due by 9/17/2010. (Sant Agata, S)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36158</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-13</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-08-24</dateIssued>
+  <docketText>ORDER GRANTING 54 Motion to Modify Discovery Cut-Off Date signed by District Judge Cindy K. Jorgenson on 8/24/2010. Response to Plaintiff&apos;s Discovery Requests due by 9/3/2010; Discovery due by 9/17/2010. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER to for Parties and Counsel to File a Joint Proposed Pretrial Order or Plaintiff to SHOW CAUSE why this Matter should not be Dismissed for Failure to Prosecute signed by District Judge Cindy K. Jorgenson on 10/25/2010. Joint Proposed Pretrial Order or Show Cause Response due by 11/29/2010.(Sant Agata, S)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36152</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-14</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-10-26</dateIssued>
+  <docketText>ORDER to for Parties and Counsel to File a Joint Proposed Pretrial Order or Plaintiff to SHOW CAUSE why this Matter should not be Dismissed for Failure to Prosecute signed by District Judge Cindy K. Jorgenson on 10/25/2010. Joint Proposed Pretrial Order or Show Cause Response due by 11/29/2010.(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER, signed by District Judge Cindy K. Jorgenson on 12/14/10: Request for Protective Order 58 is DENIED; Joint Proposed Pretrial Statement ddl EXTENDED to January 31, 2011; Plaintiff&apos;s Status Report due on or before January 31, 2011; Counsel for Defendants is requested to take any actions possible to facilitate the return of Plaintiff&apos;s legal documents. (Hellings, J)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36076</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-15</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-12-14</dateIssued>
+  <docketText>ORDER, signed by District Judge Cindy K. Jorgenson on 12/14/10: Request for Protective Order 58 is DENIED; Joint Proposed Pretrial Statement ddl EXTENDED to January 31, 2011; Plaintiff&apos;s Status Report due on or before January 31, 2011; Counsel for Defendants is requested to take any actions possible to facilitate the return of Plaintiff&apos;s legal documents. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER granting 63 Motion for Extension of time for Plaintiff to file proposed Pretrial Statement; ORDER to SHOW CAUSE to Defendants signed by District Judge Cindy K. Jorgenson on 2/9/2011. (Show Cause Response due by 2/28/2011). (Lundstrom, T)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3614b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-16</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-02-09</dateIssued>
+  <docketText>ORDER granting 63 Motion for Extension of time for Plaintiff to file proposed Pretrial Statement; ORDER to SHOW CAUSE to Defendants signed by District Judge Cindy K. Jorgenson on 2/9/2011. (Show Cause Response due by 2/28/2011). (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER, signed by District Judge Cindy K. Jorgenson on 5/10/11: Plaintiff&apos;s Objection to Defendants&apos; Failure to File Court Ordered Proposed Joint Pretrial Statement and Request for Sanctions 66 is DENIED; Defendants&apos; Motion for Extension of Time to File Proposed Pretrial Order 67 is GRANTED; Plaintiff&apos;s Motion for Extension of Time to File Objections 71 is GRANTED; Defendants&apos; Motion for Extension of Time 72 is GRANTED; Defendants&apos; Request for Leave to File Late Reply 76 is GRANTED. (Hellings, J)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-17</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-05-11</dateIssued>
+  <docketText>ORDER, signed by District Judge Cindy K. Jorgenson on 5/10/11: Plaintiff&apos;s Objection to Defendants&apos; Failure to File Court Ordered Proposed Joint Pretrial Statement and Request for Sanctions 66 is DENIED; Defendants&apos; Motion for Extension of Time to File Proposed Pretrial Order 67 is GRANTED; Plaintiff&apos;s Motion for Extension of Time to File Objections 71 is GRANTED; Defendants&apos; Motion for Extension of Time 72 is GRANTED; Defendants&apos; Request for Leave to File Late Reply 76 is GRANTED. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER, signed by District Judge Cindy K. Jorgenson on 5/26/11: Defendants&apos; Motion for Judicial Notice [61-3] is GRANTED; Defendants&apos; Motion to Declare Plaintiff a Vexatious Litigant and Requiring Security 61 is DENIED. (Hellings, J)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36075</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-18</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-05-27</dateIssued>
+  <docketText>ORDER, signed by District Judge Cindy K. Jorgenson on 5/26/11: Defendants&apos; Motion for Judicial Notice [61-3] is GRANTED; Defendants&apos; Motion to Declare Plaintiff a Vexatious Litigant and Requiring Security 61 is DENIED. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER RE Settlement Conference signed by Magistrate Judge Michael J. Seng on 02/29/2012. Settlement Conference set for 4/5/2012 at 02:00 PM in Courtroom 2 before Magistrate Judge Craig M. Kellison. (Flores, E)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36077</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-19</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2012-02-29</dateIssued>
+  <docketText>ORDER RE Settlement Conference signed by Magistrate Judge Michael J. Seng on 02/29/2012. Settlement Conference set for 4/5/2012 at 02:00 PM in Courtroom 2 before Magistrate Judge Craig M. Kellison. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Ex Parte 91 Request signed by Magistrate Judge Michael J. Seng on 03/28/2012. (Flores, E)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3614c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-20</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Ex Parte 91 Request signed by Magistrate Judge Michael J. Seng on 03/28/2012. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 97 Motion for Reconsideration signed by Magistrate Judge Michael J. Seng on 04/03/2012. (Flores, E)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36155</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-21</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-04-04</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 97 Motion for Reconsideration signed by Magistrate Judge Michael J. Seng on 04/03/2012. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s Motions For Status Re Settlement Conference (Docs. 105 and 106), signed by Magistrate Judge Michael J. Seng on 4/25/2012. (Marrujo, C)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36151</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-22</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-04-26</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s Motions For Status Re Settlement Conference (Docs. 105 and 106), signed by Magistrate Judge Michael J. Seng on 4/25/2012. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Request for Injunctive Relief 101, signed by Magistrate Judge Michael J. Seng on 4/30/12. (Gonzalez, R)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-23</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-05-01</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Request for Injunctive Relief 101, signed by Magistrate Judge Michael J. Seng on 4/30/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Denying Defendants&apos; 113 Motion for Modification of Scheduling Order to Allow Filing of Motion for Summary Judgment, signed by Magistrate Judge Michael J. Seng on 11/14/12. (Gonzalez, R)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36150</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-24</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2012-11-14</dateIssued>
+  <docketText>ORDER Denying Defendants&apos; 113 Motion for Modification of Scheduling Order to Allow Filing of Motion for Summary Judgment, signed by Magistrate Judge Michael J. Seng on 11/14/12. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER GRANTING 116 118 Cross-Motions to Extend Time for Pretrial Filings and AMENDING Second Scheduling Order signed by Magistrate Judge Michael J. Seng on 1/3/2013. Telephonic Trial Confirmation Hearing set for 2/4/2013 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 3/26/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Sant Agata, S)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-25</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER GRANTING 116 118 Cross-Motions to Extend Time for Pretrial Filings and AMENDING Second Scheduling Order signed by Magistrate Judge Michael J. Seng on 1/3/2013. Telephonic Trial Confirmation Hearing set for 2/4/2013 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 3/26/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Setting Settlement Conference signed by Magistrate Judge Michael J. Seng on 01/19/2013. Settlement Conference set for 3/14/2013 at 01:00 PM in Courtroom 2 before Magistrate Judge Craig M. Kellison. (Flores, E)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-26</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-01-23</dateIssued>
+  <docketText>ORDER Setting Settlement Conference signed by Magistrate Judge Michael J. Seng on 01/19/2013. Settlement Conference set for 3/14/2013 at 01:00 PM in Courtroom 2 before Magistrate Judge Craig M. Kellison. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 123 Motion for Stay and Protective Order, Granting Extension of Time for Pretrial Filings and Amending Second Scheduling Order as Amended signed by Magistrate Judge Michael J. Seng on 01/23/2013. Telephonic Trial Confirmation Hearing set for 6/3/2013 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 8/6/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.(Flores, E)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3613e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-27</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-01-24</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 123 Motion for Stay and Protective Order, Granting Extension of Time for Pretrial Filings and Amending Second Scheduling Order as Amended signed by Magistrate Judge Michael J. Seng on 01/23/2013. Telephonic Trial Confirmation Hearing set for 6/3/2013 at 03:00 PM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii; Jury Trial set for 8/6/2013 at 08:30 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER Regarding Dispositional Documents Upon Settlement, signed by Magistrate Judge Michael J. Seng on 05/08/2013. (21)Day Deadline (Martin-Gill, S)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f3615b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-28</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2013-05-08</dateIssued>
+  <docketText>ORDER Regarding Dispositional Documents Upon Settlement, signed by Magistrate Judge Michael J. Seng on 05/08/2013. (21)Day Deadline (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_07-cv-00886-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Washington v. Andrews et al</title>
+  <subTitle>ORDER DIRECTING Clerk of the Court to Close Case pursuant to Parties&apos; Stipulation for Voluntary Dismissal of Action with Prejudice; ORDERED Clerk to Vacate all scheduled dates and close case, signed by Magistrate Judge Michael J. Seng on 05/29/2013. CASE CLOSED (Martin-Gill, S)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_07-cv-00886-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184f36140</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-29</identifier>
+ <identifier type="former granule identifier">caed-1_07-cv-00886_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_07-cv-00886/USCOURTS-caed-1_07-cv-00886-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_07-cv-00886/pdf/USCOURTS-caed-1_07-cv-00886-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:07-cv-00886; (PC) Washington v. Andrews et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_07-cv-00886-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2013-05-29</dateIssued>
+  <docketText>ORDER DIRECTING Clerk of the Court to Close Case pursuant to Parties&apos; Stipulation for Voluntary Dismissal of Action with Prejudice; ORDERED Clerk to Vacate all scheduled dates and close case, signed by Magistrate Judge Michael J. Seng on 05/29/2013. CASE CLOSED (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

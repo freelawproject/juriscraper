@@ -1,0 +1,202 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18173dd23">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00386</identifier>
+<identifier type="local">P0b002ee18173dd23</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cr-00386</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cr-00386</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cr-00386</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Zabala-Baltazar" lastName="Zabala-Baltazar" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Zabala-Baltazar</title>
+ <partNumber>8:10-cr-00386</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00386/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cr-00386;10-386</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Guadalupe Zabala-Baltazar</displayForm>
+ <namePart type="family">Zabala-Baltazar</namePart>
+ <namePart type="given">Guadalupe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cr-00386</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cr-00386</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe Zabala-Baltazar" lastName="Zabala-Baltazar" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00386-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Zabala-Baltazar</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Guadalupe Zabala-Baltazar. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00386-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177b28e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00386_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00386/pdf/USCOURTS-ned-8_10-cr-00386-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00386; USA v. Zabala-Baltazar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00386-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-25</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Guadalupe Zabala-Baltazar. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00386-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Zabala-Baltazar</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Guadalupe Zabala-Baltazar. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00386-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177b28d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00386_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00386/pdf/USCOURTS-ned-8_10-cr-00386-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00386; USA v. Zabala-Baltazar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00386-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-10-25</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Guadalupe Zabala-Baltazar. Ordered by Magistrate Judge F.A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00386-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Zabala-Baltazar</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Guadalupe Zabala-Baltazar. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00386-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177b28c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00386_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00386/USCOURTS-ned-8_10-cr-00386-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00386/pdf/USCOURTS-ned-8_10-cr-00386-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00386; USA v. Zabala-Baltazar; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00386-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-01-27</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Guadalupe Zabala-Baltazar. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+</mods>

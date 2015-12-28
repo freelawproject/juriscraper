@@ -1,0 +1,370 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ee5c7e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359</identifier>
+<identifier type="local">P0b002ee180ee5c7e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_04-cv-02359</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02359</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02359</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Certain Underwriters at Lloyd&apos;s, London" lastName="Certain Underwriters at Lloyd&apos;s, London" role="Defendant"></party>
+ <party fullName="Elliston, LLC" lastName="Elliston, LLC" role="Defendant"></party>
+ <party fullName="First Specialty Insurance Corporation" lastName="First Specialty Insurance Corporation" role="Plaintiff"></party>
+ <party fullName="Gravett&amp;Tilling (Holdings) Limited" lastName="Gravett&amp;Tilling (Holdings) Limited" role="Defendant"></party>
+ <party fullName="Insurance Services Office, Inc." lastName="Insurance Services Office, Inc." role="Defendant"></party>
+ <party fullName="Lloyd&apos;s" lastName="Lloyd&apos;s" role="Defendant"></party>
+ <party fullName="NovaPro Risk Solutions, LP" lastName="NovaPro Risk Solutions, LP" role="Defendant"></party>
+ <party fullName="St. Paul Travelers Companies, Inc." lastName="St. Paul Travelers Companies, Inc." role="Defendant"></party>
+ <party fullName="St. Paul Travelers Syndicate Management, LTD" lastName="St. Paul Travelers Syndicate Management, LTD" role="Defendant"></party>
+ <party fullName="St. Paul&apos;s Syndicate Management, LTD" lastName="St. Paul&apos;s Syndicate Management, LTD" role="Defendant"></party>
+ <party fullName="Swiss Reinsurance Company" lastName="Swiss Reinsurance Company" role="Plaintiff"></party>
+ <party fullName="Underwriters at Lloyd&apos;s, London" lastName="Underwriters at Lloyd&apos;s, London" role="Defendant"></party>
+ <party fullName="Ward North America Holding, Inc." lastName="Ward North America Holding, Inc." role="Defendant"></party>
+ <party fullName="Ward North America, Inc." lastName="Ward North America, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+ <partNumber>2:04-cv-02359</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-02359;04-2359</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Certain Underwriters at Lloyd&apos;s, London</displayForm>
+ <namePart type="family">Certain Underwriters at Lloyd&apos;s, London</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elliston, LLC</displayForm>
+ <namePart type="family">Elliston, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Specialty Insurance Corporation</displayForm>
+ <namePart type="family">First Specialty Insurance Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gravett&amp;Tilling (Holdings) Limited</displayForm>
+ <namePart type="family">Gravett&amp;Tilling (Holdings) Limited</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Insurance Services Office, Inc.</displayForm>
+ <namePart type="family">Insurance Services Office, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lloyd&apos;s</displayForm>
+ <namePart type="family">Lloyd&apos;s</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NovaPro Risk Solutions, LP</displayForm>
+ <namePart type="family">NovaPro Risk Solutions, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Travelers Companies, Inc.</displayForm>
+ <namePart type="family">St. Paul Travelers Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul Travelers Syndicate Management, LTD</displayForm>
+ <namePart type="family">St. Paul Travelers Syndicate Management, LTD</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>St. Paul&apos;s Syndicate Management, LTD</displayForm>
+ <namePart type="family">St. Paul&apos;s Syndicate Management, LTD</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Swiss Reinsurance Company</displayForm>
+ <namePart type="family">Swiss Reinsurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Underwriters at Lloyd&apos;s, London</displayForm>
+ <namePart type="family">Underwriters at Lloyd&apos;s, London</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ward North America Holding, Inc.</displayForm>
+ <namePart type="family">Ward North America Holding, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ward North America, Inc.</displayForm>
+ <namePart type="family">Ward North America, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_04-cv-02359</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:04-cv-02359</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <party fullName="Certain Underwriters at Lloyd&apos;s, London" lastName="Certain Underwriters at Lloyd&apos;s, London" role="Defendant"></party>
+ <party fullName="Elliston, LLC" lastName="Elliston, LLC" role="Defendant"></party>
+ <party fullName="First Specialty Insurance Corporation" lastName="First Specialty Insurance Corporation" role="Plaintiff"></party>
+ <party fullName="Gravett&amp;Tilling (Holdings) Limited" lastName="Gravett&amp;Tilling (Holdings) Limited" role="Defendant"></party>
+ <party fullName="Insurance Services Office, Inc." lastName="Insurance Services Office, Inc." role="Defendant"></party>
+ <party fullName="Lloyd&apos;s" lastName="Lloyd&apos;s" role="Defendant"></party>
+ <party fullName="NovaPro Risk Solutions, LP" lastName="NovaPro Risk Solutions, LP" role="Defendant"></party>
+ <party fullName="St. Paul Travelers Companies, Inc." lastName="St. Paul Travelers Companies, Inc." role="Defendant"></party>
+ <party fullName="St. Paul Travelers Syndicate Management, LTD" lastName="St. Paul Travelers Syndicate Management, LTD" role="Defendant"></party>
+ <party fullName="St. Paul&apos;s Syndicate Management, LTD" lastName="St. Paul&apos;s Syndicate Management, LTD" role="Defendant"></party>
+ <party fullName="Swiss Reinsurance Company" lastName="Swiss Reinsurance Company" role="Plaintiff"></party>
+ <party fullName="Underwriters at Lloyd&apos;s, London" lastName="Underwriters at Lloyd&apos;s, London" role="Defendant"></party>
+ <party fullName="Ward North America Holding, Inc." lastName="Ward North America Holding, Inc." role="Defendant"></party>
+ <party fullName="Ward North America, Inc." lastName="Ward North America, Inc." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02359-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-0/mods.xml">
+ <titleInfo>
+  <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 54 Motion to Amend Complaint and granting in part and denying in part 68 Motion to Quash. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/2005. (kg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02359-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180faf493</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-0</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02359_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/pdf/USCOURTS-ksd-2_04-cv-02359-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02359; First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02359-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-07-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 54 Motion to Amend Complaint and granting in part and denying in part 68 Motion to Quash. Signed by Magistrate Judge James P. O&apos;Hara on 7/25/2005. (kg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02359-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-1/mods.xml">
+ <titleInfo>
+  <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 104 Defendant Elliston&apos;s Motion to Dismiss . Signed by Judge John W. Lungstrum on 12/15/2005. (ses)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02359-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180faf491</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-1</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02359_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/pdf/USCOURTS-ksd-2_04-cv-02359-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02359; First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02359-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 104 Defendant Elliston&apos;s Motion to Dismiss . Signed by Judge John W. Lungstrum on 12/15/2005. (ses)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02359-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-2/mods.xml">
+ <titleInfo>
+  <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying without prejudice 111 St. Paul Traveler&apos;s Motion to Dismiss . Signed by Judge John W. Lungstrum on 12/15/2005. (ses)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02359-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180faf490</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-2</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02359_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/pdf/USCOURTS-ksd-2_04-cv-02359-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02359; First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02359-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying without prejudice 111 St. Paul Traveler&apos;s Motion to Dismiss . Signed by Judge John W. Lungstrum on 12/15/2005. (ses)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02359-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-3/mods.xml">
+ <titleInfo>
+  <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+  <subTitle>ORDER granting Kathleen A. Hardee to withdraw as counsel for Certain Underwriters at Lloyd&apos;s, London. Signed by Magistrate Judge James P. O&apos;Hara on 8/7/2006.(kg)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02359-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180faf494</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-3</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02359_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/pdf/USCOURTS-ksd-2_04-cv-02359-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02359; First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02359-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-08-07</dateIssued>
+  <docketText>ORDER granting Kathleen A. Hardee to withdraw as counsel for Certain Underwriters at Lloyd&apos;s, London. Signed by Magistrate Judge James P. O&apos;Hara on 8/7/2006.(kg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_04-cv-02359-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-4/mods.xml">
+ <titleInfo>
+  <title>First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al</title>
+  <subTitle>MEMORANDUM AND ORDER -- Judgment is to be entered by the Clerk of Court in favor of plaintiff, First Specialty Insurance Corporation, against defendant Underwriters at Lloyd&apos;s, London, a/k/a Certain Underwriters at Lloyd&apos;s, London, in the amount of $608,069.63. In addition, First Specialty shall recover the taxable costs of this action from Lloyd&apos;s. It is further ordered, that First Specialty&apos;s claims against defendant NovaPro Risk Solutions, LP, f/k/a Ward North America Holding, Inc. and formerly d/b/a Ward North America, Inc., are dismissed with prejudice. Signed by Magistrate Judge James P. O&apos;Hara on 01/08/07.(mg)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_04-cv-02359-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180faf492</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-4</identifier>
+ <identifier type="former granule identifier">ksd-2_04-cv-02359_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_04-cv-02359/USCOURTS-ksd-2_04-cv-02359-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_04-cv-02359/pdf/USCOURTS-ksd-2_04-cv-02359-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-02359; First Specialty Insurance Corporation v. NovaPro Risk Solutions, LP et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_04-cv-02359-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER -- Judgment is to be entered by the Clerk of Court in favor of plaintiff, First Specialty Insurance Corporation, against defendant Underwriters at Lloyd&apos;s, London, a/k/a Certain Underwriters at Lloyd&apos;s, London, in the amount of $608,069.63. In addition, First Specialty shall recover the taxable costs of this action from Lloyd&apos;s. It is further ordered, that First Specialty&apos;s claims against defendant NovaPro Risk Solutions, LP, f/k/a Ward North America Holding, Inc. and formerly d/b/a Ward North America, Inc., are dismissed with prejudice. Signed by Magistrate Judge James P. O&apos;Hara on 01/08/07.(mg)</docketText>
+</extension>
+</relatedItem>
+</mods>

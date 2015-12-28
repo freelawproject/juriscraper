@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c32c05">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02053</identifier>
+<identifier type="local">P0b002ee186c32c05</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-02053</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-02053</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-02053</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="M." fullName="M. Anderson" lastName="Anderson" role="Defendant"></party>
+ <party fullName="California Department of Corrections" lastName="California Department of Corrections" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Jose Dupree Jr" generation="Jr" lastName="Dupree" middleName="Jose" role="Plaintiff"></party>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Dupree v. California Department of Corrections et al</title>
+ <partNumber>1:13-cv-02053</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02053/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-02053;13-2053</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>M. Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>California Department of Corrections</displayForm>
+ <namePart type="family">California Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Jose Dupree Jr</displayForm>
+ <namePart type="family">Dupree</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress">Jr</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Connie Gipson</displayForm>
+ <namePart type="family">Gipson</namePart>
+ <namePart type="given">Connie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-02053</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-02053</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="M." fullName="M. Anderson" lastName="Anderson" role="Defendant"></party>
+ <party fullName="California Department of Corrections" lastName="California Department of Corrections" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Jose Dupree Jr" generation="Jr" lastName="Dupree" middleName="Jose" role="Plaintiff"></party>
+ <party firstName="Connie" fullName="Connie Gipson" lastName="Gipson" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02053-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Dupree v. California Department of Corrections et al</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2562 EFB PC) to Fresno (1:13-cv-2053 SKO PC) signed by Magistrate Judge Edmund F. Brennan on 12/17/2013. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-02053-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c500bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02053_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02053/pdf/USCOURTS-caed-1_13-cv-02053-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02053; (PC) Dupree v. California Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02053-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-17</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-2562 EFB PC) to Fresno (1:13-cv-2053 SKO PC) signed by Magistrate Judge Edmund F. Brennan on 12/17/2013. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-02053-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Dupree v. California Department of Corrections et al</title>
+  <subTitle>ORDER (1) DENYING 2 Motion for Leave to Proceed In Forma Pauperis, (2) Dismissing Action, Without Prejudice, Pursuant to 28 USC 1915(G), and (3) Directing Clerk of Court to Enter Judgment signed by District Judge Anthony W. Ishii on 1/2/2014. CASE CLOSED. (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-02053-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c500bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-02053_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-02053/USCOURTS-caed-1_13-cv-02053-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-02053/pdf/USCOURTS-caed-1_13-cv-02053-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-02053; (PC) Dupree v. California Department of Corrections et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-02053-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER (1) DENYING 2 Motion for Leave to Proceed In Forma Pauperis, (2) Dismissing Action, Without Prejudice, Pursuant to 28 USC 1915(G), and (3) Directing Clerk of Court to Enter Judgment signed by District Judge Anthony W. Ishii on 1/2/2014. CASE CLOSED. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

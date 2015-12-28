@@ -1,0 +1,235 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bdbcb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176</identifier>
+<identifier type="local">P0b002ee18a8bdbcb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-cv-01176</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-01176</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-01176</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>463</natureSuitCode>
+ <natureSuit>Habeas Corpus - Alien Detainee</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus</cause>
+ <party firstName="Steven" fullName="Steven Durfor" lastName="Durfor" role="Respondent"></party>
+ <party firstName="Eric" fullName="Eric Holder" lastName="Holder" role="Respondent"></party>
+ <party firstName="Craig" fullName="Craig Meyer" lastName="Meyer" role="Respondent"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Respondent"></party>
+ <party firstName="Viktor" fullName="Viktor Nikolayevich Ostapenko" lastName="Ostapenko" middleName="Nikolayevich" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>(HC) Ostapenko v. Meyer et al</title>
+ <partNumber>2:14-cv-01176</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-01176;14-1176</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Steven Durfor</displayForm>
+ <namePart type="family">Durfor</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Holder</displayForm>
+ <namePart type="family">Holder</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Craig Meyer</displayForm>
+ <namePart type="family">Meyer</namePart>
+ <namePart type="given">Craig</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Napolitano</displayForm>
+ <namePart type="family">Napolitano</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Viktor Nikolayevich Ostapenko</displayForm>
+ <namePart type="family">Ostapenko</namePart>
+ <namePart type="given">Viktor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-cv-01176</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-cv-01176</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>463</natureSuitCode>
+ <natureSuit>Habeas Corpus - Alien Detainee</natureSuit>
+ <cause>28:2241 Petition for Writ of Habeas Corpus</cause>
+ <party firstName="Steven" fullName="Steven Durfor" lastName="Durfor" role="Respondent"></party>
+ <party firstName="Eric" fullName="Eric Holder" lastName="Holder" role="Respondent"></party>
+ <party firstName="Craig" fullName="Craig Meyer" lastName="Meyer" role="Respondent"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Respondent"></party>
+ <party firstName="Viktor" fullName="Viktor Nikolayevich Ostapenko" lastName="Ostapenko" middleName="Nikolayevich" role="Petitioner"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01176-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-0/mods.xml">
+ <titleInfo>
+  <title>(HC) Ostapenko v. Meyer et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 6/2/2014 GRANTING petitioner&apos;s 2 request for an ifp application; petitioner shall submit, within 30 days, an affidavit to proceed ifp; and the Clerk shall send petitioner an ifp form. (Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c59f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01176_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01176; (HC) Ostapenko v. Meyer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01176-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-06-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 6/2/2014 GRANTING petitioner&apos;s 2 request for an ifp application; petitioner shall submit, within 30 days, an affidavit to proceed ifp; and the Clerk shall send petitioner an ifp form. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01176-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-1/mods.xml">
+ <titleInfo>
+  <title>(HC) Ostapenko v. Meyer et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 10/1/2014 ORDERING that within 14 days petitioner shall SHOW CAUSE, in writing, why this court should not grant the pending motion to dismiss. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c59f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01176_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01176; (HC) Ostapenko v. Meyer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01176-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-10-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 10/1/2014 ORDERING that within 14 days petitioner shall SHOW CAUSE, in writing, why this court should not grant the pending motion to dismiss. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-cv-01176-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-2/mods.xml">
+ <titleInfo>
+  <title>(HC) Ostapenko v. Meyer et al</title>
+  <subTitle>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Dale A. Drozd on 1/6/2015 DIRECTING the Clerk to randomly assign a US District Judge to this action; and RECOMMENDING that this action be dismissed without prejudice due to petitioner&apos;s failure to prosecute. Assigned and referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c59f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-cv-01176_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-cv-01176/USCOURTS-caed-2_14-cv-01176-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-cv-01176/pdf/USCOURTS-caed-2_14-cv-01176-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01176; (HC) Ostapenko v. Meyer et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-cv-01176-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER AND FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Dale A. Drozd on 1/6/2015 DIRECTING the Clerk to randomly assign a US District Judge to this action; and RECOMMENDING that this action be dismissed without prejudice due to petitioner&apos;s failure to prosecute. Assigned and referred to Judge Kimberly J. Mueller; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

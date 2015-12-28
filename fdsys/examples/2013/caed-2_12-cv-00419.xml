@@ -1,0 +1,404 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18414ff86">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419</identifier>
+<identifier type="local">P0b002ee18414ff86</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-00419</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00419</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00419</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-Employment Discrimination</cause>
+ <party firstName="Shaun" fullName="Shaun Owens" lastName="Owens" role="Plaintiff"></party>
+ <party fullName="Walgreen Co." lastName="Walgreen Co." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Owens v. Walgreen Co.</title>
+ <partNumber>2:12-cv-00419</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-00419;12-419</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Shaun Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Shaun</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Walgreen Co.</displayForm>
+ <namePart type="family">Walgreen Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-00419</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-00419</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1332 Diversity-Employment Discrimination</cause>
+ <party firstName="Shaun" fullName="Shaun Owens" lastName="Owens" role="Plaintiff"></party>
+ <party fullName="Walgreen Co." lastName="Walgreen Co." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-0/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>ORDER signed by Judge William B. Shubb on 3/27/2012 GRANTING 8 Request to Seal Documents and Substitute Exhibits Nunc Pro Tunc filed by Shaun Owens. (Michel, G)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18415830b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-03-28</dateIssued>
+  <docketText>ORDER signed by Judge William B. Shubb on 3/27/2012 GRANTING 8 Request to Seal Documents and Substitute Exhibits Nunc Pro Tunc filed by Shaun Owens. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-1/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>MEMORANDUM AND ORDER signed by Judge William B. Shubb on 4/9/2012 granting 4 Defendant&apos;s Motion to Dismiss. Plaintiff has twenty days from the date of this Order to file an amended complaint, if he can do so consistent with this Order. (Kirksey Smith, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184158309</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-04-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER signed by Judge William B. Shubb on 4/9/2012 granting 4 Defendant&apos;s Motion to Dismiss. Plaintiff has twenty days from the date of this Order to file an amended complaint, if he can do so consistent with this Order. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-2/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>STATUS (PRETRIAL SCHEDULING) ORDER signed by Judge William B. Shubb on 5/24/12: Discovery due by 5/31/2012. Dispositive Motions filed by 12/28/2012. Final Pretrial Conference set for 3/18/2013 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. Jury Trial set for 5/14/2013 at 09:00 AM in Courtroom 5 (WBS) before Judge William B. Shubb. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18415830a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-25</dateIssued>
+  <docketText>STATUS (PRETRIAL SCHEDULING) ORDER signed by Judge William B. Shubb on 5/24/12: Discovery due by 5/31/2012. Dispositive Motions filed by 12/28/2012. Final Pretrial Conference set for 3/18/2013 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. Jury Trial set for 5/14/2013 at 09:00 AM in Courtroom 5 (WBS) before Judge William B. Shubb. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-3/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>ORDER signed by Judge William B. Shubb on 6/19/12 ORDERING that plaintiff&apos;s 16 motion for leave to file a Second Amended Complaint is GRANTED. Plaintiff shall file his amended complaint within ten days of the date of this order. In accordance with his reply brief, plaintiff shall remove 42 U.S.C. § 1981 as a basis for his fourth cause of action, Failure to Prevent Discrimination and Harassment. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184158306</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-06-20</dateIssued>
+  <docketText>ORDER signed by Judge William B. Shubb on 6/19/12 ORDERING that plaintiff&apos;s 16 motion for leave to file a Second Amended Complaint is GRANTED. Plaintiff shall file his amended complaint within ten days of the date of this order. In accordance with his reply brief, plaintiff shall remove 42 U.S.C. § 1981 as a basis for his fourth cause of action, Failure to Prevent Discrimination and Harassment. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-4/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>ORDER signed by Magistrate Judge John F. Moulds on 9/26/12 ORDERING 25 MOTION to Modify filed by Shaun Owens to be heard on 10/18/2012 at 11:00 AM in 8th floor courtroom (JFM) before Magistrate Judge John F. Moulds. The current date for disclosure of experts and reports per Rule 26(a)(2) is 10/1/12 before the Court can rule on plaintiff&apos;s motion. Good cause exists in that Plaintiff has not yet completed discovery, it would be difficult to provide a meaningful report. Any expert report submitted would only have to be supplemented at a later date, which would defeat the purpose of the disclosure. Further, as neither party would be prejudiced by the requested extension of date for disclosure of experts and reports per Rule 26(a)(2), counsel for the parties believe that the interests of justice and efficiency would be served by an Order granting the requested extension. (Meuleman, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18415830c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-09-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge John F. Moulds on 9/26/12 ORDERING 25 MOTION to Modify filed by Shaun Owens to be heard on 10/18/2012 at 11:00 AM in 8th floor courtroom (JFM) before Magistrate Judge John F. Moulds. The current date for disclosure of experts and reports per Rule 26(a)(2) is 10/1/12 before the Court can rule on plaintiff&apos;s motion. Good cause exists in that Plaintiff has not yet completed discovery, it would be difficult to provide a meaningful report. Any expert report submitted would only have to be supplemented at a later date, which would defeat the purpose of the disclosure. Further, as neither party would be prejudiced by the requested extension of date for disclosure of experts and reports per Rule 26(a)(2), counsel for the parties believe that the interests of justice and efficiency would be served by an Order granting the requested extension. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-5/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>STIPULATION and ORDER REGARDING PRETRIAL DATES signed by Magistrate Judge John F. Moulds on 9/28/2012 ORDERING that all depositions for which notices were served on or before 9/20/2012 shall be CONTINUED until after 12/31/2012, and the parties agree to EXTEND until 2/8/2013 the period in which those depositions must be completed. The date for disclosure of experts and reports per Rule 26(a)(2) of the Federal Rules of Civil Procedure is EXTENDED until 1/2/2013, with the disclosure of expert witnesses and reports to be used for rebuttal, if any, being made on or before 1/30/2013. All expert discovery shall be concluded on or before 2/15/2013. All motions, except motions for continuances, temporary restraining orders, or other emergency applications, shall be filed on or before 2/8/2013. The Pretrial Conference and Trial Date in this case are not affected by this stipulation, and shall remain scheduled for 3/18/2013 and 5/14/2013. (Zignago, K.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184158308</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-10-01</dateIssued>
+  <docketText>STIPULATION and ORDER REGARDING PRETRIAL DATES signed by Magistrate Judge John F. Moulds on 9/28/2012 ORDERING that all depositions for which notices were served on or before 9/20/2012 shall be CONTINUED until after 12/31/2012, and the parties agree to EXTEND until 2/8/2013 the period in which those depositions must be completed. The date for disclosure of experts and reports per Rule 26(a)(2) of the Federal Rules of Civil Procedure is EXTENDED until 1/2/2013, with the disclosure of expert witnesses and reports to be used for rebuttal, if any, being made on or before 1/30/2013. All expert discovery shall be concluded on or before 2/15/2013. All motions, except motions for continuances, temporary restraining orders, or other emergency applications, shall be filed on or before 2/8/2013. The Pretrial Conference and Trial Date in this case are not affected by this stipulation, and shall remain scheduled for 3/18/2013 and 5/14/2013. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-6/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>STIPULATION and ORDER REGARDING PRETRIAL DATES 32 signed by Magistrate Judge Allison Claire on 1/2/2013 ORDERING the Scheduling Order Modified as follows: Non-Expert Discovery is due by 2/25/2013. Designation of Expert Witnesses due by 2/15/2013, and Disclosure of Rebuttal Experts due 3/15/2013. Expert Discovery due by 4/1/2013. The last day hearing date for Dispositive Motions is 3/25/2013. The Final Pretrial Conference is RESET for 4/15/2013 at 2:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Trial date remains the same. (Krueger, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184158307</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>STIPULATION and ORDER REGARDING PRETRIAL DATES 32 signed by Magistrate Judge Allison Claire on 1/2/2013 ORDERING the Scheduling Order Modified as follows: Non-Expert Discovery is due by 2/25/2013. Designation of Expert Witnesses due by 2/15/2013, and Disclosure of Rebuttal Experts due 3/15/2013. Expert Discovery due by 4/1/2013. The last day hearing date for Dispositive Motions is 3/25/2013. The Final Pretrial Conference is RESET for 4/15/2013 at 2:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Trial date remains the same. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-7/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 2/5/2013 SETTING a Motion Hearing as to 34 Motion to Continue Trial; Unopposed Motion to be Relieved as Counsel for 2/11/2013 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; ORDERING that both motions be filed immediately; ORDERING counsel for Plaintiff, Shaun Owens, to assure Plaintiff&apos;s appearance at the Motion Hearing set for 2/11/2013. (Michel, G)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18415830d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 2/5/2013 SETTING a Motion Hearing as to 34 Motion to Continue Trial; Unopposed Motion to be Relieved as Counsel for 2/11/2013 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; ORDERING that both motions be filed immediately; ORDERING counsel for Plaintiff, Shaun Owens, to assure Plaintiff&apos;s appearance at the Motion Hearing set for 2/11/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-8/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 2/12/13 DENYING 36 MOTION to CONTINUE and 37 MOTION to WITHDRAW as ATTORNEY. (Meuleman, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184158372</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-02-12</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 2/12/13 DENYING 36 MOTION to CONTINUE and 37 MOTION to WITHDRAW as ATTORNEY. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-00419-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-9/mods.xml">
+ <titleInfo>
+  <title>Owens v. Walgreen Co.</title>
+  <subTitle>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 4/9/2013 ORDERING that this action is DISMISSED in its entirety with prejudice, pursuant to FRCP 41(a)(1)(ii); and without an award of attorney&apos;s fees or costs to any party. CASE CLOSED (Reader, L)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-00419-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18415830e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-00419_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-00419/USCOURTS-caed-2_12-cv-00419-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-00419/pdf/USCOURTS-caed-2_12-cv-00419-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-00419; Owens v. Walgreen Co.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-00419-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-04-10</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 4/9/2013 ORDERING that this action is DISMISSED in its entirety with prejudice, pursuant to FRCP 41(a)(1)(ii); and without an award of attorney&apos;s fees or costs to any party. CASE CLOSED (Reader, L)</docketText>
+</extension>
+</relatedItem>
+</mods>

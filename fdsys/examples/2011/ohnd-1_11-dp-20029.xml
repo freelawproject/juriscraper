@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d0049">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029</identifier>
+<identifier type="local">P0b002ee1815d0049</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_11-dp-20029</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-dp-20029</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-dp-20029</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="DePuy Orthopaedics, Inc." lastName="DePuy Orthopaedics, Inc." role="Defendant"></party>
+ <party fullName="DePuy, Inc." lastName="DePuy, Inc." role="Defendant"></party>
+ <party firstName="Gay" fullName="Gay N. Shepherd" lastName="Shepherd" middleName="N." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Shepherd v. DePuy Orthopaedics, Inc.</title>
+ <partNumber>1:11-dp-20029</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-dp-20029;11-20029</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>DePuy Orthopaedics, Inc.</displayForm>
+ <namePart type="family">DePuy Orthopaedics, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DePuy, Inc.</displayForm>
+ <namePart type="family">DePuy, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gay N. Shepherd</displayForm>
+ <namePart type="family">Shepherd</namePart>
+ <namePart type="given">Gay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_11-dp-20029</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:11-dp-20029</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="DePuy Orthopaedics, Inc." lastName="DePuy Orthopaedics, Inc." role="Defendant"></party>
+ <party fullName="DePuy, Inc." lastName="DePuy, Inc." role="Defendant"></party>
+ <party firstName="Gay" fullName="Gay N. Shepherd" lastName="Shepherd" middleName="N." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-dp-20029-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-0/mods.xml">
+ <titleInfo>
+  <title>Shepherd v. DePuy Orthopaedics, Inc.</title>
+  <subTitle>ORDER: This case is REFERRED to the Magistrate Judge for customized case management in accordance with Local Rule 16.01. Discovery is not stayedabsent order of the District Judge. This case shall be set for trial upon completion of the initial case management conference by order of the District Judge in accordance with the procedures of Local Rule 16.01(d)(5). Signed by Chief Judge Todd J. Campbell on 12/20/10. (dt) [Transferred from tnmd on 1/14/2011.]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-dp-20029-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cc90a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-dp-20029_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029/pdf/USCOURTS-ohnd-1_11-dp-20029-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-dp-20029; Shepherd v. DePuy Orthopaedics, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-dp-20029-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-20</dateIssued>
+  <docketText>ORDER: This case is REFERRED to the Magistrate Judge for customized case management in accordance with Local Rule 16.01. Discovery is not stayedabsent order of the District Judge. This case shall be set for trial upon completion of the initial case management conference by order of the District Judge in accordance with the procedures of Local Rule 16.01(d)(5). Signed by Chief Judge Todd J. Campbell on 12/20/10. (dt) [Transferred from tnmd on 1/14/2011.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-dp-20029-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-1/mods.xml">
+ <titleInfo>
+  <title>Shepherd v. DePuy Orthopaedics, Inc.</title>
+  <subTitle>ORDER granting 6 Motion to Stay Proceedings Pending Transfer to MDL NO. 2197. All proceedings and all deadlines, in the above-captioned case are STAYED pending transfer of this matter to MDL 2197 in the Northern District of Ohio. Defendants shall have 21 days from the date on which this case is transferred to MDL No. 2197 to respond to the Complaint. Signed by Chief Judge Todd J. Campbell on 12/21/10. (dt) [Transferred from tnmd on 1/14/2011.]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-dp-20029-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cc90d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-dp-20029_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029/pdf/USCOURTS-ohnd-1_11-dp-20029-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-dp-20029; Shepherd v. DePuy Orthopaedics, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-dp-20029-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-12-21</dateIssued>
+  <docketText>ORDER granting 6 Motion to Stay Proceedings Pending Transfer to MDL NO. 2197. All proceedings and all deadlines, in the above-captioned case are STAYED pending transfer of this matter to MDL 2197 in the Northern District of Ohio. Defendants shall have 21 days from the date on which this case is transferred to MDL No. 2197 to respond to the Complaint. Signed by Chief Judge Todd J. Campbell on 12/21/10. (dt) [Transferred from tnmd on 1/14/2011.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-dp-20029-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-2/mods.xml">
+ <titleInfo>
+  <title>Shepherd v. DePuy Orthopaedics, Inc.</title>
+  <subTitle>(DISREGARD - ENTERED in ERROR) ORDER: This case is REFERRED to the Magistrate Judge for customized case management in accordance with Local Rule 16.01. Discovery is not stayed absent order of the District Judge. This case shall be set for trial upon completion of the initial case management conference by order of the District Judge. Signed by Chief Judge Todd J. Campbell on 12/21/10. (dt) Modified Text on 12/21/2010 (dt). [Transferred from tnmd on 1/14/2011.]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-dp-20029-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cc90b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-dp-20029_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029/pdf/USCOURTS-ohnd-1_11-dp-20029-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-dp-20029; Shepherd v. DePuy Orthopaedics, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-dp-20029-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-12-21</dateIssued>
+  <docketText>(DISREGARD - ENTERED in ERROR) ORDER: This case is REFERRED to the Magistrate Judge for customized case management in accordance with Local Rule 16.01. Discovery is not stayed absent order of the District Judge. This case shall be set for trial upon completion of the initial case management conference by order of the District Judge. Signed by Chief Judge Todd J. Campbell on 12/21/10. (dt) Modified Text on 12/21/2010 (dt). [Transferred from tnmd on 1/14/2011.]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_11-dp-20029-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-3/mods.xml">
+ <titleInfo>
+  <title>Shepherd v. DePuy Orthopaedics, Inc.</title>
+  <subTitle>ORDER: Pursuant to the Conditional Transfer Order of the Judicial Panel on Multidistrict Litigation, Docket No. 2197, this case is hereby transferred to the United States District Court for the Northern District of Ohio for coordinated or consolidated pretrial proceedings. The Clerk of Court is directed to close the case and electronically transmit the record to the United States District Court for the Northern District of Ohio. Signed by Chief Judge Todd J. Campbell on 1/13/11. (dt)[Transferred from tnmd on 1/14/2011.]</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_11-dp-20029-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816cc90c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-3</identifier>
+ <identifier type="former granule identifier">ohnd-1_11-dp-20029_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_11-dp-20029/USCOURTS-ohnd-1_11-dp-20029-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_11-dp-20029/pdf/USCOURTS-ohnd-1_11-dp-20029-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-dp-20029; Shepherd v. DePuy Orthopaedics, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_11-dp-20029-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>ORDER: Pursuant to the Conditional Transfer Order of the Judicial Panel on Multidistrict Litigation, Docket No. 2197, this case is hereby transferred to the United States District Court for the Northern District of Ohio for coordinated or consolidated pretrial proceedings. The Clerk of Court is directed to close the case and electronically transmit the record to the United States District Court for the Northern District of Ohio. Signed by Chief Judge Todd J. Campbell on 1/13/11. (dt)[Transferred from tnmd on 1/14/2011.]</docketText>
+</extension>
+</relatedItem>
+</mods>

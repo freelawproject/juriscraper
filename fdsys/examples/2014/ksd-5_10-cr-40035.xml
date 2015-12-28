@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187f67619">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-03-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-03-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035</identifier>
+<identifier type="local">P0b002ee187f67619</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-03-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-03-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_10-cr-40035</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_10-cr-40035</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:10-cr-40035</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dion" fullName="Dion M. Lee-Speight" lastName="Lee-Speight" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lee-Speight</title>
+ <partNumber>5:10-cr-40035</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cr-40035;10-40035</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dion M. Lee-Speight</displayForm>
+ <namePart type="family">Lee-Speight</namePart>
+ <namePart type="given">Dion</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_10-cr-40035</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:10-cr-40035</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dion" fullName="Dion M. Lee-Speight" lastName="Lee-Speight" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cr-40035-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lee-Speight</title>
+  <subTitle>MEMORANDUM AND ORDER. The defendant Dion M. Lee-Speight&apos;s pretrial motion 12 to suppress all evidence seized as a result of the traffic stop on November 10, 2009, is denied. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 6/29/10. (bmw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187f6dea9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-0</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cr-40035_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cr-40035; USA v. Lee-Speight; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cr-40035-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-06-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. The defendant Dion M. Lee-Speight&apos;s pretrial motion 12 to suppress all evidence seized as a result of the traffic stop on November 10, 2009, is denied. See attached for more details. Signed by U.S. District Senior Judge Sam A. Crow on 6/29/10. (bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cr-40035-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lee-Speight</title>
+  <subTitle>MEMORANDUM AND ORDER. The defendant&apos;s motion for relief pursuant to 28 U.S.C. § 2255 (Dk. 57) and supporting memoranda of law (Dks. 58, 59 and 62) are denied; and a certificate of appealability is also denied as to Dion M. Lee-Speight. Signed by U.S. District Senior Judge Sam A. Crow on 11/1/2011.Mailed to pro se party: Mr. Dion M. Lee-Speight, Reg. No. 15680-031, FCI Forrest City Medium, PO Box 3000, Forrest City, AR 72336 by regular mail. (bmw) Civil Case 5:11-cv-04083-SAC closed.</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187f6dd8f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-1</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cr-40035_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cr-40035; USA v. Lee-Speight; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cr-40035-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. The defendant&apos;s motion for relief pursuant to 28 U.S.C. § 2255 (Dk. 57) and supporting memoranda of law (Dks. 58, 59 and 62) are denied; and a certificate of appealability is also denied as to Dion M. Lee-Speight. Signed by U.S. District Senior Judge Sam A. Crow on 11/1/2011.Mailed to pro se party: Mr. Dion M. Lee-Speight, Reg. No. 15680-031, FCI Forrest City Medium, PO Box 3000, Forrest City, AR 72336 by regular mail. (bmw) Civil Case 5:11-cv-04083-SAC closed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cr-40035-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lee-Speight</title>
+  <subTitle>MEMORANDUM &amp; ORDER as to Dion M. Lee-Speight. The defendant is appointed counsel to represent him in this § 2255 proceeding to resolve the merits of the single remaining issue--whether his sentencing counsel was ineffective in failing to file a notice of appeal. Both sides will have 45 days from the filing date of this order to expand the record as discussed in this memorandum &amp; order. Signed by U.S. District Senior Judge Sam A. Crow on 9/11/2013. (bmw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187f6dd8d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-2</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cr-40035_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cr-40035; USA v. Lee-Speight; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cr-40035-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-09-11</dateIssued>
+  <docketText>MEMORANDUM &amp; ORDER as to Dion M. Lee-Speight. The defendant is appointed counsel to represent him in this § 2255 proceeding to resolve the merits of the single remaining issue--whether his sentencing counsel was ineffective in failing to file a notice of appeal. Both sides will have 45 days from the filing date of this order to expand the record as discussed in this memorandum &amp; order. Signed by U.S. District Senior Judge Sam A. Crow on 9/11/2013. (bmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cr-40035-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Lee-Speight</title>
+  <subTitle>MEMORANDUM AND ORDER: Defendants requests for an evidentiary hearing (Dks. 82 and 93) are granted, and an evidentiary hearing will be scheduled promptly with notice to the parties. Government&apos;s Motions for Leave to supplement the record in response to the courts request are granted 89 &amp; 90. Signed by U.S. District Senior Judge Sam A. Crow on 1/7/2014. (mb)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187f6dea8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-3</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cr-40035_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cr-40035; USA v. Lee-Speight; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cr-40035-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: Defendants requests for an evidentiary hearing (Dks. 82 and 93) are granted, and an evidentiary hearing will be scheduled promptly with notice to the parties. Government&apos;s Motions for Leave to supplement the record in response to the courts request are granted 89 &amp; 90. Signed by U.S. District Senior Judge Sam A. Crow on 1/7/2014. (mb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_10-cr-40035-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Lee-Speight</title>
+  <subTitle>MEMORANDUM AND ORDER denying 57 Motion to Vacate (2255) as to defendant Dion M. Lee-Speight (1). Signed by U.S. District Senior Judge Sam A. Crow on 3/18/14. (mb)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187f6dd8e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-4</identifier>
+ <identifier type="former granule identifier">ksd-5_10-cr-40035_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_10-cr-40035/USCOURTS-ksd-5_10-cr-40035-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_10-cr-40035/pdf/USCOURTS-ksd-5_10-cr-40035-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cr-40035; USA v. Lee-Speight; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_10-cr-40035-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-03-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 57 Motion to Vacate (2255) as to defendant Dion M. Lee-Speight (1). Signed by U.S. District Senior Judge Sam A. Crow on 3/18/14. (mb)</docketText>
+</extension>
+</relatedItem>
+</mods>

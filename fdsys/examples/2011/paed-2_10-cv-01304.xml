@@ -1,0 +1,349 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18136f1b9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-23</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-01304</identifier>
+<identifier type="local">P0b002ee18136f1b9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-23</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_10-cv-01304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cv-01304</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cv-01304</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party firstName="TALBOTT" fullName="TALBOTT BARNARD" lastName="BARNARD" role="Plaintiff"></party>
+ <party firstName="SUSAN" fullName="SUSAN BIGGERSTAFF" lastName="BIGGERSTAFF" role="Plaintiff"></party>
+ <party firstName="DONALD" fullName="DONALD B. BIGGERSTAFF" lastName="BIGGERSTAFF" middleName="B." role="Plaintiff"></party>
+ <party firstName="DAVID" fullName="DAVID BOON" lastName="BOON" role="Plaintiff"></party>
+ <party firstName="DEB" fullName="DEB BOSER" lastName="BOSER" role="Plaintiff"></party>
+ <party firstName="GREG" fullName="GREG BOSER" lastName="BOSER" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS BOVET" lastName="BOVET" role="Plaintiff"></party>
+ <party firstName="YING" fullName="YING FANG" lastName="FANG" role="Plaintiff"></party>
+ <party firstName="ZHENGXU" fullName="ZHENGXU HE FANG" lastName="FANG" middleName="HE" role="Plaintiff"></party>
+ <party firstName="MARK" fullName="MARK HENDRYCH" lastName="HENDRYCH" role="Plaintiff"></party>
+ <party fullName="J.P. MORGAN CHASE&amp;CO." lastName="J.P. MORGAN CHASE&amp;CO." role="Defendant"></party>
+ <party fullName="J.P. MORGAN CHASE BANK, N.A." lastName="J.P. MORGAN CHASE BANK, N.A." role="Defendant"></party>
+ <party firstName="BIN" fullName="BIN LEE" lastName="LEE" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS E. MARTIN" lastName="MARTIN" middleName="E." role="Plaintiff"></party>
+ <party fullName="MIDDLEBAR MONASTERY, NON-PROFIT" lastName="MIDDLEBAR MONASTERY, NON-PROFIT" role="Plaintiff"></party>
+ <party firstName="JERSEY" fullName="JERSEY NIETUBYC" lastName="NIETUBYC" role="Plaintiff"></party>
+ <party firstName="KATHERINE" fullName="KATHERINE PERINO" lastName="PERINO" role="Plaintiff"></party>
+ <party firstName="BRIAN" fullName="BRIAN D. SPENCER" lastName="SPENCER" middleName="D." role="Plaintiff"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN S. SPENCER" lastName="SPENCER" middleName="S." role="Plaintiff"></party>
+ <party firstName="CHARLES" fullName="CHARLES J. TURK" lastName="TURK" middleName="J." role="Plaintiff"></party>
+ <party fullName="VERIZON COMMUNICATIONS, INC." lastName="VERIZON COMMUNICATIONS, INC." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BARNARD et al v. VERIZON COMMUNICATIONS, INC. et al</title>
+ <partNumber>2:10-cv-01304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-01304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-01304;10-1304</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>TALBOTT BARNARD</displayForm>
+ <namePart type="family">BARNARD</namePart>
+ <namePart type="given">TALBOTT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SUSAN BIGGERSTAFF</displayForm>
+ <namePart type="family">BIGGERSTAFF</namePart>
+ <namePart type="given">SUSAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DONALD B. BIGGERSTAFF</displayForm>
+ <namePart type="family">BIGGERSTAFF</namePart>
+ <namePart type="given">DONALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DAVID BOON</displayForm>
+ <namePart type="family">BOON</namePart>
+ <namePart type="given">DAVID</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DEB BOSER</displayForm>
+ <namePart type="family">BOSER</namePart>
+ <namePart type="given">DEB</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>GREG BOSER</displayForm>
+ <namePart type="family">BOSER</namePart>
+ <namePart type="given">GREG</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS BOVET</displayForm>
+ <namePart type="family">BOVET</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>YING FANG</displayForm>
+ <namePart type="family">FANG</namePart>
+ <namePart type="given">YING</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ZHENGXU HE FANG</displayForm>
+ <namePart type="family">FANG</namePart>
+ <namePart type="given">ZHENGXU</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MARK HENDRYCH</displayForm>
+ <namePart type="family">HENDRYCH</namePart>
+ <namePart type="given">MARK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J.P. MORGAN CHASE&amp;CO.</displayForm>
+ <namePart type="family">J.P. MORGAN CHASE&amp;CO.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.P. MORGAN CHASE BANK, N.A.</displayForm>
+ <namePart type="family">J.P. MORGAN CHASE BANK, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>BIN LEE</displayForm>
+ <namePart type="family">LEE</namePart>
+ <namePart type="given">BIN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS E. MARTIN</displayForm>
+ <namePart type="family">MARTIN</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MIDDLEBAR MONASTERY, NON-PROFIT</displayForm>
+ <namePart type="family">MIDDLEBAR MONASTERY, NON-PROFIT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JERSEY NIETUBYC</displayForm>
+ <namePart type="family">NIETUBYC</namePart>
+ <namePart type="given">JERSEY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>KATHERINE PERINO</displayForm>
+ <namePart type="family">PERINO</namePart>
+ <namePart type="given">KATHERINE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BRIAN D. SPENCER</displayForm>
+ <namePart type="family">SPENCER</namePart>
+ <namePart type="given">BRIAN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>STEPHEN S. SPENCER</displayForm>
+ <namePart type="family">SPENCER</namePart>
+ <namePart type="given">STEPHEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CHARLES J. TURK</displayForm>
+ <namePart type="family">TURK</namePart>
+ <namePart type="given">CHARLES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>VERIZON COMMUNICATIONS, INC.</displayForm>
+ <namePart type="family">VERIZON COMMUNICATIONS, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_10-cv-01304</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:10-cv-01304</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <party firstName="TALBOTT" fullName="TALBOTT BARNARD" lastName="BARNARD" role="Plaintiff"></party>
+ <party firstName="SUSAN" fullName="SUSAN BIGGERSTAFF" lastName="BIGGERSTAFF" role="Plaintiff"></party>
+ <party firstName="DONALD" fullName="DONALD B. BIGGERSTAFF" lastName="BIGGERSTAFF" middleName="B." role="Plaintiff"></party>
+ <party firstName="DAVID" fullName="DAVID BOON" lastName="BOON" role="Plaintiff"></party>
+ <party firstName="DEB" fullName="DEB BOSER" lastName="BOSER" role="Plaintiff"></party>
+ <party firstName="GREG" fullName="GREG BOSER" lastName="BOSER" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS BOVET" lastName="BOVET" role="Plaintiff"></party>
+ <party firstName="YING" fullName="YING FANG" lastName="FANG" role="Plaintiff"></party>
+ <party firstName="ZHENGXU" fullName="ZHENGXU HE FANG" lastName="FANG" middleName="HE" role="Plaintiff"></party>
+ <party firstName="MARK" fullName="MARK HENDRYCH" lastName="HENDRYCH" role="Plaintiff"></party>
+ <party fullName="J.P. MORGAN CHASE&amp;CO." lastName="J.P. MORGAN CHASE&amp;CO." role="Defendant"></party>
+ <party fullName="J.P. MORGAN CHASE BANK, N.A." lastName="J.P. MORGAN CHASE BANK, N.A." role="Defendant"></party>
+ <party firstName="BIN" fullName="BIN LEE" lastName="LEE" role="Plaintiff"></party>
+ <party firstName="THOMAS" fullName="THOMAS E. MARTIN" lastName="MARTIN" middleName="E." role="Plaintiff"></party>
+ <party fullName="MIDDLEBAR MONASTERY, NON-PROFIT" lastName="MIDDLEBAR MONASTERY, NON-PROFIT" role="Plaintiff"></party>
+ <party firstName="JERSEY" fullName="JERSEY NIETUBYC" lastName="NIETUBYC" role="Plaintiff"></party>
+ <party firstName="KATHERINE" fullName="KATHERINE PERINO" lastName="PERINO" role="Plaintiff"></party>
+ <party firstName="BRIAN" fullName="BRIAN D. SPENCER" lastName="SPENCER" middleName="D." role="Plaintiff"></party>
+ <party firstName="STEPHEN" fullName="STEPHEN S. SPENCER" lastName="SPENCER" middleName="S." role="Plaintiff"></party>
+ <party firstName="CHARLES" fullName="CHARLES J. TURK" lastName="TURK" middleName="J." role="Plaintiff"></party>
+ <party fullName="VERIZON COMMUNICATIONS, INC." lastName="VERIZON COMMUNICATIONS, INC." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-01304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-0/mods.xml">
+ <titleInfo>
+  <title>BARNARD et al v. VERIZON COMMUNICATIONS, INC. et al</title>
+  <subTitle>MEMORANDUM AND/OR OPINION SETTING FORTH THE REASONS FOR GRANTING MOTIONS TO DISMISS (DOCKET NOS. 21 AND 23) AND DENYING MOTIONS FOR SUMMARY JUDGMENT AND MOTION TO DISMISS (DOCKET NOS. 43, 45 AND 49). AN APPROPRIATE ORDER FOLLOWS THIS MEMORANDUM OPINION. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/31/11. 1/31/11 ENTERED AND COPIES MAILED AND E-MAILED.(rab, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-01304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814790ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-0</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-01304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-01304/pdf/USCOURTS-paed-2_10-cv-01304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-01304; BARNARD et al v. VERIZON COMMUNICATIONS, INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-01304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>MEMORANDUM AND/OR OPINION SETTING FORTH THE REASONS FOR GRANTING MOTIONS TO DISMISS (DOCKET NOS. 21 AND 23) AND DENYING MOTIONS FOR SUMMARY JUDGMENT AND MOTION TO DISMISS (DOCKET NOS. 43, 45 AND 49). AN APPROPRIATE ORDER FOLLOWS THIS MEMORANDUM OPINION. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/31/11. 1/31/11 ENTERED AND COPIES MAILED AND E-MAILED.(rab, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_10-cv-01304-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-1/mods.xml">
+ <titleInfo>
+  <title>BARNARD et al v. VERIZON COMMUNICATIONS, INC. et al</title>
+  <subTitle>ORDERED THAT MOTIONS TO DISMISS FILED BY DEFENDANTS J.P. MORGAN CHASE BANK (DOCKET NO. 21) AND VERIZON COMMUNICATIONS, INC. (DOCKET NO. 23) ARE GRANTED IN THEIR ENTIRETY AND THAT EACH OF THE COUNTS IN THE SECOND AMENDED COMPLAINT IS DIMISSED WITH PREJUDICE. IN LIGHT OF THIS RULING, IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION FOR SUMMARY JUDGMENT (DOCKET NO. 43), AMENDED MOTION FOR SUMMARY JUDGMENT (DOCKET NO. 45) AND &quot;MOTION TO DISMISS&quot; (RESPONSE TO THE DEFENDANTS&apos; MOTIONS) (DOCKET NO. 49) ARE DENIED. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/31/11. 1/31/11 ENTERED AND COPIES MAILED AND E-MAILED.(rab, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_10-cv-01304-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814790f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-1</identifier>
+ <identifier type="former granule identifier">paed-2_10-cv-01304_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_10-cv-01304/USCOURTS-paed-2_10-cv-01304-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_10-cv-01304/pdf/USCOURTS-paed-2_10-cv-01304-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-01304; BARNARD et al v. VERIZON COMMUNICATIONS, INC. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_10-cv-01304-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-31</dateIssued>
+  <docketText>ORDERED THAT MOTIONS TO DISMISS FILED BY DEFENDANTS J.P. MORGAN CHASE BANK (DOCKET NO. 21) AND VERIZON COMMUNICATIONS, INC. (DOCKET NO. 23) ARE GRANTED IN THEIR ENTIRETY AND THAT EACH OF THE COUNTS IN THE SECOND AMENDED COMPLAINT IS DIMISSED WITH PREJUDICE. IN LIGHT OF THIS RULING, IT IS FURTHER ORDERED THAT PLAINTIFFS&apos; MOTION FOR SUMMARY JUDGMENT (DOCKET NO. 43), AMENDED MOTION FOR SUMMARY JUDGMENT (DOCKET NO. 45) AND &quot;MOTION TO DISMISS&quot; (RESPONSE TO THE DEFENDANTS&apos; MOTIONS) (DOCKET NO. 49) ARE DENIED. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/31/11. 1/31/11 ENTERED AND COPIES MAILED AND E-MAILED.(rab, )</docketText>
+</extension>
+</relatedItem>
+</mods>

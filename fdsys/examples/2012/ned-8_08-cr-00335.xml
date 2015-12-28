@@ -1,0 +1,426 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181e4c4ca">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335</identifier>
+<identifier type="local">P0b002ee181e4c4ca</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cr-00335</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00335</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00335</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James E. Smith III" generation="III" lastName="Smith" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Smith</title>
+ <partNumber>8:08-cr-00335</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cr-00335;08-335</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James E. Smith III</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00335</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00335</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James E. Smith III" generation="III" lastName="Smith" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant James E. Smith, III - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f858</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-22</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant James E. Smith, III - the Federal Public Defender is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER granting 16 Mr. Thomas and the Office of the Federal Public Defender&apos;s Motion to Withdraw as Attorney. Clarence E. Mock, is appointed to represent Smith for the balance of these proceedings pursuant to the Criminal Justice Act. Mr. Thomas shall forthwith provide Mr. Mock with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to Smith&apos;s defense. The clerk shall provide a copy of this order to Mr. Mock, and he shall file his appearance forthwith as to James E. Smith III (1). Ordered by Magistrate Judge Thomas D. Thalken. (Copies mailed as directed)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f877</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-30</dateIssued>
+  <docketText>ORDER granting 16 Mr. Thomas and the Office of the Federal Public Defender&apos;s Motion to Withdraw as Attorney. Clarence E. Mock, is appointed to represent Smith for the balance of these proceedings pursuant to the Criminal Justice Act. Mr. Thomas shall forthwith provide Mr. Mock with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to Smith&apos;s defense. The clerk shall provide a copy of this order to Mr. Mock, and he shall file his appearance forthwith as to James E. Smith III (1). Ordered by Magistrate Judge Thomas D. Thalken. (Copies mailed as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER granting 19 Motion to Extend pretrial motions as to James E. Smith III (1). Smith is given until December 5, 2008 in which to file pretrial motions pursuant to the progression order. The time between November 12, 2008 and December 5, 2008 shall be deemed excludable time for purposes of Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f875</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-12</dateIssued>
+  <docketText>ORDER granting 19 Motion to Extend pretrial motions as to James E. Smith III (1). Smith is given until December 5, 2008 in which to file pretrial motions pursuant to the progression order. The time between November 12, 2008 and December 5, 2008 shall be deemed excludable time for purposes of Speedy Trial Act. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER granting 24 Motion to Continue Trial as to James E. Smith III (1). Jury Trial set for 2/3/2009 at 8:30 AM in Courtroom 2 - Omaha before Judge Laurie Smith Camp. The time between 1/13/2009 and 2/3/2009 is excluded under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( CLS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f878</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-12-30</dateIssued>
+  <docketText>ORDER granting 24 Motion to Continue Trial as to James E. Smith III (1). Jury Trial set for 2/3/2009 at 8:30 AM in Courtroom 2 - Omaha before Judge Laurie Smith Camp. The time between 1/13/2009 and 2/3/2009 is excluded under the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant James E. Smith, III. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f874</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant James E. Smith, III. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>PRELIMINARY ORDER of Forfeiture- The United States&apos; 38 Motion for Preliminary Forfeiture is hereby sustained as to James E. Smith III (1). Based upon Count III of the Indictment and the Defendant&apos;s plea of guilty, theUnited States is hereby authorized to seize the $237.00 in United States currency. The Defendant&apos;s interest in said property is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1). The aforementioned forfeited property is to be held by the United States in its secure custody and control. Pursuant to 21 U.S.C. § 853(n)(1), the United States forthwith shall publish for at least thirty consecutive days on an official Government internet site (www.forfeiture.gov) notice of this Order, Notice of Publication evidencing the United States intent to dispose of the property in such manner as the Attorney General may direct, and notice that any person, other than the Defendant, having or claiming a legal interest in any of the subjectforfeited property must file a Petition with the court within thirty days of the final publication of notice or of receipt of actual notice, whichever is earlier. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR) Modified on 3/25/2009 to correct typo (MKR).</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f87c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-03-10</dateIssued>
+  <docketText>PRELIMINARY ORDER of Forfeiture- The United States&apos; 38 Motion for Preliminary Forfeiture is hereby sustained as to James E. Smith III (1). Based upon Count III of the Indictment and the Defendant&apos;s plea of guilty, theUnited States is hereby authorized to seize the $237.00 in United States currency. The Defendant&apos;s interest in said property is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1). The aforementioned forfeited property is to be held by the United States in its secure custody and control. Pursuant to 21 U.S.C. § 853(n)(1), the United States forthwith shall publish for at least thirty consecutive days on an official Government internet site (www.forfeiture.gov) notice of this Order, Notice of Publication evidencing the United States intent to dispose of the property in such manner as the Attorney General may direct, and notice that any person, other than the Defendant, having or claiming a legal interest in any of the subjectforfeited property must file a Petition with the court within thirty days of the final publication of notice or of receipt of actual notice, whichever is earlier. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR) Modified on 3/25/2009 to correct typo (MKR).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant James E. Smith, III. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f876</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-04-30</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant James E. Smith, III. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>JUDGMENT as to James E. Smith, III (1), Defendant pled guilty to counts I and III of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 135 months; 5 years Supervised Release with special conditions; $100 Special Assessment; Final order of forfeiture as to Count III forthcoming. Count II of the Indictment is dismissed on the motion of the United States as to defendant James E. Smith, III. Defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than July 10, 2009 by 2:00 p.m.. Criminal Case Terminated. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(MKR)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f879</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-05-13</dateIssued>
+  <docketText>JUDGMENT as to James E. Smith, III (1), Defendant pled guilty to counts I and III of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 135 months; 5 years Supervised Release with special conditions; $100 Special Assessment; Final order of forfeiture as to Count III forthcoming. Count II of the Indictment is dismissed on the motion of the United States as to defendant James E. Smith, III. Defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than July 10, 2009 by 2:00 p.m.. Criminal Case Terminated. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>FINAL ORDER OF FORFEITURE- Sustaining 52 the Motion for Final Forfeiture as to James E. Smith III (1). All right, title and interest in and to the $237.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The $237.00 in United States currency, be, and the same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f87a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2009-05-18</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE- Sustaining 52 the Motion for Final Forfeiture as to James E. Smith III (1). All right, title and interest in and to the $237.00 in United States currency, held by any person or entity, is hereby forever barred and foreclosed. The $237.00 in United States currency, be, and the same hereby is, forfeited to the United States of America. The United States Marshal for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant James E. Smith, III - Clarence E. Mock is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f87d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-9</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant James E. Smith, III - Clarence E. Mock is appointed as counsel for the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00335-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Smith</title>
+  <subTitle>ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT - granting the 57 motion and stipulation 58 to reduce sentence under 2011 Crack Cocaine guideline amendment. The Defendant&apos;s previously imposed sentenced of 135 months is reduced to 120 months. Except as provided above, all provisions of the judgment dated May 13, 2009 shall remain in effect. Effective date: February 10, 2012 as to James E. Smith III (1); granting 58 Stipulation as to James E. Smith III (1). Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00335-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181e4f87b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-10</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00335_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00335/USCOURTS-ned-8_08-cr-00335-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00335/pdf/USCOURTS-ned-8_08-cr-00335-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00335; USA v. Smith; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00335-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-02-10</dateIssued>
+  <docketText>ORDER REGARDING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT - granting the 57 motion and stipulation 58 to reduce sentence under 2011 Crack Cocaine guideline amendment. The Defendant&apos;s previously imposed sentenced of 135 months is reduced to 120 months. Except as provided above, all provisions of the judgment dated May 13, 2009 shall remain in effect. Effective date: February 10, 2012 as to James E. Smith III (1); granting 58 Stipulation as to James E. Smith III (1). Ordered by Chief Judge Laurie Smith Camp. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

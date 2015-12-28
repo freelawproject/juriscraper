@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1838d2a8d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-12-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-12-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514</identifier>
+<identifier type="local">P0b002ee1838d2a8d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-12-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-12-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_11-cv-02514</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_11-cv-02514</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:11-cv-02514</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="Barberton City School District Board of Education" lastName="Barberton City School District Board of Education" role="Defendant"></party>
+ <party firstName="Kelli" fullName="Kelli Williams" lastName="Williams" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Williams v. Barberton City School District Board of Education</title>
+ <partNumber>5:11-cv-02514</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:11-cv-02514;11-2514</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barberton City School District Board of Education</displayForm>
+ <namePart type="family">Barberton City School District Board of Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kelli Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Kelli</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_11-cv-02514</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:11-cv-02514</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="Barberton City School District Board of Education" lastName="Barberton City School District Board of Education" role="Defendant"></party>
+ <party firstName="Kelli" fullName="Kelli Williams" lastName="Williams" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_11-cv-02514-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-0/mods.xml">
+ <titleInfo>
+  <title>Williams v. Barberton City School District Board of Education</title>
+  <subTitle>Order Adopting Magistrate Judge Limbert&apos;s 7 Interim Report and Recommendation and Denying 3 Motion for default judgment filed by Kelli Williams and Denying as Moot 10 Motion to strike and/or Motion to stay filed by Kelli Williams. This case continues to be referred to Magistrate Judge Limbert for general pre-trial supervision. Judge David D. Dowd, Jr. on 1/13/2012. (M,De)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_11-cv-02514-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1838d3f6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_11-cv-02514_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514/pdf/USCOURTS-ohnd-5_11-cv-02514-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-02514; Williams v. Barberton City School District Board of Education; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_11-cv-02514-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>Order Adopting Magistrate Judge Limbert&apos;s 7 Interim Report and Recommendation and Denying 3 Motion for default judgment filed by Kelli Williams and Denying as Moot 10 Motion to strike and/or Motion to stay filed by Kelli Williams. This case continues to be referred to Magistrate Judge Limbert for general pre-trial supervision. Judge David D. Dowd, Jr. on 1/13/2012. (M,De)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_11-cv-02514-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-1/mods.xml">
+ <titleInfo>
+  <title>Williams v. Barberton City School District Board of Education</title>
+  <subTitle>Report and Recommendation: It is recommended that the Court grant defendant&apos;s motion for judgment on the pleadings, as plaintiff has failed to allege sufficient facts to fulfill the Garcetti requirement for her public employee First Amendment claim, and, in the alternative, that she has also failed to allege sufficient facts to demonstrate that her alleged protected speech was a substantial or motivating factor in her termination (Related document 23). Signed by Magistrate Judge George J. Limbert on 9/27/12. (S,AA)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_11-cv-02514-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1838d3f6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_11-cv-02514_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514/pdf/USCOURTS-ohnd-5_11-cv-02514-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-02514; Williams v. Barberton City School District Board of Education; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_11-cv-02514-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>Report and Recommendation: It is recommended that the Court grant defendant&apos;s motion for judgment on the pleadings, as plaintiff has failed to allege sufficient facts to fulfill the Garcetti requirement for her public employee First Amendment claim, and, in the alternative, that she has also failed to allege sufficient facts to demonstrate that her alleged protected speech was a substantial or motivating factor in her termination (Related document 23). Signed by Magistrate Judge George J. Limbert on 9/27/12. (S,AA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_11-cv-02514-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-2/mods.xml">
+ <titleInfo>
+  <title>Williams v. Barberton City School District Board of Education</title>
+  <subTitle>Memorandum Opinion scheduling an oral argument with respect to 35 plaintiff&apos;s objections to the 33 Report and Recommendation of the Magistrate Judge and schedules the oral argument for 11/8/2012 at 10:00 a.m. Judge David D. Dowd, Jr. on 10/25/2012. (S,He)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_11-cv-02514-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1838d3f6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-2</identifier>
+ <identifier type="former granule identifier">ohnd-5_11-cv-02514_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514/pdf/USCOURTS-ohnd-5_11-cv-02514-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-02514; Williams v. Barberton City School District Board of Education; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_11-cv-02514-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-10-25</dateIssued>
+  <docketText>Memorandum Opinion scheduling an oral argument with respect to 35 plaintiff&apos;s objections to the 33 Report and Recommendation of the Magistrate Judge and schedules the oral argument for 11/8/2012 at 10:00 a.m. Judge David D. Dowd, Jr. on 10/25/2012. (S,He)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_11-cv-02514-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-3/mods.xml">
+ <titleInfo>
+  <title>Williams v. Barberton City School District Board of Education</title>
+  <subTitle>Memorandum Opinion and Order Granting Plaintiff&apos;s Motion to file an amended complaint (See Document ECF#28 Plaintiff&apos;s Objections). The grant of the motion to amend renders moot the Defendant&apos;s 23 Motion for Judgment on the Pleadings, the Magistrate Judge&apos;s Report and Recommendation and the Plaintiff&apos;s Objections thereto. Plaintiff shall file a First Amended Complaint no later than December 21, 2012. Defendant shall have until January 4, 2013 to file a responsive pleading. Rule 12 motions will not be entertained, but any arguments that were asserted in Defendant&apos;s Motion for Judgment on the Pleadings may be reasserted in a Rule 56 motion. All dates set in the August 28, 2012 Order (Dkt.#32) remain in effect. Signed by Judge David D. Dowd, Jr. on 11/30/2012.(M,De)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_11-cv-02514-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1838d3f69</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-3</identifier>
+ <identifier type="former granule identifier">ohnd-5_11-cv-02514_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_11-cv-02514/USCOURTS-ohnd-5_11-cv-02514-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_11-cv-02514/pdf/USCOURTS-ohnd-5_11-cv-02514-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:11-cv-02514; Williams v. Barberton City School District Board of Education; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_11-cv-02514-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-03</dateIssued>
+  <docketText>Memorandum Opinion and Order Granting Plaintiff&apos;s Motion to file an amended complaint (See Document ECF#28 Plaintiff&apos;s Objections). The grant of the motion to amend renders moot the Defendant&apos;s 23 Motion for Judgment on the Pleadings, the Magistrate Judge&apos;s Report and Recommendation and the Plaintiff&apos;s Objections thereto. Plaintiff shall file a First Amended Complaint no later than December 21, 2012. Defendant shall have until January 4, 2013 to file a responsive pleading. Rule 12 motions will not be entertained, but any arguments that were asserted in Defendant&apos;s Motion for Judgment on the Pleadings may be reasserted in a Rule 56 motion. All dates set in the August 28, 2012 Order (Dkt.#32) remain in effect. Signed by Judge David D. Dowd, Jr. on 11/30/2012.(M,De)</docketText>
+</extension>
+</relatedItem>
+</mods>

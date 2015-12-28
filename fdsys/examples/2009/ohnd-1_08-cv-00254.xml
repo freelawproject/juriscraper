@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815648c5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-00254</identifier>
+<identifier type="local">P0b002ee1815648c5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_08-cv-00254</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-00254</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-00254</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>12:635 Breach of Insurance Contract</cause>
+ <party firstName="Elizabeth" fullName="Elizabeth Garcia" lastName="Garcia" role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Grace" lastName="Grace" role="Plaintiff"></party>
+ <party firstName="Dorian" fullName="Dorian Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Ladon" fullName="Ladon Ruffin" lastName="Ruffin" role="Plaintiff"></party>
+ <party fullName="State Farm Fire and Casualty Company" lastName="State Farm Fire and Casualty Company" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Ins Co" lastName="State Farm Mutual Automobile Ins Co" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Grace, et al v. State Farm Mutual Automobile Ins Co</title>
+ <partNumber>1:08-cv-00254</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-00254/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00254;08-254</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth Garcia</displayForm>
+ <namePart type="family">Garcia</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Laura Grace</displayForm>
+ <namePart type="family">Grace</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorian Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Dorian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ladon Ruffin</displayForm>
+ <namePart type="family">Ruffin</namePart>
+ <namePart type="given">Ladon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Fire and Casualty Company</displayForm>
+ <namePart type="family">State Farm Fire and Casualty Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Mutual Automobile Ins Co</displayForm>
+ <namePart type="family">State Farm Mutual Automobile Ins Co</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_08-cv-00254</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:08-cv-00254</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>12:635 Breach of Insurance Contract</cause>
+ <party firstName="Elizabeth" fullName="Elizabeth Garcia" lastName="Garcia" role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Grace" lastName="Grace" role="Plaintiff"></party>
+ <party firstName="Dorian" fullName="Dorian Jones" lastName="Jones" role="Plaintiff"></party>
+ <party firstName="Ladon" fullName="Ladon Ruffin" lastName="Ruffin" role="Plaintiff"></party>
+ <party fullName="State Farm Fire and Casualty Company" lastName="State Farm Fire and Casualty Company" role="Defendant"></party>
+ <party fullName="State Farm Mutual Automobile Ins Co" lastName="State Farm Mutual Automobile Ins Co" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_08-cv-00254-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-00254/USCOURTS-ohnd-1_08-cv-00254-0/mods.xml">
+ <titleInfo>
+  <title>Grace, et al v. State Farm Mutual Automobile Ins Co</title>
+  <subTitle>Memorandum and Order Certifying a Question of State Law to the Supreme Court of Ohio. Pursuant to Rule XVIII of the Rules of Practice of the Supreme Court of Ohio, the Court certifies the question outlined herein. Clerk of Court to serve copies of this Order upon all counsel of record and file with the Supreme Court of Ohio. Judge Kathleen M. O&apos;Malley on 1/15/2009. (H,CM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_08-cv-00254-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18163b293</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-00254/USCOURTS-ohnd-1_08-cv-00254-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_08-cv-00254_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_08-cv-00254/USCOURTS-ohnd-1_08-cv-00254-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_08-cv-00254/pdf/USCOURTS-ohnd-1_08-cv-00254-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00254; Grace, et al v. State Farm Mutual Automobile Ins Co; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_08-cv-00254-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-15</dateIssued>
+  <docketText>Memorandum and Order Certifying a Question of State Law to the Supreme Court of Ohio. Pursuant to Rule XVIII of the Rules of Practice of the Supreme Court of Ohio, the Court certifies the question outlined herein. Clerk of Court to serve copies of this Order upon all counsel of record and file with the Supreme Court of Ohio. Judge Kathleen M. O&apos;Malley on 1/15/2009. (H,CM)</docketText>
+</extension>
+</relatedItem>
+</mods>

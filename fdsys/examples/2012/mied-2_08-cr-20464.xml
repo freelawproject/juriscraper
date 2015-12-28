@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18194de83">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464</identifier>
+<identifier type="local">P0b002ee18194de83</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_08-cr-20464</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cr-20464</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cr-20464</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Aggrey" fullName="Aggrey Cooper" lastName="Cooper" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Cooper</title>
+ <partNumber>2:08-cr-20464</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cr-20464;08-20464</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Aggrey Cooper</displayForm>
+ <namePart type="family">Cooper</namePart>
+ <namePart type="given">Aggrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cr-20464</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cr-20464</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Aggrey" fullName="Aggrey Cooper" lastName="Cooper" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cr-20464-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cooper</title>
+  <subTitle>Order Denying Defendants Motion For Discovery (Dkt. #10),Denying Defendants Motion To Produce Confidential Informant (Dkt. #12), Granting Defendants Motion To Strike (Dkt. #21)AndDenying Defendants Motion For Issuance Of Subpoena Under Rule 17(c). Signed by Magistrate Judge Steven D Pepe. (JCre)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cr-20464-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819f693b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-0</identifier>
+ <identifier type="former granule identifier">mied-2_08-cr-20464_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464/pdf/USCOURTS-mied-2_08-cr-20464-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cr-20464; United States of America v. Cooper; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cr-20464-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-02-18</dateIssued>
+  <docketText>Order Denying Defendants Motion For Discovery (Dkt. #10),Denying Defendants Motion To Produce Confidential Informant (Dkt. #12), Granting Defendants Motion To Strike (Dkt. #21)AndDenying Defendants Motion For Issuance Of Subpoena Under Rule 17(c). Signed by Magistrate Judge Steven D Pepe. (JCre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cr-20464-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cooper</title>
+  <subTitle>Report and Recommendation Denying Defendant&apos;s Motion to Suppress Evidence (Dkt.#11). Signed by Magistrate Judge Steven D Pepe. (JCre)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cr-20464-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819f693a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-1</identifier>
+ <identifier type="former granule identifier">mied-2_08-cr-20464_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464/pdf/USCOURTS-mied-2_08-cr-20464-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cr-20464; United States of America v. Cooper; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cr-20464-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-02-23</dateIssued>
+  <docketText>Report and Recommendation Denying Defendant&apos;s Motion to Suppress Evidence (Dkt.#11). Signed by Magistrate Judge Steven D Pepe. (JCre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cr-20464-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cooper</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION as to Aggrey Cooper for 11 Motion to Suppress filed by Aggrey Cooper, 29 Report and Recommendation, 27 Motion to Suppress,, Motion for Miscellaneous Relief, filed by Aggrey Cooper Signed by District Judge Julian Abele Cook. (KDoa)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cr-20464-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819f6939</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-2</identifier>
+ <identifier type="former granule identifier">mied-2_08-cr-20464_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464/pdf/USCOURTS-mied-2_08-cr-20464-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cr-20464; United States of America v. Cooper; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cr-20464-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-05-14</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION as to Aggrey Cooper for 11 Motion to Suppress filed by Aggrey Cooper, 29 Report and Recommendation, 27 Motion to Suppress,, Motion for Miscellaneous Relief, filed by Aggrey Cooper Signed by District Judge Julian Abele Cook. (KDoa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cr-20464-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Cooper</title>
+  <subTitle>ORDER denying 72 Motion to Vacate (2255) as to Aggrey Cooper (1); denying 75 Motion to Amend/Correct as to Aggrey Cooper (1) and denying certificate of appealability.. Signed by District Judge Julian Abele Cook. (KDoa) Civil Case 2:11-cv-10736-JAC closed. Modified on 1/4/2012 (KDoa).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cr-20464-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819f6938</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-3</identifier>
+ <identifier type="former granule identifier">mied-2_08-cr-20464_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cr-20464/USCOURTS-mied-2_08-cr-20464-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cr-20464/pdf/USCOURTS-mied-2_08-cr-20464-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cr-20464; United States of America v. Cooper; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cr-20464-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER denying 72 Motion to Vacate (2255) as to Aggrey Cooper (1); denying 75 Motion to Amend/Correct as to Aggrey Cooper (1) and denying certificate of appealability.. Signed by District Judge Julian Abele Cook. (KDoa) Civil Case 2:11-cv-10736-JAC closed. Modified on 1/4/2012 (KDoa).</docketText>
+</extension>
+</relatedItem>
+</mods>

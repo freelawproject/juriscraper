@@ -1,0 +1,449 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183c0a38a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058</identifier>
+<identifier type="local">P0b002ee183c0a38a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-01058</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01058</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01058</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party firstName="Robert Paul" fullName="Robert Paul &quot;Bo&quot; Clark Jr." generation="Jr." lastName="Clark" middleName="&quot;Bo&quot;" role="Defendant"></party>
+ <party fullName="Golden Memorial Companies, Inc." lastName="Golden Memorial Companies, Inc." role="Defendant"></party>
+ <party fullName="Golden Memorial Insurance Services, Inc." lastName="Golden Memorial Insurance Services, Inc." role="Plaintiff"></party>
+ <party fullName="Golden Memorial Plan, Inc." lastName="Golden Memorial Plan, Inc." role="Defendant"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe &quot;Joe&quot; Gonzalez" lastName="Gonzalez" middleName="&quot;Joe&quot;" role="Defendant"></party>
+ <party firstName="Lauro" fullName="Lauro Herrera" lastName="Herrera" role="Defendant"></party>
+ <party fullName="Secured Serenity, Inc." lastName="Secured Serenity, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+ <partNumber>1:11-cv-01058</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-01058;11-1058</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Robert Paul &quot;Bo&quot; Clark Jr.</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Robert Paul</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Golden Memorial Companies, Inc.</displayForm>
+ <namePart type="family">Golden Memorial Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Golden Memorial Insurance Services, Inc.</displayForm>
+ <namePart type="family">Golden Memorial Insurance Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Golden Memorial Plan, Inc.</displayForm>
+ <namePart type="family">Golden Memorial Plan, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guadalupe &quot;Joe&quot; Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Guadalupe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lauro Herrera</displayForm>
+ <namePart type="family">Herrera</namePart>
+ <namePart type="given">Lauro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Secured Serenity, Inc.</displayForm>
+ <namePart type="family">Secured Serenity, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01058</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01058</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>840</natureSuitCode>
+ <natureSuit>Trademark</natureSuit>
+ <cause>15:1125 Trademark Infringement (Lanham Act)</cause>
+ <party firstName="Robert Paul" fullName="Robert Paul &quot;Bo&quot; Clark Jr." generation="Jr." lastName="Clark" middleName="&quot;Bo&quot;" role="Defendant"></party>
+ <party fullName="Golden Memorial Companies, Inc." lastName="Golden Memorial Companies, Inc." role="Defendant"></party>
+ <party fullName="Golden Memorial Insurance Services, Inc." lastName="Golden Memorial Insurance Services, Inc." role="Plaintiff"></party>
+ <party fullName="Golden Memorial Plan, Inc." lastName="Golden Memorial Plan, Inc." role="Defendant"></party>
+ <party firstName="Guadalupe" fullName="Guadalupe &quot;Joe&quot; Gonzalez" lastName="Gonzalez" middleName="&quot;Joe&quot;" role="Defendant"></party>
+ <party firstName="Lauro" fullName="Lauro Herrera" lastName="Herrera" role="Defendant"></party>
+ <party fullName="Secured Serenity, Inc." lastName="Secured Serenity, Inc." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-0/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>ORDER - Requirement for Mandatory Scheduling Conference with Judge McAuliffe - see attached. signed by Magistrate Judge Barbara A. McAuliffe on 10/21/2011. (Herman, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d307</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-21</dateIssued>
+  <docketText>ORDER - Requirement for Mandatory Scheduling Conference with Judge McAuliffe - see attached. signed by Magistrate Judge Barbara A. McAuliffe on 10/21/2011. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-1/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>ORDER Granting Plaintiff Leave to File Amended Complaint: Plaintiff shall file Amended Complaint within 5 days of service of this Order. (Stipulation 15). signed by Magistrate Judge Barbara A. McAuliffe on 11/17/2011. (Herman, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d30b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-17</dateIssued>
+  <docketText>ORDER Granting Plaintiff Leave to File Amended Complaint: Plaintiff shall file Amended Complaint within 5 days of service of this Order. (Stipulation 15). signed by Magistrate Judge Barbara A. McAuliffe on 11/17/2011. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-2/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>Stipulation 24 and ORDER Granting Defendant Leave to File Amended Answer and Granting Plaintiff Additional Time to File Responsive Motion: 1) Defendants, Secured Serenity and Lauro Herrera, have until 1/13/2012 to file an Amended Answer; and 2) Plaintiff have until 1/27/2012 to file a responsive motion. signed by Magistrate Judge Barbara A. McAuliffe on 12/23/2011. (Herman, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d30d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-28</dateIssued>
+  <docketText>Stipulation 24 and ORDER Granting Defendant Leave to File Amended Answer and Granting Plaintiff Additional Time to File Responsive Motion: 1) Defendants, Secured Serenity and Lauro Herrera, have until 1/13/2012 to file an Amended Answer; and 2) Plaintiff have until 1/27/2012 to file a responsive motion. signed by Magistrate Judge Barbara A. McAuliffe on 12/23/2011. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-3/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>ORDER Granting Defendant Robert Paul &quot;Bo&quot; Clark, Jr. Additional Time to File Answer and Plaintiff Additional Time to File Responsive Motion: Defendant Clark&apos;s answer extended to 1/3/2012, and Plaintiff&apos;s responsive pleading by 1/27/2012. signed by Magistrate Judge Barbara A. McAuliffe on 1/12/2012. (Herman, H)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d1b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER Granting Defendant Robert Paul &quot;Bo&quot; Clark, Jr. Additional Time to File Answer and Plaintiff Additional Time to File Responsive Motion: Defendant Clark&apos;s answer extended to 1/3/2012, and Plaintiff&apos;s responsive pleading by 1/27/2012. signed by Magistrate Judge Barbara A. McAuliffe on 1/12/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-4/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>Stipulated PROTECTIVE ORDER, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2012. (Herman, H)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d1b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-05-15</dateIssued>
+  <docketText>Stipulated PROTECTIVE ORDER, signed by Magistrate Judge Barbara A. McAuliffe on 5/14/2012. (Herman, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-5/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>ORDER to DISMISS Defendant Clark 49, signed by District Judge Lawrence J. O&apos;Neill on 11/27/12: This Court DISMISSES this action with prejudice as to Defendant Robert Paul &quot;Bo&quot; Clark only. The Clerk is directed to close this action. (Hellings, J)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d306</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-11-27</dateIssued>
+  <docketText>ORDER to DISMISS Defendant Clark 49, signed by District Judge Lawrence J. O&apos;Neill on 11/27/12: This Court DISMISSES this action with prejudice as to Defendant Robert Paul &quot;Bo&quot; Clark only. The Clerk is directed to close this action. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-6/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER CONTINUING Expert Disclosure Deadline (Doc. 51), Signed by Magistrate Judge Barbara A. McAuliffe on 11/28/2012. The expert disclosure cutoff of 12/3/2012 is continued until 1/4/2013. (Arellano, S.)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d30c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>STIPULATION and ORDER CONTINUING Expert Disclosure Deadline (Doc. 51), Signed by Magistrate Judge Barbara A. McAuliffe on 11/28/2012. The expert disclosure cutoff of 12/3/2012 is continued until 1/4/2013. (Arellano, S.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-7/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>Stipulation of Dismissal with Prejudice of Defendant Guadalupe &quot;Joe&quot; Gonzalez; ORDER, signed by District Judge Lawrence J. O&apos;Neill on 12/14/12. Guadalupe &quot;Joe&quot; Gonzalez terminated .(Verduzco, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d308</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-7</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-12-14</dateIssued>
+  <docketText>Stipulation of Dismissal with Prejudice of Defendant Guadalupe &quot;Joe&quot; Gonzalez; ORDER, signed by District Judge Lawrence J. O&apos;Neill on 12/14/12. Guadalupe &quot;Joe&quot; Gonzalez terminated .(Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-8/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>ORDER AFTER SETTLEMENT directing the parties to file dismissal documents no later than 1/31/2013. The Court further ORDERS all pending deadlines and hearings, including the pretrial and trial dates, VACATED. Order signed by District Judge Lawrence J. O&apos;Neill on 1/2/2013. (Rooney, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d30a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-8</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER AFTER SETTLEMENT directing the parties to file dismissal documents no later than 1/31/2013. The Court further ORDERS all pending deadlines and hearings, including the pretrial and trial dates, VACATED. Order signed by District Judge Lawrence J. O&apos;Neill on 1/2/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01058-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-9/mods.xml">
+ <titleInfo>
+  <title>Golden Memorial Insurance Services v. Secured Serenity, Inc. et al</title>
+  <subTitle>STIPULATION and ORDER DISMISSING CASE WITH PREJUDICE signed by District Judge Lawrence J. O&apos;Neill on 1/31/2013. CASE CLOSED.(Lundstrom, T)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01058-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183c0d309</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-9</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01058_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01058/USCOURTS-caed-1_11-cv-01058-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01058/pdf/USCOURTS-caed-1_11-cv-01058-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01058; Golden Memorial Insurance Services v. Secured Serenity, Inc. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01058-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-01-31</dateIssued>
+  <docketText>STIPULATION and ORDER DISMISSING CASE WITH PREJUDICE signed by District Judge Lawrence J. O&apos;Neill on 1/31/2013. CASE CLOSED.(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+</mods>

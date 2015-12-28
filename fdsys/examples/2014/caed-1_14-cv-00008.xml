@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a28b106">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-09-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008</identifier>
+<identifier type="local">P0b002ee18a28b106</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-00008</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00008</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00008</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:205 Denial Social Security Benefits</cause>
+ <party firstName="Kevin" fullName="Kevin Lamont Blackmon" lastName="Blackmon" middleName="Lamont" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Blackmon v. Commissioner of Social Security</title>
+ <partNumber>1:14-cv-00008</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-00008;14-008</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin Lamont Blackmon</displayForm>
+ <namePart type="family">Blackmon</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-00008</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-00008</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>864</natureSuitCode>
+ <natureSuit>Social Security - SSID Title XVI</natureSuit>
+ <cause>42:205 Denial Social Security Benefits</cause>
+ <party firstName="Kevin" fullName="Kevin Lamont Blackmon" lastName="Blackmon" middleName="Lamont" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00008-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Blackmon v. Commissioner of Social Security</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s Motion to Proceed in Forma Pauperis 2; ORDER DIRECTING Clerk to Issue Summons and Social Security Case Documents; ORDER DIRECTING United States Marshal for Service of Complaint, signed by Magistrate Judge Jennifer L. Thurston on 1/6/14. (Hellings, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008/pdf/USCOURTS-caed-1_14-cv-00008-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a3277ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00008_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008/pdf/USCOURTS-caed-1_14-cv-00008-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00008; (SS) Blackmon v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00008-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s Motion to Proceed in Forma Pauperis 2; ORDER DIRECTING Clerk to Issue Summons and Social Security Case Documents; ORDER DIRECTING United States Marshal for Service of Complaint, signed by Magistrate Judge Jennifer L. Thurston on 1/6/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-00008-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Blackmon v. Commissioner of Social Security</title>
+  <subTitle>ORDER DISMISSING Plaintiff&apos;s Complaint with Prejudice and DIRECTING the Clerk to Close the Action, signed by Magistrate Judge Jennifer L. Thurston on 9/17/2014. CASE CLOSED. (Hall, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008/pdf/USCOURTS-caed-1_14-cv-00008-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a3277ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-00008_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-00008/USCOURTS-caed-1_14-cv-00008-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-00008/pdf/USCOURTS-caed-1_14-cv-00008-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-00008; (SS) Blackmon v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-00008-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-09-18</dateIssued>
+  <docketText>ORDER DISMISSING Plaintiff&apos;s Complaint with Prejudice and DIRECTING the Clerk to Close the Action, signed by Magistrate Judge Jennifer L. Thurston on 9/17/2014. CASE CLOSED. (Hall, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

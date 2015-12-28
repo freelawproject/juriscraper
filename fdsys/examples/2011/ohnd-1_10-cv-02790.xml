@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cef96">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-02790</identifier>
+<identifier type="local">P0b002ee1815cef96</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_10-cv-02790</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-02790</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-02790</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Donte" fullName="Donte Booker" lastName="Booker" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Crim" lastName="Crim" role="Plaintiff"></party>
+ <party fullName="Cuyahoga County Jail" lastName="Cuyahoga County Jail" role="Defendant"></party>
+ <party firstName="Warden" fullName="Warden Ivy" lastName="Ivy" role="Defendant"></party>
+ <party firstName="Bob" fullName="Bob Reid" lastName="Reid" role="Defendant"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Thigpen" lastName="Thigpen" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Thigpen et al v. Reid et al</title>
+ <partNumber>1:10-cv-02790</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-02790/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-02790;10-2790</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Donte Booker</displayForm>
+ <namePart type="family">Booker</namePart>
+ <namePart type="given">Donte</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Crim</displayForm>
+ <namePart type="family">Crim</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cuyahoga County Jail</displayForm>
+ <namePart type="family">Cuyahoga County Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden Ivy</displayForm>
+ <namePart type="family">Ivy</namePart>
+ <namePart type="given">Warden</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bob Reid</displayForm>
+ <namePart type="family">Reid</namePart>
+ <namePart type="given">Bob</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lorenzo Thigpen</displayForm>
+ <namePart type="family">Thigpen</namePart>
+ <namePart type="given">Lorenzo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-02790</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-02790</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Donte" fullName="Donte Booker" lastName="Booker" role="Plaintiff"></party>
+ <party firstName="Terry" fullName="Terry Crim" lastName="Crim" role="Plaintiff"></party>
+ <party fullName="Cuyahoga County Jail" lastName="Cuyahoga County Jail" role="Defendant"></party>
+ <party firstName="Warden" fullName="Warden Ivy" lastName="Ivy" role="Defendant"></party>
+ <party firstName="Bob" fullName="Bob Reid" lastName="Reid" role="Defendant"></party>
+ <party firstName="Lorenzo" fullName="Lorenzo Thigpen" lastName="Thigpen" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-02790-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-02790/USCOURTS-ohnd-1_10-cv-02790-0/mods.xml">
+ <titleInfo>
+  <title>Thigpen et al v. Reid et al</title>
+  <subTitle>Memorandum Opinion and Order dismissing this action pursuant to 28 USC 1915A. The Court certifies, pursuant to 28 USC 1915(a)(3) that an appeal from this decision could not be taken in good faith. Judge Christopher A. Boyko on 01/24/2011. (M,M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-02790-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816c3e33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-02790/USCOURTS-ohnd-1_10-cv-02790-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-02790_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-02790/USCOURTS-ohnd-1_10-cv-02790-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-02790/pdf/USCOURTS-ohnd-1_10-cv-02790-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-02790; Thigpen et al v. Reid et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-02790-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-24</dateIssued>
+  <docketText>Memorandum Opinion and Order dismissing this action pursuant to 28 USC 1915A. The Court certifies, pursuant to 28 USC 1915(a)(3) that an appeal from this decision could not be taken in good faith. Judge Christopher A. Boyko on 01/24/2011. (M,M)</docketText>
+</extension>
+</relatedItem>
+</mods>

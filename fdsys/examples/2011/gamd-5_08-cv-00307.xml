@@ -1,0 +1,310 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812dd0bf">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307</identifier>
+<identifier type="local">P0b002ee1812dd0bf</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_08-cv-00307</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00307</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00307</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Eugenia" fullName="Eugenia Harrison" lastName="Harrison" role="Defendant"></party>
+ <party firstName="Tracey" fullName="Tracey Lumpkin" lastName="Lumpkin" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy D Mitchell" lastName="Mitchell" middleName="D" role="Plaintiff"></party>
+ <party firstName="Pearline" fullName="Pearline Mosley" lastName="Mosley" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Mitchell v. Harrison et al</title>
+ <partNumber>5:08-cv-00307</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-00307;08-307</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eugenia Harrison</displayForm>
+ <namePart type="family">Harrison</namePart>
+ <namePart type="given">Eugenia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tracey Lumpkin</displayForm>
+ <namePart type="family">Lumpkin</namePart>
+ <namePart type="given">Tracey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randy D Mitchell</displayForm>
+ <namePart type="family">Mitchell</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Pearline Mosley</displayForm>
+ <namePart type="family">Mosley</namePart>
+ <namePart type="given">Pearline</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00307</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00307</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Eugenia" fullName="Eugenia Harrison" lastName="Harrison" role="Defendant"></party>
+ <party firstName="Tracey" fullName="Tracey Lumpkin" lastName="Lumpkin" role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy D Mitchell" lastName="Mitchell" middleName="D" role="Plaintiff"></party>
+ <party firstName="Pearline" fullName="Pearline Mosley" lastName="Mosley" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-0/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>RECOMMENDATION to deny 12 MOTION to Dismiss filed by defendants Eugenia Harrison, Ms. Lumpkins, and Pearline Mosley. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 6/30/09. (CWH)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132883c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-0</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-30</dateIssued>
+  <docketText>RECOMMENDATION to deny 12 MOTION to Dismiss filed by defendants Eugenia Harrison, Ms. Lumpkins, and Pearline Mosley. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 6/30/09. (CWH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-1/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>ORDER adopting Report and Recommendations re 24 Report and Recommendations; denying 12 Motion to Dismiss. Ordered by Judge C. Ashley Royal on 7/28/09 (lap)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132883f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-1</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-07-28</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 24 Report and Recommendations; denying 12 Motion to Dismiss. Ordered by Judge C. Ashley Royal on 7/28/09 (lap)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-2/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>RECOMMENDATION to grant 38 MOTION for Summary Judgment filed by defendants Eugenia Harrison, Tracey Lumpkin, and Pearline Mosley. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 6/25/10. (CWH)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181328840</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-2</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-06-25</dateIssued>
+  <docketText>RECOMMENDATION to grant 38 MOTION for Summary Judgment filed by defendants Eugenia Harrison, Tracey Lumpkin, and Pearline Mosley. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 6/25/10. (CWH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-3/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>ORDER REJECTING 49 Report and Recommendations and GRANTING 38 Motion for Summary Judgment. Ordered by Judge Marc Thomas Treadwell on 9/22/2010. (tlh)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132883d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-3</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-09-22</dateIssued>
+  <docketText>ORDER REJECTING 49 Report and Recommendations and GRANTING 38 Motion for Summary Judgment. Ordered by Judge Marc Thomas Treadwell on 9/22/2010. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-4/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>ORDER DENYING 54 Motion for Reconsideration. Ordered by Judge Marc Thomas Treadwell on 12/13/2010. (tlh)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132883e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-4</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-12-13</dateIssued>
+  <docketText>ORDER DENYING 54 Motion for Reconsideration. Ordered by Judge Marc Thomas Treadwell on 12/13/2010. (tlh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00307-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-5/mods.xml">
+ <titleInfo>
+  <title>Mitchell v. Harrison et al</title>
+  <subTitle>ORDER DENYING 62 Motion for Leave to Appeal in forma pauperis. Ordered by Judge Marc Thomas Treadwell on 1/5/2011. (tlh)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00307-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181328841</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-5</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00307_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00307/USCOURTS-gamd-5_08-cv-00307-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00307/pdf/USCOURTS-gamd-5_08-cv-00307-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00307; Mitchell v. Harrison et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00307-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-01-05</dateIssued>
+  <docketText>ORDER DENYING 62 Motion for Leave to Appeal in forma pauperis. Ordered by Judge Marc Thomas Treadwell on 1/5/2011. (tlh)</docketText>
+</extension>
+</relatedItem>
+</mods>

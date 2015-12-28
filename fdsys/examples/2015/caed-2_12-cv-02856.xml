@@ -1,0 +1,804 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e2e5b36">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856</identifier>
+<identifier type="local">P0b002ee18e2e5b36</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02856</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02856</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02856</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jamont" fullName="Jamont L. Calhoun" lastName="Calhoun" middleName="L." role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Gomez" lastName="Gomez" role="Defendant"></party>
+ <party fullName="Green" lastName="Green" role="Defendant"></party>
+ <party firstName="C." fullName="C. Heintschel" lastName="Heintschel" role="Defendant"></party>
+ <party fullName="Merriweather" lastName="Merriweather" role="Defendant"></party>
+ <party firstName="K." fullName="K. Young" lastName="Young" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Calhoun v. Gomez et al</title>
+ <partNumber>2:12-cv-02856</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02856;12-2856</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jamont L. Calhoun</displayForm>
+ <namePart type="family">Calhoun</namePart>
+ <namePart type="given">Jamont</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>M. Gomez</displayForm>
+ <namePart type="family">Gomez</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Heintschel</displayForm>
+ <namePart type="family">Heintschel</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merriweather</displayForm>
+ <namePart type="family">Merriweather</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K. Young</displayForm>
+ <namePart type="family">Young</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02856</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02856</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Jamont" fullName="Jamont L. Calhoun" lastName="Calhoun" middleName="L." role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Gomez" lastName="Gomez" role="Defendant"></party>
+ <party fullName="Green" lastName="Green" role="Defendant"></party>
+ <party firstName="C." fullName="C. Heintschel" lastName="Heintschel" role="Defendant"></party>
+ <party fullName="Merriweather" lastName="Merriweather" role="Defendant"></party>
+ <party firstName="K." fullName="K. Young" lastName="Young" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/29/12 ORDERING that plaintiff has 30 days from the date of service of this order to submit either the filing fee or the IFP application. Clerk of the Court is directed to mail to plaintiff a form application for leave to proceed in forma pauperis.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e5</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/29/12 ORDERING that plaintiff has 30 days from the date of service of this order to submit either the filing fee or the IFP application. Clerk of the Court is directed to mail to plaintiff a form application for leave to proceed in forma pauperis.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/22/13 ORDERING that 7 Motion to Proceed IFP is GRANTED; Plaintiff shall pay the statutory filing fee of $350. The complaint is dismissed with leave to amend within 30 days.(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e7</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/22/13 ORDERING that 7 Motion to Proceed IFP is GRANTED; Plaintiff shall pay the statutory filing fee of $350. The complaint is dismissed with leave to amend within 30 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Edmund F. Brennan on 3/22/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Jamont L. Calhoun to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea52d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-03-25</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Edmund F. Brennan on 3/22/13 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Jamont L. Calhoun to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 8/13/13 DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms within 30 days. Service is appropriate for M. Gomez, Green, Merriweather, K. Young. Clerk to send plaintiff: instruction sheet, 1 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on 4/22/13. It is RECOMMENDED that claims against defendants Goodrich and Kuppinger be dismissed from this action as improperly joined and that the claims against defendants Edington and Heintschel be dismissed from this action for failure to state a claim upon which relief may be granted. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due within 14 days. (Dillon, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea529</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-08-14</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 8/13/13 DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms within 30 days. Service is appropriate for M. Gomez, Green, Merriweather, K. Young. Clerk to send plaintiff: instruction sheet, 1 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on 4/22/13. It is RECOMMENDED that claims against defendants Goodrich and Kuppinger be dismissed from this action as improperly joined and that the claims against defendants Edington and Heintschel be dismissed from this action for failure to state a claim upon which relief may be granted. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due within 14 days. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>[VACATED PURSUANT TO 21 ORDER] FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/19/13 RECOMMENDING that this action be dismissed for failure to prosecute. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due within 14 days. (Dillon, M) Modified on 12/17/2013 (Yin, K).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98ea</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-09-20</dateIssued>
+  <docketText>[VACATED PURSUANT TO 21 ORDER] FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/19/13 RECOMMENDING that this action be dismissed for failure to prosecute. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due within 14 days. (Dillon, M) Modified on 12/17/2013 (Yin, K).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/23/13 ordering plaintiff&apos;s request contained within his objections 18 is granted to the extent that the 09/20/13 findings and recommendations are held in abeyance. Plaintiff has 60 days to comply with the court&apos;s 8/14/13 order 14. Should plaintiff fail to comply, those findings and recommendations will be submitted to the district judge for consideration. The clerk is directed to re-serve the court&apos;s 08/14/13 order 14 and the documents referenced therein. (Plummer, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e3</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-10-23</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/23/13 ordering plaintiff&apos;s request contained within his objections 18 is granted to the extent that the 09/20/13 findings and recommendations are held in abeyance. Plaintiff has 60 days to comply with the court&apos;s 8/14/13 order 14. Should plaintiff fail to comply, those findings and recommendations will be submitted to the district judge for consideration. The clerk is directed to re-serve the court&apos;s 08/14/13 order 14 and the documents referenced therein. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 12/24/13 ADOPTING IN FULL 14 Findings and Recommendations. Claims against defendants Goodrich and Kuppinger are DISMISSED from this action as improperly joined and the claims against defendants Edington and Heintschel are DISMISSED from this action for failure to state a claim upon which relief may be granted. (Meuleman, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e6</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-12-24</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 12/24/13 ADOPTING IN FULL 14 Findings and Recommendations. Claims against defendants Goodrich and Kuppinger are DISMISSED from this action as improperly joined and the claims against defendants Edington and Heintschel are DISMISSED from this action for failure to state a claim upon which relief may be granted. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 2/13/14 ORDERING that Clerk of the Court shall mail plaintiff a form USM-285. Within 30 days from the date this order is served, plaintiff must submit the attached Notice of Submission of Documents with the completed form USM-285 providing new instructions for service of process upon defendant Green.(Dillon, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea528</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-02-14</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 2/13/14 ORDERING that Clerk of the Court shall mail plaintiff a form USM-285. Within 30 days from the date this order is served, plaintiff must submit the attached Notice of Submission of Documents with the completed form USM-285 providing new instructions for service of process upon defendant Green.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 04/08/14 denying 29 Motion to Compel/request for court assistance. Plaintiff&apos;s request for an extension of time 30 is granted. The clerk of the court shall mail plaintiff a form USM-285. Within 30 days from the date this order is served, plaintiff must submit the attached notice of submission of documents with the completed form USM-285 providing new instructions for service of process upon defendant Green. (Plummer, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e8</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-04-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 04/08/14 denying 29 Motion to Compel/request for court assistance. Plaintiff&apos;s request for an extension of time 30 is granted. The clerk of the court shall mail plaintiff a form USM-285. Within 30 days from the date this order is served, plaintiff must submit the attached notice of submission of documents with the completed form USM-285 providing new instructions for service of process upon defendant Green. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 4/9/2014 RECOMMENDING that defendant Merriweather be dismissed from this action. Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days.(Yin, K)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea52b</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 4/9/2014 RECOMMENDING that defendant Merriweather be dismissed from this action. Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/12/2014 ORDERING within 21 days from service of this order, plaintiff shall complete the attached Notice of Submission of Documents and submit it to the court with the completed USM-285 form; Failure to comply with this order may result in a dismissal of defendant Green; Clerk shall send plaintiff USM-285 form; 40 FINDINGS and RECOMMENDATIONS are in abeyance, and plaintiff has until 5/18/2014 to file an appropriate motion related to defendant Merriweather; should plaintiff fail to timely comply, those findings and recommendations will be submitted to the district court of consideration. (Waggoner, D)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98ad</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-05-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/12/2014 ORDERING within 21 days from service of this order, plaintiff shall complete the attached Notice of Submission of Documents and submit it to the court with the completed USM-285 form; Failure to comply with this order may result in a dismissal of defendant Green; Clerk shall send plaintiff USM-285 form; 40 FINDINGS and RECOMMENDATIONS are in abeyance, and plaintiff has until 5/18/2014 to file an appropriate motion related to defendant Merriweather; should plaintiff fail to timely comply, those findings and recommendations will be submitted to the district court of consideration. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-11" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/20/14 ordering within 14 days from the date of service of this order, defendant Gomez shall pay to the U.S. Marshal the sum of $192.16, unless within that time fe files a written statement showing good cause for failing to waive service. The clerk of the court shall also serve a copy of this order on the U.S. Marshal. (Plummer, M)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98aa</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/20/14 ordering within 14 days from the date of service of this order, defendant Gomez shall pay to the U.S. Marshal the sum of $192.16, unless within that time fe files a written statement showing good cause for failing to waive service. The clerk of the court shall also serve a copy of this order on the U.S. Marshal. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-12" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/29/14 ordering that the 04/09/14 findings and reommendations are held in abeyance, and plaintiff has 60 days from the date of this order to file an appropriate motion related to defendant Merriweather. (Plummer, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea52c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-12</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-05-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/29/14 ordering that the 04/09/14 findings and reommendations are held in abeyance, and plaintiff has 60 days from the date of this order to file an appropriate motion related to defendant Merriweather. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-13" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER denying 48 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 05/29/14. (Plummer, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-13</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-05-30</dateIssued>
+  <docketText>ORDER denying 48 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 05/29/14. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-14" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER denying 54 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 06/16/14. (Plummer, M)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98ec</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-14</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-06-17</dateIssued>
+  <docketText>ORDER denying 54 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 06/16/14. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-15" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/17/2014 DENYING plaintiff&apos;s 56 Rule 25 motion. (Yin, K)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea52a</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-15</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/17/2014 DENYING plaintiff&apos;s 56 Rule 25 motion. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-16" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 10/30/2014 ADOPTING 40 Findings and Recommendations in full. Defendant Merriweather is DISMISSED from this action. (Donati, J)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98ac</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-16</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-10-30</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 10/30/2014 ADOPTING 40 Findings and Recommendations in full. Defendant Merriweather is DISMISSED from this action. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-17" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/5/2015 DENYING plaintiff&apos;s 67 request for appointment of counsel. (Yin, K)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98a8</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-17</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/5/2015 DENYING plaintiff&apos;s 67 request for appointment of counsel. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-18" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/5/2015 RECOMMENDING that plaintiff&apos;s 62 motion for extension of time be denied as both moot and untimely. Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days. (Yin, K)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98ab</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-18</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/5/2015 RECOMMENDING that plaintiff&apos;s 62 motion for extension of time be denied as both moot and untimely. Referred to Judge Garland E. Burrell, Jr.; Objections due within 14 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-19" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr on 3/4/15 ADOPTING IN FULL 69 Findings and Recommendations; DENYING AS MOOT AND UNTIMELY 62 Motion for Extension of Time. (Meuleman, A)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98a9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-19</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2015-03-04</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr on 3/4/15 ADOPTING IN FULL 69 Findings and Recommendations; DENYING AS MOOT AND UNTIMELY 62 Motion for Extension of Time. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-20" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/07/15 ordering the Marshal&apos;s Office is instructed to inform the court within 21 days from the date of this order whether it has attempted to personal serve defendant Green after its attempts to secure a waiver of service from Greene were unsuccessful. The Marshal&apos;s Office may comply with these instructions by filing an amended form USM-285/Process Receipt and Return. (cc: USM) (Plummer, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2ea527</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-20</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 05/07/15 ordering the Marshal&apos;s Office is instructed to inform the court within 21 days from the date of this order whether it has attempted to personal serve defendant Green after its attempts to secure a waiver of service from Greene were unsuccessful. The Marshal&apos;s Office may comply with these instructions by filing an amended form USM-285/Process Receipt and Return. (cc: USM) (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-21" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>ORDER denying 79 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 10/14/15. (Plummer, M)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98e4</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-21</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2015-10-14</dateIssued>
+  <docketText>ORDER denying 79 Motion to Appoint Counsel signed by Magistrate Judge Edmund F. Brennan on 10/14/15. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02856-22" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Calhoun v. Gomez et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 12/21/15 recommending that plaintiff&apos;s motion for a preliminary injunction 86 be denied. MOTION for PRELIMINARY INJUNCTION 86 referred to Judge Garland E. Burrell. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2e98eb</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-22</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02856_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02856/USCOURTS-caed-2_12-cv-02856-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02856/pdf/USCOURTS-caed-2_12-cv-02856-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02856; (PC) Calhoun v. Gomez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02856-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2015-12-21</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 12/21/15 recommending that plaintiff&apos;s motion for a preliminary injunction 86 be denied. MOTION for PRELIMINARY INJUNCTION 86 referred to Judge Garland E. Burrell. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

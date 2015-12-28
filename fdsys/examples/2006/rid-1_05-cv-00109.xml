@@ -1,0 +1,252 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e8b431">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109</identifier>
+<identifier type="local">P0b002ee180e8b431</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-rid-1_05-cv-00109</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_05-cv-00109</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:05-cv-00109</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Patrick" fullName="Patrick Lynch" lastName="Lynch" role="Respondent"></party>
+ <party firstName="Stephen" fullName="Stephen Regine" lastName="Regine" role="Respondent"></party>
+ <party firstName="James" fullName="James J. Silva" lastName="Silva" middleName="J." role="Petitioner"></party>
+ <party firstName="A." fullName="A. T. Wall" lastName="Wall" middleName="T." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Silva v. Wall, et al</title>
+ <partNumber>1:05-cv-00109</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00109;05-109</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Rhode Island</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Providence</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Patrick Lynch</displayForm>
+ <namePart type="family">Lynch</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Stephen Regine</displayForm>
+ <namePart type="family">Regine</namePart>
+ <namePart type="given">Stephen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>James J. Silva</displayForm>
+ <namePart type="family">Silva</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>A. T. Wall</displayForm>
+ <namePart type="family">Wall</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-rid-1_05-cv-00109</accessId>
+ <courtType>District</courtType>
+ <courtCode>rid</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Rhode Island</courtState>
+ <courtSortOrder>2440</courtSortOrder>
+ <caseNumber>1:05-cv-00109</caseNumber>
+ <caseOffice>Providence</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Patrick" fullName="Patrick Lynch" lastName="Lynch" role="Respondent"></party>
+ <party firstName="Stephen" fullName="Stephen Regine" lastName="Regine" role="Respondent"></party>
+ <party firstName="James" fullName="James J. Silva" lastName="Silva" middleName="J." role="Petitioner"></party>
+ <party firstName="A." fullName="A. T. Wall" lastName="Wall" middleName="T." role="Respondent"></party>
+ <state>Rhode Island</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00109-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-0/mods.xml">
+ <titleInfo>
+  <title>Silva v. Wall, et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Signed by Magistrate Judge Lincoln D. Almond on 8/3/05. (Theall, Jeannine)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00109-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959ab</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-0</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00109_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109/pdf/USCOURTS-rid-1_05-cv-00109-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00109; Silva v. Wall, et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00109-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 2 Motion for Leave to Proceed in forma pauperis. Signed by Magistrate Judge Lincoln D. Almond on 8/3/05. (Theall, Jeannine)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00109-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-1/mods.xml">
+ <titleInfo>
+  <title>Silva v. Wall, et al</title>
+  <subTitle>MEMORANDUM AND ORDER ordering that the State, within 10 days, either produce copies of all documents regarding Petitioner&apos;s May 16, 1999 and June 14, 1999 incarcerations, or file a response to Petitioner&apos;s Motion outlining the basis for its objection to production. Signed by Magistrate Judge Lincoln D. Almond on 9/6/05. Forwarded to all counsel of record.(Theall, Jeannine)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00109-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-1</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00109_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109/pdf/USCOURTS-rid-1_05-cv-00109-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00109; Silva v. Wall, et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00109-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-09-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER ordering that the State, within 10 days, either produce copies of all documents regarding Petitioner&apos;s May 16, 1999 and June 14, 1999 incarcerations, or file a response to Petitioner&apos;s Motion outlining the basis for its objection to production. Signed by Magistrate Judge Lincoln D. Almond on 9/6/05. Forwarded to all counsel of record.(Theall, Jeannine)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00109-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-2/mods.xml">
+ <titleInfo>
+  <title>Silva v. Wall, et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS recommending that the State&apos;s Motion to Dismiss (#13) be Granted and Silva&apos;s Amended Petition be Dismissed in its entirety. This Court also recommends that Silva&apos;s numerous other pending Motions (#4,5,8,11,14,17,21,22) all be Denied as moot in view of this recommended disposition and that Final Judgment be entered in favor of the State 4 Motion for JoinderMotion for Miscellaneous ReliefMotion to CompelMotion to Appoint CounselMotion to CompelMotion to Amend/CorrectMotion for Extension of Time filed by James J. Silva,, 13 MOTION to Dismiss filed by Patrick Lynch,, 5 MOTION for Removal filed by James J. Silva,, 22 MOTION to Expand the Record re 21 MOTION for Immediate Habeas Corpus Relief, to Sensure Asst. Attorney General Steven A. Regime, for an Immediate Conference with Judge, and to Expand the Record. filed by James J. Silva,, 14 MOTION filed by James J. Silva,, 21 MOTION for Immediate Habeas Corpus Relief, to Sensure Asst. Attorney General Steven A. Regime, for an Immediate Conference with Judge, and to Expand the Record. filed by James J. Silva,, 11 MOTION for Copies of Pleadings filed by James J. Silva,, 17 MOTION to Compel Specific Discovery MOTION for Extension of Time MOTION for Extension of Time MOTION MOTION MOTION to Stay MOTION to Stay filed by James J. Silva,, 8 MOTION for Removal filed by James J. Silva, Objections to R&amp;R due by 12/13/2005. Signed by Magistrate Judge Lincoln D. Almond on 11/29/05. Sent to parties.(Theall, Jeannine)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00109-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959aa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-2</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00109_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109/pdf/USCOURTS-rid-1_05-cv-00109-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00109; Silva v. Wall, et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00109-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-11-29</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS recommending that the State&apos;s Motion to Dismiss (#13) be Granted and Silva&apos;s Amended Petition be Dismissed in its entirety. This Court also recommends that Silva&apos;s numerous other pending Motions (#4,5,8,11,14,17,21,22) all be Denied as moot in view of this recommended disposition and that Final Judgment be entered in favor of the State 4 Motion for JoinderMotion for Miscellaneous ReliefMotion to CompelMotion to Appoint CounselMotion to CompelMotion to Amend/CorrectMotion for Extension of Time filed by James J. Silva,, 13 MOTION to Dismiss filed by Patrick Lynch,, 5 MOTION for Removal filed by James J. Silva,, 22 MOTION to Expand the Record re 21 MOTION for Immediate Habeas Corpus Relief, to Sensure Asst. Attorney General Steven A. Regime, for an Immediate Conference with Judge, and to Expand the Record. filed by James J. Silva,, 14 MOTION filed by James J. Silva,, 21 MOTION for Immediate Habeas Corpus Relief, to Sensure Asst. Attorney General Steven A. Regime, for an Immediate Conference with Judge, and to Expand the Record. filed by James J. Silva,, 11 MOTION for Copies of Pleadings filed by James J. Silva,, 17 MOTION to Compel Specific Discovery MOTION for Extension of Time MOTION for Extension of Time MOTION MOTION MOTION to Stay MOTION to Stay filed by James J. Silva,, 8 MOTION for Removal filed by James J. Silva, Objections to R&amp;R due by 12/13/2005. Signed by Magistrate Judge Lincoln D. Almond on 11/29/05. Sent to parties.(Theall, Jeannine)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-rid-1_05-cv-00109-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-3/mods.xml">
+ <titleInfo>
+  <title>Silva v. Wall, et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATIONS DENYING as moot 4 Motion for Joinder, Motion for Miscellaneous Relief, Motion to Compel, Motion to Appoint Counsel, Motion to Amend/Correct, Motion for Extension of Time filed by James J. Silva, GRANTING 13 Motion to Dismiss filed by Patrick Lynch, DENYING as moot 5 Motion for Miscellaneous Relief filed by James J. Silva, 22 Motion for Miscellaneous Relief, filed by James J. Silva, 14 Motion for Miscellaneous Relief, filed by James J. Silva, 21 Motion for Miscellaneous Relief filed by James J. Silva,, 23 Report and Recommendations, 11 Motion for Miscellaneous Relief filed by James J. Silva, 17 Motion to Compel, Motion for Extension of Time, Motion for Miscellaneous Relief, Motion to Stay, filed by James J. Silva, 8 Motion for Miscellaneous Relief filed by James J. Silva. Signed by Judge William E Smith on 1/26/06. (mailed to ptf. and faxed to defts.)(Mercurio, Alba-Sue)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-rid-1_05-cv-00109-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e959a9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-3</identifier>
+ <identifier type="former granule identifier">rid-1_05-cv-00109_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-rid-1_05-cv-00109/USCOURTS-rid-1_05-cv-00109-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-rid-1_05-cv-00109/pdf/USCOURTS-rid-1_05-cv-00109-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00109; Silva v. Wall, et al; </searchTitle>
+  <courtName>United States District Court District of Rhode Island</courtName>
+  <state>Rhode Island</state>
+  <accessId>USCOURTS-rid-1_05-cv-00109-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-01-26</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATIONS DENYING as moot 4 Motion for Joinder, Motion for Miscellaneous Relief, Motion to Compel, Motion to Appoint Counsel, Motion to Amend/Correct, Motion for Extension of Time filed by James J. Silva, GRANTING 13 Motion to Dismiss filed by Patrick Lynch, DENYING as moot 5 Motion for Miscellaneous Relief filed by James J. Silva, 22 Motion for Miscellaneous Relief, filed by James J. Silva, 14 Motion for Miscellaneous Relief, filed by James J. Silva, 21 Motion for Miscellaneous Relief filed by James J. Silva,, 23 Report and Recommendations, 11 Motion for Miscellaneous Relief filed by James J. Silva, 17 Motion to Compel, Motion for Extension of Time, Motion for Miscellaneous Relief, Motion to Stay, filed by James J. Silva, 8 Motion for Miscellaneous Relief filed by James J. Silva. Signed by Judge William E Smith on 1/26/06. (mailed to ptf. and faxed to defts.)(Mercurio, Alba-Sue)</docketText>
+</extension>
+</relatedItem>
+</mods>

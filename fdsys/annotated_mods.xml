@@ -250,11 +250,25 @@
     </extension>
 
 
-    <!-- Finally we get to the documents!-->
+    <!-- Finally we get to the documents!
+
+        documents = [
+            {
+                'type': 'JUDGEMENT',
+                'description': 'Defendant plead guilty to count II and III...'
+                'download_url': 'https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-0.pdf',
+                'number': 0,
+                'date_filed': '1981-10-30',
+            },
+            ...more documents here...
+        ]
+
+    -->
     <relatedItem type="constituent" ID="id-USCOURTS-ned-8_81-cr-00051-0"
                  xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-0/mods.xml">
         <titleInfo>
             <title>USA v. Vaught</title>
+            <!-- Split this into type and description fields -->
             <subTitle>JUDGMENT-Defendant plead guilty to count II and III of the
                 Indictment and is sentenced to the Bureau of Prisons to 5 years
                 on count II and 5 years on Count III, said sentences to run
@@ -266,15 +280,22 @@
                 79-O-73, USA v. Christensen, John Edward, etc. as to defendant
                 Freddie Melton Vaught. Ordered by Judge Albert G. Schatz. (MKR)
             </subTitle>
+
+            <!-- This goes into the number field -->
             <partNumber>0</partNumber>
         </titleInfo>
         <originInfo>
+            <!-- date_filed -->
             <dateIssued>1981-10-30</dateIssued>
         </originInfo>
+
+        <!-- Use @xlink:href as the download_url for this document -->
         <relatedItem type="otherFormat"
                      xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_81-cr-00051/pdf/USCOURTS-ned-8_81-cr-00051-0.pdf">
             <identifier type="FDsys Unique ID">D09002ee1818d5c32</identifier>
         </relatedItem>
+
+        <!-- SKIP REMAINING NODES -->
         <identifier type="uri">
             https://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_81-cr-00051/USCOURTS-ned-8_81-cr-00051-0
         </identifier>

@@ -1,0 +1,804 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1862ebca2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-09-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-09-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523</identifier>
+<identifier type="local">P0b002ee1862ebca2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-09-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-09-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_09-cv-02523</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-02523</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-02523</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>42:4321 Review of Agency Action-Environment</cause>
+ <party fullName="California Association of 4 Wheel Drive Clubs" lastName="California Association of 4 Wheel Drive Clubs" role="Intervenor Defendant"></party>
+ <party fullName="Center for Biological Diversity" lastName="Center for Biological Diversity" role="Plaintiff"></party>
+ <party fullName="Center for Sierra Nevada Conservation" lastName="Center for Sierra Nevada Conservation" role="Plaintiff"></party>
+ <party fullName="Forest Issues Group" lastName="Forest Issues Group" role="Plaintiff"></party>
+ <party fullName="United States Forest Service" lastName="United States Forest Service" role="Defendant"></party>
+ <party firstName="Ramiro" fullName="Ramiro Villalvazo" lastName="Villalvazo" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+ <partNumber>2:09-cv-02523</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-02523;09-2523</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Association of 4 Wheel Drive Clubs</displayForm>
+ <namePart type="family">California Association of 4 Wheel Drive Clubs</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Center for Biological Diversity</displayForm>
+ <namePart type="family">Center for Biological Diversity</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Center for Sierra Nevada Conservation</displayForm>
+ <namePart type="family">Center for Sierra Nevada Conservation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Forest Issues Group</displayForm>
+ <namePart type="family">Forest Issues Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States Forest Service</displayForm>
+ <namePart type="family">United States Forest Service</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ramiro Villalvazo</displayForm>
+ <namePart type="family">Villalvazo</namePart>
+ <namePart type="given">Ramiro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_09-cv-02523</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:09-cv-02523</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <cause>42:4321 Review of Agency Action-Environment</cause>
+ <party fullName="California Association of 4 Wheel Drive Clubs" lastName="California Association of 4 Wheel Drive Clubs" role="Intervenor Defendant"></party>
+ <party fullName="Center for Biological Diversity" lastName="Center for Biological Diversity" role="Plaintiff"></party>
+ <party fullName="Center for Sierra Nevada Conservation" lastName="Center for Sierra Nevada Conservation" role="Plaintiff"></party>
+ <party fullName="Forest Issues Group" lastName="Forest Issues Group" role="Plaintiff"></party>
+ <party fullName="United States Forest Service" lastName="United States Forest Service" role="Defendant"></party>
+ <party firstName="Ramiro" fullName="Ramiro Villalvazo" lastName="Villalvazo" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-0/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>RELATED ORDER signed by Senior Judge Lawrence K. Karlton on 9/29/2009 ORDERING the above cases are related; The action denominated Civ. No. 2:09-cv-2523-FCD-GGH is REASSIGNED to Judge Lawrence K. Karlton and Magistrate Judge John F. Moulds for all further proceedings, and any dates currently set in the reassigned case only, are hereby VACATED; Henceforth, the caption on documents filed in the reassigned case shall be shown as Civ. No. 2:09-cv-2523-LKK-JFM, Civ. No. 2:09-cv-1750-LKK-JFM, and Civ. No. 2:02-325-LKK-JFM, respectively; and the Clerk make shall appropriate adjustment in the assignment of civil cases to compensate for this reassignment.(Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-0</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-29</dateIssued>
+  <docketText>RELATED ORDER signed by Senior Judge Lawrence K. Karlton on 9/29/2009 ORDERING the above cases are related; The action denominated Civ. No. 2:09-cv-2523-FCD-GGH is REASSIGNED to Judge Lawrence K. Karlton and Magistrate Judge John F. Moulds for all further proceedings, and any dates currently set in the reassigned case only, are hereby VACATED; Henceforth, the caption on documents filed in the reassigned case shall be shown as Civ. No. 2:09-cv-2523-LKK-JFM, Civ. No. 2:09-cv-1750-LKK-JFM, and Civ. No. 2:02-325-LKK-JFM, respectively; and the Clerk make shall appropriate adjustment in the assignment of civil cases to compensate for this reassignment.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-1/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Lawrence K. Karlton on 11/9/09 re 15 ORDERING that any amended complaint to include, inter alia, a claim under the Endangered Species Act, will be filed by Plaintiffs on or before December 3, 2009. Defendants will file their answer or other responsive pleading on or before February 11, 2010. The Status (Pretrial Scheduling) Conference is RESET for 2/22/2010 at 02:30 PM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. (Duong, D) Modified on 11/10/2009 (Duong, D).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-1</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-11-10</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Lawrence K. Karlton on 11/9/09 re 15 ORDERING that any amended complaint to include, inter alia, a claim under the Endangered Species Act, will be filed by Plaintiffs on or before December 3, 2009. Defendants will file their answer or other responsive pleading on or before February 11, 2010. The Status (Pretrial Scheduling) Conference is RESET for 2/22/2010 at 02:30 PM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. (Duong, D) Modified on 11/10/2009 (Duong, D).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-2/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 3/3/2010 granting 21 Motion to Intervene. Intervenors may participate in all phases of this litigation as intervening defendants under FRCP 24(b). The status (pretrial scheduling) conference is RESET for 4/19/2010 at 3:30 p.m. before Judge Lawrence K. Karlton. (Waggoner, D)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-2</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-03-03</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 3/3/2010 granting 21 Motion to Intervene. Intervenors may participate in all phases of this litigation as intervening defendants under FRCP 24(b). The status (pretrial scheduling) conference is RESET for 4/19/2010 at 3:30 p.m. before Judge Lawrence K. Karlton. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-3/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 10/26/10. The court is in receipt of the Notice of Related Cases concerning the above-captioned cases filed October 20, 2010. The court has determined that it is inappropriate to relate or reassign the cases, and therefore declines to do so. This order is issued for informational purposes only, and shall have no effect on the status of the cases, including any previous Related (or Non-Related) Case Order of this court.(Williams, D)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-3</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-10-28</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 10/26/10. The court is in receipt of the Notice of Related Cases concerning the above-captioned cases filed October 20, 2010. The court has determined that it is inappropriate to relate or reassign the cases, and therefore declines to do so. This order is issued for informational purposes only, and shall have no effect on the status of the cases, including any previous Related (or Non-Related) Case Order of this court.(Williams, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-4/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 12/9/2010 GRANTING 54 Motion for Extension of time; Defendants&apos; combined motion for summary judgment and response to plaintiffs&apos; motion for summary judgment is now due 12/14/2010. (Matson, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-4</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-12-09</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 12/9/2010 GRANTING 54 Motion for Extension of time; Defendants&apos; combined motion for summary judgment and response to plaintiffs&apos; motion for summary judgment is now due 12/14/2010. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-5/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 3/2/2011 ORDERING that the hearing re 52, 57, and 58 Cross-Motions for Summary Judgment is CONTINUED to 4/18/2011 at 10:00 AM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. Deadlines for filing memoranda remain unchanged. (Zignago, K.)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61cf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-5</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-03-02</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 3/2/2011 ORDERING that the hearing re 52, 57, and 58 Cross-Motions for Summary Judgment is CONTINUED to 4/18/2011 at 10:00 AM in Courtroom 4 (LKK) before Senior Judge Lawrence K. Karlton. Deadlines for filing memoranda remain unchanged. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-6/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>opposition brief addressing the same issues. Said brief may not exceed 10 pages, and may be filed no later than 5 p.m. on Monday, May 2. Plaintiffs MAY file a reply brief, not to exceed 5 pages, no later than 9 a.m. on Thursday, May 5.(Matson, R)ORDER signed by Senior Judge Lawrence K. Karlton on 4/19/11 ORDERING Plaintiffs MAY file a brief on this aspect of their ESA claim. Said brief may not exceed 10 pages, and may be filed no later than 5 p.m. on Monday, April 25. Defendants MAY file an</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61cb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-6</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-04-19</dateIssued>
+  <docketText>opposition brief addressing the same issues. Said brief may not exceed 10 pages, and may be filed no later than 5 p.m. on Monday, May 2. Plaintiffs MAY file a reply brief, not to exceed 5 pages, no later than 9 a.m. on Thursday, May 5.(Matson, R)ORDER signed by Senior Judge Lawrence K. Karlton on 4/19/11 ORDERING Plaintiffs MAY file a brief on this aspect of their ESA claim. Said brief may not exceed 10 pages, and may be filed no later than 5 p.m. on Monday, April 25. Defendants MAY file an</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-7/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 5/26/2011 GRANTING IN PART and DENYING IN PART 52, 57 and 58 Motions for Summary Judgment. The court will conduct further proceedings regarding remedy. Within 14 days of the effective date of this order, the parties shall file briefs proposing a process and briefing schedule for use in addressing remedies. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61cd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-7</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-05-26</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 5/26/2011 GRANTING IN PART and DENYING IN PART 52, 57 and 58 Motions for Summary Judgment. The court will conduct further proceedings regarding remedy. Within 14 days of the effective date of this order, the parties shall file briefs proposing a process and briefing schedule for use in addressing remedies. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-8/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 6/16/2011 ORDERING that parties will report back to the Court on or before 8/12/2011 to advise the Court on the status of the Parties&apos; discussions; If no agreement appears forthcoming, the Parties will submit a proposed briefing schedule on or before 8/26/2011; Until the Court enters an order addressing remedies, the Forest Service will continue to manage the El Dorado National Forest under the 2010 Motorized Use Vehicle Maps; the Forest Service may continue to exercise its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Reader, L)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-8</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-06-16</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 6/16/2011 ORDERING that parties will report back to the Court on or before 8/12/2011 to advise the Court on the status of the Parties&apos; discussions; If no agreement appears forthcoming, the Parties will submit a proposed briefing schedule on or before 8/26/2011; Until the Court enters an order addressing remedies, the Forest Service will continue to manage the El Dorado National Forest under the 2010 Motorized Use Vehicle Maps; the Forest Service may continue to exercise its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-9/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Senior Judge Lawrence K. Karlton on 8/9/11 ORDERING that the parties shall report on their progress towards reaching an agreement on remedies to address the Court&apos;s 5/26/11 Order on or before 9/12/11. If no agreement appears forthcoming, the Parties will submit a proposed briefing schedule. Until the Court enters an order addressing remedies, the Forest Service will continue to manage the Eldorado National Forest under the 2010 Motor Vehicle Use Maps (&quot;2010 MVUMs&quot;), and provide the public with the 2010 MVUMs. Nothing in this order prohibits the Forest Service from exercising its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Becknal, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-9</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-08-10</dateIssued>
+  <docketText>ORDER signed by Senior Judge Lawrence K. Karlton on 8/9/11 ORDERING that the parties shall report on their progress towards reaching an agreement on remedies to address the Court&apos;s 5/26/11 Order on or before 9/12/11. If no agreement appears forthcoming, the Parties will submit a proposed briefing schedule. Until the Court enters an order addressing remedies, the Forest Service will continue to manage the Eldorado National Forest under the 2010 Motor Vehicle Use Maps (&quot;2010 MVUMs&quot;), and provide the public with the 2010 MVUMs. Nothing in this order prohibits the Forest Service from exercising its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-10/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>s), and provide the public with the 2010 MVUMs. Nothing in this order prohibits the Forest Service from exercising its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Meuleman, A) Modified on 10/28/2011 (Meuleman, A).ORDER signed by Judge Lawrence K. Karlton on 10/27/11 ORDERING the following briefing schedule: Plaintiffs opening brief due 11/17/11; Federal Defendants and Defendant-Intervenors response briefs due 12/9/11; and Plaintiffs&apos; combined reply brief to Federal Defendants and Defendant-Intervenors response briefs due 1/9/12. Until the Court enters an order addressing remedies, the Forest Service will continue to manage the Eldorado National Forest under the 2010 Motor Vehicle Use Maps (2010 MVUM</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-10</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2011-10-27</dateIssued>
+  <docketText>s), and provide the public with the 2010 MVUMs. Nothing in this order prohibits the Forest Service from exercising its authority to close or restrict uses pursuant to 36 C.F.R. Part 261, Subpart B. (Meuleman, A) Modified on 10/28/2011 (Meuleman, A).ORDER signed by Judge Lawrence K. Karlton on 10/27/11 ORDERING the following briefing schedule: Plaintiffs opening brief due 11/17/11; Federal Defendants and Defendant-Intervenors response briefs due 12/9/11; and Plaintiffs&apos; combined reply brief to Federal Defendants and Defendant-Intervenors response briefs due 1/9/12. Until the Court enters an order addressing remedies, the Forest Service will continue to manage the Eldorado National Forest under the 2010 Motor Vehicle Use Maps (2010 MVUM</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-11/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/9/12 ORDERING that the 1/17/2012 hearing for plaintiff&apos;s 88 Motion for Partial Vacatur or a Limited Injunction is RESET to 2/13/2012 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Plaintiffs&apos; reply brief shall be filed on or before 1/23/2012. (Kastilahn, A)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-11</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/9/12 ORDERING that the 1/17/2012 hearing for plaintiff&apos;s 88 Motion for Partial Vacatur or a Limited Injunction is RESET to 2/13/2012 at 10:00 AM in Courtroom 4 (LKK) before Judge Lawrence K. Karlton. Plaintiffs&apos; reply brief shall be filed on or before 1/23/2012. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-12/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 1/11/2012 ORDERING 101 Federal Defendants have moved the Court to allow Federal Defendants&apos; counsel, J. Brett Grosko, to appear telephonically at the Court&apos;s hearing on Plaintiffs&apos; #88 Motion for Partial Vacatur or a Limited Injunction. The Federal Defendants&apos; motion is hereby DENIED. All appearances for this court&apos;s law and motion calendar are in person. (Reader, L)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-12</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 1/11/2012 ORDERING 101 Federal Defendants have moved the Court to allow Federal Defendants&apos; counsel, J. Brett Grosko, to appear telephonically at the Court&apos;s hearing on Plaintiffs&apos; #88 Motion for Partial Vacatur or a Limited Injunction. The Federal Defendants&apos; motion is hereby DENIED. All appearances for this court&apos;s law and motion calendar are in person. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-13/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 2/23/2012 GRANTING in part plaintiffs&apos; 88 Motion for Partial Vacatur. But it is ONLY to the degree it seeks to set aside that portion of Forest Services decision designating 42 roads through meadows for motorized vehicle traffic. That portion of decision is REMANDED to Forest Service for reconsideration in light of applicable law. The Forest Service directed to submit Proposed Order, no later than 30 days from date of Order, that will set aside only that portion of its decision that designates the 42 roads to degree they go through meadows, and not affecting sections of those same roads that do not go through meadows, unless they cannot otherwise be reached. Plaintiffs and Intervenors shall have 14 days to respond to Proposed Order. Parties have advised Court that 42 roads are currently closed because of seasonal closings. But that seasonal closings end on 3/31/2012. Accordingly, the Forest Service shall EXTEND the seasonal closings of 42 roads until further Order of Court. (Marciel, M)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-13</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-02-14</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 2/23/2012 GRANTING in part plaintiffs&apos; 88 Motion for Partial Vacatur. But it is ONLY to the degree it seeks to set aside that portion of Forest Services decision designating 42 roads through meadows for motorized vehicle traffic. That portion of decision is REMANDED to Forest Service for reconsideration in light of applicable law. The Forest Service directed to submit Proposed Order, no later than 30 days from date of Order, that will set aside only that portion of its decision that designates the 42 roads to degree they go through meadows, and not affecting sections of those same roads that do not go through meadows, unless they cannot otherwise be reached. Plaintiffs and Intervenors shall have 14 days to respond to Proposed Order. Parties have advised Court that 42 roads are currently closed because of seasonal closings. But that seasonal closings end on 3/31/2012. Accordingly, the Forest Service shall EXTEND the seasonal closings of 42 roads until further Order of Court. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-14/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 7/30/12: The extension of the seasonal closing of the 42 routes issued by this Court on February 14, 2012 106 is hereby vacated. The Court finds that Forest Service has remedied the Endangered Species Act (&quot;ESA&quot;) violation, and therefore no further action from the Court is necessary as to the ESA. This Court does not retain further jurisdiction of this matter except to consider any claim for attorney&apos;s fees and costs. The Court directs the Clerk to enter final judgment in accordance with Fed. R. Civ. P. 58 and 79. (Kaminski, H)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61ce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-14</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-07-31</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 7/30/12: The extension of the seasonal closing of the 42 routes issued by this Court on February 14, 2012 106 is hereby vacated. The Court finds that Forest Service has remedied the Endangered Species Act (&quot;ESA&quot;) violation, and therefore no further action from the Court is necessary as to the ESA. This Court does not retain further jurisdiction of this matter except to consider any claim for attorney&apos;s fees and costs. The Court directs the Clerk to enter final judgment in accordance with Fed. R. Civ. P. 58 and 79. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-15/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 9/17/2012 re: 116 Stipulation and Proposed Order ORDERING plaintiff&apos;s cost bill and attorney fee petition are due no later than 10/29/2012. (Waggoner, D)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-15</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2012-09-17</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 9/17/2012 re: 116 Stipulation and Proposed Order ORDERING plaintiff&apos;s cost bill and attorney fee petition are due no later than 10/29/2012. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-16/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 11/5/12 ORDERING that Plaintiffs&apos; Unopposed Motion To Stay Briefing On Plaintiffs&apos; Petition For Costs And Attorney Fees 129 is GRANTED and briefing on Plaintiffs&apos; application for fees and costs is STAYED for 60 days until 12/28/2012, at which time the Parties will advise the Court on the status of the their settlement iscussions. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition. (Mena-Sanchez, L)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-16</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2012-11-05</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 11/5/12 ORDERING that Plaintiffs&apos; Unopposed Motion To Stay Briefing On Plaintiffs&apos; Petition For Costs And Attorney Fees 129 is GRANTED and briefing on Plaintiffs&apos; application for fees and costs is STAYED for 60 days until 12/28/2012, at which time the Parties will advise the Court on the status of the their settlement iscussions. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-17/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER 131 signed by Judge Lawrence K. Karlton on 1/2/13; IT IS HEREBY ORDERED that briefing on Plaintiffs&apos; application for fees and costs is stayed for 60 days until February 26, 2013, at which time the Parties will advise the Court on the status of the their settlement discussions. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition.(Matson, R)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-17</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>STIPULATION and ORDER 131 signed by Judge Lawrence K. Karlton on 1/2/13; IT IS HEREBY ORDERED that briefing on Plaintiffs&apos; application for fees and costs is stayed for 60 days until February 26, 2013, at which time the Parties will advise the Court on the status of the their settlement discussions. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-18/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 2/27/2013 STAYING Plaintiffs&apos; 118 Motion for Attorney Fees and Costs until 4/26/2013; ORDERING the parties to advise the Court on the status of their settlement discussions by 4/26/2013. (Michel, G)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-18</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-02-28</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 2/27/2013 STAYING Plaintiffs&apos; 118 Motion for Attorney Fees and Costs until 4/26/2013; ORDERING the parties to advise the Court on the status of their settlement discussions by 4/26/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-19/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 4/25/13: Briefing on Plaintiffs&apos; application for fees and costs is stayed until July 25, 2013. If no agreement appears forthcoming, the Parties shall submit a proposed schedule for briefing the fee petition. (Kaminski, H)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-19</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2013-04-26</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 4/25/13: Briefing on Plaintiffs&apos; application for fees and costs is stayed until July 25, 2013. If no agreement appears forthcoming, the Parties shall submit a proposed schedule for briefing the fee petition. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-20/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 7/26/2013 STAYING 118 Application for Fees and Costs until 9/5/2013; ORDERING the parties to submit a proposed schedule for briefing the fee petition if no agreement appears forthcoming. (Michel, G)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61d0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-20</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-07-29</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 7/26/2013 STAYING 118 Application for Fees and Costs until 9/5/2013; ORDERING the parties to submit a proposed schedule for briefing the fee petition if no agreement appears forthcoming. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-21/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 9/5/13 ORDERING that briefing on Plaintiffs&apos; application for fees and costs is stayed until 9/19/13. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition. (Meuleman, A)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-21</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-09-06</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Lawrence K. Karlton on 9/5/13 ORDERING that briefing on Plaintiffs&apos; application for fees and costs is stayed until 9/19/13. If no agreement appears forthcoming, the Parties will submit a proposed schedule for briefing the fee petition. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_09-cv-02523-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-22/mods.xml">
+ <titleInfo>
+  <title>Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 9/24/2013. Parties have filed 141 Stipulated Settlement Agreement resolving plaintiffs&apos; claims for attorneys&apos; fee, expenses, and costs. Accordingly, the 118 Motion for Attorneys&apos; Fees and Costs is DROPPED from calendar. (Marciel, M)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_09-cv-02523-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1862f61ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-22</identifier>
+ <identifier type="former granule identifier">caed-2_09-cv-02523_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_09-cv-02523/USCOURTS-caed-2_09-cv-02523-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_09-cv-02523/pdf/USCOURTS-caed-2_09-cv-02523-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02523; Center for Sierra Nevada Conservation, et al., v. United States Forest Service, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_09-cv-02523-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2013-09-25</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 9/24/2013. Parties have filed 141 Stipulated Settlement Agreement resolving plaintiffs&apos; claims for attorneys&apos; fee, expenses, and costs. Accordingly, the 118 Motion for Attorneys&apos; Fees and Costs is DROPPED from calendar. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

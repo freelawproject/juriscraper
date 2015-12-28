@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18176d7cb">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315</identifier>
+<identifier type="local">P0b002ee18176d7cb</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00315</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00315</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00315</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jorge" fullName="Jorge Alberto Lopez-Mejia" lastName="Lopez-Mejia" middleName="Alberto" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lopez-Mejia</title>
+ <partNumber>8:05-cr-00315</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00315;05-315</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jorge Alberto Lopez-Mejia</displayForm>
+ <namePart type="family">Lopez-Mejia</namePart>
+ <namePart type="given">Jorge</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00315</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00315</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jorge" fullName="Jorge Alberto Lopez-Mejia" lastName="Lopez-Mejia" middleName="Alberto" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent defendant Jorge Alberto Lopez-Mejia. Signed by Magistrate Judge Thomas D. Thalken on 8/25/2005. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caf7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-08-25</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent defendant Jorge Alberto Lopez-Mejia. Signed by Magistrate Judge Thomas D. Thalken on 8/25/2005. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jorge Alberto Lopez-Mejia. Signed by Magistrate Judge Thomas D. Thalken on 8/26/2005. (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caff9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-08-26</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jorge Alberto Lopez-Mejia. Signed by Magistrate Judge Thomas D. Thalken on 8/26/2005. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>TRIAL ORDER as to defendant(s) Jorge Alberto Lopez-Mejia -- Jury Trial set for 10/4/2005 at 9:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Any motions for a continuance shall be filed on or before 9/26/2005. Counsel for the United States shall confer with defense counsel and electronically file a status report no later than 9/29/2005 advising the court of the anticipated length of trial. Signed by Magistrate Judge F. A. Gossett on 9/19/2005(CLS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caffd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-09-19</dateIssued>
+  <docketText>TRIAL ORDER as to defendant(s) Jorge Alberto Lopez-Mejia -- Jury Trial set for 10/4/2005 at 9:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Any motions for a continuance shall be filed on or before 9/26/2005. Counsel for the United States shall confer with defense counsel and electronically file a status report no later than 9/29/2005 advising the court of the anticipated length of trial. Signed by Magistrate Judge F. A. Gossett on 9/19/2005(CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 9/20/2005. (JB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caffe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-09-20</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 9/20/2005. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>ORDER - This case, insofar as it concerns this defendant, is removed from the trial docket based upon the request of the defendant.A hearing on the defendant&apos;s anticipated plea of guilty is scheduled beforeMagistrate Judge Thalken on the 17th day of October, 2005 at the hour of 2:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska; the time between today?s date and the hearing on theanticipated plea of guilty is excluded for purposes of computing the limits under the SpeedyTrial Act as to Jorge Alberto Lopez-Mejia (1) Signed by Magistrate Judge Thomas D. Thalken on 9/22/2005. (TJS)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caffa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-09-22</dateIssued>
+  <docketText>ORDER - This case, insofar as it concerns this defendant, is removed from the trial docket based upon the request of the defendant.A hearing on the defendant&apos;s anticipated plea of guilty is scheduled beforeMagistrate Judge Thalken on the 17th day of October, 2005 at the hour of 2:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska; the time between today?s date and the hearing on theanticipated plea of guilty is excluded for purposes of computing the limits under the SpeedyTrial Act as to Jorge Alberto Lopez-Mejia (1) Signed by Magistrate Judge Thomas D. Thalken on 9/22/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 12/27/2005. (JB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caffb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-12-27</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 12/27/2005. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00315-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez-Mejia</title>
+  <subTitle>JUDGMENT as to Jorge Alberto Lopez-Mejia (1), Count 1: Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 41 months; 3 years supervised release with special conditions; the special assessment is remitted on motion of the government, as to defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 1/11/2006. 4 certified copies USM. (JAE, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00315-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817caffc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00315_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00315/USCOURTS-ned-8_05-cr-00315-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00315/pdf/USCOURTS-ned-8_05-cr-00315-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00315; USA v. Lopez-Mejia; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00315-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-11</dateIssued>
+  <docketText>JUDGMENT as to Jorge Alberto Lopez-Mejia (1), Count 1: Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 41 months; 3 years supervised release with special conditions; the special assessment is remitted on motion of the government, as to defendant Jorge Alberto Lopez-Mejia. Signed by Judge Laurie Smith Camp on 1/11/2006. 4 certified copies USM. (JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812c0b2b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_05-cv-00002</identifier>
+<identifier type="local">P0b002ee1812c0b2b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_05-cv-00002</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_05-cv-00002</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:05-cv-00002</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Eric" fullName="Eric Bramble" lastName="Bramble" role="Defendant"></party>
+ <party fullName="COPE" lastName="COPE" role="Defendant"></party>
+ <party firstName="Preston" fullName="Preston Hester" lastName="Hester" role="Defendant"></party>
+ <party firstName="Trumaine" fullName="Trumaine Lamar Melton" lastName="Melton" middleName="Lamar" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Wiley" lastName="Wiley" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Melton v. Wiley et al</title>
+ <partNumber>7:05-cv-00002</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_05-cv-00002/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:05-cv-00002;05-002</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Eric Bramble</displayForm>
+ <namePart type="family">Bramble</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>COPE</displayForm>
+ <namePart type="family">COPE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Preston Hester</displayForm>
+ <namePart type="family">Hester</namePart>
+ <namePart type="given">Preston</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Trumaine Lamar Melton</displayForm>
+ <namePart type="family">Melton</namePart>
+ <namePart type="given">Trumaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Wiley</displayForm>
+ <namePart type="family">Wiley</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_05-cv-00002</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:05-cv-00002</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Eric" fullName="Eric Bramble" lastName="Bramble" role="Defendant"></party>
+ <party fullName="COPE" lastName="COPE" role="Defendant"></party>
+ <party firstName="Preston" fullName="Preston Hester" lastName="Hester" role="Defendant"></party>
+ <party firstName="Trumaine" fullName="Trumaine Lamar Melton" lastName="Melton" middleName="Lamar" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Wiley" lastName="Wiley" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_05-cv-00002-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_05-cv-00002/USCOURTS-gamd-7_05-cv-00002-0/mods.xml">
+ <titleInfo>
+  <title>Melton v. Wiley et al</title>
+  <subTitle>ORDER granting 30 Motion for Summary Judgment and denying 37 Motion for Hearing . Ordered by Judge Hugh Lawson on 1/31/2007. (scs,HL)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_05-cv-00002-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812ce487</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_05-cv-00002/USCOURTS-gamd-7_05-cv-00002-0</identifier>
+ <identifier type="former granule identifier">gamd-7_05-cv-00002_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_05-cv-00002/USCOURTS-gamd-7_05-cv-00002-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_05-cv-00002/pdf/USCOURTS-gamd-7_05-cv-00002-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:05-cv-00002; Melton v. Wiley et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_05-cv-00002-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER granting 30 Motion for Summary Judgment and denying 37 Motion for Hearing . Ordered by Judge Hugh Lawson on 1/31/2007. (scs,HL)</docketText>
+</extension>
+</relatedItem>
+</mods>

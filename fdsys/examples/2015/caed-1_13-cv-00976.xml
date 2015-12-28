@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18dae6392">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-10-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-10-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976</identifier>
+<identifier type="local">P0b002ee18dae6392</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-10-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-10-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00976</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00976</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00976</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Joe" fullName="Joe Buena" lastName="Buena" role="Defendant"></party>
+ <party firstName="R." fullName="R. Cortez" lastName="Cortez" role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard Lawrence Turner" lastName="Turner" middleName="Lawrence" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Turner v. Cortez et al</title>
+ <partNumber>1:13-cv-00976</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00976;13-976</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Joe Buena</displayForm>
+ <namePart type="family">Buena</namePart>
+ <namePart type="given">Joe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Cortez</displayForm>
+ <namePart type="family">Cortez</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Howard Lawrence Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Howard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00976</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00976</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Joe" fullName="Joe Buena" lastName="Buena" role="Defendant"></party>
+ <party firstName="R." fullName="R. Cortez" lastName="Cortez" role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard Lawrence Turner" lastName="Turner" middleName="Lawrence" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00976-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Turner v. Cortez et al</title>
+  <subTitle>ORDER Denying 4 Motion to Appoint Counsel signed by Magistrate Judge Barbara A. McAuliffe on 07/31/2013. (Flores, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18daf3ef6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00976_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00976; (PC) Turner v. Cortez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00976-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-31</dateIssued>
+  <docketText>ORDER Denying 4 Motion to Appoint Counsel signed by Magistrate Judge Barbara A. McAuliffe on 07/31/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00976-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Turner v. Cortez et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 19 Motion for Order Compelling Discovery as Premature; ORDER GRANTING Defendant&apos;s 20 Motion for Extension of Time to Respond to Discovery, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Marrujo, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18daf3ef8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00976_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00976; (PC) Turner v. Cortez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00976-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 19 Motion for Order Compelling Discovery as Premature; ORDER GRANTING Defendant&apos;s 20 Motion for Extension of Time to Respond to Discovery, signed by Magistrate Judge Barbara A. McAuliffe on 1/5/15. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00976-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Turner v. Cortez et al</title>
+  <subTitle>ORDER Denying Motion For Appointment Of Counsel (ECF No.22), signed by Magistrate Judge Barbara A. McAuliffe on 2/11/2015. (Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18daf3eef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00976_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00976; (PC) Turner v. Cortez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00976-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-11</dateIssued>
+  <docketText>ORDER Denying Motion For Appointment Of Counsel (ECF No.22), signed by Magistrate Judge Barbara A. McAuliffe on 2/11/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00976-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Turner v. Cortez et al</title>
+  <subTitle>ORDER Requiring Plaintiff to File Opposition or Statement of Non-Opposition within Twenty-One Days, signed by Magistrate Judge Barbara A. McAuliffe on 08/31/2015. (21-Day Deadline) (Martin-Gill, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18daf3ef9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00976_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00976; (PC) Turner v. Cortez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00976-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-09-01</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to File Opposition or Statement of Non-Opposition within Twenty-One Days, signed by Magistrate Judge Barbara A. McAuliffe on 08/31/2015. (21-Day Deadline) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00976-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Turner v. Cortez et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Dismissal of 1 Action, With Prejudice, for Failure to Prosecute and Failure to Obey a Court Order; Fourteen-Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 10/7/2015. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 10/26/2015. (Sant Agata, S)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18daf3ef7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00976_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00976/USCOURTS-caed-1_13-cv-00976-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00976/pdf/USCOURTS-caed-1_13-cv-00976-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00976; (PC) Turner v. Cortez et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00976-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-10-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Dismissal of 1 Action, With Prejudice, for Failure to Prosecute and Failure to Obey a Court Order; Fourteen-Day Deadline signed by Magistrate Judge Barbara A. McAuliffe on 10/7/2015. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 10/26/2015. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

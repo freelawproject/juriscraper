@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812dc6aa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00068</identifier>
+<identifier type="local">P0b002ee1812dc6aa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_08-cv-00068</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00068</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Alexis" fullName="Alexis E L Chase" lastName="Chase" middleName="E L" role="Respondent"></party>
+ <party firstName="STATE OF" fullName="STATE OF GEORGIA" lastName="GEORGIA" role="Respondent"></party>
+ <party firstName="Terry" fullName="Terry DeWayne Green" lastName="Green" middleName="DeWayne" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Green v. Chase et al</title>
+ <partNumber>5:08-cv-00068</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00068/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-00068;08-068</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alexis E L Chase</displayForm>
+ <namePart type="family">Chase</namePart>
+ <namePart type="given">Alexis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>STATE OF GEORGIA</displayForm>
+ <namePart type="family">GEORGIA</namePart>
+ <namePart type="given">STATE OF</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Terry DeWayne Green</displayForm>
+ <namePart type="family">Green</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_08-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:08-cv-00068</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Alexis" fullName="Alexis E L Chase" lastName="Chase" middleName="E L" role="Respondent"></party>
+ <party firstName="STATE OF" fullName="STATE OF GEORGIA" lastName="GEORGIA" role="Respondent"></party>
+ <party firstName="Terry" fullName="Terry DeWayne Green" lastName="Green" middleName="DeWayne" role="Petitioner"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00068-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-0/mods.xml">
+ <titleInfo>
+  <title>Green v. Chase et al</title>
+  <subTitle>RECOMMENDATION to grant 7 MOTION to Dismiss Petition For Lack Of Exhaustion filed by Alexis E.L. Chase. Objections to R&amp;R due by 12/15/2008. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 11/21/08. (CWH)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00068-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132398b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-0</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00068_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00068/pdf/USCOURTS-gamd-5_08-cv-00068-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00068; Green v. Chase et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00068-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-11-21</dateIssued>
+  <docketText>RECOMMENDATION to grant 7 MOTION to Dismiss Petition For Lack Of Exhaustion filed by Alexis E.L. Chase. Objections to R&amp;R due by 12/15/2008. Ordered by U.S. Mag Judge Claude W. Hicks, Jr. on 11/21/08. (CWH)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_08-cv-00068-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-1/mods.xml">
+ <titleInfo>
+  <title>Green v. Chase et al</title>
+  <subTitle>ORDER granting 7 Motion to Dismiss and adopting Report and Recommendations re 11 Report and Recommendations.Ordered by Judge C. Ashley Royal on 01/20/09 (cma)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_08-cv-00068-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18132398c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-1</identifier>
+ <identifier type="former granule identifier">gamd-5_08-cv-00068_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_08-cv-00068/USCOURTS-gamd-5_08-cv-00068-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_08-cv-00068/pdf/USCOURTS-gamd-5_08-cv-00068-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00068; Green v. Chase et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_08-cv-00068-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-20</dateIssued>
+  <docketText>ORDER granting 7 Motion to Dismiss and adopting Report and Recommendations re 11 Report and Recommendations.Ordered by Judge C. Ashley Royal on 01/20/09 (cma)</docketText>
+</extension>
+</relatedItem>
+</mods>

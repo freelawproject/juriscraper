@@ -1,0 +1,349 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18104b437">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-00673</identifier>
+<identifier type="local">P0b002ee18104b437</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_05-cv-00673</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-00673</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-00673</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Counter Defendant"></party>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Cross Defendant"></party>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Defendant"></party>
+ <party fullName="Dean Witter Reynolds" lastName="Dean Witter Reynolds" role="Plaintiff"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Counter Defendant"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Cross Defendant"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Defendant"></party>
+ <party firstName="Klaus" fullName="Klaus Kissel" lastName="Kissel" role="Counter Claimant"></party>
+ <party firstName="Klaus" fullName="Klaus Kissel" lastName="Kissel" role="Defendant"></party>
+ <party firstName="Luise" fullName="Luise Kissel" lastName="Kissel" role="Counter Claimant"></party>
+ <party firstName="Luise" fullName="Luise Kissel" lastName="Kissel" role="Defendant"></party>
+ <party firstName="Heinze-Herman" fullName="Heinze-Herman Letas" lastName="Letas" role="Counter Claimant"></party>
+ <party firstName="Heinze-Herman" fullName="Heinze-Herman Letas" lastName="Letas" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Letas" lastName="Letas" role="Defendant"></party>
+ <party fullName="Morgan Stanley" lastName="Morgan Stanley" role="Plaintiff"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Counter Defendant"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Cross Defendant"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Plaintiff"></party>
+ <party firstName="Gundula" fullName="Gundula Trampenau-Letas" lastName="Trampenau-Letas" role="Counter Claimant"></party>
+ <party firstName="Gundula" fullName="Gundula Trampenau-Letas" lastName="Trampenau-Letas" role="Defendant"></party>
+ <party firstName="Nicholas" fullName="Nicholas D. Ward" lastName="Ward" middleName="D." role="Trustee"></party>
+</extension>
+<titleInfo>
+ <title>Morgan Stanley DW Inc. v. Divel, et al</title>
+ <partNumber>1:05-cv-00673</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-00673/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00673;05-673</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jasen D. Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Jasen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jasen D. Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Jasen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jasen D. Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Jasen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Witter Reynolds</displayForm>
+ <namePart type="family">Dean Witter Reynolds</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George L. Divel III</displayForm>
+ <namePart type="family">Divel</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George L. Divel III</displayForm>
+ <namePart type="family">Divel</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George L. Divel III</displayForm>
+ <namePart type="family">Divel</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Klaus Kissel</displayForm>
+ <namePart type="family">Kissel</namePart>
+ <namePart type="given">Klaus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Klaus Kissel</displayForm>
+ <namePart type="family">Kissel</namePart>
+ <namePart type="given">Klaus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luise Kissel</displayForm>
+ <namePart type="family">Kissel</namePart>
+ <namePart type="given">Luise</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Luise Kissel</displayForm>
+ <namePart type="family">Kissel</namePart>
+ <namePart type="given">Luise</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Heinze-Herman Letas</displayForm>
+ <namePart type="family">Letas</namePart>
+ <namePart type="given">Heinze-Herman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Heinze-Herman Letas</displayForm>
+ <namePart type="family">Letas</namePart>
+ <namePart type="given">Heinze-Herman</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa Letas</displayForm>
+ <namePart type="family">Letas</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Morgan Stanley</displayForm>
+ <namePart type="family">Morgan Stanley</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Morgan Stanley DW Inc.</displayForm>
+ <namePart type="family">Morgan Stanley DW Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Morgan Stanley DW Inc.</displayForm>
+ <namePart type="family">Morgan Stanley DW Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Morgan Stanley DW Inc.</displayForm>
+ <namePart type="family">Morgan Stanley DW Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gundula Trampenau-Letas</displayForm>
+ <namePart type="family">Trampenau-Letas</namePart>
+ <namePart type="given">Gundula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Gundula Trampenau-Letas</displayForm>
+ <namePart type="family">Trampenau-Letas</namePart>
+ <namePart type="given">Gundula</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nicholas D. Ward</displayForm>
+ <namePart type="family">Ward</namePart>
+ <namePart type="given">Nicholas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-00673</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-00673</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Counter Defendant"></party>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Cross Defendant"></party>
+ <party firstName="Jasen" fullName="Jasen D. Adams" lastName="Adams" middleName="D." role="Defendant"></party>
+ <party fullName="Dean Witter Reynolds" lastName="Dean Witter Reynolds" role="Plaintiff"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Counter Defendant"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Cross Defendant"></party>
+ <party firstName="George" fullName="George L. Divel III" generation="III" lastName="Divel" middleName="L." role="Defendant"></party>
+ <party firstName="Klaus" fullName="Klaus Kissel" lastName="Kissel" role="Counter Claimant"></party>
+ <party firstName="Klaus" fullName="Klaus Kissel" lastName="Kissel" role="Defendant"></party>
+ <party firstName="Luise" fullName="Luise Kissel" lastName="Kissel" role="Counter Claimant"></party>
+ <party firstName="Luise" fullName="Luise Kissel" lastName="Kissel" role="Defendant"></party>
+ <party firstName="Heinze-Herman" fullName="Heinze-Herman Letas" lastName="Letas" role="Counter Claimant"></party>
+ <party firstName="Heinze-Herman" fullName="Heinze-Herman Letas" lastName="Letas" role="Defendant"></party>
+ <party firstName="Lisa" fullName="Lisa Letas" lastName="Letas" role="Defendant"></party>
+ <party fullName="Morgan Stanley" lastName="Morgan Stanley" role="Plaintiff"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Counter Defendant"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Cross Defendant"></party>
+ <party fullName="Morgan Stanley DW Inc." lastName="Morgan Stanley DW Inc." role="Plaintiff"></party>
+ <party firstName="Gundula" fullName="Gundula Trampenau-Letas" lastName="Trampenau-Letas" role="Counter Claimant"></party>
+ <party firstName="Gundula" fullName="Gundula Trampenau-Letas" lastName="Trampenau-Letas" role="Defendant"></party>
+ <party firstName="Nicholas" fullName="Nicholas D. Ward" lastName="Ward" middleName="D." role="Trustee"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-00673-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-0/mods.xml">
+ <titleInfo>
+  <title>Morgan Stanley DW Inc. v. Divel, et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Richard D Bennett on 1/19/06. (jlb, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-00673-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18105733d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-0</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-00673_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-00673/pdf/USCOURTS-mdd-1_05-cv-00673-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00673; Morgan Stanley DW Inc. v. Divel, et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-00673-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-19</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Richard D Bennett on 1/19/06. (jlb, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-00673-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-1/mods.xml">
+ <titleInfo>
+  <title>Morgan Stanley DW Inc. v. Divel, et al</title>
+  <subTitle>MEMORANDUM OPINION&amp;ORDER granting 33 Motion of Jasen D. Adams to Dismiss and DISMISSING With Prejudice Jasen D. Admas as a Defendant. Signed by Judge Richard D Bennett on 1/23/06. (c/m 1/23/06 jlb, Deputy Clerk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-00673-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18105733c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-1</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-00673_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-00673/USCOURTS-mdd-1_05-cv-00673-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-00673/pdf/USCOURTS-mdd-1_05-cv-00673-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00673; Morgan Stanley DW Inc. v. Divel, et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-00673-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-23</dateIssued>
+  <docketText>MEMORANDUM OPINION&amp;ORDER granting 33 Motion of Jasen D. Adams to Dismiss and DISMISSING With Prejudice Jasen D. Admas as a Defendant. Signed by Judge Richard D Bennett on 1/23/06. (c/m 1/23/06 jlb, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

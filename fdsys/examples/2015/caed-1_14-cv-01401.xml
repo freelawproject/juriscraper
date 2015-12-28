@@ -1,0 +1,348 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c6dfdcc">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-05-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401</identifier>
+<identifier type="local">P0b002ee18c6dfdcc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_14-cv-01401</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01401</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01401</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Stu" fullName="Stu Sherman" lastName="Sherman" role="Defendant"></party>
+ <party firstName="Guillermo" fullName="Guillermo Trujillo" lastName="Trujillo" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Trujillo v. Sherman</title>
+ <partNumber>1:14-cv-01401</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-01401;14-1401</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Stu Sherman</displayForm>
+ <namePart type="family">Sherman</namePart>
+ <namePart type="given">Stu</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guillermo Trujillo</displayForm>
+ <namePart type="family">Trujillo</namePart>
+ <namePart type="given">Guillermo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_14-cv-01401</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:14-cv-01401</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Stu" fullName="Stu Sherman" lastName="Sherman" role="Defendant"></party>
+ <party firstName="Guillermo" fullName="Guillermo Trujillo" lastName="Trujillo" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER requiring Plaintiff to pay $400.00 filing fee in full or submit an updated IFP Application signed by Magistrate Judge Barbara A. McAuliffe on 9/22/2014. (Motion for IFP due by 11/10/2014). (Attachments: # (1) IFP Application)(Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef3fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-0</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-09-22</dateIssued>
+  <docketText>ORDER requiring Plaintiff to pay $400.00 filing fee in full or submit an updated IFP Application signed by Magistrate Judge Barbara A. McAuliffe on 9/22/2014. (Motion for IFP due by 11/10/2014). (Attachments: # (1) IFP Application)(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER Regarding 10 Plaintiff&apos;s Motion for Supplemental Complaint signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. First Amended Complaint due within thirty (30) days. (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef45d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-1</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Regarding 10 Plaintiff&apos;s Motion for Supplemental Complaint signed by Magistrate Judge Barbara A. McAuliffe on 1/5/2015. First Amended Complaint due within thirty (30) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER GRANTING 12, 13 Plaintiff&apos;s Motions to Supplement and to Amend signed by Magistrate Judge Barbara A. McAuliffe on 2/11/2015. Amended Complaint due within thirty (30) days. (Jessen, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef400</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-2</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-02-11</dateIssued>
+  <docketText>ORDER GRANTING 12, 13 Plaintiff&apos;s Motions to Supplement and to Amend signed by Magistrate Judge Barbara A. McAuliffe on 2/11/2015. Amended Complaint due within thirty (30) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER denying 15 Motion for presentation of Exhibits signed by Magistrate Judge Barbara A. McAuliffe on 3/2/2015. (Lundstrom, T)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef3fe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-3</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-03-02</dateIssued>
+  <docketText>ORDER denying 15 Motion for presentation of Exhibits signed by Magistrate Judge Barbara A. McAuliffe on 3/2/2015. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER denying 18 Second Motion for Presentation of Exhibits signed by Magistrate Judge Barbara A. McAuliffe on 3/4/2015. (Lundstrom, T)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef402</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-4</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-03-04</dateIssued>
+  <docketText>ORDER denying 18 Second Motion for Presentation of Exhibits signed by Magistrate Judge Barbara A. McAuliffe on 3/4/2015. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER DISMISSING 16 Amended Complaint WITH LEAVE TO AMEND; Amended Complaint due in Thirty Days signed by Magistrate Judge Barbara A. McAuliffe on 3/17/2015. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef401</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-5</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-03-17</dateIssued>
+  <docketText>ORDER DISMISSING 16 Amended Complaint WITH LEAVE TO AMEND; Amended Complaint due in Thirty Days signed by Magistrate Judge Barbara A. McAuliffe on 3/17/2015. (Attachments: # (1) Amended Complaint Form)(Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER Dismissing Action, signed by Magistrate Judge Barbara A. McAuliffe on 4/24/15. CASE CLOSED. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef3ff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-6</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-04-24</dateIssued>
+  <docketText>ORDER Dismissing Action, signed by Magistrate Judge Barbara A. McAuliffe on 4/24/15. CASE CLOSED. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_14-cv-01401-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Trujillo v. Sherman</title>
+  <subTitle>ORDER signed by Magistrate Judge Barbara A. McAuliffe on 5/15/2015 regarding IFP Status on Appeal re 27 USCA Notice. (Lundstrom, T)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c6ef3fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-7</identifier>
+ <identifier type="former granule identifier">caed-1_14-cv-01401_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_14-cv-01401/USCOURTS-caed-1_14-cv-01401-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_14-cv-01401/pdf/USCOURTS-caed-1_14-cv-01401-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-01401; (PC) Trujillo v. Sherman; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_14-cv-01401-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-05-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Barbara A. McAuliffe on 5/15/2015 regarding IFP Status on Appeal re 27 USCA Notice. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+</mods>

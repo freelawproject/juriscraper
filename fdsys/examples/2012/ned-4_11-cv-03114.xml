@@ -1,0 +1,263 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181792f15">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114</identifier>
+<identifier type="local">P0b002ee181792f15</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cv-03114</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03114</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party firstName="Clinton" fullName="Clinton Brooks Jr." generation="Jr." lastName="Brooks" role="Plaintiff"></party>
+ <party fullName="Lincoln Police Department" lastName="Lincoln Police Department" role="Defendant"></party>
+ <party fullName="Officer Hite" lastName="Officer Hite" role="Defendant"></party>
+ <party fullName="Officer Pickering" lastName="Officer Pickering" role="Defendant"></party>
+ <party fullName="Officer Schmidt" lastName="Officer Schmidt" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brooks v. Lincoln Police Department et al</title>
+ <partNumber>4:11-cv-03114</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cv-03114;11-3114</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Clinton Brooks Jr.</displayForm>
+ <namePart type="family">Brooks</namePart>
+ <namePart type="given">Clinton</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln Police Department</displayForm>
+ <namePart type="family">Lincoln Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Hite</displayForm>
+ <namePart type="family">Officer Hite</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Pickering</displayForm>
+ <namePart type="family">Officer Pickering</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Officer Schmidt</displayForm>
+ <namePart type="family">Officer Schmidt</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03114</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03114</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party firstName="Clinton" fullName="Clinton Brooks Jr." generation="Jr." lastName="Brooks" role="Plaintiff"></party>
+ <party fullName="Lincoln Police Department" lastName="Lincoln Police Department" role="Defendant"></party>
+ <party fullName="Officer Hite" lastName="Officer Hite" role="Defendant"></party>
+ <party fullName="Officer Pickering" lastName="Officer Pickering" role="Defendant"></party>
+ <party fullName="Officer Schmidt" lastName="Officer Schmidt" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03114-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-0/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln Police Department et al</title>
+  <subTitle>MEMORANDUM AND ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis. The Complaint shall be filed without payment of fees. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party) (MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03114-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f66d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03114_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114/pdf/USCOURTS-ned-4_11-cv-03114-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03114; Brooks v. Lincoln Police Department et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03114-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER provisionally granting 2 Motion for Leave to Proceed in forma pauperis. The Complaint shall be filed without payment of fees. Ordered by Judge Richard G. Kopf. (Copy mailed to pro se party) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03114-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-1/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln Police Department et al</title>
+  <subTitle>MEMORANDUM AND ORDER- Plaintiffs Complaint (filing no. 1) is dismissed without prejudice because it fails to state a claim upon which relief may be granted. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Judge Richard G. Kopf. (Copy mailed/e-mailed to pro se party) (MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03114-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f66da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03114_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114/pdf/USCOURTS-ned-4_11-cv-03114-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03114; Brooks v. Lincoln Police Department et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03114-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-09-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- Plaintiffs Complaint (filing no. 1) is dismissed without prejudice because it fails to state a claim upon which relief may be granted. A separate judgment will be entered in accordance with this Memorandum and Order. Ordered by Judge Richard G. Kopf. (Copy mailed/e-mailed to pro se party) (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03114-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-2/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln Police Department et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding: Notice of Appeal to USCA8 filed by Clinton Brooks, Jr. Plaintiff shall have until December 2, 2011, to submit an affidavit to show excusable neglect or good cause for failing to file a timely notice of appeal. If Plaintiff fails to submit such an affidavit by December 2, 2011, Plaintiff&apos;s appeal will not be processed. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Check for affidavit on December 2, 2011. Ordered by Judge Richard G. Kopf. (Copy mailed/e-mailed to pro se party)(GJG)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03114-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f66db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03114_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114/pdf/USCOURTS-ned-4_11-cv-03114-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03114; Brooks v. Lincoln Police Department et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03114-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-11-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding: Notice of Appeal to USCA8 filed by Clinton Brooks, Jr. Plaintiff shall have until December 2, 2011, to submit an affidavit to show excusable neglect or good cause for failing to file a timely notice of appeal. If Plaintiff fails to submit such an affidavit by December 2, 2011, Plaintiff&apos;s appeal will not be processed. The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Check for affidavit on December 2, 2011. Ordered by Judge Richard G. Kopf. (Copy mailed/e-mailed to pro se party)(GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03114-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-3/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln Police Department et al</title>
+  <subTitle>MEMORANDUM AND ORDER that Plaintiff&apos;s Notice of Appeal is deemed timely filed. Plaintiff&apos;s Motion for Leave to Appeal in forma pauperis 9 is granted. The Clerk of the court is directed to forward a copy of this Memorandum and Order to the Eighth Circuit Court of Appeals. Ordered by Senior Judge Richard G. Kopf. (Copy mailed to pro se party and as directed) (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03114-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f66dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03114_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03114/USCOURTS-ned-4_11-cv-03114-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03114/pdf/USCOURTS-ned-4_11-cv-03114-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03114; Brooks v. Lincoln Police Department et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03114-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that Plaintiff&apos;s Notice of Appeal is deemed timely filed. Plaintiff&apos;s Motion for Leave to Appeal in forma pauperis 9 is granted. The Clerk of the court is directed to forward a copy of this Memorandum and Order to the Eighth Circuit Court of Appeals. Ordered by Senior Judge Richard G. Kopf. (Copy mailed to pro se party and as directed) (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

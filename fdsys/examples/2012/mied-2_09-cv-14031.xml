@@ -1,0 +1,259 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ec2a6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14031</identifier>
+<identifier type="local">P0b002ee1818ec2a6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_09-cv-14031</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-14031</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-14031</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Borrowers Network, LLC" lastName="Borrowers Network, LLC" role="Defendant"></party>
+ <party fullName="Borrowers Network, LLC" lastName="Borrowers Network, LLC" role="ThirdParty Plaintiff"></party>
+ <party firstName="Lorrie" fullName="Lorrie Glassford" lastName="Glassford" role="Defendant"></party>
+ <party firstName="Lorrie" fullName="Lorrie Glassford" lastName="Glassford" role="ThirdParty Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Guntmacher" lastName="Guntmacher" role="ThirdParty Defendant"></party>
+ <party fullName="Investors Network Fund, LLC" lastName="Investors Network Fund, LLC" role="Defendant"></party>
+ <party fullName="Investors Network Fund, LLC" lastName="Investors Network Fund, LLC" role="ThirdParty Plaintiff"></party>
+ <party fullName="Investors Network, LLC" lastName="Investors Network, LLC" role="Defendant"></party>
+ <party firstName="Arthur" fullName="Arthur Schiff" lastName="Schiff" role="Plaintiff"></party>
+ <party firstName="Randall" fullName="Randall Shaw" lastName="Shaw" role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall Shaw" lastName="Shaw" role="ThirdParty Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Schiff v. Investors Network Fund, LLC et al</title>
+ <partNumber>2:09-cv-14031</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14031/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-14031;09-14031</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Borrowers Network, LLC</displayForm>
+ <namePart type="family">Borrowers Network, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Borrowers Network, LLC</displayForm>
+ <namePart type="family">Borrowers Network, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lorrie Glassford</displayForm>
+ <namePart type="family">Glassford</namePart>
+ <namePart type="given">Lorrie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lorrie Glassford</displayForm>
+ <namePart type="family">Glassford</namePart>
+ <namePart type="given">Lorrie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Guntmacher</displayForm>
+ <namePart type="family">Guntmacher</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Investors Network Fund, LLC</displayForm>
+ <namePart type="family">Investors Network Fund, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Investors Network Fund, LLC</displayForm>
+ <namePart type="family">Investors Network Fund, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Investors Network, LLC</displayForm>
+ <namePart type="family">Investors Network, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arthur Schiff</displayForm>
+ <namePart type="family">Schiff</namePart>
+ <namePart type="given">Arthur</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Randall Shaw</displayForm>
+ <namePart type="family">Shaw</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randall Shaw</displayForm>
+ <namePart type="family">Shaw</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-14031</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-14031</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <party fullName="Borrowers Network, LLC" lastName="Borrowers Network, LLC" role="Defendant"></party>
+ <party fullName="Borrowers Network, LLC" lastName="Borrowers Network, LLC" role="ThirdParty Plaintiff"></party>
+ <party firstName="Lorrie" fullName="Lorrie Glassford" lastName="Glassford" role="Defendant"></party>
+ <party firstName="Lorrie" fullName="Lorrie Glassford" lastName="Glassford" role="ThirdParty Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert Guntmacher" lastName="Guntmacher" role="ThirdParty Defendant"></party>
+ <party fullName="Investors Network Fund, LLC" lastName="Investors Network Fund, LLC" role="Defendant"></party>
+ <party fullName="Investors Network Fund, LLC" lastName="Investors Network Fund, LLC" role="ThirdParty Plaintiff"></party>
+ <party fullName="Investors Network, LLC" lastName="Investors Network, LLC" role="Defendant"></party>
+ <party firstName="Arthur" fullName="Arthur Schiff" lastName="Schiff" role="Plaintiff"></party>
+ <party firstName="Randall" fullName="Randall Shaw" lastName="Shaw" role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall Shaw" lastName="Shaw" role="ThirdParty Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-14031-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-0/mods.xml">
+ <titleInfo>
+  <title>Schiff v. Investors Network Fund, LLC et al</title>
+  <subTitle>ORDER denying 38 Motion for Partial Summary Judgment. Signed by District Judge Lawrence P. Zatkoff. (MVer)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-14031-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181909b24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-0</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-14031_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14031/pdf/USCOURTS-mied-2_09-cv-14031-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-14031; Schiff v. Investors Network Fund, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-14031-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-06-20</dateIssued>
+  <docketText>ORDER denying 38 Motion for Partial Summary Judgment. Signed by District Judge Lawrence P. Zatkoff. (MVer)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-14031-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-1/mods.xml">
+ <titleInfo>
+  <title>Schiff v. Investors Network Fund, LLC et al</title>
+  <subTitle>ORDER dismissed as moot 50 Motion to Dismiss; granting 58 Motion for Summary Judgment. Signed by District Judge Lawrence P. Zatkoff. (MVer)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-14031-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181909b25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-1</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-14031_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-14031/USCOURTS-mied-2_09-cv-14031-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-14031/pdf/USCOURTS-mied-2_09-cv-14031-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-14031; Schiff v. Investors Network Fund, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-14031-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>ORDER dismissed as moot 50 Motion to Dismiss; granting 58 Motion for Summary Judgment. Signed by District Judge Lawrence P. Zatkoff. (MVer)</docketText>
+</extension>
+</relatedItem>
+</mods>

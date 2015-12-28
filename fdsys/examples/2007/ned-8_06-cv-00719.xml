@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a2792">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00719</identifier>
+<identifier type="local">P0b002ee1817a2792</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00719</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00719</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00719</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>540</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Mandamus and Other</natureSuit>
+ <cause>28:1361 Petition for Writ of Mandamus</cause>
+ <party fullName="Department of Citizenship and Immigration Services" lastName="Department of Citizenship and Immigration Services" role="Defendant"></party>
+ <party fullName="Department of Homeland Security" lastName="Department of Homeland Security" role="Defendant"></party>
+ <party fullName="Federal Bureau of Investigation" lastName="Federal Bureau of Investigation" role="Defendant"></party>
+ <party firstName="Veerender" fullName="Veerender Reddy Kandi" lastName="Kandi" middleName="Reddy" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Kandi v. Department of Homeland Security et al</title>
+ <partNumber>8:06-cv-00719</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00719/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00719;06-719</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Department of Citizenship and Immigration Services</displayForm>
+ <namePart type="family">Department of Citizenship and Immigration Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Department of Homeland Security</displayForm>
+ <namePart type="family">Department of Homeland Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Bureau of Investigation</displayForm>
+ <namePart type="family">Federal Bureau of Investigation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Veerender Reddy Kandi</displayForm>
+ <namePart type="family">Kandi</namePart>
+ <namePart type="given">Veerender</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00719</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00719</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>540</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Mandamus and Other</natureSuit>
+ <cause>28:1361 Petition for Writ of Mandamus</cause>
+ <party fullName="Department of Citizenship and Immigration Services" lastName="Department of Citizenship and Immigration Services" role="Defendant"></party>
+ <party fullName="Department of Homeland Security" lastName="Department of Homeland Security" role="Defendant"></party>
+ <party fullName="Federal Bureau of Investigation" lastName="Federal Bureau of Investigation" role="Defendant"></party>
+ <party firstName="Veerender" fullName="Veerender Reddy Kandi" lastName="Kandi" middleName="Reddy" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00719-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00719/USCOURTS-ned-8_06-cv-00719-0/mods.xml">
+ <titleInfo>
+  <title>Kandi v. Department of Homeland Security et al</title>
+  <subTitle>ORDER granting 9 Motion to Dismiss by plaintiff, Veerender Reddy Kandi; judgment of dismissal without prejudice will be entered accordingly. Ordered by Judge Joseph F. Bataillon.(PCV, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00719-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818397dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00719/USCOURTS-ned-8_06-cv-00719-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00719_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00719/USCOURTS-ned-8_06-cv-00719-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00719/pdf/USCOURTS-ned-8_06-cv-00719-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00719; Kandi v. Department of Homeland Security et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00719-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-17</dateIssued>
+  <docketText>ORDER granting 9 Motion to Dismiss by plaintiff, Veerender Reddy Kandi; judgment of dismissal without prejudice will be entered accordingly. Ordered by Judge Joseph F. Bataillon.(PCV, )</docketText>
+</extension>
+</relatedItem>
+</mods>

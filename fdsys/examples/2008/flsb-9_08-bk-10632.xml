@@ -1,0 +1,1603 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e34f49">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632</identifier>
+<identifier type="local">P0b002ee180e34f49</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-09-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-flsb-9_08-bk-10632</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-9_08-bk-10632</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>9:08-bk-10632</caseNumber>
+ <caseOffice>West Palm Beach</caseOffice>
+ <party fullName="Friedman, Billings Ramsey Group, Inc." lastName="Friedman, Billings Ramsey Group, Inc." role="Interested Party"></party>
+ <party firstName="J." fullName="J. William Boone" lastName="Boone" middleName="William" role="Special Counsel"></party>
+ <party fullName="NLC Holding Corp" lastName="NLC Holding Corp" role="Creditor"></party>
+ <party fullName="CESC Four Skyline Place LLC" lastName="CESC Four Skyline Place LLC" role="Creditor"></party>
+ <party firstName="Adam" fullName="Adam T Klein" lastName="Klein" middleName="T" role="Special Counsel"></party>
+ <party firstName="Jack" fullName="Jack A. Raisner" lastName="Raisner" middleName="A." role="Special Counsel"></party>
+ <party firstName="Rene" fullName="Rene S. Roupinian" lastName="Roupinian" middleName="S." role="Special Counsel"></party>
+ <party fullName="Mesirow Financial Interim Management, LLC" lastName="Mesirow Financial Interim Management, LLC" role="Other Professional"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="US Bank National Association" lastName="US Bank National Association" role="Creditor"></party>
+ <party fullName="Berger Singerman, P.A." lastName="Berger Singerman, P.A." role="Attorney"></party>
+ <party fullName="First NLC Financial Services, LLC" lastName="First NLC Financial Services, LLC" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party fullName="First NLC" lastName="First NLC" role="Debtor"></party>
+ <party fullName="The Lending Center" lastName="The Lending Center" role="Debtor"></party>
+ <party fullName="Florida Mortgage Network" lastName="Florida Mortgage Network" role="Debtor"></party>
+ <party fullName="First NLC, Inc." lastName="First NLC, Inc." role="Interested Party"></party>
+ <party fullName="NLC, Inc." lastName="NLC, Inc." role="Interested Party"></party>
+ <party fullName="BGK Texas Property Management LLC" lastName="BGK Texas Property Management LLC" role="Creditor"></party>
+ <party fullName="Host.net" lastName="Host.net" role="Creditor"></party>
+ <party fullName="Parkway Properties LP" lastName="Parkway Properties LP" role="Creditor"></party>
+ <party fullName="Ameriquest Mortgage Company" lastName="Ameriquest Mortgage Company" role="Creditor"></party>
+ <party firstName="Neal" fullName="Neal Henschel" lastName="Henschel" role="Creditor"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey M. Henschel" lastName="Henschel" middleName="M." role="Creditor"></party>
+ <party fullName="ND Properties, Inc" lastName="ND Properties, Inc" role="Creditor"></party>
+ <party fullName="HSBC Mortgage Services" lastName="HSBC Mortgage Services" role="Creditor"></party>
+ <party fullName="Verizon Business Network Services Inc" lastName="Verizon Business Network Services Inc" role="Creditor"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Creditor"></party>
+ <party fullName="Creditors Committee" lastName="Creditors Committee" role="Creditor Committee"></party>
+ <party firstName="Fran" fullName="Fran Kramer" lastName="Kramer" role="Interested Party"></party>
+ <party firstName="Angelia" fullName="Angelia Johnson" lastName="Johnson" role="Interested Party"></party>
+ <party fullName="Flagler Development Company, LLC" lastName="Flagler Development Company, LLC" role="Creditor"></party>
+ <party fullName="Los Angeles County Treasure and Tax Collector" lastName="Los Angeles County Treasure and Tax Collector" role="Creditor"></party>
+ <party firstName="Kenneth" fullName="Kenneth A. Welt" lastName="Welt" middleName="A." role="Other Professional"></party>
+ <party fullName="Office of Financial Regulation" lastName="Office of Financial Regulation" role="Creditor"></party>
+ <party fullName="Broward County Revenue Collection Division" lastName="Broward County Revenue Collection Division" role="Creditor"></party>
+ <party fullName="Iron Mountain Information Management, Inc." lastName="Iron Mountain Information Management, Inc." role="Creditor"></party>
+ <party firstName="Thomas" fullName="Thomas J Allison" lastName="Allison" middleName="J" role="Other Professional"></party>
+ <party fullName="Wells Fargo Bank N.A." lastName="Wells Fargo Bank N.A." role="Creditor"></party>
+ <party fullName="Schwarzberg Spector Duke &amp; Rogers" lastName="Schwarzberg Spector Duke &amp; Rogers" role="Interested Party"></party>
+ <party fullName="Realty Associates Iowa Corporation" lastName="Realty Associates Iowa Corporation" role="Creditor"></party>
+ <party firstName="Andrew" fullName="Andrew J. Maxwell" lastName="Maxwell" middleName="J." role="Interested Party"></party>
+ <party fullName="Maguire Properties-Stadium Gateway, LP" lastName="Maguire Properties-Stadium Gateway, LP" role="Creditor"></party>
+ <party fullName="Aldine Independent School District" lastName="Aldine Independent School District" role="Creditor"></party>
+ <party fullName="Office of Unemployment Compensation Tax Services" lastName="Office of Unemployment Compensation Tax Services" role="Creditor"></party>
+ <party fullName="FNLC Financial Services, Inc." lastName="FNLC Financial Services, Inc." role="Creditor"></party>
+ <party firstName="Lois" fullName="Lois Jamison" lastName="Jamison" role="Creditor"></party>
+ <party firstName="Philip" fullName="Philip R Stein" lastName="Stein" middleName="R" role="Special Counsel"></party>
+ <party firstName="James" fullName="James Kevin Rainey" lastName="Rainey" middleName="Kevin" role="Creditor"></party>
+ <party firstName="Ronald" fullName="Ronald Greenspan" lastName="Greenspan" role="Financial Advisor"></party>
+ <party fullName="Fidelity National Information Services, Inc." lastName="Fidelity National Information Services, Inc." role="Creditor"></party>
+ <party fullName="SNBOA, LLC" lastName="SNBOA, LLC" role="Creditor"></party>
+ <party fullName="SNGC, LLC" lastName="SNGC, LLC" role="Creditor"></party>
+ <party fullName="America&apos;s Servicing Company" lastName="America&apos;s Servicing Company" role="Creditor"></party>
+ <party fullName="Missouri Department of Revenue" lastName="Missouri Department of Revenue" role="Creditor"></party>
+ <party firstName="John" fullName="John W. Ewing Jr." generation="Jr." lastName="Ewing" middleName="W." role="Creditor"></party>
+ <party fullName="Tennessee Department of Revenue" lastName="Tennessee Department of Revenue" role="Creditor"></party>
+ <party fullName="DLJ Mortgage Capital, Inc." lastName="DLJ Mortgage Capital, Inc." role="Creditor"></party>
+ <party firstName="Mac &amp; Harriet" fullName="Mac &amp; Harriet McCutchen" lastName="McCutchen" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, LP" lastName="Litton Loan Servicing, LP" role="Creditor"></party>
+ <party fullName="State of Nebraska Commissioner of Labor" lastName="State of Nebraska Commissioner of Labor" role="Creditor"></party>
+ <party fullName="General Electric Capital Corporation" lastName="General Electric Capital Corporation" role="Creditor"></party>
+ <party firstName="Warren" fullName="Warren R Trazenfeld" lastName="Trazenfeld" middleName="R" role="Interested Party"></party>
+ <party firstName="Tim" fullName="Tim Larin" lastName="Larin" role="Creditor"></party>
+ <party fullName="Deutsche Bank Trust Company" lastName="Deutsche Bank Trust Company" role="Creditor"></party>
+ <party fullName="Prince George&apos;s County, Maryland" lastName="Prince George&apos;s County, Maryland" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="County of San Joaquin" lastName="County of San Joaquin" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="Saxon Mortgage Services Inc" lastName="Saxon Mortgage Services Inc" role="Creditor"></party>
+ <party firstName="Alan" fullName="Alan J Perlman" lastName="Perlman" middleName="J" role="Mediator"></party>
+ <party firstName="Deborah" fullName="Deborah Menotte" lastName="Menotte" role="Trustee"></party>
+ <party fullName="Blue Boy Limited Partnership" lastName="Blue Boy Limited Partnership" role="Creditor"></party>
+ <party fullName="Bilzin Sumberg Baena Price &amp; Axelrod LLP" lastName="Bilzin Sumberg Baena Price &amp; Axelrod LLP" role="Creditor"></party>
+ <party fullName="NSH Ventures II, L.P." lastName="NSH Ventures II, L.P." role="Creditor"></party>
+ <party fullName="LaSalle Bank NA as trustee" lastName="LaSalle Bank NA as trustee" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party firstName="Neil" fullName="Neil E Herman" lastName="Herman" middleName="E" role="Special Counsel"></party>
+ <party firstName="Scott" fullName="Scott H Bernstein" lastName="Bernstein" middleName="H" role="Special Counsel"></party>
+ <party fullName="Konica Minolta Danka Imaging Company" lastName="Konica Minolta Danka Imaging Company" role="Creditor"></party>
+ <party fullName="Lydian Data Services, LLC" lastName="Lydian Data Services, LLC" role="Creditor"></party>
+ <party fullName="Green Tree Servicing, LLC" lastName="Green Tree Servicing, LLC" role="Creditor"></party>
+ <party fullName="Chase Home Finance LLC." lastName="Chase Home Finance LLC." role="Creditor"></party>
+ <party fullName="REO Properties Corporation" lastName="REO Properties Corporation" role="Creditor"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Creditor"></party>
+ <party fullName="Deutsche Bank Nat&apos;l Trust Co." lastName="Deutsche Bank Nat&apos;l Trust Co." role="Creditor"></party>
+ <party firstName="Rosalie" fullName="Rosalie Perchak" lastName="Perchak" role="Creditor"></party>
+ <party fullName="Bank of New York Mellon" lastName="Bank of New York Mellon" role="Creditor"></party>
+ <party firstName="Kevin" fullName="Kevin Silfvast" lastName="Silfvast" role="Creditor"></party>
+ <party firstName="Sara" fullName="Sara Silfvast" lastName="Silfvast" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, L.P." lastName="Litton Loan Servicing, L.P." role="Creditor"></party>
+ <party fullName="Scientific Records Management" lastName="Scientific Records Management" role="Creditor"></party>
+ <party firstName="Samuel" fullName="Samuel P. Groner" lastName="Groner" middleName="P." role="Special Counsel"></party>
+ <party fullName="CitiMortgage, Inc." lastName="CitiMortgage, Inc." role="Creditor"></party>
+ <party firstName="Randall" fullName="Randall W Jones" lastName="Jones" middleName="W" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Bank of America, National Association" lastName="Bank of America, National Association" role="Creditor"></party>
+ <party fullName="LaSalle Bank N.A." lastName="LaSalle Bank N.A." role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company as Trustee" lastName="Deutsche Bank National Trust Company as Trustee" role="Creditor"></party>
+ <party fullName="Chase Home Finance LLC" lastName="Chase Home Finance LLC" role="Creditor"></party>
+ <party fullName="DB Structured Products, Inc" lastName="DB Structured Products, Inc" role="Creditor"></party>
+ <party firstName="Mari" fullName="Mari C Pina" lastName="Pina" middleName="C" role="Interested Party"></party>
+ <party fullName="The Bank of New York" lastName="The Bank of New York" role="Creditor"></party>
+ <party fullName="JPMC Specialty Mortgage LLC" lastName="JPMC Specialty Mortgage LLC" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party firstName="Jennifer" fullName="Jennifer Amaro" lastName="Amaro" role="Creditor"></party>
+ <party firstName="Clarita" fullName="Clarita A Gonzalez" lastName="Gonzalez" middleName="A" role="Creditor"></party>
+ <party fullName="EMC Mortgage Corporation" lastName="EMC Mortgage Corporation" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing LP..." lastName="Litton Loan Servicing LP..." role="Creditor"></party>
+ <party fullName="FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC" lastName="FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC" role="Creditor"></party>
+ <party firstName="Soneet" fullName="Soneet R. Kapila" lastName="Kapila" middleName="R." role="Accountant"></party>
+ <party firstName="Sheri" fullName="Sheri L Rodriguez" lastName="Rodriguez" middleName="L" role="Creditor"></party>
+ <party firstName="Charles" fullName="Charles D. Brigman" lastName="Brigman" middleName="D." role="Creditor"></party>
+ <party firstName="Robert" fullName="Robert Cosentino" lastName="Cosentino" role="Creditor"></party>
+ <party firstName="Maurice" fullName="Maurice Thune" lastName="Thune" role="Creditor"></party>
+ <party firstName="Karen" fullName="Karen Loney" lastName="Loney" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1" lastName="Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1" role="Creditor"></party>
+ <party fullName="EMC Mortgage Corporation" lastName="EMC Mortgage Corporation" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="HSBC Bank USA, National Association" lastName="HSBC Bank USA, National Association" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, LP," lastName="Litton Loan Servicing, LP," role="Creditor"></party>
+ <party firstName="Jackie" fullName="Jackie Le" lastName="Le" role="Creditor"></party>
+ <party fullName="Blackstone Center Lmtd Partnership" lastName="Blackstone Center Lmtd Partnership" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="DRA/CLP Concourse Center Tampa, LLC" lastName="DRA/CLP Concourse Center Tampa, LLC" role="Creditor"></party>
+ <party fullName="CitiMortgage, Inc." lastName="CitiMortgage, Inc." role="Creditor"></party>
+ <party fullName="BRE/Boca Corporate Center L.L.C." lastName="BRE/Boca Corporate Center L.L.C." role="Creditor"></party>
+ <party fullName="Broadbandone, Inc. d/b/a Host.net" lastName="Broadbandone, Inc. d/b/a Host.net" role="Creditor"></party>
+ <party fullName="US Bank,NA,ND" lastName="US Bank,NA,ND" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="US Bank National Association" lastName="US Bank National Association" role="Creditor"></party>
+ <party fullName="US Bank Consumer Finance" lastName="US Bank Consumer Finance" role="Creditor"></party>
+ <party fullName="Donald G Lyon Family Trust" lastName="Donald G Lyon Family Trust" role="Creditor"></party>
+ <party fullName="Hines VAF II Sacramento Properties, LP" lastName="Hines VAF II Sacramento Properties, LP" role="Creditor"></party>
+ <party fullName="Americas Servicing Company" lastName="Americas Servicing Company" role="Creditor"></party>
+ <party fullName="Hines Douglas Corporate Center LP" lastName="Hines Douglas Corporate Center LP" role="Creditor"></party>
+ <party fullName="SCMC, LLC" lastName="SCMC, LLC" role="Creditor"></party>
+ <party fullName="LA-Lakeway, L.L.C." lastName="LA-Lakeway, L.L.C." role="Creditor"></party>
+ <party fullName="Unire Real Estate Group, Inc" lastName="Unire Real Estate Group, Inc" role="Creditor"></party>
+ <party firstName="Jane" fullName="Jane Gossin" lastName="Gossin" role="Creditor"></party>
+ <party fullName="MEI Realty Ltd" lastName="MEI Realty Ltd" role="Creditor"></party>
+ <party fullName="Landlord W2007 Seattle Office One" lastName="Landlord W2007 Seattle Office One" role="Creditor"></party>
+ <party fullName="Brice, Vander Linden &amp; Wernick, P.C." lastName="Brice, Vander Linden &amp; Wernick, P.C." role="Creditor"></party>
+ <party fullName="PHNS, Inc." lastName="PHNS, Inc." role="Creditor"></party>
+ <party fullName="HPBFGLB Saddleback, LLC" lastName="HPBFGLB Saddleback, LLC" role="Creditor"></party>
+ <party firstName="Marcella" fullName="Marcella McDonald" lastName="McDonald" role="Creditor"></party>
+ <party fullName="State of Florida Department of Revenue" lastName="State of Florida Department of Revenue" role="Creditor"></party>
+ <party fullName="Wayne County Register of Deeds" lastName="Wayne County Register of Deeds" role="Creditor"></party>
+ <party fullName="San Joaquin County Tax Collector" lastName="San Joaquin County Tax Collector" role="Creditor"></party>
+ <party fullName="BET REALTY, LLC" lastName="BET REALTY, LLC" role="Interested Party"></party>
+ <party fullName="US Bank, N.A." lastName="US Bank, N.A." role="Creditor"></party>
+ <party fullName="The Bank of New York Mellon f/k/a The Bank of New York" lastName="The Bank of New York Mellon f/k/a The Bank of New York" role="Creditor"></party>
+ <party fullName="SN Servicing Corporation" lastName="SN Servicing Corporation" role="Creditor"></party>
+ <party fullName="BMW Bank of North America, Inc. Department" lastName="BMW Bank of North America, Inc. Department" role="Creditor"></party>
+ <party fullName="FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC" lastName="FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC" role="Creditor"></party>
+ <party fullName="Wells Fargo Bank NA" lastName="Wells Fargo Bank NA" role="Creditor"></party>
+ <party fullName="ArchBay Holdings, LLC - Series 2010C" lastName="ArchBay Holdings, LLC - Series 2010C" role="Creditor"></party>
+ <party fullName="Oklahoma Employment Security Commission" lastName="Oklahoma Employment Security Commission" role="Creditor"></party>
+</extension>
+<titleInfo>
+ <title>First NLC Financial Services, LLC</title>
+ <partNumber>9:08-bk-10632</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">9:08-bk-10632;08-10632</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>West Palm Beach</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Friedman, Billings Ramsey Group, Inc.</displayForm>
+ <namePart type="family">Friedman, Billings Ramsey Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>J. William Boone</displayForm>
+ <namePart type="family">Boone</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>NLC Holding Corp</displayForm>
+ <namePart type="family">NLC Holding Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>CESC Four Skyline Place LLC</displayForm>
+ <namePart type="family">CESC Four Skyline Place LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Adam T Klein</displayForm>
+ <namePart type="family">Klein</namePart>
+ <namePart type="given">Adam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Jack A. Raisner</displayForm>
+ <namePart type="family">Raisner</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Rene S. Roupinian</displayForm>
+ <namePart type="family">Roupinian</namePart>
+ <namePart type="given">Rene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Mesirow Financial Interim Management, LLC</displayForm>
+ <namePart type="family">Mesirow Financial Interim Management, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Other Professional</description>
+</name>
+<name type="personal">
+ <displayForm>Select Portfolio Servicing Inc</displayForm>
+ <namePart type="family">Select Portfolio Servicing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>US Bank National Association</displayForm>
+ <namePart type="family">US Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Berger Singerman, P.A.</displayForm>
+ <namePart type="family">Berger Singerman, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<name type="personal">
+ <displayForm>First NLC Financial Services, LLC</displayForm>
+ <namePart type="family">First NLC Financial Services, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of the US Trustee</displayForm>
+ <namePart type="family">Office of the US Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>First NLC</displayForm>
+ <namePart type="family">First NLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>The Lending Center</displayForm>
+ <namePart type="family">The Lending Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Florida Mortgage Network</displayForm>
+ <namePart type="family">Florida Mortgage Network</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>First NLC, Inc.</displayForm>
+ <namePart type="family">First NLC, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>NLC, Inc.</displayForm>
+ <namePart type="family">NLC, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>BGK Texas Property Management LLC</displayForm>
+ <namePart type="family">BGK Texas Property Management LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Host.net</displayForm>
+ <namePart type="family">Host.net</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Parkway Properties LP</displayForm>
+ <namePart type="family">Parkway Properties LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Ameriquest Mortgage Company</displayForm>
+ <namePart type="family">Ameriquest Mortgage Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Neal Henschel</displayForm>
+ <namePart type="family">Henschel</namePart>
+ <namePart type="given">Neal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey M. Henschel</displayForm>
+ <namePart type="family">Henschel</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>ND Properties, Inc</displayForm>
+ <namePart type="family">ND Properties, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HSBC Mortgage Services</displayForm>
+ <namePart type="family">HSBC Mortgage Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Verizon Business Network Services Inc</displayForm>
+ <namePart type="family">Verizon Business Network Services Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bank National Association</displayForm>
+ <namePart type="family">U.S. Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Creditors Committee</displayForm>
+ <namePart type="family">Creditors Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor Committee</description>
+</name>
+<name type="personal">
+ <displayForm>Fran Kramer</displayForm>
+ <namePart type="family">Kramer</namePart>
+ <namePart type="given">Fran</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Angelia Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Angelia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Flagler Development Company, LLC</displayForm>
+ <namePart type="family">Flagler Development Company, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Los Angeles County Treasure and Tax Collector</displayForm>
+ <namePart type="family">Los Angeles County Treasure and Tax Collector</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth A. Welt</displayForm>
+ <namePart type="family">Welt</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Other Professional</description>
+</name>
+<name type="personal">
+ <displayForm>Office of Financial Regulation</displayForm>
+ <namePart type="family">Office of Financial Regulation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Broward County Revenue Collection Division</displayForm>
+ <namePart type="family">Broward County Revenue Collection Division</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Iron Mountain Information Management, Inc.</displayForm>
+ <namePart type="family">Iron Mountain Information Management, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas J Allison</displayForm>
+ <namePart type="family">Allison</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Other Professional</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Bank N.A.</displayForm>
+ <namePart type="family">Wells Fargo Bank N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Schwarzberg Spector Duke &amp; Rogers</displayForm>
+ <namePart type="family">Schwarzberg Spector Duke &amp; Rogers</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Realty Associates Iowa Corporation</displayForm>
+ <namePart type="family">Realty Associates Iowa Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Andrew J. Maxwell</displayForm>
+ <namePart type="family">Maxwell</namePart>
+ <namePart type="given">Andrew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Maguire Properties-Stadium Gateway, LP</displayForm>
+ <namePart type="family">Maguire Properties-Stadium Gateway, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Aldine Independent School District</displayForm>
+ <namePart type="family">Aldine Independent School District</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of Unemployment Compensation Tax Services</displayForm>
+ <namePart type="family">Office of Unemployment Compensation Tax Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>FNLC Financial Services, Inc.</displayForm>
+ <namePart type="family">FNLC Financial Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Lois Jamison</displayForm>
+ <namePart type="family">Jamison</namePart>
+ <namePart type="given">Lois</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Philip R Stein</displayForm>
+ <namePart type="family">Stein</namePart>
+ <namePart type="given">Philip</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>James Kevin Rainey</displayForm>
+ <namePart type="family">Rainey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald Greenspan</displayForm>
+ <namePart type="family">Greenspan</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Financial Advisor</description>
+</name>
+<name type="personal">
+ <displayForm>Fidelity National Information Services, Inc.</displayForm>
+ <namePart type="family">Fidelity National Information Services, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>SNBOA, LLC</displayForm>
+ <namePart type="family">SNBOA, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>SNGC, LLC</displayForm>
+ <namePart type="family">SNGC, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>America&apos;s Servicing Company</displayForm>
+ <namePart type="family">America&apos;s Servicing Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Missouri Department of Revenue</displayForm>
+ <namePart type="family">Missouri Department of Revenue</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>John W. Ewing Jr.</displayForm>
+ <namePart type="family">Ewing</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Tennessee Department of Revenue</displayForm>
+ <namePart type="family">Tennessee Department of Revenue</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>DLJ Mortgage Capital, Inc.</displayForm>
+ <namePart type="family">DLJ Mortgage Capital, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Mac &amp; Harriet McCutchen</displayForm>
+ <namePart type="family">McCutchen</namePart>
+ <namePart type="given">Mac &amp; Harriet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Litton Loan Servicing, LP</displayForm>
+ <namePart type="family">Litton Loan Servicing, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska Commissioner of Labor</displayForm>
+ <namePart type="family">State of Nebraska Commissioner of Labor</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>General Electric Capital Corporation</displayForm>
+ <namePart type="family">General Electric Capital Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Warren R Trazenfeld</displayForm>
+ <namePart type="family">Trazenfeld</namePart>
+ <namePart type="given">Warren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Larin</displayForm>
+ <namePart type="family">Larin</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Prince George&apos;s County, Maryland</displayForm>
+ <namePart type="family">Prince George&apos;s County, Maryland</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Select Portfolio Servicing Inc</displayForm>
+ <namePart type="family">Select Portfolio Servicing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>County of San Joaquin</displayForm>
+ <namePart type="family">County of San Joaquin</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Select Portfolio Servicing Inc</displayForm>
+ <namePart type="family">Select Portfolio Servicing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Saxon Mortgage Services Inc</displayForm>
+ <namePart type="family">Saxon Mortgage Services Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Alan J Perlman</displayForm>
+ <namePart type="family">Perlman</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Menotte</displayForm>
+ <namePart type="family">Menotte</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Blue Boy Limited Partnership</displayForm>
+ <namePart type="family">Blue Boy Limited Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Bilzin Sumberg Baena Price &amp; Axelrod LLP</displayForm>
+ <namePart type="family">Bilzin Sumberg Baena Price &amp; Axelrod LLP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>NSH Ventures II, L.P.</displayForm>
+ <namePart type="family">NSH Ventures II, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>LaSalle Bank NA as trustee</displayForm>
+ <namePart type="family">LaSalle Bank NA as trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Neil E Herman</displayForm>
+ <namePart type="family">Herman</namePart>
+ <namePart type="given">Neil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Scott H Bernstein</displayForm>
+ <namePart type="family">Bernstein</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>Konica Minolta Danka Imaging Company</displayForm>
+ <namePart type="family">Konica Minolta Danka Imaging Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Lydian Data Services, LLC</displayForm>
+ <namePart type="family">Lydian Data Services, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Green Tree Servicing, LLC</displayForm>
+ <namePart type="family">Green Tree Servicing, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Chase Home Finance LLC.</displayForm>
+ <namePart type="family">Chase Home Finance LLC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>REO Properties Corporation</displayForm>
+ <namePart type="family">REO Properties Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bank National Association</displayForm>
+ <namePart type="family">U.S. Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank Nat&apos;l Trust Co.</displayForm>
+ <namePart type="family">Deutsche Bank Nat&apos;l Trust Co.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Rosalie Perchak</displayForm>
+ <namePart type="family">Perchak</namePart>
+ <namePart type="given">Rosalie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of New York Mellon</displayForm>
+ <namePart type="family">Bank of New York Mellon</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Silfvast</displayForm>
+ <namePart type="family">Silfvast</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Sara Silfvast</displayForm>
+ <namePart type="family">Silfvast</namePart>
+ <namePart type="given">Sara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Litton Loan Servicing, L.P.</displayForm>
+ <namePart type="family">Litton Loan Servicing, L.P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Scientific Records Management</displayForm>
+ <namePart type="family">Scientific Records Management</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Samuel P. Groner</displayForm>
+ <namePart type="family">Groner</namePart>
+ <namePart type="given">Samuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<name type="personal">
+ <displayForm>CitiMortgage, Inc.</displayForm>
+ <namePart type="family">CitiMortgage, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Randall W Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Bank of America, National Association</displayForm>
+ <namePart type="family">Bank of America, National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>LaSalle Bank N.A.</displayForm>
+ <namePart type="family">LaSalle Bank N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company as Trustee</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company as Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Chase Home Finance LLC</displayForm>
+ <namePart type="family">Chase Home Finance LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>DB Structured Products, Inc</displayForm>
+ <namePart type="family">DB Structured Products, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Mari C Pina</displayForm>
+ <namePart type="family">Pina</namePart>
+ <namePart type="given">Mari</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>The Bank of New York</displayForm>
+ <namePart type="family">The Bank of New York</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>JPMC Specialty Mortgage LLC</displayForm>
+ <namePart type="family">JPMC Specialty Mortgage LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Select Portfolio Servicing Inc</displayForm>
+ <namePart type="family">Select Portfolio Servicing Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Amaro</displayForm>
+ <namePart type="family">Amaro</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Clarita A Gonzalez</displayForm>
+ <namePart type="family">Gonzalez</namePart>
+ <namePart type="given">Clarita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>EMC Mortgage Corporation</displayForm>
+ <namePart type="family">EMC Mortgage Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Litton Loan Servicing LP...</displayForm>
+ <namePart type="family">Litton Loan Servicing LP...</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC</displayForm>
+ <namePart type="family">FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Soneet R. Kapila</displayForm>
+ <namePart type="family">Kapila</namePart>
+ <namePart type="given">Soneet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Accountant</description>
+</name>
+<name type="personal">
+ <displayForm>Sheri L Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Sheri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Charles D. Brigman</displayForm>
+ <namePart type="family">Brigman</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Cosentino</displayForm>
+ <namePart type="family">Cosentino</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Maurice Thune</displayForm>
+ <namePart type="family">Thune</namePart>
+ <namePart type="given">Maurice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Karen Loney</displayForm>
+ <namePart type="family">Loney</namePart>
+ <namePart type="given">Karen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>EMC Mortgage Corporation</displayForm>
+ <namePart type="family">EMC Mortgage Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HSBC Bank USA, National Association</displayForm>
+ <namePart type="family">HSBC Bank USA, National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Litton Loan Servicing, LP,</displayForm>
+ <namePart type="family">Litton Loan Servicing, LP,</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Jackie Le</displayForm>
+ <namePart type="family">Le</namePart>
+ <namePart type="given">Jackie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Blackstone Center Lmtd Partnership</displayForm>
+ <namePart type="family">Blackstone Center Lmtd Partnership</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>DRA/CLP Concourse Center Tampa, LLC</displayForm>
+ <namePart type="family">DRA/CLP Concourse Center Tampa, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>CitiMortgage, Inc.</displayForm>
+ <namePart type="family">CitiMortgage, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>BRE/Boca Corporate Center L.L.C.</displayForm>
+ <namePart type="family">BRE/Boca Corporate Center L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Broadbandone, Inc. d/b/a Host.net</displayForm>
+ <namePart type="family">Broadbandone, Inc. d/b/a Host.net</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>US Bank,NA,ND</displayForm>
+ <namePart type="family">US Bank,NA,ND</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Deutsche Bank National Trust Company</displayForm>
+ <namePart type="family">Deutsche Bank National Trust Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>US Bank National Association</displayForm>
+ <namePart type="family">US Bank National Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>US Bank Consumer Finance</displayForm>
+ <namePart type="family">US Bank Consumer Finance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Donald G Lyon Family Trust</displayForm>
+ <namePart type="family">Donald G Lyon Family Trust</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Hines VAF II Sacramento Properties, LP</displayForm>
+ <namePart type="family">Hines VAF II Sacramento Properties, LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Americas Servicing Company</displayForm>
+ <namePart type="family">Americas Servicing Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Hines Douglas Corporate Center LP</displayForm>
+ <namePart type="family">Hines Douglas Corporate Center LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>SCMC, LLC</displayForm>
+ <namePart type="family">SCMC, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>LA-Lakeway, L.L.C.</displayForm>
+ <namePart type="family">LA-Lakeway, L.L.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Unire Real Estate Group, Inc</displayForm>
+ <namePart type="family">Unire Real Estate Group, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Gossin</displayForm>
+ <namePart type="family">Gossin</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>MEI Realty Ltd</displayForm>
+ <namePart type="family">MEI Realty Ltd</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Landlord W2007 Seattle Office One</displayForm>
+ <namePart type="family">Landlord W2007 Seattle Office One</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Brice, Vander Linden &amp; Wernick, P.C.</displayForm>
+ <namePart type="family">Brice, Vander Linden &amp; Wernick, P.C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>PHNS, Inc.</displayForm>
+ <namePart type="family">PHNS, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HPBFGLB Saddleback, LLC</displayForm>
+ <namePart type="family">HPBFGLB Saddleback, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Marcella McDonald</displayForm>
+ <namePart type="family">McDonald</namePart>
+ <namePart type="given">Marcella</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>State of Florida Department of Revenue</displayForm>
+ <namePart type="family">State of Florida Department of Revenue</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne County Register of Deeds</displayForm>
+ <namePart type="family">Wayne County Register of Deeds</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>San Joaquin County Tax Collector</displayForm>
+ <namePart type="family">San Joaquin County Tax Collector</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>BET REALTY, LLC</displayForm>
+ <namePart type="family">BET REALTY, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>US Bank, N.A.</displayForm>
+ <namePart type="family">US Bank, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>The Bank of New York Mellon f/k/a The Bank of New York</displayForm>
+ <namePart type="family">The Bank of New York Mellon f/k/a The Bank of New York</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>SN Servicing Corporation</displayForm>
+ <namePart type="family">SN Servicing Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>BMW Bank of North America, Inc. Department</displayForm>
+ <namePart type="family">BMW Bank of North America, Inc. Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC</displayForm>
+ <namePart type="family">FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Bank NA</displayForm>
+ <namePart type="family">Wells Fargo Bank NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>ArchBay Holdings, LLC - Series 2010C</displayForm>
+ <namePart type="family">ArchBay Holdings, LLC - Series 2010C</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Oklahoma Employment Security Commission</displayForm>
+ <namePart type="family">Oklahoma Employment Security Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-9_08-bk-10632</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>9:08-bk-10632</caseNumber>
+ <caseOffice>West Palm Beach</caseOffice>
+ <party fullName="Friedman, Billings Ramsey Group, Inc." lastName="Friedman, Billings Ramsey Group, Inc." role="Interested Party"></party>
+ <party firstName="J." fullName="J. William Boone" lastName="Boone" middleName="William" role="Special Counsel"></party>
+ <party fullName="NLC Holding Corp" lastName="NLC Holding Corp" role="Creditor"></party>
+ <party fullName="CESC Four Skyline Place LLC" lastName="CESC Four Skyline Place LLC" role="Creditor"></party>
+ <party firstName="Adam" fullName="Adam T Klein" lastName="Klein" middleName="T" role="Special Counsel"></party>
+ <party firstName="Jack" fullName="Jack A. Raisner" lastName="Raisner" middleName="A." role="Special Counsel"></party>
+ <party firstName="Rene" fullName="Rene S. Roupinian" lastName="Roupinian" middleName="S." role="Special Counsel"></party>
+ <party fullName="Mesirow Financial Interim Management, LLC" lastName="Mesirow Financial Interim Management, LLC" role="Other Professional"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="US Bank National Association" lastName="US Bank National Association" role="Creditor"></party>
+ <party fullName="Berger Singerman, P.A." lastName="Berger Singerman, P.A." role="Attorney"></party>
+ <party fullName="First NLC Financial Services, LLC" lastName="First NLC Financial Services, LLC" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party fullName="First NLC" lastName="First NLC" role="Debtor"></party>
+ <party fullName="The Lending Center" lastName="The Lending Center" role="Debtor"></party>
+ <party fullName="Florida Mortgage Network" lastName="Florida Mortgage Network" role="Debtor"></party>
+ <party fullName="First NLC, Inc." lastName="First NLC, Inc." role="Interested Party"></party>
+ <party fullName="NLC, Inc." lastName="NLC, Inc." role="Interested Party"></party>
+ <party fullName="BGK Texas Property Management LLC" lastName="BGK Texas Property Management LLC" role="Creditor"></party>
+ <party fullName="Host.net" lastName="Host.net" role="Creditor"></party>
+ <party fullName="Parkway Properties LP" lastName="Parkway Properties LP" role="Creditor"></party>
+ <party fullName="Ameriquest Mortgage Company" lastName="Ameriquest Mortgage Company" role="Creditor"></party>
+ <party firstName="Neal" fullName="Neal Henschel" lastName="Henschel" role="Creditor"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey M. Henschel" lastName="Henschel" middleName="M." role="Creditor"></party>
+ <party fullName="ND Properties, Inc" lastName="ND Properties, Inc" role="Creditor"></party>
+ <party fullName="HSBC Mortgage Services" lastName="HSBC Mortgage Services" role="Creditor"></party>
+ <party fullName="Verizon Business Network Services Inc" lastName="Verizon Business Network Services Inc" role="Creditor"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Creditor"></party>
+ <party fullName="Creditors Committee" lastName="Creditors Committee" role="Creditor Committee"></party>
+ <party firstName="Fran" fullName="Fran Kramer" lastName="Kramer" role="Interested Party"></party>
+ <party firstName="Angelia" fullName="Angelia Johnson" lastName="Johnson" role="Interested Party"></party>
+ <party fullName="Flagler Development Company, LLC" lastName="Flagler Development Company, LLC" role="Creditor"></party>
+ <party fullName="Los Angeles County Treasure and Tax Collector" lastName="Los Angeles County Treasure and Tax Collector" role="Creditor"></party>
+ <party firstName="Kenneth" fullName="Kenneth A. Welt" lastName="Welt" middleName="A." role="Other Professional"></party>
+ <party fullName="Office of Financial Regulation" lastName="Office of Financial Regulation" role="Creditor"></party>
+ <party fullName="Broward County Revenue Collection Division" lastName="Broward County Revenue Collection Division" role="Creditor"></party>
+ <party fullName="Iron Mountain Information Management, Inc." lastName="Iron Mountain Information Management, Inc." role="Creditor"></party>
+ <party firstName="Thomas" fullName="Thomas J Allison" lastName="Allison" middleName="J" role="Other Professional"></party>
+ <party fullName="Wells Fargo Bank N.A." lastName="Wells Fargo Bank N.A." role="Creditor"></party>
+ <party fullName="Schwarzberg Spector Duke &amp; Rogers" lastName="Schwarzberg Spector Duke &amp; Rogers" role="Interested Party"></party>
+ <party fullName="Realty Associates Iowa Corporation" lastName="Realty Associates Iowa Corporation" role="Creditor"></party>
+ <party firstName="Andrew" fullName="Andrew J. Maxwell" lastName="Maxwell" middleName="J." role="Interested Party"></party>
+ <party fullName="Maguire Properties-Stadium Gateway, LP" lastName="Maguire Properties-Stadium Gateway, LP" role="Creditor"></party>
+ <party fullName="Aldine Independent School District" lastName="Aldine Independent School District" role="Creditor"></party>
+ <party fullName="Office of Unemployment Compensation Tax Services" lastName="Office of Unemployment Compensation Tax Services" role="Creditor"></party>
+ <party fullName="FNLC Financial Services, Inc." lastName="FNLC Financial Services, Inc." role="Creditor"></party>
+ <party firstName="Lois" fullName="Lois Jamison" lastName="Jamison" role="Creditor"></party>
+ <party firstName="Philip" fullName="Philip R Stein" lastName="Stein" middleName="R" role="Special Counsel"></party>
+ <party firstName="James" fullName="James Kevin Rainey" lastName="Rainey" middleName="Kevin" role="Creditor"></party>
+ <party firstName="Ronald" fullName="Ronald Greenspan" lastName="Greenspan" role="Financial Advisor"></party>
+ <party fullName="Fidelity National Information Services, Inc." lastName="Fidelity National Information Services, Inc." role="Creditor"></party>
+ <party fullName="SNBOA, LLC" lastName="SNBOA, LLC" role="Creditor"></party>
+ <party fullName="SNGC, LLC" lastName="SNGC, LLC" role="Creditor"></party>
+ <party fullName="America&apos;s Servicing Company" lastName="America&apos;s Servicing Company" role="Creditor"></party>
+ <party fullName="Missouri Department of Revenue" lastName="Missouri Department of Revenue" role="Creditor"></party>
+ <party firstName="John" fullName="John W. Ewing Jr." generation="Jr." lastName="Ewing" middleName="W." role="Creditor"></party>
+ <party fullName="Tennessee Department of Revenue" lastName="Tennessee Department of Revenue" role="Creditor"></party>
+ <party fullName="DLJ Mortgage Capital, Inc." lastName="DLJ Mortgage Capital, Inc." role="Creditor"></party>
+ <party firstName="Mac &amp; Harriet" fullName="Mac &amp; Harriet McCutchen" lastName="McCutchen" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, LP" lastName="Litton Loan Servicing, LP" role="Creditor"></party>
+ <party fullName="State of Nebraska Commissioner of Labor" lastName="State of Nebraska Commissioner of Labor" role="Creditor"></party>
+ <party fullName="General Electric Capital Corporation" lastName="General Electric Capital Corporation" role="Creditor"></party>
+ <party firstName="Warren" fullName="Warren R Trazenfeld" lastName="Trazenfeld" middleName="R" role="Interested Party"></party>
+ <party firstName="Tim" fullName="Tim Larin" lastName="Larin" role="Creditor"></party>
+ <party fullName="Deutsche Bank Trust Company" lastName="Deutsche Bank Trust Company" role="Creditor"></party>
+ <party fullName="Prince George&apos;s County, Maryland" lastName="Prince George&apos;s County, Maryland" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="County of San Joaquin" lastName="County of San Joaquin" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party fullName="Saxon Mortgage Services Inc" lastName="Saxon Mortgage Services Inc" role="Creditor"></party>
+ <party firstName="Alan" fullName="Alan J Perlman" lastName="Perlman" middleName="J" role="Mediator"></party>
+ <party firstName="Deborah" fullName="Deborah Menotte" lastName="Menotte" role="Trustee"></party>
+ <party fullName="Blue Boy Limited Partnership" lastName="Blue Boy Limited Partnership" role="Creditor"></party>
+ <party fullName="Bilzin Sumberg Baena Price &amp; Axelrod LLP" lastName="Bilzin Sumberg Baena Price &amp; Axelrod LLP" role="Creditor"></party>
+ <party fullName="NSH Ventures II, L.P." lastName="NSH Ventures II, L.P." role="Creditor"></party>
+ <party fullName="LaSalle Bank NA as trustee" lastName="LaSalle Bank NA as trustee" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party firstName="Neil" fullName="Neil E Herman" lastName="Herman" middleName="E" role="Special Counsel"></party>
+ <party firstName="Scott" fullName="Scott H Bernstein" lastName="Bernstein" middleName="H" role="Special Counsel"></party>
+ <party fullName="Konica Minolta Danka Imaging Company" lastName="Konica Minolta Danka Imaging Company" role="Creditor"></party>
+ <party fullName="Lydian Data Services, LLC" lastName="Lydian Data Services, LLC" role="Creditor"></party>
+ <party fullName="Green Tree Servicing, LLC" lastName="Green Tree Servicing, LLC" role="Creditor"></party>
+ <party fullName="Chase Home Finance LLC." lastName="Chase Home Finance LLC." role="Creditor"></party>
+ <party fullName="REO Properties Corporation" lastName="REO Properties Corporation" role="Creditor"></party>
+ <party fullName="U.S. Bank National Association" lastName="U.S. Bank National Association" role="Creditor"></party>
+ <party fullName="Deutsche Bank Nat&apos;l Trust Co." lastName="Deutsche Bank Nat&apos;l Trust Co." role="Creditor"></party>
+ <party firstName="Rosalie" fullName="Rosalie Perchak" lastName="Perchak" role="Creditor"></party>
+ <party fullName="Bank of New York Mellon" lastName="Bank of New York Mellon" role="Creditor"></party>
+ <party firstName="Kevin" fullName="Kevin Silfvast" lastName="Silfvast" role="Creditor"></party>
+ <party firstName="Sara" fullName="Sara Silfvast" lastName="Silfvast" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, L.P." lastName="Litton Loan Servicing, L.P." role="Creditor"></party>
+ <party fullName="Scientific Records Management" lastName="Scientific Records Management" role="Creditor"></party>
+ <party firstName="Samuel" fullName="Samuel P. Groner" lastName="Groner" middleName="P." role="Special Counsel"></party>
+ <party fullName="CitiMortgage, Inc." lastName="CitiMortgage, Inc." role="Creditor"></party>
+ <party firstName="Randall" fullName="Randall W Jones" lastName="Jones" middleName="W" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Bank of America, National Association" lastName="Bank of America, National Association" role="Creditor"></party>
+ <party fullName="LaSalle Bank N.A." lastName="LaSalle Bank N.A." role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company as Trustee" lastName="Deutsche Bank National Trust Company as Trustee" role="Creditor"></party>
+ <party fullName="Chase Home Finance LLC" lastName="Chase Home Finance LLC" role="Creditor"></party>
+ <party fullName="DB Structured Products, Inc" lastName="DB Structured Products, Inc" role="Creditor"></party>
+ <party firstName="Mari" fullName="Mari C Pina" lastName="Pina" middleName="C" role="Interested Party"></party>
+ <party fullName="The Bank of New York" lastName="The Bank of New York" role="Creditor"></party>
+ <party fullName="JPMC Specialty Mortgage LLC" lastName="JPMC Specialty Mortgage LLC" role="Creditor"></party>
+ <party fullName="Select Portfolio Servicing Inc" lastName="Select Portfolio Servicing Inc" role="Creditor"></party>
+ <party firstName="Jennifer" fullName="Jennifer Amaro" lastName="Amaro" role="Creditor"></party>
+ <party firstName="Clarita" fullName="Clarita A Gonzalez" lastName="Gonzalez" middleName="A" role="Creditor"></party>
+ <party fullName="EMC Mortgage Corporation" lastName="EMC Mortgage Corporation" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing LP..." lastName="Litton Loan Servicing LP..." role="Creditor"></party>
+ <party fullName="FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC" lastName="FV-1 IN TRUST FOR MORGAN STANLEY MORTGAGE CAPITAL HOLDINGS LLC" role="Creditor"></party>
+ <party firstName="Soneet" fullName="Soneet R. Kapila" lastName="Kapila" middleName="R." role="Accountant"></party>
+ <party firstName="Sheri" fullName="Sheri L Rodriguez" lastName="Rodriguez" middleName="L" role="Creditor"></party>
+ <party firstName="Charles" fullName="Charles D. Brigman" lastName="Brigman" middleName="D." role="Creditor"></party>
+ <party firstName="Robert" fullName="Robert Cosentino" lastName="Cosentino" role="Creditor"></party>
+ <party firstName="Maurice" fullName="Maurice Thune" lastName="Thune" role="Creditor"></party>
+ <party firstName="Karen" fullName="Karen Loney" lastName="Loney" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1" lastName="Deutsche Bank National Trust Company, as trustee for IXIS Real Estate Capital Trust 2007 HE-1" role="Creditor"></party>
+ <party fullName="EMC Mortgage Corporation" lastName="EMC Mortgage Corporation" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="HSBC Bank USA, National Association" lastName="HSBC Bank USA, National Association" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="Litton Loan Servicing, LP," lastName="Litton Loan Servicing, LP," role="Creditor"></party>
+ <party firstName="Jackie" fullName="Jackie Le" lastName="Le" role="Creditor"></party>
+ <party fullName="Blackstone Center Lmtd Partnership" lastName="Blackstone Center Lmtd Partnership" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="DRA/CLP Concourse Center Tampa, LLC" lastName="DRA/CLP Concourse Center Tampa, LLC" role="Creditor"></party>
+ <party fullName="CitiMortgage, Inc." lastName="CitiMortgage, Inc." role="Creditor"></party>
+ <party fullName="BRE/Boca Corporate Center L.L.C." lastName="BRE/Boca Corporate Center L.L.C." role="Creditor"></party>
+ <party fullName="Broadbandone, Inc. d/b/a Host.net" lastName="Broadbandone, Inc. d/b/a Host.net" role="Creditor"></party>
+ <party fullName="US Bank,NA,ND" lastName="US Bank,NA,ND" role="Creditor"></party>
+ <party fullName="Deutsche Bank National Trust Company" lastName="Deutsche Bank National Trust Company" role="Creditor"></party>
+ <party fullName="US Bank National Association" lastName="US Bank National Association" role="Creditor"></party>
+ <party fullName="US Bank Consumer Finance" lastName="US Bank Consumer Finance" role="Creditor"></party>
+ <party fullName="Donald G Lyon Family Trust" lastName="Donald G Lyon Family Trust" role="Creditor"></party>
+ <party fullName="Hines VAF II Sacramento Properties, LP" lastName="Hines VAF II Sacramento Properties, LP" role="Creditor"></party>
+ <party fullName="Americas Servicing Company" lastName="Americas Servicing Company" role="Creditor"></party>
+ <party fullName="Hines Douglas Corporate Center LP" lastName="Hines Douglas Corporate Center LP" role="Creditor"></party>
+ <party fullName="SCMC, LLC" lastName="SCMC, LLC" role="Creditor"></party>
+ <party fullName="LA-Lakeway, L.L.C." lastName="LA-Lakeway, L.L.C." role="Creditor"></party>
+ <party fullName="Unire Real Estate Group, Inc" lastName="Unire Real Estate Group, Inc" role="Creditor"></party>
+ <party firstName="Jane" fullName="Jane Gossin" lastName="Gossin" role="Creditor"></party>
+ <party fullName="MEI Realty Ltd" lastName="MEI Realty Ltd" role="Creditor"></party>
+ <party fullName="Landlord W2007 Seattle Office One" lastName="Landlord W2007 Seattle Office One" role="Creditor"></party>
+ <party fullName="Brice, Vander Linden &amp; Wernick, P.C." lastName="Brice, Vander Linden &amp; Wernick, P.C." role="Creditor"></party>
+ <party fullName="PHNS, Inc." lastName="PHNS, Inc." role="Creditor"></party>
+ <party fullName="HPBFGLB Saddleback, LLC" lastName="HPBFGLB Saddleback, LLC" role="Creditor"></party>
+ <party firstName="Marcella" fullName="Marcella McDonald" lastName="McDonald" role="Creditor"></party>
+ <party fullName="State of Florida Department of Revenue" lastName="State of Florida Department of Revenue" role="Creditor"></party>
+ <party fullName="Wayne County Register of Deeds" lastName="Wayne County Register of Deeds" role="Creditor"></party>
+ <party fullName="San Joaquin County Tax Collector" lastName="San Joaquin County Tax Collector" role="Creditor"></party>
+ <party fullName="BET REALTY, LLC" lastName="BET REALTY, LLC" role="Interested Party"></party>
+ <party fullName="US Bank, N.A." lastName="US Bank, N.A." role="Creditor"></party>
+ <party fullName="The Bank of New York Mellon f/k/a The Bank of New York" lastName="The Bank of New York Mellon f/k/a The Bank of New York" role="Creditor"></party>
+ <party fullName="SN Servicing Corporation" lastName="SN Servicing Corporation" role="Creditor"></party>
+ <party fullName="BMW Bank of North America, Inc. Department" lastName="BMW Bank of North America, Inc. Department" role="Creditor"></party>
+ <party fullName="FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC" lastName="FDG Southpark I LLC as successor in interest to Flagler Development Company, LLC" role="Creditor"></party>
+ <party fullName="Wells Fargo Bank NA" lastName="Wells Fargo Bank NA" role="Creditor"></party>
+ <party fullName="ArchBay Holdings, LLC - Series 2010C" lastName="ArchBay Holdings, LLC - Series 2010C" role="Creditor"></party>
+ <party fullName="Oklahoma Employment Security Commission" lastName="Oklahoma Employment Security Commission" role="Creditor"></party>
+ <state>Florida</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-9_08-bk-10632-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-0/mods.xml">
+ <titleInfo>
+  <title>First NLC Financial Services, LLC</title>
+  <subTitle>Interim Order Granting Application to Employ Berger Singerman (Re: # 13) (Eisenberg, Randy) Modified on 1/29/2008 to reflect &quot;Opinion&quot; (Manboard, Sandra).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632/pdf/USCOURTS-flsb-9_08-bk-10632-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189ce6d5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-0</identifier>
+ <identifier type="former granule identifier">flsb-9_08-bk-10632_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632/pdf/USCOURTS-flsb-9_08-bk-10632-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-bk-10632; First NLC Financial Services, LLC; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-9_08-bk-10632-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-28</dateIssued>
+  <docketText>Interim Order Granting Application to Employ Berger Singerman (Re: # 13) (Eisenberg, Randy) Modified on 1/29/2008 to reflect &quot;Opinion&quot; (Manboard, Sandra).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-9_08-bk-10632-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-1/mods.xml">
+ <titleInfo>
+  <title>First NLC Financial Services, LLC</title>
+  <subTitle>Order Granting Application to Employ Thomas J Allison (Re: # 17) (Eisenberg, Randy) Modified on 1/29/2008 to reflect &quot;Opinion&quot; (Manboard, Sandra).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632/pdf/USCOURTS-flsb-9_08-bk-10632-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189ce6d5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-1</identifier>
+ <identifier type="former granule identifier">flsb-9_08-bk-10632_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-9_08-bk-10632/USCOURTS-flsb-9_08-bk-10632-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-9_08-bk-10632/pdf/USCOURTS-flsb-9_08-bk-10632-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:08-bk-10632; First NLC Financial Services, LLC; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-9_08-bk-10632-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-28</dateIssued>
+  <docketText>Order Granting Application to Employ Thomas J Allison (Re: # 17) (Eisenberg, Randy) Modified on 1/29/2008 to reflect &quot;Opinion&quot; (Manboard, Sandra).</docketText>
+</extension>
+</relatedItem>
+</mods>

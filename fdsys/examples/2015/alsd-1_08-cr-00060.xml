@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9e34">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060</identifier>
+<identifier type="local">P0b002ee18a8a9e34</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_08-cr-00060</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_08-cr-00060</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:08-cr-00060</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jason" fullName="Jason Fitzgerald McCall" lastName="McCall" middleName="Fitzgerald" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. McCall</title>
+ <partNumber>1:08-cr-00060</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cr-00060;08-060</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jason Fitzgerald McCall</displayForm>
+ <namePart type="family">McCall</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_08-cr-00060</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:08-cr-00060</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jason" fullName="Jason Fitzgerald McCall" lastName="McCall" middleName="Fitzgerald" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_08-cr-00060-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-0/mods.xml">
+ <titleInfo>
+  <title>USA v. McCall</title>
+  <subTitle>JUDGMENT as to Jason Fitzgerald McCall, Count 1 - Imprisonment: 57 months w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment program is available; SRT: 3 years w/special condition that dft participate in a program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00; Count 2 - Dismissed on motion of the government. Signed by Chief Judge Callie V. S. Granade on 10/3/08. (tot)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060/pdf/USCOURTS-alsd-1_08-cr-00060-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8ae90c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-0</identifier>
+ <identifier type="former granule identifier">alsd-1_08-cr-00060_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060/pdf/USCOURTS-alsd-1_08-cr-00060-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00060; USA v. McCall; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_08-cr-00060-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-03</dateIssued>
+  <docketText>JUDGMENT as to Jason Fitzgerald McCall, Count 1 - Imprisonment: 57 months w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment program is available; SRT: 3 years w/special condition that dft participate in a program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00; Count 2 - Dismissed on motion of the government. Signed by Chief Judge Callie V. S. Granade on 10/3/08. (tot)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_08-cr-00060-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-1/mods.xml">
+ <titleInfo>
+  <title>USA v. McCall</title>
+  <subTitle>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM as to Jason Fitzgerald McCall, Sentence Imposed 12/16/14, Imprisonment: 6 months. Signed by Judge Callie V. S. Granade on 1/5/2015. (tot)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060/pdf/USCOURTS-alsd-1_08-cr-00060-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8ae90b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-1</identifier>
+ <identifier type="former granule identifier">alsd-1_08-cr-00060_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_08-cr-00060/USCOURTS-alsd-1_08-cr-00060-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_08-cr-00060/pdf/USCOURTS-alsd-1_08-cr-00060-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-00060; USA v. McCall; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_08-cr-00060-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>JUDGMENT ON REVOCATION OF SUPERVISED RELEASE TERM as to Jason Fitzgerald McCall, Sentence Imposed 12/16/14, Imprisonment: 6 months. Signed by Judge Callie V. S. Granade on 1/5/2015. (tot)</docketText>
+</extension>
+</relatedItem>
+</mods>

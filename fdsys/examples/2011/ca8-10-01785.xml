@@ -1,0 +1,331 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e3ef23">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01785</identifier>
+<identifier type="local">P0b002ee180e3ef23</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-10-01785</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-01785</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-01785</caseNumber>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Lorene" fullName="Lorene Armstrong" lastName="Armstrong" role="Appellee"></party>
+ <party firstName="Teddy" fullName="Teddy Barnes" lastName="Barnes" role="Appellee"></party>
+ <party firstName="Bobby" fullName="Bobby Bollinger" lastName="Bollinger" role="Appellee"></party>
+ <party firstName="Harvey" fullName="Harvey Cannoles" lastName="Cannoles" role="Appellee"></party>
+ <party firstName="Kenneth" fullName="Kenneth Dalton" lastName="Dalton" role="Appellee"></party>
+ <party firstName="Terry" fullName="Terry Dare" lastName="Dare" role="Appellee"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="Larry" fullName="Larry Eaglebear" lastName="Eaglebear" role="Appellee"></party>
+ <party firstName="Sylvester" fullName="Sylvester Everett Hahn" lastName="Hahn" middleName="Everett" role="Appellant"></party>
+ <party firstName="Ryan" fullName="Ryan Hillis" lastName="Hillis" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard Leavitt" lastName="Leavitt" role="Appellee"></party>
+ <party firstName="Anthony" fullName="Anthony Melton" lastName="Melton" role="Appellee"></party>
+ <party firstName="Alford" fullName="Alford Northern" lastName="Northern" role="Appellee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Parks" lastName="Parks" role="Appellee"></party>
+ <party firstName="David" fullName="David A. Penrod" lastName="Penrod" middleName="A." role="Appellee"></party>
+ <party firstName="Jonathan" fullName="Jonathan Rice" lastName="Rice" role="Appellee"></party>
+ <party firstName="Layla" fullName="Layla Sutton" lastName="Sutton" role="Appellee"></party>
+ <party firstName="Brad" fullName="Brad Troutt" lastName="Troutt" role="Appellee"></party>
+ <party firstName="Susan" fullName="Susan Wickliffe" lastName="Wickliffe" role="Appellee"></party>
+ <party firstName="Johnny" fullName="Johnny Williams" lastName="Williams" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>Sylvester Hahn v. Lorene Armstrong, et al</title>
+ <partNumber>10-01785</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01785/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">10-01785;10-1785</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lorene Armstrong</displayForm>
+ <namePart type="family">Armstrong</namePart>
+ <namePart type="given">Lorene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Teddy Barnes</displayForm>
+ <namePart type="family">Barnes</namePart>
+ <namePart type="given">Teddy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Bobby Bollinger</displayForm>
+ <namePart type="family">Bollinger</namePart>
+ <namePart type="given">Bobby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Harvey Cannoles</displayForm>
+ <namePart type="family">Cannoles</namePart>
+ <namePart type="given">Harvey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Dalton</displayForm>
+ <namePart type="family">Dalton</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Dare</displayForm>
+ <namePart type="family">Dare</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Eaglebear</displayForm>
+ <namePart type="family">Eaglebear</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Sylvester Everett Hahn</displayForm>
+ <namePart type="family">Hahn</namePart>
+ <namePart type="given">Sylvester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan Hillis</displayForm>
+ <namePart type="family">Hillis</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Leavitt</displayForm>
+ <namePart type="family">Leavitt</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Melton</displayForm>
+ <namePart type="family">Melton</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Alford Northern</displayForm>
+ <namePart type="family">Northern</namePart>
+ <namePart type="given">Alford</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Parks</displayForm>
+ <namePart type="family">Parks</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>David A. Penrod</displayForm>
+ <namePart type="family">Penrod</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Jonathan Rice</displayForm>
+ <namePart type="family">Rice</namePart>
+ <namePart type="given">Jonathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Layla Sutton</displayForm>
+ <namePart type="family">Sutton</namePart>
+ <namePart type="given">Layla</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Brad Troutt</displayForm>
+ <namePart type="family">Troutt</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Susan Wickliffe</displayForm>
+ <namePart type="family">Wickliffe</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny Williams</displayForm>
+ <namePart type="family">Williams</namePart>
+ <namePart type="given">Johnny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-10-01785</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>10-01785</caseNumber>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Lorene" fullName="Lorene Armstrong" lastName="Armstrong" role="Appellee"></party>
+ <party firstName="Teddy" fullName="Teddy Barnes" lastName="Barnes" role="Appellee"></party>
+ <party firstName="Bobby" fullName="Bobby Bollinger" lastName="Bollinger" role="Appellee"></party>
+ <party firstName="Harvey" fullName="Harvey Cannoles" lastName="Cannoles" role="Appellee"></party>
+ <party firstName="Kenneth" fullName="Kenneth Dalton" lastName="Dalton" role="Appellee"></party>
+ <party firstName="Terry" fullName="Terry Dare" lastName="Dare" role="Appellee"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Appellee"></party>
+ <party firstName="Larry" fullName="Larry Eaglebear" lastName="Eaglebear" role="Appellee"></party>
+ <party firstName="Sylvester" fullName="Sylvester Everett Hahn" lastName="Hahn" middleName="Everett" role="Appellant"></party>
+ <party firstName="Ryan" fullName="Ryan Hillis" lastName="Hillis" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard Leavitt" lastName="Leavitt" role="Appellee"></party>
+ <party firstName="Anthony" fullName="Anthony Melton" lastName="Melton" role="Appellee"></party>
+ <party firstName="Alford" fullName="Alford Northern" lastName="Northern" role="Appellee"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Parks" lastName="Parks" role="Appellee"></party>
+ <party firstName="David" fullName="David A. Penrod" lastName="Penrod" middleName="A." role="Appellee"></party>
+ <party firstName="Jonathan" fullName="Jonathan Rice" lastName="Rice" role="Appellee"></party>
+ <party firstName="Layla" fullName="Layla Sutton" lastName="Sutton" role="Appellee"></party>
+ <party firstName="Brad" fullName="Brad Troutt" lastName="Troutt" role="Appellee"></party>
+ <party firstName="Susan" fullName="Susan Wickliffe" lastName="Wickliffe" role="Appellee"></party>
+ <party firstName="Johnny" fullName="Johnny Williams" lastName="Williams" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-10-01785-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01785/USCOURTS-ca8-10-01785-0/mods.xml">
+ <titleInfo>
+  <title>Sylvester Hahn v. Lorene Armstrong, et al</title>
+  <subTitle>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, KERMIT E. BYE and MICHAEL J. MELLOY (UNPUBLISHED) [3745337] [10-1785]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-10-01785-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e43e04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01785/USCOURTS-ca8-10-01785-0</identifier>
+ <identifier type="former granule identifier">ca8-10-01785_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-10-01785/USCOURTS-ca8-10-01785-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-10-01785/pdf/USCOURTS-ca8-10-01785-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 10-01785; Sylvester Hahn v. Lorene Armstrong, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-10-01785-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-18</dateIssued>
+  <docketText>PER CURIAM OPINION FILED - THE COURT: DIANA E. MURPHY, KERMIT E. BYE and MICHAEL J. MELLOY (UNPUBLISHED) [3745337] [10-1785]</docketText>
+</extension>
+</relatedItem>
+</mods>

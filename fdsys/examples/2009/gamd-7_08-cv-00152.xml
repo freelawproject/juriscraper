@@ -1,0 +1,458 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1812d5166">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_08-cv-00152</identifier>
+<identifier type="local">P0b002ee1812d5166</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_08-cv-00152</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_08-cv-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:08-cv-00152</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="ABKCO Music Inc" lastName="ABKCO Music Inc" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Peter Balazary" lastName="Balazary" middleName="Peter" role="Plaintiff"></party>
+ <party fullName="Brew Music Company" lastName="Brew Music Company" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald G. Brewer" lastName="Brewer" middleName="G." role="Plaintiff"></party>
+ <party fullName="Broadcast Music, Inc." lastName="Broadcast Music, Inc." role="Plaintiff"></party>
+ <party fullName="CAREERS BMG MUSIC PUBLISHING INC" lastName="CAREERS BMG MUSIC PUBLISHING INC" role="Plaintiff"></party>
+ <party fullName="CHARLEY OCORLEYS IRISH PUB" lastName="CHARLEY OCORLEYS IRISH PUB" role="Defendant"></party>
+ <party fullName="EMI Longitude Music" lastName="EMI Longitude Music" role="Plaintiff"></party>
+ <party fullName="EMI Virgin Songs, Inc" lastName="EMI Virgin Songs, Inc" role="Plaintiff"></party>
+ <party fullName="Eric John Wilson Publishing" lastName="Eric John Wilson Publishing" role="Plaintiff"></party>
+ <party fullName="Floyd I. Gaugh IV Publishing" lastName="Floyd I. Gaugh IV Publishing" role="Plaintiff"></party>
+ <party firstName="CHAD" fullName="CHAD GAYLOR" lastName="GAYLOR" role="Plaintiff"></party>
+ <party fullName="Gasoline Alley Music" lastName="Gasoline Alley Music" role="Plaintiff"></party>
+ <party fullName="Gasoline Alley Music Inc" lastName="Gasoline Alley Music Inc" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd I Gaugh IV" generation="IV" lastName="Gaugh" middleName="I" role="Plaintiff"></party>
+ <party fullName="Get Loose Music Inc" lastName="Get Loose Music Inc" role="Plaintiff"></party>
+ <party fullName="Gregmark Music Inc." lastName="Gregmark Music Inc." role="Plaintiff"></party>
+ <party fullName="House of Cash, Inc" lastName="House of Cash, Inc" role="Plaintiff"></party>
+ <party fullName="Interior Music Corp." lastName="Interior Music Corp." role="Plaintiff"></party>
+ <party fullName="Irving Music" lastName="Irving Music" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Kiedis" lastName="Kiedis" role="Plaintiff"></party>
+ <party fullName="Lord and Walker Publishing" lastName="Lord and Walker Publishing" role="Plaintiff"></party>
+ <party fullName="Lou Dog Publishing" lastName="Lou Dog Publishing" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Navarro" lastName="Navarro" role="Plaintiff"></party>
+ <party firstName="Radley" fullName="Radley J. Nowell" lastName="Nowell" middleName="J." role="Plaintiff"></party>
+ <party fullName="Rondor Music International Inc" lastName="Rondor Music International Inc" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth E. Saunders" lastName="Saunders" middleName="E." role="Defendant"></party>
+ <party fullName="Saunders Enterprises LLC" lastName="Saunders Enterprises LLC" role="Defendant"></party>
+ <party fullName="Songs of Universal Inc" lastName="Songs of Universal Inc" role="Plaintiff"></party>
+ <party fullName="Sony/ATV Songs LLC" lastName="Sony/ATV Songs LLC" role="Plaintiff"></party>
+ <party fullName="Sony/ATV Tree Publishing" lastName="Sony/ATV Tree Publishing" role="Plaintiff"></party>
+ <party fullName="Three Pounds of Love Music" lastName="Three Pounds of Love Music" role="Plaintiff"></party>
+ <party fullName="Trust No One Music" lastName="Trust No One Music" role="Plaintiff"></party>
+ <party fullName="Universal Songs of Polygram International Inc" lastName="Universal Songs of Polygram International Inc" role="Plaintiff"></party>
+ <party firstName="Bernita" fullName="Bernita Walker-Moss" lastName="Walker-Moss" role="Plaintiff"></party>
+ <party firstName="Eric" fullName="Eric John Wilson" lastName="Wilson" middleName="John" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Broadcast Music, Inc. et al v. Saunders Enterprises LLC et al</title>
+ <partNumber>7:08-cv-00152</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_08-cv-00152/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:08-cv-00152;08-152</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ABKCO Music Inc</displayForm>
+ <namePart type="family">ABKCO Music Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Peter Balazary</displayForm>
+ <namePart type="family">Balazary</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Brew Music Company</displayForm>
+ <namePart type="family">Brew Music Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald G. Brewer</displayForm>
+ <namePart type="family">Brewer</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Broadcast Music, Inc.</displayForm>
+ <namePart type="family">Broadcast Music, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CAREERS BMG MUSIC PUBLISHING INC</displayForm>
+ <namePart type="family">CAREERS BMG MUSIC PUBLISHING INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CHARLEY OCORLEYS IRISH PUB</displayForm>
+ <namePart type="family">CHARLEY OCORLEYS IRISH PUB</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EMI Longitude Music</displayForm>
+ <namePart type="family">EMI Longitude Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>EMI Virgin Songs, Inc</displayForm>
+ <namePart type="family">EMI Virgin Songs, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eric John Wilson Publishing</displayForm>
+ <namePart type="family">Eric John Wilson Publishing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Floyd I. Gaugh IV Publishing</displayForm>
+ <namePart type="family">Floyd I. Gaugh IV Publishing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CHAD GAYLOR</displayForm>
+ <namePart type="family">GAYLOR</namePart>
+ <namePart type="given">CHAD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gasoline Alley Music</displayForm>
+ <namePart type="family">Gasoline Alley Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gasoline Alley Music Inc</displayForm>
+ <namePart type="family">Gasoline Alley Music Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Floyd I Gaugh IV</displayForm>
+ <namePart type="family">Gaugh</namePart>
+ <namePart type="given">Floyd</namePart>
+ <namePart type="termsOfAddress">IV</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Get Loose Music Inc</displayForm>
+ <namePart type="family">Get Loose Music Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gregmark Music Inc.</displayForm>
+ <namePart type="family">Gregmark Music Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>House of Cash, Inc</displayForm>
+ <namePart type="family">House of Cash, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Interior Music Corp.</displayForm>
+ <namePart type="family">Interior Music Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Irving Music</displayForm>
+ <namePart type="family">Irving Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Kiedis</displayForm>
+ <namePart type="family">Kiedis</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lord and Walker Publishing</displayForm>
+ <namePart type="family">Lord and Walker Publishing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lou Dog Publishing</displayForm>
+ <namePart type="family">Lou Dog Publishing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Navarro</displayForm>
+ <namePart type="family">Navarro</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Radley J. Nowell</displayForm>
+ <namePart type="family">Nowell</namePart>
+ <namePart type="given">Radley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Rondor Music International Inc</displayForm>
+ <namePart type="family">Rondor Music International Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth E. Saunders</displayForm>
+ <namePart type="family">Saunders</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saunders Enterprises LLC</displayForm>
+ <namePart type="family">Saunders Enterprises LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Songs of Universal Inc</displayForm>
+ <namePart type="family">Songs of Universal Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sony/ATV Songs LLC</displayForm>
+ <namePart type="family">Sony/ATV Songs LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sony/ATV Tree Publishing</displayForm>
+ <namePart type="family">Sony/ATV Tree Publishing</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Three Pounds of Love Music</displayForm>
+ <namePart type="family">Three Pounds of Love Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trust No One Music</displayForm>
+ <namePart type="family">Trust No One Music</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Universal Songs of Polygram International Inc</displayForm>
+ <namePart type="family">Universal Songs of Polygram International Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Bernita Walker-Moss</displayForm>
+ <namePart type="family">Walker-Moss</namePart>
+ <namePart type="given">Bernita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eric John Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_08-cv-00152</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:08-cv-00152</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:101 Copyright Infringement</cause>
+ <party fullName="ABKCO Music Inc" lastName="ABKCO Music Inc" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Peter Balazary" lastName="Balazary" middleName="Peter" role="Plaintiff"></party>
+ <party fullName="Brew Music Company" lastName="Brew Music Company" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald G. Brewer" lastName="Brewer" middleName="G." role="Plaintiff"></party>
+ <party fullName="Broadcast Music, Inc." lastName="Broadcast Music, Inc." role="Plaintiff"></party>
+ <party fullName="CAREERS BMG MUSIC PUBLISHING INC" lastName="CAREERS BMG MUSIC PUBLISHING INC" role="Plaintiff"></party>
+ <party fullName="CHARLEY OCORLEYS IRISH PUB" lastName="CHARLEY OCORLEYS IRISH PUB" role="Defendant"></party>
+ <party fullName="EMI Longitude Music" lastName="EMI Longitude Music" role="Plaintiff"></party>
+ <party fullName="EMI Virgin Songs, Inc" lastName="EMI Virgin Songs, Inc" role="Plaintiff"></party>
+ <party fullName="Eric John Wilson Publishing" lastName="Eric John Wilson Publishing" role="Plaintiff"></party>
+ <party fullName="Floyd I. Gaugh IV Publishing" lastName="Floyd I. Gaugh IV Publishing" role="Plaintiff"></party>
+ <party firstName="CHAD" fullName="CHAD GAYLOR" lastName="GAYLOR" role="Plaintiff"></party>
+ <party fullName="Gasoline Alley Music" lastName="Gasoline Alley Music" role="Plaintiff"></party>
+ <party fullName="Gasoline Alley Music Inc" lastName="Gasoline Alley Music Inc" role="Plaintiff"></party>
+ <party firstName="Floyd" fullName="Floyd I Gaugh IV" generation="IV" lastName="Gaugh" middleName="I" role="Plaintiff"></party>
+ <party fullName="Get Loose Music Inc" lastName="Get Loose Music Inc" role="Plaintiff"></party>
+ <party fullName="Gregmark Music Inc." lastName="Gregmark Music Inc." role="Plaintiff"></party>
+ <party fullName="House of Cash, Inc" lastName="House of Cash, Inc" role="Plaintiff"></party>
+ <party fullName="Interior Music Corp." lastName="Interior Music Corp." role="Plaintiff"></party>
+ <party fullName="Irving Music" lastName="Irving Music" role="Plaintiff"></party>
+ <party firstName="Anthony" fullName="Anthony Kiedis" lastName="Kiedis" role="Plaintiff"></party>
+ <party fullName="Lord and Walker Publishing" lastName="Lord and Walker Publishing" role="Plaintiff"></party>
+ <party fullName="Lou Dog Publishing" lastName="Lou Dog Publishing" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Navarro" lastName="Navarro" role="Plaintiff"></party>
+ <party firstName="Radley" fullName="Radley J. Nowell" lastName="Nowell" middleName="J." role="Plaintiff"></party>
+ <party fullName="Rondor Music International Inc" lastName="Rondor Music International Inc" role="Plaintiff"></party>
+ <party firstName="Kenneth" fullName="Kenneth E. Saunders" lastName="Saunders" middleName="E." role="Defendant"></party>
+ <party fullName="Saunders Enterprises LLC" lastName="Saunders Enterprises LLC" role="Defendant"></party>
+ <party fullName="Songs of Universal Inc" lastName="Songs of Universal Inc" role="Plaintiff"></party>
+ <party fullName="Sony/ATV Songs LLC" lastName="Sony/ATV Songs LLC" role="Plaintiff"></party>
+ <party fullName="Sony/ATV Tree Publishing" lastName="Sony/ATV Tree Publishing" role="Plaintiff"></party>
+ <party fullName="Three Pounds of Love Music" lastName="Three Pounds of Love Music" role="Plaintiff"></party>
+ <party fullName="Trust No One Music" lastName="Trust No One Music" role="Plaintiff"></party>
+ <party fullName="Universal Songs of Polygram International Inc" lastName="Universal Songs of Polygram International Inc" role="Plaintiff"></party>
+ <party firstName="Bernita" fullName="Bernita Walker-Moss" lastName="Walker-Moss" role="Plaintiff"></party>
+ <party firstName="Eric" fullName="Eric John Wilson" lastName="Wilson" middleName="John" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_08-cv-00152-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_08-cv-00152/USCOURTS-gamd-7_08-cv-00152-0/mods.xml">
+ <titleInfo>
+  <title>Broadcast Music, Inc. et al v. Saunders Enterprises LLC et al</title>
+  <subTitle>ORDER denying 6 Motion for Default Judgment. Ordered by Judge Hugh Lawson on 1/16/2009. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_08-cv-00152-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812f74ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_08-cv-00152/USCOURTS-gamd-7_08-cv-00152-0</identifier>
+ <identifier type="former granule identifier">gamd-7_08-cv-00152_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_08-cv-00152/USCOURTS-gamd-7_08-cv-00152-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_08-cv-00152/pdf/USCOURTS-gamd-7_08-cv-00152-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:08-cv-00152; Broadcast Music, Inc. et al v. Saunders Enterprises LLC et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_08-cv-00152-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-16</dateIssued>
+  <docketText>ORDER denying 6 Motion for Default Judgment. Ordered by Judge Hugh Lawson on 1/16/2009. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

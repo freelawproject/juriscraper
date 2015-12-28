@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1827e4c9d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-05-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-05-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309</identifier>
+<identifier type="local">P0b002ee1827e4c9d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-05-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-05-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cr-00309</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00309</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00309</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Hap" fullName="Hap E. Staman" lastName="Staman" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Staman</title>
+ <partNumber>8:11-cr-00309</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cr-00309;11-309</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Hap E. Staman</displayForm>
+ <namePart type="family">Staman</namePart>
+ <namePart type="given">Hap</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cr-00309</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cr-00309</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Hap" fullName="Hap E. Staman" lastName="Staman" middleName="E." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00309-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Staman</title>
+  <subTitle>ORDER - IT IS ORDERED: Defendant Staman&apos;s motion for an extension of time (Filing No. 15) is granted. Staman is given until on or before December 30, 2011, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between November 30, 2011, and December 30, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Hap E. Staman. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00309-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1827e597e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00309_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309/pdf/USCOURTS-ned-8_11-cr-00309-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00309; USA v. Staman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00309-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-30</dateIssued>
+  <docketText>ORDER - IT IS ORDERED: Defendant Staman&apos;s motion for an extension of time (Filing No. 15) is granted. Staman is given until on or before December 30, 2011, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between November 30, 2011, and December 30, 2011, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Hap E. Staman. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00309-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Staman</title>
+  <subTitle>ORDER - Defendant Staman&apos;s motion for an extension of time (Filing No. 18) is granted. Staman is given until on or before January 9, 2012, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between January 3, 2012, and January 9, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Hap E. Staman. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00309-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1827e5980</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00309_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309/pdf/USCOURTS-ned-8_11-cr-00309-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00309; USA v. Staman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00309-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>ORDER - Defendant Staman&apos;s motion for an extension of time (Filing No. 18) is granted. Staman is given until on or before January 9, 2012, in which to file pretrial motions pursuant to the progression order. The additional time arising as a result of the granting of the motion, i.e., the time between January 3, 2012, and January 9, 2012, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Hap E. Staman. Ordered by Magistrate Judge Thomas D. Thalken. ( TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00309-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Staman</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Hap E. Staman. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00309-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1827e597f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-2</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00309_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309/pdf/USCOURTS-ned-8_11-cr-00309-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00309; USA v. Staman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00309-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-24</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Hap E. Staman. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cr-00309-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Staman</title>
+  <subTitle>AMENDED TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Hap E. Staman. Ordered by Chief Judge Laurie Smith Camp. (MHB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cr-00309-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1827e597d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-3</identifier>
+ <identifier type="former granule identifier">ned-8_11-cr-00309_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cr-00309/USCOURTS-ned-8_11-cr-00309-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cr-00309/pdf/USCOURTS-ned-8_11-cr-00309-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cr-00309; USA v. Staman; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cr-00309-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-05-24</dateIssued>
+  <docketText>AMENDED TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to Defendant Hap E. Staman. Ordered by Chief Judge Laurie Smith Camp. (MHB)</docketText>
+</extension>
+</relatedItem>
+</mods>

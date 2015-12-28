@@ -1,0 +1,413 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18be2a347">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-03-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-03-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883</identifier>
+<identifier type="local">P0b002ee18be2a347</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-03-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-03-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-01883</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01883</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01883</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Dial" lastName="Dial" role="Defendant"></party>
+ <party firstName="G.W." fullName="G.W. James" lastName="James" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Anthony MacGregor" lastName="MacGregor" middleName="Anthony" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) MacGregor v. Dial et al</title>
+ <partNumber>2:13-cv-01883</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-01883;13-1883</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dial</displayForm>
+ <namePart type="family">Dial</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G.W. James</displayForm>
+ <namePart type="family">James</namePart>
+ <namePart type="given">G.W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Anthony MacGregor</displayForm>
+ <namePart type="family">MacGregor</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-01883</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-01883</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Dial" lastName="Dial" role="Defendant"></party>
+ <party firstName="G.W." fullName="G.W. James" lastName="James" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Anthony MacGregor" lastName="MacGregor" middleName="Anthony" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-0/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Kevin Anthony MacGregor signed by Magistrate Judge Allison Claire on 09/18/13. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-19</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Kevin Anthony MacGregor signed by Magistrate Judge Allison Claire on 09/18/13. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-1/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 11/25/13 ORDERING that 15 Motion to Appoint Counsel is DENIED; it is RECOMMENDED that plaintiffs request for a stay 14 be denied. Referred to Judge Lawrence K. Karlton; Objections to F&amp;R due within 21 days. (Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e08</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-27</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 11/25/13 ORDERING that 15 Motion to Appoint Counsel is DENIED; it is RECOMMENDED that plaintiffs request for a stay 14 be denied. Referred to Judge Lawrence K. Karlton; Objections to F&amp;R due within 21 days. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-2/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 03/26/14 ORDERING plaintiff&apos;s first amended complaint 34 supercedes the original complaint and is now the operative pleading upon which the case proceeds. The 2/06/14 motion to dismiss the original complaint 30 is hereby vacated as moot. Plaintiff&apos;s request for an extension of time 37 is granted. Plaintiff shall file his opposition to the 3/12/14 motion to dismiss 36 no later than 4/21/14. Also, RECOMMENDING that plaintiff&apos;s amended motion to stay 21 be denied for the reasons set forth in the previously issued findings and recommendations 22 and because the amended motion is duplicative of the original motion to stay 14. Amended motion to stay 21 referred to Judge Lawrence K. Karlton. Objections due within 21 days. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e09</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-03-27</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 03/26/14 ORDERING plaintiff&apos;s first amended complaint 34 supercedes the original complaint and is now the operative pleading upon which the case proceeds. The 2/06/14 motion to dismiss the original complaint 30 is hereby vacated as moot. Plaintiff&apos;s request for an extension of time 37 is granted. Plaintiff shall file his opposition to the 3/12/14 motion to dismiss 36 no later than 4/21/14. Also, RECOMMENDING that plaintiff&apos;s amended motion to stay 21 be denied for the reasons set forth in the previously issued findings and recommendations 22 and because the amended motion is duplicative of the original motion to stay 14. Amended motion to stay 21 referred to Judge Lawrence K. Karlton. Objections due within 21 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-3/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 3/31/2014 ORDERING that the 22 Findings and Recommendations are ADOPTED in full. Plaintiff&apos;s 14 request for a stay is DENIED. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e06</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-04-01</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 3/31/2014 ORDERING that the 22 Findings and Recommendations are ADOPTED in full. Plaintiff&apos;s 14 request for a stay is DENIED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-4/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 4/22/2014 VACATING defendants&apos; 36 motion to dismiss; defendants may, within 14 days, bring a motion for summary judgment pursuant to Fed. R. Civ. P. 56 on the issue of administrative exhaustion; defendants may, within 14 days, re-file that portion of the vacated motion brought pursuant to Rule 12(b)(6) in a separate motion or in a combination with any motion for summary judgment regarding the exhaustion of administrative remedies; plaintiff&apos;s 40 motion for an extension of time is DENIED as moot; plaintiff&apos;s 40, 42 motions for the court to order that defendants be required to serve him by certified mail only are DENIED; and plaintiff&apos;s 40, 42 motions for the appointment of counsel are DENIED. (Yin, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e0a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-04-22</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 4/22/2014 VACATING defendants&apos; 36 motion to dismiss; defendants may, within 14 days, bring a motion for summary judgment pursuant to Fed. R. Civ. P. 56 on the issue of administrative exhaustion; defendants may, within 14 days, re-file that portion of the vacated motion brought pursuant to Rule 12(b)(6) in a separate motion or in a combination with any motion for summary judgment regarding the exhaustion of administrative remedies; plaintiff&apos;s 40 motion for an extension of time is DENIED as moot; plaintiff&apos;s 40, 42 motions for the court to order that defendants be required to serve him by certified mail only are DENIED; and plaintiff&apos;s 40, 42 motions for the appointment of counsel are DENIED. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-5/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 6/4/14 ADOPTING IN FULL 38 Findings and Recommendations; DENYING 21 Motion to Stay. (Meuleman, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e0d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-06-05</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 6/4/14 ADOPTING IN FULL 38 Findings and Recommendations; DENYING 21 Motion to Stay. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-6/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Allison Claire on 11/6/14 denying 57 Motion to Appoint Counsel. (Dillon, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e0c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-6</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-11-07</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Allison Claire on 11/6/14 denying 57 Motion to Appoint Counsel. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-7/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 1/5/2015 AFFIRMING the decision of the Magistrate Judge re 63 Order on Motion to Appoint Counsel. (Michel, G)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e0b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-7</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 1/5/2015 AFFIRMING the decision of the Magistrate Judge re 63 Order on Motion to Appoint Counsel. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-8/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 03/03/15 ORDERING defendants&apos; request for judicial notice [45-2} is denied. Also, RECOMMENDING that defendants&apos; motion to dismiss 45 be granted. Plaintiff be given 30 days to file a motion for leave to amend the complaint accompanied by a proposed amended complaint. Defendants&apos; motion for partial summary judgment 46 be vacated as moot. Motions 45 and 46 referred to Judge John A. Mendez. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-8</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-03-04</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 03/03/15 ORDERING defendants&apos; request for judicial notice [45-2} is denied. Also, RECOMMENDING that defendants&apos; motion to dismiss 45 be granted. Plaintiff be given 30 days to file a motion for leave to amend the complaint accompanied by a proposed amended complaint. Defendants&apos; motion for partial summary judgment 46 be vacated as moot. Motions 45 and 46 referred to Judge John A. Mendez. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-01883-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-9/mods.xml">
+ <titleInfo>
+  <title>(PC) MacGregor v. Dial et al</title>
+  <subTitle>ORDER, FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 3/25/15 ORDERING that Defendants&apos; request for judicial notice (ECF No. 45-2) is DENIED; and the March 4, 2015 Order and Findings and Recommendations (ECF No. 75) are VACATED; it is RECOMMENDED that Defendants&apos; motion to dismiss (ECF No. 45) be granted without leave to amend; and Defendants&apos; motion for partial summary judgment (ECF No. 46) be denied as moot. Referred to Judge John A. Mendez; Objections to F&amp;R due within 21 days.(Dillon, M)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18be39e05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-9</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-01883_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-01883/USCOURTS-caed-2_13-cv-01883-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-01883/pdf/USCOURTS-caed-2_13-cv-01883-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-01883; (PC) MacGregor v. Dial et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-01883-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-03-26</dateIssued>
+  <docketText>ORDER, FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Allison Claire on 3/25/15 ORDERING that Defendants&apos; request for judicial notice (ECF No. 45-2) is DENIED; and the March 4, 2015 Order and Findings and Recommendations (ECF No. 75) are VACATED; it is RECOMMENDED that Defendants&apos; motion to dismiss (ECF No. 45) be granted without leave to amend; and Defendants&apos; motion for partial summary judgment (ECF No. 46) be denied as moot. Referred to Judge John A. Mendez; Objections to F&amp;R due within 21 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

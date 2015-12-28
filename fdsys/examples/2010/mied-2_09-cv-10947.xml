@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195a13e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-10947</identifier>
+<identifier type="local">P0b002ee18195a13e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_09-cv-10947</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-10947</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-10947</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>12:635 Breach of Insurance Contract</cause>
+ <party firstName="Derrick" fullName="Derrick Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party firstName="Ivy" fullName="Ivy Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party fullName="State Farm Company" lastName="State Farm Company" role="Defendant"></party>
+ <party fullName="State Farm Fire&amp;Casualty Co" lastName="State Farm Fire&amp;Casualty Co" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Franklin et al v. State Farm Company</title>
+ <partNumber>2:09-cv-10947</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-10947/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-10947;09-10947</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Derrick Franklin</displayForm>
+ <namePart type="family">Franklin</namePart>
+ <namePart type="given">Derrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ivy Franklin</displayForm>
+ <namePart type="family">Franklin</namePart>
+ <namePart type="given">Ivy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Company</displayForm>
+ <namePart type="family">State Farm Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State Farm Fire&amp;Casualty Co</displayForm>
+ <namePart type="family">State Farm Fire&amp;Casualty Co</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-10947</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-10947</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>12:635 Breach of Insurance Contract</cause>
+ <party firstName="Derrick" fullName="Derrick Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party firstName="Ivy" fullName="Ivy Franklin" lastName="Franklin" role="Plaintiff"></party>
+ <party fullName="State Farm Company" lastName="State Farm Company" role="Defendant"></party>
+ <party fullName="State Farm Fire&amp;Casualty Co" lastName="State Farm Fire&amp;Casualty Co" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-10947-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-0/mods.xml">
+ <titleInfo>
+  <title>Franklin et al v. State Farm Company</title>
+  <subTitle>ORDER granting 14 Motion for Alternate Service - Signed by Magistrate Judge Mona K Majzoub. (LBar)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-10947-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a8dd4b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-0</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-10947_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-10947/pdf/USCOURTS-mied-2_09-cv-10947-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-10947; Franklin et al v. State Farm Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-10947-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-30</dateIssued>
+  <docketText>ORDER granting 14 Motion for Alternate Service - Signed by Magistrate Judge Mona K Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-10947-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-1/mods.xml">
+ <titleInfo>
+  <title>Franklin et al v. State Farm Company</title>
+  <subTitle>ORDER granting in part and denying in part 23 Motion to Compel Dorothy Louise Omar-Antwine to Attend her Depositions or, in the Alternative, Motion for an Order Holding her in Contempt and for Dorothy Louise Omar-Antwine to Appear at Deposition - Signed by Magistrate Judge Mona K Majzoub. (LBar)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-10947-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a8dd4c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-1</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-10947_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-10947/USCOURTS-mied-2_09-cv-10947-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-10947/pdf/USCOURTS-mied-2_09-cv-10947-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-10947; Franklin et al v. State Farm Company; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-10947-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>ORDER granting in part and denying in part 23 Motion to Compel Dorothy Louise Omar-Antwine to Attend her Depositions or, in the Alternative, Motion for an Order Holding her in Contempt and for Dorothy Louise Omar-Antwine to Appear at Deposition - Signed by Magistrate Judge Mona K Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+</mods>

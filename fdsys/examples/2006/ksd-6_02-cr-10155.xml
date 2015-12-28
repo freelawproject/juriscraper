@@ -1,0 +1,155 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1873d0651">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cr-10155</identifier>
+<identifier type="local">P0b002ee1873d0651</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-6_02-cr-10155</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_02-cr-10155</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:02-cr-10155</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Isidro" fullName="Isidro Moreno" lastName="Moreno" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Martinez, et al</title>
+ <partNumber>6:02-cr-10155</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cr-10155/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">6:02-cr-10155;02-10155</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Wichita</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Isidro Moreno</displayForm>
+ <namePart type="family">Moreno</namePart>
+ <namePart type="given">Isidro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-6_02-cr-10155</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>6:02-cr-10155</caseNumber>
+ <caseOffice>Wichita</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="Isidro" fullName="Isidro Moreno" lastName="Moreno" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-6_02-cr-10155-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cr-10155/USCOURTS-ksd-6_02-cr-10155-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Martinez, et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 50 Motion for Leave to Proceed In Forma Pauperis as to Isidro Moreno (2); denying 51 Motion to Vacate (2255) as to Isidro Moreno (2).Signed by Judge J. Thomas Marten on 1/25/06. (rt)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cr-10155/pdf/USCOURTS-ksd-6_02-cr-10155-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875bafd8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cr-10155/USCOURTS-ksd-6_02-cr-10155-0</identifier>
+ <identifier type="former granule identifier">ksd-6_02-cr-10155_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-6_02-cr-10155/USCOURTS-ksd-6_02-cr-10155-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-6_02-cr-10155/pdf/USCOURTS-ksd-6_02-cr-10155-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 6:02-cr-10155; USA v. Martinez, et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-6_02-cr-10155-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 50 Motion for Leave to Proceed In Forma Pauperis as to Isidro Moreno (2); denying 51 Motion to Vacate (2255) as to Isidro Moreno (2).Signed by Judge J. Thomas Marten on 1/25/06. (rt)</docketText>
+</extension>
+</relatedItem>
+</mods>

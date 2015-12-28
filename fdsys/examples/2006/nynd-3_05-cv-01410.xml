@@ -1,0 +1,213 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181172033">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_05-cv-01410</identifier>
+<identifier type="local">P0b002ee181172033</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-3_05-cv-01410</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_05-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:05-cv-01410</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <party firstName="Susan" fullName="Susan Barrett" lastName="Barrett" role="Plaintiff"></party>
+ <party fullName="Dorel Industries Inc." lastName="Dorel Industries Inc." role="Defendant"></party>
+ <party fullName="Dorel Juvenile Group, Inc." lastName="Dorel Juvenile Group, Inc." role="Defendant"></party>
+ <party fullName="Dorel Juvenile Group, Inc." lastName="Dorel Juvenile Group, Inc." role="ThirdParty Plaintiff"></party>
+ <party fullName="Dorel USA, Inc." lastName="Dorel USA, Inc." role="Defendant"></party>
+ <party fullName="Franklin Resources, Inc." lastName="Franklin Resources, Inc." role="Defendant"></party>
+ <party fullName="Franklin Templeton Investments Corp." lastName="Franklin Templeton Investments Corp." role="Defendant"></party>
+ <party firstName="Tina" fullName="Tina M. Lockwood" lastName="Lockwood" middleName="M." role="ThirdParty Defendant"></party>
+ <party firstName="John" fullName="John J. Nolan" lastName="Nolan" middleName="J." role="ThirdParty Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Barrett v. Dorel Juvenile Group, Inc.</title>
+ <partNumber>3:05-cv-01410</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_05-cv-01410/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:05-cv-01410;05-1410</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Binghamton</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Susan Barrett</displayForm>
+ <namePart type="family">Barrett</namePart>
+ <namePart type="given">Susan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorel Industries Inc.</displayForm>
+ <namePart type="family">Dorel Industries Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dorel Juvenile Group, Inc.</displayForm>
+ <namePart type="family">Dorel Juvenile Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dorel Juvenile Group, Inc.</displayForm>
+ <namePart type="family">Dorel Juvenile Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorel USA, Inc.</displayForm>
+ <namePart type="family">Dorel USA, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Franklin Resources, Inc.</displayForm>
+ <namePart type="family">Franklin Resources, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Franklin Templeton Investments Corp.</displayForm>
+ <namePart type="family">Franklin Templeton Investments Corp.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tina M. Lockwood</displayForm>
+ <namePart type="family">Lockwood</namePart>
+ <namePart type="given">Tina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John J. Nolan</displayForm>
+ <namePart type="family">Nolan</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>ThirdParty Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_05-cv-01410</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:05-cv-01410</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <party firstName="Susan" fullName="Susan Barrett" lastName="Barrett" role="Plaintiff"></party>
+ <party fullName="Dorel Industries Inc." lastName="Dorel Industries Inc." role="Defendant"></party>
+ <party fullName="Dorel Juvenile Group, Inc." lastName="Dorel Juvenile Group, Inc." role="Defendant"></party>
+ <party fullName="Dorel Juvenile Group, Inc." lastName="Dorel Juvenile Group, Inc." role="ThirdParty Plaintiff"></party>
+ <party fullName="Dorel USA, Inc." lastName="Dorel USA, Inc." role="Defendant"></party>
+ <party fullName="Franklin Resources, Inc." lastName="Franklin Resources, Inc." role="Defendant"></party>
+ <party fullName="Franklin Templeton Investments Corp." lastName="Franklin Templeton Investments Corp." role="Defendant"></party>
+ <party firstName="Tina" fullName="Tina M. Lockwood" lastName="Lockwood" middleName="M." role="ThirdParty Defendant"></party>
+ <party firstName="John" fullName="John J. Nolan" lastName="Nolan" middleName="J." role="ThirdParty Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_05-cv-01410-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_05-cv-01410/USCOURTS-nynd-3_05-cv-01410-0/mods.xml">
+ <titleInfo>
+  <title>Barrett v. Dorel Juvenile Group, Inc.</title>
+  <subTitle>PROTECTIVE ORDER. Signed by Judge David E. Peebles on 1/20/06. (sfp, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-3_05-cv-01410-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f879c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_05-cv-01410/USCOURTS-nynd-3_05-cv-01410-0</identifier>
+ <identifier type="former granule identifier">nynd-3_05-cv-01410_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_05-cv-01410/USCOURTS-nynd-3_05-cv-01410-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_05-cv-01410/pdf/USCOURTS-nynd-3_05-cv-01410-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:05-cv-01410; Barrett v. Dorel Juvenile Group, Inc.; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_05-cv-01410-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>PROTECTIVE ORDER. Signed by Judge David E. Peebles on 1/20/06. (sfp, )</docketText>
+</extension>
+</relatedItem>
+</mods>

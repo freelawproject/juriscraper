@@ -1,0 +1,482 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18b522890">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-02-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-02-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014</identifier>
+<identifier type="local">P0b002ee18b522890</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-02-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-02-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cr-00014</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cr-00014</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cr-00014</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Heber" fullName="Heber Naman Vasquez" lastName="Vasquez" middleName="Naman" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Vasquez</title>
+ <partNumber>2:11-cr-00014</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cr-00014;11-014</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Heber Naman Vasquez</displayForm>
+ <namePart type="family">Vasquez</namePart>
+ <namePart type="given">Heber</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cr-00014</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cr-00014</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Heber" fullName="Heber Naman Vasquez" lastName="Vasquez" middleName="Naman" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>DETENTION ORDER as to Heber Naman Vasquez signed by Magistrate Judge Dale A. Drozd on 1/20/11. (Matson, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b538142</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>DETENTION ORDER as to Heber Naman Vasquez signed by Magistrate Judge Dale A. Drozd on 1/20/11. (Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 2/17/2011 re 9 ORDERING that the Status Conference is CONTINUED to 3/22/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 2/17/2011 Stop: 3/22/2011. (Duong, D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-18</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 2/17/2011 re 9 ORDERING that the Status Conference is CONTINUED to 3/22/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 2/17/2011 Stop: 3/22/2011. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 3/15/2011 ORDERING 11 Status Conference reset for 4/19/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 3/15/2011 Stop: 4/19/2011. (Reader, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-03-15</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 3/15/2011 ORDERING 11 Status Conference reset for 4/19/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 3/15/2011 Stop: 4/19/2011. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 4/27/11 re 14 ORDERING that the Status Conference is CONTINUED to 6/7/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 4/27/11 Stop: 6/7/11. (Duong, D)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-04-27</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 4/27/11 re 14 ORDERING that the Status Conference is CONTINUED to 6/7/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 4/27/11 Stop: 6/7/11. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 5/23/2011 re 16 ORDERING that the Status Conference is RESET for 7/12/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 5/23/11 Stop: 7/12/11. (Duong, D) Modified on 5/25/2011 (Duong, D).</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b538141</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-05-24</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 5/23/2011 re 16 ORDERING that the Status Conference is RESET for 7/12/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. Excludable started as to Heber Naman Vasquez: XT4 Start: 5/23/11 Stop: 7/12/11. (Duong, D) Modified on 5/25/2011 (Duong, D).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION and ORDER signed by Judge John A. Mendez on 07/08/2011; Status Conference set for 8/9/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez; Excludable started as to Heber Naman Vasquez: XT4 Start: 07/08/2011 Stop: 08/09/2011. (Michel, G)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-07-11</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge John A. Mendez on 07/08/2011; Status Conference set for 8/9/2011 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez; Excludable started as to Heber Naman Vasquez: XT4 Start: 07/08/2011 Stop: 08/09/2011. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Heber Naman Vasquez (Vine, H)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-6</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-06-20</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Heber Naman Vasquez (Vine, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>DETENTION ORDER as to Heber Naman Vasquez signed by Magistrate Judge Allison Claire on 12/18/2013. (Zignago, K.)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-7</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-12-18</dateIssued>
+  <docketText>DETENTION ORDER as to Heber Naman Vasquez signed by Magistrate Judge Allison Claire on 12/18/2013. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>JUDGMENT and COMMITMENT ON REVOCATION as to Heber Naman Vasquez (Vine, H)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-8</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2014-04-04</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT ON REVOCATION as to Heber Naman Vasquez (Vine, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION AND ORDER signed by Judge John A. Mendez on 11/17/2014 CONTINUING the Admit/Deny Hearing for Heber Naman Vasquez to 1/6/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez; EXCLUDING TIME for Heber Naman Vasquez: XT4 Start: 11/18/2014 Stop: 1/6/2015. (Michel, G)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-9</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2014-11-17</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Judge John A. Mendez on 11/17/2014 CONTINUING the Admit/Deny Hearing for Heber Naman Vasquez to 1/6/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez; EXCLUDING TIME for Heber Naman Vasquez: XT4 Start: 11/18/2014 Stop: 1/6/2015. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>STIPULATION AND ORDER signed by Judge John A. Mendez on January 5, 2015 as to Heber Naman Vasquez re 58. The Admit/Deny Hearing set for 01/06/2015 is CONTINUED TO 2/3/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. **Excludable started as to Heber Naman Vasquez: Excludable T4 Start: 01/06/2013 Stop: 02/03/2015. (Rivas, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-10</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Judge John A. Mendez on January 5, 2015 as to Heber Naman Vasquez re 58. The Admit/Deny Hearing set for 01/06/2015 is CONTINUED TO 2/3/2015 at 09:30 AM in Courtroom 6 (JAM) before Judge John A. Mendez. **Excludable started as to Heber Naman Vasquez: Excludable T4 Start: 01/06/2013 Stop: 02/03/2015. (Rivas, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>ORDER signed by Judge John A. Mendez on 2/26/2015 as to Heber Naman Vasquez ORDERING the US Marshal to RELEASE the defendant to Victor Sanchez no later than 10:00 a.m. on 2/27/2015 with return to US Marshal custody by 3:30 p.m. on 2/27/2015. (cc USM- Priority, hand-carry certified copy) (Donati, J)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-11</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2015-02-26</dateIssued>
+  <docketText>ORDER signed by Judge John A. Mendez on 2/26/2015 as to Heber Naman Vasquez ORDERING the US Marshal to RELEASE the defendant to Victor Sanchez no later than 10:00 a.m. on 2/27/2015 with return to US Marshal custody by 3:30 p.m. on 2/27/2015. (cc USM- Priority, hand-carry certified copy) (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cr-00014-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Vasquez</title>
+  <subTitle>JUDGMENT and COMMITMENT ON REVOCATION as to Heber Naman Vasquez. (Vine, H)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-02-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18b5381e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-12</identifier>
+ <identifier type="former granule identifier">caed-2_11-cr-00014_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cr-00014/USCOURTS-caed-2_11-cr-00014-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cr-00014/pdf/USCOURTS-caed-2_11-cr-00014-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cr-00014; USA v. Vasquez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cr-00014-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2015-02-26</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT ON REVOCATION as to Heber Naman Vasquez. (Vine, H)</docketText>
+</extension>
+</relatedItem>
+</mods>

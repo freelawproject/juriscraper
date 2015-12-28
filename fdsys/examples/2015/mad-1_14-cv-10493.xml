@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c3c7eb1">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493</identifier>
+<identifier type="local">P0b002ee18c3c7eb1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_14-cv-10493</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_14-cv-10493</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:14-cv-10493</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Glen" fullName="Glen Alebord" lastName="Alebord" role="Petitioner"></party>
+ <party firstName="Lisa" fullName="Lisa A. Mitchell" lastName="Mitchell" middleName="A." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Alebord v. Mitchell</title>
+ <partNumber>1:14-cv-10493</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:14-cv-10493;14-10493</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Glen Alebord</displayForm>
+ <namePart type="family">Alebord</namePart>
+ <namePart type="given">Glen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Lisa A. Mitchell</displayForm>
+ <namePart type="family">Mitchell</namePart>
+ <namePart type="given">Lisa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_14-cv-10493</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:14-cv-10493</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Glen" fullName="Glen Alebord" lastName="Alebord" role="Petitioner"></party>
+ <party firstName="Lisa" fullName="Lisa A. Mitchell" lastName="Mitchell" middleName="A." role="Respondent"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_14-cv-10493-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-0/mods.xml">
+ <titleInfo>
+  <title>Alebord v. Mitchell</title>
+  <subTitle>Judge Indira Talwani: ORDER entered. MEMORANDUM AND ORDER. Motion to Dismiss for Failure to Exhaust State Court Remedies [#10] is DENIED. (MacDonald, Gail) See attached Memorandum and Order.</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493/pdf/USCOURTS-mad-1_14-cv-10493-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5cbed4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-0</identifier>
+ <identifier type="former granule identifier">mad-1_14-cv-10493_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493/pdf/USCOURTS-mad-1_14-cv-10493-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-10493; Alebord v. Mitchell; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_14-cv-10493-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-11-18</dateIssued>
+  <docketText>Judge Indira Talwani: ORDER entered. MEMORANDUM AND ORDER. Motion to Dismiss for Failure to Exhaust State Court Remedies [#10] is DENIED. (MacDonald, Gail) See attached Memorandum and Order.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_14-cv-10493-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-1/mods.xml">
+ <titleInfo>
+  <title>Alebord v. Mitchell</title>
+  <subTitle>Judge Indira Talwani: ORDER entered: The court now sets the following schedule for briefing on the petition: Petitioner shall file a memorandum in support of his petition by March 6, 2015, and Respondent shall file a memorandum in opposition to the petition by May 6, 2015. Motion to Appoint Counsel 4 is DENIED. See attached Order. (MacDonald, Gail)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493/pdf/USCOURTS-mad-1_14-cv-10493-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c5cbe16</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-1</identifier>
+ <identifier type="former granule identifier">mad-1_14-cv-10493_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_14-cv-10493/USCOURTS-mad-1_14-cv-10493-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_14-cv-10493/pdf/USCOURTS-mad-1_14-cv-10493-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:14-cv-10493; Alebord v. Mitchell; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_14-cv-10493-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>Judge Indira Talwani: ORDER entered: The court now sets the following schedule for briefing on the petition: Petitioner shall file a memorandum in support of his petition by March 6, 2015, and Respondent shall file a memorandum in opposition to the petition by May 6, 2015. Motion to Appoint Counsel 4 is DENIED. See attached Order. (MacDonald, Gail)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,466 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181029819">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-01942</identifier>
+<identifier type="local">P0b002ee181029819</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_05-cv-01942</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-01942</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-01942</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Clementia" fullName="Clementia Abeson" lastName="Abeson" role="Defendant"></party>
+ <party firstName="Olagunwa" fullName="Olagunwa Adurota" lastName="Adurota" role="Consol Defendant"></party>
+ <party fullName="Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Antonnia" lastName="Antonnia" role="Defendant"></party>
+ <party firstName="Sharon" fullName="Sharon Baucom" lastName="Baucom" role="Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Beckles-Peters" lastName="Beckles-Peters" role="Defendant"></party>
+ <party firstName="Pam" fullName="Pam Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry W. Copeland" lastName="Copeland" middleName="W." role="Plaintiff"></party>
+ <party firstName="Mimose" fullName="Mimose Dazouloute" lastName="Dazouloute" role="Defendant"></party>
+ <party firstName="James" fullName="James Furjanic" lastName="Furjanic" role="Defendant"></party>
+ <party firstName="Abel" fullName="Abel Gashe" lastName="Gashe" role="Defendant"></party>
+ <party fullName="Grace" lastName="Grace" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Allen" fullName="Allen Ihumoma" lastName="Ihumoma" role="Defendant"></party>
+ <party fullName="Mooney" lastName="Mooney" role="Consol Defendant"></party>
+ <party firstName="Saraphine" fullName="Saraphine Mubunyer" lastName="Mubunyer" role="Defendant"></party>
+ <party firstName="Mottie" fullName="Mottie Mulleta" lastName="Mulleta" role="Defendant"></party>
+ <party firstName="Grace" fullName="Grace Okoro" lastName="Okoro" role="Defendant"></party>
+ <party fullName="Ola" lastName="Ola" role="Consol Defendant"></party>
+ <party firstName="James" fullName="James V. Peguese" lastName="Peguese" middleName="V." role="Defendant"></party>
+ <party fullName="Perpetra" lastName="Perpetra" role="Consol Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Peter" lastName="Peter" role="Defendant"></party>
+ <party firstName="Pamila" fullName="Pamila Peterson" lastName="Peterson" role="Defendant"></party>
+ <party firstName="Charity" fullName="Charity Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Ann Saar" lastName="Saar" middleName="Ann" role="Defendant"></party>
+ <party fullName="Sarahfena" lastName="Sarahfena" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Shareef" lastName="Shareef" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank C. Sizer Jr." generation="Jr." lastName="Sizer" middleName="C." role="Defendant"></party>
+ <party firstName="James" fullName="James Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy Swick" lastName="Swick" role="Defendant"></party>
+ <party firstName="Dereje" fullName="Dereje Tesfaye" lastName="Tesfaye" role="Defendant"></party>
+ <party firstName="Anteonia" fullName="Anteonia Udemba" lastName="Udemba" role="Defendant"></party>
+ <party fullName="Unidentified Med Technician" lastName="Unidentified Med Technician" role="Defendant"></party>
+ <party firstName="Walt" fullName="Walt Worisching" lastName="Worisching" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Copeland v. Baucom et al</title>
+ <partNumber>1:05-cv-01942</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-01942/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-01942;05-1942</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Clementia Abeson</displayForm>
+ <namePart type="family">Abeson</namePart>
+ <namePart type="given">Clementia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Olagunwa Adurota</displayForm>
+ <namePart type="family">Adurota</namePart>
+ <namePart type="given">Olagunwa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Antonnia</displayForm>
+ <namePart type="family">Antonnia</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sharon Baucom</displayForm>
+ <namePart type="family">Baucom</namePart>
+ <namePart type="given">Sharon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pamela Beckles-Peters</displayForm>
+ <namePart type="family">Beckles-Peters</namePart>
+ <namePart type="given">Pamela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pam Cook</displayForm>
+ <namePart type="family">Cook</namePart>
+ <namePart type="given">Pam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry W. Copeland</displayForm>
+ <namePart type="family">Copeland</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mimose Dazouloute</displayForm>
+ <namePart type="family">Dazouloute</namePart>
+ <namePart type="given">Mimose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Furjanic</displayForm>
+ <namePart type="family">Furjanic</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Abel Gashe</displayForm>
+ <namePart type="family">Gashe</namePart>
+ <namePart type="given">Abel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grace</displayForm>
+ <namePart type="family">Grace</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne Hill</displayForm>
+ <namePart type="family">Hill</namePart>
+ <namePart type="given">Wayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Allen Ihumoma</displayForm>
+ <namePart type="family">Ihumoma</namePart>
+ <namePart type="given">Allen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mooney</displayForm>
+ <namePart type="family">Mooney</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Saraphine Mubunyer</displayForm>
+ <namePart type="family">Mubunyer</namePart>
+ <namePart type="given">Saraphine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mottie Mulleta</displayForm>
+ <namePart type="family">Mulleta</namePart>
+ <namePart type="given">Mottie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Grace Okoro</displayForm>
+ <namePart type="family">Okoro</namePart>
+ <namePart type="given">Grace</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ola</displayForm>
+ <namePart type="family">Ola</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James V. Peguese</displayForm>
+ <namePart type="family">Peguese</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Perpetra</displayForm>
+ <namePart type="family">Perpetra</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Consol Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pamela Peter</displayForm>
+ <namePart type="family">Peter</namePart>
+ <namePart type="given">Pamela</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pamila Peterson</displayForm>
+ <namePart type="family">Peterson</namePart>
+ <namePart type="given">Pamila</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charity Russell</displayForm>
+ <namePart type="family">Russell</namePart>
+ <namePart type="given">Charity</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Ann Saar</displayForm>
+ <namePart type="family">Saar</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sarahfena</displayForm>
+ <namePart type="family">Sarahfena</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sergeant Shareef</displayForm>
+ <namePart type="family">Shareef</namePart>
+ <namePart type="given">Sergeant</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank C. Sizer Jr.</displayForm>
+ <namePart type="family">Sizer</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nancy Swick</displayForm>
+ <namePart type="family">Swick</namePart>
+ <namePart type="given">Nancy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dereje Tesfaye</displayForm>
+ <namePart type="family">Tesfaye</namePart>
+ <namePart type="given">Dereje</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anteonia Udemba</displayForm>
+ <namePart type="family">Udemba</namePart>
+ <namePart type="given">Anteonia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unidentified Med Technician</displayForm>
+ <namePart type="family">Unidentified Med Technician</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walt Worisching</displayForm>
+ <namePart type="family">Worisching</namePart>
+ <namePart type="given">Walt</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cv-01942</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cv-01942</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Clementia" fullName="Clementia Abeson" lastName="Abeson" role="Defendant"></party>
+ <party firstName="Olagunwa" fullName="Olagunwa Adurota" lastName="Adurota" role="Consol Defendant"></party>
+ <party fullName="Allen" lastName="Allen" role="Defendant"></party>
+ <party fullName="Antonnia" lastName="Antonnia" role="Defendant"></party>
+ <party firstName="Sharon" fullName="Sharon Baucom" lastName="Baucom" role="Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Beckles-Peters" lastName="Beckles-Peters" role="Defendant"></party>
+ <party firstName="Pam" fullName="Pam Cook" lastName="Cook" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry W. Copeland" lastName="Copeland" middleName="W." role="Plaintiff"></party>
+ <party firstName="Mimose" fullName="Mimose Dazouloute" lastName="Dazouloute" role="Defendant"></party>
+ <party firstName="James" fullName="James Furjanic" lastName="Furjanic" role="Defendant"></party>
+ <party firstName="Abel" fullName="Abel Gashe" lastName="Gashe" role="Defendant"></party>
+ <party fullName="Grace" lastName="Grace" role="Defendant"></party>
+ <party firstName="Wayne" fullName="Wayne Hill" lastName="Hill" role="Defendant"></party>
+ <party firstName="Allen" fullName="Allen Ihumoma" lastName="Ihumoma" role="Defendant"></party>
+ <party fullName="Mooney" lastName="Mooney" role="Consol Defendant"></party>
+ <party firstName="Saraphine" fullName="Saraphine Mubunyer" lastName="Mubunyer" role="Defendant"></party>
+ <party firstName="Mottie" fullName="Mottie Mulleta" lastName="Mulleta" role="Defendant"></party>
+ <party firstName="Grace" fullName="Grace Okoro" lastName="Okoro" role="Defendant"></party>
+ <party fullName="Ola" lastName="Ola" role="Consol Defendant"></party>
+ <party firstName="James" fullName="James V. Peguese" lastName="Peguese" middleName="V." role="Defendant"></party>
+ <party fullName="Perpetra" lastName="Perpetra" role="Consol Defendant"></party>
+ <party firstName="Pamela" fullName="Pamela Peter" lastName="Peter" role="Defendant"></party>
+ <party firstName="Pamila" fullName="Pamila Peterson" lastName="Peterson" role="Defendant"></party>
+ <party firstName="Charity" fullName="Charity Russell" lastName="Russell" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Ann Saar" lastName="Saar" middleName="Ann" role="Defendant"></party>
+ <party fullName="Sarahfena" lastName="Sarahfena" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Shareef" lastName="Shareef" role="Defendant"></party>
+ <party firstName="Frank" fullName="Frank C. Sizer Jr." generation="Jr." lastName="Sizer" middleName="C." role="Defendant"></party>
+ <party firstName="James" fullName="James Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Nancy" fullName="Nancy Swick" lastName="Swick" role="Defendant"></party>
+ <party firstName="Dereje" fullName="Dereje Tesfaye" lastName="Tesfaye" role="Defendant"></party>
+ <party firstName="Anteonia" fullName="Anteonia Udemba" lastName="Udemba" role="Defendant"></party>
+ <party fullName="Unidentified Med Technician" lastName="Unidentified Med Technician" role="Defendant"></party>
+ <party firstName="Walt" fullName="Walt Worisching" lastName="Worisching" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-01942-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-0/mods.xml">
+ <titleInfo>
+  <title>Copeland v. Baucom et al</title>
+  <subTitle>MEMORANDUM. Signed by Judge Andre M Davis on 10/11/05. (c/m 10/12/05 bh)(bmh, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-01942-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181037037</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-0</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-01942_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-01942/pdf/USCOURTS-mdd-1_05-cv-01942-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01942; Copeland v. Baucom et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-01942-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-10-11</dateIssued>
+  <docketText>MEMORANDUM. Signed by Judge Andre M Davis on 10/11/05. (c/m 10/12/05 bh)(bmh, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cv-01942-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-1/mods.xml">
+ <titleInfo>
+  <title>Copeland v. Baucom et al</title>
+  <subTitle>MEMORANDUM. Signed by Judge Andre M Davis on 1/4/06. (c/m 1/4/06 bh)(bmh, Deputy Clerk)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cv-01942-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181037038</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-1</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cv-01942_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cv-01942/USCOURTS-mdd-1_05-cv-01942-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cv-01942/pdf/USCOURTS-mdd-1_05-cv-01942-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-01942; Copeland v. Baucom et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cv-01942-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-04</dateIssued>
+  <docketText>MEMORANDUM. Signed by Judge Andre M Davis on 1/4/06. (c/m 1/4/06 bh)(bmh, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

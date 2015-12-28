@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a898256">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-05</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_14-cv-00918</identifier>
+<identifier type="local">P0b002ee18a898256</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-05</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-05</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_14-cv-00918</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_14-cv-00918</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:14-cv-00918</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="City of Toledo" lastName="City of Toledo" role="Defendant"></party>
+ <party fullName="Norfolk Southern Corporation" lastName="Norfolk Southern Corporation" role="Plaintiff"></party>
+ <party fullName="Norfolk Southern Railway Company" lastName="Norfolk Southern Railway Company" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Norfolk Southern Railway Company v. City of Toledo</title>
+ <partNumber>3:14-cv-00918</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_14-cv-00918/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:14-cv-00918;14-918</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Toledo</displayForm>
+ <namePart type="family">City of Toledo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Norfolk Southern Corporation</displayForm>
+ <namePart type="family">Norfolk Southern Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Norfolk Southern Railway Company</displayForm>
+ <namePart type="family">Norfolk Southern Railway Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_14-cv-00918</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:14-cv-00918</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="City of Toledo" lastName="City of Toledo" role="Defendant"></party>
+ <party fullName="Norfolk Southern Corporation" lastName="Norfolk Southern Corporation" role="Plaintiff"></party>
+ <party fullName="Norfolk Southern Railway Company" lastName="Norfolk Southern Railway Company" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_14-cv-00918-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_14-cv-00918/USCOURTS-ohnd-3_14-cv-00918-0/mods.xml">
+ <titleInfo>
+  <title>Norfolk Southern Railway Company v. City of Toledo</title>
+  <subTitle>Memorandum Opinion and Order: The Court finds no genuine issue of material fact that when applied to the Crew Building, the ICCTA categorically preempts the Citys pre-construction and preclearance permitting and inspection requirements related to the use, construction, and occupation of the Crew Building. Therefore, consistent with this Memorandum Opinion and Order, Plaintiffs motion is granted. (Doc. 17). Further, Plaintiffs second and only remaining claim for relief, which is stated in the alternative to the request for declaratory judgment, is dismissed as moot. (Doc. 1). Case closed. Magistrate Judge James R. Knepp, II on 1/2/2015. (B,TM)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_14-cv-00918/pdf/USCOURTS-ohnd-3_14-cv-00918-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a89e10e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_14-cv-00918/USCOURTS-ohnd-3_14-cv-00918-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_14-cv-00918_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_14-cv-00918/USCOURTS-ohnd-3_14-cv-00918-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_14-cv-00918/pdf/USCOURTS-ohnd-3_14-cv-00918-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:14-cv-00918; Norfolk Southern Railway Company v. City of Toledo; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_14-cv-00918-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-02</dateIssued>
+  <docketText>Memorandum Opinion and Order: The Court finds no genuine issue of material fact that when applied to the Crew Building, the ICCTA categorically preempts the Citys pre-construction and preclearance permitting and inspection requirements related to the use, construction, and occupation of the Crew Building. Therefore, consistent with this Memorandum Opinion and Order, Plaintiffs motion is granted. (Doc. 17). Further, Plaintiffs second and only remaining claim for relief, which is stated in the alternative to the request for declaratory judgment, is dismissed as moot. (Doc. 1). Case closed. Magistrate Judge James R. Knepp, II on 1/2/2015. (B,TM)</docketText>
+</extension>
+</relatedItem>
+</mods>

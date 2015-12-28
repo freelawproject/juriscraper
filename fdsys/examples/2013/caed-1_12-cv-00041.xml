@@ -1,0 +1,320 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186227bd4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-09-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-09-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041</identifier>
+<identifier type="local">P0b002ee186227bd4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-09-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-09-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cv-00041</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00041</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00041</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="David" fullName="David Cerna Verduzco" lastName="Cerna Verduzco" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(SS) Verduzco v. Commissioner of Social Security</title>
+ <partNumber>1:12-cv-00041</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00041;12-041</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Cerna Verduzco</displayForm>
+ <namePart type="family">Cerna Verduzco</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Commissioner of Social Security</displayForm>
+ <namePart type="family">Commissioner of Social Security</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cv-00041</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cv-00041</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="David" fullName="David Cerna Verduzco" lastName="Cerna Verduzco" role="Plaintiff"></party>
+ <party fullName="Commissioner of Social Security" lastName="Commissioner of Social Security" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-0/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Gary S. Austin on 1/9/2012. (Jessen, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e548</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER GRANTING 2 Motion to Proceed IFP signed by Magistrate Judge Gary S. Austin on 1/9/2012. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-1/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER GRANTING the parties&apos; request for an extension of time for plaintiff to file his letter brief; filing deadline set for 9/10/2012 for receipt of same; order signed by Magistrate Judge Dennis L. Beck on 8/9/2012. (Rooney, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e54a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-08-09</dateIssued>
+  <docketText>STIPULATION and ORDER GRANTING the parties&apos; request for an extension of time for plaintiff to file his letter brief; filing deadline set for 9/10/2012 for receipt of same; order signed by Magistrate Judge Dennis L. Beck on 8/9/2012. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-2/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER to extend time, signed by Magistrate Judge Dennis L. Beck on 9/6/2012. Plaintiff&apos;s Letter Brief Deadline: 10/8/2012. (Figueroa, O)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e547</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-09-06</dateIssued>
+  <docketText>STIPULATION and ORDER to extend time, signed by Magistrate Judge Dennis L. Beck on 9/6/2012. Plaintiff&apos;s Letter Brief Deadline: 10/8/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-3/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>STIPULATION and ORDER for a first extension for Defendant to file his Opposition or otherwise respond to Plaintiff&apos;s Opening Brief, signed by Magistrate Judge Stanley A Boone on 1/2/2013. ( Filing Deadline: 3/8/2013) (Figueroa, O)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e52d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>STIPULATION and ORDER for a first extension for Defendant to file his Opposition or otherwise respond to Plaintiff&apos;s Opening Brief, signed by Magistrate Judge Stanley A Boone on 1/2/2013. ( Filing Deadline: 3/8/2013) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-4/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>ORDER granting joint motion for extension of time. Defendant&apos;s opposition to plaintiff&apos;s opening brief shall be filed on or before May 7, 2013; Plaintiff&apos;s reply brief shall be filed within 7 days of the date of service of the opposition brief. Order signed by Magistrate Judge Stanley A Boone on 3/1/2013. (Hernandez, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e52e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-04</dateIssued>
+  <docketText>ORDER granting joint motion for extension of time. Defendant&apos;s opposition to plaintiff&apos;s opening brief shall be filed on or before May 7, 2013; Plaintiff&apos;s reply brief shall be filed within 7 days of the date of service of the opposition brief. Order signed by Magistrate Judge Stanley A Boone on 3/1/2013. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-5/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>ORDER granting FINAL extension of time signed by Magistrate Judge Stanley A Boone on 5/7/2013. (Hernandez, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e549</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-05-07</dateIssued>
+  <docketText>ORDER granting FINAL extension of time signed by Magistrate Judge Stanley A Boone on 5/7/2013. (Hernandez, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cv-00041-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-6/mods.xml">
+ <titleInfo>
+  <title>(SS) Verduzco v. Commissioner of Social Security</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Social Security Appeal signed by Magistrate Judge Stanley A. Boone on 9/10/2013. CASE CLOSED. (Sant Agata, S)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cv-00041-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18622e52f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cv-00041_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cv-00041/USCOURTS-caed-1_12-cv-00041-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cv-00041/pdf/USCOURTS-caed-1_12-cv-00041-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00041; (SS) Verduzco v. Commissioner of Social Security; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cv-00041-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-09-10</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Social Security Appeal signed by Magistrate Judge Stanley A. Boone on 9/10/2013. CASE CLOSED. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

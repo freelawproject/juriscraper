@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18aa9c8bd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110</identifier>
+<identifier type="local">P0b002ee18aa9c8bd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_14-mc-00110</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-mc-00110</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-mc-00110</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>Civil Miscellaneous Case</cause>
+ <party fullName="Approximately $67,646.00 in U.S. Currency" lastName="Approximately $67,646.00 in U.S. Currency" role="Defendant"></party>
+ <party firstName="Cedric" fullName="Cedric Sewell" lastName="Sewell" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Approximately $67,646.00 in U.S. Currency</title>
+ <partNumber>2:14-mc-00110</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-mc-00110;14-110</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Approximately $67,646.00 in U.S. Currency</displayForm>
+ <namePart type="family">Approximately $67,646.00 in U.S. Currency</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cedric Sewell</displayForm>
+ <namePart type="family">Sewell</namePart>
+ <namePart type="given">Cedric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_14-mc-00110</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:14-mc-00110</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType></caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <cause>Civil Miscellaneous Case</cause>
+ <party fullName="Approximately $67,646.00 in U.S. Currency" lastName="Approximately $67,646.00 in U.S. Currency" role="Defendant"></party>
+ <party firstName="Cedric" fullName="Cedric Sewell" lastName="Sewell" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-mc-00110-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Approximately $67,646.00 in U.S. Currency</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 9/5/2014 EXTENDING time until 11/7/2014 to file a complaint for forfeiture against the defendant currency. (Donati, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18aaa4a6d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-0</identifier>
+ <identifier type="former granule identifier">caed-2_14-mc-00110_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-mc-00110; United States of America v. Approximately $67,646.00 in U.S. Currency; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-mc-00110-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-09-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 9/5/2014 EXTENDING time until 11/7/2014 to file a complaint for forfeiture against the defendant currency. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-mc-00110-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Approximately $67,646.00 in U.S. Currency</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/24/14 ORDERING that the deadline by which the United States shall be required to file a complaint for forfeiture against the defendant currency and/or to obtain an indictment alleging that the defendant currency is subject to forfeiture is EXTENDED to 1/6/2015. (Kastilahn, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18aaa4a6b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-1</identifier>
+ <identifier type="former granule identifier">caed-2_14-mc-00110_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-mc-00110; United States of America v. Approximately $67,646.00 in U.S. Currency; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-mc-00110-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-10-27</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/24/14 ORDERING that the deadline by which the United States shall be required to file a complaint for forfeiture against the defendant currency and/or to obtain an indictment alleging that the defendant currency is subject to forfeiture is EXTENDED to 1/6/2015. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-mc-00110-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Approximately $67,646.00 in U.S. Currency</title>
+  <subTitle>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 1/5/2015 ORDERING the United States to file a complaint for forfeiture against the defendant currency and/or to obtain an indictment alleging that the defendant currency is subject to forfeiture by 3/6/2015. (Michel, G)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18aaa4a6e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-2</identifier>
+ <identifier type="former granule identifier">caed-2_14-mc-00110_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-mc-00110; United States of America v. Approximately $67,646.00 in U.S. Currency; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-mc-00110-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 1/5/2015 ORDERING the United States to file a complaint for forfeiture against the defendant currency and/or to obtain an indictment alleging that the defendant currency is subject to forfeiture by 3/6/2015. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_14-mc-00110-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Approximately $67,646.00 in U.S. Currency</title>
+  <subTitle>CONSENT JUDGMENT OF FORFEITURE signed by Senior Judge William B. Shubb on 1/14/15. CASE CLOSED. (Manzer, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18aaa4a6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-3</identifier>
+ <identifier type="former granule identifier">caed-2_14-mc-00110_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_14-mc-00110/USCOURTS-caed-2_14-mc-00110-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_14-mc-00110/pdf/USCOURTS-caed-2_14-mc-00110-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-mc-00110; United States of America v. Approximately $67,646.00 in U.S. Currency; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_14-mc-00110-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-01-14</dateIssued>
+  <docketText>CONSENT JUDGMENT OF FORFEITURE signed by Senior Judge William B. Shubb on 1/14/15. CASE CLOSED. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

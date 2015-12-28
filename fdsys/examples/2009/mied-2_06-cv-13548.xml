@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181937185">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548</identifier>
+<identifier type="local">P0b002ee181937185</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_06-cv-13548</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-13548</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-13548</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="C. B." lastName="C. B." role="Plaintiff"></party>
+ <party fullName="C. G." lastName="C. G." role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Champagne" lastName="Champagne" role="Defendant"></party>
+ <party firstName="Charleszetta" fullName="Charleszetta Cheeks" lastName="Cheeks" role="Movant"></party>
+ <party fullName="D. B." lastName="D. B." role="Plaintiff"></party>
+ <party firstName="James" fullName="James Hennessey" lastName="Hennessey" role="Defendant"></party>
+ <party fullName="J. G." lastName="J. G." role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Kibby" lastName="Kibby" role="Plaintiff"></party>
+ <party fullName="L. J." lastName="L. J." role="Plaintiff"></party>
+ <party firstName="William" fullName="William Ladd" lastName="Ladd" role="Plaintiff"></party>
+ <party fullName="Michigan, Governor of" lastName="Michigan, Governor of" role="Defendant"></party>
+ <party fullName="S. G." lastName="S. G." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Stempfle" lastName="Stempfle" role="Plaintiff"></party>
+ <party firstName="Marianne" fullName="Marianne Udow" lastName="Udow" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>D. B. et al v. Granholm et al</title>
+ <partNumber>2:06-cv-13548</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-13548;06-13548</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>C. B.</displayForm>
+ <namePart type="family">C. B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>C. G.</displayForm>
+ <namePart type="family">C. G.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Laura Champagne</displayForm>
+ <namePart type="family">Champagne</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charleszetta Cheeks</displayForm>
+ <namePart type="family">Cheeks</namePart>
+ <namePart type="given">Charleszetta</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Movant</description>
+</name>
+<name type="personal">
+ <displayForm>D. B.</displayForm>
+ <namePart type="family">D. B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Hennessey</displayForm>
+ <namePart type="family">Hennessey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. G.</displayForm>
+ <namePart type="family">J. G.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Teresa Kibby</displayForm>
+ <namePart type="family">Kibby</namePart>
+ <namePart type="given">Teresa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. J.</displayForm>
+ <namePart type="family">L. J.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>William Ladd</displayForm>
+ <namePart type="family">Ladd</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan, Governor of</displayForm>
+ <namePart type="family">Michigan, Governor of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. G.</displayForm>
+ <namePart type="family">S. G.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Stempfle</displayForm>
+ <namePart type="family">Stempfle</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Marianne Udow</displayForm>
+ <namePart type="family">Udow</namePart>
+ <namePart type="given">Marianne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-13548</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-13548</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="C. B." lastName="C. B." role="Plaintiff"></party>
+ <party fullName="C. G." lastName="C. G." role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Champagne" lastName="Champagne" role="Defendant"></party>
+ <party firstName="Charleszetta" fullName="Charleszetta Cheeks" lastName="Cheeks" role="Movant"></party>
+ <party fullName="D. B." lastName="D. B." role="Plaintiff"></party>
+ <party firstName="James" fullName="James Hennessey" lastName="Hennessey" role="Defendant"></party>
+ <party fullName="J. G." lastName="J. G." role="Plaintiff"></party>
+ <party firstName="Teresa" fullName="Teresa Kibby" lastName="Kibby" role="Plaintiff"></party>
+ <party fullName="L. J." lastName="L. J." role="Plaintiff"></party>
+ <party firstName="William" fullName="William Ladd" lastName="Ladd" role="Plaintiff"></party>
+ <party fullName="Michigan, Governor of" lastName="Michigan, Governor of" role="Defendant"></party>
+ <party fullName="S. G." lastName="S. G." role="Plaintiff"></party>
+ <party firstName="John" fullName="John Stempfle" lastName="Stempfle" role="Plaintiff"></party>
+ <party firstName="Marianne" fullName="Marianne Udow" lastName="Udow" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-13548-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-0/mods.xml">
+ <titleInfo>
+  <title>D. B. et al v. Granholm et al</title>
+  <subTitle>ORDER denying 16 Motion to Dismiss. Signed by Honorable Nancy G Edmunds. (CHem)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-13548-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c4dda</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-0</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-13548_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548/pdf/USCOURTS-mied-2_06-cv-13548-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-13548; D. B. et al v. Granholm et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-13548-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-17</dateIssued>
+  <docketText>ORDER denying 16 Motion to Dismiss. Signed by Honorable Nancy G Edmunds. (CHem)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-13548-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-1/mods.xml">
+ <titleInfo>
+  <title>D. B. et al v. Granholm et al</title>
+  <subTitle>ORDER granting 51 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-08-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-13548-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c4dd9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-1</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-13548_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548/pdf/USCOURTS-mied-2_06-cv-13548-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-13548; D. B. et al v. Granholm et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-13548-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-08-17</dateIssued>
+  <docketText>ORDER granting 51 Motion to Compel. Signed by Honorable Donald A Scheer. (MLan)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-13548-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-2/mods.xml">
+ <titleInfo>
+  <title>D. B. et al v. Granholm et al</title>
+  <subTitle>ORDER ENTERING CONSENT DECREE Signed by District Judge Nancy G Edmunds. (CHem) Modified on 10/24/2008 (CHem).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-13548-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c4ddb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-2</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-13548_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548/pdf/USCOURTS-mied-2_06-cv-13548-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-13548; D. B. et al v. Granholm et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-13548-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-10-24</dateIssued>
+  <docketText>ORDER ENTERING CONSENT DECREE Signed by District Judge Nancy G Edmunds. (CHem) Modified on 10/24/2008 (CHem).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-13548-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-3/mods.xml">
+ <titleInfo>
+  <title>D. B. et al v. Granholm et al</title>
+  <subTitle>ORDER Overruling 155 Objection to Taxed Bill of Costs filed by Michigan, Governor of, Marianne Udow, James Hennessey, Laura Champagne. Signed by District Judge Nancy G Edmunds. (CHem)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-13548-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c4dd8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-3</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-13548_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-13548/USCOURTS-mied-2_06-cv-13548-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-13548/pdf/USCOURTS-mied-2_06-cv-13548-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-13548; D. B. et al v. Granholm et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-13548-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-23</dateIssued>
+  <docketText>ORDER Overruling 155 Objection to Taxed Bill of Costs filed by Michigan, Governor of, Marianne Udow, James Hennessey, Laura Champagne. Signed by District Judge Nancy G Edmunds. (CHem)</docketText>
+</extension>
+</relatedItem>
+</mods>

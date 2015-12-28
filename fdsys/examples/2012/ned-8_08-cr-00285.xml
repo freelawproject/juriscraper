@@ -1,0 +1,482 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181d133d0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285</identifier>
+<identifier type="local">P0b002ee181d133d0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_08-cr-00285</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00285</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00285</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard R. Conway Jr." generation="Jr." lastName="Conway" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Conway</title>
+ <partNumber>8:08-cr-00285</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:08-cr-00285;08-285</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Richard R. Conway Jr.</displayForm>
+ <namePart type="family">Conway</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_08-cr-00285</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:08-cr-00285</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Richard" fullName="Richard R. Conway Jr." generation="Jr." lastName="Conway" middleName="R." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Richard R. Conway, Jr. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f8b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-0</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Richard R. Conway, Jr. Ordered by Magistrate Judge Thomas D. Thalken. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting in part 16 Motion For Extension of Filing Pretrial Motions as to Richard R. Conway Jr. The deadline for filing pretrial motions is extended to November 10, 2008. Defendant is ordered to file a waiver of speedy trial as soon as practicable. The time between October 27, 2008 and November 10, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f8a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-1</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-27</dateIssued>
+  <docketText>ORDER granting in part 16 Motion For Extension of Filing Pretrial Motions as to Richard R. Conway Jr. The deadline for filing pretrial motions is extended to November 10, 2008. Defendant is ordered to file a waiver of speedy trial as soon as practicable. The time between October 27, 2008 and November 10, 2008, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act. Ordered by Magistrate Judge F. A. Gossett. ( MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting in part 19 Motion to Extend Deadline, as to Richard R. Conway Jr. (1). Pretrial Motion Deadline set for 11/25/2008. Ordered by Magistrate Judge F. A. Gossett. ( CLS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f85</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-2</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-12</dateIssued>
+  <docketText>ORDER granting in part 19 Motion to Extend Deadline, as to Richard R. Conway Jr. (1). Pretrial Motion Deadline set for 11/25/2008. Ordered by Magistrate Judge F. A. Gossett. ( CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting 24 Motion to Withdraw as Attorney as to Richard R. Conway Jr. (1). Eric L. Whitner is deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f89</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-3</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-26</dateIssued>
+  <docketText>ORDER granting 24 Motion to Withdraw as Attorney as to Richard R. Conway Jr. (1). Eric L. Whitner is deemed withdrawn as counsel for defendant. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting 25 motion to continue as to Richard R. Conway Jr. (1) - Change of Plea Hearing set for 2/26/2009 10:30 AM in Courtroom 5 - Omaha before Senior Judge Lyle E. Strom. Additional time between February 23, 2009, and February 26, 2009, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-4</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-02-02</dateIssued>
+  <docketText>ORDER granting 25 motion to continue as to Richard R. Conway Jr. (1) - Change of Plea Hearing set for 2/26/2009 10:30 AM in Courtroom 5 - Omaha before Senior Judge Lyle E. Strom. Additional time between February 23, 2009, and February 26, 2009, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER - The Motion to Withdraw as Attorney 30 is granted. Mr. Michael D.Gooch is deemed withdrawn as counsel for defendant as to defendant Richard R. Conway Jr. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-5</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-02-04</dateIssued>
+  <docketText>ORDER - The Motion to Withdraw as Attorney 30 is granted. Mr. Michael D.Gooch is deemed withdrawn as counsel for defendant as to defendant Richard R. Conway Jr. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting 35 motion to continue as to Richard R. Conway Jr. (1) - Change of Plea Hearing set for 4/27/2009 09:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Additional time between April 3, 2009, and April 27, 2009, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f84</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-6</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-04-07</dateIssued>
+  <docketText>ORDER granting 35 motion to continue as to Richard R. Conway Jr. (1) - Change of Plea Hearing set for 4/27/2009 09:00 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE before Senior Judge Lyle E. Strom. Additional time between April 3, 2009, and April 27, 2009, shall be deemed excludable under the requirement of the speedy trial act. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER sustaining 42 Motion for Preliminary Forfeiture. Defendant&apos;s interest in said property is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1).The aforementioned forfeited property is to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Richard R. Conway Jr. (1) Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)( PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-7</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-05-05</dateIssued>
+  <docketText>ORDER sustaining 42 Motion for Preliminary Forfeiture. Defendant&apos;s interest in said property is hereby forfeited to the United States for disposition in accordance with the law, subject to the provisions of 21 U.S.C. § 853(n)(1).The aforementioned forfeited property is to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture pursuant to 21 U.S.C. § 853(n), in which all interests will be addressed as to Richard R. Conway Jr. (1) Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)( PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>FINAL ORDER OF FORFEITURE sustaining 53 Motion for Final Forfeiture as to Richard R. Conway Jr. (1). All right, title and interest in and to the Smith and Wesson handgun, held by any person or entity, is hereby forever barred and foreclosed. The Smith and Wesson handgun, be, and the same hereby is, forfeited to the United States of America. The United States Bureau of Alcohol, Tobacco and Firearms for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f86</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-8</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2009-07-15</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE sustaining 53 Motion for Final Forfeiture as to Richard R. Conway Jr. (1). All right, title and interest in and to the Smith and Wesson handgun, held by any person or entity, is hereby forever barred and foreclosed. The Smith and Wesson handgun, be, and the same hereby is, forfeited to the United States of America. The United States Bureau of Alcohol, Tobacco and Firearms for the District of Nebraska is directed to dispose of said property in accordance with law. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting 57 motion to continue as to Richard R. Conway Jr. (1) - Sentencing set for 11/6/2009 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f3a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-9</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2009-09-02</dateIssued>
+  <docketText>ORDER granting 57 motion to continue as to Richard R. Conway Jr. (1) - Sentencing set for 11/6/2009 10:30 AM in Courtroom 5, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, NE, before Senior Judge Lyle E. Strom. Ordered by Senior Judge Lyle E. Strom. (JDR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting the plaintiff&apos;s Motion to temporarily unseal plea agreement 61 is granted as to defendant Richard R. Conway, Jr.. The Clerk of the court shall unseal the plea agreement and provide plaintiff a copy, then reseal it. Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed)(MKR)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f88</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-10</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-02-05</dateIssued>
+  <docketText>ORDER granting the plaintiff&apos;s Motion to temporarily unseal plea agreement 61 is granted as to defendant Richard R. Conway, Jr.. The Clerk of the court shall unseal the plea agreement and provide plaintiff a copy, then reseal it. Ordered by Senior Judge Lyle E. Strom. (Copies mailed as directed)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting the 68 Motion to Seal as to Richard R. Conway Jr. (1). The sentencing memorandum shall remain sealed until further order of the Court. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f87</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-11</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER granting the 68 Motion to Seal as to Richard R. Conway Jr. (1). The sentencing memorandum shall remain sealed until further order of the Court. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_08-cr-00285-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Conway</title>
+  <subTitle>ORDER granting 71 Motion to Seal as to Richard R. Conway Jr. (1). Plaintiff&apos;s motion shall remain sealed pending further order of the Court. Ordered by Senior Judge Lyle E. Strom. (MKR)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_08-cr-00285-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181d14f3b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-12</identifier>
+ <identifier type="former granule identifier">ned-8_08-cr-00285_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_08-cr-00285/USCOURTS-ned-8_08-cr-00285-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_08-cr-00285/pdf/USCOURTS-ned-8_08-cr-00285-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:08-cr-00285; USA v. Conway; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_08-cr-00285-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-01-27</dateIssued>
+  <docketText>ORDER granting 71 Motion to Seal as to Richard R. Conway Jr. (1). Plaintiff&apos;s motion shall remain sealed pending further order of the Court. Ordered by Senior Judge Lyle E. Strom. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

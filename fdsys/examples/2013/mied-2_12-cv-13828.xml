@@ -1,0 +1,215 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183aec46c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-13828</identifier>
+<identifier type="local">P0b002ee183aec46c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_12-cv-13828</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-13828</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-13828</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Sherry" fullName="Sherry Burt" lastName="Burt" role="Respondent"></party>
+ <party firstName="S" fullName="S L Burt" lastName="Burt" middleName="L" role="Respondent"></party>
+ <party firstName="Clifford" fullName="Clifford Disney" lastName="Disney" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Disney v. Burt</title>
+ <partNumber>2:12-cv-13828</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-13828/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-13828;12-13828</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sherry Burt</displayForm>
+ <namePart type="family">Burt</namePart>
+ <namePart type="given">Sherry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>S L Burt</displayForm>
+ <namePart type="family">Burt</namePart>
+ <namePart type="given">S</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Clifford Disney</displayForm>
+ <namePart type="family">Disney</namePart>
+ <namePart type="given">Clifford</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-13828</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-13828</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Sherry" fullName="Sherry Burt" lastName="Burt" role="Respondent"></party>
+ <party firstName="S" fullName="S L Burt" lastName="Burt" middleName="L" role="Respondent"></party>
+ <party firstName="Clifford" fullName="Clifford Disney" lastName="Disney" role="Petitioner"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-13828-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-0/mods.xml">
+ <titleInfo>
+  <title>Disney v. Burt</title>
+  <subTitle>OPINION AND ORDER DISMISSING CASE for Failure to Correct Deficiency and Denying Motion for Bond as MOOT. Signed by District Judge Denise Page Hood. (MWil)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-13828-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183aed6d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-0</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-13828_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-13828/pdf/USCOURTS-mied-2_12-cv-13828-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-13828; Disney v. Burt; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-13828-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>OPINION AND ORDER DISMISSING CASE for Failure to Correct Deficiency and Denying Motion for Bond as MOOT. Signed by District Judge Denise Page Hood. (MWil)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-13828-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-1/mods.xml">
+ <titleInfo>
+  <title>Disney v. Burt</title>
+  <subTitle>JUDGMENT Signed by District Judge Denise Page Hood. (MWil)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-13828-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183aed6d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-1</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-13828_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-13828/pdf/USCOURTS-mied-2_12-cv-13828-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-13828; Disney v. Burt; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-13828-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>JUDGMENT Signed by District Judge Denise Page Hood. (MWil)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-13828-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-2/mods.xml">
+ <titleInfo>
+  <title>Disney v. Burt</title>
+  <subTitle>ORDER DENYING Second Motion for Bond 12 as Moot. Signed by District Judge Denise Page Hood. (JOwe)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-13828-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183aed6d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-2</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-13828_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-13828/USCOURTS-mied-2_12-cv-13828-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-13828/pdf/USCOURTS-mied-2_12-cv-13828-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-13828; Disney v. Burt; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-13828-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-17</dateIssued>
+  <docketText>ORDER DENYING Second Motion for Bond 12 as Moot. Signed by District Judge Denise Page Hood. (JOwe)</docketText>
+</extension>
+</relatedItem>
+</mods>

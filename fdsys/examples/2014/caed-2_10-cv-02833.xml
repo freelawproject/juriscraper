@@ -1,0 +1,665 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a876816">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-31</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-12-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833</identifier>
+<identifier type="local">P0b002ee18a876816</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-31</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-31</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_10-cv-02833</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cv-02833</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cv-02833</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Bryon" fullName="Bryon Anderson" lastName="Anderson" role="Plaintiff"></party>
+ <party firstName="Herb" fullName="Herb Benedict" lastName="Benedict" role="Defendant"></party>
+ <party fullName="MCM Construction Inc" lastName="MCM Construction Inc" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PS) Anderson v. Benedict</title>
+ <partNumber>2:10-cv-02833</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cv-02833;10-2833</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bryon Anderson</displayForm>
+ <namePart type="family">Anderson</namePart>
+ <namePart type="given">Bryon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Herb Benedict</displayForm>
+ <namePart type="family">Benedict</namePart>
+ <namePart type="given">Herb</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MCM Construction Inc</displayForm>
+ <namePart type="family">MCM Construction Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cv-02833</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cv-02833</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1983 Civil Rights</cause>
+ <party firstName="Bryon" fullName="Bryon Anderson" lastName="Anderson" role="Plaintiff"></party>
+ <party firstName="Herb" fullName="Herb Benedict" lastName="Benedict" role="Defendant"></party>
+ <party fullName="MCM Construction Inc" lastName="MCM Construction Inc" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-0/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/13/10 ORDERING that Pltf&apos;s 2 Motion to Proceed IFP is GRANTED; complaint DISMISSED with leave to file an amended complaint within 28 days of service of this order. (Owen, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87df14</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-0</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-12-13</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 12/13/10 ORDERING that Pltf&apos;s 2 Motion to Proceed IFP is GRANTED; complaint DISMISSED with leave to file an amended complaint within 28 days of service of this order. (Owen, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-1/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>**VACATED PER 6 ORDER**FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 2/16/2011 recommending that this action be dismissed with prejudice. Objections due within fourteen days after being served with these findings and recommendations. (Duong, D) Modified on 3/17/2011 (Matson, R).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e000</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-1</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-16</dateIssued>
+  <docketText>**VACATED PER 6 ORDER**FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 2/16/2011 recommending that this action be dismissed with prejudice. Objections due within fourteen days after being served with these findings and recommendations. (Duong, D) Modified on 3/17/2011 (Matson, R).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-2/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/17/11 ORDERING The findings and recommendations issued February 16, 2011, (dkt. # 4), are vacated; and Plaintiff is granted twenty-one (21) days from the date of service of this order to file an amended complaint that complies with the requirements of the Civil Rights Act, the Federal Rules of Civil Procedure, and the Local Rules of Practice; the amended complaint must bear the docket number assigned this case and must be labeled &quot;Amended Complaint&quot;; failure to file an amended complaint in accordance with this order will result in a recommendation that this action be dismissed.(Matson, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e013</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-2</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-03-17</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/17/11 ORDERING The findings and recommendations issued February 16, 2011, (dkt. # 4), are vacated; and Plaintiff is granted twenty-one (21) days from the date of service of this order to file an amended complaint that complies with the requirements of the Civil Rights Act, the Federal Rules of Civil Procedure, and the Local Rules of Practice; the amended complaint must bear the docket number assigned this case and must be labeled &quot;Amended Complaint&quot;; failure to file an amended complaint in accordance with this order will result in a recommendation that this action be dismissed.(Matson, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-3/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 07/05/2011 ORDERING that Pltf&apos;s First Amended Complaint DISMISSED with leave to file a second amended complaint within 21 days. (Michel, G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e00f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-3</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-07-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 07/05/2011 ORDERING that Pltf&apos;s First Amended Complaint DISMISSED with leave to file a second amended complaint within 21 days. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-4/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/19/12 ORDERING defendant Benedict to PAY to the U.S. Marshal the sum of $65.20 within 14 days from the date of this order, unless within that time defendant files a written statement showing good cause for his failure to waive service. The court does not intend to extend this 14 day period. The Clerk of the Court is DIRECTED to serve a copy of this order on the U.S. Marshal; the Clerk shall serve Benedict at the address listed in the returned summons (cc:USM). (Meuleman, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e002</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-4</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-01-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/19/12 ORDERING defendant Benedict to PAY to the U.S. Marshal the sum of $65.20 within 14 days from the date of this order, unless within that time defendant files a written statement showing good cause for his failure to waive service. The court does not intend to extend this 14 day period. The Clerk of the Court is DIRECTED to serve a copy of this order on the U.S. Marshal; the Clerk shall serve Benedict at the address listed in the returned summons (cc:USM). (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-5/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/19/12 DENYING without prejudice the dft&apos;s 17 Motion to Dismiss; pltf is granted 30 days from the 3/15/12 hearing to file a Third Amended Complaint in accordance with this order. (Manzer, C)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e010</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-5</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-03-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 3/19/12 DENYING without prejudice the dft&apos;s 17 Motion to Dismiss; pltf is granted 30 days from the 3/15/12 hearing to file a Third Amended Complaint in accordance with this order. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-6/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/21/12 ORDERING that the August 30, 2012 hearing on the motion to dismiss, filed July 26, 2012, is VACATED; and the motion is submitted on the record. (Becknal, R) Modified on 8/22/2012 (Meuleman, A).</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e012</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-6</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2012-08-22</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 8/21/12 ORDERING that the August 30, 2012 hearing on the motion to dismiss, filed July 26, 2012, is VACATED; and the motion is submitted on the record. (Becknal, R) Modified on 8/22/2012 (Meuleman, A).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-7/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 12/14/12: Recommending that 29 MOTION to DISMISS be denied and defendant be ordered to file an answer within twenty-eight (28) days of an order adopting these findings and recommendations. F&amp;R referred to Judge Lawrence K. Karlton. Objections to F&amp;R due within fourteen (14) days. (Kaminski, H)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87dffd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-7</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2012-12-17</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 12/14/12: Recommending that 29 MOTION to DISMISS be denied and defendant be ordered to file an answer within twenty-eight (28) days of an order adopting these findings and recommendations. F&amp;R referred to Judge Lawrence K. Karlton. Objections to F&amp;R due within fourteen (14) days. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-8/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 3/6/2013 ADOPTING 34 FINDINGS AND RECOMMENDATIONS; defendant&apos;s 29 Motion to Dismiss is DENIED. (Waggoner, D)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e003</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-8</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-03-06</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 3/6/2013 ADOPTING 34 FINDINGS AND RECOMMENDATIONS; defendant&apos;s 29 Motion to Dismiss is DENIED. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-9/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 3/6/13 ORDERING the parties to show cause, in writing, within 14 days from the date of this order, why a joint status report has not been filed, or they shall file their joint status report. (Meuleman, A)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87dfff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-9</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-03-07</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gregory G. Hollows on 3/6/13 ORDERING the parties to show cause, in writing, within 14 days from the date of this order, why a joint status report has not been filed, or they shall file their joint status report. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-10/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/24/13 VACATING hearing date re: 45 MOTION to COMPEL. The parties shall meet and confer on 10/3/13 at 10:00 a.m. at a mutually agreeable location, and shall file a Joint Statement by 10/10/13. Upon review of the joint statement, the court will determine whether a hearing is necessary. (Meuleman, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e005</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-10</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-09-25</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 9/24/13 VACATING hearing date re: 45 MOTION to COMPEL. The parties shall meet and confer on 10/3/13 at 10:00 a.m. at a mutually agreeable location, and shall file a Joint Statement by 10/10/13. Upon review of the joint statement, the court will determine whether a hearing is necessary. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-11/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/17/2013 ORDERING Defendant to file, within seven days, a response to Plaintiff&apos;s October 11, 2013 letter explaining the reasons for the failure to meet and confer and file a joint statement; DENYING, without prejudice, 50 Motion for Summary Judgment as defectively filed. (Michel, G)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e014</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-11</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 10/17/2013 ORDERING Defendant to file, within seven days, a response to Plaintiff&apos;s October 11, 2013 letter explaining the reasons for the failure to meet and confer and file a joint statement; DENYING, without prejudice, 50 Motion for Summary Judgment as defectively filed. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-12/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER denying without prejudice 45 Motion to Compel signed by Magistrate Judge Gregory G. Hollows on 10/29/13. (Kaminski, H)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e001</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-12</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-10-30</dateIssued>
+  <docketText>ORDER denying without prejudice 45 Motion to Compel signed by Magistrate Judge Gregory G. Hollows on 10/29/13. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-13/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 12/3/2013 RECOMMENDING that defendant&apos;s 46 motion for summary judgment be granted, and judgment be entered in favor of defendant. Motion referred to Judge Lawrence K. Karlton. Objections to F&amp;R due within 14 days. (Zignago, K.)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e00e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-13</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-12-03</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Gregory G. Hollows on 12/3/2013 RECOMMENDING that defendant&apos;s 46 motion for summary judgment be granted, and judgment be entered in favor of defendant. Motion referred to Judge Lawrence K. Karlton. Objections to F&amp;R due within 14 days. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-14/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/5/14 ORDERING that plaintiff&apos;s 63 Motion for Extension of Time is GRANTED. Plaintiff is granted until 1/20/2014 in which to file objections to this court&apos;s findings and recommendations. Defendant may file a reply within 14 days thereafter. (Kastilahn, A)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e011</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-14</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gregory G. Hollows on 1/5/14 ORDERING that plaintiff&apos;s 63 Motion for Extension of Time is GRANTED. Plaintiff is granted until 1/20/2014 in which to file objections to this court&apos;s findings and recommendations. Defendant may file a reply within 14 days thereafter. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-15/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Judge Lawrence K. Karlton on 7/8/14 DENYING 73 Motion for Relief from Judgment. (Manzer, C)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e015</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-15</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-07-09</dateIssued>
+  <docketText>ORDER signed by Judge Lawrence K. Karlton on 7/8/14 DENYING 73 Motion for Relief from Judgment. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-16/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER denying 75 Motion for Reconsideration, signed by Judge Kimberly J. Mueller on 10/14/14. (Kastilahn, A)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87e004</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-16</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-10-15</dateIssued>
+  <docketText>ORDER denying 75 Motion for Reconsideration, signed by Judge Kimberly J. Mueller on 10/14/14. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-17/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 12/16/2014 DENYING 78 Request for Extension of Time to file a Motion for Reconsideration. (Michel, G)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87dffe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-17</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-12-17</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 12/16/2014 DENYING 78 Request for Extension of Time to file a Motion for Reconsideration. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cv-02833-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-18/mods.xml">
+ <titleInfo>
+  <title>(PS) Anderson v. Benedict</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 12/30/14 ORDERING that the motion for reconsideration 79 is DENIED. (Kastilahn, A)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a87dffc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-18</identifier>
+ <identifier type="former granule identifier">caed-2_10-cv-02833_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cv-02833/USCOURTS-caed-2_10-cv-02833-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cv-02833/pdf/USCOURTS-caed-2_10-cv-02833-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cv-02833; (PS) Anderson v. Benedict; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cv-02833-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-12-30</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 12/30/14 ORDERING that the motion for reconsideration 79 is DENIED. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

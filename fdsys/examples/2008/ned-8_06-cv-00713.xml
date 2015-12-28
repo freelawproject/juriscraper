@@ -1,0 +1,337 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179da18">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713</identifier>
+<identifier type="local">P0b002ee18179da18</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cv-00713</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00713</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00713</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1001 E.R.I.S.A.: Employee Retirement</cause>
+ <party firstName="Kathryn" fullName="Kathryn Brennan-Brick" lastName="Brennan-Brick" role="Plaintiff"></party>
+ <party fullName="Hartford Life Insurance" lastName="Hartford Life Insurance" role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan" lastName="Marsh&amp;McLennan" role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan Companies, Inc." lastName="Marsh&amp;McLennan Companies, Inc." role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee" lastName="Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee" role="Defendant"></party>
+ <party fullName="Marsh McLennan Companies Basic Long Term Disability Plan" lastName="Marsh McLennan Companies Basic Long Term Disability Plan" role="Defendant"></party>
+ <party fullName="Marsh McLennan Companies Optional Long Term Disability Plan" lastName="Marsh McLennan Companies Optional Long Term Disability Plan" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+ <partNumber>8:06-cv-00713</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cv-00713;06-713</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kathryn Brennan-Brick</displayForm>
+ <namePart type="family">Brennan-Brick</namePart>
+ <namePart type="given">Kathryn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Hartford Life Insurance</displayForm>
+ <namePart type="family">Hartford Life Insurance</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marsh&amp;McLennan</displayForm>
+ <namePart type="family">Marsh&amp;McLennan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marsh&amp;McLennan Companies, Inc.</displayForm>
+ <namePart type="family">Marsh&amp;McLennan Companies, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee</displayForm>
+ <namePart type="family">Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marsh McLennan Companies Basic Long Term Disability Plan</displayForm>
+ <namePart type="family">Marsh McLennan Companies Basic Long Term Disability Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marsh McLennan Companies Optional Long Term Disability Plan</displayForm>
+ <namePart type="family">Marsh McLennan Companies Optional Long Term Disability Plan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cv-00713</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cv-00713</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1001 E.R.I.S.A.: Employee Retirement</cause>
+ <party firstName="Kathryn" fullName="Kathryn Brennan-Brick" lastName="Brennan-Brick" role="Plaintiff"></party>
+ <party fullName="Hartford Life Insurance" lastName="Hartford Life Insurance" role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan" lastName="Marsh&amp;McLennan" role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan Companies, Inc." lastName="Marsh&amp;McLennan Companies, Inc." role="Defendant"></party>
+ <party fullName="Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee" lastName="Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee" role="Defendant"></party>
+ <party fullName="Marsh McLennan Companies Basic Long Term Disability Plan" lastName="Marsh McLennan Companies Basic Long Term Disability Plan" role="Defendant"></party>
+ <party fullName="Marsh McLennan Companies Optional Long Term Disability Plan" lastName="Marsh McLennan Companies Optional Long Term Disability Plan" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-0/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>ORDER granting 13 Motion for Leave to file an Amended Complaint by the close of business on the day following entry of this Order and Defendants shall have until January 30, 2007, to file an Answer or other responsive pleading. Amended Complaint due by 1/26/2007. Ordered by Magistrate Judge F. A. Gossett.(MKR )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c1c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-25</dateIssued>
+  <docketText>ORDER granting 13 Motion for Leave to file an Amended Complaint by the close of business on the day following entry of this Order and Defendants shall have until January 30, 2007, to file an Answer or other responsive pleading. Amended Complaint due by 1/26/2007. Ordered by Magistrate Judge F. A. Gossett.(MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-1/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>ORDER granting (33) Motion to Consolidate Cases in case 8:06-cv-00712-LSC-FG3; granting (27) Motion to Consolidate Cases in case 8:06-cv-00713-LSC-FG3. Cases Nos. 8:06cv712 and 8:06cv713 are hereby consolidated for discovery, trial, and all other purposes. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3. Ordered by Judge F. A. Gossett.(CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c1b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-10-11</dateIssued>
+  <docketText>ORDER granting (33) Motion to Consolidate Cases in case 8:06-cv-00712-LSC-FG3; granting (27) Motion to Consolidate Cases in case 8:06-cv-00713-LSC-FG3. Cases Nos. 8:06cv712 and 8:06cv713 are hereby consolidated for discovery, trial, and all other purposes. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3. Ordered by Judge F. A. Gossett.(CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-2/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>ORDER granting (35) Motion to Amend in case 8:06-cv-00712-LSC-FG3; granting (29) Motion to Amend in case 8:06-cv-00713-LSC-FG3. Progression order deadlines are extended as requested. Non-Jury Trial continued to 4/15/2008. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3Ordered by Magistrate Judge F. A. Gossett.(CLS, ) Modified on 10/16/2007 to correct date. (MLF, ).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817bc3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-10-15</dateIssued>
+  <docketText>ORDER granting (35) Motion to Amend in case 8:06-cv-00712-LSC-FG3; granting (29) Motion to Amend in case 8:06-cv-00713-LSC-FG3. Progression order deadlines are extended as requested. Non-Jury Trial continued to 4/15/2008. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3Ordered by Magistrate Judge F. A. Gossett.(CLS, ) Modified on 10/16/2007 to correct date. (MLF, ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-3/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>CORRECTED ORDER regarding Order on Motion to Amend, (30 in 8:06-cv-00713-LSC-FG3). The dates in paragraph 3 have been corrected. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3 Ordered by Magistrate Judge F. A. Gossett. (CLS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c19</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-10-16</dateIssued>
+  <docketText>CORRECTED ORDER regarding Order on Motion to Amend, (30 in 8:06-cv-00713-LSC-FG3). The dates in paragraph 3 have been corrected. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3 Ordered by Magistrate Judge F. A. Gossett. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-4/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>ORDER - Upon notice of settlement, on or before January 21, 2008, the parties shall electronically file a joint stipulation for dismissal. The final pretrial conference set for March 14, 2008, is cancelled upon the representation that this case is settled. Set/Reset All Deadlines: ( Dismissal Papers Deadline due by 1/21/2008.)Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3. Ordered by Magistrate Judge F. A. Gossett. (JAE, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817bc4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-12-19</dateIssued>
+  <docketText>ORDER - Upon notice of settlement, on or before January 21, 2008, the parties shall electronically file a joint stipulation for dismissal. The final pretrial conference set for March 14, 2008, is cancelled upon the representation that this case is settled. Set/Reset All Deadlines: ( Dismissal Papers Deadline due by 1/21/2008.)Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3. Ordered by Magistrate Judge F. A. Gossett. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cv-00713-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-5/mods.xml">
+ <titleInfo>
+  <title>Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al</title>
+  <subTitle>ORDER OF DISMISSAL approving (51) Stipulation for Dismissal in case 8:06-cv-00712-LSC-FG3 and (45) Stipulation for Dismissal in case 8:06-cv-00713-LSC-FG3. All pending motions are denied as moot. The amended complaints and all claims in these actions are dismissed with prejudice. The parties will pay their own costs and attorney fees. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3 Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cv-00713-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c1a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cv-00713_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cv-00713/USCOURTS-ned-8_06-cv-00713-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cv-00713/pdf/USCOURTS-ned-8_06-cv-00713-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cv-00713; Brennan-Brick v. Marsh&amp;McLennan Companies, Inc. Benefits Administration Committee et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cv-00713-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>ORDER OF DISMISSAL approving (51) Stipulation for Dismissal in case 8:06-cv-00712-LSC-FG3 and (45) Stipulation for Dismissal in case 8:06-cv-00713-LSC-FG3. All pending motions are denied as moot. The amended complaints and all claims in these actions are dismissed with prejudice. The parties will pay their own costs and attorney fees. Member Cases: 8:06-cv-00712-LSC-FG3, 8:06-cv-00713-LSC-FG3 Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

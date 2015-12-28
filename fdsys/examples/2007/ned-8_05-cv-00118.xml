@@ -1,0 +1,991 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a1a4f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118</identifier>
+<identifier type="local">P0b002ee1817a1a4f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cv-00118</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00118</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00118</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Catherine" fullName="Catherine Brooks" lastName="Brooks" role="Plaintiff"></party>
+ <party fullName="Lincoln National Life Insurance Company" lastName="Lincoln National Life Insurance Company" role="Defendant"></party>
+ <party fullName="Metlife" lastName="Metlife" role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael G. Mullin" lastName="Mullin" middleName="G." role="Mediator"></party>
+</extension>
+<titleInfo>
+ <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+ <partNumber>8:05-cv-00118</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cv-00118;05-118</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Catherine Brooks</displayForm>
+ <namePart type="family">Brooks</namePart>
+ <namePart type="given">Catherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lincoln National Life Insurance Company</displayForm>
+ <namePart type="family">Lincoln National Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metlife</displayForm>
+ <namePart type="family">Metlife</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Metropolitan Life Insurance Company</displayForm>
+ <namePart type="family">Metropolitan Life Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael G. Mullin</displayForm>
+ <namePart type="family">Mullin</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cv-00118</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cv-00118</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>110</natureSuitCode>
+ <natureSuit>Insurance</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Catherine" fullName="Catherine Brooks" lastName="Brooks" role="Plaintiff"></party>
+ <party fullName="Lincoln National Life Insurance Company" lastName="Lincoln National Life Insurance Company" role="Defendant"></party>
+ <party fullName="Metlife" lastName="Metlife" role="Defendant"></party>
+ <party fullName="Metropolitan Life Insurance Company" lastName="Metropolitan Life Insurance Company" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael G. Mullin" lastName="Mullin" middleName="G." role="Mediator"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-0/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER - Plaintiff&apos;s unopposed oral motion to continue is granted and the Rule 26 telephone planning conference is continued from August 1 to August 17, 2005 at 9:30 a.m. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 5/4/2005. (GJG, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-04</dateIssued>
+  <docketText>ORDER - Plaintiff&apos;s unopposed oral motion to continue is granted and the Rule 26 telephone planning conference is continued from August 1 to August 17, 2005 at 9:30 a.m. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 5/4/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-1/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting 19 Motion to Extend Time to submit settlement proposal. Plaintiff shall submit a settlement proposal to Defendants&apos; counsel on or before October 28, 2005. Signed by Magistrate Judge David L. Piester on 7/20/2005. (JAR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f73</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-07-20</dateIssued>
+  <docketText>ORDER granting 19 Motion to Extend Time to submit settlement proposal. Plaintiff shall submit a settlement proposal to Defendants&apos; counsel on or before October 28, 2005. Signed by Magistrate Judge David L. Piester on 7/20/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-2/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that the Planning Conference will resume at 2:00 p.m. on September 9, 2005, again by telephone conference call. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 8/17/2005. (CS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-08-17</dateIssued>
+  <docketText>ORDER that the Planning Conference will resume at 2:00 p.m. on September 9, 2005, again by telephone conference call. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 8/17/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-3/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that motion, filing 26, is granted, and the defendants shall respond to the motion to compel on or before September 2, 2005. The Rule 26 telephone planning conference previously scheduled for September 9, 2005 is continued to September 16, 2005 at 10:45 a.m. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 8/25/2005. (CS, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f71</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-08-25</dateIssued>
+  <docketText>ORDER that motion, filing 26, is granted, and the defendants shall respond to the motion to compel on or before September 2, 2005. The Rule 26 telephone planning conference previously scheduled for September 9, 2005 is continued to September 16, 2005 at 10:45 a.m. Plaintiff&apos;s counsel shall place the call. Signed by Magistrate Judge David L. Piester on 8/25/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-4/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding: Notice of Removal, 1. IT THEREFORE HEREBY IS ORDERED: 1. On or before September 23, 2005, both parties shall file a brief and any evidence for the court to consider on the issue of bifurcating the trial on the breach of contract claim from trial on the bad faith claim, and whether discovery on the bad faith claim should be stayed pending a determination on the contract claim; 2. Any responsive briefs shall be filed on or before September 30, 2005; and 3. Reply briefs shall not be filed except upon leave of the court for good cause shown. ***Set/Reset All Deadlines: Brief Deadline set for 9/30/2005. Signed by Magistrate Judge David L. Piester on 9/14/2005. (JAR)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f70</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-09-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding: Notice of Removal, 1. IT THEREFORE HEREBY IS ORDERED: 1. On or before September 23, 2005, both parties shall file a brief and any evidence for the court to consider on the issue of bifurcating the trial on the breach of contract claim from trial on the bad faith claim, and whether discovery on the bad faith claim should be stayed pending a determination on the contract claim; 2. Any responsive briefs shall be filed on or before September 30, 2005; and 3. Reply briefs shall not be filed except upon leave of the court for good cause shown. ***Set/Reset All Deadlines: Brief Deadline set for 9/30/2005. Signed by Magistrate Judge David L. Piester on 9/14/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-5/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the telephone planning conference is continued toOctober 31, 2005 at 10:00 a.m. Plaintiff&apos;s counsel shall place the call. Trial of this case is set to commence at 9:00 a.m. on June 19, 2006 in the Special Proceedings Courtroom, Roman L. Hruska United States Courthouse, Omaha, Nebraska before the Hon. Richard G. Kopf, United States District Judge. Trial is scheduled for a duration of five trial days. Jury selection will be held at commencement of trial. Signed by Magistrate Judge David L. Piester on 9/16/2005. (CS, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-09-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the telephone planning conference is continued toOctober 31, 2005 at 10:00 a.m. Plaintiff&apos;s counsel shall place the call. Trial of this case is set to commence at 9:00 a.m. on June 19, 2006 in the Special Proceedings Courtroom, Roman L. Hruska United States Courthouse, Omaha, Nebraska before the Hon. Richard G. Kopf, United States District Judge. Trial is scheduled for a duration of five trial days. Jury selection will be held at commencement of trial. Signed by Magistrate Judge David L. Piester on 9/16/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-6/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Pursuant to Rule 42(b) of the Federal Rules of Civil Procedure, this case is severed for trial. The plaintiff&apos;s contract claim and her tort claim for insurance bad faith shall be tried separately, with the contract claim tried first. Subject to any mutual agreement between the parties to the contrary, discovery on the insurance bad faith claim is stayed pending resolution of the contract claim. The plaintiff&apos;s motion to compel, filing 22 is denied without prejudice to re-filing as needed after resolution of the contract claim. A telephone conference with the undersigned magistrate judge will be held on November 2, 2005 at 11:30 a.m. for the purpose of reviewing the preparation of the contract claim to date and the scheduling of the case to trial. Prior to the conference, counsel for the parties shall have conferred regarding completing the depositions of expert witnesses and other remainingdiscovery, the filing of motions for summary judgment, any other matters which may influence the setting of the contract claims for trial. Counsel for theplaintiff shall place the call. Signed by Magistrate Judge David L. Piester on 10/26/2005. (GJG, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833dff</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2005-10-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Pursuant to Rule 42(b) of the Federal Rules of Civil Procedure, this case is severed for trial. The plaintiff&apos;s contract claim and her tort claim for insurance bad faith shall be tried separately, with the contract claim tried first. Subject to any mutual agreement between the parties to the contrary, discovery on the insurance bad faith claim is stayed pending resolution of the contract claim. The plaintiff&apos;s motion to compel, filing 22 is denied without prejudice to re-filing as needed after resolution of the contract claim. A telephone conference with the undersigned magistrate judge will be held on November 2, 2005 at 11:30 a.m. for the purpose of reviewing the preparation of the contract claim to date and the scheduling of the case to trial. Prior to the conference, counsel for the parties shall have conferred regarding completing the depositions of expert witnesses and other remainingdiscovery, the filing of motions for summary judgment, any other matters which may influence the setting of the contract claims for trial. Counsel for theplaintiff shall place the call. Signed by Magistrate Judge David L. Piester on 10/26/2005. (GJG, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-7/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the defendants&apos; motion for protective order, fling 30, is denied without prejudice to re-filing as needed upon plaintiff&apos;s re-service of the discovery requests at issued on plaintiff&apos;s filing 22 motion to compel. Signed by Magistrate Judge David L. Piester on 10/27/2005. (CS, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f72</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2005-10-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the defendants&apos; motion for protective order, fling 30, is denied without prejudice to re-filing as needed upon plaintiff&apos;s re-service of the discovery requests at issued on plaintiff&apos;s filing 22 motion to compel. Signed by Magistrate Judge David L. Piester on 10/27/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-8/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting 46 Motion to Extend Time to Submit a Settlement Proposal. Plaintiff shall submit a settlement proposal to Defendants&apos; counsel on or before January 27, 2006. Signed by Magistrate Judge David L. Piester on 10/28/2005. (JAR)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833e02</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2005-10-28</dateIssued>
+  <docketText>ORDER granting 46 Motion to Extend Time to Submit a Settlement Proposal. Plaintiff shall submit a settlement proposal to Defendants&apos; counsel on or before January 27, 2006. Signed by Magistrate Judge David L. Piester on 10/28/2005. (JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-9/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER. It is ordered that the Jury Trial set for 6/19/2006 09:00 AM will be held in Courtroom 1 (Lincoln) before Judge Richard G. Kopf.All pending civil and criminal matters assigned to Judge Kopf from the &quot;Omaha&quot; docket will be moved for hearing or trial from Omaha, Nebraska to Courtroom Number One in Lincoln, Nebraska. Magistrate Judge Piester no longer intends to travel to Omaha to conduct pretrial proceedings in civil or criminal cases assigned to Judge Kopf. ***Termed &quot;Trial-Omaha&quot; Flag; set &quot;Trial-Lincoln&quot; Flag. Signed by Judge Richard G. Kopf on 12/13/2005. (KLL, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2005-12-13</dateIssued>
+  <docketText>ORDER. It is ordered that the Jury Trial set for 6/19/2006 09:00 AM will be held in Courtroom 1 (Lincoln) before Judge Richard G. Kopf.All pending civil and criminal matters assigned to Judge Kopf from the &quot;Omaha&quot; docket will be moved for hearing or trial from Omaha, Nebraska to Courtroom Number One in Lincoln, Nebraska. Magistrate Judge Piester no longer intends to travel to Omaha to conduct pretrial proceedings in civil or criminal cases assigned to Judge Kopf. ***Termed &quot;Trial-Omaha&quot; Flag; set &quot;Trial-Lincoln&quot; Flag. Signed by Judge Richard G. Kopf on 12/13/2005. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-10/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER that all &quot;Omaha&quot; trials and hearings currently assigned to me will be tried or otherwise disposed of in Lincoln, Nebraska. Pretrial Conference set for 5/18/2006 at 09:00 AM in Chambers before Magistrate Judge David L. Piester. Signed by Magistrate Judge David L. Piester on 12/15/2005. (CS, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2005-12-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that all &quot;Omaha&quot; trials and hearings currently assigned to me will be tried or otherwise disposed of in Lincoln, Nebraska. Pretrial Conference set for 5/18/2006 at 09:00 AM in Chambers before Magistrate Judge David L. Piester. Signed by Magistrate Judge David L. Piester on 12/15/2005. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-11/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that Plaintiff&apos;s motions, filing numbers 55 and 56, to strike filing numbers 53 and 54 are granted. Signed by Magistrate Judge David L. Piester on 1/6/2006. (CS, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833e01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>ORDER that Plaintiff&apos;s motions, filing numbers 55 and 56, to strike filing numbers 53 and 54 are granted. Signed by Magistrate Judge David L. Piester on 1/6/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-12/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>REVISED ORDER SETTING SCHEDULE FOR PROGRESSION OF CASE - Deposition Deadline set for 06/28/2006. Pretrial Conference set for 7/12/2006 at 09:00 AM in Chambers before Magistrate Judge David L. Piester. Jury Trial set for 8/14/2006 at 09:00 AM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf for 5 trial days. Signed by Magistrate Judge David L. Piester on 3/8/2006. (CS, )</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833e00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-03-08</dateIssued>
+  <docketText>REVISED ORDER SETTING SCHEDULE FOR PROGRESSION OF CASE - Deposition Deadline set for 06/28/2006. Pretrial Conference set for 7/12/2006 at 09:00 AM in Chambers before Magistrate Judge David L. Piester. Jury Trial set for 8/14/2006 at 09:00 AM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf for 5 trial days. Signed by Magistrate Judge David L. Piester on 3/8/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-13/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER regarding Order 68. Trial of this matter is rescheduled to August 21, 2006 at 9:00 a.m. Signed by Magistrate Judge David L. Piester on 3/9/2006. (CAR, )</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2006-03-10</dateIssued>
+  <docketText>ORDER regarding Order 68. Trial of this matter is rescheduled to August 21, 2006 at 9:00 a.m. Signed by Magistrate Judge David L. Piester on 3/9/2006. (CAR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-14/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>GENERAL ORDER 06-05 this case is reassigned from Judge Kopf to Judge Riley. The magistrate judge will remain unchanged. Trial will be set during the months of July or August. Signed by Judge Joseph F. Bataillon on 3/30/2006. (DKM, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833e04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2006-03-30</dateIssued>
+  <docketText>GENERAL ORDER 06-05 this case is reassigned from Judge Kopf to Judge Riley. The magistrate judge will remain unchanged. Trial will be set during the months of July or August. Signed by Judge Joseph F. Bataillon on 3/30/2006. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-15/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>iley, United States Court of Appeals Judge in Omaha, Nebraska, in January of 2007. 2. The pretrial conference will be held December 4, 2006 at 10:00 a.m. before the undersigned magistrate judge in chambers,566 Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.3. The deposition deadline is continued to November 20, 2006, and other deadlines which use the deposition deadline as a point of reference are extended accordingly. 4. All other provisions of the court&apos;s revised order setting this case for trial, filing 68, shall remain in effect. Dated May 10, 2006. Signed by Magistrate Judge David L. Piester on 5/10/2006. (CS, )ORDER that upon reconsideration of the parties&apos; motions to continue trial, filings 71 and 82, the motions are granted as follows: 1. Jury trial is continued to a date to be established by the presiding trial judge, the Honorable William J. R</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833e03</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2006-05-10</dateIssued>
+  <docketText>iley, United States Court of Appeals Judge in Omaha, Nebraska, in January of 2007. 2. The pretrial conference will be held December 4, 2006 at 10:00 a.m. before the undersigned magistrate judge in chambers,566 Federal Building, 100 Centennial Mall North, Lincoln, Nebraska.3. The deposition deadline is continued to November 20, 2006, and other deadlines which use the deposition deadline as a point of reference are extended accordingly. 4. All other provisions of the court&apos;s revised order setting this case for trial, filing 68, shall remain in effect. Dated May 10, 2006. Signed by Magistrate Judge David L. Piester on 5/10/2006. (CS, )ORDER that upon reconsideration of the parties&apos; motions to continue trial, filings 71 and 82, the motions are granted as follows: 1. Jury trial is continued to a date to be established by the presiding trial judge, the Honorable William J. R</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-16/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that the memorandum and order of April 27, 2006, filing 84, is withdrawn and set aside. The accompanying memorandum and order is substituted for filing 84. The clerk shall provide copies of this order and theaccompanying memorandum and order to all of the judges of this court, the assigned trial judge, and to the mediator. Signed by Magistrate Judge David L. Piester on 6/14/2006. (Copies sent as directed)(CS, )</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-16</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2006-06-14</dateIssued>
+  <docketText>ORDER that the memorandum and order of April 27, 2006, filing 84, is withdrawn and set aside. The accompanying memorandum and order is substituted for filing 84. The clerk shall provide copies of this order and theaccompanying memorandum and order to all of the judges of this court, the assigned trial judge, and to the mediator. Signed by Magistrate Judge David L. Piester on 6/14/2006. (Copies sent as directed)(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-17/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that Plaintiff&apos;s motion for sanctions, filing 63, is granted in part. Defendants and defendants&apos; counsel shall jointly pay to plaintiff the sum of $200.00 as partial payment for the fees and expenses in preparing for and attending the mediation and preparing and presenting this motion to the court. This award shall be made a part of any judgment eventually entered in thiscase, unless, prior to the entry of judgment the clerk is notified that the award has been paid, accompanied by written evidence of payment. The motion is denied in all other respects. Defendants&apos; motion for sanctions, filing 76, is granted in part. Plaintiff&apos;s counsel shall, within ten days, send letters of apology to the plaintiff, the mediator, the defendants&apos; representative (through counsel), and the defendants&apos; attorney, and shall send copies of the letters of apology to the undersigned magistrate judge. In addition, counsel shall, as soon as practicable but within the next six months, enroll and complete an educational seminar or course in how to represent a client at a mediation, and shall file proof of his attendance and completion of it. Finally, plaintiff&apos;s counsel shall, within ten days, serve his client with a copy of this memorandum and order, and shall file a certificate of service showing he has done so.The motion is denied in all other respects. The judges have access electronically to all sealed filings, so counsel need not send more copies; this memorandum and order will serve as notice to the judges that such filingshave been made. The clerk shall send a copy of this memorandum and orderto the other judges of this court, and to the mediator. Plaintiff&apos;s counsel&apos;s request for oral argument and for permission to send the judges copies of the affidavits filed in this matter are denied. Signed by Magistrate Judge David L. Piester on 6/14/2006. (Copies sent as directed)(CS, )</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f74</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-17</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2006-06-14</dateIssued>
+  <docketText>ORDER that Plaintiff&apos;s motion for sanctions, filing 63, is granted in part. Defendants and defendants&apos; counsel shall jointly pay to plaintiff the sum of $200.00 as partial payment for the fees and expenses in preparing for and attending the mediation and preparing and presenting this motion to the court. This award shall be made a part of any judgment eventually entered in thiscase, unless, prior to the entry of judgment the clerk is notified that the award has been paid, accompanied by written evidence of payment. The motion is denied in all other respects. Defendants&apos; motion for sanctions, filing 76, is granted in part. Plaintiff&apos;s counsel shall, within ten days, send letters of apology to the plaintiff, the mediator, the defendants&apos; representative (through counsel), and the defendants&apos; attorney, and shall send copies of the letters of apology to the undersigned magistrate judge. In addition, counsel shall, as soon as practicable but within the next six months, enroll and complete an educational seminar or course in how to represent a client at a mediation, and shall file proof of his attendance and completion of it. Finally, plaintiff&apos;s counsel shall, within ten days, serve his client with a copy of this memorandum and order, and shall file a certificate of service showing he has done so.The motion is denied in all other respects. The judges have access electronically to all sealed filings, so counsel need not send more copies; this memorandum and order will serve as notice to the judges that such filingshave been made. The clerk shall send a copy of this memorandum and orderto the other judges of this court, and to the mediator. Plaintiff&apos;s counsel&apos;s request for oral argument and for permission to send the judges copies of the affidavits filed in this matter are denied. Signed by Magistrate Judge David L. Piester on 6/14/2006. (Copies sent as directed)(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-18/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that plaintiff&apos;s Motion 105 for Stay Pending Appeal of the Court&apos;s Orders (Filing 103 and 104) shall be granted. Signed by Magistrate Judge David L. Piester on 6/20/2006. (CS, )</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-18</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2006-06-20</dateIssued>
+  <docketText>ORDER that plaintiff&apos;s Motion 105 for Stay Pending Appeal of the Court&apos;s Orders (Filing 103 and 104) shall be granted. Signed by Magistrate Judge David L. Piester on 6/20/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-19/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that Defendants&apos; motion to file index of evidence under seal, filing 116, is granted. Signed by Magistrate Judge David L. Piester on 8/2/2006. (CS, )</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833dfc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-19</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2006-08-02</dateIssued>
+  <docketText>ORDER that Defendants&apos; motion to file index of evidence under seal, filing 116, is granted. Signed by Magistrate Judge David L. Piester on 8/2/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-20/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>NOTICE that this case will be called for trial during the week of January 16, 2007.Ordered by Judge William J. Riley. (ADB)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-20</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2006-08-22</dateIssued>
+  <docketText>NOTICE that this case will be called for trial during the week of January 16, 2007.Ordered by Judge William J. Riley. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-21/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORAMDUM AND ORDER denying 107 Order on Appeal to Magistrate Judge Order and denying 109 Order on Appeal to Magistrate Judge Order; Magistrate Judge Piester&apos;s order 103 and 104 are affirmed in their entirety. Ordered by Judge William J. Riley. (CJP)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833dfd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-21</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2006-08-25</dateIssued>
+  <docketText>MEMORAMDUM AND ORDER denying 107 Order on Appeal to Magistrate Judge Order and denying 109 Order on Appeal to Magistrate Judge Order; Magistrate Judge Piester&apos;s order 103 and 104 are affirmed in their entirety. Ordered by Judge William J. Riley. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-22/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting 129 defendant&apos;s unopposed oral motion to continue the pretrial conference and the pretrial conference is continued from 12/4/06 to 12/20/06 at 10:00 a.m. before the undersigned. Ordered by Magistrate Judge David L. Piester.(CCB)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f6f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-22</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2006-09-18</dateIssued>
+  <docketText>ORDER granting 129 defendant&apos;s unopposed oral motion to continue the pretrial conference and the pretrial conference is continued from 12/4/06 to 12/20/06 at 10:00 a.m. before the undersigned. Ordered by Magistrate Judge David L. Piester.(CCB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-23/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting the plaintiff&apos;s unopposed oral motion to continue. The pretrial conference will be held on December 28, 2006 at 10:00 a.m. Ordered by Magistrate Judge David L. Piester. (CRZ)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833dfe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-23</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2006-10-30</dateIssued>
+  <docketText>ORDER granting the plaintiff&apos;s unopposed oral motion to continue. The pretrial conference will be held on December 28, 2006 at 10:00 a.m. Ordered by Magistrate Judge David L. Piester. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-24/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting Plaintiff&apos;s 147 Motion to Extend Time. The Plaintiff&apos;s designation of Rebuttal Expert Witnesses shall be filed by November 20, 2006. Ordered by Magistrate Judge David L. Piester.(CS, )</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-24</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2006-11-02</dateIssued>
+  <docketText>ORDER granting Plaintiff&apos;s 147 Motion to Extend Time. The Plaintiff&apos;s designation of Rebuttal Expert Witnesses shall be filed by November 20, 2006. Ordered by Magistrate Judge David L. Piester.(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-25/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER granting 149 Motion to Extend. Plaintiff&apos;s unopposed motion for time, filing 149, is granted and the deposition deadline is extended from November 20,2006 to December 22, 2006. Ordered by Magistrate Judge David L. Piester.(JAR)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-25</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2006-11-03</dateIssued>
+  <docketText>ORDER granting 149 Motion to Extend. Plaintiff&apos;s unopposed motion for time, filing 149, is granted and the deposition deadline is extended from November 20,2006 to December 22, 2006. Ordered by Magistrate Judge David L. Piester.(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-26/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER denying 134 plaintiff&apos;s Motion to Compel.Ordered by Magistrate Judge David L. Piester.(CRZ)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-26</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2006-11-08</dateIssued>
+  <docketText>ORDER denying 134 plaintiff&apos;s Motion to Compel.Ordered by Magistrate Judge David L. Piester.(CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-27/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that the Plaintiff&apos;s Motion 154 shall be granted and the Plaintiff&apos;s designation of Rebuttal Expert Witnesses shall be filed by November 27, 2006. Ordered by Magistrate Judge David L. Piester.(CS, )</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-27</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2006-11-16</dateIssued>
+  <docketText>ORDER that the Plaintiff&apos;s Motion 154 shall be granted and the Plaintiff&apos;s designation of Rebuttal Expert Witnesses shall be filed by November 27, 2006. Ordered by Magistrate Judge David L. Piester.(CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-28/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the plaintiff&apos;s counsel has complied with the order of June 14, 2006, filing 104.Ordered by Magistrate Judge David L. Piester. (CS, )</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-28</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the plaintiff&apos;s counsel has complied with the order of June 14, 2006, filing 104.Ordered by Magistrate Judge David L. Piester. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cv-00118-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-29/mods.xml">
+ <titleInfo>
+  <title>Brooks v. Lincoln National Life Insurance Company, et al</title>
+  <subTitle>ORDER that Plaintiff&apos;s motion to dismiss, filing 159, is granted. This action is dismissed with prejudice, each party to bear their own costs and attorney fees. Ordered by Magistrate Judge David L. Piester.(CS, )</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cv-00118-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181833f79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-29</identifier>
+ <identifier type="former granule identifier">ned-8_05-cv-00118_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cv-00118/USCOURTS-ned-8_05-cv-00118-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cv-00118/pdf/USCOURTS-ned-8_05-cv-00118-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cv-00118; Brooks v. Lincoln National Life Insurance Company, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cv-00118-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>ORDER that Plaintiff&apos;s motion to dismiss, filing 159, is granted. This action is dismissed with prejudice, each party to bear their own costs and attorney fees. Ordered by Magistrate Judge David L. Piester.(CS, )</docketText>
+</extension>
+</relatedItem>
+</mods>

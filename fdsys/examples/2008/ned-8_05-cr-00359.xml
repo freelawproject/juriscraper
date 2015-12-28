@@ -1,0 +1,575 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181724478">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359</identifier>
+<identifier type="local">P0b002ee181724478</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_05-cr-00359</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00359</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00359</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thierry" fullName="Thierry Dongmo" lastName="Dongmo" role="Defendant"></party>
+ <party firstName="Aymard" fullName="Aymard N. Tchakounte" lastName="Tchakounte" middleName="N." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Tchakounte et al</title>
+ <partNumber>8:05-cr-00359</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:05-cr-00359;05-359</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thierry Dongmo</displayForm>
+ <namePart type="family">Dongmo</namePart>
+ <namePart type="given">Thierry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Aymard N. Tchakounte</displayForm>
+ <namePart type="family">Tchakounte</namePart>
+ <namePart type="given">Aymard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_05-cr-00359</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:05-cr-00359</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thierry" fullName="Thierry Dongmo" lastName="Dongmo" role="Defendant"></party>
+ <party firstName="Aymard" fullName="Aymard N. Tchakounte" lastName="Tchakounte" middleName="N." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Aymard N. Tchakounte. Signed by Magistrate Judge F. A. Gossett on 9/6/2005. (MLF, )[8:05-mj-00102-FG3]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-0</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-09-06</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant Aymard N. Tchakounte. Signed by Magistrate Judge F. A. Gossett on 9/6/2005. (MLF, )[8:05-mj-00102-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Thierry Dongmo. Signed by Magistrate Judge F. A. Gossett on 9/6/2005. Certified copy to US Marshal. (MLF, )[8:05-mj-00102-FG3]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-1</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-09-06</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Thierry Dongmo. Signed by Magistrate Judge F. A. Gossett on 9/6/2005. Certified copy to US Marshal. (MLF, )[8:05-mj-00102-FG3]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER - This matter is before the court on the motion of Jeffrey L. Thomas and the Office of the Federal Public Defender for the District of Nebraska to withdraw as counsel for the defendant, Aymard N. Tchakounte (Tchakounte) Filing No. 26. Since retained counsel, William F. Eustice, has entered an appearance for Tchakounte Filing No. 25, the motion to withdraw Filing No. 26 is granted. Mr. Thomas shall forthwith provide Mr. Eustice with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to Tchakounte&apos;s defense as to Aymard N. Tchakounte (1). Signed by Magistrate Judge Thomas D. Thalken on 10/6/2005. (TJS)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b161</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-2</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-10-06</dateIssued>
+  <docketText>ORDER - This matter is before the court on the motion of Jeffrey L. Thomas and the Office of the Federal Public Defender for the District of Nebraska to withdraw as counsel for the defendant, Aymard N. Tchakounte (Tchakounte) Filing No. 26. Since retained counsel, William F. Eustice, has entered an appearance for Tchakounte Filing No. 25, the motion to withdraw Filing No. 26 is granted. Mr. Thomas shall forthwith provide Mr. Eustice with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Thomas which are material to Tchakounte&apos;s defense as to Aymard N. Tchakounte (1). Signed by Magistrate Judge Thomas D. Thalken on 10/6/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER - Defendant Tchakounte&apos;s motion for an extension of time Filing No. 32 is granted. Defendants Tchakounte and Dongmo are given until on or before November 14, 2005, in which to file pretrial motions pursuant to the progression order; the time between October 19, 2005 and November 14, 2005, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Aymard N. Tchakounte (1). Signed by Magistrate Judge Thomas D. Thalken on 10/19/2005. (TJS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b15b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-3</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-10-19</dateIssued>
+  <docketText>ORDER - Defendant Tchakounte&apos;s motion for an extension of time Filing No. 32 is granted. Defendants Tchakounte and Dongmo are given until on or before November 14, 2005, in which to file pretrial motions pursuant to the progression order; the time between October 19, 2005 and November 14, 2005, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act as to Aymard N. Tchakounte (1). Signed by Magistrate Judge Thomas D. Thalken on 10/19/2005. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER as to Aymard N. Tchakounte regarding 34 Motion to Suppress and 35 Motion to Suppress: a hearing is scheduled before Magistrate Judge Thomas D. Thalken at 2:00 p.m. on December 27, 2005, in Courtroom No. 7, Second Floor, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Signed by Magistrate Judge Thomas D. Thalken on 12/8/2005. (MBB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b160</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-4</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2005-12-08</dateIssued>
+  <docketText>ORDER as to Aymard N. Tchakounte regarding 34 Motion to Suppress and 35 Motion to Suppress: a hearing is scheduled before Magistrate Judge Thomas D. Thalken at 2:00 p.m. on December 27, 2005, in Courtroom No. 7, Second Floor, Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska. Signed by Magistrate Judge Thomas D. Thalken on 12/8/2005. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>REPORT AND RECOMMENDATION AND ORDER that the MOTION to Suppress statement and evidence34 as amended by the Amended MOTION to Suppress statement and evidence35 be denied in all respects as to defendant Aymard N. Tchakounte. The clerk shall cause an expedited transcript of the hearing to be prepared andfiled. Any objection to this Report and Recommendationshall be filed with the Clerk of the Court within ten (10) days after the transcript is availableto counsel for reading in the clerk&apos;s office. Signed by MagistrateJudge Thomas D. Thalken on 12/27/2005. (ADB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-5</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2005-12-27</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION AND ORDER that the MOTION to Suppress statement and evidence34 as amended by the Amended MOTION to Suppress statement and evidence35 be denied in all respects as to defendant Aymard N. Tchakounte. The clerk shall cause an expedited transcript of the hearing to be prepared andfiled. Any objection to this Report and Recommendationshall be filed with the Clerk of the Court within ten (10) days after the transcript is availableto counsel for reading in the clerk&apos;s office. Signed by MagistrateJudge Thomas D. Thalken on 12/27/2005. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER denying 34 Motion to Suppress, as amended by Document 35; adopting 42 Magistrate&apos;s Report and Recommendation as to Aymard N. Tchakounte (1) Signed by Judge Joseph F. Bataillon on 1/26/2006. (SMS, )</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b15e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-6</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-01-26</dateIssued>
+  <docketText>ORDER denying 34 Motion to Suppress, as amended by Document 35; adopting 42 Magistrate&apos;s Report and Recommendation as to Aymard N. Tchakounte (1) Signed by Judge Joseph F. Bataillon on 1/26/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER granting 51 Motion to Continue as to Aymard N. Tchakounte (1) Jury Trial re-scheduled for 4/10/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. The time betweenFebruary 21, 2006 and April 10, 2006, shall be deemed excludable time in anycomputation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 2/21/2006. (ADB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b15f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-7</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-02-21</dateIssued>
+  <docketText>ORDER granting 51 Motion to Continue as to Aymard N. Tchakounte (1) Jury Trial re-scheduled for 4/10/2006 at 08:30 AM before Chief Judge Joseph F. Bataillon. The time betweenFebruary 21, 2006 and April 10, 2006, shall be deemed excludable time in anycomputation of time under the requirement of the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 2/21/2006. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER granting 54 Defendant&apos;s Motion to Continue; a Change of Plea Hearing is scheduled for 5/2/2006 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 4/10/2006 and 5/2/2006 is excluded under the Speedy Trial Act as to Aymard N. Tchakounte (1). Signed by Judge Joseph F. Bataillon on 4/5/2006. (SMS, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-8</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-04-05</dateIssued>
+  <docketText>ORDER granting 54 Defendant&apos;s Motion to Continue; a Change of Plea Hearing is scheduled for 5/2/2006 11:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; time between 4/10/2006 and 5/2/2006 is excluded under the Speedy Trial Act as to Aymard N. Tchakounte (1). Signed by Judge Joseph F. Bataillon on 4/5/2006. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>JUDGMENT as to Thierry Dongmo (2), Count 1, Defendant pleaded guilty to count I of the Indictment and is committed to custody of Bureau of Prisons for a term of time served; 2 years supervised release with special conditions; $100.00 special assessment is remitted on the motion of the government as to defendant Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 4/24/2006. (4 certified copies given to US Marshal) (ADB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-9</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-04-24</dateIssued>
+  <docketText>JUDGMENT as to Thierry Dongmo (2), Count 1, Defendant pleaded guilty to count I of the Indictment and is committed to custody of Bureau of Prisons for a term of time served; 2 years supervised release with special conditions; $100.00 special assessment is remitted on the motion of the government as to defendant Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 4/24/2006. (4 certified copies given to US Marshal) (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>AMENDED TRIAL ORDER as to defendant Aymard N. Tchakounte; Non-Jury Trial set for 6/13/2006 09:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. The time between today&apos;s date and June 13, 2006, shall be deemed excludable timein any computation of time under the requirement of the Speedy Trial Act. Signed by Judge Joseph F. Bataillon on 5/1/2006. (ADB)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-10</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-05-01</dateIssued>
+  <docketText>AMENDED TRIAL ORDER as to defendant Aymard N. Tchakounte; Non-Jury Trial set for 6/13/2006 09:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon. The time between today&apos;s date and June 13, 2006, shall be deemed excludable timein any computation of time under the requirement of the Speedy Trial Act. Signed by Judge Joseph F. Bataillon on 5/1/2006. (ADB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>GENERAL ORDER 2006-06 - Effective immediately, the following cases are reassigned from Judge Bataillon to Judge McDade for the purposes of trial:8:05CR359 USA v. Aymard Tchakounte and 8:05CR452 USA v. Snoddy. The magistrate judge assignments will remain unchanged. The above cases will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska during the week of June 12, 2006, as to defendants Aymard N. Tchakounte and Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 5/25/2006. (JAE, )GENERAL ORDER 2006-06 - Effective immediately, the following cases are reassigned from Judge Bataillon to Judge McDade for the purposes of trial:8:05CR359 USA v. Aymard Tchakounte and 8:05CR452 USA v. Snoddy. The magistrate judge assignments will remain unchanged. The above cases will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska during the week of June 12, 2006, as to defendants Aymard N. Tchakounte and Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 5/25/2006. (JAE, )</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b15d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-11</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-05-25</dateIssued>
+  <docketText>GENERAL ORDER 2006-06 - Effective immediately, the following cases are reassigned from Judge Bataillon to Judge McDade for the purposes of trial:8:05CR359 USA v. Aymard Tchakounte and 8:05CR452 USA v. Snoddy. The magistrate judge assignments will remain unchanged. The above cases will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska during the week of June 12, 2006, as to defendants Aymard N. Tchakounte and Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 5/25/2006. (JAE, )GENERAL ORDER 2006-06 - Effective immediately, the following cases are reassigned from Judge Bataillon to Judge McDade for the purposes of trial:8:05CR359 USA v. Aymard Tchakounte and 8:05CR452 USA v. Snoddy. The magistrate judge assignments will remain unchanged. The above cases will be called for trial in Courtroom #4 in the Roman L. Hruska United States Courthouse, 111 South 18th Plaza, Omaha, Nebraska during the week of June 12, 2006, as to defendants Aymard N. Tchakounte and Thierry Dongmo. Signed by Judge Joseph F. Bataillon on 5/25/2006. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER granting 67 Oral Motion to change plea as to Aymard N. Tchakounte. The change of plea hearing is scheduled for 6/9/2006 at 9:00 a.m. Signed by Judge Magistrate Thomas D. Thalken on 6/7/2006. (KMG)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b15c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-12</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-06-07</dateIssued>
+  <docketText>ORDER granting 67 Oral Motion to change plea as to Aymard N. Tchakounte. The change of plea hearing is scheduled for 6/9/2006 at 9:00 a.m. Signed by Judge Magistrate Thomas D. Thalken on 6/7/2006. (KMG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>JUDGMENT as to Aymard N. Tchakounte (1), Defendant pleaded guilty to Count I of the Indictment and is sentenced to twelve (12) months and one (1) day in the Bureau of Prisons followed by two (2) years of Supervised Release with Special Conditions; $100.00 Special Assessment due immediately as to defendant Aymard N. Tchakounte Ordered by Judge Joe Billy McDade.(PCV, ) (4 cert copies to the US Marshal)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-13</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2006-09-08</dateIssued>
+  <docketText>JUDGMENT as to Aymard N. Tchakounte (1), Defendant pleaded guilty to Count I of the Indictment and is sentenced to twelve (12) months and one (1) day in the Bureau of Prisons followed by two (2) years of Supervised Release with Special Conditions; $100.00 Special Assessment due immediately as to defendant Aymard N. Tchakounte Ordered by Judge Joe Billy McDade.(PCV, ) (4 cert copies to the US Marshal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER as to defendant Aymard N. Tchakounte. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Joseph F. Bataillon.(CJP)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-14</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2007-06-13</dateIssued>
+  <docketText>ORDER as to defendant Aymard N. Tchakounte. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Joseph F. Bataillon.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_05-cr-00359-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Tchakounte et al</title>
+  <subTitle>ORDER that the Clerk of Court for the Western District of Oklahoma shall release the passport to U.S. Probation Officer Vincent Windham who will in turn provide defendant Aymard N. Tchakounte his passport. Ordered by Judge Joe Billy McDade.(DKM, )</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_05-cr-00359-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174b0f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-15</identifier>
+ <identifier type="former granule identifier">ned-8_05-cr-00359_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_05-cr-00359/USCOURTS-ned-8_05-cr-00359-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_05-cr-00359/pdf/USCOURTS-ned-8_05-cr-00359-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:05-cr-00359; USA v. Tchakounte et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_05-cr-00359-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2008-01-16</dateIssued>
+  <docketText>ORDER that the Clerk of Court for the Western District of Oklahoma shall release the passport to U.S. Probation Officer Vincent Windham who will in turn provide defendant Aymard N. Tchakounte his passport. Ordered by Judge Joe Billy McDade.(DKM, )</docketText>
+</extension>
+</relatedItem>
+</mods>
