@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e014725-e3bb-4535-bd59-60c58e4c0eb3" name="Default" comment="" />
+    <list default="true" id="4e014725-e3bb-4535-bd59-60c58e4c0eb3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fdsys/FDSysSite.py" afterPath="$PROJECT_DIR$/fdsys/FDSysSite.py" />
+    </list>
     <ignored path="juriscraper.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,7 +24,18 @@
     <favorites_list name="juriscraper" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FDSysSite.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fdsys/FDSysSite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.58299595">
+              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,9 +72,9 @@
         <option value="$PROJECT_DIR$/fdsys/utils/get_metadata.py" />
         <option value="$PROJECT_DIR$/fdsys/court_locations.json" />
         <option value="$PROJECT_DIR$/fdsys/examples/2015/alsd-1_08-cr-00060.xml" />
-        <option value="$PROJECT_DIR$/fdsys/FDSysSite.py" />
         <option value="$PROJECT_DIR$/fdsys/first_five_words.json" />
         <option value="$PROJECT_DIR$/fdsys/first_five_words_counter.json" />
+        <option value="$PROJECT_DIR$/fdsys/FDSysSite.py" />
       </list>
     </option>
   </component>
@@ -503,10 +516,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42214912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42214912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -668,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opinions/united_states_backscrapers/state/calctapp_1st.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36437246">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_caller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71659917">
@@ -693,6 +699,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6356275">
           <caret line="51" column="36" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fdsys/FDSysSite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58299595">
+          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
