@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8bd831">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482</identifier>
+<identifier type="local">P0b002ee18a8bd831</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-02482</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02482</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02482</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Simon" fullName="Simon F. Ranteesi" lastName="Ranteesi" middleName="F." role="Petitioner"></party>
+ <party firstName="Gary" fullName="Gary Swarthout" lastName="Swarthout" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>(HC) Ranteesi v. Swarthout</title>
+ <partNumber>2:13-cv-02482</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02482;13-2482</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Simon F. Ranteesi</displayForm>
+ <namePart type="family">Ranteesi</namePart>
+ <namePart type="given">Simon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Swarthout</displayForm>
+ <namePart type="family">Swarthout</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02482</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02482</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Simon" fullName="Simon F. Ranteesi" lastName="Ranteesi" middleName="F." role="Petitioner"></party>
+ <party firstName="Gary" fullName="Gary Swarthout" lastName="Swarthout" role="Respondent"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02482-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-0/mods.xml">
+ <titleInfo>
+  <title>(HC) Ranteesi v. Swarthout</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 01/27/14 granting 2 Motion to Proceed IFP and denying 3 Motion to Appoint Counsel. Also, RECOMMENDING that the petition be summarily dismissed pursuant to Rule 4 of the Rules Governing Habeas Corpus Cases under section 2254. Referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5feb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02482_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02482; (HC) Ranteesi v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02482-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-27</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 01/27/14 granting 2 Motion to Proceed IFP and denying 3 Motion to Appoint Counsel. Also, RECOMMENDING that the petition be summarily dismissed pursuant to Rule 4 of the Rules Governing Habeas Corpus Cases under section 2254. Referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02482-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-1/mods.xml">
+ <titleInfo>
+  <title>(HC) Ranteesi v. Swarthout</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 12/15/14 recommending that respondent&apos;s motion to dismiss the petition 14 be granted; and this case be closed. MOTION to DISMISS 14 referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5f54</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02482_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02482; (HC) Ranteesi v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02482-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-12-15</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Carolyn K. Delaney on 12/15/14 recommending that respondent&apos;s motion to dismiss the petition 14 be granted; and this case be closed. MOTION to DISMISS 14 referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02482-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-2/mods.xml">
+ <titleInfo>
+  <title>(HC) Ranteesi v. Swarthout</title>
+  <subTitle>ORDER denying 19 Motion to Appoint Counsel signed by Magistrate Judge Carolyn K. Delaney on 1/06/15. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8c5fea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02482_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02482/USCOURTS-caed-2_13-cv-02482-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02482/pdf/USCOURTS-caed-2_13-cv-02482-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02482; (HC) Ranteesi v. Swarthout; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02482-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER denying 19 Motion to Appoint Counsel signed by Magistrate Judge Carolyn K. Delaney on 1/06/15. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

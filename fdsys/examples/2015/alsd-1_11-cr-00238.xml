@@ -1,0 +1,295 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ca3c264">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-06-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-06-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238</identifier>
+<identifier type="local">P0b002ee18ca3c264</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-06-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-06-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_11-cr-00238</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cr-00238</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Frank" fullName="Frank James Abston" lastName="Abston" middleName="James" role="Defendant"></party>
+ <party firstName="Walter" fullName="Walter Lee Hodges Jr." generation="Jr." lastName="Hodges" middleName="Lee" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Abston et al</title>
+ <partNumber>1:11-cr-00238</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cr-00238;11-238</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Frank James Abston</displayForm>
+ <namePart type="family">Abston</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Walter Lee Hodges Jr.</displayForm>
+ <namePart type="family">Hodges</namePart>
+ <namePart type="given">Walter</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_11-cr-00238</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:11-cr-00238</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Frank" fullName="Frank James Abston" lastName="Abston" middleName="James" role="Defendant"></party>
+ <party firstName="Walter" fullName="Walter Lee Hodges Jr." generation="Jr." lastName="Hodges" middleName="Lee" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>JUDGMENT as to Frank James Abston (1), Count 1 - Imprisonment: LIFE w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment program is available; SRT: 10 years w/special condition that dft participate in a program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00. Count 2 - Dismissed on motion of the government. Signed by Judge Callie V. S. Granade on 7/11/2012. (tot)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce5e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-0</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-11</dateIssued>
+  <docketText>JUDGMENT as to Frank James Abston (1), Count 1 - Imprisonment: LIFE w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment program is available; SRT: 10 years w/special condition that dft participate in a program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00. Count 2 - Dismissed on motion of the government. Signed by Judge Callie V. S. Granade on 7/11/2012. (tot)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>JUDGMENT as to Walter Lee Hodges, Jr. (2), Count 1 - Dismissed on motion of the government. Count 2 - Imprisonment: 67 months w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment is available; SRT: 6 years w/special condition that dft shall participate in program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00. Signed by Judge Callie V. S. Granade on 7/11/2012. (tot)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce60</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-1</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-11</dateIssued>
+  <docketText>JUDGMENT as to Walter Lee Hodges, Jr. (2), Count 1 - Dismissed on motion of the government. Count 2 - Imprisonment: 67 months w/recommendation to BOP that dft be imprisoned at an institution where a residential, comprehensive, substance abuse treatment is available; SRT: 6 years w/special condition that dft shall participate in program of testing &amp; treatment for drug &amp;/or alcohol abuse as directed by the Probation Office; SA: $100.00. Signed by Judge Callie V. S. Granade on 7/11/2012. (tot)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>ORDER as to Walter Lee Hodges Jr. GRANTING 180 Motion to Reduce Sentence re: 2014 Drug Guidelines Amendment. Dft&apos;s previously imposed sentence of imprisonment is reduced to 55 months, effective 11/1/15. Signed by Judge Callie V. S. Granade on 1/6/2015. (copy mailed to Dft on 1/6/15) (tot)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce5b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-2</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER as to Walter Lee Hodges Jr. GRANTING 180 Motion to Reduce Sentence re: 2014 Drug Guidelines Amendment. Dft&apos;s previously imposed sentence of imprisonment is reduced to 55 months, effective 11/1/15. Signed by Judge Callie V. S. Granade on 1/6/2015. (copy mailed to Dft on 1/6/15) (tot)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>REPORT AND RECOMMENDATION as to Frank James Abston recommending that Pet&apos;s 178 MOTION to Vacate under 28 U.S.C. 2255 be denied &amp; that this action be dismissed as set out, &amp; further recommending that any certificate of appealability filed by Pet be denied as he is not entitled to appeal in forma pauperis. Objections to R&amp;R due by 4/22/2015. Signed by Magistrate Judge Bert W. Milling, Jr. on 4/2/2015. (copy mailed to Dft on 4/2/15) (tot)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce5d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-3</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-04-02</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION as to Frank James Abston recommending that Pet&apos;s 178 MOTION to Vacate under 28 U.S.C. 2255 be denied &amp; that this action be dismissed as set out, &amp; further recommending that any certificate of appealability filed by Pet be denied as he is not entitled to appeal in forma pauperis. Objections to R&amp;R due by 4/22/2015. Signed by Magistrate Judge Bert W. Milling, Jr. on 4/2/2015. (copy mailed to Dft on 4/2/15) (tot)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>ORDER as to Frank James Abston ADOPTING 195 Report and Recommendation. Pet&apos;s 178 Motion to Vacate (2255) is DISMISSED, &amp; it is ORDERED that any certificate of appealability filed by Pet be DENIED as he is not entitled to appeal in forma pauperis Signed by Judge Callie V. S. Granade on 6/8/2015. (copy mailed to Pet/Dft on 6/9/15) (tot) Civil Case 1:14-cv-00505-CG closed.</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-4</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-06-08</dateIssued>
+  <docketText>ORDER as to Frank James Abston ADOPTING 195 Report and Recommendation. Pet&apos;s 178 Motion to Vacate (2255) is DISMISSED, &amp; it is ORDERED that any certificate of appealability filed by Pet be DENIED as he is not entitled to appeal in forma pauperis Signed by Judge Callie V. S. Granade on 6/8/2015. (copy mailed to Pet/Dft on 6/9/15) (tot) Civil Case 1:14-cv-00505-CG closed.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_11-cr-00238-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Abston et al</title>
+  <subTitle>JUDGMENT as to Frank James Abston in favor of Respondent, USA, &amp; against Petitioner Frank James Abston. Signed by Judge Callie V. S. Granade on 6/8/2015. (copy mailed to Pet/Dft on 6/9/15) (tot)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca4ce5f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-5</identifier>
+ <identifier type="former granule identifier">alsd-1_11-cr-00238_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_11-cr-00238/USCOURTS-alsd-1_11-cr-00238-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_11-cr-00238/pdf/USCOURTS-alsd-1_11-cr-00238-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cr-00238; USA v. Abston et al; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_11-cr-00238-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-06-08</dateIssued>
+  <docketText>JUDGMENT as to Frank James Abston in favor of Respondent, USA, &amp; against Petitioner Frank James Abston. Signed by Judge Callie V. S. Granade on 6/8/2015. (copy mailed to Pet/Dft on 6/9/15) (tot)</docketText>
+</extension>
+</relatedItem>
+</mods>

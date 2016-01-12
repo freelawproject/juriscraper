@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aaa49">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286</identifier>
+<identifier type="local">P0b002ee18a8aaa49</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-2_14-cv-00286</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-2_14-cv-00286</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>2:14-cv-00286</caseNumber>
+ <caseOffice>Greeneville</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Carter County Jail" lastName="Carter County Jail" role="Defendant"></party>
+ <party firstName="Adam" fullName="Adam Lee Hannan" lastName="Hannan" middleName="Lee" role="Plaintiff"></party>
+ <party fullName="Medical Staff" lastName="Medical Staff" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Smith" lastName="Smith" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Hannan v. Smith et al</title>
+ <partNumber>2:14-cv-00286</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-00286;14-286</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Greeneville</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carter County Jail</displayForm>
+ <namePart type="family">Carter County Jail</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adam Lee Hannan</displayForm>
+ <namePart type="family">Hannan</namePart>
+ <namePart type="given">Adam</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Medical Staff</displayForm>
+ <namePart type="family">Medical Staff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-2_14-cv-00286</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>2:14-cv-00286</caseNumber>
+ <caseOffice>Greeneville</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Carter County Jail" lastName="Carter County Jail" role="Defendant"></party>
+ <party firstName="Adam" fullName="Adam Lee Hannan" lastName="Hannan" middleName="Lee" role="Plaintiff"></party>
+ <party fullName="Medical Staff" lastName="Medical Staff" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Smith" lastName="Smith" role="Defendant"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-2_14-cv-00286-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-0/mods.xml">
+ <titleInfo>
+  <title>Hannan v. Smith et al</title>
+  <subTitle>MEMORANDUM OPINION dismissing this action WITHOUT PREJUDICE, sua sponte, forfailure to prosecute and to comply with the orders of this Court. The Court will CERTIFY that any appeal from this action would not be taken in good faith and would be totally frivolous. Signed by District Judge Thomas W Phillips on January 5, 2015. (mailed to Mr. Hannan) (AYB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286/pdf/USCOURTS-tned-2_14-cv-00286-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afc52</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-0</identifier>
+ <identifier type="former granule identifier">tned-2_14-cv-00286_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286/pdf/USCOURTS-tned-2_14-cv-00286-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00286; Hannan v. Smith et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-2_14-cv-00286-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>MEMORANDUM OPINION dismissing this action WITHOUT PREJUDICE, sua sponte, forfailure to prosecute and to comply with the orders of this Court. The Court will CERTIFY that any appeal from this action would not be taken in good faith and would be totally frivolous. Signed by District Judge Thomas W Phillips on January 5, 2015. (mailed to Mr. Hannan) (AYB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-2_14-cv-00286-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-1/mods.xml">
+ <titleInfo>
+  <title>Hannan v. Smith et al</title>
+  <subTitle>JUDGMENT ORDER, entered by the Clerk, that this action is DISMISSED WITHOUT PREJUDICE for failure to prosecute and to comply with the orders of the Court. The Court CERTIFIES that any appeal from this action would not be taken in good faith and would be totally frivolous. Signed by District Judge Thomas W Phillips on January 5, 2015. (mailed to Mr. Hannan) (AYB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286/pdf/USCOURTS-tned-2_14-cv-00286-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8afc59</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-1</identifier>
+ <identifier type="former granule identifier">tned-2_14-cv-00286_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-2_14-cv-00286/USCOURTS-tned-2_14-cv-00286-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-2_14-cv-00286/pdf/USCOURTS-tned-2_14-cv-00286-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-00286; Hannan v. Smith et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-2_14-cv-00286-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>JUDGMENT ORDER, entered by the Clerk, that this action is DISMISSED WITHOUT PREJUDICE for failure to prosecute and to comply with the orders of the Court. The Court CERTIFIES that any appeal from this action would not be taken in good faith and would be totally frivolous. Signed by District Judge Thomas W Phillips on January 5, 2015. (mailed to Mr. Hannan) (AYB)</docketText>
+</extension>
+</relatedItem>
+</mods>

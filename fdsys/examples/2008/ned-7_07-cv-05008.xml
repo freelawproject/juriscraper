@@ -1,0 +1,207 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181724d33">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-7_07-cv-05008</identifier>
+<identifier type="local">P0b002ee181724d33</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-7_07-cv-05008</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-7_07-cv-05008</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>7:07-cv-05008</caseNumber>
+ <caseOffice>7 North Platte</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party firstName="Curtis" fullName="Curtis E. James" lastName="James" middleName="E." role="Plaintiff"></party>
+ <party fullName="James Land Company" lastName="James Land Company" role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Novacek" lastName="Novacek" role="Defendant"></party>
+ <party firstName="Leanne" fullName="Leanne Novacek" lastName="Novacek" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>James v. Novacek et al</title>
+ <partNumber>7:07-cv-05008</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-7_07-cv-05008/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:07-cv-05008;07-5008</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>7 North Platte</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Mark A. Christensen</displayForm>
+ <namePart type="family">Christensen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Mediator</description>
+</name>
+<name type="personal">
+ <displayForm>Curtis E. James</displayForm>
+ <namePart type="family">James</namePart>
+ <namePart type="given">Curtis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Land Company</displayForm>
+ <namePart type="family">James Land Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jay Novacek</displayForm>
+ <namePart type="family">Novacek</namePart>
+ <namePart type="given">Jay</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leanne Novacek</displayForm>
+ <namePart type="family">Novacek</namePart>
+ <namePart type="given">Leanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-7_07-cv-05008</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>7:07-cv-05008</caseNumber>
+ <caseOffice>7 North Platte</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party firstName="Mark" fullName="Mark A. Christensen" lastName="Christensen" middleName="A." role="Mediator"></party>
+ <party firstName="Curtis" fullName="Curtis E. James" lastName="James" middleName="E." role="Plaintiff"></party>
+ <party fullName="James Land Company" lastName="James Land Company" role="Plaintiff"></party>
+ <party firstName="Jay" fullName="Jay Novacek" lastName="Novacek" role="Defendant"></party>
+ <party firstName="Leanne" fullName="Leanne Novacek" lastName="Novacek" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-7_07-cv-05008-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-0/mods.xml">
+ <titleInfo>
+  <title>James v. Novacek et al</title>
+  <subTitle>ORDER - Paragraph 2 of the Order for Initial Progression of Case, filing 16, is amended to require that counsel shall notify the undersigned magistrate judge by joint or separate letters by September 12, 2007 addressing the parties&apos; mediation plans.Ordered by Magistrate Judge David L. Piester. (CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-7_07-cv-05008-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817314d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-0</identifier>
+ <identifier type="former granule identifier">ned-7_07-cv-05008_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-7_07-cv-05008/pdf/USCOURTS-ned-7_07-cv-05008-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:07-cv-05008; James v. Novacek et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-7_07-cv-05008-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-07-02</dateIssued>
+  <docketText>ORDER - Paragraph 2 of the Order for Initial Progression of Case, filing 16, is amended to require that counsel shall notify the undersigned magistrate judge by joint or separate letters by September 12, 2007 addressing the parties&apos; mediation plans.Ordered by Magistrate Judge David L. Piester. (CS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-7_07-cv-05008-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-1/mods.xml">
+ <titleInfo>
+  <title>James v. Novacek et al</title>
+  <subTitle>ORDER granting MOTION to Dismiss With Prejudice26 filed by Curtis E. James. This action is dismissed with prejudice. Ordered by Senior Judge Lyle E. Strom. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-7_07-cv-05008-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817314d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-1</identifier>
+ <identifier type="former granule identifier">ned-7_07-cv-05008_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-7_07-cv-05008/USCOURTS-ned-7_07-cv-05008-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-7_07-cv-05008/pdf/USCOURTS-ned-7_07-cv-05008-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:07-cv-05008; James v. Novacek et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-7_07-cv-05008-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-02</dateIssued>
+  <docketText>ORDER granting MOTION to Dismiss With Prejudice26 filed by Curtis E. James. This action is dismissed with prejudice. Ordered by Senior Judge Lyle E. Strom. (JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

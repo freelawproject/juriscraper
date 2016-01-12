@@ -1,0 +1,337 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1833ca943">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-08-11</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-08-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034</identifier>
+<identifier type="local">P0b002ee1833ca943</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-08-11</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-08-11</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cv-03034</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03034</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03034</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="K-V Pharmaceutical Company" lastName="K-V Pharmaceutical Company" role="Counter Claimant"></party>
+ <party fullName="K-V Pharmaceutical Company" lastName="K-V Pharmaceutical Company" role="Defendant"></party>
+ <party fullName="KVa" lastName="KVa" role="Defendant"></party>
+ <party fullName="KVb" lastName="KVb" role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick D. Lange" lastName="Lange" middleName="D." role="Counter Defendant"></party>
+ <party firstName="Rick" fullName="Rick D. Lange" lastName="Lange" middleName="D." role="Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+ <partNumber>4:11-cv-03034</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cv-03034;11-3034</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>K-V Pharmaceutical Company</displayForm>
+ <namePart type="family">K-V Pharmaceutical Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>K-V Pharmaceutical Company</displayForm>
+ <namePart type="family">K-V Pharmaceutical Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KVa</displayForm>
+ <namePart type="family">KVa</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>KVb</displayForm>
+ <namePart type="family">KVb</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rick D. Lange</displayForm>
+ <namePart type="family">Lange</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rick D. Lange</displayForm>
+ <namePart type="family">Lange</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03034</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03034</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1332 Diversity-Breach of Contract</cause>
+ <party fullName="K-V Pharmaceutical Company" lastName="K-V Pharmaceutical Company" role="Counter Claimant"></party>
+ <party fullName="K-V Pharmaceutical Company" lastName="K-V Pharmaceutical Company" role="Defendant"></party>
+ <party fullName="KVa" lastName="KVa" role="Defendant"></party>
+ <party fullName="KVb" lastName="KVb" role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick D. Lange" lastName="Lange" middleName="D." role="Counter Defendant"></party>
+ <party firstName="Rick" fullName="Rick D. Lange" lastName="Lange" middleName="D." role="Plaintiff"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-0/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>MEMORANDUM AND ORDER for initial progression and determination of the arbitration issue. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb7e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER for initial progression and determination of the arbitration issue. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-1/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>ORDER granting 19 Motion to Extend. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb7e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-1</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-11-16</dateIssued>
+  <docketText>ORDER granting 19 Motion to Extend. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-2/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>ORDER granting 25 Motion for Protective Order. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb7e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-2</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-12-05</dateIssued>
+  <docketText>ORDER granting 25 Motion for Protective Order. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-3/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>MEMORANDUM AND ORDER. Counsel for the parties shall confer and, on or before January 13, 2012 they shall jointly file a proposed schedule for progression of this case to trial. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb7e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-3</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER. Counsel for the parties shall confer and, on or before January 13, 2012 they shall jointly file a proposed schedule for progression of this case to trial. Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-4/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>MEMORANDUM AND ORDER - After conferring with the parties,1) The parties&apos; oral motion to continue, (filing no. 44), is granted.2) The trial and pretrial conference are continued pending further order of the court.3) A status conference will be held on September 4, 2012 at 10:00 a.m. to discuss whether discovery is complete or the estimated completion date; whether the parties will waive a jury trial; the trial and pretrial conference settings; and the status of any settlement discussions. Counsel for the plaintiff shall place the call. 4) If the parties consent to final disposition of the case by the undersigned magistrate judge, on or before September 4, 2012 they shall complete and e-mail a consent form. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb7e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-4</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-07-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - After conferring with the parties,1) The parties&apos; oral motion to continue, (filing no. 44), is granted.2) The trial and pretrial conference are continued pending further order of the court.3) A status conference will be held on September 4, 2012 at 10:00 a.m. to discuss whether discovery is complete or the estimated completion date; whether the parties will waive a jury trial; the trial and pretrial conference settings; and the status of any settlement discussions. Counsel for the plaintiff shall place the call. 4) If the parties consent to final disposition of the case by the undersigned magistrate judge, on or before September 4, 2012 they shall complete and e-mail a consent form. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03034-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-5/mods.xml">
+ <titleInfo>
+  <title>Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47)</title>
+  <subTitle>ORDER that upon the 46 Suggestion of Bankruptcy, this case is referred to the United States Bankruptcy Court for the District of Nebraska pursuant to NEGenR 1.5(a)(1). The Clerk of the United States District Court for the District of Nebraska shall close this case for statistical purposes. The Clerk of the Court for the District of Nebraska shall deliver, or send electronically, the court file to the Clerk of the Bankruptcy Court for the District of Nebraska. granting Ordered by Judge John M. Gerrard. (ADB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03034-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1833cb77a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-5</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03034_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03034/USCOURTS-ned-4_11-cv-03034-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03034/pdf/USCOURTS-ned-4_11-cv-03034-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03034; Lange v. K-V Pharmaceutical Company (DO NOT FILE DOCUMENTS IN CASE PER FILING #47); </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03034-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-08-10</dateIssued>
+  <docketText>ORDER that upon the 46 Suggestion of Bankruptcy, this case is referred to the United States Bankruptcy Court for the District of Nebraska pursuant to NEGenR 1.5(a)(1). The Clerk of the United States District Court for the District of Nebraska shall close this case for statistical purposes. The Clerk of the Court for the District of Nebraska shall deliver, or send electronically, the court file to the Clerk of the Bankruptcy Court for the District of Nebraska. granting Ordered by Judge John M. Gerrard. (ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

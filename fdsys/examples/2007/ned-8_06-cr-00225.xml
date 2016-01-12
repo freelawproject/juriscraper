@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172378d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225</identifier>
+<identifier type="local">P0b002ee18172378d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00225</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00225</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00225</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jack" fullName="Jack Levell II" generation="II" lastName="Levell" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Levell</title>
+ <partNumber>8:06-cr-00225</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00225;06-225</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jack Levell II</displayForm>
+ <namePart type="family">Levell</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress">II</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00225</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00225</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jack" fullName="Jack Levell II" generation="II" lastName="Levell" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00225-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Levell</title>
+  <subTitle>ORDER granting 14 the Defendant&apos;s motion to continue the deadline to file objections to the PSR; the deadline in Paragraph 6 of the Order on Sentencing Schedule is changed to September 18, 2006; and otherwise, the deadlines in the PSR remain unchanged as to Jack Levell II (1). Ordered by Judge Laurie Smith Camp. (JB )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00225-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174327c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00225_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225/pdf/USCOURTS-ned-8_06-cr-00225-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00225; USA v. Levell; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00225-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-09-05</dateIssued>
+  <docketText>ORDER granting 14 the Defendant&apos;s motion to continue the deadline to file objections to the PSR; the deadline in Paragraph 6 of the Order on Sentencing Schedule is changed to September 18, 2006; and otherwise, the deadlines in the PSR remain unchanged as to Jack Levell II (1). Ordered by Judge Laurie Smith Camp. (JB )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00225-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Levell</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding the Revised Presentence Investigation Report as to Defendant Jack Levell, II. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00225-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174327d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00225_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225/pdf/USCOURTS-ned-8_06-cr-00225-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00225; USA v. Levell; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00225-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-10-02</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding the Revised Presentence Investigation Report as to Defendant Jack Levell, II. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00225-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Levell</title>
+  <subTitle>JUDGMENT as to Jack Levell, II (1), Defendant pled guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for a total term of 15 months; 3 years Supervised Release with special conditions; $100 Special Assessment; $10,000.00 Fine and $39,439.00 Restitution to be paid jointly and severally with Ronald Gillett&amp;Leslie Harnett; 8:05cr364, The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than January 22, 2007 at 2:00 p.m. as to defendant Jack Levell, II. Ordered by Judge Laurie Smith Camp.(MKR )4 CERT TO USM</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00225-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174327f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00225_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225/pdf/USCOURTS-ned-8_06-cr-00225-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00225; USA v. Levell; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00225-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-11-27</dateIssued>
+  <docketText>JUDGMENT as to Jack Levell, II (1), Defendant pled guilty to count I of the Information and is committed to the custody of the Bureau of Prisons for a total term of 15 months; 3 years Supervised Release with special conditions; $100 Special Assessment; $10,000.00 Fine and $39,439.00 Restitution to be paid jointly and severally with Ronald Gillett&amp;Leslie Harnett; 8:05cr364, The defendant shall surrender for service of sentence at the institution designated by the Bureau of Prisons no earlier than January 22, 2007 at 2:00 p.m. as to defendant Jack Levell, II. Ordered by Judge Laurie Smith Camp.(MKR )4 CERT TO USM</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00225-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Levell</title>
+  <subTitle>ORDER that the Defendant&apos;s motion to extend his self surrender date 30 isgranted. The Defendant shall report no later than 2:00 p.m. on Monday, February 5, 2007, to the institution designated by the U.S. Bureau of Prisons. The Clerk shall deliver a certified copy of this Order to the U.S. Marshal for this district, as to Jack Levell II (1). Ordered by Judge Laurie Smith Camp. Certified copy USM. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00225-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18174327e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00225_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00225/USCOURTS-ned-8_06-cr-00225-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00225/pdf/USCOURTS-ned-8_06-cr-00225-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00225; USA v. Levell; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00225-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>ORDER that the Defendant&apos;s motion to extend his self surrender date 30 isgranted. The Defendant shall report no later than 2:00 p.m. on Monday, February 5, 2007, to the institution designated by the U.S. Bureau of Prisons. The Clerk shall deliver a certified copy of this Order to the U.S. Marshal for this district, as to Jack Levell II (1). Ordered by Judge Laurie Smith Camp. Certified copy USM. (JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

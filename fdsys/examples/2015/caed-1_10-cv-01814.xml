@@ -1,0 +1,1390 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d2ec20d">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-08-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-08-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814</identifier>
+<identifier type="local">P0b002ee18d2ec20d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-08-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-08-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_10-cv-01814</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01814</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01814</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="K." fullName="K. Allison" lastName="Allison" role="Defendant"></party>
+ <party firstName="O." fullName="O. Beregovskaya" lastName="Beregovskaya" role="Defendant"></party>
+ <party firstName="T." fullName="T. Byers" lastName="Byers" role="Defendant"></party>
+ <party firstName="H." fullName="H. Carn" lastName="Carn" role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party fullName="Galindo" lastName="Galindo" role="Defendant"></party>
+ <party fullName="Gallagher" lastName="Gallagher" role="Defendant"></party>
+ <party fullName="Goss" lastName="Goss" role="Defendant"></party>
+ <party fullName="Langler" lastName="Langler" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ogar" lastName="Ogar" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Christopher Smith" lastName="Smith" middleName="Christopher" role="Plaintiff"></party>
+ <party firstName="D." fullName="D. Ybarra" lastName="Ybarra" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Smith v. Allison et al</title>
+ <partNumber>1:10-cv-01814</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01814;10-1814</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>K. Allison</displayForm>
+ <namePart type="family">Allison</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>O. Beregovskaya</displayForm>
+ <namePart type="family">Beregovskaya</namePart>
+ <namePart type="given">O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Byers</displayForm>
+ <namePart type="family">Byers</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>H. Carn</displayForm>
+ <namePart type="family">Carn</namePart>
+ <namePart type="given">H.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Enenmoh</displayForm>
+ <namePart type="family">Enenmoh</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Galindo</displayForm>
+ <namePart type="family">Galindo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gallagher</displayForm>
+ <namePart type="family">Gallagher</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Goss</displayForm>
+ <namePart type="family">Goss</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Langler</displayForm>
+ <namePart type="family">Langler</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Ogar</displayForm>
+ <namePart type="family">Ogar</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Christopher Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>D. Ybarra</displayForm>
+ <namePart type="family">Ybarra</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01814</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01814</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="K." fullName="K. Allison" lastName="Allison" role="Defendant"></party>
+ <party firstName="O." fullName="O. Beregovskaya" lastName="Beregovskaya" role="Defendant"></party>
+ <party firstName="T." fullName="T. Byers" lastName="Byers" role="Defendant"></party>
+ <party firstName="H." fullName="H. Carn" lastName="Carn" role="Defendant"></party>
+ <party firstName="A." fullName="A. Enenmoh" lastName="Enenmoh" role="Defendant"></party>
+ <party fullName="Galindo" lastName="Galindo" role="Defendant"></party>
+ <party fullName="Gallagher" lastName="Gallagher" role="Defendant"></party>
+ <party fullName="Goss" lastName="Goss" role="Defendant"></party>
+ <party fullName="Langler" lastName="Langler" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ogar" lastName="Ogar" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Christopher Smith" lastName="Smith" middleName="Christopher" role="Plaintiff"></party>
+ <party firstName="D." fullName="D. Ybarra" lastName="Ybarra" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying 3 Motion to Appointment of Counsel signed by Magistrate Judge Jennifer L. Thurston on 10/5/2010. (Leon-Guerrero, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-0</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-05</dateIssued>
+  <docketText>ORDER Denying 3 Motion to Appointment of Counsel signed by Magistrate Judge Jennifer L. Thurston on 10/5/2010. (Leon-Guerrero, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER GRANTING 7 Plaintiff&apos;s Motion for Information signed by Magistrate Judge Jennifer L. Thurston on 10/29/2010. (Jessen, A)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-1</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-10-29</dateIssued>
+  <docketText>ORDER GRANTING 7 Plaintiff&apos;s Motion for Information signed by Magistrate Judge Jennifer L. Thurston on 10/29/2010. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER DISMISSING COMPLAINT for Violation of Fed. R. Civ. P. 8 WITH LEAVE TO AMEND signed by Magistrate Judge Jennifer L. Thurston on 12/13/2012. First Amended Complaint due within thirty (30) days. (Jessen, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-2</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-12-13</dateIssued>
+  <docketText>ORDER DISMISSING COMPLAINT for Violation of Fed. R. Civ. P. 8 WITH LEAVE TO AMEND signed by Magistrate Judge Jennifer L. Thurston on 12/13/2012. First Amended Complaint due within thirty (30) days. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>**WITHDRAWN PER ORDER 19** FINDINGS and RECOMMENDATIONS to Dismiss Plaintiff&apos;s 1 Complaint for Failure to Prosecute and Failure to Comply with the Court&apos;s Order signed by Magistrate Judge Jennifer L. Thurston on 2/12/2013. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 3/4/2013. (Sant Agata, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-3</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-02-13</dateIssued>
+  <docketText>**WITHDRAWN PER ORDER 19** FINDINGS and RECOMMENDATIONS to Dismiss Plaintiff&apos;s 1 Complaint for Failure to Prosecute and Failure to Comply with the Court&apos;s Order signed by Magistrate Judge Jennifer L. Thurston on 2/12/2013. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 3/4/2013. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER WITHDRAWING the FINDINGS AND RECOMMENDATIONS Issued February 13, 2013 17, signed by Magistrate Judge Jennifer L. Thurston on 2/21/13. (Hellings, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-4</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-02-21</dateIssued>
+  <docketText>ORDER WITHDRAWING the FINDINGS AND RECOMMENDATIONS Issued February 13, 2013 17, signed by Magistrate Judge Jennifer L. Thurston on 2/21/13. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER directing Plaintiff to file a Second Amended Complaint or notify the Court of his willingness to proceed only on his cognizable claim signed by Magistrate Judge Jennifer L. Thurston on 3/26/2013. (Filing Deadline: 4/19/2013).(Lundstrom, T)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-5</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>ORDER directing Plaintiff to file a Second Amended Complaint or notify the Court of his willingness to proceed only on his cognizable claim signed by Magistrate Judge Jennifer L. Thurston on 3/26/2013. (Filing Deadline: 4/19/2013).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>013. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 7/25/2013; Case Management Deadline: 8/12/2013. (Attachments: # (1) USM-285 Forms)(Flores, E)**VACATED PURSUANT TO ORDER 30** ORDER Finding Service of the First Amended Complaint Appropriate and DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms. Service is appropriate for T. Byers, Gallagher, Goss, Langler. Clerk to send plaintiff: 4 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on 05/27/2013; FINDINGS and RECOMMENDATIONS Recommending Dismissing Certain 24 Claims signed by Magistrate Judge Jennifer L. Thurston on 07/05/2</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-6</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-07-08</dateIssued>
+  <docketText>013. Referred to Judge O&apos;Neill. Objections to F&amp;R due by 7/25/2013; Case Management Deadline: 8/12/2013. (Attachments: # (1) USM-285 Forms)(Flores, E)**VACATED PURSUANT TO ORDER 30** ORDER Finding Service of the First Amended Complaint Appropriate and DIRECTING PLAINTIFF TO SUBMIT SERVICE DOCUMENTS and USM-285 Forms. Service is appropriate for T. Byers, Gallagher, Goss, Langler. Clerk to send plaintiff: 4 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on 05/27/2013; FINDINGS and RECOMMENDATIONS Recommending Dismissing Certain 24 Claims signed by Magistrate Judge Jennifer L. Thurston on 07/05/2</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER ADOPTING 25 Findings and Recommendations to Dismiss Certain Claims, signed by District Judge Lawrence J. O&apos;Neill on 7/30/2013. (Marrujo, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-7</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-07-31</dateIssued>
+  <docketText>ORDER ADOPTING 25 Findings and Recommendations to Dismiss Certain Claims, signed by District Judge Lawrence J. O&apos;Neill on 7/30/2013. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER VACATING the Order Finding Service of the Second Amended Complaint Appropriate and the Findings and Recommendations Issued July 8, 2013 25; ORDER VACATING the Order Directing the United States Marshal Service to Serve the Second Amended Complaint 29; ORDER DISMISSING the Second Amended Complaint WITH LEAVE TO AMEND 24, signed by Magistrate Judge Jennifer L. Thurston on 8/6/13: 21 Day Deadline for Plaintiff to comply with this Order. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-8</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-08-06</dateIssued>
+  <docketText>ORDER VACATING the Order Finding Service of the Second Amended Complaint Appropriate and the Findings and Recommendations Issued July 8, 2013 25; ORDER VACATING the Order Directing the United States Marshal Service to Serve the Second Amended Complaint 29; ORDER DISMISSING the Second Amended Complaint WITH LEAVE TO AMEND 24, signed by Magistrate Judge Jennifer L. Thurston on 8/6/13: 21 Day Deadline for Plaintiff to comply with this Order. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>***** VACATED PURSUANT TO 42 ORDER ****ORDER FINDING SERVICE Of Certain Claims Appropriate And Directing The Clerk Of The Court To Provide Plaintiff With Service Documents (Doc.31), FINDINGS And RECOMMENDATION Dismissing Certain Claims (Doc.31), signed by Magistrate Judge Jennifer L. Thurston on 9/10/2013. Service is appropriate for T. Byers, Gallagher, Goss, Langler. (Enclosed for plaintiff: 1 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on August 27, 2013.) F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill.(Objections to F&amp;R due by 9/26/2013)(Filing Deadline: 10/15/2013) (Attachments: # (1) Third Amended Complaint, # (2) USM Prisoner Instructions)(Fahrney, E). Modified on 11/18/2013 (Lundstrom, T).</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-9</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-09-10</dateIssued>
+  <docketText>***** VACATED PURSUANT TO 42 ORDER ****ORDER FINDING SERVICE Of Certain Claims Appropriate And Directing The Clerk Of The Court To Provide Plaintiff With Service Documents (Doc.31), FINDINGS And RECOMMENDATION Dismissing Certain Claims (Doc.31), signed by Magistrate Judge Jennifer L. Thurston on 9/10/2013. Service is appropriate for T. Byers, Gallagher, Goss, Langler. (Enclosed for plaintiff: 1 Summons, 4 USM-285 Forms, and 1 copy of the Amended Complaint filed on August 27, 2013.) F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill.(Objections to F&amp;R due by 9/26/2013)(Filing Deadline: 10/15/2013) (Attachments: # (1) Third Amended Complaint, # (2) USM Prisoner Instructions)(Fahrney, E). Modified on 11/18/2013 (Lundstrom, T).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Reconsideration (ECF No.39), signed by District Judge Lawrence J. O&apos;Neill on 11/7/2013. (Fahrney, E)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-10</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-11-07</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Reconsideration (ECF No.39), signed by District Judge Lawrence J. O&apos;Neill on 11/7/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying Motion For Appointment Of Counsel (Doc.38), signed by Magistrate Judge Jennifer L. Thurston on 11/7/2013. (Fahrney, E)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-11</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-11-07</dateIssued>
+  <docketText>ORDER Denying Motion For Appointment Of Counsel (Doc.38), signed by Magistrate Judge Jennifer L. Thurston on 11/7/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Jennifer L. Thurston on 11/18/2013 vacating 33 ORDER finding service of certain claims appropriate and directing the clerk of court to provide Plaintiff with service documents and withdrawing FINDINGS and RECOMMENDATIONS dismissing certain claims and FINDINGS AND RECOMMENDATIONS dismissing certain claims re 31 Third Amended Prisoner Civil Rights Complaint. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 12/23/2013. (Lundstrom, T)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-12</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2013-11-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Jennifer L. Thurston on 11/18/2013 vacating 33 ORDER finding service of certain claims appropriate and directing the clerk of court to provide Plaintiff with service documents and withdrawing FINDINGS and RECOMMENDATIONS dismissing certain claims and FINDINGS AND RECOMMENDATIONS dismissing certain claims re 31 Third Amended Prisoner Civil Rights Complaint. Referred to Judge Lawrence J. O&apos;Neill. Objections to F&amp;R due by 12/23/2013. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Adopting FINDINGS AND RECOMMENDATIONS (Doc.42), signed by District Judge Lawrence J. O&apos;Neill on 1/7/2014. (Fahrney, E)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-13</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>ORDER Adopting FINDINGS AND RECOMMENDATIONS (Doc.42), signed by District Judge Lawrence J. O&apos;Neill on 1/7/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s 48 Motion for a Copy of the Court&apos;s Order that Issued on or Around December 11, 2013 signed by Magistrate Judge Jennifer L. Thurston on 1/23/2014. (Sant Agata, S)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-14</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-01-23</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s 48 Motion for a Copy of the Court&apos;s Order that Issued on or Around December 11, 2013 signed by Magistrate Judge Jennifer L. Thurston on 1/23/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER on Plaintiff&apos;s 49 Objections to Order Adopting Findings and Recommendations signed by District Judge Lawrence J. O&apos;Neill on 1/23/2014. (Sant Agata, S)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-15</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-01-23</dateIssued>
+  <docketText>ORDER on Plaintiff&apos;s 49 Objections to Order Adopting Findings and Recommendations signed by District Judge Lawrence J. O&apos;Neill on 1/23/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion Requesting the Law Librarian Be Ordered to Copy His Complaint 55, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-16</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion Requesting the Law Librarian Be Ordered to Copy His Complaint 55, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion Requesting an Order for a Video Log to Document Receipt of His Legal Mail 53, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-17</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion Requesting an Order for a Video Log to Document Receipt of His Legal Mail 53, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER GRANTING Plaintiff&apos;s Motions for Copies of Orders From This Court 54, 59, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-18</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>ORDER GRANTING Plaintiff&apos;s Motions for Copies of Orders From This Court 54, 59, signed by Magistrate Judge Jennifer L. Thurston on 5/22/14. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Dircting Clerk&apos;s Office to Send Plaintiff a Copy of Letter from Warden Holland 66, signed by Magistrate Judge Jennifer L. Thurston on 7/9/14. (Verduzco, M)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae36</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-19</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-07-09</dateIssued>
+  <docketText>ORDER Dircting Clerk&apos;s Office to Send Plaintiff a Copy of Letter from Warden Holland 66, signed by Magistrate Judge Jennifer L. Thurston on 7/9/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying Motion For Appointment Of Counsel (Doc.72), signed by Magistrate Judge Jennifer L. Thurston on 8/12/2014. (Fahrney, E)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-20</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-08-12</dateIssued>
+  <docketText>ORDER Denying Motion For Appointment Of Counsel (Doc.72), signed by Magistrate Judge Jennifer L. Thurston on 8/12/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Granting Plaintiff&apos;s First Motion To Extend Time To File Opposition And Granting His Requests For Return Of Exhibits (Docs.73,74,75), 21-Day Deadline, signed by Magistrate Judge Jennifer L. Thurston on 8/12/2014.(Opposition Deadline: 9/5/2014) (Fahrney, E)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-21</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-08-13</dateIssued>
+  <docketText>ORDER Granting Plaintiff&apos;s First Motion To Extend Time To File Opposition And Granting His Requests For Return Of Exhibits (Docs.73,74,75), 21-Day Deadline, signed by Magistrate Judge Jennifer L. Thurston on 8/12/2014.(Opposition Deadline: 9/5/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER GRANTING 71 Plaintiff&apos;s Motion for Copies of Orders From This Court signed by Magistrate Judge Jennifer L. Thurston on 8/19/2014. (Jessen, A)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-22</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-08-19</dateIssued>
+  <docketText>ORDER GRANTING 71 Plaintiff&apos;s Motion for Copies of Orders From This Court signed by Magistrate Judge Jennifer L. Thurston on 8/19/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER STAYING DISCOVERY re 79 signed by Magistrate Judge Jennifer L. Thurston on 8/20/2014. (Jessen, A)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faebb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-23</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2014-08-20</dateIssued>
+  <docketText>ORDER STAYING DISCOVERY re 79 signed by Magistrate Judge Jennifer L. Thurston on 8/20/2014. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Granting Defendant T. Byers&apos; First Motion To Extend Time To Respond To Plaintiff&apos;s Third Amended Complaint, signed by Magistrate Judge Jennifer L. Thurston on 9/23/2014. (Fahrney, E)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-24</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2014-09-23</dateIssued>
+  <docketText>ORDER Granting Defendant T. Byers&apos; First Motion To Extend Time To Respond To Plaintiff&apos;s Third Amended Complaint, signed by Magistrate Judge Jennifer L. Thurston on 9/23/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER striking 106 SUR-REPLY signed by Magistrate Judge Jennifer L. Thurston on 10/14/2014. (Lundstrom, T)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeb6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-25</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2014-10-14</dateIssued>
+  <docketText>ORDER striking 106 SUR-REPLY signed by Magistrate Judge Jennifer L. Thurston on 10/14/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>*STRICKEN PER ORDER 126* FINDINGS AND RECOMMENDATION TO GRANT IN PART AND DENY IN PART DEFENDANTS&apos; MOTION FOR SUMMARY JUDGMENT and DENYING DEFENDANTS&apos; MOTION TO STRIKE PLAINTIFF&apos;S OPPOSITION re 69, 88, 90, 94 signed by Magistrate Judge Jennifer L. Thurston on 10/16/2014. Referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 11/20/2014. (Lundstrom, T)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-26</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2014-10-17</dateIssued>
+  <docketText>*STRICKEN PER ORDER 126* FINDINGS AND RECOMMENDATION TO GRANT IN PART AND DENY IN PART DEFENDANTS&apos; MOTION FOR SUMMARY JUDGMENT and DENYING DEFENDANTS&apos; MOTION TO STRIKE PLAINTIFF&apos;S OPPOSITION re 69, 88, 90, 94 signed by Magistrate Judge Jennifer L. Thurston on 10/16/2014. Referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 11/20/2014. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>SECOND INFORMATIONAL ORDER-Notice And Warning Of Requirements For Opposing Defendants&apos; Motion To Dismiss (Doc.109), signed by Magistrate Judge Jennifer L. Thurston on 10/30/2014. (Opposition/Non-Opposition Deadline: 11/25/2014) (Fahrney, E)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-27</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2014-10-31</dateIssued>
+  <docketText>SECOND INFORMATIONAL ORDER-Notice And Warning Of Requirements For Opposing Defendants&apos; Motion To Dismiss (Doc.109), signed by Magistrate Judge Jennifer L. Thurston on 10/30/2014. (Opposition/Non-Opposition Deadline: 11/25/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>*STRICKEN PER ORDER 126* AMENDED FINDINGS And RECOMMENDATIONS To GRANT IN PART AND DENY IN PART Defendants&apos; Motion For Summary Judgment And Denying Defendants&apos; Motion To Strike Plaintiff&apos;s Opposition (Docs. 69, 88, 90, 94), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 11/18/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/22/2014. (Fahrney, E)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-28</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2014-11-19</dateIssued>
+  <docketText>*STRICKEN PER ORDER 126* AMENDED FINDINGS And RECOMMENDATIONS To GRANT IN PART AND DENY IN PART Defendants&apos; Motion For Summary Judgment And Denying Defendants&apos; Motion To Strike Plaintiff&apos;s Opposition (Docs. 69, 88, 90, 94), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 11/18/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/22/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>SECOND AMENDED FINDINGS And RECOMMENDATION To GRANT IN PART AND DENY IN PART Defendants&apos; Motion For Summary Judgment And Denying Defendants&apos; Motion To Strike Plaintiff&apos;s Opposition(Docs.69, 88, 90,94), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 11/19/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/22/2014. (Fahrney, E)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-29</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2014-11-19</dateIssued>
+  <docketText>SECOND AMENDED FINDINGS And RECOMMENDATION To GRANT IN PART AND DENY IN PART Defendants&apos; Motion For Summary Judgment And Denying Defendants&apos; Motion To Strike Plaintiff&apos;s Opposition(Docs.69, 88, 90,94), Objections Due Within 30 Days, signed by Magistrate Judge Jennifer L. Thurston on 11/19/2014. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 12/22/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER ADOPTING 114 SECOND AMENDED FINDINGS AND RECOMMENDATIONS IN FULL; ORDER STRIKING 108 Findings and Recommendations, 113 Amended Findings and Recommendations; ORDER GRANTING IN PART AND DENYING IN PART 69 Motion for Summary Judgment; ORDER DENYING 88 Motion to Strike; and ORDER DENYING 94 Plaintiff&apos;s Motion for Additional Discovery signed by District Judge Lawrence J. O&apos;Neill on 12/31/2014. Defendant Gallagher is dismissed from this action. (Jessen, A)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-30</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ADOPTING 114 SECOND AMENDED FINDINGS AND RECOMMENDATIONS IN FULL; ORDER STRIKING 108 Findings and Recommendations, 113 Amended Findings and Recommendations; ORDER GRANTING IN PART AND DENYING IN PART 69 Motion for Summary Judgment; ORDER DENYING 88 Motion to Strike; and ORDER DENYING 94 Plaintiff&apos;s Motion for Additional Discovery signed by District Judge Lawrence J. O&apos;Neill on 12/31/2014. Defendant Gallagher is dismissed from this action. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-31/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS to Grant Defendants&apos; Motion to Dismiss 109, signed by Magistrate Judge Jennifer L. Thurston on 3/18/15: 30-Day Objections Deadline. (Hellings, J)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-31</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2015-03-18</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS to Grant Defendants&apos; Motion to Dismiss 109, signed by Magistrate Judge Jennifer L. Thurston on 3/18/15: 30-Day Objections Deadline. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-32/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Motion for Appointment of and Examination By An Expert Witness 118, signed by Magistrate Judge Jennifer L. Thurston on 3/18/15. (Hellings, J)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-03-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-32</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2015-03-18</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Motion for Appointment of and Examination By An Expert Witness 118, signed by Magistrate Judge Jennifer L. Thurston on 3/18/15. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-33/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS to Deny Plaintiff&apos;s 121 Motion to File a Supplement to the Third Amended Complaint signed by Magistrate Judge Jennifer L. Thurston on 04/07/2015. Referred to Judge O&apos;Neill; Objections to F&amp;R due by 5/11/2015. (Flores, E)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-33</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2015-04-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS to Deny Plaintiff&apos;s 121 Motion to File a Supplement to the Third Amended Complaint signed by Magistrate Judge Jennifer L. Thurston on 04/07/2015. Referred to Judge O&apos;Neill; Objections to F&amp;R due by 5/11/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-34/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Disregarding Plaintiff&apos;s Motion For Status On His Motion To Supplement The Complaint And On Defendants&apos; Motion To Dismiss (Doc.134), signed by Magistrate Judge Jennifer L. Thurston on 4/14/2015. (Fahrney, E)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-34</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2015-04-14</dateIssued>
+  <docketText>ORDER Disregarding Plaintiff&apos;s Motion For Status On His Motion To Supplement The Complaint And On Defendants&apos; Motion To Dismiss (Doc.134), signed by Magistrate Judge Jennifer L. Thurston on 4/14/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-35/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>District Judge Lawrence J. O&apos;Neill on 4/29/2015. (Fahrney, E)***WITHDRAWN; pursuant to ORDER (Doc.140)***ORDER Adopting Findings And Recommendations And Granting Defendant Byers&apos; Motion To Dismiss And Disregarding Defendant Langler&apos;s Motion To Dismiss As Moot (Docs.109, 132), signed by</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-35</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2015-05-01</dateIssued>
+  <docketText>District Judge Lawrence J. O&apos;Neill on 4/29/2015. (Fahrney, E)***WITHDRAWN; pursuant to ORDER (Doc.140)***ORDER Adopting Findings And Recommendations And Granting Defendant Byers&apos; Motion To Dismiss And Disregarding Defendant Langler&apos;s Motion To Dismiss As Moot (Docs.109, 132), signed by</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-36/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER WITHDRAWING Order Adopting Findings And Recommendations Granting Defendant Byers&apos; Motion To Dismiss And DISREGARDING Defendant Langler&apos;s Motion To Dismiss As Moot (Docs.109, 132, 139), signed by District Judge Lawrence J. O&apos;Neill on 5/4/2015. (Fahrney, E)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-36.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faea7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-36</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2015-05-04</dateIssued>
+  <docketText>ORDER WITHDRAWING Order Adopting Findings And Recommendations Granting Defendant Byers&apos; Motion To Dismiss And DISREGARDING Defendant Langler&apos;s Motion To Dismiss As Moot (Docs.109, 132, 139), signed by District Judge Lawrence J. O&apos;Neill on 5/4/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-37/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying 128 Plaintiff&apos;s Request for Review/Reconsideration Per Fed R.Civ.P 60(b)(1), signed by District Judge Lawrence J. O&apos;Neill on 5/12/15. (Gonzalez, R)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-37.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-37</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2015-05-12</dateIssued>
+  <docketText>ORDER Denying 128 Plaintiff&apos;s Request for Review/Reconsideration Per Fed R.Civ.P 60(b)(1), signed by District Judge Lawrence J. O&apos;Neill on 5/12/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-38/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Requests for Review/Reconsideration of Rulings 129, 130, 131, signed by District Judge Lawrence J. O&apos;Neill on 5/13/15. (Gonzalez, R)</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-38.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2faeba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-38</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2015-05-13</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Requests for Review/Reconsideration of Rulings 129, 130, 131, signed by District Judge Lawrence J. O&apos;Neill on 5/13/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-39/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER ADOPTING 132 Findings and Recommendations and GRANTING Defendant Byers&apos; Motion to Dismiss and Disregarding Defendant Langler&apos;s Motion to Dismiss as Moot, signed by District Judge Lawrence J. O&apos;Neill on 6/1/15. (Marrujo, C)</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-39.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-39</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2015-06-01</dateIssued>
+  <docketText>ORDER ADOPTING 132 Findings and Recommendations and GRANTING Defendant Byers&apos; Motion to Dismiss and Disregarding Defendant Langler&apos;s Motion to Dismiss as Moot, signed by District Judge Lawrence J. O&apos;Neill on 6/1/15. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-40/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER ADOPTING 135 Findings and Recommendations and DENYING Plaintiff&apos;s 121 Motion to File a Supplement to the Third Amended Complaint, signed by District Judge Lawrence J. O&apos;Neill on 6/1/2015. (Marrujo, C)</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-40.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-40</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2015-06-01</dateIssued>
+  <docketText>ORDER ADOPTING 135 Findings and Recommendations and DENYING Plaintiff&apos;s 121 Motion to File a Supplement to the Third Amended Complaint, signed by District Judge Lawrence J. O&apos;Neill on 6/1/2015. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01814-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-41/mods.xml">
+ <titleInfo>
+  <title>(PC) Smith v. Allison et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s 154 Motion for Stay in Proceedings signed by Magistrate Judge Jennifer L. Thurston on 08/03/2015. (Flores, E)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-08-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-41.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d2fae97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-41</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01814_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01814/USCOURTS-caed-1_10-cv-01814-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01814/pdf/USCOURTS-caed-1_10-cv-01814-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01814; (PC) Smith v. Allison et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01814-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2015-08-03</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s 154 Motion for Stay in Proceedings signed by Magistrate Judge Jennifer L. Thurston on 08/03/2015. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

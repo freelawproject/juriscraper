@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aac3e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027</identifier>
+<identifier type="local">P0b002ee18a8aac3e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-miwd-2_14-cr-00027</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cr-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cr-00027</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Nathan" fullName="Nathan Alfred Joyal" lastName="Joyal" middleName="Alfred" role="defendant"></party>
+ <party fullName="USA" lastName="USA" role="plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Joyal</title>
+ <partNumber>2:14-cr-00027</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cr-00027;14-027</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Northern Division (2)</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Nathan Alfred Joyal</displayForm>
+ <namePart type="family">Joyal</namePart>
+ <namePart type="given">Nathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-miwd-2_14-cr-00027</accessId>
+ <courtType>District</courtType>
+ <courtCode>miwd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2254</courtSortOrder>
+ <caseNumber>2:14-cr-00027</caseNumber>
+ <caseOffice>Northern Division (2)</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Nathan" fullName="Nathan Alfred Joyal" lastName="Joyal" middleName="Alfred" role="defendant"></party>
+ <party fullName="USA" lastName="USA" role="plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cr-00027-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Joyal</title>
+  <subTitle>REPORT AND RECOMMENDATION that the guilty plea of Nathan Alfred Joyal as to Counts One and Twelve be accepted; objections to R&amp;R due within 14 days; signed by Magistrate Judge Timothy P. Greeley (Magistrate Judge Timothy P. Greeley, pjc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027/pdf/USCOURTS-miwd-2_14-cr-00027-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b3010</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-0</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cr-00027_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027/pdf/USCOURTS-miwd-2_14-cr-00027-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00027; USA v. Joyal; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cr-00027-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-12-01</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION that the guilty plea of Nathan Alfred Joyal as to Counts One and Twelve be accepted; objections to R&amp;R due within 14 days; signed by Magistrate Judge Timothy P. Greeley (Magistrate Judge Timothy P. Greeley, pjc)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-miwd-2_14-cr-00027-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Joyal</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION 40 as to Nathan Alfred Joyal ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027/pdf/USCOURTS-miwd-2_14-cr-00027-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b300f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-1</identifier>
+ <identifier type="former granule identifier">miwd-2_14-cr-00027_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-miwd-2_14-cr-00027/USCOURTS-miwd-2_14-cr-00027-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-miwd-2_14-cr-00027/pdf/USCOURTS-miwd-2_14-cr-00027-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cr-00027; USA v. Joyal; </searchTitle>
+  <courtName>United States District Court Western District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-miwd-2_14-cr-00027-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION 40 as to Nathan Alfred Joyal ; signed by Judge R. Allan Edgar (Judge R. Allan Edgar, cam)</docketText>
+</extension>
+</relatedItem>
+</mods>

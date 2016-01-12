@@ -1,0 +1,485 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184e1b4e6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997</identifier>
+<identifier type="local">P0b002ee184e1b4e6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-02997</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02997</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02997</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>441</natureSuitCode>
+ <natureSuit>Civil Rights Voting</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Electoral College" lastName="Electoral College" role="Defendant"></party>
+ <party fullName="Governor of California" lastName="Governor of California" role="Defendant"></party>
+ <party firstName="James" fullName="James Grinols" lastName="Grinols" role="Plaintiff"></party>
+ <party firstName="Keith" fullName="Keith Judd" lastName="Judd" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Gregory MacLeran" lastName="MacLeran" middleName="Gregory" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Noonan" lastName="Noonan" role="Plaintiff"></party>
+ <party firstName="Barack" fullName="Barack Hussein Obama" lastName="Obama" middleName="Hussein" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Odden" lastName="Odden" role="Plaintiff"></party>
+ <party fullName="President of the Senate" lastName="President of the Senate" role="Defendant"></party>
+ <party fullName="Secretary of State of California" lastName="Secretary of State of California" role="Defendant"></party>
+ <party fullName="U.S. Congress" lastName="U.S. Congress" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Grinols et al v. Electoral College et al</title>
+ <partNumber>2:12-cv-02997</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-02997;12-2997</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Electoral College</displayForm>
+ <namePart type="family">Electoral College</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Governor of California</displayForm>
+ <namePart type="family">Governor of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Grinols</displayForm>
+ <namePart type="family">Grinols</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Judd</displayForm>
+ <namePart type="family">Judd</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Gregory MacLeran</displayForm>
+ <namePart type="family">MacLeran</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Noonan</displayForm>
+ <namePart type="family">Noonan</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Barack Hussein Obama</displayForm>
+ <namePart type="family">Obama</namePart>
+ <namePart type="given">Barack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Odden</displayForm>
+ <namePart type="family">Odden</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>President of the Senate</displayForm>
+ <namePart type="family">President of the Senate</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Secretary of State of California</displayForm>
+ <namePart type="family">Secretary of State of California</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Congress</displayForm>
+ <namePart type="family">U.S. Congress</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-02997</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-02997</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>441</natureSuitCode>
+ <natureSuit>Civil Rights Voting</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Electoral College" lastName="Electoral College" role="Defendant"></party>
+ <party fullName="Governor of California" lastName="Governor of California" role="Defendant"></party>
+ <party firstName="James" fullName="James Grinols" lastName="Grinols" role="Plaintiff"></party>
+ <party firstName="Keith" fullName="Keith Judd" lastName="Judd" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Gregory MacLeran" lastName="MacLeran" middleName="Gregory" role="Plaintiff"></party>
+ <party firstName="Edward" fullName="Edward Noonan" lastName="Noonan" role="Plaintiff"></party>
+ <party firstName="Barack" fullName="Barack Hussein Obama" lastName="Obama" middleName="Hussein" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Odden" lastName="Odden" role="Plaintiff"></party>
+ <party fullName="President of the Senate" lastName="President of the Senate" role="Defendant"></party>
+ <party fullName="Secretary of State of California" lastName="Secretary of State of California" role="Defendant"></party>
+ <party fullName="U.S. Congress" lastName="U.S. Congress" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-0/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 12/14/12 DENYING Plaintiffs&apos; 2 Request. If the parties wish to proceed with their request for a temporary restraining order, they are hereby ordered to file the documents listed in this order by 12/21/12. (Manzer, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2bb2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-12-14</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 12/14/12 DENYING Plaintiffs&apos; 2 Request. If the parties wish to proceed with their request for a temporary restraining order, they are hereby ordered to file the documents listed in this order by 12/21/12. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-1/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER regarding oral arguments at the January 3, 2013 Motion Hearing. Signed by Chief Judge Morrison C. England, Jr. on 1/2/2013. (Deutsch, S)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba80</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER regarding oral arguments at the January 3, 2013 Motion Hearing. Signed by Chief Judge Morrison C. England, Jr. on 1/2/2013. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-2/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER denying Plaintiffs&apos; Motion for Temporary Restraining Order 12. Signed by Chief Judge Morrison C. England, Jr. on 1/16/2013. (Deutsch, S)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba82</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER denying Plaintiffs&apos; Motion for Temporary Restraining Order 12. Signed by Chief Judge Morrison C. England, Jr. on 1/16/2013. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-3/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 1/17/2013 ORDERING that Defendant&apos;s 27 Ex Parte Motion to Extend the Time for Responding to Plaintiffs&apos; Subpoenas is GRANTED. Plaintiffs are ORDERED to modify their subpoenas in compliance with Fed. R. Civ. P. 45, allowing Defendants a reasonable amount of time to comply. (Zignago, K.)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2bb29</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-18</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 1/17/2013 ORDERING that Defendant&apos;s 27 Ex Parte Motion to Extend the Time for Responding to Plaintiffs&apos; Subpoenas is GRANTED. Plaintiffs are ORDERED to modify their subpoenas in compliance with Fed. R. Civ. P. 45, allowing Defendants a reasonable amount of time to comply. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-4/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 3/11/13 DENYING 64 Motion for Default Judgment and 76 Motion to Stay. (Manzer, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba7f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-11</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 3/11/13 DENYING 64 Motion for Default Judgment and 76 Motion to Stay. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-5/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr., on 3/14/13: The Court directs Plaintiffs&apos; counsel to both the Federal Rules of Civil Procedure and the Eastern District of California&apos;s Local Rules. Chambers staff will disregard all communication that does not comply with both sets of rules. (Kastilahn, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr., on 3/14/13: The Court directs Plaintiffs&apos; counsel to both the Federal Rules of Civil Procedure and the Eastern District of California&apos;s Local Rules. Chambers staff will disregard all communication that does not comply with both sets of rules. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-6/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 3/26/2013 DENYING 93 Motion for Reconsideration. (Donati, J)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba83</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-26</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 3/26/2013 DENYING 93 Motion for Reconsideration. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-7/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 4/4/2013 VACATING the 4/18/2013 hearing on Defendants&apos; 71 and 72 Motions to Dismiss and CONTINUING the hearings to for 4/22/2013 at 10:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England Jr. The 4/18/2013 hearing on the 102 Motion to Recuse is VACATED and will be reset if necessary. (Deutsch, S) Modified on 4/5/2013 (Donati, J).</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba81</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-04-04</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 4/4/2013 VACATING the 4/18/2013 hearing on Defendants&apos; 71 and 72 Motions to Dismiss and CONTINUING the hearings to for 4/22/2013 at 10:00 AM in Courtroom 7 (MCE) before Chief Judge Morrison C. England Jr. The 4/18/2013 hearing on the 102 Motion to Recuse is VACATED and will be reset if necessary. (Deutsch, S) Modified on 4/5/2013 (Donati, J).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-8/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr. on 4/4/2013 DENYING 97 Motion for Reconsideration. (Deutsch, S) Modified on 4/5/2013 (Donati, J).</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-04-04</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr. on 4/4/2013 DENYING 97 Motion for Reconsideration. (Deutsch, S) Modified on 4/5/2013 (Donati, J).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-02997-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-9/mods.xml">
+ <titleInfo>
+  <title>Grinols et al v. Electoral College et al</title>
+  <subTitle>MEMORANDUM and ORDER signed by Chief Judge Morrison C. England, Jr on 5/23/2013 GRANTING 71&amp;73 Motions to Dismiss without leave to amend. The court DISMISSED without leave to amend Plaintiffs&apos; claim for declaratory relief arising out of President Obama&apos;s alleged ineligibility for office. Having dismissed the only federal claim asserted by Plaintiffs in their first amended complaint, the court DECLINES to exercise supplemental jurisdiction over the remaining state-law claim and DISMISSES that claim without prejudice. All other pending motions, including 102 Motion to Recuse Counsel are DENIED as moot. CASE CLOSED. (Donati, J)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-02997-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184e2ba7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-02997_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-02997/USCOURTS-caed-2_12-cv-02997-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-02997/pdf/USCOURTS-caed-2_12-cv-02997-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-02997; Grinols et al v. Electoral College et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-02997-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-05-23</dateIssued>
+  <docketText>MEMORANDUM and ORDER signed by Chief Judge Morrison C. England, Jr on 5/23/2013 GRANTING 71&amp;73 Motions to Dismiss without leave to amend. The court DISMISSED without leave to amend Plaintiffs&apos; claim for declaratory relief arising out of President Obama&apos;s alleged ineligibility for office. Having dismissed the only federal claim asserted by Plaintiffs in their first amended complaint, the court DECLINES to exercise supplemental jurisdiction over the remaining state-law claim and DISMISSES that claim without prejudice. All other pending motions, including 102 Motion to Recuse Counsel are DENIED as moot. CASE CLOSED. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

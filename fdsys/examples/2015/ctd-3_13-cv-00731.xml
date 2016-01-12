@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab68e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Connecticut</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ctd-3_13-cv-00731</identifier>
+<identifier type="local">P0b002ee18a8ab68e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ctd-3_13-cv-00731</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ctd-3_13-cv-00731</accessId>
+ <courtType>District</courtType>
+ <courtCode>ctd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>Connecticut</courtState>
+ <courtSortOrder>2080</courtSortOrder>
+ <caseNumber>3:13-cv-00731</caseNumber>
+ <caseOffice>New Haven</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Digitas, Inc." lastName="Digitas, Inc." role="Defendant"></party>
+ <party fullName="Publicis Groupe SA" lastName="Publicis Groupe SA" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Wong" lastName="Wong" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Wong v. Digitas, Inc.</title>
+ <partNumber>3:13-cv-00731</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ctd-3_13-cv-00731/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:13-cv-00731;13-731</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Connecticut</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>New Haven</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Digitas, Inc.</displayForm>
+ <namePart type="family">Digitas, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Publicis Groupe SA</displayForm>
+ <namePart type="family">Publicis Groupe SA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Wong</displayForm>
+ <namePart type="family">Wong</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ctd-3_13-cv-00731</accessId>
+ <courtType>District</courtType>
+ <courtCode>ctd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>Connecticut</courtState>
+ <courtSortOrder>2080</courtSortOrder>
+ <caseNumber>3:13-cv-00731</caseNumber>
+ <caseOffice>New Haven</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Digitas, Inc." lastName="Digitas, Inc." role="Defendant"></party>
+ <party fullName="Publicis Groupe SA" lastName="Publicis Groupe SA" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Wong" lastName="Wong" role="Plaintiff"></party>
+ <state>Connecticut</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ctd-3_13-cv-00731-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ctd-3_13-cv-00731/USCOURTS-ctd-3_13-cv-00731-0/mods.xml">
+ <titleInfo>
+  <title>Wong v. Digitas, Inc.</title>
+  <subTitle>ORDER. As set forth herein, the Court GRANTS Defendant&apos;s 31 motion for summary judgment in its entirety and dismisses the complaint. Signed by Judge Michael P. Shea on 1/5/15. (Bradley, K.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ctd-3_13-cv-00731/pdf/USCOURTS-ctd-3_13-cv-00731-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b8574</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ctd-3_13-cv-00731/USCOURTS-ctd-3_13-cv-00731-0</identifier>
+ <identifier type="former granule identifier">ctd-3_13-cv-00731_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ctd-3_13-cv-00731/USCOURTS-ctd-3_13-cv-00731-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ctd-3_13-cv-00731/pdf/USCOURTS-ctd-3_13-cv-00731-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-00731; Wong v. Digitas, Inc.; </searchTitle>
+  <courtName>United States District Court District of Connecticut</courtName>
+  <state>Connecticut</state>
+  <accessId>USCOURTS-ctd-3_13-cv-00731-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER. As set forth herein, the Court GRANTS Defendant&apos;s 31 motion for summary judgment in its entirety and dismisses the complaint. Signed by Judge Michael P. Shea on 1/5/15. (Bradley, K.)</docketText>
+</extension>
+</relatedItem>
+</mods>

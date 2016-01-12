@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813ac12f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-00476</identifier>
+<identifier type="local">P0b002ee1813ac12f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-5_08-cv-00476</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_08-cv-00476</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:08-cv-00476</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="JOHN DOE" lastName="JOHN DOE" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS D. MOSKELLA" lastName="MOSKELLA" middleName="D." role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN MUTH" lastName="MUTH" role="Plaintiff"></party>
+ <party fullName="RONDEL AT ATLAS TERRACE, LLC" lastName="RONDEL AT ATLAS TERRACE, LLC" role="Defendant"></party>
+ <party fullName="TDM CONSTRUCTION" lastName="TDM CONSTRUCTION" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>MUTH v. RONDEL AT ATLAS TERRACE, LLC et al</title>
+ <partNumber>5:08-cv-00476</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-00476/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:08-cv-00476;08-476</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Allentown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>JOHN DOE</displayForm>
+ <namePart type="family">JOHN DOE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>THOMAS D. MOSKELLA</displayForm>
+ <namePart type="family">MOSKELLA</namePart>
+ <namePart type="given">THOMAS</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN MUTH</displayForm>
+ <namePart type="family">MUTH</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>RONDEL AT ATLAS TERRACE, LLC</displayForm>
+ <namePart type="family">RONDEL AT ATLAS TERRACE, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>TDM CONSTRUCTION</displayForm>
+ <namePart type="family">TDM CONSTRUCTION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-5_08-cv-00476</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>5:08-cv-00476</caseNumber>
+ <caseOffice>Allentown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <party fullName="JOHN DOE" lastName="JOHN DOE" role="Defendant"></party>
+ <party firstName="THOMAS" fullName="THOMAS D. MOSKELLA" lastName="MOSKELLA" middleName="D." role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN MUTH" lastName="MUTH" role="Plaintiff"></party>
+ <party fullName="RONDEL AT ATLAS TERRACE, LLC" lastName="RONDEL AT ATLAS TERRACE, LLC" role="Defendant"></party>
+ <party fullName="TDM CONSTRUCTION" lastName="TDM CONSTRUCTION" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-5_08-cv-00476-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-00476/USCOURTS-paed-5_08-cv-00476-0/mods.xml">
+ <titleInfo>
+  <title>MUTH v. RONDEL AT ATLAS TERRACE, LLC et al</title>
+  <subTitle>MEMORANDUM AND OPINION GRANTING IN PART AND DENYING IN PART PLAINTIFF&apos;S MOTION TO ENFORCE THIS COURT&apos;S NOVEMBER 18, 2008 ORDER AGAINST THOMAS D. MOSKELLA d/b/a TDM CONSTRUCTION AND TO PAY A FEE FOR CONTEMPT (DOCKET NO. 34). DEFENDANT IS ORDERED TO PRODUCE THE REQUESTED DOCUMENTS TO PLAINTIFF WITHIN 14 DAYS OF THIS ORDER, BUT THE REQUEST FOR SANCTIONS IS DENIED WITHOUT PREJUDICE. DEFENDANT THOMAS D. MOSKELLA&apos;S MOTION TO DISMISS (DOCKET NO. 16) IS GRANTED. EFFECTIVE AS OF TWO BUSINESS DAYS AFTER THOMAS D. MOSKELLA&apos;S COMPLIANCE WITH PARAGRAPH 1 OF THIS ORDER, WHICH COMPLIANCE WILL BE RECOGNIZED UPON THE COURT&apos;S RECEIPT OF THE WRITTEN REPRESENATION OF THOMAS D. MOSKELLA&apos;S COUNSEL, AND ACKNOWLEDGMENT IN WRITING BY PLAINTIFF&apos;S COUNSEL, THAT THE REQUIRED PRODCTION HAS BEEN MADE. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/8/09. 1/8/09 ENTERED AND COPIES E-MAILED.(rab)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-5_08-cv-00476-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813b746a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-00476/USCOURTS-paed-5_08-cv-00476-0</identifier>
+ <identifier type="former granule identifier">paed-5_08-cv-00476_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-5_08-cv-00476/USCOURTS-paed-5_08-cv-00476-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-5_08-cv-00476/pdf/USCOURTS-paed-5_08-cv-00476-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:08-cv-00476; MUTH v. RONDEL AT ATLAS TERRACE, LLC et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-5_08-cv-00476-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-08</dateIssued>
+  <docketText>MEMORANDUM AND OPINION GRANTING IN PART AND DENYING IN PART PLAINTIFF&apos;S MOTION TO ENFORCE THIS COURT&apos;S NOVEMBER 18, 2008 ORDER AGAINST THOMAS D. MOSKELLA d/b/a TDM CONSTRUCTION AND TO PAY A FEE FOR CONTEMPT (DOCKET NO. 34). DEFENDANT IS ORDERED TO PRODUCE THE REQUESTED DOCUMENTS TO PLAINTIFF WITHIN 14 DAYS OF THIS ORDER, BUT THE REQUEST FOR SANCTIONS IS DENIED WITHOUT PREJUDICE. DEFENDANT THOMAS D. MOSKELLA&apos;S MOTION TO DISMISS (DOCKET NO. 16) IS GRANTED. EFFECTIVE AS OF TWO BUSINESS DAYS AFTER THOMAS D. MOSKELLA&apos;S COMPLIANCE WITH PARAGRAPH 1 OF THIS ORDER, WHICH COMPLIANCE WILL BE RECOGNIZED UPON THE COURT&apos;S RECEIPT OF THE WRITTEN REPRESENATION OF THOMAS D. MOSKELLA&apos;S COUNSEL, AND ACKNOWLEDGMENT IN WRITING BY PLAINTIFF&apos;S COUNSEL, THAT THE REQUIRED PRODCTION HAS BEEN MADE. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/8/09. 1/8/09 ENTERED AND COPIES E-MAILED.(rab)</docketText>
+</extension>
+</relatedItem>
+</mods>

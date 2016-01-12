@@ -1,0 +1,523 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ede1ea">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391</identifier>
+<identifier type="local">P0b002ee180ede1ea</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_09-cv-02391</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02391</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02391</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="KU Medical Center" lastName="KU Medical Center" role="Defendant"></party>
+ <party firstName="Mohammad" fullName="Mohammad Norouzian" lastName="Norouzian" role="Plaintiff"></party>
+ <party fullName="University of Kansas Hospital Authority" lastName="University of Kansas Hospital Authority" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Norouzian v. University of Kansas Hospital Authority</title>
+ <partNumber>2:09-cv-02391</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-02391;09-2391</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>KU Medical Center</displayForm>
+ <namePart type="family">KU Medical Center</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mohammad Norouzian</displayForm>
+ <namePart type="family">Norouzian</namePart>
+ <namePart type="given">Mohammad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>University of Kansas Hospital Authority</displayForm>
+ <namePart type="family">University of Kansas Hospital Authority</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_09-cv-02391</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:09-cv-02391</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="KU Medical Center" lastName="KU Medical Center" role="Defendant"></party>
+ <party firstName="Mohammad" fullName="Mohammad Norouzian" lastName="Norouzian" role="Plaintiff"></party>
+ <party fullName="University of Kansas Hospital Authority" lastName="University of Kansas Hospital Authority" role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-0/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 21 Motion to Compel; denying 28 Motion to Compel; denying 29 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 12/29/09. (mh)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd6c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-0</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 21 Motion to Compel; denying 28 Motion to Compel; denying 29 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 12/29/09. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-1/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 34 Motion to Compel; and denying 36 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 1/6/10. (mh)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd6c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-1</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-06</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 34 Motion to Compel; and denying 36 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 1/6/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-2/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>ORDER granting 40 Motion for Reconsideration; finding as moot 47 Motion for Order; denying 49 Motion for Order; denying 51 Motion to Compel; taking under advisement 66 Motion to Compel; denying 73 Motion for Order to Show Cause; denying 77 Motion for Order; denying 78 Motion for Order; taking under advisement 80 Motion for Extension of Time; denying 81 Motion for Order; denying 33 Motion for Order. Order sent by certified United States Mail to James P. Pottorff, Jr., University General Counsel, University of Kansas, 245 Strong Hall, 1450 Jayhawk Blvd., Lawrence, KS 66045-7535, receipt # 7009 1410 0002 0371 9396, on 4/6/10. Signed by Magistrate Judge David J. Waxse on 4/6/10. (mh)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-2</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-04-06</dateIssued>
+  <docketText>ORDER granting 40 Motion for Reconsideration; finding as moot 47 Motion for Order; denying 49 Motion for Order; denying 51 Motion to Compel; taking under advisement 66 Motion to Compel; denying 73 Motion for Order to Show Cause; denying 77 Motion for Order; denying 78 Motion for Order; taking under advisement 80 Motion for Extension of Time; denying 81 Motion for Order; denying 33 Motion for Order. Order sent by certified United States Mail to James P. Pottorff, Jr., University General Counsel, University of Kansas, 245 Strong Hall, 1450 Jayhawk Blvd., Lawrence, KS 66045-7535, receipt # 7009 1410 0002 0371 9396, on 4/6/10. Signed by Magistrate Judge David J. Waxse on 4/6/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-3/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 66 Motion to Compel. See Order for details. Signed by Magistrate Judge David J. Waxse on 5/14/2010. (bh)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd6c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-3</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-05-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 66 Motion to Compel. See Order for details. Signed by Magistrate Judge David J. Waxse on 5/14/2010. (bh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-4/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 96 Motion for Reconsideration; and denying without prejudice 96 Motion to Amend Complaint. Signed by Magistrate Judge David J. Waxse on 5/25/10. (mh)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-4</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-05-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 96 Motion for Reconsideration; and denying without prejudice 96 Motion to Amend Complaint. Signed by Magistrate Judge David J. Waxse on 5/25/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-5/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER overruling 85 Motion to Dismiss Party. Signed by Chief Judge Kathryn H. Vratil on 6/18/2010. (nf)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-06-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-5</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-06-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER overruling 85 Motion to Dismiss Party. Signed by Chief Judge Kathryn H. Vratil on 6/18/2010. (nf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-6/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 105 Motion to Amend Complaint Without Prejudice; denying 115 Motion to Compel Under Fed. R. Civ. P. 16(b)(4) Modifying a Schedule. Signed by Magistrate Judge David J. Waxse on 7/12/2010. (bh)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd6c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-6</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-07-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 105 Motion to Amend Complaint Without Prejudice; denying 115 Motion to Compel Under Fed. R. Civ. P. 16(b)(4) Modifying a Schedule. Signed by Magistrate Judge David J. Waxse on 7/12/2010. (bh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-7/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER overruling 109 Motion for Reconsideration. Signed by Chief Judge Kathryn H. Vratil on 8/31/2010. (nf)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd623</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-7</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-08-31</dateIssued>
+  <docketText>MEMORANDUM AND ORDER overruling 109 Motion for Reconsideration. Signed by Chief Judge Kathryn H. Vratil on 8/31/2010. (nf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-8/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER striking docs. 138 139 and 144. Signed by Magistrate Judge David J. Waxse on 9/14/10. (mh)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd620</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-8</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-09-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER striking docs. 138 139 and 144. Signed by Magistrate Judge David J. Waxse on 9/14/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-9/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 146 Motion for Order for Mental Examination. Signed by Magistrate Judge David J. Waxse on 9/15/10. (mh)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-9</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-09-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 146 Motion for Order for Mental Examination. Signed by Magistrate Judge David J. Waxse on 9/15/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-10/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying without prejudice 154 Motion to Quash and 155 Motion to Quash. Memorandum and Order sent by regular United States Mail to pro se plaintiff. Signed by Magistrate Judge David J. Waxse on 9/22/10. (mh) (Main Document 157 replaced on 9/23/2010 - judge&apos;s signature) (ck).</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-10</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-09-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying without prejudice 154 Motion to Quash and 155 Motion to Quash. Memorandum and Order sent by regular United States Mail to pro se plaintiff. Signed by Magistrate Judge David J. Waxse on 9/22/10. (mh) (Main Document 157 replaced on 9/23/2010 - judge&apos;s signature) (ck).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-11/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER denying 165 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 10/8/2010. (Attachments: Pro Se Guide, p. 19) (bh)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd61a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-11</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-10-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 165 Motion to Compel. Signed by Magistrate Judge David J. Waxse on 10/8/2010. (Attachments: Pro Se Guide, p. 19) (bh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-12/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER finding as moot 170 Motion to Quash; denying 171 Motion to Strike; granting 177 Motion for Sanctions; and denying 179 Motion to Enforce. Signed by Magistrate Judge David J. Waxse on 11/2/10. (mh)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd622</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-12</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-11-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER finding as moot 170 Motion to Quash; denying 171 Motion to Strike; granting 177 Motion for Sanctions; and denying 179 Motion to Enforce. Signed by Magistrate Judge David J. Waxse on 11/2/10. (mh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_09-cv-02391-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-13/mods.xml">
+ <titleInfo>
+  <title>Norouzian v. University of Kansas Hospital Authority</title>
+  <subTitle>MEMORANDUM AND ORDER overruling 132 Motion To Mandate The Real Party In Interest. Signed by Chief Judge Kathryn H. Vratil on 1/12/2011.(nf)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_09-cv-02391-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180efd621</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-13</identifier>
+ <identifier type="former granule identifier">ksd-2_09-cv-02391_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_09-cv-02391/USCOURTS-ksd-2_09-cv-02391-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_09-cv-02391/pdf/USCOURTS-ksd-2_09-cv-02391-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-02391; Norouzian v. University of Kansas Hospital Authority; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_09-cv-02391-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2011-01-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER overruling 132 Motion To Mandate The Real Party In Interest. Signed by Chief Judge Kathryn H. Vratil on 1/12/2011.(nf)</docketText>
+</extension>
+</relatedItem>
+</mods>

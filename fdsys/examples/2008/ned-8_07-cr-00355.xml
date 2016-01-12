@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18172567b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355</identifier>
+<identifier type="local">P0b002ee18172567b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_07-cr-00355</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Eleazar" fullName="Eleazar Velasquez-Godinez" lastName="Velasquez-Godinez" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Velasquez-Godinez</title>
+ <partNumber>8:07-cr-00355</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:07-cr-00355;07-355</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Eleazar Velasquez-Godinez</displayForm>
+ <namePart type="family">Velasquez-Godinez</namePart>
+ <namePart type="given">Eleazar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_07-cr-00355</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:07-cr-00355</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Eleazar" fullName="Eleazar Velasquez-Godinez" lastName="Velasquez-Godinez" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Thomas J. Garvey is appointed as counsel as to defendant Eleazar Velasquez-Godinez; Ordered by Judge F. A. Gossett. (ETC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173683d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-0</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-11-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Thomas J. Garvey is appointed as counsel as to defendant Eleazar Velasquez-Godinez; Ordered by Judge F. A. Gossett. (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Eleazar Velasquez-Godinez. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173683c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-1</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-11-05</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Eleazar Velasquez-Godinez. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181736839</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-2</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-12-04</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>MEMORANDUM AND ORDER - The Report and Recommendation 18 is adopted. The Defendant is found guilty. Acceptance of the plea agreement is deferred until the time of sentencing. This case shall proceed to sentencing, as to defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181736838</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-3</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-01-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The Report and Recommendation 18 is adopted. The Defendant is found guilty. Acceptance of the plea agreement is deferred until the time of sentencing. This case shall proceed to sentencing, as to defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173683a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-4</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-22</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Eleazar Velasquez-Godinez. Ordered by Judge Laurie Smith Camp. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_07-cr-00355-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Velasquez-Godinez</title>
+  <subTitle>JUDGMENT as to Eleazar Velasquez-Godinez (1). Defendant pleaded guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of time served; 3 years supervised release with special conditions; $100.00 special assessment is remitted. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_07-cr-00355-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18173683b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-5</identifier>
+ <identifier type="former granule identifier">ned-8_07-cr-00355_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_07-cr-00355/USCOURTS-ned-8_07-cr-00355-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_07-cr-00355/pdf/USCOURTS-ned-8_07-cr-00355-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:07-cr-00355; USA v. Velasquez-Godinez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_07-cr-00355-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>JUDGMENT as to Eleazar Velasquez-Godinez (1). Defendant pleaded guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of time served; 3 years supervised release with special conditions; $100.00 special assessment is remitted. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

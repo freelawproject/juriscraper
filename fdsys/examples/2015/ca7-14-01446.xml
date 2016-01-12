@@ -1,0 +1,151 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aae05">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-01446</identifier>
+<identifier type="local">P0b002ee18a8aae05</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca7-14-01446</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-14-01446</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>14-01446</caseNumber>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Larry" fullName="Larry Dominick" lastName="Dominick" role="Appellant"></party>
+ <party firstName="Merced" fullName="Merced Rojas" lastName="Rojas" role="Appellee"></party>
+ <party fullName="Town of Cicero" lastName="Town of Cicero" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Merced Rojas v. Town of Cicero, et al</title>
+ <partNumber>14-01446</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-01446/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">14-01446;14-1446</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Larry Dominick</displayForm>
+ <namePart type="family">Dominick</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>Merced Rojas</displayForm>
+ <namePart type="family">Rojas</namePart>
+ <namePart type="given">Merced</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Town of Cicero</displayForm>
+ <namePart type="family">Town of Cicero</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-14-01446</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>14-01446</caseNumber>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party firstName="Larry" fullName="Larry Dominick" lastName="Dominick" role="Appellant"></party>
+ <party firstName="Merced" fullName="Merced Rojas" lastName="Rojas" role="Appellee"></party>
+ <party fullName="Town of Cicero" lastName="Town of Cicero" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca7-14-01446-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-01446/USCOURTS-ca7-14-01446-0/mods.xml">
+ <titleInfo>
+  <title>Merced Rojas v. Town of Cicero, et al</title>
+  <subTitle>Filed opinion of the court by Judge Easterbrook. The decision is AFFIRMED with respect to the motion under ??1927 and VACATED with respect to the motion under Rule 26(g)(3). The case is REMANDED for proceedings consistent with this opinion. Frank H. Easterbrook, Circuit Judge; Diane S. Sykes, Circuit Judge and David F. Hamilton, Circuit Judge. [6631882-1] [6631882] [14-1446]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-01446/pdf/USCOURTS-ca7-14-01446-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b3d3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-01446/USCOURTS-ca7-14-01446-0</identifier>
+ <identifier type="former granule identifier">ca7-14-01446_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-01446/USCOURTS-ca7-14-01446-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-01446/pdf/USCOURTS-ca7-14-01446-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-01446; Merced Rojas v. Town of Cicero, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Seventh Circuit</courtName>
+  <accessId>USCOURTS-ca7-14-01446-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>Filed opinion of the court by Judge Easterbrook. The decision is AFFIRMED with respect to the motion under ??1927 and VACATED with respect to the motion under Rule 26(g)(3). The case is REMANDED for proceedings consistent with this opinion. Frank H. Easterbrook, Circuit Judge; Diane S. Sykes, Circuit Judge and David F. Hamilton, Circuit Judge. [6631882-1] [6631882] [14-1446]</docketText>
+</extension>
+</relatedItem>
+</mods>

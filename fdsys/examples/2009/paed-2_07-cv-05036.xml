@@ -1,0 +1,196 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813d174a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-28</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-05036</identifier>
+<identifier type="local">P0b002ee1813d174a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_07-cv-05036</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cv-05036</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cv-05036</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="TIARIKE" fullName="TIARIKE HODGES" lastName="HODGES" role="Petitioner"></party>
+ <party firstName="ROBERT" fullName="ROBERT SHANNON" lastName="SHANNON" role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>HODGES v. SHANNON et al</title>
+ <partNumber>2:07-cv-05036</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-05036/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-05036;07-5036</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>TIARIKE HODGES</displayForm>
+ <namePart type="family">HODGES</namePart>
+ <namePart type="given">TIARIKE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT SHANNON</displayForm>
+ <namePart type="family">SHANNON</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA</displayForm>
+ <namePart type="family">THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</displayForm>
+ <namePart type="family">THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cv-05036</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cv-05036</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="TIARIKE" fullName="TIARIKE HODGES" lastName="HODGES" role="Petitioner"></party>
+ <party firstName="ROBERT" fullName="ROBERT SHANNON" lastName="SHANNON" role="Respondent"></party>
+ <party fullName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" lastName="THE ATTORNEY GENERAL OF THE STATE OF PENNSYLVANIA" role="Respondent"></party>
+ <party fullName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" lastName="THE DISTRICT ATTORNEY OF THE COUNTY OF PHILADELPHIA" role="Respondent"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cv-05036-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-0/mods.xml">
+ <titleInfo>
+  <title>HODGES v. SHANNON et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS THAT THE MOTION TO EXPAND THE RECORD AND/OR TO STAY THE PROCEEDINGS BE DENIED. IT IS FURTHER RECOMMENDED THAT THE PETITION FOR A WRIT O HABEAS CORPUS BE DENIED AND THAT A CERTIFICATE OF APPEALABILITY SHOULD NOT ISSUE, ETC. PETITIONER MAY FILE OBJECTIONS TO THIS REPORT AND RECOMMENDATION. FAILURE TO FILE TIMELY OBJECTIONS MAY CONSTITUTE A WAIVER OF ANY APPELLATE RIGHTS. OBJECTIONS TO R&amp;R DUE BY 10/28/2008. SIGNED BY MAGISTRATE JUDGE DAVID R. STRAWBRIDGE ON 10/7/08. 10/7/08 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(lvj, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cv-05036-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c7ac7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-0</identifier>
+ <identifier type="former granule identifier">paed-2_07-cv-05036_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-05036/pdf/USCOURTS-paed-2_07-cv-05036-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-05036; HODGES v. SHANNON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cv-05036-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-10-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS THAT THE MOTION TO EXPAND THE RECORD AND/OR TO STAY THE PROCEEDINGS BE DENIED. IT IS FURTHER RECOMMENDED THAT THE PETITION FOR A WRIT O HABEAS CORPUS BE DENIED AND THAT A CERTIFICATE OF APPEALABILITY SHOULD NOT ISSUE, ETC. PETITIONER MAY FILE OBJECTIONS TO THIS REPORT AND RECOMMENDATION. FAILURE TO FILE TIMELY OBJECTIONS MAY CONSTITUTE A WAIVER OF ANY APPELLATE RIGHTS. OBJECTIONS TO R&amp;R DUE BY 10/28/2008. SIGNED BY MAGISTRATE JUDGE DAVID R. STRAWBRIDGE ON 10/7/08. 10/7/08 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(lvj, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cv-05036-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-1/mods.xml">
+ <titleInfo>
+  <title>HODGES v. SHANNON et al</title>
+  <subTitle>ORDER THAT THE REPORT AND RECOMMENDATIONS IS APPROVED AND ADOPTED; PETITIONER&apos;S MOTION TO STAY PROCEEDINGS IS DENIED; THE PETITION FOR A WRIT OF HABEAS CORPUS IS DENIED; A CERTIFICATE OF APPALABILITY SHALL NOT ISSUE, ETC.; AND THE CLERK OF COURT SHALL MARK THIS CASE CLOSED FOR STATISTICAL PURPOSES.. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/28/09. 1/29/09 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(lvj, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cv-05036-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814c7ac8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-1</identifier>
+ <identifier type="former granule identifier">paed-2_07-cv-05036_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-05036/USCOURTS-paed-2_07-cv-05036-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-05036/pdf/USCOURTS-paed-2_07-cv-05036-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-05036; HODGES v. SHANNON et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cv-05036-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-28</dateIssued>
+  <docketText>ORDER THAT THE REPORT AND RECOMMENDATIONS IS APPROVED AND ADOPTED; PETITIONER&apos;S MOTION TO STAY PROCEEDINGS IS DENIED; THE PETITION FOR A WRIT OF HABEAS CORPUS IS DENIED; A CERTIFICATE OF APPALABILITY SHALL NOT ISSUE, ETC.; AND THE CLERK OF COURT SHALL MARK THIS CASE CLOSED FOR STATISTICAL PURPOSES.. SIGNED BY HONORABLE GENE E.K. PRATTER ON 1/28/09. 1/29/09 ENTERED AND COPIES MAILED, E-MAILED AND FAXED.(lvj, )</docketText>
+</extension>
+</relatedItem>
+</mods>

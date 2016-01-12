@@ -1,0 +1,264 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c32dbd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927</identifier>
+<identifier type="local">P0b002ee186c32dbd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00927</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00927</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00927</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Alvin" fullName="Alvin Bryant" lastName="Bryant" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Payan" lastName="Payan" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Bryant v. Payan</title>
+ <partNumber>1:13-cv-00927</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00927;13-927</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alvin Bryant</displayForm>
+ <namePart type="family">Bryant</namePart>
+ <namePart type="given">Alvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>M. Payan</displayForm>
+ <namePart type="family">Payan</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00927</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00927</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Alvin" fullName="Alvin Bryant" lastName="Bryant" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Payan" lastName="Payan" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00927-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Bryant v. Payan</title>
+  <subTitle>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-1184 KJN PC) to Fresno (1:13-cv-0927 MJS PC) signed by Magistrate Judge Kendall J. Newman on 6/17/2013; this court has not ruled on plaintiff&apos;s request to proceed ifp.(Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00927-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ec98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00927_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/pdf/USCOURTS-caed-1_13-cv-00927-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00927; (PC) Bryant v. Payan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00927-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-06-18</dateIssued>
+  <docketText>ORDER of INTRADISTRICT TRANSFER from Sacramento (2:13-cv-1184 KJN PC) to Fresno (1:13-cv-0927 MJS PC) signed by Magistrate Judge Kendall J. Newman on 6/17/2013; this court has not ruled on plaintiff&apos;s request to proceed ifp.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00927-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Bryant v. Payan</title>
+  <subTitle>ORDER to Submit Application to Proceed in Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Michael J. Seng on 6/27/13. (Attachments: # (1) IFP Application - blank form)(Hellings, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00927-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ec9a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00927_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/pdf/USCOURTS-caed-1_13-cv-00927-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00927; (PC) Bryant v. Payan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00927-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-06-27</dateIssued>
+  <docketText>ORDER to Submit Application to Proceed in Forma Pauperis OR Pay Filing Fee Within 45 Days, signed by Magistrate Judge Michael J. Seng on 6/27/13. (Attachments: # (1) IFP Application - blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00927-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Bryant v. Payan</title>
+  <subTitle>ORDER DISMISSING Plaintiff&apos;s Complaint, WITH LEAVE to AMEND, for Failure to State a Claim 1 AMENDED COMPLAINT DUE WITHIN THIRTY DAYS, signed by Magistrate Judge Michael J. Seng on 6/30/13. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00927-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ec9b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00927_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/pdf/USCOURTS-caed-1_13-cv-00927-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00927; (PC) Bryant v. Payan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00927-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-07-01</dateIssued>
+  <docketText>ORDER DISMISSING Plaintiff&apos;s Complaint, WITH LEAVE to AMEND, for Failure to State a Claim 1 AMENDED COMPLAINT DUE WITHIN THIRTY DAYS, signed by Magistrate Judge Michael J. Seng on 6/30/13. (Attachments: # (1) Amended Complaint - blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00927-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Bryant v. Payan</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending 14 Dismissal of Action, with Prejudice, for Failure to State a Claim under Section 1983 signed by Magistrate Judge Michael J. Seng on 10/28/2013. Referred to Judge 10/28/2013; Objections to F&amp;R due by 12/2/2013.(Flores, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00927-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ec99</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00927_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/pdf/USCOURTS-caed-1_13-cv-00927-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00927; (PC) Bryant v. Payan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00927-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-28</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending 14 Dismissal of Action, with Prejudice, for Failure to State a Claim under Section 1983 signed by Magistrate Judge Michael J. Seng on 10/28/2013. Referred to Judge 10/28/2013; Objections to F&amp;R due by 12/2/2013.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00927-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Bryant v. Payan</title>
+  <subTitle>ORDER ADOPTING 16 Findings and Recommendations for Dismissal of Plaintiff&apos;s Action for Failure to State a Claim, signed by District Judge Anthony W. Ishii on 1/2/2014. CASE CLOSED (Strike).(Marrujo, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_13-cv-00927-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c4ec9c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-4</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00927_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00927/USCOURTS-caed-1_13-cv-00927-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00927/pdf/USCOURTS-caed-1_13-cv-00927-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00927; (PC) Bryant v. Payan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00927-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER ADOPTING 16 Findings and Recommendations for Dismissal of Plaintiff&apos;s Action for Failure to State a Claim, signed by District Judge Anthony W. Ishii on 1/2/2014. CASE CLOSED (Strike).(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,304 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18116f77f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_03-cv-00755</identifier>
+<identifier type="local">P0b002ee18116f77f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_03-cv-00755</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_03-cv-00755</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:03-cv-00755</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="J." fullName="J. A. Bennett" lastName="Bennett" middleName="A." role="Defendant"></party>
+ <party firstName="George" fullName="George Chavis" lastName="Chavis" role="Plaintiff"></party>
+ <party firstName="Ms." fullName="Ms. Fechette" lastName="Fechette" role="Defendant"></party>
+ <party firstName="Counselor" fullName="Counselor Gerber" lastName="Gerber" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="S." fullName="S. King" lastName="King" role="Defendant"></party>
+ <party firstName="D." fullName="D. Laclair" lastName="Laclair" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Laschway" lastName="Laschway" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Price" lastName="Price" role="Defendant"></party>
+ <party firstName="D." fullName="D. Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Rayville" lastName="Rayville" role="Defendant"></party>
+ <party firstName="W." fullName="W. Richards" lastName="Richards" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ryan" lastName="Ryan" role="Defendant"></party>
+ <party firstName="S." fullName="S. Salls" lastName="Salls" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Streeter" lastName="Streeter" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Weissman" lastName="Weissman" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Chavis v. Bennett, et al</title>
+ <partNumber>9:03-cv-00755</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_03-cv-00755/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:03-cv-00755;03-755</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>J. A. Bennett</displayForm>
+ <namePart type="family">Bennett</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Chavis</displayForm>
+ <namePart type="family">Chavis</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ms. Fechette</displayForm>
+ <namePart type="family">Fechette</namePart>
+ <namePart type="given">Ms.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Counselor Gerber</displayForm>
+ <namePart type="family">Gerber</namePart>
+ <namePart type="given">Counselor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Mr.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. King</displayForm>
+ <namePart type="family">King</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Laclair</displayForm>
+ <namePart type="family">Laclair</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ms. Laschway</displayForm>
+ <namePart type="family">Laschway</namePart>
+ <namePart type="given">Ms.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Price</displayForm>
+ <namePart type="family">Price</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Rayville</displayForm>
+ <namePart type="family">Rayville</namePart>
+ <namePart type="given">Mr.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Richards</displayForm>
+ <namePart type="family">Richards</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Ryan</displayForm>
+ <namePart type="family">Ryan</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Salls</displayForm>
+ <namePart type="family">Salls</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Streeter</displayForm>
+ <namePart type="family">Streeter</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ms. Weissman</displayForm>
+ <namePart type="family">Weissman</namePart>
+ <namePart type="given">Ms.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_03-cv-00755</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:03-cv-00755</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="J." fullName="J. A. Bennett" lastName="Bennett" middleName="A." role="Defendant"></party>
+ <party firstName="George" fullName="George Chavis" lastName="Chavis" role="Plaintiff"></party>
+ <party firstName="Ms." fullName="Ms. Fechette" lastName="Fechette" role="Defendant"></party>
+ <party firstName="Counselor" fullName="Counselor Gerber" lastName="Gerber" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="S." fullName="S. King" lastName="King" role="Defendant"></party>
+ <party firstName="D." fullName="D. Laclair" lastName="Laclair" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Laschway" lastName="Laschway" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Price" lastName="Price" role="Defendant"></party>
+ <party firstName="D." fullName="D. Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Rayville" lastName="Rayville" role="Defendant"></party>
+ <party firstName="W." fullName="W. Richards" lastName="Richards" role="Defendant"></party>
+ <party firstName="S." fullName="S. Ryan" lastName="Ryan" role="Defendant"></party>
+ <party firstName="S." fullName="S. Salls" lastName="Salls" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Streeter" lastName="Streeter" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Weissman" lastName="Weissman" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_03-cv-00755-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-0/mods.xml">
+ <titleInfo>
+  <title>Chavis v. Bennett, et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS that the 60 First MOTION for Summary Judgment be Granted and Plaintiff&apos;s complaint dismissed. Objections to R&amp;R due by 12/21/2005; Case Review Deadline 12/27/2005. Signed by Judge David E. Peebles on 12/7/05. (rjb, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_03-cv-00755-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142d7bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-0</identifier>
+ <identifier type="former granule identifier">nynd-9_03-cv-00755_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_03-cv-00755/pdf/USCOURTS-nynd-9_03-cv-00755-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:03-cv-00755; Chavis v. Bennett, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_03-cv-00755-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-12-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS that the 60 First MOTION for Summary Judgment be Granted and Plaintiff&apos;s complaint dismissed. Objections to R&amp;R due by 12/21/2005; Case Review Deadline 12/27/2005. Signed by Judge David E. Peebles on 12/7/05. (rjb, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_03-cv-00755-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-1/mods.xml">
+ <titleInfo>
+  <title>Chavis v. Bennett, et al</title>
+  <subTitle>ORDER: accepting&amp;adopting M.J. Peebles&apos; 63 Report and Recommendations; the defts&apos; motion for summary judgment dismissing pltf&apos;s complaint is GRANTED; pltf&apos;s complaint is DISMISSED; defts are awarded the sum of $1,400.00 against the pltf; Clerk is directed to file judgment accordingly. Signed by Judge David N. Hurd on 1/9/2006. (see)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_03-cv-00755-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142d7be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-1</identifier>
+ <identifier type="former granule identifier">nynd-9_03-cv-00755_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_03-cv-00755/USCOURTS-nynd-9_03-cv-00755-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_03-cv-00755/pdf/USCOURTS-nynd-9_03-cv-00755-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:03-cv-00755; Chavis v. Bennett, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_03-cv-00755-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-01-12</dateIssued>
+  <docketText>ORDER: accepting&amp;adopting M.J. Peebles&apos; 63 Report and Recommendations; the defts&apos; motion for summary judgment dismissing pltf&apos;s complaint is GRANTED; pltf&apos;s complaint is DISMISSED; defts are awarded the sum of $1,400.00 against the pltf; Clerk is directed to file judgment accordingly. Signed by Judge David N. Hurd on 1/9/2006. (see)</docketText>
+</extension>
+</relatedItem>
+</mods>

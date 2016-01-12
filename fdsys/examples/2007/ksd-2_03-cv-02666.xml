@@ -1,0 +1,299 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180f0b37e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666</identifier>
+<identifier type="local">P0b002ee180f0b37e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_03-cv-02666</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_03-cv-02666</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:03-cv-02666</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>320</natureSuitCode>
+ <natureSuit>Assault, Libel, and Slander</natureSuit>
+ <party fullName="GMAC Mortgage" lastName="GMAC Mortgage" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Holland" lastName="Holland" role="Plaintiff"></party>
+ <party firstName="Tamara" fullName="Tamara Holland" lastName="Holland" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Holland et al v. GMAC Mortgage</title>
+ <partNumber>2:03-cv-02666</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:03-cv-02666;03-2666</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>GMAC Mortgage</displayForm>
+ <namePart type="family">GMAC Mortgage</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Holland</displayForm>
+ <namePart type="family">Holland</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tamara Holland</displayForm>
+ <namePart type="family">Holland</namePart>
+ <namePart type="given">Tamara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_03-cv-02666</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:03-cv-02666</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>320</natureSuitCode>
+ <natureSuit>Assault, Libel, and Slander</natureSuit>
+ <party fullName="GMAC Mortgage" lastName="GMAC Mortgage" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Holland" lastName="Holland" role="Plaintiff"></party>
+ <party firstName="Tamara" fullName="Tamara Holland" lastName="Holland" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-0/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>MEMORANDUM AND ORDER denying 37 Plaintiffs&apos; Motion to Compel Discovery. Each party shall bear his/its own fees and expenses incurred in connection with the motion. Further the Court hereby grants 60 Plaintiffs&apos; Motion to Compel. Defendant and/or its counsel shall show cause, in writing, within thirty (30) days of the date of filing of this Order, why the Court should not require either or both of them to pay the reasonable expenses and attorney fees incurred by Plaintiffs in making the Motion to Compel. Further the Court hereby denies as moot 71 Defendant&apos;s Motion to Quash Notices of Deposition, or Alternatively, for Protective Order. Signed by Magistrate Judge David J. Waxse on 3/27/2005.(jm)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e98</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-0</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-03-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 37 Plaintiffs&apos; Motion to Compel Discovery. Each party shall bear his/its own fees and expenses incurred in connection with the motion. Further the Court hereby grants 60 Plaintiffs&apos; Motion to Compel. Defendant and/or its counsel shall show cause, in writing, within thirty (30) days of the date of filing of this Order, why the Court should not require either or both of them to pay the reasonable expenses and attorney fees incurred by Plaintiffs in making the Motion to Compel. Further the Court hereby denies as moot 71 Defendant&apos;s Motion to Quash Notices of Deposition, or Alternatively, for Protective Order. Signed by Magistrate Judge David J. Waxse on 3/27/2005.(jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-1/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>MEMORANDUM AND ORDER denying in part and finding moot in part 89 Motion for Reconsideration re 88 Memorandum and Order granting Plaintiff&apos;s Second Motion to Compel Discovery. For the reasons set forth herein, the Court finds the Motion for Reconsideration moot as to Second Interrogatories No. 2, 3, 4, and 6. The Court denies the Motion for Reconsideration as to Second Interrogatory No. 5. See MEMORANDUM AND ORDER for further deadlines and detail. Signed by Magistrate Judge David J. Waxse on 5/27/2005.(jm)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-1</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying in part and finding moot in part 89 Motion for Reconsideration re 88 Memorandum and Order granting Plaintiff&apos;s Second Motion to Compel Discovery. For the reasons set forth herein, the Court finds the Motion for Reconsideration moot as to Second Interrogatories No. 2, 3, 4, and 6. The Court denies the Motion for Reconsideration as to Second Interrogatory No. 5. See MEMORANDUM AND ORDER for further deadlines and detail. Signed by Magistrate Judge David J. Waxse on 5/27/2005.(jm)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-2/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>MEMORANDUM AND ORDER denying 101 Motion for Review . Signed by Judge Carlos Murguia on 1/30/06. (See M&amp;O for further rulings) (yh, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e96</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-2</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 101 Motion for Review . Signed by Judge Carlos Murguia on 1/30/06. (See M&amp;O for further rulings) (yh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-3/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>ORDER granting 116 Motion for Summary Judgment, granting in part and denying in part 122 Motion for Summary Judgment. Signed by Judge Carlos Murguia on 4/26/2006. (js)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-3</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-04-26</dateIssued>
+  <docketText>ORDER granting 116 Motion for Summary Judgment, granting in part and denying in part 122 Motion for Summary Judgment. Signed by Judge Carlos Murguia on 4/26/2006. (js)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-4/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>MEMORANDUM AND ORDER granting 148 Motion to Exclude, denying 150 Motion to Strike 150 MOTION to Strike 148 MOTION to Exclude the Testimony and Opinions of David A. Stivers, 148 MOTION to Exclude the Testimony and Opinions of David A. Stivers . Signed by Judge Carlos Murguia on 4/28/06. (yh, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e97</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-4</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-04-28</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 148 Motion to Exclude, denying 150 Motion to Strike 150 MOTION to Strike 148 MOTION to Exclude the Testimony and Opinions of David A. Stivers, 148 MOTION to Exclude the Testimony and Opinions of David A. Stivers . Signed by Judge Carlos Murguia on 4/28/06. (yh, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_03-cv-02666-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-5/mods.xml">
+ <titleInfo>
+  <title>Holland et al v. GMAC Mortgage</title>
+  <subTitle>ORDER granting in part and denying in part 206 Motion for Attorney Fees. Signed by Judge Carlos Murguia on 1/29/2007. (js)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_03-cv-02666-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f27e12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-5</identifier>
+ <identifier type="former granule identifier">ksd-2_03-cv-02666_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_03-cv-02666/USCOURTS-ksd-2_03-cv-02666-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_03-cv-02666/pdf/USCOURTS-ksd-2_03-cv-02666-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:03-cv-02666; Holland et al v. GMAC Mortgage; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_03-cv-02666-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2007-01-29</dateIssued>
+  <docketText>ORDER granting in part and denying in part 206 Motion for Attorney Fees. Signed by Judge Carlos Murguia on 1/29/2007. (js)</docketText>
+</extension>
+</relatedItem>
+</mods>

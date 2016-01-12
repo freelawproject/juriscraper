@@ -1,0 +1,523 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee182a550bc">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-07-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-07-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271</identifier>
+<identifier type="local">P0b002ee182a550bc</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-07-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-07-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_07-cv-03271</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03271</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03271</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Scott" fullName="Scott Adams" lastName="Adams" role="Defendant"></party>
+ <party fullName="Estate of Dale Johnson" lastName="Estate of Dale Johnson" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Gibson" lastName="Gibson" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="John" fullName="John Maxwell Montin" lastName="Montin" middleName="Maxwell" role="Plaintiff"></party>
+ <party firstName="Christine" fullName="Christine Peterson" lastName="Peterson" role="Defendant"></party>
+ <party firstName="Barbra" fullName="Barbra Ramsey" lastName="Ramsey" role="Defendant"></party>
+ <party firstName="Jessie" fullName="Jessie Rassmensen" lastName="Rassmensen" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Zinn" lastName="Zinn" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Montin v. Estate of Dale Johnson et al</title>
+ <partNumber>4:07-cv-03271</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-03271;07-3271</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Scott Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Estate of Dale Johnson</displayForm>
+ <namePart type="family">Estate of Dale Johnson</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Gibson</displayForm>
+ <namePart type="family">Gibson</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Maxwell Montin</displayForm>
+ <namePart type="family">Montin</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Christine Peterson</displayForm>
+ <namePart type="family">Peterson</namePart>
+ <namePart type="given">Christine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Barbra Ramsey</displayForm>
+ <namePart type="family">Ramsey</namePart>
+ <namePart type="given">Barbra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jessie Rassmensen</displayForm>
+ <namePart type="family">Rassmensen</namePart>
+ <namePart type="given">Jessie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Zinn</displayForm>
+ <namePart type="family">Zinn</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_07-cv-03271</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:07-cv-03271</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Scott" fullName="Scott Adams" lastName="Adams" role="Defendant"></party>
+ <party fullName="Estate of Dale Johnson" lastName="Estate of Dale Johnson" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Gibson" lastName="Gibson" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="John" fullName="John Maxwell Montin" lastName="Montin" middleName="Maxwell" role="Plaintiff"></party>
+ <party firstName="Christine" fullName="Christine Peterson" lastName="Peterson" role="Defendant"></party>
+ <party firstName="Barbra" fullName="Barbra Ramsey" lastName="Ramsey" role="Defendant"></party>
+ <party firstName="Jessie" fullName="Jessie Rassmensen" lastName="Rassmensen" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Zinn" lastName="Zinn" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-0/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER- The plaintiff&apos;s Motion for leave to proceed in forma pauperis 2 is provisionally granted. Plaintiff shall not be required to pay the filing fee in this matter; and The Clerk of the court is directed to send a copy of this Memorandum and Order to the appropriate officials at the Lincoln Regional Center. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party and as directed in the order)(MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58613</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-0</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-04-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- The plaintiff&apos;s Motion for leave to proceed in forma pauperis 2 is provisionally granted. Plaintiff shall not be required to pay the filing fee in this matter; and The Clerk of the court is directed to send a copy of this Memorandum and Order to the appropriate officials at the Lincoln Regional Center. Ordered by Judge Laurie Smith Camp. (Copies mailed to pro se party and as directed in the order)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-1/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER- The Clerk of the court is directed to file the Amended Complaint (Filing No. 5, attach. 1) as a separate document in this matter; After initial review of the Amended Complaint, Plaintiffs claims against Defendant&apos;s may proceed and service is now warranted; The Clerk of the court shall send SIX (6) summons forms and SIX (6) USM-285 forms for service on each Defendant in either their individual or official capacity. The Clerk of Court is directed to set a pro se case management deadline in this case with the following text: July 29, 2008: Check for completion of service of summons. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party, (6) summons and (6) USM-285 forms mailed as directed.)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58616</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-1</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-04-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- The Clerk of the court is directed to file the Amended Complaint (Filing No. 5, attach. 1) as a separate document in this matter; After initial review of the Amended Complaint, Plaintiffs claims against Defendant&apos;s may proceed and service is now warranted; The Clerk of the court shall send SIX (6) summons forms and SIX (6) USM-285 forms for service on each Defendant in either their individual or official capacity. The Clerk of Court is directed to set a pro se case management deadline in this case with the following text: July 29, 2008: Check for completion of service of summons. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party, (6) summons and (6) USM-285 forms mailed as directed.)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-2/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 16 Motion for Summary Judgment; denying 18 Motion to Dismiss; granting 19 Motion in Opposition To Dismissal; Defendants, in their official capacities, shall have until September 29, 2008 in which to file an answer or other response to Plaintiff&apos;s Amended Complaint; Plaintiff shall have until October 9, 2008 in which to properly serve Defendants in their individual capacities; The Clerk of the court shall send SIX (6) summons forms and SIX (6) USM-285 forms to Plaintiff to complete and return to the Clerk who shall forward to US Marshal for service ; The Clerk of the Court is directed to set a pro se case management deadline in this case with the following text: &quot;October 9, 2008: Check for completionof service of summons&quot;. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party with 6 summonses and 285-forms)(ADB, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a5860f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-2</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-09-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 16 Motion for Summary Judgment; denying 18 Motion to Dismiss; granting 19 Motion in Opposition To Dismissal; Defendants, in their official capacities, shall have until September 29, 2008 in which to file an answer or other response to Plaintiff&apos;s Amended Complaint; Plaintiff shall have until October 9, 2008 in which to properly serve Defendants in their individual capacities; The Clerk of the court shall send SIX (6) summons forms and SIX (6) USM-285 forms to Plaintiff to complete and return to the Clerk who shall forward to US Marshal for service ; The Clerk of the Court is directed to set a pro se case management deadline in this case with the following text: &quot;October 9, 2008: Check for completionof service of summons&quot;. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party with 6 summonses and 285-forms)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-3/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendants&apos; Motion to Dismiss 28 is denied without prejudice to reassertion in a motion filed pursuant to Federal Rule of Civil Procedure 56. Defendants&apos; Motion to Strike 39 is denied as Moot. Plaintiff&apos;s Motion to Strike 43 is denied as Moot; and Defendants shall file an answer within 10 days in accordance with Federal Rule of Civil Procedure 12(a)(4)(A). Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58556</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-3</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-02-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendants&apos; Motion to Dismiss 28 is denied without prejudice to reassertion in a motion filed pursuant to Federal Rule of Civil Procedure 56. Defendants&apos; Motion to Strike 39 is denied as Moot. Plaintiff&apos;s Motion to Strike 43 is denied as Moot; and Defendants shall file an answer within 10 days in accordance with Federal Rule of Civil Procedure 12(a)(4)(A). Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-4/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Defendants Bill Gibson and Christine Peterson&apos;s Motion for Summary Judgment 57 is granted. All claims against Gibson and Peterson,sued in their official capacities only, are dismissed with prejudice. All claims against Defendants Estate of Dale Johnson, Bill Zinn, Jessie Rassmensen, and Barbra Ramsey, sued in their individual capacities only,are dismissed without prejudice. A separate judgment will be entered in accordance with this Memorandum and Order; and All other pending motions are denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58615</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-4</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-09-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Defendants Bill Gibson and Christine Peterson&apos;s Motion for Summary Judgment 57 is granted. All claims against Gibson and Peterson,sued in their official capacities only, are dismissed with prejudice. All claims against Defendants Estate of Dale Johnson, Bill Zinn, Jessie Rassmensen, and Barbra Ramsey, sued in their individual capacities only,are dismissed without prejudice. A separate judgment will be entered in accordance with this Memorandum and Order; and All other pending motions are denied. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-5/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion to Appoint Counsel 74 is denied without prejudice to reassertion before the Eighth Circuit. Plaintiff&apos;s Motion for Leave to Appeal In Forma Pauperis 78 is granted. Plaintiff&apos;s Motion for Leave to Use Original Record 73 is denied; and The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58617</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-5</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-11-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiff&apos;s Motion to Appoint Counsel 74 is denied without prejudice to reassertion before the Eighth Circuit. Plaintiff&apos;s Motion for Leave to Appeal In Forma Pauperis 78 is granted. Plaintiff&apos;s Motion for Leave to Use Original Record 73 is denied; and The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Judge Laurie Smith Camp. (Copy mailed to pro se party)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-6/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Opinion (Copy) of USCA89 and COPY of Judgment from USCA, 90. On April 14, 2011, the Eighth Circuit reversed this court&apos;s decision regarding Defendants Gibson and Peterson on the statute of limitations issue, and remanded this matter for further proceedings. The Eighth Circuit did not alter the court&apos;s dismissal of the remaining Defendants. The court has determined that a progression order will be entered for resolution of the &quot;ultimate merits of the underlying claims.&quot; The court has also determined that appointment of counsel for Plaintiff is appropriate. Michael Gooch is hereby appointed to represent Plaintiff and shall promptly enter his appearance in the matter. A separate progression order will be entered progressing this matter to final disposition on the merits of the underlying claims. Ordered by Judge Laurie Smith Camp. (Copy mailed to plaintiff and provided as directed.)(JAB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58610</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-6</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-05-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Opinion (Copy) of USCA89 and COPY of Judgment from USCA, 90. On April 14, 2011, the Eighth Circuit reversed this court&apos;s decision regarding Defendants Gibson and Peterson on the statute of limitations issue, and remanded this matter for further proceedings. The Eighth Circuit did not alter the court&apos;s dismissal of the remaining Defendants. The court has determined that a progression order will be entered for resolution of the &quot;ultimate merits of the underlying claims.&quot; The court has also determined that appointment of counsel for Plaintiff is appropriate. Michael Gooch is hereby appointed to represent Plaintiff and shall promptly enter his appearance in the matter. A separate progression order will be entered progressing this matter to final disposition on the merits of the underlying claims. Ordered by Judge Laurie Smith Camp. (Copy mailed to plaintiff and provided as directed.)(JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-7/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER - 1) The parties&apos; joint oral motion, (filing no. 102), is granted, and a. On or before December 13, 2011, the parties shall file with the court a joint statement of stipulated facts. b. On or before January 13, 2012, the parties shall file their respective summary judgment motions. Any responsive briefs filed on or before February 10, 2012. No reply shall be filed absent leave of the court. 2) The pretrial conference, including any deadlines for preparing the proposed pretrial conference order, is continued pending a ruling on the parties&apos;dispositive motions. 3) The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Summary Judgment motions to be filed by January 13, 2012. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB) Modified on 11/18/2011 to remove notice to pro se party. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58614</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-7</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-11-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - 1) The parties&apos; joint oral motion, (filing no. 102), is granted, and a. On or before December 13, 2011, the parties shall file with the court a joint statement of stipulated facts. b. On or before January 13, 2012, the parties shall file their respective summary judgment motions. Any responsive briefs filed on or before February 10, 2012. No reply shall be filed absent leave of the court. 2) The pretrial conference, including any deadlines for preparing the proposed pretrial conference order, is continued pending a ruling on the parties&apos;dispositive motions. 3) The Clerk of the court is directed to set a pro se case management deadline in this case using the following text: Summary Judgment motions to be filed by January 13, 2012. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB) Modified on 11/18/2011 to remove notice to pro se party. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-8/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>CONSENT to Jurisdiction by US Magistrate Judge and Order of Reference - upon consent of parties, this case is referred to the Honorable Cheryl R. Zwart, United States Magistrate Judge, for all further proceedings and the entry of judgment in accordance with 28 U.S.C. § 636(c), Fed. R. Civ. P.73 and the foregoing consent of the parties. Judge Magistrate Judge Cheryl R. Zwart added. Chief Judge Laurie Smith Camp no longer assigned to case. Ordered by Chief Judge Laurie Smith Camp. (GJG)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58557</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-8</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-12-14</dateIssued>
+  <docketText>CONSENT to Jurisdiction by US Magistrate Judge and Order of Reference - upon consent of parties, this case is referred to the Honorable Cheryl R. Zwart, United States Magistrate Judge, for all further proceedings and the entry of judgment in accordance with 28 U.S.C. § 636(c), Fed. R. Civ. P.73 and the foregoing consent of the parties. Judge Magistrate Judge Cheryl R. Zwart added. Chief Judge Laurie Smith Camp no longer assigned to case. Ordered by Chief Judge Laurie Smith Camp. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-9/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>ORDER DISMISSING PARTY sustaining 106 Plaintiff&apos;s Motion to Dismiss Party. Christine Peterson is dismissed as a defendant in this lawsuit. John Montin, by and through his attorney, also gave notice that his prayer for relief in his amended complaint should be considered narrowed as stated. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58612</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-9</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER DISMISSING PARTY sustaining 106 Plaintiff&apos;s Motion to Dismiss Party. Christine Peterson is dismissed as a defendant in this lawsuit. John Montin, by and through his attorney, also gave notice that his prayer for relief in his amended complaint should be considered narrowed as stated. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-10/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER - 1) The parties&apos; stipulated facts, (filing no. 104), are adopted.2) Plaintiff&apos;s motion for summary judgment, (filing no. 111) is denied.3) Defendant&apos;s motion for summary judgment, (filing no. 108), is granted.4) This case is dismissed in its entirety.5) Judgment shall be entered by separate document.Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a5860e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-10</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-06-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - 1) The parties&apos; stipulated facts, (filing no. 104), are adopted.2) Plaintiff&apos;s motion for summary judgment, (filing no. 111) is denied.3) Defendant&apos;s motion for summary judgment, (filing no. 108), is granted.4) This case is dismissed in its entirety.5) Judgment shall be entered by separate document.Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_07-cv-03271-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-11/mods.xml">
+ <titleInfo>
+  <title>Montin v. Estate of Dale Johnson et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 123 Plaintiff&apos;s Motion for Leave to Appeal in forma pauperis. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_07-cv-03271-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee182a58611</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-11</identifier>
+ <identifier type="former granule identifier">ned-4_07-cv-03271_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_07-cv-03271/USCOURTS-ned-4_07-cv-03271-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_07-cv-03271/pdf/USCOURTS-ned-4_07-cv-03271-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-03271; Montin v. Estate of Dale Johnson et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_07-cv-03271-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-07-02</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 123 Plaintiff&apos;s Motion for Leave to Appeal in forma pauperis. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

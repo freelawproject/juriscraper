@@ -1,0 +1,179 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817899e1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cv-03346</identifier>
+<identifier type="local">P0b002ee1817899e1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_04-cv-03346</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cv-03346</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cv-03346</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Harold" fullName="Harold Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Craig" fullName="Craig Kersey" lastName="Kersey" role="Defendant"></party>
+ <party firstName="Lou" fullName="Lou Medel" lastName="Medel" role="Defendant"></party>
+ <party fullName="Nebraska Department of Correctional Services" lastName="Nebraska Department of Correctional Services" role="Defendant"></party>
+ <party firstName="Dario" fullName="Dario Scott" lastName="Scott" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Scott v. Nebraska Department of Correctional Services et al</title>
+ <partNumber>4:04-cv-03346</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cv-03346/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:04-cv-03346;04-3346</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Harold Clarke</displayForm>
+ <namePart type="family">Clarke</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Craig Kersey</displayForm>
+ <namePart type="family">Kersey</namePart>
+ <namePart type="given">Craig</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lou Medel</displayForm>
+ <namePart type="family">Medel</namePart>
+ <namePart type="given">Lou</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska Department of Correctional Services</displayForm>
+ <namePart type="family">Nebraska Department of Correctional Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dario Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Dario</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_04-cv-03346</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:04-cv-03346</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Harold" fullName="Harold Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Craig" fullName="Craig Kersey" lastName="Kersey" role="Defendant"></party>
+ <party firstName="Lou" fullName="Lou Medel" lastName="Medel" role="Defendant"></party>
+ <party fullName="Nebraska Department of Correctional Services" lastName="Nebraska Department of Correctional Services" role="Defendant"></party>
+ <party firstName="Dario" fullName="Dario Scott" lastName="Scott" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_04-cv-03346-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cv-03346/USCOURTS-ned-4_04-cv-03346-0/mods.xml">
+ <titleInfo>
+  <title>Scott v. Nebraska Department of Correctional Services et al</title>
+  <subTitle>MEMORANDUM AND ORDER that the plaintiff has not responded to the Motion for Summary Judgment. Therefore, the defendants&apos; allegations and evidence regarding the plaintiff&apos;s failure to complete exhaustion of administrative remedies stand uncontradicted. On the basis of the record and 42 U.S.C. 1997e(a) of the PLRA, filing no. 27, the defendants&apos; Motion for Summary Judgment is granted. Judgment will be entered accordingly. Signed by Judge Richard G. Kopf on 1/24/2006. (CS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_04-cv-03346-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818181df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cv-03346/USCOURTS-ned-4_04-cv-03346-0</identifier>
+ <identifier type="former granule identifier">ned-4_04-cv-03346_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_04-cv-03346/USCOURTS-ned-4_04-cv-03346-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_04-cv-03346/pdf/USCOURTS-ned-4_04-cv-03346-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:04-cv-03346; Scott v. Nebraska Department of Correctional Services et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_04-cv-03346-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that the plaintiff has not responded to the Motion for Summary Judgment. Therefore, the defendants&apos; allegations and evidence regarding the plaintiff&apos;s failure to complete exhaustion of administrative remedies stand uncontradicted. On the basis of the record and 42 U.S.C. 1997e(a) of the PLRA, filing no. 27, the defendants&apos; Motion for Summary Judgment is granted. Judgment will be entered accordingly. Signed by Judge Richard G. Kopf on 1/24/2006. (CS, )</docketText>
+</extension>
+</relatedItem>
+</mods>

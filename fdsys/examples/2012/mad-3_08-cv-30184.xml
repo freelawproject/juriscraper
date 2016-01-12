@@ -1,0 +1,337 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d3d06e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184</identifier>
+<identifier type="local">P0b002ee183d3d06e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-3_08-cv-30184</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_08-cv-30184</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:08-cv-30184</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party firstName="Julie" fullName="Julie Belle-Isle, RN" lastName="Belle-Isle, RN" role="Defendant"></party>
+ <party firstName="Cecile" fullName="Cecile Brace" lastName="Brace" role="Plaintiff"></party>
+ <party fullName="Commonwealth of Massachusetts" lastName="Commonwealth of Massachusetts" role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca Frey, Clinician" lastName="Frey, Clinician" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Gobielle" lastName="Gobielle" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Goodman, NP" lastName="Goodman, NP" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Kane, RN" lastName="Kane, RN" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Brace v. Commonwealth of Massachusetts et al</title>
+ <partNumber>3:08-cv-30184</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-30184;08-30184</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Springfield</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Julie Belle-Isle, RN</displayForm>
+ <namePart type="family">Belle-Isle, RN</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cecile Brace</displayForm>
+ <namePart type="family">Brace</namePart>
+ <namePart type="given">Cecile</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Commonwealth of Massachusetts</displayForm>
+ <namePart type="family">Commonwealth of Massachusetts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rebecca Frey, Clinician</displayForm>
+ <namePart type="family">Frey, Clinician</namePart>
+ <namePart type="given">Rebecca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven Gobielle</displayForm>
+ <namePart type="family">Gobielle</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linda Goodman, NP</displayForm>
+ <namePart type="family">Goodman, NP</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jennifer Kane, RN</displayForm>
+ <namePart type="family">Kane, RN</namePart>
+ <namePart type="given">Jennifer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-3_08-cv-30184</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>3:08-cv-30184</caseNumber>
+ <caseOffice>Springfield</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party firstName="Julie" fullName="Julie Belle-Isle, RN" lastName="Belle-Isle, RN" role="Defendant"></party>
+ <party firstName="Cecile" fullName="Cecile Brace" lastName="Brace" role="Plaintiff"></party>
+ <party fullName="Commonwealth of Massachusetts" lastName="Commonwealth of Massachusetts" role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca Frey, Clinician" lastName="Frey, Clinician" role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven Gobielle" lastName="Gobielle" role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda Goodman, NP" lastName="Goodman, NP" role="Defendant"></party>
+ <party firstName="Jennifer" fullName="Jennifer Kane, RN" lastName="Kane, RN" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-0/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER entered. MEMORANDUM REGARDING DEFENDANTS&apos; MOTION FOR SUMMARY JUDGMENT. In its November 8, 2011 order, the court DENIED Defendants Motion for Summary Judgment (Dkt. 58) as to Counts I and II and ALLOWED it as to Counts III, IV, V, VIII, and IX. As noted above, at n. 1, the trial originally scheduled for this case was postponed due to the unavailability of Plaintiffs counsel and the possibility that new counselwould need to be retained. If the case is to be tried before this court, in light of the fact that counsel estimate that two weeks will be needed for evidence, then (in light of the age of this case) the trial must commence by the end of February, 2012. Alternatively, and particularly in light of possible Eleventh Amendment issues, counsel may move to remand the two remaining state law claims to state court. Counsel are hereby ordered to submit a joint status report, on or before January 9, 2012, setting a trial date for some Monday on or before February 27, 2012. Alternatively, counsel may file a motion to remand Counts I and II to state court for trial. See the attached memo for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d41e94</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-0</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER entered. MEMORANDUM REGARDING DEFENDANTS&apos; MOTION FOR SUMMARY JUDGMENT. In its November 8, 2011 order, the court DENIED Defendants Motion for Summary Judgment (Dkt. 58) as to Counts I and II and ALLOWED it as to Counts III, IV, V, VIII, and IX. As noted above, at n. 1, the trial originally scheduled for this case was postponed due to the unavailability of Plaintiffs counsel and the possibility that new counselwould need to be retained. If the case is to be tried before this court, in light of the fact that counsel estimate that two weeks will be needed for evidence, then (in light of the age of this case) the trial must commence by the end of February, 2012. Alternatively, and particularly in light of possible Eleventh Amendment issues, counsel may move to remand the two remaining state law claims to state court. Counsel are hereby ordered to submit a joint status report, on or before January 9, 2012, setting a trial date for some Monday on or before February 27, 2012. Alternatively, counsel may file a motion to remand Counts I and II to state court for trial. See the attached memo for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-1/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 73 Motion to Remand Case to State Court. DENIED. Given the delays already incurred, remand would be unfair to Defendants. To accommodate plaintiff&apos;s counsel, the trial is set for May 7, 2012. Counsel will appear for a status conference on March 22, 2012 at 3:00 pm. So ordered. (Lindsay, Maurice)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d41e95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-1</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 73 Motion to Remand Case to State Court. DENIED. Given the delays already incurred, remand would be unfair to Defendants. To accommodate plaintiff&apos;s counsel, the trial is set for May 7, 2012. Counsel will appear for a status conference on March 22, 2012 at 3:00 pm. So ordered. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-2/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER entered. See the attached order for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d42a00</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-2</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-03-23</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER entered. See the attached order for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-3/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 97 Motion in Limine on Count II. DENIED, without prejudice. Evidence of others&apos; negligence may be relevant to the jury&apos;s assessment of the possible impact of the negligence of Kane or Gobeille. So ordered. (Lindsay, Maurice)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d42a02</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-3</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered denying 97 Motion in Limine on Count II. DENIED, without prejudice. Evidence of others&apos; negligence may be relevant to the jury&apos;s assessment of the possible impact of the negligence of Kane or Gobeille. So ordered. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-4/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ENDORSED ORDER entered granting 98 Motion in Limine to Exclude any reference to prior convictions. ALLOWED, except as to the convictions for receiving stolen property - unless the drift of testimony opens the door. So ordered. (Lindsay, Maurice)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d42a03</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-4</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ENDORSED ORDER entered granting 98 Motion in Limine to Exclude any reference to prior convictions. ALLOWED, except as to the convictions for receiving stolen property - unless the drift of testimony opens the door. So ordered. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-3_08-cv-30184-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-5/mods.xml">
+ <titleInfo>
+  <title>Brace v. Commonwealth of Massachusetts et al</title>
+  <subTitle>Judge Michael A. Ponsor: ORDER OF DISMISSAL RE: COUNT II, entered. As follows: Count II is hereby DISMISSED. The trial set to commence on May 7, 2012 willfocus entirely upon Count I, the MTCA count, and specifically upon the negligence of Jennifer Kane and Steven Gobielle, for which the Commonwealth is alleged to be vicariously liable. See the attached order of dismissal for complete details. (Lindsay, Maurice)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-3_08-cv-30184-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d42a01</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-5</identifier>
+ <identifier type="former granule identifier">mad-3_08-cv-30184_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-3_08-cv-30184/USCOURTS-mad-3_08-cv-30184-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-3_08-cv-30184/pdf/USCOURTS-mad-3_08-cv-30184-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-30184; Brace v. Commonwealth of Massachusetts et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-3_08-cv-30184-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-04-25</dateIssued>
+  <docketText>Judge Michael A. Ponsor: ORDER OF DISMISSAL RE: COUNT II, entered. As follows: Count II is hereby DISMISSED. The trial set to commence on May 7, 2012 willfocus entirely upon Count I, the MTCA count, and specifically upon the negligence of Jennifer Kane and Steven Gobielle, for which the Commonwealth is alleged to be vicariously liable. See the attached order of dismissal for complete details. (Lindsay, Maurice)</docketText>
+</extension>
+</relatedItem>
+</mods>

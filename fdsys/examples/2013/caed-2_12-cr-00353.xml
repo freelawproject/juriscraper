@@ -1,0 +1,454 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1869c8673">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-12-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353</identifier>
+<identifier type="local">P0b002ee1869c8673</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cr-00353</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00353</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00353</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Barbara" fullName="Barbara Perry" lastName="Perry" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Perry</title>
+ <partNumber>2:12-cr-00353</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cr-00353;12-353</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barbara Perry</displayForm>
+ <namePart type="family">Perry</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cr-00353</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cr-00353</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Barbara" fullName="Barbara Perry" lastName="Perry" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>DETENTION ORDER as to Barbara Perry signed by Magistrate Judge Kendall J. Newman on 11/29/12. (Kaminski, H)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-29</dateIssued>
+  <docketText>DETENTION ORDER as to Barbara Perry signed by Magistrate Judge Kendall J. Newman on 11/29/12. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/4/2013 ORDERING that the Status Conference is CONTINUED to 3/4/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Barbara Perry: T4 Start: 1/7/2013 Stop: 3/4/2013. (Zignago, K.)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40421</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 1/4/2013 ORDERING that the Status Conference is CONTINUED to 3/4/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Barbara Perry: T4 Start: 1/7/2013 Stop: 3/4/2013. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER for Continuance 12 signed by Senior Judge William B. Shubb on 2/4/2013 resetting the Status Conference date for 3/18/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb, and for Excludable Time as to Barbara Perry: Local Code T-4 Start: 3/4/2013 Stop: 3/18/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40ad0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-02-04</dateIssued>
+  <docketText>STIPULATION and ORDER for Continuance 12 signed by Senior Judge William B. Shubb on 2/4/2013 resetting the Status Conference date for 3/18/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb, and for Excludable Time as to Barbara Perry: Local Code T-4 Start: 3/4/2013 Stop: 3/18/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER as to Barbara Perry signed by Senior Judge William B. Shubb on 2/5/2013 ACCEPTING the 14 Stipulation and Proposed Order; DIRECTING the Probation Office to conduct the criminal history review requested and to report its results to counsel for each party by 3/18/2013. (cc: Probation Sacramento) (Michel, G)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>STIPULATION and ORDER as to Barbara Perry signed by Senior Judge William B. Shubb on 2/5/2013 ACCEPTING the 14 Stipulation and Proposed Order; DIRECTING the Probation Office to conduct the criminal history review requested and to report its results to counsel for each party by 3/18/2013. (cc: Probation Sacramento) (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER for continuance 16 signed by Senior Judge William B. Shubb on 3/14/2013 resetting the Status Conference date for 4/8/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Barbara Perry: Local Code T-4 Start: 3/18/2013 Stop: 4/8/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40ad1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-03-14</dateIssued>
+  <docketText>STIPULATION and ORDER for continuance 16 signed by Senior Judge William B. Shubb on 3/14/2013 resetting the Status Conference date for 4/8/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable Time started as to Barbara Perry: Local Code T-4 Start: 3/18/2013 Stop: 4/8/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER 18 for continuance signed by Senior Judge William B. Shubb on 4/2/2013. Status Conference, as to Barbara Perry, is RE-SET for 4/29/2013 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 4/8/2013 through Stop Date - 4/29/2013 (Marciel, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40422</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-04-03</dateIssued>
+  <docketText>STIPULATION and ORDER 18 for continuance signed by Senior Judge William B. Shubb on 4/2/2013. Status Conference, as to Barbara Perry, is RE-SET for 4/29/2013 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 4/8/2013 through Stop Date - 4/29/2013 (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 4/26/13: Status Conference RESET for 6/17/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Barbara Perry: T-4 Start: 4/29/13 Stop: 6/17/13. (Kaminski, H)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-04-26</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 4/26/13: Status Conference RESET for 6/17/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Barbara Perry: T-4 Start: 4/29/13 Stop: 6/17/13. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>ORDER of RECUSAL signed by Senior Judge William B. Shubb on 6/17/13 ORDERING The undersigned hereby recuses himself as the judge to whom this case is assigned IT IS THEREFORE ORDERED that the Clerk of the Court reassign this case to another judge for all further proceedings, making appropriate adjustments in the assignments of criminal cases to compensate for such reassignment. Any dates previously set in this case are herebyVACATED. Case reassigned to Chief Judge Morrison C. England, Jr for all further proceedings. (Becknal, R)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-7</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-06-17</dateIssued>
+  <docketText>ORDER of RECUSAL signed by Senior Judge William B. Shubb on 6/17/13 ORDERING The undersigned hereby recuses himself as the judge to whom this case is assigned IT IS THEREFORE ORDERED that the Clerk of the Court reassign this case to another judge for all further proceedings, making appropriate adjustments in the assignments of criminal cases to compensate for such reassignment. Any dates previously set in this case are herebyVACATED. Case reassigned to Chief Judge Morrison C. England, Jr for all further proceedings. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 7/2/13 ORDERING that the Office of the Federal Defender find counsel from the CJA panel to represent the defendant Barbara Perry. (Becknal, R)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40420</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-8</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-07-03</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 7/2/13 ORDERING that the Office of the Federal Defender find counsel from the CJA panel to represent the defendant Barbara Perry. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>ORDER as to Barbara Perry signed by Chief Judge Morrison C. England, Jr on 7/16/13 ORDERING the Office of the Federal Defender be relieved as attorney of record, and that Michael Long, be substituted in as appointed counsel. (Becknal, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b40acf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-9</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-07-18</dateIssued>
+  <docketText>ORDER as to Barbara Perry signed by Chief Judge Morrison C. England, Jr on 7/16/13 ORDERING the Office of the Federal Defender be relieved as attorney of record, and that Michael Long, be substituted in as appointed counsel. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>ORDER FOR RELEASE as to Barbara Perry signed by Chief Judge Morrison C. England, Jr on 12/12/13. (Mena-Sanchez, L)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-10</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-12-12</dateIssued>
+  <docketText>ORDER FOR RELEASE as to Barbara Perry signed by Chief Judge Morrison C. England, Jr on 12/12/13. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cr-00353-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Perry</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Barbara Perry. Signed by Chief Judge Morrison C. England, Jr. on 12/16/201. (Deutsch, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cr-00353-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186b4041e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-11</identifier>
+ <identifier type="former granule identifier">caed-2_12-cr-00353_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cr-00353/USCOURTS-caed-2_12-cr-00353-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cr-00353/pdf/USCOURTS-caed-2_12-cr-00353-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cr-00353; USA v. Perry; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cr-00353-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2013-12-16</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Barbara Perry. Signed by Chief Judge Morrison C. England, Jr. on 12/16/201. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

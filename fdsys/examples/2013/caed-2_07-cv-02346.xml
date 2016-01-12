@@ -1,0 +1,842 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a07451">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346</identifier>
+<identifier type="local">P0b002ee183a07451</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_07-cv-02346</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_07-cv-02346</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:07-cv-02346</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Alziebler" lastName="Alziebler" role="Defendant"></party>
+ <party fullName="Miranda" lastName="Miranda" role="Defendant"></party>
+ <party fullName="Stephens" lastName="Stephens" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Marshall Tompkins" lastName="Tompkins" middleName="Marshall" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Tompkins v. Stephens, et al</title>
+ <partNumber>2:07-cv-02346</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-02346;07-2346</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Alziebler</displayForm>
+ <namePart type="family">Alziebler</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Miranda</displayForm>
+ <namePart type="family">Miranda</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Stephens</displayForm>
+ <namePart type="family">Stephens</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn Marshall Tompkins</displayForm>
+ <namePart type="family">Tompkins</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_07-cv-02346</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:07-cv-02346</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Alziebler" lastName="Alziebler" role="Defendant"></party>
+ <party fullName="Miranda" lastName="Miranda" role="Defendant"></party>
+ <party fullName="Stephens" lastName="Stephens" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Marshall Tompkins" lastName="Tompkins" middleName="Marshall" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/05/08 ORDERING that the clerk shall serve a copy of this order and a copy of plaintiffs in formapauperis application upon the Director of the California Department of Corrections and Rehabilitation and deliver a copy of this order to the Clerks financial division. (Attachments: # (1) IFP) (Anderson, J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a983</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-0</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/05/08 ORDERING that the clerk shall serve a copy of this order and a copy of plaintiffs in formapauperis application upon the Director of the California Department of Corrections and Rehabilitation and deliver a copy of this order to the Clerks financial division. (Attachments: # (1) IFP) (Anderson, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/5/08 GRANTING 2 Application to proceed IFP. Plaintiff must pay the statutory filing fee of $350.00 for this action and must make an inital payment of $2.54 All payments shall be collected in accordance with the order to the Director of the CDC. Service is appropriate for defendants Stephans, Alziebler and Miranda. The Clerk shall send plaintiff 3 USM-285 forms, one summons, an instruction sheet and copy of the 10/26/07 pleading. Within 30 days plaintff shall complete the attachd Notice of Submission of Documents. (Attachments: # (1) Complaint)(Anderson, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-1</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-08-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/5/08 GRANTING 2 Application to proceed IFP. Plaintiff must pay the statutory filing fee of $350.00 for this action and must make an inital payment of $2.54 All payments shall be collected in accordance with the order to the Director of the CDC. Service is appropriate for defendants Stephans, Alziebler and Miranda. The Clerk shall send plaintiff 3 USM-285 forms, one summons, an instruction sheet and copy of the 10/26/07 pleading. Within 30 days plaintff shall complete the attachd Notice of Submission of Documents. (Attachments: # (1) Complaint)(Anderson, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/27/08 DIRECTING USM to serve process on dfts Stephens, Alziebler and Miranda; Clerk to send instructions, summons and copies of 10/26/07 complaint and this order to the USM; Clerk to serve plf w/ Local Rules (cc USM Priority).(Benson, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-2</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-08-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/27/08 DIRECTING USM to serve process on dfts Stephens, Alziebler and Miranda; Clerk to send instructions, summons and copies of 10/26/07 complaint and this order to the USM; Clerk to serve plf w/ Local Rules (cc USM Priority).(Benson, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 09/02/09 ordering the clerk of the court shall mail plaintiff 1 USM-285 form and a copy of the pleading filed 10/26/07. Within 60 days from the date this order is served, plaintiff may submit the attached Notice of Submission of Documents with a completed form USM-285 providing instructions for service of process upon defendant Miranda and 2 copies of the pleading provided to plaintiff. (Plummer, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-3</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 09/02/09 ordering the clerk of the court shall mail plaintiff 1 USM-285 form and a copy of the pleading filed 10/26/07. Within 60 days from the date this order is served, plaintiff may submit the attached Notice of Submission of Documents with a completed form USM-285 providing instructions for service of process upon defendant Miranda and 2 copies of the pleading provided to plaintiff. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/15/2009 ORDERING that pltf shall file opposition or statement of no opposition wthin 20 days to 13 Motion to Dismiss. (Suttles, J)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a995</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-4</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-10-16</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/15/2009 ORDERING that pltf shall file opposition or statement of no opposition wthin 20 days to 13 Motion to Dismiss. (Suttles, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/26/09 ordering within 14 days from the date of service of this order, defendant Stephens shall pay to the United States Marshal the sum of $98.13, unless within that time defendant files a written statement showing good cause for failing to waive service. The clerk of the court shall serve a copy of this order on the U.S. Marshal. (cc: USM)(Plummer, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a997</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-5</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-10-26</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/26/09 ordering within 14 days from the date of service of this order, defendant Stephens shall pay to the United States Marshal the sum of $98.13, unless within that time defendant files a written statement showing good cause for failing to waive service. The clerk of the court shall serve a copy of this order on the U.S. Marshal. (cc: USM)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/04/09 DIRECTING USM to serve complaint filed on 10/26/07, on Miranda. (cc: USM) (Plummer, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-6</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2009-11-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/04/09 DIRECTING USM to serve complaint filed on 10/26/07, on Miranda. (cc: USM) (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/20/09 STRIKING 30 Motion for production of documents. (Dillon, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a984</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-7</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2009-11-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/20/09 STRIKING 30 Motion for production of documents. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 2/25/2010 RECOMMENDING that dfts&apos; 13 motion to dismiss be denied. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due w/in 14 days.(Yin, K)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a980</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-8</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-02-25</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 2/25/2010 RECOMMENDING that dfts&apos; 13 motion to dismiss be denied. Referred to Judge Garland E. Burrell, Jr.; Objections to F&amp;R due w/in 14 days.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER ADOPTING 36 FINDINGS AND RECOMMENDATIONS in full signed by Judge Garland E. Burrell, Jr. on 03/26/10 and ORDERING that dfts&apos; 13 Motion to Dismiss is DENIED w/o prejudice; dfts are directed to file an answer w/i 21 days. (Benson, A.)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a985</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-9</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-03-26</dateIssued>
+  <docketText>ORDER ADOPTING 36 FINDINGS AND RECOMMENDATIONS in full signed by Judge Garland E. Burrell, Jr. on 03/26/10 and ORDERING that dfts&apos; 13 Motion to Dismiss is DENIED w/o prejudice; dfts are directed to file an answer w/i 21 days. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/3/10 ORDERING the US Marshal&apos;s requests for reimbursement for costs of personal service upon dfts Stephens is GRANTED; dft Stephens shall pay to the US Marshall the sum of $98.13 within 14 days of this order and the clerk is directed to serve a copy of this order on the US Marshal, Sacramento, CA. (Carlos, K)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a979</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-10</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-05-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/3/10 ORDERING the US Marshal&apos;s requests for reimbursement for costs of personal service upon dfts Stephens is GRANTED; dft Stephens shall pay to the US Marshall the sum of $98.13 within 14 days of this order and the clerk is directed to serve a copy of this order on the US Marshal, Sacramento, CA. (Carlos, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/3/10 ORDERING pltf&apos;s motion for an order for greater access to law library 28 is DENIED.. (Carlos, K)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a988</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-11</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-05-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/3/10 ORDERING pltf&apos;s motion for an order for greater access to law library 28 is DENIED.. (Carlos, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/11/10 ordering that defendants&apos; 07/07/10 and 08/09/10 requests to conduct plaintiff&apos;s depostion via videoconference 55, 61 are granted. (Plummer, M)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a98a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-12</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-08-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/11/10 ordering that defendants&apos; 07/07/10 and 08/09/10 requests to conduct plaintiff&apos;s depostion via videoconference 55, 61 are granted. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 12/8/10 ORDERING that 46 Motion to Amend the Complaint is GRANTED; Motion for Extension of time 67 is granted and the Motion for summary judgment 68 is deemed timely; Defendants have 20 days from the date of this order to file an amended motion for summary judgment if they so choose. Plaintiff must submit his opposition to defendants motion for summary judgment within 30 days of the date of this order, or 30 days from the filing of defendants amended motion for summary judgment if they choose to file one.(Dillon, M) Modified on 12/10/2010 (Plummer, M).</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a978</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-13</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-12-09</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 12/8/10 ORDERING that 46 Motion to Amend the Complaint is GRANTED; Motion for Extension of time 67 is granted and the Motion for summary judgment 68 is deemed timely; Defendants have 20 days from the date of this order to file an amended motion for summary judgment if they so choose. Plaintiff must submit his opposition to defendants motion for summary judgment within 30 days of the date of this order, or 30 days from the filing of defendants amended motion for summary judgment if they choose to file one.(Dillon, M) Modified on 12/10/2010 (Plummer, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/19/2011 GRANTING dfts&apos; 71 motion for clarification; DENYING, w/out prejudice, dfts&apos; 68 motion for summary judgment; and dfts may file an amended motion for summary judgment w/in 20 days. (Yin, K)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-14</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/19/2011 GRANTING dfts&apos; 71 motion for clarification; DENYING, w/out prejudice, dfts&apos; 68 motion for summary judgment; and dfts may file an amended motion for summary judgment w/in 20 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/30/2011 ORDERING that the court will rule on pltf&apos;s two motions to compel at a later date; until then, pltf need not file an opposition to dfts&apos; 78 amended motion for summary judgment. (Yin, K)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a981</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-15</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2011-03-30</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/30/2011 ORDERING that the court will rule on pltf&apos;s two motions to compel at a later date; until then, pltf need not file an opposition to dfts&apos; 78 amended motion for summary judgment. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 04/12/11 denying plaintiff&apos;s motions to compel 73, 74. Plaintiff must respond to defendants&apos; motion for summary judgment within 21 days of the date of this order. (Plummer, M)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a996</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-16</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2011-04-13</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 04/12/11 denying plaintiff&apos;s motions to compel 73, 74. Plaintiff must respond to defendants&apos; motion for summary judgment within 21 days of the date of this order. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 6/24/11 GRANTING IN PART 88 Motion for 30 Day Extension of Time. Plaintiff has 30 days from the date this order is served to file and serve his supplemental opposition to 78 Amended Motion for Summary Judgment. (Meuleman, A) Modified on 6/27/2011 (Meuleman, A).</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a982</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-17</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-06-27</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 6/24/11 GRANTING IN PART 88 Motion for 30 Day Extension of Time. Plaintiff has 30 days from the date this order is served to file and serve his supplemental opposition to 78 Amended Motion for Summary Judgment. (Meuleman, A) Modified on 6/27/2011 (Meuleman, A).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/1/2011 recommending that defendant&apos;s 78 AMENDED MOTION for SUMMARY JUDGMENT be denied; Motion referred to Judge Garland E. Burrell, Jr. Any party may file objections to F&amp;R w/i 14 days after being served. (Waggoner, D)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a986</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-18</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-09-01</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 9/1/2011 recommending that defendant&apos;s 78 AMENDED MOTION for SUMMARY JUDGMENT be denied; Motion referred to Judge Garland E. Burrell, Jr. Any party may file objections to F&amp;R w/i 14 days after being served. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER adopting in full 94 FINDINGS AND RECOMMENDATIONS, signed by Judge Garland E. Burrell, Jr., on 9/26/11. Defendants 78 motion for summary judgment is DENIED. Within 30 days of the date of this order, plaintiff shall file his pretrial statement. Within 15 days of the date plaintiff files his pretrial statement, defendants shall file their pretrial statement. (Kastilahn, A)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a998</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-19</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2011-09-27</dateIssued>
+  <docketText>ORDER adopting in full 94 FINDINGS AND RECOMMENDATIONS, signed by Judge Garland E. Burrell, Jr., on 9/26/11. Defendants 78 motion for summary judgment is DENIED. Within 30 days of the date of this order, plaintiff shall file his pretrial statement. Within 15 days of the date plaintiff files his pretrial statement, defendants shall file their pretrial statement. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/05/11 ordering that no later than 15 days from the date of the order, the parties shall each submit confidential settlement conference statements as described below. The confidential statements shall not be served on the opposing party or filed with the court, but instead, delivered by mail, fax, email or personal delivery to the court&apos;s Alternative Dispute Resolution ADR division at the address, fax number or email address below and marked confidential. (See order for further details)(cc: ADR Director) (Plummer, M)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a98b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-20</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2011-10-05</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 10/05/11 ordering that no later than 15 days from the date of the order, the parties shall each submit confidential settlement conference statements as described below. The confidential statements shall not be served on the opposing party or filed with the court, but instead, delivered by mail, fax, email or personal delivery to the court&apos;s Alternative Dispute Resolution ADR division at the address, fax number or email address below and marked confidential. (See order for further details)(cc: ADR Director) (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/3/12 ORDERING that Plaintiff file his pretrial statement and any motions necessary to obtain the attendance of incarcerated witnesses at trial within 30 days; defendants to file their pretrial statement within 14 days thereafter; and plaintiff is admonished that failure to timely file his pretrial statement will result in a recommendation that this action be dismissed. (Meuleman, A)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a97e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-21</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/3/12 ORDERING that Plaintiff file his pretrial statement and any motions necessary to obtain the attendance of incarcerated witnesses at trial within 30 days; defendants to file their pretrial statement within 14 days thereafter; and plaintiff is admonished that failure to timely file his pretrial statement will result in a recommendation that this action be dismissed. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/2012 ORDERING that this case is SET for a Settlement Conference on 6/29/2012 at 09:00 AM in Courtroom 25 (KJN) before Magistrate Judge Kendall J. Newman; defendants&apos; lead counsel and a person with full and unlimited authority to negotiate and enter into a binding settlement on defendants&apos; behalf shall attend in person; each party shall provide a confidential settlement conference statement no later than 6/22/12 and file a Notice of Submission thereof. (cc: KJN, ADR) (Yin, K)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a909</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-22</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2012-05-08</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 5/8/2012 ORDERING that this case is SET for a Settlement Conference on 6/29/2012 at 09:00 AM in Courtroom 25 (KJN) before Magistrate Judge Kendall J. Newman; defendants&apos; lead counsel and a person with full and unlimited authority to negotiate and enter into a binding settlement on defendants&apos; behalf shall attend in person; each party shall provide a confidential settlement conference statement no later than 6/22/12 and file a Notice of Submission thereof. (cc: KJN, ADR) (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER AND WRIT OF HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Edmund F. Brennan on 5/8/2012 ORDERING the custodian to produce Shawn Tompkins #V-82440, to testify in USDC at 9:00 a.m. on 6/29/2012 in courtroom #25, before Judge Kendall J. Newman; custodian is ordered to notify the court of any change in custody of this inmate and is ordered to provide the new custodian with a copy of this writ; and the clerk to serve a copy of this order and writ on the Out-to-Court Desk and CSP-COR Warden. (cc: OTCD-SAC)(Yin, K)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a987</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-23</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2012-05-08</dateIssued>
+  <docketText>ORDER AND WRIT OF HABEAS CORPUS AD TESTIFICANDUM ISSUED signed by Magistrate Judge Edmund F. Brennan on 5/8/2012 ORDERING the custodian to produce Shawn Tompkins #V-82440, to testify in USDC at 9:00 a.m. on 6/29/2012 in courtroom #25, before Judge Kendall J. Newman; custodian is ordered to notify the court of any change in custody of this inmate and is ordered to provide the new custodian with a copy of this writ; and the clerk to serve a copy of this order and writ on the Out-to-Court Desk and CSP-COR Warden. (cc: OTCD-SAC)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_07-cv-02346-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Tompkins v. Stephens, et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/03/13 ordering that within 21 days of the date of this order, the parties shall comply with the court&apos;s 06/29/12 order. (Plummer, M)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_07-cv-02346-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0a989</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-24</identifier>
+ <identifier type="former granule identifier">caed-2_07-cv-02346_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_07-cv-02346/USCOURTS-caed-2_07-cv-02346-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_07-cv-02346/pdf/USCOURTS-caed-2_07-cv-02346-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02346; (PC) Tompkins v. Stephens, et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_07-cv-02346-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/03/13 ordering that within 21 days of the date of this order, the parties shall comply with the court&apos;s 06/29/12 order. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

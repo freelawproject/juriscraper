@@ -1,0 +1,323 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180fd19b3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00425</identifier>
+<identifier type="local">P0b002ee180fd19b3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-1_08-cv-00425</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00425</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00425</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="David" fullName="David H Bieter" lastName="Bieter" middleName="H" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim A Birdsall" lastName="Birdsall" middleName="A" role="Defendant"></party>
+ <party firstName="Vern" fullName="Vern Bisterfeldt" lastName="Bisterfeldt" role="Defendant"></party>
+ <party fullName="Boise City of" lastName="Boise City of" role="Defendant"></party>
+ <party fullName="CAM" lastName="CAM" role="Plaintiff"></party>
+ <party firstName="Elaine" fullName="Elaine Clegg" lastName="Clegg" role="Defendant"></party>
+ <party firstName="Cary" fullName="Cary B Colaianni" lastName="Colaianni" middleName="B" role="Defendant"></party>
+ <party firstName="Tami" fullName="Tami Dodel" lastName="Dodel" role="Defendant"></party>
+ <party firstName="David" fullName="David Eberle" lastName="Eberle" role="Defendant"></party>
+ <party firstName="Maryanne" fullName="Maryanne Jordan" lastName="Jordan" role="Defendant"></party>
+ <party firstName="Wendi" fullName="Wendi Lee Michalk" lastName="Michalk" middleName="Lee" role="Plaintiff"></party>
+ <party firstName="Alan" fullName="Alan Shealy" lastName="Shealy" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Street" lastName="Street" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim Tibbs" lastName="Tibbs" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Elizabeth Watson" lastName="Watson" middleName="Elizabeth" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Michalk et al v. Boise City of et al</title>
+ <partNumber>1:08-cv-00425</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00425/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-00425;08-425</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Boise - Southern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David H Bieter</displayForm>
+ <namePart type="family">Bieter</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jim A Birdsall</displayForm>
+ <namePart type="family">Birdsall</namePart>
+ <namePart type="given">Jim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vern Bisterfeldt</displayForm>
+ <namePart type="family">Bisterfeldt</namePart>
+ <namePart type="given">Vern</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Boise City of</displayForm>
+ <namePart type="family">Boise City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CAM</displayForm>
+ <namePart type="family">CAM</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Elaine Clegg</displayForm>
+ <namePart type="family">Clegg</namePart>
+ <namePart type="given">Elaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cary B Colaianni</displayForm>
+ <namePart type="family">Colaianni</namePart>
+ <namePart type="given">Cary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tami Dodel</displayForm>
+ <namePart type="family">Dodel</namePart>
+ <namePart type="given">Tami</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Eberle</displayForm>
+ <namePart type="family">Eberle</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maryanne Jordan</displayForm>
+ <namePart type="family">Jordan</namePart>
+ <namePart type="given">Maryanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wendi Lee Michalk</displayForm>
+ <namePart type="family">Michalk</namePart>
+ <namePart type="given">Wendi</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alan Shealy</displayForm>
+ <namePart type="family">Shealy</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Street</displayForm>
+ <namePart type="family">Street</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jim Tibbs</displayForm>
+ <namePart type="family">Tibbs</namePart>
+ <namePart type="given">Jim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mary Elizabeth Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Mary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-1_08-cv-00425</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>1:08-cv-00425</caseNumber>
+ <caseOffice>Boise - Southern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="David" fullName="David H Bieter" lastName="Bieter" middleName="H" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim A Birdsall" lastName="Birdsall" middleName="A" role="Defendant"></party>
+ <party firstName="Vern" fullName="Vern Bisterfeldt" lastName="Bisterfeldt" role="Defendant"></party>
+ <party fullName="Boise City of" lastName="Boise City of" role="Defendant"></party>
+ <party fullName="CAM" lastName="CAM" role="Plaintiff"></party>
+ <party firstName="Elaine" fullName="Elaine Clegg" lastName="Clegg" role="Defendant"></party>
+ <party firstName="Cary" fullName="Cary B Colaianni" lastName="Colaianni" middleName="B" role="Defendant"></party>
+ <party firstName="Tami" fullName="Tami Dodel" lastName="Dodel" role="Defendant"></party>
+ <party firstName="David" fullName="David Eberle" lastName="Eberle" role="Defendant"></party>
+ <party firstName="Maryanne" fullName="Maryanne Jordan" lastName="Jordan" role="Defendant"></party>
+ <party firstName="Wendi" fullName="Wendi Lee Michalk" lastName="Michalk" middleName="Lee" role="Plaintiff"></party>
+ <party firstName="Alan" fullName="Alan Shealy" lastName="Shealy" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Street" lastName="Street" role="Defendant"></party>
+ <party firstName="Jim" fullName="Jim Tibbs" lastName="Tibbs" role="Defendant"></party>
+ <party firstName="Mary" fullName="Mary Elizabeth Watson" lastName="Watson" middleName="Elizabeth" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00425-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-0/mods.xml">
+ <titleInfo>
+  <title>Michalk et al v. Boise City of et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting 1 Motion for Leave to Proceed in forma pauperis; denying 5 Motion for an emergency Writ of Mandamus of Injunction to prohibit retaliatory action by resps. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00425-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffdfae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-0</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00425_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00425/pdf/USCOURTS-idd-1_08-cv-00425-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00425; Michalk et al v. Boise City of et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00425-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-02-23</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting 1 Motion for Leave to Proceed in forma pauperis; denying 5 Motion for an emergency Writ of Mandamus of Injunction to prohibit retaliatory action by resps. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00425-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-1/mods.xml">
+ <titleInfo>
+  <title>Michalk et al v. Boise City of et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER denying 8 Motion for Relief; denying 8 Motion to Alter Judgment. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00425-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffdfaf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-1</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00425_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00425/pdf/USCOURTS-idd-1_08-cv-00425-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00425; Michalk et al v. Boise City of et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00425-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-04</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER denying 8 Motion for Relief; denying 8 Motion to Alter Judgment. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-1_08-cv-00425-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-2/mods.xml">
+ <titleInfo>
+  <title>Michalk et al v. Boise City of et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER denying 11 Motion for restraining order of protection. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-idd-1_08-cv-00425-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180ffdfad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-2</identifier>
+ <identifier type="former granule identifier">idd-1_08-cv-00425_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-1_08-cv-00425/USCOURTS-idd-1_08-cv-00425-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-1_08-cv-00425/pdf/USCOURTS-idd-1_08-cv-00425-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-00425; Michalk et al v. Boise City of et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-1_08-cv-00425-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-05</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER denying 11 Motion for restraining order of protection. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by dks)</docketText>
+</extension>
+</relatedItem>
+</mods>

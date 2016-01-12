@@ -1,0 +1,329 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1850afc4a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-01</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091</identifier>
+<identifier type="local">P0b002ee1850afc4a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-02091</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-02091</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-02091</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="Black&amp;Decker (U.S.) Inc" lastName="Black&amp;Decker (U.S.) Inc" role="Defendant"></party>
+ <party fullName="Home Depot (U.S.A.), Inc." lastName="Home Depot (U.S.A.), Inc." role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Laster" lastName="Laster" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+ <partNumber>1:11-cv-02091</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-02091;11-2091</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Black&amp;Decker (U.S.) Inc</displayForm>
+ <namePart type="family">Black&amp;Decker (U.S.) Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Home Depot (U.S.A.), Inc.</displayForm>
+ <namePart type="family">Home Depot (U.S.A.), Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Danny Laster</displayForm>
+ <namePart type="family">Laster</namePart>
+ <namePart type="given">Danny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-02091</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-02091</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Product Liability</cause>
+ <party fullName="Black&amp;Decker (U.S.) Inc" lastName="Black&amp;Decker (U.S.) Inc" role="Defendant"></party>
+ <party fullName="Home Depot (U.S.A.), Inc." lastName="Home Depot (U.S.A.), Inc." role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Laster" lastName="Laster" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-0/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER Declining to Adopt the Parties&apos; 12 Stipulation signed by Magistrate Judge Gary S. Austin on 10/10/2012. (Bradley, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-10</dateIssued>
+  <docketText>ORDER Declining to Adopt the Parties&apos; 12 Stipulation signed by Magistrate Judge Gary S. Austin on 10/10/2012. (Bradley, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-1/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER ADOPTING the parties&apos; 16 Joint Stipulated Protective Order in part, signed by Magistrate Judge Gary S. Austin on 12/13/2012. (Figueroa, O)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-12-14</dateIssued>
+  <docketText>ORDER ADOPTING the parties&apos; 16 Joint Stipulated Protective Order in part, signed by Magistrate Judge Gary S. Austin on 12/13/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-2/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER Granting Defendants Black&amp;Decker (U.S.) Inc., and Home Depot U.S.A., Inc.&apos;s 19 Ex Parte Application for an Order Shortening Time for Notice of Motion to Exclude Plaintiff&apos;s Undisclosed Expert Opinions signed by Magistrate Judge Gary S. Austin on 1/3/2013. Motion Hearing set for 1/11/2013 at 09:30 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin.(Martinez, A)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER Granting Defendants Black&amp;Decker (U.S.) Inc., and Home Depot U.S.A., Inc.&apos;s 19 Ex Parte Application for an Order Shortening Time for Notice of Motion to Exclude Plaintiff&apos;s Undisclosed Expert Opinions signed by Magistrate Judge Gary S. Austin on 1/3/2013. Motion Hearing set for 1/11/2013 at 09:30 AM in Courtroom 10 (GSA) before Magistrate Judge Gary S. Austin.(Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-3/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER on 22 Ex Parte Application for Order Shortening Time to Hear Motion signed by Magistrate Judge Gary S. Austin on 1/8/2013. The Motion is GRANTED. The matters are taken under submission and the hearings scheduled for January 11, 2013, at 9:30 am are VACATED. Counsel need not appear. A written order will follow. (Martinez, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-08</dateIssued>
+  <docketText>ORDER on 22 Ex Parte Application for Order Shortening Time to Hear Motion signed by Magistrate Judge Gary S. Austin on 1/8/2013. The Motion is GRANTED. The matters are taken under submission and the hearings scheduled for January 11, 2013, at 9:30 am are VACATED. Counsel need not appear. A written order will follow. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-4/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER Denying Motion to Exclude Expert Opinions; ORDER Granting Plaintiff&apos;s Motion for an Extension of the Expert Discovery Deadlines re 18, 21 and 23 signed by Magistrate Judge Gary S. Austin on 1/16/2013. (Martinez, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-16</dateIssued>
+  <docketText>ORDER Denying Motion to Exclude Expert Opinions; ORDER Granting Plaintiff&apos;s Motion for an Extension of the Expert Discovery Deadlines re 18, 21 and 23 signed by Magistrate Judge Gary S. Austin on 1/16/2013. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-5/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>SECOND AMENDED SCHEDULING ORDER modifying the dates as follows: Plaintiff&apos;s expert Carl Sheriff to be deposed before 2/8/2013; Plaintiff&apos;s expert Michael Azevedo to be deposed before 2/15/2013; Defendant&apos;s expert reports due by 3/1/2013; Defendants experts to be produced and made available for deposition by 3/29/2013; any rebuttal experts to be filed by 4/12/2013; expert discovery by 4/26/2013; pretrial motions due by 5/10/2013; pretrial motions hearing deadline set for 6/14/2013; Pretrial Conference set for 8/14/2013 at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 10/16/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Order signed by Magistrate Judge Gary S. Austin on 2/1/2013. (Rooney, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-01</dateIssued>
+  <docketText>SECOND AMENDED SCHEDULING ORDER modifying the dates as follows: Plaintiff&apos;s expert Carl Sheriff to be deposed before 2/8/2013; Plaintiff&apos;s expert Michael Azevedo to be deposed before 2/15/2013; Defendant&apos;s expert reports due by 3/1/2013; Defendants experts to be produced and made available for deposition by 3/29/2013; any rebuttal experts to be filed by 4/12/2013; expert discovery by 4/26/2013; pretrial motions due by 5/10/2013; pretrial motions hearing deadline set for 6/14/2013; Pretrial Conference set for 8/14/2013 at 08:15 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 10/16/2013 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. Order signed by Magistrate Judge Gary S. Austin on 2/1/2013. (Rooney, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-02091-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-6/mods.xml">
+ <titleInfo>
+  <title>Laster v. Black&amp;Decker (U.S.) Inc et al</title>
+  <subTitle>ORDER To DISMISS And Close Action (Doc.30), signed by District Judge Lawrence J. O&apos;Neill on 7/1/2013. CASE CLOSED.(Fahrney, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-02091-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1850c88b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-02091_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-02091/USCOURTS-caed-1_11-cv-02091-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-02091/pdf/USCOURTS-caed-1_11-cv-02091-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-02091; Laster v. Black&amp;Decker (U.S.) Inc et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-02091-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-07-01</dateIssued>
+  <docketText>ORDER To DISMISS And Close Action (Doc.30), signed by District Judge Lawrence J. O&apos;Neill on 7/1/2013. CASE CLOSED.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

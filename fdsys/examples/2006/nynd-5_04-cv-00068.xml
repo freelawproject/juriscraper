@@ -1,0 +1,213 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18115ad21">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00068</identifier>
+<identifier type="local">P0b002ee18115ad21</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_04-cv-00068</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_04-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:04-cv-00068</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Barbara" fullName="Barbara Flansburg" lastName="Flansburg" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Goes" lastName="Goes" role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter Hickey" lastName="Hickey" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Jagoda" lastName="Jagoda" role="Defendant"></party>
+ <party firstName="Winifred" fullName="Winifred McClarin" lastName="McClarin" role="Plaintiff"></party>
+ <party firstName="John" fullName="John McPhillips" lastName="McPhillips" role="Defendant"></party>
+ <party firstName="John" fullName="John McPhillips, R.N." lastName="McPhillips, R.N." role="Defendant"></party>
+ <party fullName="Nathan Littauer Hospital and Nursing Home" lastName="Nathan Littauer Hospital and Nursing Home" role="Defendant"></party>
+ <party firstName="Simone" fullName="Simone Sykes" lastName="Sykes" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Sykes v. McPhillips et al</title>
+ <partNumber>5:04-cv-00068</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00068/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cv-00068;04-068</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Barbara Flansburg</displayForm>
+ <namePart type="family">Flansburg</namePart>
+ <namePart type="given">Barbara</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dawn Goes</displayForm>
+ <namePart type="family">Goes</namePart>
+ <namePart type="given">Dawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Peter Hickey</displayForm>
+ <namePart type="family">Hickey</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albert Jagoda</displayForm>
+ <namePart type="family">Jagoda</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Winifred McClarin</displayForm>
+ <namePart type="family">McClarin</namePart>
+ <namePart type="given">Winifred</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John McPhillips</displayForm>
+ <namePart type="family">McPhillips</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John McPhillips, R.N.</displayForm>
+ <namePart type="family">McPhillips, R.N.</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nathan Littauer Hospital and Nursing Home</displayForm>
+ <namePart type="family">Nathan Littauer Hospital and Nursing Home</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Simone Sykes</displayForm>
+ <namePart type="family">Sykes</namePart>
+ <namePart type="given">Simone</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_04-cv-00068</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:04-cv-00068</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="Barbara" fullName="Barbara Flansburg" lastName="Flansburg" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Goes" lastName="Goes" role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter Hickey" lastName="Hickey" role="Defendant"></party>
+ <party firstName="Albert" fullName="Albert Jagoda" lastName="Jagoda" role="Defendant"></party>
+ <party firstName="Winifred" fullName="Winifred McClarin" lastName="McClarin" role="Plaintiff"></party>
+ <party firstName="John" fullName="John McPhillips" lastName="McPhillips" role="Defendant"></party>
+ <party firstName="John" fullName="John McPhillips, R.N." lastName="McPhillips, R.N." role="Defendant"></party>
+ <party fullName="Nathan Littauer Hospital and Nursing Home" lastName="Nathan Littauer Hospital and Nursing Home" role="Defendant"></party>
+ <party firstName="Simone" fullName="Simone Sykes" lastName="Sykes" role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_04-cv-00068-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00068/USCOURTS-nynd-5_04-cv-00068-0/mods.xml">
+ <titleInfo>
+  <title>Sykes v. McPhillips et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER re: 55 and 56 Motions for Summary Judgment. The second amended complaint is dismissed against the Hospital and Dr. Jagoda. The remaining claims are against the Hale Creek defendants. Signed by Judge David N. Hurd on 1/26/06. (cbm, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_04-cv-00068-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181421534</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00068/USCOURTS-nynd-5_04-cv-00068-0</identifier>
+ <identifier type="former granule identifier">nynd-5_04-cv-00068_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_04-cv-00068/USCOURTS-nynd-5_04-cv-00068-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_04-cv-00068/pdf/USCOURTS-nynd-5_04-cv-00068-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cv-00068; Sykes v. McPhillips et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_04-cv-00068-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-26</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER re: 55 and 56 Motions for Summary Judgment. The second amended complaint is dismissed against the Hospital and Dr. Jagoda. The remaining claims are against the Hale Creek defendants. Signed by Judge David N. Hurd on 1/26/06. (cbm, )</docketText>
+</extension>
+</relatedItem>
+</mods>

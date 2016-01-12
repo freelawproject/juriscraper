@@ -1,0 +1,439 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118cec3">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00191</identifier>
+<identifier type="local">P0b002ee18118cec3</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_04-cv-00191</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00191</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00191</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Michael" fullName="Michael Bergervin" lastName="Bergervin" role="Defendant"></party>
+ <party firstName="D." fullName="D. Broadway" lastName="Broadway" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Celenzo" lastName="Celenzo" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Cross" lastName="Cross" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN DOE" lastName="DOE" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott A. Deagon" lastName="Deagon" middleName="A." role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe &amp;#035" generation="&amp;#035" lastName="Doe" role="Defendant"></party>
+ <party firstName="B." fullName="B. Eggleston" lastName="Eggleston" role="Defendant"></party>
+ <party firstName="A." fullName="A. Glad" lastName="Glad" role="Defendant"></party>
+ <party firstName="S." fullName="S. Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party firstName="Robin" fullName="Robin Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Halladay" lastName="Halladay" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Hawk-Sawyer" lastName="Hawk-Sawyer" role="Defendant"></party>
+ <party firstName="Dwayne" fullName="Dwayne Head-Bey" lastName="Head-Bey" role="Plaintiff"></party>
+ <party firstName="G.L." fullName="G.L. Hersberger" lastName="Hersberger" role="Defendant"></party>
+ <party firstName="T.L." fullName="T.L. Holder" lastName="Holder" role="Defendant"></party>
+ <party firstName="L." fullName="L. Hulse" lastName="Hulse" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Kemball" lastName="Kemball" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Lamcia" lastName="Lamcia" role="Defendant"></party>
+ <party firstName="W." fullName="W. Lotharp" lastName="Lotharp" role="Defendant"></party>
+ <party firstName="Warden" fullName="Warden Nalley" lastName="Nalley" role="Defendant"></party>
+ <party firstName="John" fullName="John Nash" lastName="Nash" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="George" fullName="George Robertson Sr." generation="Sr." lastName="Robertson" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Sepanek" lastName="Sepanek" role="Defendant"></party>
+ <party firstName="G." fullName="G. Sharrod" lastName="Sharrod" role="Defendant"></party>
+ <party firstName="Harland" fullName="Harland Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Taylor" lastName="Taylor" role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Watts" lastName="Watts" role="Defendant"></party>
+ <party firstName="E." fullName="E. Wilson" lastName="Wilson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Head-Bey v. Smith et al</title>
+ <partNumber>9:04-cv-00191</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00191/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:04-cv-00191;04-191</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Michael Bergervin</displayForm>
+ <namePart type="family">Bergervin</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Broadway</displayForm>
+ <namePart type="family">Broadway</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry Celenzo</displayForm>
+ <namePart type="family">Celenzo</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Cross</displayForm>
+ <namePart type="family">Cross</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOHN DOE</displayForm>
+ <namePart type="family">DOE</namePart>
+ <namePart type="given">JOHN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott A. Deagon</displayForm>
+ <namePart type="family">Deagon</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe &amp;#035</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">&amp;#035</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Eggleston</displayForm>
+ <namePart type="family">Eggleston</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Glad</displayForm>
+ <namePart type="family">Glad</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Gonzales</displayForm>
+ <namePart type="family">Gonzales</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robin Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Robin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Halladay</displayForm>
+ <namePart type="family">Halladay</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen Hawk-Sawyer</displayForm>
+ <namePart type="family">Hawk-Sawyer</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dwayne Head-Bey</displayForm>
+ <namePart type="family">Head-Bey</namePart>
+ <namePart type="given">Dwayne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>G.L. Hersberger</displayForm>
+ <namePart type="family">Hersberger</namePart>
+ <namePart type="given">G.L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T.L. Holder</displayForm>
+ <namePart type="family">Holder</namePart>
+ <namePart type="given">T.L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>L. Hulse</displayForm>
+ <namePart type="family">Hulse</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Kemball</displayForm>
+ <namePart type="family">Kemball</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Lamcia</displayForm>
+ <namePart type="family">Lamcia</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Lotharp</displayForm>
+ <namePart type="family">Lotharp</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warden Nalley</displayForm>
+ <namePart type="family">Nalley</namePart>
+ <namePart type="given">Warden</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Nash</displayForm>
+ <namePart type="family">Nash</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George Robertson Sr.</displayForm>
+ <namePart type="family">Robertson</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Sepanek</displayForm>
+ <namePart type="family">Sepanek</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G. Sharrod</displayForm>
+ <namePart type="family">Sharrod</namePart>
+ <namePart type="given">G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harland Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Harland</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harold Taylor</displayForm>
+ <namePart type="family">Taylor</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harold Watts</displayForm>
+ <namePart type="family">Watts</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>E. Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00191</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00191</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Michael" fullName="Michael Bergervin" lastName="Bergervin" role="Defendant"></party>
+ <party firstName="D." fullName="D. Broadway" lastName="Broadway" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Celenzo" lastName="Celenzo" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Cross" lastName="Cross" role="Defendant"></party>
+ <party firstName="JOHN" fullName="JOHN DOE" lastName="DOE" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott A. Deagon" lastName="Deagon" middleName="A." role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe &amp;#035" generation="&amp;#035" lastName="Doe" role="Defendant"></party>
+ <party firstName="B." fullName="B. Eggleston" lastName="Eggleston" role="Defendant"></party>
+ <party firstName="A." fullName="A. Glad" lastName="Glad" role="Defendant"></party>
+ <party firstName="S." fullName="S. Gonzales" lastName="Gonzales" role="Defendant"></party>
+ <party firstName="Robin" fullName="Robin Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Halladay" lastName="Halladay" role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen Hawk-Sawyer" lastName="Hawk-Sawyer" role="Defendant"></party>
+ <party firstName="Dwayne" fullName="Dwayne Head-Bey" lastName="Head-Bey" role="Plaintiff"></party>
+ <party firstName="G.L." fullName="G.L. Hersberger" lastName="Hersberger" role="Defendant"></party>
+ <party firstName="T.L." fullName="T.L. Holder" lastName="Holder" role="Defendant"></party>
+ <party firstName="L." fullName="L. Hulse" lastName="Hulse" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Kemball" lastName="Kemball" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Lamcia" lastName="Lamcia" role="Defendant"></party>
+ <party firstName="W." fullName="W. Lotharp" lastName="Lotharp" role="Defendant"></party>
+ <party firstName="Warden" fullName="Warden Nalley" lastName="Nalley" role="Defendant"></party>
+ <party firstName="John" fullName="John Nash" lastName="Nash" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="George" fullName="George Robertson Sr." generation="Sr." lastName="Robertson" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Sepanek" lastName="Sepanek" role="Defendant"></party>
+ <party firstName="G." fullName="G. Sharrod" lastName="Sharrod" role="Defendant"></party>
+ <party firstName="Harland" fullName="Harland Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Taylor" lastName="Taylor" role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Watts" lastName="Watts" role="Defendant"></party>
+ <party firstName="E." fullName="E. Wilson" lastName="Wilson" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00191-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-0/mods.xml">
+ <titleInfo>
+  <title>Head-Bey v. Smith et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 51 MOTION for Summary Judgment be GRANTED; RECOMMENDED that 7 Amended Complaint filed by Dwayne Head-Bey, be DISMISSED and this action therefore be terminated in its entirety as to all defendants. Objections to R&amp;R due by 10/6/2006 Case Review Deadline 10/12/2006. Signed by Judge David R. Homer on 9/22/06. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00191-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143569b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-0</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00191_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00191/pdf/USCOURTS-nynd-9_04-cv-00191-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00191; Head-Bey v. Smith et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00191-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-09-22</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 51 MOTION for Summary Judgment be GRANTED; RECOMMENDED that 7 Amended Complaint filed by Dwayne Head-Bey, be DISMISSED and this action therefore be terminated in its entirety as to all defendants. Objections to R&amp;R due by 10/6/2006 Case Review Deadline 10/12/2006. Signed by Judge David R. Homer on 9/22/06. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00191-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-1/mods.xml">
+ <titleInfo>
+  <title>Head-Bey v. Smith et al</title>
+  <subTitle>ORDER that 61 Report and Recommendations is APPROVED and ADOPTED in its entirety. ORDERED granting 51 Motion for Summary Judgment and that Judgment is entered in favor of all defendants EXCEPT the six John Does, Smith, Celenzo, Robertson, Eggleston, Glad, Lotharp, Gonzalez, Broadway, Sharrod, Nash and Hersberger. ORDERERED that the amended complaint (dkt no. 7) is DISMISSED WITHOUT PREJUDICE as to the six John Does, Smith, Celenzo, Robertson, Eggleston, Glad, Lotharp, Gonzalez, Broadway, Sharrod, Nash and Hersberger. ORDERED that this action is TERMINATED in its ENTIRETY as to all defendants and all claims. Signed by Judge Lawrence E. Kahn on 1/26/07. (nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00191-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18143569a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-1</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00191_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00191/USCOURTS-nynd-9_04-cv-00191-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00191/pdf/USCOURTS-nynd-9_04-cv-00191-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00191; Head-Bey v. Smith et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00191-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-26</dateIssued>
+  <docketText>ORDER that 61 Report and Recommendations is APPROVED and ADOPTED in its entirety. ORDERED granting 51 Motion for Summary Judgment and that Judgment is entered in favor of all defendants EXCEPT the six John Does, Smith, Celenzo, Robertson, Eggleston, Glad, Lotharp, Gonzalez, Broadway, Sharrod, Nash and Hersberger. ORDERERED that the amended complaint (dkt no. 7) is DISMISSED WITHOUT PREJUDICE as to the six John Does, Smith, Celenzo, Robertson, Eggleston, Glad, Lotharp, Gonzalez, Broadway, Sharrod, Nash and Hersberger. ORDERED that this action is TERMINATED in its ENTIRETY as to all defendants and all claims. Signed by Judge Lawrence E. Kahn on 1/26/07. (nas)</docketText>
+</extension>
+</relatedItem>
+</mods>

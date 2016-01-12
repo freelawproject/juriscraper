@@ -1,0 +1,192 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee187492eaa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087</identifier>
+<identifier type="local">P0b002ee187492eaa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_05-cr-20087</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cr-20087</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cr-20087</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Howard" fullName="Howard Collins" lastName="Collins" role="Defendant"></party>
+ <party firstName="Antwon" fullName="Antwon Deshon McPherson" lastName="McPherson" middleName="Deshon" role="Defendant"></party>
+ <party firstName="Chavoris" fullName="Chavoris Neal" lastName="Neal" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. McPherson et al</title>
+ <partNumber>2:05-cr-20087</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cr-20087;05-20087</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Howard Collins</displayForm>
+ <namePart type="family">Collins</namePart>
+ <namePart type="given">Howard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Antwon Deshon McPherson</displayForm>
+ <namePart type="family">McPherson</namePart>
+ <namePart type="given">Antwon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chavoris Neal</displayForm>
+ <namePart type="family">Neal</namePart>
+ <namePart type="given">Chavoris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cr-20087</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cr-20087</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Howard" fullName="Howard Collins" lastName="Collins" role="Defendant"></party>
+ <party firstName="Antwon" fullName="Antwon Deshon McPherson" lastName="McPherson" middleName="Deshon" role="Defendant"></party>
+ <party firstName="Chavoris" fullName="Chavoris Neal" lastName="Neal" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cr-20087-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-0/mods.xml">
+ <titleInfo>
+  <title>USA v. McPherson et al</title>
+  <subTitle>ORDER OF DETENTION PENDING TRIAL as to Antwon Deshon McPherson. Signed by Magistrate Judge David J. Waxse on 05/10/06. (mg)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087/pdf/USCOURTS-ksd-2_05-cr-20087-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875dea5a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-0</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cr-20087_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087/pdf/USCOURTS-ksd-2_05-cr-20087-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cr-20087; USA v. McPherson et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cr-20087-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-05-10</dateIssued>
+  <docketText>ORDER OF DETENTION PENDING TRIAL as to Antwon Deshon McPherson. Signed by Magistrate Judge David J. Waxse on 05/10/06. (mg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cr-20087-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-1/mods.xml">
+ <titleInfo>
+  <title>USA v. McPherson et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying 117 Motion for Order as to Howard Collins (3). Signed by District Judge John W. Lungstrum on 1/10/2012. Mailed to pro se party Howard L. Collins by regular mail. (kao)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087/pdf/USCOURTS-ksd-2_05-cr-20087-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1875dea5b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-1</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cr-20087_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cr-20087/USCOURTS-ksd-2_05-cr-20087-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cr-20087/pdf/USCOURTS-ksd-2_05-cr-20087-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cr-20087; USA v. McPherson et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cr-20087-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying 117 Motion for Order as to Howard Collins (3). Signed by District Judge John W. Lungstrum on 1/10/2012. Mailed to pro se party Howard L. Collins by regular mail. (kao)</docketText>
+</extension>
+</relatedItem>
+</mods>

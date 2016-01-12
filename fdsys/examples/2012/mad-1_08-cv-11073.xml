@@ -1,0 +1,606 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183d5249f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-22</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-04-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073</identifier>
+<identifier type="local">P0b002ee183d5249f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-22</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_08-cv-11073</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_08-cv-11073</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:08-cv-11073</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1962 Racketeering (RICO) Act</cause>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Counter Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Cross Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Defendant"></party>
+ <party fullName="Atlas Orthogonal Chiropractic, P.A." lastName="Atlas Orthogonal Chiropractic, P.A." role="Cross Defendant"></party>
+ <party fullName="Atlas Orthogonal Chiropractic, P.A." lastName="Atlas Orthogonal Chiropractic, P.A." role="Defendant"></party>
+ <party fullName="Baynard Chiropractic Associates, P.A." lastName="Baynard Chiropractic Associates, P.A." role="Cross Defendant"></party>
+ <party fullName="Baynard Chiropractic Associates, P.A." lastName="Baynard Chiropractic Associates, P.A." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph L. Boyle" lastName="Boyle" middleName="L." role="Cross Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph L. Boyle" lastName="Boyle" middleName="L." role="Defendant"></party>
+ <party fullName="Chiropractic Partners, Inc." lastName="Chiropractic Partners, Inc." role="Cross Defendant"></party>
+ <party fullName="Chiropractic Partners, Inc." lastName="Chiropractic Partners, Inc." role="Defendant"></party>
+ <party fullName="Citadel Chiropractic II, P.A." lastName="Citadel Chiropractic II, P.A." role="Cross Defendant"></party>
+ <party fullName="Citadel Chiropractic II, P.A." lastName="Citadel Chiropractic II, P.A." role="Defendant"></party>
+ <party fullName="Citadel Chiropractic, P.A." lastName="Citadel Chiropractic, P.A." role="Cross Defendant"></party>
+ <party fullName="Citadel Chiropractic, P.A." lastName="Citadel Chiropractic, P.A." role="Defendant"></party>
+ <party fullName="Cline Chiropractic, PLLC" lastName="Cline Chiropractic, PLLC" role="Cross Defendant"></party>
+ <party fullName="Cline Chiropractic, PLLC" lastName="Cline Chiropractic, PLLC" role="Defendant"></party>
+ <party fullName="First Diagnostic, Inc." lastName="First Diagnostic, Inc." role="Cross Defendant"></party>
+ <party fullName="First Diagnostic, Inc." lastName="First Diagnostic, Inc." role="Defendant"></party>
+ <party firstName="James" fullName="James M. Fusco" lastName="Fusco" middleName="M." role="Cross Defendant"></party>
+ <party firstName="James" fullName="James M. Fusco" lastName="Fusco" middleName="M." role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Henry" lastName="Henry" role="Defendant"></party>
+ <party firstName="John" fullName="John R. Henry" lastName="Henry" middleName="R." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kominsky" lastName="Kominsky" role="Cross Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kominsky" lastName="Kominsky" role="Defendant"></party>
+ <party fullName="Kominsky Chiropractic" lastName="Kominsky Chiropractic" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Lodes" lastName="Lodes" role="Cross Defendant"></party>
+ <party firstName="Michael" fullName="Michael Lodes" lastName="Lodes" role="Defendant"></party>
+ <party fullName="Lodes Chiropractic Center, P.A." lastName="Lodes Chiropractic Center, P.A." role="Cross Defendant"></party>
+ <party fullName="Lodes Chiropractic Center, P.A." lastName="Lodes Chiropractic Center, P.A." role="Defendant"></party>
+ <party firstName="Duane" fullName="Duane Marquart" lastName="Marquart" role="Defendant"></party>
+ <party fullName="Nationwide Insurance Company" lastName="Nationwide Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Nationwide Insurance Company" lastName="Nationwide Insurance Company" role="Plaintiff"></party>
+ <party fullName="Radiology Diagnostics, LLC" lastName="Radiology Diagnostics, LLC" role="Counter Claimant"></party>
+ <party fullName="Radiology Diagnostics, LLC" lastName="Radiology Diagnostics, LLC" role="Defendant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Counter Claimant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Cross Claimant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Weatherwax" lastName="Weatherwax" middleName="S." role="Cross Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Weatherwax" lastName="Weatherwax" middleName="S." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+ <partNumber>1:08-cv-11073</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cv-11073;08-11073</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bruce Abelson</displayForm>
+ <namePart type="family">Abelson</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Abelson</displayForm>
+ <namePart type="family">Abelson</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Bruce Abelson</displayForm>
+ <namePart type="family">Abelson</namePart>
+ <namePart type="given">Bruce</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Atlas Orthogonal Chiropractic, P.A.</displayForm>
+ <namePart type="family">Atlas Orthogonal Chiropractic, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Atlas Orthogonal Chiropractic, P.A.</displayForm>
+ <namePart type="family">Atlas Orthogonal Chiropractic, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baynard Chiropractic Associates, P.A.</displayForm>
+ <namePart type="family">Baynard Chiropractic Associates, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Baynard Chiropractic Associates, P.A.</displayForm>
+ <namePart type="family">Baynard Chiropractic Associates, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph L. Boyle</displayForm>
+ <namePart type="family">Boyle</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph L. Boyle</displayForm>
+ <namePart type="family">Boyle</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chiropractic Partners, Inc.</displayForm>
+ <namePart type="family">Chiropractic Partners, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chiropractic Partners, Inc.</displayForm>
+ <namePart type="family">Chiropractic Partners, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Citadel Chiropractic II, P.A.</displayForm>
+ <namePart type="family">Citadel Chiropractic II, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Citadel Chiropractic II, P.A.</displayForm>
+ <namePart type="family">Citadel Chiropractic II, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Citadel Chiropractic, P.A.</displayForm>
+ <namePart type="family">Citadel Chiropractic, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Citadel Chiropractic, P.A.</displayForm>
+ <namePart type="family">Citadel Chiropractic, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cline Chiropractic, PLLC</displayForm>
+ <namePart type="family">Cline Chiropractic, PLLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cline Chiropractic, PLLC</displayForm>
+ <namePart type="family">Cline Chiropractic, PLLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Diagnostic, Inc.</displayForm>
+ <namePart type="family">First Diagnostic, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>First Diagnostic, Inc.</displayForm>
+ <namePart type="family">First Diagnostic, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James M. Fusco</displayForm>
+ <namePart type="family">Fusco</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James M. Fusco</displayForm>
+ <namePart type="family">Fusco</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jack Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">Jack</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John R. Henry</displayForm>
+ <namePart type="family">Henry</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Kominsky</displayForm>
+ <namePart type="family">Kominsky</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Kominsky</displayForm>
+ <namePart type="family">Kominsky</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kominsky Chiropractic</displayForm>
+ <namePart type="family">Kominsky Chiropractic</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Lodes</displayForm>
+ <namePart type="family">Lodes</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Lodes</displayForm>
+ <namePart type="family">Lodes</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lodes Chiropractic Center, P.A.</displayForm>
+ <namePart type="family">Lodes Chiropractic Center, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lodes Chiropractic Center, P.A.</displayForm>
+ <namePart type="family">Lodes Chiropractic Center, P.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Duane Marquart</displayForm>
+ <namePart type="family">Marquart</namePart>
+ <namePart type="given">Duane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nationwide Insurance Company</displayForm>
+ <namePart type="family">Nationwide Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nationwide Insurance Company</displayForm>
+ <namePart type="family">Nationwide Insurance Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Radiology Diagnostics, LLC</displayForm>
+ <namePart type="family">Radiology Diagnostics, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Radiology Diagnostics, LLC</displayForm>
+ <namePart type="family">Radiology Diagnostics, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Spinal Imaging, Inc.</displayForm>
+ <namePart type="family">Spinal Imaging, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Spinal Imaging, Inc.</displayForm>
+ <namePart type="family">Spinal Imaging, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Spinal Imaging, Inc.</displayForm>
+ <namePart type="family">Spinal Imaging, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S. Weatherwax</displayForm>
+ <namePart type="family">Weatherwax</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Cross Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S. Weatherwax</displayForm>
+ <namePart type="family">Weatherwax</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_08-cv-11073</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:08-cv-11073</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>470</natureSuitCode>
+ <natureSuit>Civil (Rico)</natureSuit>
+ <cause>18:1962 Racketeering (RICO) Act</cause>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Counter Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Cross Claimant"></party>
+ <party firstName="Bruce" fullName="Bruce Abelson" lastName="Abelson" role="Defendant"></party>
+ <party fullName="Atlas Orthogonal Chiropractic, P.A." lastName="Atlas Orthogonal Chiropractic, P.A." role="Cross Defendant"></party>
+ <party fullName="Atlas Orthogonal Chiropractic, P.A." lastName="Atlas Orthogonal Chiropractic, P.A." role="Defendant"></party>
+ <party fullName="Baynard Chiropractic Associates, P.A." lastName="Baynard Chiropractic Associates, P.A." role="Cross Defendant"></party>
+ <party fullName="Baynard Chiropractic Associates, P.A." lastName="Baynard Chiropractic Associates, P.A." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph L. Boyle" lastName="Boyle" middleName="L." role="Cross Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph L. Boyle" lastName="Boyle" middleName="L." role="Defendant"></party>
+ <party fullName="Chiropractic Partners, Inc." lastName="Chiropractic Partners, Inc." role="Cross Defendant"></party>
+ <party fullName="Chiropractic Partners, Inc." lastName="Chiropractic Partners, Inc." role="Defendant"></party>
+ <party fullName="Citadel Chiropractic II, P.A." lastName="Citadel Chiropractic II, P.A." role="Cross Defendant"></party>
+ <party fullName="Citadel Chiropractic II, P.A." lastName="Citadel Chiropractic II, P.A." role="Defendant"></party>
+ <party fullName="Citadel Chiropractic, P.A." lastName="Citadel Chiropractic, P.A." role="Cross Defendant"></party>
+ <party fullName="Citadel Chiropractic, P.A." lastName="Citadel Chiropractic, P.A." role="Defendant"></party>
+ <party fullName="Cline Chiropractic, PLLC" lastName="Cline Chiropractic, PLLC" role="Cross Defendant"></party>
+ <party fullName="Cline Chiropractic, PLLC" lastName="Cline Chiropractic, PLLC" role="Defendant"></party>
+ <party fullName="First Diagnostic, Inc." lastName="First Diagnostic, Inc." role="Cross Defendant"></party>
+ <party fullName="First Diagnostic, Inc." lastName="First Diagnostic, Inc." role="Defendant"></party>
+ <party firstName="James" fullName="James M. Fusco" lastName="Fusco" middleName="M." role="Cross Defendant"></party>
+ <party firstName="James" fullName="James M. Fusco" lastName="Fusco" middleName="M." role="Defendant"></party>
+ <party firstName="Jack" fullName="Jack Henry" lastName="Henry" role="Defendant"></party>
+ <party firstName="John" fullName="John R. Henry" lastName="Henry" middleName="R." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kominsky" lastName="Kominsky" role="Cross Defendant"></party>
+ <party firstName="Michael" fullName="Michael Kominsky" lastName="Kominsky" role="Defendant"></party>
+ <party fullName="Kominsky Chiropractic" lastName="Kominsky Chiropractic" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Lodes" lastName="Lodes" role="Cross Defendant"></party>
+ <party firstName="Michael" fullName="Michael Lodes" lastName="Lodes" role="Defendant"></party>
+ <party fullName="Lodes Chiropractic Center, P.A." lastName="Lodes Chiropractic Center, P.A." role="Cross Defendant"></party>
+ <party fullName="Lodes Chiropractic Center, P.A." lastName="Lodes Chiropractic Center, P.A." role="Defendant"></party>
+ <party firstName="Duane" fullName="Duane Marquart" lastName="Marquart" role="Defendant"></party>
+ <party fullName="Nationwide Insurance Company" lastName="Nationwide Insurance Company" role="Counter Defendant"></party>
+ <party fullName="Nationwide Insurance Company" lastName="Nationwide Insurance Company" role="Plaintiff"></party>
+ <party fullName="Radiology Diagnostics, LLC" lastName="Radiology Diagnostics, LLC" role="Counter Claimant"></party>
+ <party fullName="Radiology Diagnostics, LLC" lastName="Radiology Diagnostics, LLC" role="Defendant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Counter Claimant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Cross Claimant"></party>
+ <party fullName="Spinal Imaging, Inc." lastName="Spinal Imaging, Inc." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Weatherwax" lastName="Weatherwax" middleName="S." role="Cross Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. Weatherwax" lastName="Weatherwax" middleName="S." role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_08-cv-11073-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-0/mods.xml">
+ <titleInfo>
+  <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+  <subTitle>Magistrate Judge Robert B. Collings: PROCEDURAL ORDER ON DEFENDANT SPINAL IMAGING, INC.&apos;S MOTION TO COMPEL FURTHER INTERROGATORY ANSWERS (#93).(Dolan, Kathleen)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_08-cv-11073-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d6a476</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-0</identifier>
+ <identifier type="former granule identifier">mad-1_08-cv-11073_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/pdf/USCOURTS-mad-1_08-cv-11073-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-11073; Nationwide Insurance Company v. Spinal Imaging, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_08-cv-11073-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-07</dateIssued>
+  <docketText>Magistrate Judge Robert B. Collings: PROCEDURAL ORDER ON DEFENDANT SPINAL IMAGING, INC.&apos;S MOTION TO COMPEL FURTHER INTERROGATORY ANSWERS (#93).(Dolan, Kathleen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_08-cv-11073-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-1/mods.xml">
+ <titleInfo>
+  <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+  <subTitle>Magistrate Judge Robert B. Collings: ORDER ON DEFENDANT SPINAL IMAGING, INC.&apos;S MOTION TO COMPEL FURTHER INTERROGATORY ANSWERS (#93); See Order attached granting in part and denying in part 93 Motion to Compel. (Dolan, Kathleen)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_08-cv-11073-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d6a475</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-1</identifier>
+ <identifier type="former granule identifier">mad-1_08-cv-11073_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/pdf/USCOURTS-mad-1_08-cv-11073-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-11073; Nationwide Insurance Company v. Spinal Imaging, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_08-cv-11073-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-03-22</dateIssued>
+  <docketText>Magistrate Judge Robert B. Collings: ORDER ON DEFENDANT SPINAL IMAGING, INC.&apos;S MOTION TO COMPEL FURTHER INTERROGATORY ANSWERS (#93); See Order attached granting in part and denying in part 93 Motion to Compel. (Dolan, Kathleen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_08-cv-11073-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-2/mods.xml">
+ <titleInfo>
+  <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+  <subTitle>Magistrate Judge Robert B. Collings: ORDER entered. MEMORANDUM AND ORDER ON DEFENDANT ABELSON&apos;S MOTION TO COMPEL PLAINTIFF TO FURTHER [sic] RESPOND TO ABELSONS REQUEST FOR PRODUCTION OF DOCUMENTS PURSUANT TO FED. R. CIV. P. 37(a) AND LOCAL RULE 37.1 (#162) denying 162 Motion to Compel (Russo, Noreen)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_08-cv-11073-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d6a479</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-2</identifier>
+ <identifier type="former granule identifier">mad-1_08-cv-11073_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/pdf/USCOURTS-mad-1_08-cv-11073-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-11073; Nationwide Insurance Company v. Spinal Imaging, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_08-cv-11073-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>Magistrate Judge Robert B. Collings: ORDER entered. MEMORANDUM AND ORDER ON DEFENDANT ABELSON&apos;S MOTION TO COMPEL PLAINTIFF TO FURTHER [sic] RESPOND TO ABELSONS REQUEST FOR PRODUCTION OF DOCUMENTS PURSUANT TO FED. R. CIV. P. 37(a) AND LOCAL RULE 37.1 (#162) denying 162 Motion to Compel (Russo, Noreen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_08-cv-11073-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-3/mods.xml">
+ <titleInfo>
+  <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+  <subTitle>Magistrate Judge Robert B. Collings: REPORT AND RECOMMENDATIONS re 178 MOTION for Sanctions Against The Defendants, Spinal Imaging, Inc, Bruce Abelson, And Their Counsel Pursuant To Fed.R.Civ.P. 37(b)(2)(A) And Local Rules 1.3 And 7.1(A)(2) filed by Nationwide Insurance Company Recommendation: RECOMMEND that the Court issue an Order dismissing all of the defendants&apos; counterclaims pursuant to Rule 37(b)(2)(A)(v), Fed. R. Civ. P. Objections to R&amp;R due by 3/26/2012.(Dolan, Kathleen)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_08-cv-11073-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d6a478</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-3</identifier>
+ <identifier type="former granule identifier">mad-1_08-cv-11073_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/pdf/USCOURTS-mad-1_08-cv-11073-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-11073; Nationwide Insurance Company v. Spinal Imaging, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_08-cv-11073-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>Magistrate Judge Robert B. Collings: REPORT AND RECOMMENDATIONS re 178 MOTION for Sanctions Against The Defendants, Spinal Imaging, Inc, Bruce Abelson, And Their Counsel Pursuant To Fed.R.Civ.P. 37(b)(2)(A) And Local Rules 1.3 And 7.1(A)(2) filed by Nationwide Insurance Company Recommendation: RECOMMEND that the Court issue an Order dismissing all of the defendants&apos; counterclaims pursuant to Rule 37(b)(2)(A)(v), Fed. R. Civ. P. Objections to R&amp;R due by 3/26/2012.(Dolan, Kathleen)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_08-cv-11073-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-4/mods.xml">
+ <titleInfo>
+  <title>Nationwide Insurance Company v. Spinal Imaging, Inc. et al</title>
+  <subTitle>Magistrate Judge Robert B. Collings: Final SCHEDULING ORDER entered. (Dolan, Kathleen)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-04-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_08-cv-11073-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183d6a477</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-4</identifier>
+ <identifier type="former granule identifier">mad-1_08-cv-11073_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_08-cv-11073/USCOURTS-mad-1_08-cv-11073-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_08-cv-11073/pdf/USCOURTS-mad-1_08-cv-11073-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cv-11073; Nationwide Insurance Company v. Spinal Imaging, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_08-cv-11073-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-04-26</dateIssued>
+  <docketText>Magistrate Judge Robert B. Collings: Final SCHEDULING ORDER entered. (Dolan, Kathleen)</docketText>
+</extension>
+</relatedItem>
+</mods>

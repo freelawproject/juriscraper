@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a97b7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571</identifier>
+<identifier type="local">P0b002ee18a8a97b7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-3_13-cv-01571</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_13-cv-01571</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:13-cv-01571</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="Carolyn" fullName="Carolyn W. Colvin" lastName="Colvin" middleName="W." role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard Milks" lastName="Milks" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+</extension>
+<titleInfo>
+ <title>Milks v. Colvin</title>
+ <partNumber>3:13-cv-01571</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:13-cv-01571;13-1571</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Binghamton</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carolyn W. Colvin</displayForm>
+ <namePart type="family">Colvin</namePart>
+ <namePart type="given">Carolyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Howard Milks</displayForm>
+ <namePart type="family">Milks</namePart>
+ <namePart type="given">Howard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Social Security Administration</displayForm>
+ <namePart type="family">Social Security Administration</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-3_13-cv-01571</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>3:13-cv-01571</caseNumber>
+ <caseOffice>Binghamton</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWC)</cause>
+ <party firstName="Carolyn" fullName="Carolyn W. Colvin" lastName="Colvin" middleName="W." role="Defendant"></party>
+ <party firstName="Howard" fullName="Howard Milks" lastName="Milks" role="Plaintiff"></party>
+ <party fullName="Social Security Administration" lastName="Social Security Administration" role="Interested Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_13-cv-01571-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-0/mods.xml">
+ <titleInfo>
+  <title>Milks v. Colvin</title>
+  <subTitle>DECISION AND ORDER granting in part and denying in part Plaintiff&apos;s motion for judgment on the pleadings (Dkt. No. 16); and granting Defendant&apos;s motion for remand (Dkt. No. 21). This matter is remanded to Defendant, pursuant to 41 USC 405(g), for further proceedings consistent with this Decision and Order. Signed by Judge Glenn T. Suddaby on 1/5/15. (lmw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571/pdf/USCOURTS-nynd-3_13-cv-01571-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b119c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-0</identifier>
+ <identifier type="former granule identifier">nynd-3_13-cv-01571_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571/pdf/USCOURTS-nynd-3_13-cv-01571-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-01571; Milks v. Colvin; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_13-cv-01571-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>DECISION AND ORDER granting in part and denying in part Plaintiff&apos;s motion for judgment on the pleadings (Dkt. No. 16); and granting Defendant&apos;s motion for remand (Dkt. No. 21). This matter is remanded to Defendant, pursuant to 41 USC 405(g), for further proceedings consistent with this Decision and Order. Signed by Judge Glenn T. Suddaby on 1/5/15. (lmw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-3_13-cv-01571-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-1/mods.xml">
+ <titleInfo>
+  <title>Milks v. Colvin</title>
+  <subTitle>JUDGMENT in favor of Howard Milks against Carolyn W. Colvin. This matter is remanded to Defendant for further proceedings consistent with the #23 Decision and Order. (lmw) (Additional attachment(s) added on 1/5/2015: # (1) Appeal Notice) (amt).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571/pdf/USCOURTS-nynd-3_13-cv-01571-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b119b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-1</identifier>
+ <identifier type="former granule identifier">nynd-3_13-cv-01571_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-3_13-cv-01571/USCOURTS-nynd-3_13-cv-01571-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-3_13-cv-01571/pdf/USCOURTS-nynd-3_13-cv-01571-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-01571; Milks v. Colvin; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-3_13-cv-01571-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>JUDGMENT in favor of Howard Milks against Carolyn W. Colvin. This matter is remanded to Defendant for further proceedings consistent with the #23 Decision and Order. (lmw) (Additional attachment(s) added on 1/5/2015: # (1) Appeal Notice) (amt).</docketText>
+</extension>
+</relatedItem>
+</mods>

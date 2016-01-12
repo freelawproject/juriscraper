@@ -1,0 +1,180 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a025a9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_12-cv-00069</identifier>
+<identifier type="local">P0b002ee183a025a9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_12-cv-00069</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_12-cv-00069</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:12-cv-00069</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Jason" fullName="Jason Bunting" lastName="Bunting" role="Respondent"></party>
+ <party firstName="Frank" fullName="Frank J Honaker" lastName="Honaker" middleName="J" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Honaker v. Bunting</title>
+ <partNumber>1:12-cv-00069</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_12-cv-00069/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cv-00069;12-069</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jason Bunting</displayForm>
+ <namePart type="family">Bunting</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>Frank J Honaker</displayForm>
+ <namePart type="family">Honaker</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_12-cv-00069</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:12-cv-00069</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Jason" fullName="Jason Bunting" lastName="Bunting" role="Respondent"></party>
+ <party firstName="Frank" fullName="Frank J Honaker" lastName="Honaker" middleName="J" role="Petitioner"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_12-cv-00069-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-0/mods.xml">
+ <titleInfo>
+  <title>Honaker v. Bunting</title>
+  <subTitle>Report and Recommendation that the Court deny Petitioner&apos;s 1 Petition for Writ of Habeas Corpus (2254) Objections to R&amp;R due by 11/14/2012(term referral to Magistrate). Magistrate Judge Vernelis K. Armstrong on 10/31/12. (B,CJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_12-cv-00069-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0543b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_12-cv-00069_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_12-cv-00069/pdf/USCOURTS-ohnd-1_12-cv-00069-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00069; Honaker v. Bunting; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_12-cv-00069-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-31</dateIssued>
+  <docketText>Report and Recommendation that the Court deny Petitioner&apos;s 1 Petition for Writ of Habeas Corpus (2254) Objections to R&amp;R due by 11/14/2012(term referral to Magistrate). Magistrate Judge Vernelis K. Armstrong on 10/31/12. (B,CJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_12-cv-00069-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-1/mods.xml">
+ <titleInfo>
+  <title>Honaker v. Bunting</title>
+  <subTitle>Order Adopting Report and Recommendation re 9 denying 1 Petition for Writ of Habeas Corpus (2254). Order of Case Dismissal. Judge Christopher A. Boyko on 1/3/2013. (R,D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_12-cv-00069-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a0543c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_12-cv-00069_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_12-cv-00069/USCOURTS-ohnd-1_12-cv-00069-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_12-cv-00069/pdf/USCOURTS-ohnd-1_12-cv-00069-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cv-00069; Honaker v. Bunting; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_12-cv-00069-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Order Adopting Report and Recommendation re 9 denying 1 Petition for Writ of Habeas Corpus (2254). Order of Case Dismissal. Judge Christopher A. Boyko on 1/3/2013. (R,D)</docketText>
+</extension>
+</relatedItem>
+</mods>

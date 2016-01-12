@@ -1,0 +1,223 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118beb2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00941</identifier>
+<identifier type="local">P0b002ee18118beb2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-1_03-cv-00941</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_03-cv-00941</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:03-cv-00941</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Andrea" fullName="Andrea E. Celli" lastName="Celli" middleName="E." role="Notice Only Party"></party>
+ <party firstName="City of" fullName="City of Kingston" lastName="Kingston" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert E. Littlefield Jr." generation="Jr." lastName="Littlefield" middleName="E." role="Notice Only Party"></party>
+ <party firstName="John" fullName="John E. Rahl" lastName="Rahl" middleName="E." role="Appellant"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party fullName="Ulster County" lastName="Ulster County" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard G. Zeh Sr." generation="Sr." lastName="Zeh" middleName="G." role="Notice Only Party"></party>
+</extension>
+<titleInfo>
+ <title>Rahl, et al v. Kingston, City of, et al</title>
+ <partNumber>1:03-cv-00941</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00941/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:03-cv-00941;03-941</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Albany</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Andrea E. Celli</displayForm>
+ <namePart type="family">Celli</namePart>
+ <namePart type="given">Andrea</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>City of Kingston</displayForm>
+ <namePart type="family">Kingston</namePart>
+ <namePart type="given">City of</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Robert E. Littlefield Jr.</displayForm>
+ <namePart type="family">Littlefield</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>John E. Rahl</displayForm>
+ <namePart type="family">Rahl</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>Ulster County</displayForm>
+ <namePart type="family">Ulster County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Richard G. Zeh Sr.</displayForm>
+ <namePart type="family">Zeh</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Notice Only Party</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-1_03-cv-00941</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>1:03-cv-00941</caseNumber>
+ <caseOffice>Albany</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party firstName="Andrea" fullName="Andrea E. Celli" lastName="Celli" middleName="E." role="Notice Only Party"></party>
+ <party firstName="City of" fullName="City of Kingston" lastName="Kingston" role="Appellee"></party>
+ <party firstName="Robert" fullName="Robert E. Littlefield Jr." generation="Jr." lastName="Littlefield" middleName="E." role="Notice Only Party"></party>
+ <party firstName="John" fullName="John E. Rahl" lastName="Rahl" middleName="E." role="Appellant"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Notice Only Party"></party>
+ <party fullName="Ulster County" lastName="Ulster County" role="Appellee"></party>
+ <party firstName="Richard" fullName="Richard G. Zeh Sr." generation="Sr." lastName="Zeh" middleName="G." role="Notice Only Party"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_03-cv-00941-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-0/mods.xml">
+ <titleInfo>
+  <title>Rahl, et al v. Kingston, City of, et al</title>
+  <subTitle>OPINION AND ORDER that 1 Bankruptcy Appeal si DISMISSED and the case remanded to the Bankruptcy Court. Signed by Judge William K. Sessions III on 1/30/08. (copies mailed to parties not served electronically) (lmp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_03-cv-00941-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f05fc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-0</identifier>
+ <identifier type="former granule identifier">nynd-1_03-cv-00941_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00941/pdf/USCOURTS-nynd-1_03-cv-00941-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-00941; Rahl, et al v. Kingston, City of, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_03-cv-00941-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-30</dateIssued>
+  <docketText>OPINION AND ORDER that 1 Bankruptcy Appeal si DISMISSED and the case remanded to the Bankruptcy Court. Signed by Judge William K. Sessions III on 1/30/08. (copies mailed to parties not served electronically) (lmp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-1_03-cv-00941-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-1/mods.xml">
+ <titleInfo>
+  <title>Rahl, et al v. Kingston, City of, et al</title>
+  <subTitle>JUDGMENT in favor of Ulster County, City of Kingston against John E. Rahl. (lmp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-1_03-cv-00941-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813f05fd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-1</identifier>
+ <identifier type="former granule identifier">nynd-1_03-cv-00941_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-1_03-cv-00941/USCOURTS-nynd-1_03-cv-00941-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-1_03-cv-00941/pdf/USCOURTS-nynd-1_03-cv-00941-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:03-cv-00941; Rahl, et al v. Kingston, City of, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-1_03-cv-00941-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-30</dateIssued>
+  <docketText>JUDGMENT in favor of Ulster County, City of Kingston against John E. Rahl. (lmp)</docketText>
+</extension>
+</relatedItem>
+</mods>

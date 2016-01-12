@@ -1,0 +1,188 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761e40c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02527</identifier>
+<identifier type="local">P0b002ee18761e40c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_07-cv-02527</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02527</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02527</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>450</natureSuitCode>
+ <natureSuit>Interstate Commerce</natureSuit>
+ <cause>47:0151 Communications Act of 1934</cause>
+ <party firstName="Joseph" fullName="Joseph F. Harkins" lastName="Harkins" middleName="F." role="Defendant"></party>
+ <party fullName="Kansas Corporation Commission" lastName="Kansas Corporation Commission" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael C. Moffet" lastName="Moffet" middleName="C." role="Defendant"></party>
+ <party fullName="RCC Atlantic, Inc" lastName="RCC Atlantic, Inc" role="Plaintiff"></party>
+ <party fullName="USCOC of Nebraska/Kansas, LLC" lastName="USCOC of Nebraska/Kansas, LLC" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas E. Wright" lastName="Wright" middleName="E." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USCOC of Nebraska/Kansas, LLC et al v. The Kansas Corporation Commission et al</title>
+ <partNumber>2:07-cv-02527</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02527/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-02527;07-2527</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Joseph F. Harkins</displayForm>
+ <namePart type="family">Harkins</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kansas Corporation Commission</displayForm>
+ <namePart type="family">Kansas Corporation Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael C. Moffet</displayForm>
+ <namePart type="family">Moffet</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>RCC Atlantic, Inc</displayForm>
+ <namePart type="family">RCC Atlantic, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>USCOC of Nebraska/Kansas, LLC</displayForm>
+ <namePart type="family">USCOC of Nebraska/Kansas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas E. Wright</displayForm>
+ <namePart type="family">Wright</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_07-cv-02527</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:07-cv-02527</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>450</natureSuitCode>
+ <natureSuit>Interstate Commerce</natureSuit>
+ <cause>47:0151 Communications Act of 1934</cause>
+ <party firstName="Joseph" fullName="Joseph F. Harkins" lastName="Harkins" middleName="F." role="Defendant"></party>
+ <party fullName="Kansas Corporation Commission" lastName="Kansas Corporation Commission" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael C. Moffet" lastName="Moffet" middleName="C." role="Defendant"></party>
+ <party fullName="RCC Atlantic, Inc" lastName="RCC Atlantic, Inc" role="Plaintiff"></party>
+ <party fullName="USCOC of Nebraska/Kansas, LLC" lastName="USCOC of Nebraska/Kansas, LLC" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas E. Wright" lastName="Wright" middleName="E." role="Defendant"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_07-cv-02527-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02527/USCOURTS-ksd-2_07-cv-02527-0/mods.xml">
+ <titleInfo>
+  <title>USCOC of Nebraska/Kansas, LLC et al v. The Kansas Corporation Commission et al</title>
+  <subTitle>MEMROANDUM AND ORDER granting in part and denying in part 7 Motion to Dismiss. Defendants&apos; Motion to Dismiss is DENIED; Defendants&apos; Motion to Stay Pending Resolution before the Federal Communications Commission is GRANTED. SEE MEMORANDUM AND ORDER FOR DETAILS. Signed by District Judge Julie A. Robinson on 1/29/2008. (mkc)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02527/pdf/USCOURTS-ksd-2_07-cv-02527-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187644855</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02527/USCOURTS-ksd-2_07-cv-02527-0</identifier>
+ <identifier type="former granule identifier">ksd-2_07-cv-02527_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_07-cv-02527/USCOURTS-ksd-2_07-cv-02527-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_07-cv-02527/pdf/USCOURTS-ksd-2_07-cv-02527-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-02527; USCOC of Nebraska/Kansas, LLC et al v. The Kansas Corporation Commission et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_07-cv-02527-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-29</dateIssued>
+  <docketText>MEMROANDUM AND ORDER granting in part and denying in part 7 Motion to Dismiss. Defendants&apos; Motion to Dismiss is DENIED; Defendants&apos; Motion to Stay Pending Resolution before the Federal Communications Commission is GRANTED. SEE MEMORANDUM AND ORDER FOR DETAILS. Signed by District Judge Julie A. Robinson on 1/29/2008. (mkc)</docketText>
+</extension>
+</relatedItem>
+</mods>

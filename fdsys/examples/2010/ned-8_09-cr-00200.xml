@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b76a8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200</identifier>
+<identifier type="local">P0b002ee1817b76a8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cr-00200</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00200</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00200</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lester" fullName="Lester Ferris" lastName="Ferris" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Ferris</title>
+ <partNumber>8:09-cr-00200</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cr-00200;09-200</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lester Ferris</displayForm>
+ <namePart type="family">Ferris</namePart>
+ <namePart type="given">Lester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00200</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00200</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lester" fullName="Lester Ferris" lastName="Ferris" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as to defendant Lester Ferris. Ordered by Magistrate Judge F. A. Gossett. (JAE)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-12</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as to defendant Lester Ferris. Ordered by Magistrate Judge F. A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Lester Ferris. Ordered by Magistrate Judge F. A. Gossett. (JAE)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-06-12</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Lester Ferris. Ordered by Magistrate Judge F. A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>ORDER - This matter is before the Court on the notices of related case 18 in 8:09CR200; (Filing No. 19 in 8:09CR221). The government states the cases arise out of the same incident. Both are assigned to Senior District Court Judge Lyle E. Strom but currently are assigned to different magistrate judges. The Court finds the cases should be designated as related. United States of America v. Robert Taylor (8:09CR221) is referred to Magistrate Judge F.A. Gossett III, for judicial supervision and processing of all pretrial matters in that case as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-16</dateIssued>
+  <docketText>ORDER - This matter is before the Court on the notices of related case 18 in 8:09CR200; (Filing No. 19 in 8:09CR221). The government states the cases arise out of the same incident. Both are assigned to Senior District Court Judge Lyle E. Strom but currently are assigned to different magistrate judges. The Court finds the cases should be designated as related. United States of America v. Robert Taylor (8:09CR221) is referred to Magistrate Judge F.A. Gossett III, for judicial supervision and processing of all pretrial matters in that case as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 34 is hereby sustained. The United States is hereby authorized to seize the Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm. Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture, in which all interests will be addressed as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-10-14</dateIssued>
+  <docketText>PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 34 is hereby sustained. The United States is hereby authorized to seize the Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm. Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture, in which all interests will be addressed as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>ORDER granting 36 Motion to Amend the Indictment as to Lester Ferris (1). The indictment is amended instanter by removing the language &quot;intent to distribute&quot; and replacing it with the word &quot;of&quot; to indicate defendant was previously convicted of &quot;possession of methamphetamine.&quot; Ordered by Senior Judge Lyle E. Strom. (JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-11-17</dateIssued>
+  <docketText>ORDER granting 36 Motion to Amend the Indictment as to Lester Ferris (1). The indictment is amended instanter by removing the language &quot;intent to distribute&quot; and replacing it with the word &quot;of&quot; to indicate defendant was previously convicted of &quot;possession of methamphetamine.&quot; Ordered by Senior Judge Lyle E. Strom. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00200-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Ferris</title>
+  <subTitle>FINAL ORDER OF FORFEITURE - Plaintiff&apos;s Motion for Final Order of Forfeiture 45 is hereby sustained. All right, title and interest in and to the Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm, held by any person or entity, is hereby forever barred and foreclosed. The Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm, be, and the same hereby are, forfeited to the United States of America. The United States Bureau of Alcohol, Tobacco, Firearms and Explosives for the District of Nebraska is directed to dispose of said properties in accordance with law as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM) (KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00200-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818cf4fb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00200_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00200/USCOURTS-ned-8_09-cr-00200-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00200/pdf/USCOURTS-ned-8_09-cr-00200-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00200; USA v. Ferris; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00200-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-07</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE - Plaintiff&apos;s Motion for Final Order of Forfeiture 45 is hereby sustained. All right, title and interest in and to the Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm, held by any person or entity, is hereby forever barred and foreclosed. The Remington Model 597,.22 caliber rifle; a Ruger.22 caliber, Model 10/22 rifle; a Beretta CX4 Storm 9mm rifle; a Tikka T3 30-06 caliber rifle; a Romanian SKS rifle 5.45x39mm; a Ruger Model 10-22.22 caliber rifle; and a Russian SKS 7.62x39mm, be, and the same hereby are, forfeited to the United States of America. The United States Bureau of Alcohol, Tobacco, Firearms and Explosives for the District of Nebraska is directed to dispose of said properties in accordance with law as to defendant Lester Ferris. Ordered by Senior Judge Lyle E. Strom. (1 Certified copy to USM) (KBJ)</docketText>
+</extension>
+</relatedItem>
+</mods>

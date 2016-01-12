@@ -1,0 +1,174 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181937f74">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_08-cr-20598</identifier>
+<identifier type="local">P0b002ee181937f74</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-1_08-cr-20598</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_08-cr-20598</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:08-cr-20598</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ruben" fullName="Ruben Steven Ranke" lastName="Ranke" middleName="Steven" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Ranke</title>
+ <partNumber>1:08-cr-20598</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_08-cr-20598/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:08-cr-20598;08-20598</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Bay City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ruben Steven Ranke</displayForm>
+ <namePart type="family">Ranke</namePart>
+ <namePart type="given">Ruben</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_08-cr-20598</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:08-cr-20598</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ruben" fullName="Ruben Steven Ranke" lastName="Ranke" middleName="Steven" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_08-cr-20598-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Ranke</title>
+  <subTitle>OPINION and Order denying 15 MOTION to Suppress Evidence Seized From 1749 Wood Street, Dismissing Without Prejudice 12, 14, 16 Remaining Motions to Suppress, denying 17 MOTION to Dismiss Indictment, Granting 19 MOTION to Strike Aliases and Directing Briefing on Whether Mailing &quot;Computer Generated Images&quot; can Constitutionally be Prohibited. Signed by District Judge Thomas L Ludington. (CGre)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_08-cr-20598-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c617c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-0</identifier>
+ <identifier type="former granule identifier">mied-1_08-cr-20598_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_08-cr-20598/pdf/USCOURTS-mied-1_08-cr-20598-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-20598; United States of America v. Ranke; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_08-cr-20598-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-29</dateIssued>
+  <docketText>OPINION and Order denying 15 MOTION to Suppress Evidence Seized From 1749 Wood Street, Dismissing Without Prejudice 12, 14, 16 Remaining Motions to Suppress, denying 17 MOTION to Dismiss Indictment, Granting 19 MOTION to Strike Aliases and Directing Briefing on Whether Mailing &quot;Computer Generated Images&quot; can Constitutionally be Prohibited. Signed by District Judge Thomas L Ludington. (CGre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_08-cr-20598-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Ranke</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION, Accepting Defendant&apos;s Plea of Guilty and Taking the Rule 11 Plea Agreement Under Advisement as to Ruben Steven Ranke. Signed by District Judge Thomas L Ludington. (SGam)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_08-cr-20598-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819c617b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-1</identifier>
+ <identifier type="former granule identifier">mied-1_08-cr-20598_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_08-cr-20598/USCOURTS-mied-1_08-cr-20598-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_08-cr-20598/pdf/USCOURTS-mied-1_08-cr-20598-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:08-cr-20598; United States of America v. Ranke; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_08-cr-20598-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-21</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION, Accepting Defendant&apos;s Plea of Guilty and Taking the Rule 11 Plea Agreement Under Advisement as to Ruben Steven Ranke. Signed by District Judge Thomas L Ludington. (SGam)</docketText>
+</extension>
+</relatedItem>
+</mods>

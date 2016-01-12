@@ -1,0 +1,603 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18aafbf65">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379</identifier>
+<identifier type="local">P0b002ee18aafbf65</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_04-cr-00379</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_04-cr-00379</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:04-cr-00379</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gilberto" fullName="Gilberto Delacruz" lastName="Delacruz" role="Defendant"></party>
+ <party firstName="Marcos" fullName="Marcos Mendez" lastName="Mendez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Mendez</title>
+ <partNumber>2:04-cr-00379</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cr-00379;04-379</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Gilberto Delacruz</displayForm>
+ <namePart type="family">Delacruz</namePart>
+ <namePart type="given">Gilberto</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Marcos Mendez</displayForm>
+ <namePart type="family">Mendez</namePart>
+ <namePart type="given">Marcos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_04-cr-00379</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:04-cr-00379</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Gilberto" fullName="Gilberto Delacruz" lastName="Delacruz" role="Defendant"></party>
+ <party firstName="Marcos" fullName="Marcos Mendez" lastName="Mendez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER granting stipulation and proposed order as to Marcos Mendez re 24 Stipulation (CR) filed by Marcos Mendez. Status Conference of 4/26/05 is vacated and reset for 5/24/2005 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 5/2/05. (Souvannarath, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab13609</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-0</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-03</dateIssued>
+  <docketText>ORDER granting stipulation and proposed order as to Marcos Mendez re 24 Stipulation (CR) filed by Marcos Mendez. Status Conference of 4/26/05 is vacated and reset for 5/24/2005 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 5/2/05. (Souvannarath, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATION AND ORDER as to Marcos Mendez re the sale of residential property by Mr. Mendez and his wife, and transfer of the equity 26 signed by Judge Gregory G. Hollows on 5/18/05. (Krueger, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-1</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-23</dateIssued>
+  <docketText>STIPULATION AND ORDER as to Marcos Mendez re the sale of residential property by Mr. Mendez and his wife, and transfer of the equity 26 signed by Judge Gregory G. Hollows on 5/18/05. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER OF RELATED CASE with 2:04cr377 MCE, 2:04cr378 MCE, 2:04cr379, 2:04cr387 MCE, 2:04cr388 MCE, 2:04cr389 MCE, 2:05cr95 MCE and 2:05cr227 WBS. REASSIGNING case(s) 2:05cr227 to Judge Morrison C. England, Jr for all further proceedings, as to Marcos Mendez, Gilberto Delacruz signed by Judge Morrison C. England Jr. on 6/17/2005. (Reader, L)ORDER OF RELATED CASE with 2:04cr377 MCE, 2:04cr378 MCE, 2:04cr379, 2:04cr387 MCE, 2:04cr388 MCE, 2:04cr389 MCE, 2:05cr95 MCE and 2:05cr227 WBS. REASSIGNING case(s) 2:05cr227 to Judge Morrison C. England, Jr for all further proceedings, as to Marcos Mendez, Gilberto Delacruz signed by Judge Morrison C. England Jr. on 6/17/2005. (Reader, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-06-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-2</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-06-20</dateIssued>
+  <docketText>ORDER OF RELATED CASE with 2:04cr377 MCE, 2:04cr378 MCE, 2:04cr379, 2:04cr387 MCE, 2:04cr388 MCE, 2:04cr389 MCE, 2:05cr95 MCE and 2:05cr227 WBS. REASSIGNING case(s) 2:05cr227 to Judge Morrison C. England, Jr for all further proceedings, as to Marcos Mendez, Gilberto Delacruz signed by Judge Morrison C. England Jr. on 6/17/2005. (Reader, L)ORDER OF RELATED CASE with 2:04cr377 MCE, 2:04cr378 MCE, 2:04cr379, 2:04cr387 MCE, 2:04cr388 MCE, 2:04cr389 MCE, 2:05cr95 MCE and 2:05cr227 WBS. REASSIGNING case(s) 2:05cr227 to Judge Morrison C. England, Jr for all further proceedings, as to Marcos Mendez, Gilberto Delacruz signed by Judge Morrison C. England Jr. on 6/17/2005. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER as to Marcos Mendez re 30 Stipulation and Proposed Order (CR) filed by Marcos Mendez. The Status Conference of 8/30/05 is vacated and reset for 9/20/2005 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 8/30/05. (Souvannarath, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-08-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-3</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-08-30</dateIssued>
+  <docketText>ORDER as to Marcos Mendez re 30 Stipulation and Proposed Order (CR) filed by Marcos Mendez. The Status Conference of 8/30/05 is vacated and reset for 9/20/2005 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 8/30/05. (Souvannarath, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER for Substitution of Attorney signed by Judge Morrison C. England Jr. on 5/16/06. Attorney Robert Lyons SUBSTITUTED in place of Christopher Haydn-Meyer for defendant Marcos Mendez. (Marciel, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-4</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-05-16</dateIssued>
+  <docketText>ORDER for Substitution of Attorney signed by Judge Morrison C. England Jr. on 5/16/06. Attorney Robert Lyons SUBSTITUTED in place of Christopher Haydn-Meyer for defendant Marcos Mendez. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATION and ORDER as to Marcos Mendez signed by Judge Morrison C. England Jr. on 7/17/06 ORDERING the Status Conference RESET for 9/12/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. ***Excludable started as to Marcos Mendez: T4 Start: 7/18/06 Stop: 9/12/06. (Donati, J)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-5</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-07-17</dateIssued>
+  <docketText>STIPULATION and ORDER as to Marcos Mendez signed by Judge Morrison C. England Jr. on 7/17/06 ORDERING the Status Conference RESET for 9/12/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. ***Excludable started as to Marcos Mendez: T4 Start: 7/18/06 Stop: 9/12/06. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER as to Marcos Mendez re 41 Stipulation and Proposed Order filed by USA. The Status Conference of 10/24/06 is vacated and reset for 12/5/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 10/25/06. (Souvannarath, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab13608</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-6</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-10-26</dateIssued>
+  <docketText>ORDER as to Marcos Mendez re 41 Stipulation and Proposed Order filed by USA. The Status Conference of 10/24/06 is vacated and reset for 12/5/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 10/25/06. (Souvannarath, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATION and ORDER re 43 Stipulation and Proposed Order. The Status Conference of 12/5/06 is vacated and reset for 12/12/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 12/4/06. (Souvannarath, A)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-7</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-12-04</dateIssued>
+  <docketText>STIPULATION and ORDER re 43 Stipulation and Proposed Order. The Status Conference of 12/5/06 is vacated and reset for 12/12/2006 at 08:30 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 12/4/06. (Souvannarath, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATION and ORDER re 45 Stipulation and Proposed Order. The Status Conference/Change of Plea of 12/12/06 is vacated and reset for 1/16/2007 at 10:00 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 12/13/06. (Souvannarath, A)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-8</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-12-13</dateIssued>
+  <docketText>STIPULATION and ORDER re 45 Stipulation and Proposed Order. The Status Conference/Change of Plea of 12/12/06 is vacated and reset for 1/16/2007 at 10:00 AM in Courtroom 3 (MCE) before Judge Morrison C. England Jr. signed by Judge Morrison C. England Jr. on 12/13/06. (Souvannarath, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATION and ORDER 64 vacating Status Conference signed by Judge Morrison C. England, Jr. on 3/31/2009. Judgment and Sentencing, as to defendant Marcos Mendez, set for 7/2/2009 at 09:00 AM in Courtroom 7 (MCE). Any Motion for Correction of Pre-Sentence Report is to filed and served on Probation Officer by 6/26/2009. (Marciel, M) Modified on 4/1/2009 (Marciel, M).</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-04-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-9</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2009-04-01</dateIssued>
+  <docketText>STIPULATION and ORDER 64 vacating Status Conference signed by Judge Morrison C. England, Jr. on 3/31/2009. Judgment and Sentencing, as to defendant Marcos Mendez, set for 7/2/2009 at 09:00 AM in Courtroom 7 (MCE). Any Motion for Correction of Pre-Sentence Report is to filed and served on Probation Officer by 6/26/2009. (Marciel, M) Modified on 4/1/2009 (Marciel, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER REGARDING SENTENCING MEMORANDA as to Marcos Mendez, signed by Judge Morrison C. England, Jr., on 9/7/10. (Kastilahn, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135e4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-10</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-09-08</dateIssued>
+  <docketText>ORDER REGARDING SENTENCING MEMORANDA as to Marcos Mendez, signed by Judge Morrison C. England, Jr., on 9/7/10. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Marcos Mendez. Signed by Judge Morrison C. England, Jr. on 11/2/2010. (Deutsch, S)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-11</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-11-02</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Marcos Mendez. Signed by Judge Morrison C. England, Jr. on 11/2/2010. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>DETENTION ORDER as to Marcos Mendez signed by Magistrate Judge Edmund F. Brennan on 01/06/11. (Mena-Sanchez, L)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-12</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2011-01-06</dateIssued>
+  <docketText>DETENTION ORDER as to Marcos Mendez signed by Magistrate Judge Edmund F. Brennan on 01/06/11. (Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>ORDER signed by Chief Judge Morrison C. England, Jr on 5/21/14 ORDERING the government&apos;s request to have the case against defendant Gilberto De La Cruz dismissed is GRANTED. The case against defendant Gilberto De La Cruz is dismissed and the warrant is withdrawn. (Becknal, R)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab134bf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-13</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-05-22</dateIssued>
+  <docketText>ORDER signed by Chief Judge Morrison C. England, Jr on 5/21/14 ORDERING the government&apos;s request to have the case against defendant Gilberto De La Cruz dismissed is GRANTED. The case against defendant Gilberto De La Cruz is dismissed and the warrant is withdrawn. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>STIPULATED ORDER REDUCING SENTENCE - USSC Amendment as to Marcos Mendez (1) Count 1 signed by Chief Judge Morrison C. England, Jr. on 1/5/2015 ORDERING that the term of imprisonment imposed October 2010 is REDUCED to a term of 58 months. (Donati, J)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-14</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>STIPULATED ORDER REDUCING SENTENCE - USSC Amendment as to Marcos Mendez (1) Count 1 signed by Chief Judge Morrison C. England, Jr. on 1/5/2015 ORDERING that the term of imprisonment imposed October 2010 is REDUCED to a term of 58 months. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>REDUCTION JUDGMENT and COMMITMENT signed by Chief Judge Morrison C. England, Jr. on 1/12/2015 as to Marcos Mendez. (Deutsch, S) (Main Document 96 replaced on 1/13/2015) (Deutsch, S).</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab135e5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-15</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2015-01-12</dateIssued>
+  <docketText>REDUCTION JUDGMENT and COMMITMENT signed by Chief Judge Morrison C. England, Jr. on 1/12/2015 as to Marcos Mendez. (Deutsch, S) (Main Document 96 replaced on 1/13/2015) (Deutsch, S).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_04-cr-00379-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Mendez</title>
+  <subTitle>AMENDED ORDER OF JUDGMENT REDUCING SENTENCE - USSC Amendment signed by Chief Judge Morrison C. England, Jr. on 1/15/2015 as to Marcos Mendez. (Deutsch, S)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ab1360f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-16</identifier>
+ <identifier type="former granule identifier">caed-2_04-cr-00379_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_04-cr-00379/USCOURTS-caed-2_04-cr-00379-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_04-cr-00379/pdf/USCOURTS-caed-2_04-cr-00379-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cr-00379; USA v. Mendez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_04-cr-00379-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2015-01-15</dateIssued>
+  <docketText>AMENDED ORDER OF JUDGMENT REDUCING SENTENCE - USSC Amendment signed by Chief Judge Morrison C. England, Jr. on 1/15/2015 as to Marcos Mendez. (Deutsch, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

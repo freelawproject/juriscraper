@@ -1,0 +1,269 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1811895e5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-00904</identifier>
+<identifier type="local">P0b002ee1811895e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_05-cv-00904</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_05-cv-00904</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:05-cv-00904</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Keon" fullName="Keon Collins" lastName="Collins" role="Plaintiff"></party>
+ <party firstName="T.R." fullName="T.R. Craig" lastName="Craig" role="Defendant"></party>
+ <party firstName="D." fullName="D. Scott Dodrill" lastName="Dodrill" middleName="Scott" role="Defendant"></party>
+ <party fullName="Federal Bureau of Prisons" lastName="Federal Bureau of Prisons" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Holt" lastName="Holt" role="Defendant"></party>
+ <party firstName="Harley" fullName="Harley Lappin" lastName="Lappin" role="Defendant"></party>
+ <party firstName="John" fullName="John Nash" lastName="Nash" role="Defendant"></party>
+ <party firstName="R." fullName="R. Painter" lastName="Painter" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Shires" lastName="Shires" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Collins v. Lappin et al</title>
+ <partNumber>9:05-cv-00904</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-00904/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:05-cv-00904;05-904</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Keon Collins</displayForm>
+ <namePart type="family">Collins</namePart>
+ <namePart type="given">Keon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>T.R. Craig</displayForm>
+ <namePart type="family">Craig</namePart>
+ <namePart type="given">T.R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Scott Dodrill</displayForm>
+ <namePart type="family">Dodrill</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Federal Bureau of Prisons</displayForm>
+ <namePart type="family">Federal Bureau of Prisons</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Holt</displayForm>
+ <namePart type="family">Holt</namePart>
+ <namePart type="given">Mr.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harley Lappin</displayForm>
+ <namePart type="family">Lappin</namePart>
+ <namePart type="given">Harley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Nash</displayForm>
+ <namePart type="family">Nash</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Painter</displayForm>
+ <namePart type="family">Painter</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ms. Shires</displayForm>
+ <namePart type="family">Shires</namePart>
+ <namePart type="given">Ms.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_05-cv-00904</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:05-cv-00904</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Keon" fullName="Keon Collins" lastName="Collins" role="Plaintiff"></party>
+ <party firstName="T.R." fullName="T.R. Craig" lastName="Craig" role="Defendant"></party>
+ <party firstName="D." fullName="D. Scott Dodrill" lastName="Dodrill" middleName="Scott" role="Defendant"></party>
+ <party fullName="Federal Bureau of Prisons" lastName="Federal Bureau of Prisons" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Holt" lastName="Holt" role="Defendant"></party>
+ <party firstName="Harley" fullName="Harley Lappin" lastName="Lappin" role="Defendant"></party>
+ <party firstName="John" fullName="John Nash" lastName="Nash" role="Defendant"></party>
+ <party firstName="R." fullName="R. Painter" lastName="Painter" role="Defendant"></party>
+ <party firstName="Ms." fullName="Ms. Shires" lastName="Shires" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-00904-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-0/mods.xml">
+ <titleInfo>
+  <title>Collins v. Lappin et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 18 MOTION for Summary Judgment filed by T.R. Craig, John Nash, Federal Bureau of Prisons, R. Painter, Harley Lappin, Mr. Holt, D. Scott Dodrill, Ms. Shires be GRANTED. Objections to R&amp;R due by 12/21/2006,Case Review Deadline 12/27/2006. Signed by Judge George H. Lowe on 12/7/06. (tlp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-00904-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181434be1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-0</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-00904_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-00904/pdf/USCOURTS-nynd-9_05-cv-00904-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-00904; Collins v. Lappin et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-00904-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-12-07</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 18 MOTION for Summary Judgment filed by T.R. Craig, John Nash, Federal Bureau of Prisons, R. Painter, Harley Lappin, Mr. Holt, D. Scott Dodrill, Ms. Shires be GRANTED. Objections to R&amp;R due by 12/21/2006,Case Review Deadline 12/27/2006. Signed by Judge George H. Lowe on 12/7/06. (tlp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-00904-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-1/mods.xml">
+ <titleInfo>
+  <title>Collins v. Lappin et al</title>
+  <subTitle>DECISION&amp;ORDER approving&amp;adopting Report and Recommendations&amp;granting 18 Motion for Summary Judgment. Signed by Judge Lawrence E. Kahn on 1/3/07 [served]. (wjg, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-00904-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181434be0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-1</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-00904_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-00904/pdf/USCOURTS-nynd-9_05-cv-00904-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-00904; Collins v. Lappin et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-00904-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>DECISION&amp;ORDER approving&amp;adopting Report and Recommendations&amp;granting 18 Motion for Summary Judgment. Signed by Judge Lawrence E. Kahn on 1/3/07 [served]. (wjg, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_05-cv-00904-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-2/mods.xml">
+ <titleInfo>
+  <title>Collins v. Lappin et al</title>
+  <subTitle>JUDGMENT that in accordance with the DECISION&amp;ORDER of USDJ Lawrence E. Kahn dd 1/4/07, the Report and Recommendations of USMJ Lowe is approved&amp;adopted&amp;the Motion for Summary Judgment is granted. (wjg, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_05-cv-00904-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181434be2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-2</identifier>
+ <identifier type="former granule identifier">nynd-9_05-cv-00904_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_05-cv-00904/USCOURTS-nynd-9_05-cv-00904-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_05-cv-00904/pdf/USCOURTS-nynd-9_05-cv-00904-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:05-cv-00904; Collins v. Lappin et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_05-cv-00904-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-04</dateIssued>
+  <docketText>JUDGMENT that in accordance with the DECISION&amp;ORDER of USDJ Lawrence E. Kahn dd 1/4/07, the Report and Recommendations of USMJ Lowe is approved&amp;adopted&amp;the Motion for Summary Judgment is granted. (wjg, )</docketText>
+</extension>
+</relatedItem>
+</mods>

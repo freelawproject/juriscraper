@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e34ed5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_09-bk-34880</identifier>
+<identifier type="local">P0b002ee180e34ed5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-09-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-flsb-1_09-bk-34880</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-1_09-bk-34880</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>1:09-bk-34880</caseNumber>
+ <caseOffice>Miami</caseOffice>
+ <party fullName="Prive Vegas, LLC" lastName="Prive Vegas, LLC" role="Debtor"></party>
+ <party fullName="Living Room" lastName="Living Room" role="Debtor"></party>
+ <party fullName="Prive" lastName="Prive" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party fullName="Southern Wine &amp; Spirits of American, Inc." lastName="Southern Wine &amp; Spirits of American, Inc." role="Creditor"></party>
+ <party fullName="Miami-Dade County Tax Collector" lastName="Miami-Dade County Tax Collector" role="Creditor"></party>
+ <party fullName="PVPH, LLC" lastName="PVPH, LLC" role="Interested Party"></party>
+ <party fullName="Sun City Electric" lastName="Sun City Electric" role="Creditor"></party>
+ <party fullName="Midwest Drywall, Co., Inc." lastName="Midwest Drywall, Co., Inc." role="Creditor"></party>
+ <party firstName="William" fullName="William A. Richardson" lastName="Richardson" middleName="A." role="Creditor"></party>
+ <party firstName="Barry" fullName="Barry E. Mukamal" lastName="Mukamal" middleName="E." role="Accountant"></party>
+ <party fullName="OpBiz, LLC" lastName="OpBiz, LLC" role="Creditor"></party>
+ <party fullName="PHW Las Vegas, LLC" lastName="PHW Las Vegas, LLC" role="Creditor"></party>
+ <party firstName="Alan" fullName="Alan Richardson" lastName="Richardson" role="Interested Party"></party>
+ <party fullName="Block 16, LLC" lastName="Block 16, LLC" role="Interested Party"></party>
+ <party fullName="YLV, LLC" lastName="YLV, LLC" role="Interested Party"></party>
+ <party fullName="R.O.C.K. Entertainment Group, LLC" lastName="R.O.C.K. Entertainment Group, LLC" role="Interested Party"></party>
+ <party firstName="Randal" fullName="Randal D Shimon" lastName="Shimon" middleName="D" role="Special Counsel"></party>
+</extension>
+<titleInfo>
+ <title>Prive Vegas, LLC</title>
+ <partNumber>1:09-bk-34880</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_09-bk-34880/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:09-bk-34880;09-34880</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Miami</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Prive Vegas, LLC</displayForm>
+ <namePart type="family">Prive Vegas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Living Room</displayForm>
+ <namePart type="family">Living Room</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Prive</displayForm>
+ <namePart type="family">Prive</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of the US Trustee</displayForm>
+ <namePart type="family">Office of the US Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Southern Wine &amp; Spirits of American, Inc.</displayForm>
+ <namePart type="family">Southern Wine &amp; Spirits of American, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Miami-Dade County Tax Collector</displayForm>
+ <namePart type="family">Miami-Dade County Tax Collector</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>PVPH, LLC</displayForm>
+ <namePart type="family">PVPH, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Sun City Electric</displayForm>
+ <namePart type="family">Sun City Electric</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Midwest Drywall, Co., Inc.</displayForm>
+ <namePart type="family">Midwest Drywall, Co., Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>William A. Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Barry E. Mukamal</displayForm>
+ <namePart type="family">Mukamal</namePart>
+ <namePart type="given">Barry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Accountant</description>
+</name>
+<name type="personal">
+ <displayForm>OpBiz, LLC</displayForm>
+ <namePart type="family">OpBiz, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>PHW Las Vegas, LLC</displayForm>
+ <namePart type="family">PHW Las Vegas, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Alan Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Block 16, LLC</displayForm>
+ <namePart type="family">Block 16, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>YLV, LLC</displayForm>
+ <namePart type="family">YLV, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>R.O.C.K. Entertainment Group, LLC</displayForm>
+ <namePart type="family">R.O.C.K. Entertainment Group, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Randal D Shimon</displayForm>
+ <namePart type="family">Shimon</namePart>
+ <namePart type="given">Randal</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Special Counsel</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-1_09-bk-34880</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>1:09-bk-34880</caseNumber>
+ <caseOffice>Miami</caseOffice>
+ <party fullName="Prive Vegas, LLC" lastName="Prive Vegas, LLC" role="Debtor"></party>
+ <party fullName="Living Room" lastName="Living Room" role="Debtor"></party>
+ <party fullName="Prive" lastName="Prive" role="Debtor"></party>
+ <party fullName="Office of the US Trustee" lastName="Office of the US Trustee" role="U.S. Trustee"></party>
+ <party fullName="Southern Wine &amp; Spirits of American, Inc." lastName="Southern Wine &amp; Spirits of American, Inc." role="Creditor"></party>
+ <party fullName="Miami-Dade County Tax Collector" lastName="Miami-Dade County Tax Collector" role="Creditor"></party>
+ <party fullName="PVPH, LLC" lastName="PVPH, LLC" role="Interested Party"></party>
+ <party fullName="Sun City Electric" lastName="Sun City Electric" role="Creditor"></party>
+ <party fullName="Midwest Drywall, Co., Inc." lastName="Midwest Drywall, Co., Inc." role="Creditor"></party>
+ <party firstName="William" fullName="William A. Richardson" lastName="Richardson" middleName="A." role="Creditor"></party>
+ <party firstName="Barry" fullName="Barry E. Mukamal" lastName="Mukamal" middleName="E." role="Accountant"></party>
+ <party fullName="OpBiz, LLC" lastName="OpBiz, LLC" role="Creditor"></party>
+ <party fullName="PHW Las Vegas, LLC" lastName="PHW Las Vegas, LLC" role="Creditor"></party>
+ <party firstName="Alan" fullName="Alan Richardson" lastName="Richardson" role="Interested Party"></party>
+ <party fullName="Block 16, LLC" lastName="Block 16, LLC" role="Interested Party"></party>
+ <party fullName="YLV, LLC" lastName="YLV, LLC" role="Interested Party"></party>
+ <party fullName="R.O.C.K. Entertainment Group, LLC" lastName="R.O.C.K. Entertainment Group, LLC" role="Interested Party"></party>
+ <party firstName="Randal" fullName="Randal D Shimon" lastName="Shimon" middleName="D" role="Special Counsel"></party>
+ <state>Florida</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-1_09-bk-34880-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_09-bk-34880/USCOURTS-flsb-1_09-bk-34880-0/mods.xml">
+ <titleInfo>
+  <title>Prive Vegas, LLC</title>
+  <subTitle>Memorandum Decision Granting (Re: 28 Motion for Relief From Stay filed by Creditor Sun City Electric). (Cohen, Diana)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_09-bk-34880/pdf/USCOURTS-flsb-1_09-bk-34880-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189cee43b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_09-bk-34880/USCOURTS-flsb-1_09-bk-34880-0</identifier>
+ <identifier type="former granule identifier">flsb-1_09-bk-34880_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_09-bk-34880/USCOURTS-flsb-1_09-bk-34880-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_09-bk-34880/pdf/USCOURTS-flsb-1_09-bk-34880-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-bk-34880; Prive Vegas, LLC; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-1_09-bk-34880-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-14</dateIssued>
+  <docketText>Memorandum Decision Granting (Re: 28 Motion for Relief From Stay filed by Creditor Sun City Electric). (Cohen, Diana)</docketText>
+</extension>
+</relatedItem>
+</mods>

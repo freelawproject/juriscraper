@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02f83">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_12-cv-00804</identifier>
+<identifier type="local">P0b002ee183a02f83</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-4_12-cv-00804</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-4_12-cv-00804</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>4:12-cv-00804</caseNumber>
+ <caseOffice>Fort Worth</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1601 Truth in Lending</cause>
+ <party firstName="Thomas" fullName="Thomas McAfee" lastName="McAfee" role="Defendant"></party>
+ <party fullName="U.S. Bank National Association, as Trustee" lastName="U.S. Bank National Association, as Trustee" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>U.S. Bank National Association, as Trustee v. McAfee</title>
+ <partNumber>4:12-cv-00804</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_12-cv-00804/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cv-00804;12-804</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Fort Worth</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thomas McAfee</displayForm>
+ <namePart type="family">McAfee</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bank National Association, as Trustee</displayForm>
+ <namePart type="family">U.S. Bank National Association, as Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-4_12-cv-00804</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>4:12-cv-00804</caseNumber>
+ <caseOffice>Fort Worth</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>220</natureSuitCode>
+ <natureSuit>Foreclosure</natureSuit>
+ <cause>15:1601 Truth in Lending</cause>
+ <party firstName="Thomas" fullName="Thomas McAfee" lastName="McAfee" role="Defendant"></party>
+ <party fullName="U.S. Bank National Association, as Trustee" lastName="U.S. Bank National Association, as Trustee" role="Plaintiff"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-4_12-cv-00804-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_12-cv-00804/USCOURTS-txnd-4_12-cv-00804-0/mods.xml">
+ <titleInfo>
+  <title>U.S. Bank National Association, as Trustee v. McAfee</title>
+  <subTitle>Memorandum Opinion and Order granting 6 Motion to Remand filed by U.S. Bank National Association, as Trustee: Having considered plaintiff&apos;s motion to remand, defendant&apos;s original notice of removal and accompanying documents, plaintiff&apos;s original petition, and applicable legal authorities, the court concludes that plaintiff&apos;s motion should be granted, and this action should be remanded to the state court from which it was removed. (See order for specifics.) (Ordered by Judge John McBryde on 1/3/2013) (mdf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-4_12-cv-00804-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a03acb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_12-cv-00804/USCOURTS-txnd-4_12-cv-00804-0</identifier>
+ <identifier type="former granule identifier">txnd-4_12-cv-00804_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-4_12-cv-00804/USCOURTS-txnd-4_12-cv-00804-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-4_12-cv-00804/pdf/USCOURTS-txnd-4_12-cv-00804-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-00804; U.S. Bank National Association, as Trustee v. McAfee; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-4_12-cv-00804-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>Memorandum Opinion and Order granting 6 Motion to Remand filed by U.S. Bank National Association, as Trustee: Having considered plaintiff&apos;s motion to remand, defendant&apos;s original notice of removal and accompanying documents, plaintiff&apos;s original petition, and applicable legal authorities, the court concludes that plaintiff&apos;s motion should be granted, and this action should be remanded to the state court from which it was removed. (See order for specifics.) (Ordered by Judge John McBryde on 1/3/2013) (mdf)</docketText>
+</extension>
+</relatedItem>
+</mods>

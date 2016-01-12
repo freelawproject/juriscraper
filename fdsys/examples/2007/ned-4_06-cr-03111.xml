@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b2119">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111</identifier>
+<identifier type="local">P0b002ee1817b2119</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_06-cr-03111</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cr-03111</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cr-03111</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert A. Weiss" lastName="Weiss" middleName="A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Weiss</title>
+ <partNumber>4:06-cr-03111</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:06-cr-03111;06-3111</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Robert A. Weiss</displayForm>
+ <namePart type="family">Weiss</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_06-cr-03111</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:06-cr-03111</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Robert" fullName="Robert A. Weiss" lastName="Weiss" middleName="A." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03111-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Weiss</title>
+  <subTitle>ORDER APPOINTING COUNSEL - John C. Vanderslice appointed as counsel as to defendant Robert A. Weiss as ordered by Magistrate Judge David L. Piester.(SED)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03111-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b7d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-0</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03111_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/pdf/USCOURTS-ned-4_06-cr-03111-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03111; USA v. Weiss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03111-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-09-19</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - John C. Vanderslice appointed as counsel as to defendant Robert A. Weiss as ordered by Magistrate Judge David L. Piester.(SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03111-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Weiss</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report and Addendum as to defendant Robert A. Weiss. It is ordered that: (1) The defendant&apos;s objection 15 to the number of images will be resolved at sentencing. (2) Except to the extent (if at all) that I have reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf.(KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03111-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b7b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-1</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03111_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/pdf/USCOURTS-ned-4_06-cr-03111-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03111; USA v. Weiss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03111-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-11-28</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report and Addendum as to defendant Robert A. Weiss. It is ordered that: (1) The defendant&apos;s objection 15 to the number of images will be resolved at sentencing. (2) Except to the extent (if at all) that I have reserved an issue for later resolution in the preceding paragraph, the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects. ETC. Ordered by Judge Richard G. Kopf.(KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03111-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Weiss</title>
+  <subTitle>JUDGMENT as to defendant Robert A. Weiss (1): Upon guilty plea to Counts I and II of the Information, the defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of twenty-seven (27) months, followed by three (3) years of Supervised Release with special conditions, and ordered to pay a $100 Special Assessment(PAID); The defendant shall forfeit two ZIP disks to the Government as to Count II of the Information. Criminal Case Terminated. Ordered by Judge Richard G. Kopf. (4 CC to USM)(JAR)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-12-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03111-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b7e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-2</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03111_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/pdf/USCOURTS-ned-4_06-cr-03111-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03111; USA v. Weiss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03111-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-12-06</dateIssued>
+  <docketText>JUDGMENT as to defendant Robert A. Weiss (1): Upon guilty plea to Counts I and II of the Information, the defendant is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of twenty-seven (27) months, followed by three (3) years of Supervised Release with special conditions, and ordered to pay a $100 Special Assessment(PAID); The defendant shall forfeit two ZIP disks to the Government as to Count II of the Information. Criminal Case Terminated. Ordered by Judge Richard G. Kopf. (4 CC to USM)(JAR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03111-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Weiss</title>
+  <subTitle>ORDER as to defendant Robert A. Weiss. ***Rule 35(b) Motion Hearing set for 1/19/2007 12:45 PM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf. The defendant shall be present for the hearing. Ordered by Judge Richard G. Kopf.(KLL, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03111-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b7c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-3</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03111_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/pdf/USCOURTS-ned-4_06-cr-03111-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03111; USA v. Weiss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03111-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>ORDER as to defendant Robert A. Weiss. ***Rule 35(b) Motion Hearing set for 1/19/2007 12:45 PM in Courtroom 1 (Lincoln) before Judge Richard G. Kopf. The defendant shall be present for the hearing. Ordered by Judge Richard G. Kopf.(KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_06-cr-03111-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Weiss</title>
+  <subTitle>AMENDED JUDGMENT (Reduction of Sentence) as to Robert A. Weiss (1). The defendant plead guilty to Count(s) 1 and 2 of the Information. The defendant&apos;s sentence of imprisonment is reduced from the original sentence of 27 months to a term of 14 months, followed by 3 years of Supervised Release with special conditions, and ordered to pay a $100 Special Assessment(PAID); Count 2, The defendant shall forfeit two ZIP disks to the Government as to Count II of the Information as to defendant Robert A. Weiss. Defendant shall surrender for service of sentence at the institution designated by BOP before 2:00 p.m. no earlier than 60 days from today&apos;s date. Ordered by Judge Richard G. Kopf on 1/19/07. 4 certified copies to USM.(CCB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_06-cr-03111-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818a6b7a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-4</identifier>
+ <identifier type="former granule identifier">ned-4_06-cr-03111_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_06-cr-03111/USCOURTS-ned-4_06-cr-03111-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_06-cr-03111/pdf/USCOURTS-ned-4_06-cr-03111-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:06-cr-03111; USA v. Weiss; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_06-cr-03111-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2007-01-19</dateIssued>
+  <docketText>AMENDED JUDGMENT (Reduction of Sentence) as to Robert A. Weiss (1). The defendant plead guilty to Count(s) 1 and 2 of the Information. The defendant&apos;s sentence of imprisonment is reduced from the original sentence of 27 months to a term of 14 months, followed by 3 years of Supervised Release with special conditions, and ordered to pay a $100 Special Assessment(PAID); Count 2, The defendant shall forfeit two ZIP disks to the Government as to Count II of the Information as to defendant Robert A. Weiss. Defendant shall surrender for service of sentence at the institution designated by BOP before 2:00 p.m. no earlier than 60 days from today&apos;s date. Ordered by Judge Richard G. Kopf on 1/19/07. 4 certified copies to USM.(CCB)</docketText>
+</extension>
+</relatedItem>
+</mods>

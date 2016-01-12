@@ -1,0 +1,197 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181297599">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_06-cv-00323</identifier>
+<identifier type="local">P0b002ee181297599</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_06-cv-00323</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_06-cv-00323</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:06-cv-00323</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:501 Copyright Infringement</cause>
+ <party fullName="BMG MUSIC" lastName="BMG MUSIC" role="Plaintiff"></party>
+ <party fullName="CAPITOL RECORDS INC" lastName="CAPITOL RECORDS INC" role="Plaintiff"></party>
+ <party fullName="Sony BMG Music Entertainment" lastName="Sony BMG Music Entertainment" role="Plaintiff"></party>
+ <party fullName="UMG Recordings, Inc., a Delaware Corporation" lastName="UMG Recordings, Inc., a Delaware Corporation" role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon Villarreal" lastName="Villarreal" role="Defendant"></party>
+ <party fullName="Virgin Records America Inc" lastName="Virgin Records America Inc" role="Plaintiff"></party>
+ <party fullName="Warner Bros Records Inc" lastName="Warner Bros Records Inc" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Sony BMG Music Entertainment, a Delaware General Partnership et al v. Villarreal</title>
+ <partNumber>5:06-cv-00323</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_06-cv-00323/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-00323;06-323</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BMG MUSIC</displayForm>
+ <namePart type="family">BMG MUSIC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CAPITOL RECORDS INC</displayForm>
+ <namePart type="family">CAPITOL RECORDS INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sony BMG Music Entertainment</displayForm>
+ <namePart type="family">Sony BMG Music Entertainment</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>UMG Recordings, Inc., a Delaware Corporation</displayForm>
+ <namePart type="family">UMG Recordings, Inc., a Delaware Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sharon Villarreal</displayForm>
+ <namePart type="family">Villarreal</namePart>
+ <namePart type="given">Sharon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Virgin Records America Inc</displayForm>
+ <namePart type="family">Virgin Records America Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Warner Bros Records Inc</displayForm>
+ <namePart type="family">Warner Bros Records Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_06-cv-00323</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:06-cv-00323</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <cause>17:501 Copyright Infringement</cause>
+ <party fullName="BMG MUSIC" lastName="BMG MUSIC" role="Plaintiff"></party>
+ <party fullName="CAPITOL RECORDS INC" lastName="CAPITOL RECORDS INC" role="Plaintiff"></party>
+ <party fullName="Sony BMG Music Entertainment" lastName="Sony BMG Music Entertainment" role="Plaintiff"></party>
+ <party fullName="UMG Recordings, Inc., a Delaware Corporation" lastName="UMG Recordings, Inc., a Delaware Corporation" role="Plaintiff"></party>
+ <party firstName="Sharon" fullName="Sharon Villarreal" lastName="Villarreal" role="Defendant"></party>
+ <party fullName="Virgin Records America Inc" lastName="Virgin Records America Inc" role="Plaintiff"></party>
+ <party fullName="Warner Bros Records Inc" lastName="Warner Bros Records Inc" role="Plaintiff"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_06-cv-00323-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_06-cv-00323/USCOURTS-gamd-5_06-cv-00323-0/mods.xml">
+ <titleInfo>
+  <title>Sony BMG Music Entertainment, a Delaware General Partnership et al v. Villarreal</title>
+  <subTitle>ORDER granting 6 Motion for Default Judgment . Ordered by Judge C. Ashley Royal on 1/5/07. (dcp, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-5_06-cv-00323-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1812bd50e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_06-cv-00323/USCOURTS-gamd-5_06-cv-00323-0</identifier>
+ <identifier type="former granule identifier">gamd-5_06-cv-00323_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_06-cv-00323/USCOURTS-gamd-5_06-cv-00323-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_06-cv-00323/pdf/USCOURTS-gamd-5_06-cv-00323-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-00323; Sony BMG Music Entertainment, a Delaware General Partnership et al v. Villarreal; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_06-cv-00323-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>ORDER granting 6 Motion for Default Judgment . Ordered by Judge C. Ashley Royal on 1/5/07. (dcp, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,332 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181783957">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209</identifier>
+<identifier type="local">P0b002ee181783957</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cr-00209</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00209</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00209</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ignacio" fullName="Ignacio F. Lopez" lastName="Lopez" middleName="F." role="Defendant"></party>
+ <party firstName="Ignacio" fullName="Ignacio Fabian Lopez-Buenrostro" lastName="Lopez-Buenrostro" middleName="Fabian" role="Defendant"></party>
+ <party fullName="Nacho" lastName="Nacho" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Lopez</title>
+ <partNumber>8:09-cr-00209</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cr-00209;09-209</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ignacio F. Lopez</displayForm>
+ <namePart type="family">Lopez</namePart>
+ <namePart type="given">Ignacio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ignacio Fabian Lopez-Buenrostro</displayForm>
+ <namePart type="family">Lopez-Buenrostro</namePart>
+ <namePart type="given">Ignacio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nacho</displayForm>
+ <namePart type="family">Nacho</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00209</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00209</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Ignacio" fullName="Ignacio F. Lopez" lastName="Lopez" middleName="F." role="Defendant"></party>
+ <party firstName="Ignacio" fullName="Ignacio Fabian Lopez-Buenrostro" lastName="Lopez-Buenrostro" middleName="Fabian" role="Defendant"></party>
+ <party fullName="Nacho" lastName="Nacho" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Ignacio F. Lopez - Julie A. Frank is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e417b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-05</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Ignacio F. Lopez - Julie A. Frank is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Ignacio F. Lopez. Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e417c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-06-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Ignacio F. Lopez. Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER that Defendant Lopez&apos;s motion for an extension of time 23 is granted; Lopez is given until on or before July 30, 2009, in which to file pretrial motions pursuant to the progression order; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between July 10, 2009 andJuly 30, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason defendant&apos;s counsel requires additional time to adequately prepare the case, taking into consideration due diligence of counsel, and the novelty and complexity of this case as to Ignacio F. Lopez (1).Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e417e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-10</dateIssued>
+  <docketText>ORDER that Defendant Lopez&apos;s motion for an extension of time 23 is granted; Lopez is given until on or before July 30, 2009, in which to file pretrial motions pursuant to the progression order; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between July 10, 2009 andJuly 30, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason defendant&apos;s counsel requires additional time to adequately prepare the case, taking into consideration due diligence of counsel, and the novelty and complexity of this case as to Ignacio F. Lopez (1).Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER that Lopez&apos;s motion to continue trial 36 is granted; trial of this matter is re-scheduled for November 9, 2009, before Chief Judge Joseph F. Bataillon and a jury; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between September 14, 2009 and November 9, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason that defendants&apos; counsel require additional time to adequately prepare the case as to Ignacio F. Lopez (1). Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e4116</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-14</dateIssued>
+  <docketText>ORDER that Lopez&apos;s motion to continue trial 36 is granted; trial of this matter is re-scheduled for November 9, 2009, before Chief Judge Joseph F. Bataillon and a jury; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between September 14, 2009 and November 9, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason that defendants&apos; counsel require additional time to adequately prepare the case as to Ignacio F. Lopez (1). Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER that Lopez&apos;s motion to continue trial 39 is granted; trial of this matter is re-scheduled for December 7, 2009, before Chief Judge Joseph F. Bataillon and a jury; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between November 2, 2009 and December 7, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason that defendant&apos;s counsel requires additional time to adequately prepare the case as to Ignacio F. Lopez (1). Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-11-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e417f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-11-02</dateIssued>
+  <docketText>ORDER that Lopez&apos;s motion to continue trial 39 is granted; trial of this matter is re-scheduled for December 7, 2009, before Chief Judge Joseph F. Bataillon and a jury; the ends of justice have been served by granting such motion and outweigh the interests of the public and the defendant in a speedy trial; the additional time arising as a result of the granting of the motion, i.e., the time between November 2, 2009 and December 7, 2009, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act for the reason that defendant&apos;s counsel requires additional time to adequately prepare the case as to Ignacio F. Lopez (1). Ordered by Magistrate Judge Thomas D. Thalken. (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>STRICKEN - PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 47 is hereby sustained. The United States is hereby authorized to seize the Winchester Model 63.22 caliber rifle, serial #54138A; the UNK Manufacturer Model TEX.22 caliber revolver, serial# TX43752; the Astra-Uncetay Model Constable 9mm pistol, serial# 1059374; the Remington 870 Magnum.12 gauge shotgun, serial# B251600M; the Cobra Model C22M Derringer,.22 caliber, serial# 026985; the Ruger Model 89DC, 9mm pistol, serial# 314-06249; two loaded magazines of 9mm rounds; the Winchester Model 12, 12 gauge shotgun, serial# 1817690F; the Ted Williams Model 100, 30/30 rifle, serial# V71841; the Stevens Model 311, 20 gauge shotgun, serial# D038701; the Winchester Model 370, 20 gauge shotgun, serial# C322925; the Winchester Model 94AE, 30/30 rifle, serial#WFT1281; the Savage Model 10CL, 7mm rifle, serial# C114847; the Winchester Model 94, 30/30 rifle, serial# 4517934; the High Standard 12 gauge shotgun, serial# 3165849; the Glenfield Model 60,.22 caliber rifle, serial# 71508069; the Ted Williams Model 200, 12 gauge shotgun, serial#86378; the Colt AR-15, Model SP1, serial# SP100597; the Ithaca 12 gauge shotgun; the Continental 12 gauge shotgun; the Stevens Model 87E,.22 caliber rifle; the Ted Williams Model 34,.22 caliber rifle; the Remington 12 gauge shotgun; the Lefever 12 gauge shotgun; the Stevens Model 87A,.22 caliber rifle; the Winchester Model 41-P,.22 caliber rifle; the British Enfield, 303 caliber rifle; the Winchester Model 370,.20 gauge shotgun, the Barrett Model 99A1,.50 caliber sniper rifle, serial#4953, and 10 rounds of.50 caliber ammunition, on the basis they were firearms involved or used in the knowing commission of the offense charged in Counts I and II. The Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law. The aforementioned forfeited properties are to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture, in which all interests will be addressed as to defendant Ignacio F. Lopez. Ordered by Chief Judge Joseph F. Bataillon.(1 Certified copy to USM) (KBJ) Modified on 1/20/2010 to strike per order 50 (CJP).</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e4115</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-12-21</dateIssued>
+  <docketText>STRICKEN - PRELIMINARY ORDER OF FORFEITURE - The United States&apos; Motion for Issuance of Preliminary Order of Forfeiture 47 is hereby sustained. The United States is hereby authorized to seize the Winchester Model 63.22 caliber rifle, serial #54138A; the UNK Manufacturer Model TEX.22 caliber revolver, serial# TX43752; the Astra-Uncetay Model Constable 9mm pistol, serial# 1059374; the Remington 870 Magnum.12 gauge shotgun, serial# B251600M; the Cobra Model C22M Derringer,.22 caliber, serial# 026985; the Ruger Model 89DC, 9mm pistol, serial# 314-06249; two loaded magazines of 9mm rounds; the Winchester Model 12, 12 gauge shotgun, serial# 1817690F; the Ted Williams Model 100, 30/30 rifle, serial# V71841; the Stevens Model 311, 20 gauge shotgun, serial# D038701; the Winchester Model 370, 20 gauge shotgun, serial# C322925; the Winchester Model 94AE, 30/30 rifle, serial#WFT1281; the Savage Model 10CL, 7mm rifle, serial# C114847; the Winchester Model 94, 30/30 rifle, serial# 4517934; the High Standard 12 gauge shotgun, serial# 3165849; the Glenfield Model 60,.22 caliber rifle, serial# 71508069; the Ted Williams Model 200, 12 gauge shotgun, serial#86378; the Colt AR-15, Model SP1, serial# SP100597; the Ithaca 12 gauge shotgun; the Continental 12 gauge shotgun; the Stevens Model 87E,.22 caliber rifle; the Ted Williams Model 34,.22 caliber rifle; the Remington 12 gauge shotgun; the Lefever 12 gauge shotgun; the Stevens Model 87A,.22 caliber rifle; the Winchester Model 41-P,.22 caliber rifle; the British Enfield, 303 caliber rifle; the Winchester Model 370,.20 gauge shotgun, the Barrett Model 99A1,.50 caliber sniper rifle, serial#4953, and 10 rounds of.50 caliber ammunition, on the basis they were firearms involved or used in the knowing commission of the offense charged in Counts I and II. The Defendant&apos;s interest in said properties is hereby forfeited to the United States for disposition in accordance with the law. The aforementioned forfeited properties are to be held by the United States in its secure custody and control. Upon adjudication of all third-party interests, this Court will enter a Final Order of Forfeiture, in which all interests will be addressed as to defendant Ignacio F. Lopez. Ordered by Chief Judge Joseph F. Bataillon.(1 Certified copy to USM) (KBJ) Modified on 1/20/2010 to strike per order 50 (CJP).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00209-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Lopez</title>
+  <subTitle>ORDER that the United States&apos; Motion 49 is hereby sustained; the Preliminary Order of Forfeiture is stricken; Count IV of the Second Superseding Indictment is dismissed; the forfeiture pertaining to this case is closed as to Ignacio F. Lopez (1). Ordered by Chief Judge Joseph F. Bataillon. (1 certified copy to USM)(CJP)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00209-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817e417d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00209_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00209/USCOURTS-ned-8_09-cr-00209-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00209/pdf/USCOURTS-ned-8_09-cr-00209-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00209; USA v. Lopez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00209-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>ORDER that the United States&apos; Motion 49 is hereby sustained; the Preliminary Order of Forfeiture is stricken; Count IV of the Second Superseding Indictment is dismissed; the forfeiture pertaining to this case is closed as to Ignacio F. Lopez (1). Ordered by Chief Judge Joseph F. Bataillon. (1 certified copy to USM)(CJP)</docketText>
+</extension>
+</relatedItem>
+</mods>

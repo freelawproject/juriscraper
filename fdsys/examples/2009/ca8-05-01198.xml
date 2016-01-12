@@ -1,0 +1,138 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e37b6b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-05-01198</identifier>
+<identifier type="local">P0b002ee180e37b6b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-10-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca8-05-01198</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-05-01198</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>05-01198</caseNumber>
+ <party firstName="Pedro" fullName="Pedro Aldaba Barrientos" lastName="Barrientos" middleName="Aldaba" role="Petitioner"></party>
+ <party firstName="Michael" fullName="Michael B. Mukasey" lastName="Mukasey" middleName="B." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Pedro A. Barrientos v. Michael B. Mukasey</title>
+ <partNumber>05-01198</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-05-01198/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">05-01198;05-1198</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Eighth Circuit</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Pedro Aldaba Barrientos</displayForm>
+ <namePart type="family">Barrientos</namePart>
+ <namePart type="given">Pedro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Michael B. Mukasey</displayForm>
+ <namePart type="family">Mukasey</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca8-05-01198</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca8</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtSortOrder>1080</courtSortOrder>
+ <caseNumber>05-01198</caseNumber>
+ <party firstName="Pedro" fullName="Pedro Aldaba Barrientos" lastName="Barrientos" middleName="Aldaba" role="Petitioner"></party>
+ <party firstName="Michael" fullName="Michael B. Mukasey" lastName="Mukasey" middleName="B." role="Respondent"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca8-05-01198-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-05-01198/USCOURTS-ca8-05-01198-0/mods.xml">
+ <titleInfo>
+  <title>Pedro A. Barrientos v. Michael B. Mukasey</title>
+  <subTitle>PER CURIAM OPINION FILED - THE COURT: MICHAEL J. MELLOY, DUANE BENTON and BOBBY E. SHEPHERD (UNPUBLISHED) [3505056] [05-1198]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ca8-05-01198-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180e4e525</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-05-01198/USCOURTS-ca8-05-01198-0</identifier>
+ <identifier type="former granule identifier">ca8-05-01198_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca8-05-01198/USCOURTS-ca8-05-01198-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca8-05-01198/pdf/USCOURTS-ca8-05-01198-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 05-01198; Pedro A. Barrientos v. Michael B. Mukasey; </searchTitle>
+  <courtName>United States Court of Appeals for the Eighth Circuit</courtName>
+  <accessId>USCOURTS-ca8-05-01198-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-08</dateIssued>
+  <docketText>PER CURIAM OPINION FILED - THE COURT: MICHAEL J. MELLOY, DUANE BENTON and BOBBY E. SHEPHERD (UNPUBLISHED) [3505056] [05-1198]</docketText>
+</extension>
+</relatedItem>
+</mods>

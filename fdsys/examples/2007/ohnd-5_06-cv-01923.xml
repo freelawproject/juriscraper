@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815670e6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01923</identifier>
+<identifier type="local">P0b002ee1815670e6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_06-cv-01923</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-01923</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-01923</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>29:2661 Family Medical Leave Act</cause>
+ <party firstName="Giana" fullName="Giana P. La Monica" lastName="La Monica" middleName="P." role="Plaintiff"></party>
+ <party fullName="NaphCare, Inc." lastName="NaphCare, Inc." role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca Raines" lastName="Raines" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>La Monica v. NaphCare, Inc. et al</title>
+ <partNumber>5:06-cv-01923</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01923/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-01923;06-1923</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Giana P. La Monica</displayForm>
+ <namePart type="family">La Monica</namePart>
+ <namePart type="given">Giana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>NaphCare, Inc.</displayForm>
+ <namePart type="family">NaphCare, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rebecca Raines</displayForm>
+ <namePart type="family">Raines</namePart>
+ <namePart type="given">Rebecca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-01923</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-01923</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>29:2661 Family Medical Leave Act</cause>
+ <party firstName="Giana" fullName="Giana P. La Monica" lastName="La Monica" middleName="P." role="Plaintiff"></party>
+ <party fullName="NaphCare, Inc." lastName="NaphCare, Inc." role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca Raines" lastName="Raines" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01923-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-0/mods.xml">
+ <titleInfo>
+  <title>La Monica v. NaphCare, Inc. et al</title>
+  <subTitle>Memorandum Opinion granting defendants&apos; Motion for partial summary judgment (Related Doc # 17), and denying as moot plaintiff&apos;s Motion to amend complaint (Related Doc # 18). The remaining claims will be remanded to the Summit County Court of Common Pleas. Signed by Judge David D. Dowd Jr. on 1/8/2007.(M, De)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01923-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181652fce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01923_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01923/pdf/USCOURTS-ohnd-5_06-cv-01923-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01923; La Monica v. NaphCare, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01923-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>Memorandum Opinion granting defendants&apos; Motion for partial summary judgment (Related Doc # 17), and denying as moot plaintiff&apos;s Motion to amend complaint (Related Doc # 18). The remaining claims will be remanded to the Summit County Court of Common Pleas. Signed by Judge David D. Dowd Jr. on 1/8/2007.(M, De)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-01923-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-1/mods.xml">
+ <titleInfo>
+  <title>La Monica v. NaphCare, Inc. et al</title>
+  <subTitle>Judgment Entry that for the reasons set forth in the Memorandum Opinion filed contemporaneously with this Judgment Entry, summary judgment is entered in favor of the defendants on Count One of the Amended Complaint. The Court declines to exercise supplemental jurisdiction over the remaining two claims and remands these claims to the Summit County Court of Common Pleas. Case closed, with each party to bear its own costs. Signed by Judge David D. Dowd Jr. on 1/8/2007. (M, De)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-01923-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181652fcd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-01923_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-01923/USCOURTS-ohnd-5_06-cv-01923-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-01923/pdf/USCOURTS-ohnd-5_06-cv-01923-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-01923; La Monica v. NaphCare, Inc. et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-01923-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-01-08</dateIssued>
+  <docketText>Judgment Entry that for the reasons set forth in the Memorandum Opinion filed contemporaneously with this Judgment Entry, summary judgment is entered in favor of the defendants on Count One of the Amended Complaint. The Court declines to exercise supplemental jurisdiction over the remaining two claims and remands these claims to the Summit County Court of Common Pleas. Case closed, with each party to bear its own costs. Signed by Judge David D. Dowd Jr. on 1/8/2007. (M, De)</docketText>
+</extension>
+</relatedItem>
+</mods>

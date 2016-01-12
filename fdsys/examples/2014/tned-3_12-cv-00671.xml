@@ -1,0 +1,270 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2eae7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_12-cv-00671</identifier>
+<identifier type="local">P0b002ee186c2eae7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-tned-3_12-cv-00671</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-3_12-cv-00671</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>3:12-cv-00671</caseNumber>
+ <caseOffice>Knoxville</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party fullName="Bank of America, N.A." lastName="Bank of America, N.A." role="Defendant"></party>
+ <party firstName="David" fullName="David Cikovic" lastName="Cikovic" role="Plaintiff"></party>
+ <party firstName="Debbie" fullName="Debbie Cikovic" lastName="Cikovic" role="Plaintiff"></party>
+ <party fullName="CoreLogic, Inc" lastName="CoreLogic, Inc" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-25" lastName="Does 1-25" role="Defendant"></party>
+ <party fullName="Government National Mortgage Association" lastName="Government National Mortgage Association" role="Defendant"></party>
+ <party fullName="Homebridge Mortgage Bankers Corp" lastName="Homebridge Mortgage Bankers Corp" role="Defendant"></party>
+ <party fullName="JP Morgan Chase Bank N.A." lastName="JP Morgan Chase Bank N.A." role="Defendant"></party>
+ <party fullName="Jane Doe Trusts" lastName="Jane Doe Trusts" role="Defendant"></party>
+ <party fullName="MERSCORP Holdings, Inc." lastName="MERSCORP Holdings, Inc." role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration System, Inc." lastName="Mortgage Electronic Registration System, Inc." role="Defendant"></party>
+ <party fullName="Recontrust Company, N.A." lastName="Recontrust Company, N.A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Cikovic et al v. Homebridge Mortgage Bankers Corp et al</title>
+ <partNumber>3:12-cv-00671</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_12-cv-00671/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-00671;12-671</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Tennessee</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Knoxville</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Bank of America, N.A.</displayForm>
+ <namePart type="family">Bank of America, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Cikovic</displayForm>
+ <namePart type="family">Cikovic</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Debbie Cikovic</displayForm>
+ <namePart type="family">Cikovic</namePart>
+ <namePart type="given">Debbie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CoreLogic, Inc</displayForm>
+ <namePart type="family">CoreLogic, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1-25</displayForm>
+ <namePart type="family">Does 1-25</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Government National Mortgage Association</displayForm>
+ <namePart type="family">Government National Mortgage Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Homebridge Mortgage Bankers Corp</displayForm>
+ <namePart type="family">Homebridge Mortgage Bankers Corp</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JP Morgan Chase Bank N.A.</displayForm>
+ <namePart type="family">JP Morgan Chase Bank N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe Trusts</displayForm>
+ <namePart type="family">Jane Doe Trusts</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MERSCORP Holdings, Inc.</displayForm>
+ <namePart type="family">MERSCORP Holdings, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mortgage Electronic Registration System, Inc.</displayForm>
+ <namePart type="family">Mortgage Electronic Registration System, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Recontrust Company, N.A.</displayForm>
+ <namePart type="family">Recontrust Company, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-tned-3_12-cv-00671</accessId>
+ <courtType>District</courtType>
+ <courtCode>tned</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Tennessee</courtState>
+ <courtSortOrder>2471</courtSortOrder>
+ <caseNumber>3:12-cv-00671</caseNumber>
+ <caseOffice>Knoxville</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>15:1692 Fair Debt Collection Act</cause>
+ <party fullName="Bank of America, N.A." lastName="Bank of America, N.A." role="Defendant"></party>
+ <party firstName="David" fullName="David Cikovic" lastName="Cikovic" role="Plaintiff"></party>
+ <party firstName="Debbie" fullName="Debbie Cikovic" lastName="Cikovic" role="Plaintiff"></party>
+ <party fullName="CoreLogic, Inc" lastName="CoreLogic, Inc" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1-25" lastName="Does 1-25" role="Defendant"></party>
+ <party fullName="Government National Mortgage Association" lastName="Government National Mortgage Association" role="Defendant"></party>
+ <party fullName="Homebridge Mortgage Bankers Corp" lastName="Homebridge Mortgage Bankers Corp" role="Defendant"></party>
+ <party fullName="JP Morgan Chase Bank N.A." lastName="JP Morgan Chase Bank N.A." role="Defendant"></party>
+ <party fullName="Jane Doe Trusts" lastName="Jane Doe Trusts" role="Defendant"></party>
+ <party fullName="MERSCORP Holdings, Inc." lastName="MERSCORP Holdings, Inc." role="Defendant"></party>
+ <party fullName="Mortgage Electronic Registration System, Inc." lastName="Mortgage Electronic Registration System, Inc." role="Defendant"></party>
+ <party fullName="Recontrust Company, N.A." lastName="Recontrust Company, N.A." role="Defendant"></party>
+ <state>Tennessee</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_12-cv-00671-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-0/mods.xml">
+ <titleInfo>
+  <title>Cikovic et al v. Homebridge Mortgage Bankers Corp et al</title>
+  <subTitle>ORDER granting the motions to dismiss filed by Defendants Bank of America, N.A., ReconTrust Company, N.A, Mortgage Electronic Registration Systems, Inc., and MERSCORP Holdings, Inc. 8, CoreLogic, Inc. 20, and JP Morgan Chase Bank, N.A. 23. The Claims against Bank of America, N.A., ReconTrust Company, N.A., Mortgage Electronic Registration Systems, Inc., MERSCORP Holdings, Inc., Corelogic, Inc., and JP Morgan Chase Bank, N.A. are DISMISSED. Within 14 days of the entry date of this opinion, the Plaintiffs SHALL SHOW CAUSE why this action should not be DISMISSED in its entirety; and the Plaintiffs&apos; motion for extension of time 25 is DENIED as moot, the Plaintiffs having made the same request in another motion that the Court has already granted 26 27. Signed by District Judge Karen K Caldwell on September 27, 2013. (AYB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-3_12-cv-00671-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e248</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-0</identifier>
+ <identifier type="former granule identifier">tned-3_12-cv-00671_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_12-cv-00671/pdf/USCOURTS-tned-3_12-cv-00671-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00671; Cikovic et al v. Homebridge Mortgage Bankers Corp et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_12-cv-00671-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-09-27</dateIssued>
+  <docketText>ORDER granting the motions to dismiss filed by Defendants Bank of America, N.A., ReconTrust Company, N.A, Mortgage Electronic Registration Systems, Inc., and MERSCORP Holdings, Inc. 8, CoreLogic, Inc. 20, and JP Morgan Chase Bank, N.A. 23. The Claims against Bank of America, N.A., ReconTrust Company, N.A., Mortgage Electronic Registration Systems, Inc., MERSCORP Holdings, Inc., Corelogic, Inc., and JP Morgan Chase Bank, N.A. are DISMISSED. Within 14 days of the entry date of this opinion, the Plaintiffs SHALL SHOW CAUSE why this action should not be DISMISSED in its entirety; and the Plaintiffs&apos; motion for extension of time 25 is DENIED as moot, the Plaintiffs having made the same request in another motion that the Court has already granted 26 27. Signed by District Judge Karen K Caldwell on September 27, 2013. (AYB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-tned-3_12-cv-00671-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-1/mods.xml">
+ <titleInfo>
+  <title>Cikovic et al v. Homebridge Mortgage Bankers Corp et al</title>
+  <subTitle>JUDGMENT, in accordance with the opinion and order entered on September 27, 2013 32 and the order entered on the date of this judgment, the Court hereby ORDERS as follows: 1) this matter is DISMISSED in its entirety against all Defendants; 2) this Judgment is FINAL and APPEALABLE; and 3) this matter is STRICKEN from the Court&apos;s active docket. Signed by District Judge Karen K Caldwell on January 2, 2014. (AYB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-tned-3_12-cv-00671-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3e247</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-1</identifier>
+ <identifier type="former granule identifier">tned-3_12-cv-00671_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-tned-3_12-cv-00671/USCOURTS-tned-3_12-cv-00671-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-tned-3_12-cv-00671/pdf/USCOURTS-tned-3_12-cv-00671-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00671; Cikovic et al v. Homebridge Mortgage Bankers Corp et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Tennessee</courtName>
+  <state>Tennessee</state>
+  <accessId>USCOURTS-tned-3_12-cv-00671-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>JUDGMENT, in accordance with the opinion and order entered on September 27, 2013 32 and the order entered on the date of this judgment, the Court hereby ORDERS as follows: 1) this matter is DISMISSED in its entirety against all Defendants; 2) this Judgment is FINAL and APPEALABLE; and 3) this matter is STRICKEN from the Court&apos;s active docket. Signed by District Judge Karen K Caldwell on January 2, 2014. (AYB)</docketText>
+</extension>
+</relatedItem>
+</mods>

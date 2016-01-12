@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18174caf7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03192</identifier>
+<identifier type="local">P0b002ee18174caf7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_11-cv-03192</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03192</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Jeff" fullName="Jeff Dinklage" lastName="Dinklage" role="Counter Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Dinklage" lastName="Dinklage" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard R. Montanaro, Jr." lastName="Montanaro, Jr." middleName="R." role="Counter Claimant"></party>
+ <party firstName="Richard" fullName="Richard R. Montanaro, Jr." lastName="Montanaro, Jr." middleName="R." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Dinklage v. Montanaro, Jr.</title>
+ <partNumber>4:11-cv-03192</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03192/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:11-cv-03192;11-3192</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jeff Dinklage</displayForm>
+ <namePart type="family">Dinklage</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Dinklage</displayForm>
+ <namePart type="family">Dinklage</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard R. Montanaro, Jr.</displayForm>
+ <namePart type="family">Montanaro, Jr.</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Counter Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard R. Montanaro, Jr.</displayForm>
+ <namePart type="family">Montanaro, Jr.</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_11-cv-03192</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:11-cv-03192</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Jeff" fullName="Jeff Dinklage" lastName="Dinklage" role="Counter Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Dinklage" lastName="Dinklage" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard R. Montanaro, Jr." lastName="Montanaro, Jr." middleName="R." role="Counter Claimant"></party>
+ <party firstName="Richard" fullName="Richard R. Montanaro, Jr." lastName="Montanaro, Jr." middleName="R." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_11-cv-03192-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03192/USCOURTS-ned-4_11-cv-03192-0/mods.xml">
+ <titleInfo>
+  <title>Dinklage v. Montanaro, Jr.</title>
+  <subTitle>ORDER sustaining 11 Defendant&apos;s Objection to the Plaintiff&apos;s Notice of Intent to Issue Subpoena Duces Tecum and denying Defendant&apos;s Motion for Protective Order as moot. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_11-cv-03192-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177ebc5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03192/USCOURTS-ned-4_11-cv-03192-0</identifier>
+ <identifier type="former granule identifier">ned-4_11-cv-03192_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_11-cv-03192/USCOURTS-ned-4_11-cv-03192-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_11-cv-03192/pdf/USCOURTS-ned-4_11-cv-03192-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:11-cv-03192; Dinklage v. Montanaro, Jr.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_11-cv-03192-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-09</dateIssued>
+  <docketText>ORDER sustaining 11 Defendant&apos;s Objection to the Plaintiff&apos;s Notice of Intent to Issue Subpoena Duces Tecum and denying Defendant&apos;s Motion for Protective Order as moot. Ordered by Magistrate Judge Cheryl R. Zwart. (BHC)</docketText>
+</extension>
+</relatedItem>
+</mods>

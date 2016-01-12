@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c68a6f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-07</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_13-cv-00538</identifier>
+<identifier type="local">P0b002ee186c68a6f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-07</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-07</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alsd-1_13-cv-00538</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_13-cv-00538</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:13-cv-00538</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Duane" fullName="Duane Earl Fanning III" generation="III" lastName="Fanning" middleName="Earl" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Graham" lastName="Graham" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fanning v. Graham</title>
+ <partNumber>1:13-cv-00538</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_13-cv-00538/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00538;13-538</identifier>
+<name type="corporate">
+ <namePart>United States District Court Southern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Mobile</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Duane Earl Fanning III</displayForm>
+ <namePart type="family">Fanning</namePart>
+ <namePart type="given">Duane</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>L. Graham</displayForm>
+ <namePart type="family">Graham</namePart>
+ <namePart type="given">L.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alsd-1_13-cv-00538</accessId>
+ <courtType>District</courtType>
+ <courtCode>alsd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2013</courtSortOrder>
+ <caseNumber>1:13-cv-00538</caseNumber>
+ <caseOffice>Mobile</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Duane" fullName="Duane Earl Fanning III" generation="III" lastName="Fanning" middleName="Earl" role="Plaintiff"></party>
+ <party firstName="L." fullName="L. Graham" lastName="Graham" role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_13-cv-00538-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-0/mods.xml">
+ <titleInfo>
+  <title>Fanning v. Graham</title>
+  <subTitle>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Duane Earl Fanning, III. It is recommended that the 2 MOTION for Leave to Proceed in forma pauperis be denied and that this action be dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B)(i). Objections to R&amp;R due by 12/26/2013.. Signed by Magistrate Judge Sonja F. Bivins on 12/5/2013. Copy mailed to Plaintiff. (tgw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_13-cv-00538-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c7433b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-0</identifier>
+ <identifier type="former granule identifier">alsd-1_13-cv-00538_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_13-cv-00538/pdf/USCOURTS-alsd-1_13-cv-00538-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00538; Fanning v. Graham; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_13-cv-00538-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-12-05</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS re 1 Complaint filed by Duane Earl Fanning, III. It is recommended that the 2 MOTION for Leave to Proceed in forma pauperis be denied and that this action be dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B)(i). Objections to R&amp;R due by 12/26/2013.. Signed by Magistrate Judge Sonja F. Bivins on 12/5/2013. Copy mailed to Plaintiff. (tgw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_13-cv-00538-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-1/mods.xml">
+ <titleInfo>
+  <title>Fanning v. Graham</title>
+  <subTitle>ORDER ADOPTING the 3 REPORT AND RECOMMENDATIONS. It is ordered that the MOTION for Leave to Proceed in forma pauperis (Doc. 2) is denied, that this action be dismissed without prejudice pursuant to 28 U.S.C. § 1915(e)(2)(B)(i), and that this action be counted as a strike for purposes of future IFP eligibility under § 1915(g), in that it is malicious. Signed by Chief Judge William H. Steele on 1/6/2014. Copy mailed to Plaintiff. (tgw)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_13-cv-00538-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c7433c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-1</identifier>
+ <identifier type="former granule identifier">alsd-1_13-cv-00538_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_13-cv-00538/pdf/USCOURTS-alsd-1_13-cv-00538-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00538; Fanning v. Graham; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_13-cv-00538-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER ADOPTING the 3 REPORT AND RECOMMENDATIONS. It is ordered that the MOTION for Leave to Proceed in forma pauperis (Doc. 2) is denied, that this action be dismissed without prejudice pursuant to 28 U.S.C. § 1915(e)(2)(B)(i), and that this action be counted as a strike for purposes of future IFP eligibility under § 1915(g), in that it is malicious. Signed by Chief Judge William H. Steele on 1/6/2014. Copy mailed to Plaintiff. (tgw)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alsd-1_13-cv-00538-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-2/mods.xml">
+ <titleInfo>
+  <title>Fanning v. Graham</title>
+  <subTitle>JUDGMENT: It is ORDERED, ADJUDGED, and DECREED that Fanning&apos;s Motion to Proceed Without Prepayment of Fees (Doc. 2) be DENIED, that this action be dismissed without prejudice pursuant to 28 U.S.C. § 1915(e)(2)(B)(i), and that action be counted as a strike for purposes of future IFP eligibility under § 1915(g), in that it is malicious. Signed by Chief Judge William H. Steele on 1/6/2014. Copy mailed to Plaintiff. (tgw)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alsd-1_13-cv-00538-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c7433a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-2</identifier>
+ <identifier type="former granule identifier">alsd-1_13-cv-00538_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alsd-1_13-cv-00538/USCOURTS-alsd-1_13-cv-00538-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alsd-1_13-cv-00538/pdf/USCOURTS-alsd-1_13-cv-00538-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00538; Fanning v. Graham; </searchTitle>
+  <courtName>United States District Court Southern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alsd-1_13-cv-00538-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>JUDGMENT: It is ORDERED, ADJUDGED, and DECREED that Fanning&apos;s Motion to Proceed Without Prepayment of Fees (Doc. 2) be DENIED, that this action be dismissed without prejudice pursuant to 28 U.S.C. § 1915(e)(2)(B)(i), and that action be counted as a strike for purposes of future IFP eligibility under § 1915(g), in that it is malicious. Signed by Chief Judge William H. Steele on 1/6/2014. Copy mailed to Plaintiff. (tgw)</docketText>
+</extension>
+</relatedItem>
+</mods>

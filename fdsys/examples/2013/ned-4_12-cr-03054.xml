@@ -1,0 +1,415 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1844ac020">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-04-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-16</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054</identifier>
+<identifier type="local">P0b002ee1844ac020</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-04-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-04-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-cr-03054</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03054</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03054</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Espinoza" lastName="Espinoza" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Orta Espinoza" lastName="Espinoza" middleName="Orta" role="Defendant"></party>
+ <party fullName="Lagarta" lastName="Lagarta" role="Defendant"></party>
+ <party fullName="Lagarto" lastName="Lagarto" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Orta" lastName="Orta" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Orta" lastName="Orta" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Espinoza</title>
+ <partNumber>4:12-cr-03054</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cr-03054;12-3054</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose Espinoza</displayForm>
+ <namePart type="family">Espinoza</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Orta Espinoza</displayForm>
+ <namePart type="family">Espinoza</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lagarta</displayForm>
+ <namePart type="family">Lagarta</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lagarto</displayForm>
+ <namePart type="family">Lagarto</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose Orta</displayForm>
+ <namePart type="family">Orta</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Luis Orta</displayForm>
+ <namePart type="family">Orta</namePart>
+ <namePart type="given">Luis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03054</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03054</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Espinoza" lastName="Espinoza" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Orta Espinoza" lastName="Espinoza" middleName="Orta" role="Defendant"></party>
+ <party fullName="Lagarta" lastName="Lagarta" role="Defendant"></party>
+ <party fullName="Lagarto" lastName="Lagarto" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Orta" lastName="Orta" role="Defendant"></party>
+ <party firstName="Luis" fullName="Luis Orta" lastName="Orta" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Luis Orta Espinoza. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-06-26</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Luis Orta Espinoza. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>MEMORNADUM AND ORDER denying 26 defendant&apos;s motion to review detention as to Luis Orta Espinoza (1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e33</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-13</dateIssued>
+  <docketText>MEMORNADUM AND ORDER denying 26 defendant&apos;s motion to review detention as to Luis Orta Espinoza (1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>MEMORANDUM AND ORDER granting 28 Defendant&apos;s Motion to Continue Trial as to Luis Orta Espinoza (1). 5-day Jury Trial continued to 10/1/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-08-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 28 Defendant&apos;s Motion to Continue Trial as to Luis Orta Espinoza (1). 5-day Jury Trial continued to 10/1/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>MEMORANDUM AND ORDER granting 30 Motion to Continue Trial as to Luis Orta Espinoza (1). Jury Trial continued to 10/23/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e34</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-3</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-09-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 30 Motion to Continue Trial as to Luis Orta Espinoza (1). Jury Trial continued to 10/23/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>MEMORANDUM AND ORDER granting 32 Defendant&apos;s Motion to Continue Trial as to Luis Orta Espinoza (1). Jury Trial continued to 11/26/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e9f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-4</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-10-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 32 Defendant&apos;s Motion to Continue Trial as to Luis Orta Espinoza (1). Jury Trial continued to 11/26/2012 at 09:00 AM in Courtroom 1, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge John M. Gerrard. The time between today&apos;s date and the anticipated hearing/trial is excluded for purposes of computing the limits under the Speedy Trial Act. See 18 U.S.C. 3161(h)(1). Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>MEMORANDUM AND ORDER granting 35 Defendant&apos;s Oral Motion to Continue as to Luis Orta Espinoza (1). Change of Plea Hearing continued to 1/11/2013 02:00 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e32</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-5</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-12-18</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 35 Defendant&apos;s Oral Motion to Continue as to Luis Orta Espinoza (1). Change of Plea Hearing continued to 1/11/2013 02:00 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. The time between today&apos;s date and the anticipated plea of guilty, shall be deemed excluded in any computation of time under the requirements of the Speedy Trial Act. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>ORDER granting 37 Email Motion as to Luis Orta Espinoza (1). Change of Plea Hearing is reset for 1/17/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-6</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER granting 37 Email Motion as to Luis Orta Espinoza (1). Change of Plea Hearing is reset for 1/17/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>TENTATIVE FINDINGS regarding Presentence Investigation Report as to defendant Luis Orta Espinoza. Ordered by Judge John M. Gerrard. (GJG)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e35</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-7</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-03-29</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding Presentence Investigation Report as to defendant Luis Orta Espinoza. Ordered by Judge John M. Gerrard. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03054-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Espinoza</title>
+  <subTitle>JUDGMENT as to Luis Orta Espinoza (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 151 months; 5 years supervised release with special conditions; $100.00 special assessment as to defendant Luis Orta Espinoza. Ordered by Judge John M. Gerrard. (4 Certified copies to USM) (ADB)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03054-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184524e2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-8</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03054_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03054/USCOURTS-ned-4_12-cr-03054-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03054/pdf/USCOURTS-ned-4_12-cr-03054-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03054; USA v. Espinoza; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03054-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-04-16</dateIssued>
+  <docketText>JUDGMENT as to Luis Orta Espinoza (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of 151 months; 5 years supervised release with special conditions; $100.00 special assessment as to defendant Luis Orta Espinoza. Ordered by Judge John M. Gerrard. (4 Certified copies to USM) (ADB)</docketText>
+</extension>
+</relatedItem>
+</mods>

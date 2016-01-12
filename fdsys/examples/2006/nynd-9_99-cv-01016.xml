@@ -1,0 +1,213 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118ad54">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01016</identifier>
+<identifier type="local">P0b002ee18118ad54</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_99-cv-01016</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_99-cv-01016</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:99-cv-01016</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="D." fullName="D. Barber" lastName="Barber" role="Defendant"></party>
+ <party firstName="Lloyd" fullName="Lloyd Elton Boddie" lastName="Boddie" middleName="Elton" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Bradley" lastName="Bradley" role="Defendant"></party>
+ <party firstName="P." fullName="P. Callanan" lastName="Callanan" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Harvey" lastName="Harvey" role="Defendant"></party>
+ <party firstName="M." fullName="M. Lamar" lastName="Lamar" role="Defendant"></party>
+ <party firstName="W." fullName="W. Naylor" lastName="Naylor" role="Defendant"></party>
+ <party firstName="M." fullName="M. Schaap" lastName="Schaap" role="Defendant"></party>
+ <party firstName="G." fullName="G. Scrcki" lastName="Scrcki" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Boddie v. Bradley, et al</title>
+ <partNumber>9:99-cv-01016</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01016/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:99-cv-01016;99-1016</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>D. Barber</displayForm>
+ <namePart type="family">Barber</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lloyd Elton Boddie</displayForm>
+ <namePart type="family">Boddie</namePart>
+ <namePart type="given">Lloyd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. Bradley</displayForm>
+ <namePart type="family">Bradley</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P. Callanan</displayForm>
+ <namePart type="family">Callanan</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mr. Harvey</displayForm>
+ <namePart type="family">Harvey</namePart>
+ <namePart type="given">Mr.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Lamar</displayForm>
+ <namePart type="family">Lamar</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Naylor</displayForm>
+ <namePart type="family">Naylor</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Schaap</displayForm>
+ <namePart type="family">Schaap</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G. Scrcki</displayForm>
+ <namePart type="family">Scrcki</namePart>
+ <namePart type="given">G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_99-cv-01016</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:99-cv-01016</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="D." fullName="D. Barber" lastName="Barber" role="Defendant"></party>
+ <party firstName="Lloyd" fullName="Lloyd Elton Boddie" lastName="Boddie" middleName="Elton" role="Plaintiff"></party>
+ <party firstName="J." fullName="J. Bradley" lastName="Bradley" role="Defendant"></party>
+ <party firstName="P." fullName="P. Callanan" lastName="Callanan" role="Defendant"></party>
+ <party firstName="Mr." fullName="Mr. Harvey" lastName="Harvey" role="Defendant"></party>
+ <party firstName="M." fullName="M. Lamar" lastName="Lamar" role="Defendant"></party>
+ <party firstName="W." fullName="W. Naylor" lastName="Naylor" role="Defendant"></party>
+ <party firstName="M." fullName="M. Schaap" lastName="Schaap" role="Defendant"></party>
+ <party firstName="G." fullName="G. Scrcki" lastName="Scrcki" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_99-cv-01016-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01016/USCOURTS-nynd-9_99-cv-01016-0/mods.xml">
+ <titleInfo>
+  <title>Boddie v. Bradley, et al</title>
+  <subTitle>ORDER granting Defts&apos; motion to dismiss and DISMISSING the complaint because Pltf failed to exhaust available administrative remedies. Signed by Judge David E. Peebles on 1/20/06. (amt, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_99-cv-01016-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18142ec4f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01016/USCOURTS-nynd-9_99-cv-01016-0</identifier>
+ <identifier type="former granule identifier">nynd-9_99-cv-01016_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_99-cv-01016/USCOURTS-nynd-9_99-cv-01016-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_99-cv-01016/pdf/USCOURTS-nynd-9_99-cv-01016-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:99-cv-01016; Boddie v. Bradley, et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_99-cv-01016-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>ORDER granting Defts&apos; motion to dismiss and DISMISSING the complaint because Pltf failed to exhaust available administrative remedies. Signed by Judge David E. Peebles on 1/20/06. (amt, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,1423 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18177d6c7">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061</identifier>
+<identifier type="local">P0b002ee18177d6c7</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00061</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00061</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dalinda" fullName="Dalinda Garcia" lastName="Garcia" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto M. Morales Jr." generation="Jr." lastName="Morales" middleName="M." role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto M. Morales Sr." generation="Sr." lastName="Morales" middleName="M." role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Alberto Padilla-Palacios" lastName="Padilla-Palacios" middleName="Alberto" role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Reyes" lastName="Reyes" role="Defendant"></party>
+ <party firstName="Armando" fullName="Armando Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Garcia et al</title>
+ <partNumber>8:06-cr-00061</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00061;06-061</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dalinda Garcia</displayForm>
+ <namePart type="family">Garcia</namePart>
+ <namePart type="given">Dalinda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto M. Morales Jr.</displayForm>
+ <namePart type="family">Morales</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roberto M. Morales Sr.</displayForm>
+ <namePart type="family">Morales</namePart>
+ <namePart type="given">Roberto</namePart>
+ <namePart type="termsOfAddress">Sr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jesus Alberto Padilla-Palacios</displayForm>
+ <namePart type="family">Padilla-Palacios</namePart>
+ <namePart type="given">Jesus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Danny Reyes</displayForm>
+ <namePart type="family">Reyes</namePart>
+ <namePart type="given">Danny</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Armando Rodriguez</displayForm>
+ <namePart type="family">Rodriguez</namePart>
+ <namePart type="given">Armando</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00061</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00061</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Dalinda" fullName="Dalinda Garcia" lastName="Garcia" role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto M. Morales Jr." generation="Jr." lastName="Morales" middleName="M." role="Defendant"></party>
+ <party firstName="Roberto" fullName="Roberto M. Morales Sr." generation="Sr." lastName="Morales" middleName="M." role="Defendant"></party>
+ <party firstName="Jesus" fullName="Jesus Alberto Padilla-Palacios" lastName="Padilla-Palacios" middleName="Alberto" role="Defendant"></party>
+ <party firstName="Danny" fullName="Danny Reyes" lastName="Reyes" role="Defendant"></party>
+ <party firstName="Armando" fullName="Armando Rodriguez" lastName="Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. Mr. Jon S. Natvig is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Natvig as to Danny Reyes. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd170</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. Mr. Jon S. Natvig is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Natvig as to Danny Reyes. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. Mr. A. Michael Bianchi is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Bianchi as to Roberto M. Morales Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed) (KBJ)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd153</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. Mr. A. Michael Bianchi is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Bianchi as to Roberto M. Morales Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. Mr. W. Russell Bowie is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Bowie as to Roberto M. Morales Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. Mr. W. Russell Bowie is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Bowie as to Roberto M. Morales Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. Mr. Donald L. Schense is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Schense as to defendant Armando Rodriguez. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed) (KBJ)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd16f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. Mr. Donald L. Schense is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Schense as to defendant Armando Rodriguez. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. Mr. Michael D. Nelson is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Nelson as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. (KBJ)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd157</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. Mr. Michael D. Nelson is appointed to represent the above named defendant in this matter and shall forthwith file a written appearance in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender and Mr. Nelson as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting Oral Motion to Appoint Counsel. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska as to defendant Dalinda Garcia. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd17b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-03-02</dateIssued>
+  <docketText>ORDER granting Oral Motion to Appoint Counsel. The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter. IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to the Federal Public Defender for the District of Nebraska as to defendant Dalinda Garcia. Signed by Magistrate Judge Thomas D. Thalken on 3/2/2006. - (copies as directed)(KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - Mr. Bowie&apos;s oral motion to withdraw is granted. Mr. Bowie has leave to withdraw as counsel for Morales. Mr. Clarence E. Mock is appointed torepresent Morales for the balance of these proceedings. Mr. Mock shall file an appearance in this matter forthwith. Mr. Bowie shall forthwith provide Mr. Mock with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Bowie which are material to Morales&apos;s defense.IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to Mr. Mock and the Office of the Federal Public Defender. IT IS FURTHER ORDERED that Mr. Bowie shall submit his final CJA voucher to the office of the Federal Public Defender within forty-five (45) days of this order as to defendant Roberto M. Morales Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/7/2006. - (Copies as directed) (KBJ)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-03-07</dateIssued>
+  <docketText>ORDER - Mr. Bowie&apos;s oral motion to withdraw is granted. Mr. Bowie has leave to withdraw as counsel for Morales. Mr. Clarence E. Mock is appointed torepresent Morales for the balance of these proceedings. Mr. Mock shall file an appearance in this matter forthwith. Mr. Bowie shall forthwith provide Mr. Mock with the discovery materials provided the defendant by the government and such other materials obtained by Mr. Bowie which are material to Morales&apos;s defense.IT IS FURTHER ORDERED that the Clerk shall provide a copy of this order to Mr. Mock and the Office of the Federal Public Defender. IT IS FURTHER ORDERED that Mr. Bowie shall submit his final CJA voucher to the office of the Federal Public Defender within forty-five (45) days of this order as to defendant Roberto M. Morales Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/7/2006. - (Copies as directed) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Roberto M. Morales, Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd150</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-03-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Roberto M. Morales, Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Roberto M. Morales, Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd177</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2006-03-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Roberto M. Morales, Sr. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER of Detention pending trial as to defendant(s) Danny Reyes. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd14f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-9</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2006-03-08</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant(s) Danny Reyes. Signed by Magistrate Judge Thomas D. Thalken on 3/8/2006. (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER that Mr. O&apos;Connor&apos;s motion to withdraw (Filing No. 49) is granted. Susan M. Bazis is appointed to represent defendant Dalinda Garcia pursuant to the Criminal Justice Act. The clerk shall provide a copy of this order to Ms. Bazis, and Ms. Bazis shall enterher appearance in this matter forthwith. Signed by Magistrate Judge Thomas D. Thalken on 3/22/2006. (DKM, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd156</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-10</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2006-03-22</dateIssued>
+  <docketText>ORDER that Mr. O&apos;Connor&apos;s motion to withdraw (Filing No. 49) is granted. Susan M. Bazis is appointed to represent defendant Dalinda Garcia pursuant to the Criminal Justice Act. The clerk shall provide a copy of this order to Ms. Bazis, and Ms. Bazis shall enterher appearance in this matter forthwith. Signed by Magistrate Judge Thomas D. Thalken on 3/22/2006. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - The defendant&apos;s MOTION to Extend Time to File Pretrial Motions and Continue Trial 52 will be held in abeyance until March 31, 2006, pending compliance with NECrimR 12.3 as set forth above. In the absence of such compliance, the motion will be denied as to defendant Roberto M. Morales, Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd17d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-11</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2006-03-24</dateIssued>
+  <docketText>ORDER - The defendant&apos;s MOTION to Extend Time to File Pretrial Motions and Continue Trial 52 will be held in abeyance until March 31, 2006, pending compliance with NECrimR 12.3 as set forth above. In the absence of such compliance, the motion will be denied as to defendant Roberto M. Morales, Jr. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - The defendant&apos;s Motion to Extend time to file pretrial motions 54 is granted. The defendant shall have until on or before 4/14/06 in which to file pretrial motions in accordance with the progression order 14. The time between 3/24/06 and 4/14/06 shall be excluded under the Speedy Trial Act as to defendant Dalinda Garcia. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd17c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-12</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2006-03-24</dateIssued>
+  <docketText>ORDER - The defendant&apos;s Motion to Extend time to file pretrial motions 54 is granted. The defendant shall have until on or before 4/14/06 in which to file pretrial motions in accordance with the progression order 14. The time between 3/24/06 and 4/14/06 shall be excluded under the Speedy Trial Act as to defendant Dalinda Garcia. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - The defendant&apos;s Motion to Extend time to file pretrial motions 48 is granted. The defendant shall have to on or before 4/21/06 in which to file pretrial motions pursuant to the progression order 14. The time between 3/24/06 and 4/21/06 shall be excluded under the Speedy Trial Act as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8be</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-13</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2006-03-24</dateIssued>
+  <docketText>ORDER - The defendant&apos;s Motion to Extend time to file pretrial motions 48 is granted. The defendant shall have to on or before 4/21/06 in which to file pretrial motions pursuant to the progression order 14. The time between 3/24/06 and 4/21/06 shall be excluded under the Speedy Trial Act as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 3/24/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - The Defendant Rodriguez&apos;s motion for an extension of time 50 is granted. Defendant Rodriguez is given until on or before 4/14/06, in which to file pretrial motions pursuant to the progression order. The time between 3/30/06 and 4/14/06 shall be excluded under the Speedy Trial Act as to defendant Armando Rodriguez. Signed by Magistrate Judge Thomas D. Thalken on 3/30/2006. (KBJ)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd171</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-14</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2006-03-30</dateIssued>
+  <docketText>ORDER - The Defendant Rodriguez&apos;s motion for an extension of time 50 is granted. Defendant Rodriguez is given until on or before 4/14/06, in which to file pretrial motions pursuant to the progression order. The time between 3/30/06 and 4/14/06 shall be excluded under the Speedy Trial Act as to defendant Armando Rodriguez. Signed by Magistrate Judge Thomas D. Thalken on 3/30/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - Defendant Morales&apos;s motion for an extension of time Filing No. 52 isgranted. Defendant Morales is given until on or before April 14, 2006, in which to file pretrial motions pursuant to the progression order; thetime between April 3, 2006 and April 14, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act; The trial of this matter will be rescheduled following the disposition of anypretrial motions in case as to Roberto M. Morales Jr. (2) Signed by Magistrate Judge Thomas D. Thalken on 4/3/2006. (TJS)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd175</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-15</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2006-04-03</dateIssued>
+  <docketText>ORDER - Defendant Morales&apos;s motion for an extension of time Filing No. 52 isgranted. Defendant Morales is given until on or before April 14, 2006, in which to file pretrial motions pursuant to the progression order; thetime between April 3, 2006 and April 14, 2006, shall be deemed excludable time in any computation of time under the requirement of the Speedy Trial Act; The trial of this matter will be rescheduled following the disposition of anypretrial motions in case as to Roberto M. Morales Jr. (2) Signed by Magistrate Judge Thomas D. Thalken on 4/3/2006. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd159</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-16</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2006-04-25</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendants Dalinda Garcia, Roberto M. Morales, Jr, Roberto M. Morales, Sr, Jesus Alberto Padilla-Palacios, Armando Rodriguez, and Danny Reyes. Signed by Judge Laurie Smith Camp on 4/25/2006. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER as to defendant Roberto M. Morales Sr. that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 05/15/2006 at 2:30 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 5/10/2006. (MBB)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-17</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2006-05-10</dateIssued>
+  <docketText>ORDER as to defendant Roberto M. Morales Sr. that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 05/15/2006 at 2:30 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 5/10/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER - The defendant requests permission to enter a plea of guilty and will consent to a Magistrate Judge conducting the hearing. The change of plea hearing is scheduled for 6/23/06 at 1:30p.m. in Courtroom No. 7(Omaha) before the undersigned Magistrate Judge. For this defendant, the time between 6/1/06 and 6/23/06 shall be excluded under the Speedy Trial Act as to defendant Dalinda Garcia. Change of Plea Hearing set for 6/23/2006 01:30 PM in Courtroom 7 (Omaha) before Magistrate Judge Thomas D. Thalken. Signed by Magistrate Judge Thomas D. Thalken on 6/1/2006. (KBJ)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-18</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2006-06-01</dateIssued>
+  <docketText>ORDER - The defendant requests permission to enter a plea of guilty and will consent to a Magistrate Judge conducting the hearing. The change of plea hearing is scheduled for 6/23/06 at 1:30p.m. in Courtroom No. 7(Omaha) before the undersigned Magistrate Judge. For this defendant, the time between 6/1/06 and 6/23/06 shall be excluded under the Speedy Trial Act as to defendant Dalinda Garcia. Change of Plea Hearing set for 6/23/2006 01:30 PM in Courtroom 7 (Omaha) before Magistrate Judge Thomas D. Thalken. Signed by Magistrate Judge Thomas D. Thalken on 6/1/2006. (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER as to defendant Danny Reyes that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/29/2006 at 2:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/5/2006. (MBB)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd17a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-19</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2006-06-05</dateIssued>
+  <docketText>ORDER as to defendant Danny Reyes that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/29/2006 at 2:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/5/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>MEMORANDUM AND ORDER The Report and Recommendation (Filing No. 79) is adopted; The Defendant is found guilty. The plea is accepted. The Court finds thatthe plea of guilty is knowing, intelligent, voluntary, and that a factual basisexists for the plea; I defer acceptance of the plea agreement until the time of sentencing pursuant to Federal Rule of Criminal Procedure 11(c)(3). This case shall proceed to sentencing as to defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 6/8/2006. (DKM)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-20</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2006-06-08</dateIssued>
+  <docketText>MEMORANDUM AND ORDER The Report and Recommendation (Filing No. 79) is adopted; The Defendant is found guilty. The plea is accepted. The Court finds thatthe plea of guilty is knowing, intelligent, voluntary, and that a factual basisexists for the plea; I defer acceptance of the plea agreement until the time of sentencing pursuant to Federal Rule of Criminal Procedure 11(c)(3). This case shall proceed to sentencing as to defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 6/8/2006. (DKM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER as to defendant Roberto M. Morales Jr. that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/22/2006 at 3:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/9/2006. (MBB)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-21</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2006-06-09</dateIssued>
+  <docketText>ORDER as to defendant Roberto M. Morales Jr. that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/22/2006 at 3:00 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/9/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TRIAL ORDER as to defendant(s) Armando Rodriguez. Jury Trial set for 6/27/2006 at 9:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Any motions for a continuance shall be filed forthwith. Counsel for the United States shall confer with defense counsel and, no laterthan June 20, 2006, advise the court of the anticipated length of trial. Signed by Judge F. A. Gossett on 6/13/2006. (CLS, )</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd160</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-22</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2006-06-13</dateIssued>
+  <docketText>TRIAL ORDER as to defendant(s) Armando Rodriguez. Jury Trial set for 6/27/2006 at 9:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Any motions for a continuance shall be filed forthwith. Counsel for the United States shall confer with defense counsel and, no laterthan June 20, 2006, advise the court of the anticipated length of trial. Signed by Judge F. A. Gossett on 6/13/2006. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-23/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER as to defendant Jesus Alberto Padilla-Palacios that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/29/2006 at 2:45 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/13/2006. (MBB)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-23</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2006-06-13</dateIssued>
+  <docketText>ORDER as to defendant Jesus Alberto Padilla-Palacios that a hearing on the defendant&apos;s anticipated plea of guilty is scheduled before Magistrate Judge Thomas D. Thalken on 06/29/2006 at 2:45 p.m. in Courtroom No. 7, Second Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska. The time between today&apos;s date and the hearing on the anticipated plea of guilty is excluded for purposes of computing the limits under the Speedy Trial Act. Signed by Magistrate Judge Thomas D. Thalken on 6/13/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-24/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER denying 101 Motion to Continue Trial as to Armando Rodriguez (5). Signed by Magistrate Judge F. A. Gossett on 6/21/2006. (CLS, )</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd14d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-24</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2006-06-21</dateIssued>
+  <docketText>ORDER denying 101 Motion to Continue Trial as to Armando Rodriguez (5). Signed by Magistrate Judge F. A. Gossett on 6/21/2006. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-25/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER denying 103 the joint appeal from the Magistrate Judge&apos;s Order; and affirming 102 the Magistrate Judge&apos;s Order denying a continuance of trial as to Armando Rodriguez (5). Signed by Judge Laurie Smith Camp on 6/23/2006. (JB)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd158</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-25</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2006-06-23</dateIssued>
+  <docketText>ORDER denying 103 the joint appeal from the Magistrate Judge&apos;s Order; and affirming 102 the Magistrate Judge&apos;s Order denying a continuance of trial as to Armando Rodriguez (5). Signed by Judge Laurie Smith Camp on 6/23/2006. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-26/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER that trial in this matter is scheduled to begin on Tuesday, June 27, 2006, commencing at 9:00 a.m., or as soon thereafter as the same may be tried, before District Judge Laurie Smith Camp, in Courtroom No. 2, Third Floor, Roman L. Hruska Courthouse, 111 S. 18th Plaza, Omaha, Nebraska, as to Defendant Armando Rodriguez. A Pretrial Conference, beginning at 8:30 a.m., will be held in chambers prior to the start of trial. Counsel is advised that street clothes must be provided for the defendant in any trial proceedings. Signed by Judge Laurie Smith Camp on 6/23/2006. (JB)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-26</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2006-06-23</dateIssued>
+  <docketText>ORDER that trial in this matter is scheduled to begin on Tuesday, June 27, 2006, commencing at 9:00 a.m., or as soon thereafter as the same may be tried, before District Judge Laurie Smith Camp, in Courtroom No. 2, Third Floor, Roman L. Hruska Courthouse, 111 S. 18th Plaza, Omaha, Nebraska, as to Defendant Armando Rodriguez. A Pretrial Conference, beginning at 8:30 a.m., will be held in chambers prior to the start of trial. Counsel is advised that street clothes must be provided for the defendant in any trial proceedings. Signed by Judge Laurie Smith Camp on 6/23/2006. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-27/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting 116 Motion to Dismiss without prejudice the Indictment against Defendant Armando Rodriguez, only. Signed by Judge Laurie Smith Camp on 6/26/2006.(POK)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd172</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-27</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2006-06-26</dateIssued>
+  <docketText>ORDER granting 116 Motion to Dismiss without prejudice the Indictment against Defendant Armando Rodriguez, only. Signed by Judge Laurie Smith Camp on 6/26/2006.(POK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-28/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 7/24/2006. (JB)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd174</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-28</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2006-07-24</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 7/24/2006. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-29/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>REPORT AND RECOMMENDATION ON PLEA OF GUILTY to Judge Laurie Smith Camp that she accept the guilty plea and find the defendant guilty of the crime set forth in Count I of the Indictment and that she accept the written plea agreement with the understanding that the court is not bound by the parties&apos; stipulations, but may with the aid of the presentence report, determine the facts relevant to sentencing. Pursuant to NECrimR 57.3 any objection to this Report and Recommendation shall be filed with the Clerk of the Court within 10 days after being served with a copy of this Report and Recommendation. Failure to timely object may constitute a waiver of any such objection as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 8/2/2006. (MBB)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-29</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2006-08-02</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION ON PLEA OF GUILTY to Judge Laurie Smith Camp that she accept the guilty plea and find the defendant guilty of the crime set forth in Count I of the Indictment and that she accept the written plea agreement with the understanding that the court is not bound by the parties&apos; stipulations, but may with the aid of the presentence report, determine the facts relevant to sentencing. Pursuant to NECrimR 57.3 any objection to this Report and Recommendation shall be filed with the Clerk of the Court within 10 days after being served with a copy of this Report and Recommendation. Failure to timely object may constitute a waiver of any such objection as to defendant Jesus Alberto Padilla-Palacios. Signed by Magistrate Judge Thomas D. Thalken on 8/2/2006. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-30/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>JUDGMENT as to Roberto M. Morales, Sr. (3), Counts I&amp;II of the Indictment are dismissed on the motion of the United States as to this defendant only. Defendant plead guilty to count VIII of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 24 months; 3 years Supervised Release with special conditions; $100 Special Assessment as to defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 8/7/2006. 4 cert to USM (MKR )</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd178</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-30</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2006-08-07</dateIssued>
+  <docketText>JUDGMENT as to Roberto M. Morales, Sr. (3), Counts I&amp;II of the Indictment are dismissed on the motion of the United States as to this defendant only. Defendant plead guilty to count VIII of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 24 months; 3 years Supervised Release with special conditions; $100 Special Assessment as to defendant Roberto M. Morales, Sr. Signed by Judge Laurie Smith Camp on 8/7/2006. 4 cert to USM (MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-31/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd154</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-31</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2006-09-12</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-32/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>AMENDED TENTATIVE FINDINGS regarding Presentence Investigation Report as to Defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd151</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-32</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2006-09-13</dateIssued>
+  <docketText>AMENDED TENTATIVE FINDINGS regarding Presentence Investigation Report as to Defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-33/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Roberto M. Morales, Jr. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-33.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd14e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-33</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2006-09-14</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant Roberto M. Morales, Jr. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-34/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>JUDGMENT as to Roberto M. Morales, Jr. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 63 months; 4 years Supervised Release with special conditions; $100 Special Assessment.; Counts III,IV,V and VII of the Indictment are dismissed on the motion of the United States as to thisdefendant only. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM. (DKM, )</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-34.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd155</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-34</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2006-09-21</dateIssued>
+  <docketText>JUDGMENT as to Roberto M. Morales, Jr. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 63 months; 4 years Supervised Release with special conditions; $100 Special Assessment.; Counts III,IV,V and VII of the Indictment are dismissed on the motion of the United States as to thisdefendant only. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-35/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>JUDGMENT as to Dalinda Garcia (1), Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service at the institution designated by the Bureau of Prisons before 2:00 p.m. on November 17, 2006; Counts V, VI, VII and IX of the Indictment are dismissed on the motion of the United States as to this defendant only. Ordered by Judge Laurie Smith Camp. (4 certified copies to USM) (CJP)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-35.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd152</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-35</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2006-09-28</dateIssued>
+  <docketText>JUDGMENT as to Dalinda Garcia (1), Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for 60 months; 4 years supervised release with special conditions; $100 special assessment; defendant shall surrender for service at the institution designated by the Bureau of Prisons before 2:00 p.m. on November 17, 2006; Counts V, VI, VII and IX of the Indictment are dismissed on the motion of the United States as to this defendant only. Ordered by Judge Laurie Smith Camp. (4 certified copies to USM) (CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-36" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-36/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding the Presentence Investigation Report as to Defendant Danny Reyes. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>36</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-36.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd16d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-36</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_36.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-36/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-36.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-36</accessId>
+  <sequenceNumber>36</sequenceNumber>
+  <dateIssued>2006-10-02</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding the Presentence Investigation Report as to Defendant Danny Reyes. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-37" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-37/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>MEMORANDUM AND ORDER adopting 144 the Magistrate Judge&apos;s Report and Recommendation as to Jesus Alberto Padilla-Palacios (4); defendant is found guilty; plea is accepted; defer acceptance of the plea agreement until the time of sentencing pursuant to Federal Rule of Criminal Procedure 11(c)(3); and case shall proceed to sentencing. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>37</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-37.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd16e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-37</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_37.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-37/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-37.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-37</accessId>
+  <sequenceNumber>37</sequenceNumber>
+  <dateIssued>2006-10-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER adopting 144 the Magistrate Judge&apos;s Report and Recommendation as to Jesus Alberto Padilla-Palacios (4); defendant is found guilty; plea is accepted; defer acceptance of the plea agreement until the time of sentencing pursuant to Federal Rule of Criminal Procedure 11(c)(3); and case shall proceed to sentencing. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-38" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-38/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>JUDGMENT as to Danny Reyes. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 92 months; 5 years Supervised Release with special conditions; $100 Special Assessment; Count IX of the Indictment is dismissed on the motion of the United States as to this defendantonly. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM. (DKM, )</subTitle>
+  <partNumber>38</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-38.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd173</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-38</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_38.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-38/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-38.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-38</accessId>
+  <sequenceNumber>38</sequenceNumber>
+  <dateIssued>2006-10-05</dateIssued>
+  <docketText>JUDGMENT as to Danny Reyes. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 92 months; 5 years Supervised Release with special conditions; $100 Special Assessment; Count IX of the Indictment is dismissed on the motion of the United States as to this defendantonly. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM. (DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-39" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-39/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jesus Alberto Padilla-Palacios. The parties are notified that my tentative findings are that the PSR is correctin all respects as set forth in this order. Ordered by Judge Laurie Smith Camp.(DKM, )</subTitle>
+  <partNumber>39</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-39.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-39</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_39.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-39/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-39.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-39</accessId>
+  <sequenceNumber>39</sequenceNumber>
+  <dateIssued>2006-10-12</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Presentence Investigation Report as to defendant Jesus Alberto Padilla-Palacios. The parties are notified that my tentative findings are that the PSR is correctin all respects as set forth in this order. Ordered by Judge Laurie Smith Camp.(DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-40" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-40/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>JUDGMENT as to Jesus Alberto Padilla-Palacios (4), Defendant plead guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 46 months; 3 years Supervised Release with special conditions; $100 Special Assessment; Counts VII and IX of the Indictment are dismissed on the motion of the United States as to defendant Jesus Alberto Padilla-Palacios Ordered by Judge Laurie Smith Camp. 4 cert to USM(MKR )</subTitle>
+  <partNumber>40</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-40.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-40</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_40.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-40/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-40.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-40</accessId>
+  <sequenceNumber>40</sequenceNumber>
+  <dateIssued>2006-10-25</dateIssued>
+  <docketText>JUDGMENT as to Jesus Alberto Padilla-Palacios (4), Defendant plead guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 46 months; 3 years Supervised Release with special conditions; $100 Special Assessment; Counts VII and IX of the Indictment are dismissed on the motion of the United States as to defendant Jesus Alberto Padilla-Palacios Ordered by Judge Laurie Smith Camp. 4 cert to USM(MKR )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-41" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-41/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER granting 189 Motion for Release of Bond Obligation; the clerk shall refund such bond by mailing a check for such amount to the surety who posted such bond, Sidronia Rodriguez, 306 Texas Trail, Dodge City, KS 67801 as to Armando Rodriguez. (copy provided to financial) Ordered by Magistrate Judge Thomas D. Thalken.(TJS)</subTitle>
+  <partNumber>41</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-41.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd15c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-41</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_41.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-41/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-41.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-41</accessId>
+  <sequenceNumber>41</sequenceNumber>
+  <dateIssued>2007-02-15</dateIssued>
+  <docketText>ORDER granting 189 Motion for Release of Bond Obligation; the clerk shall refund such bond by mailing a check for such amount to the surety who posted such bond, Sidronia Rodriguez, 306 Texas Trail, Dodge City, KS 67801 as to Armando Rodriguez. (copy provided to financial) Ordered by Magistrate Judge Thomas D. Thalken.(TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-42" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-42/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER as to defendants Dalinda Garcia, Jesus Alberto Padilla-Palacios. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Laurie Smith Camp.(CJP)ORDER as to defendants Dalinda Garcia, Jesus Alberto Padilla-Palacios. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Laurie Smith Camp.(CJP)</subTitle>
+  <partNumber>42</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-42.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd176</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-42</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_42.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-42/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-42.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-42</accessId>
+  <sequenceNumber>42</sequenceNumber>
+  <dateIssued>2007-06-13</dateIssued>
+  <docketText>ORDER as to defendants Dalinda Garcia, Jesus Alberto Padilla-Palacios. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Laurie Smith Camp.(CJP)ORDER as to defendants Dalinda Garcia, Jesus Alberto Padilla-Palacios. It is ordered that government&apos;s exhibits in this case are to be returned to the United States Attorney for appropriate disposition. Ordered by Judge Laurie Smith Camp.(CJP)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-43" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-43/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Beau G. Finley is appointed as counsel as to defendant Dalinda Garcia; Ordered by Judge Laurie Smith Camp. (Copies mailed as directed) (ETC)</subTitle>
+  <partNumber>43</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-43.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dc8bd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-43</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_43.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-43/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-43.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-43</accessId>
+  <sequenceNumber>43</sequenceNumber>
+  <dateIssued>2008-01-17</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Beau G. Finley is appointed as counsel as to defendant Dalinda Garcia; Ordered by Judge Laurie Smith Camp. (Copies mailed as directed) (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00061-44" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-44/mods.xml">
+ <titleInfo>
+  <title>USA v. Garcia et al</title>
+  <subTitle>AMENDED JUDGMENT (Reduction of Sentence for Changed Circumstances (Fed. R. Crim. P. 35(b)) as to Dalinda Garcia (1). Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 36 months; 4 years supervised release with special conditions; $100 special assessment; Counts V, VI, VII and IX of the Indictment are dismissed on the motion of the United States as to this defendant only as to defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(MKR)</subTitle>
+  <partNumber>44</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00061-44.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817dd179</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-44</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00061_44.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00061/USCOURTS-ned-8_06-cr-00061-44/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00061/pdf/USCOURTS-ned-8_06-cr-00061-44.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00061; USA v. Garcia et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00061-44</accessId>
+  <sequenceNumber>44</sequenceNumber>
+  <dateIssued>2008-01-24</dateIssued>
+  <docketText>AMENDED JUDGMENT (Reduction of Sentence for Changed Circumstances (Fed. R. Crim. P. 35(b)) as to Dalinda Garcia (1). Defendant plead guilty to Count I of the Indictment and is committed to the custody of the Bureau of Prisons for a total term of 36 months; 4 years supervised release with special conditions; $100 special assessment; Counts V, VI, VII and IX of the Indictment are dismissed on the motion of the United States as to this defendant only as to defendant Dalinda Garcia. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

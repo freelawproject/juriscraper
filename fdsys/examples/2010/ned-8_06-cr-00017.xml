@@ -1,0 +1,454 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817aac24">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017</identifier>
+<identifier type="local">P0b002ee1817aac24</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_06-cr-00017</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00017</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00017</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="David" fullName="David Shaffer" lastName="Shaffer" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Shaffer</title>
+ <partNumber>8:06-cr-00017</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:06-cr-00017;06-017</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Shaffer</displayForm>
+ <namePart type="family">Shaffer</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_06-cr-00017</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:06-cr-00017</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="David" fullName="David Shaffer" lastName="Shaffer" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant David Shaffer. Signed by Magistrate Judge F. A. Gossett on 2/13/2006. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187433d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-0</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-02-13</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant David Shaffer. Signed by Magistrate Judge F. A. Gossett on 2/13/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER of Detention pending trial as to defendant David Shaffer. Signed by Magistrate Judge F. A. Gossett on 2/15/2006. Copy to US Marshal. (MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187433c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-1</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-02-15</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant David Shaffer. Signed by Magistrate Judge F. A. Gossett on 2/15/2006. Copy to US Marshal. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant David Shaffer. Signed by Judge Laurie Smith Camp on 3/9/2006. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187429e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-2</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-03-09</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (Criminal Jury Trial) as to Defendant David Shaffer. Signed by Judge Laurie Smith Camp on 3/9/2006. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER Change of Plea Hearing set for 4/12/2006 at 08:30 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Time between 3/23/2006 and 4/12/2006 is deemed excludable under the speedy trial act as to defendant David Shaffer. Signed by Judge Laurie Smith Camp on 3/23/2006. (ETC)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181874339</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-3</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-03-23</dateIssued>
+  <docketText>ORDER Change of Plea Hearing set for 4/12/2006 at 08:30 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Time between 3/23/2006 and 4/12/2006 is deemed excludable under the speedy trial act as to defendant David Shaffer. Signed by Judge Laurie Smith Camp on 3/23/2006. (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>AMENDED ORDER at the request of defense counsel the Change of Plea Hearing is rescheduled for 5/8/2006 11:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Time between 4/11/2006 and 5/8/2006 is deemed exlcudable under the speedy trial act as to defendant David Shaffer. Signed by Judge Laurie Smith Camp on 4/11/2006. (ETC)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-04-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187429d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-4</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-04-11</dateIssued>
+  <docketText>AMENDED ORDER at the request of defense counsel the Change of Plea Hearing is rescheduled for 5/8/2006 11:00 AM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. Time between 4/11/2006 and 5/8/2006 is deemed exlcudable under the speedy trial act as to defendant David Shaffer. Signed by Judge Laurie Smith Camp on 4/11/2006. (ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER as to defendant David Shaffer. Bond Hearing set for 5/12/2006 at 12:00 PM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 5/5/2006. (MLF, )</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-05-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187429f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-5</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2006-05-05</dateIssued>
+  <docketText>ORDER as to defendant David Shaffer. Bond Hearing set for 5/12/2006 at 12:00 PM before Magistrate Judge F. A. Gossett. Signed by Magistrate Judge F. A. Gossett on 5/5/2006. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant David Shaffer. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181874336</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-6</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2006-09-20</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Presentence Investigation Report as to Defendant David Shaffer. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>JUDGMENT as to David Shaffer. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 51 months; 3 years Supervised Release with special conditions; $100 Special Assessment. Defendant shall surrender for service no eariler than December 11, 2006 at 2:00 p.m. as to defendant David Shaffer. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM(DKM, )</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187433a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-7</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2006-09-28</dateIssued>
+  <docketText>JUDGMENT as to David Shaffer. Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of 51 months; 3 years Supervised Release with special conditions; $100 Special Assessment. Defendant shall surrender for service no eariler than December 11, 2006 at 2:00 p.m. as to defendant David Shaffer. Ordered by Judge Laurie Smith Camp. 4 certified copies to USM(DKM, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>AMENDED JUDGMENT for reduction of sentence 42 as to David Shaffer (1). Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of time served; 3 years Supervised Release with special conditions; $100 Special Assessment remitted. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-04-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187429c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-8</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2008-04-29</dateIssued>
+  <docketText>AMENDED JUDGMENT for reduction of sentence 42 as to David Shaffer (1). Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the Bureau of Prisons for a term of time served; 3 years Supervised Release with special conditions; $100 Special Assessment remitted. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant David Shaffer. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181874338</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-9</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender appointed as counsel for the defendant David Shaffer. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 49 as to defendant David Shaffer. The defendant should be held to answer for a final dispositional hearing before Judge Smith Camp. A final dispositional hearing will be held before Judge Laurie Smith Camp in Courtroom No.2, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on January 11, 2010 at 10:30 a.m. Defendant must be present in person.The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18187433b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-10</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2009-12-02</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 49 as to defendant David Shaffer. The defendant should be held to answer for a final dispositional hearing before Judge Smith Camp. A final dispositional hearing will be held before Judge Laurie Smith Camp in Courtroom No.2, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on January 11, 2010 at 10:30 a.m. Defendant must be present in person.The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_06-cr-00017-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Shaffer</title>
+  <subTitle>ORDER - As stated in Filing No. 62, the Defendant&apos;s motion at Filing No. 61 is granted. The Defendant shall be released from the Douglas County Correctional Center on January 21, 2010, to a representative of the Federal Public Defender&apos;s Office for transportation to the location specified in Filing No. 61. The Clerk shall immediately deliver a copy of this order to the U.S. Marshal for this district, as to defendant David Shaffer. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(JAE)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_06-cr-00017-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181874337</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-11</identifier>
+ <identifier type="former granule identifier">ned-8_06-cr-00017_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_06-cr-00017/USCOURTS-ned-8_06-cr-00017-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_06-cr-00017/pdf/USCOURTS-ned-8_06-cr-00017-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:06-cr-00017; USA v. Shaffer; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_06-cr-00017-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>ORDER - As stated in Filing No. 62, the Defendant&apos;s motion at Filing No. 61 is granted. The Defendant shall be released from the Douglas County Correctional Center on January 21, 2010, to a representative of the Federal Public Defender&apos;s Office for transportation to the location specified in Filing No. 61. The Clerk shall immediately deliver a copy of this order to the U.S. Marshal for this district, as to defendant David Shaffer. Ordered by Judge Laurie Smith Camp. (1 Certified copy to USM)(JAE)</docketText>
+</extension>
+</relatedItem>
+</mods>

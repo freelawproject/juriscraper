@@ -1,0 +1,138 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18989e2a0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-07-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-12-01050</identifier>
+<identifier type="local">P0b002ee18989e2a0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-07-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-07-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca7-12-01050</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-12-01050</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>12-01050</caseNumber>
+ <party firstName="Anouar" fullName="Anouar Darif" lastName="Darif" role="Petitioner"></party>
+ <party firstName="Eric" fullName="Eric H. Holder Jr." generation="Jr." lastName="Holder" middleName="H." role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Anouar Darif v. Eric Holder, Jr.</title>
+ <partNumber>12-01050</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-12-01050/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-01050;12-1050</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Anouar Darif</displayForm>
+ <namePart type="family">Darif</namePart>
+ <namePart type="given">Anouar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Eric H. Holder Jr.</displayForm>
+ <namePart type="family">Holder</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-12-01050</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>12-01050</caseNumber>
+ <party firstName="Anouar" fullName="Anouar Darif" lastName="Darif" role="Petitioner"></party>
+ <party firstName="Eric" fullName="Eric H. Holder Jr." generation="Jr." lastName="Holder" middleName="H." role="Respondent"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca7-12-01050-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-12-01050/USCOURTS-ca7-12-01050-0/mods.xml">
+ <titleInfo>
+  <title>Anouar Darif v. Eric Holder, Jr.</title>
+  <subTitle>Filed opinion of the court by Judge Sykes. The petition for review is &lt;b&gt;DENIED&lt;/b&gt;. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and Diane S. Sykes, Circuit Judge. [6542218-1] [6542218] [12-1050]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-12-01050/pdf/USCOURTS-ca7-12-01050-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee1898b8c91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-12-01050/USCOURTS-ca7-12-01050-0</identifier>
+ <identifier type="former granule identifier">ca7-12-01050_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-12-01050/USCOURTS-ca7-12-01050-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-12-01050/pdf/USCOURTS-ca7-12-01050-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-01050; Anouar Darif v. Eric Holder, Jr.; </searchTitle>
+  <courtName>United States Court of Appeals for the Seventh Circuit</courtName>
+  <accessId>USCOURTS-ca7-12-01050-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Filed opinion of the court by Judge Sykes. The petition for review is &lt;b&gt;DENIED&lt;/b&gt;. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and Diane S. Sykes, Circuit Judge. [6542218-1] [6542218] [12-1050]</docketText>
+</extension>
+</relatedItem>
+</mods>

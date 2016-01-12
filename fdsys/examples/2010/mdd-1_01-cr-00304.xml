@@ -1,0 +1,362 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18104a8ba">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_01-cr-00304</identifier>
+<identifier type="local">P0b002ee18104a8ba</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_01-cr-00304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_01-cr-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:01-cr-00304</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="&quot;Little Brian&quot;" lastName="&quot;Little Brian&quot;" role="Defendant"></party>
+ <party fullName="&quot;Manny&quot;" lastName="&quot;Manny&quot;" role="Defendant"></party>
+ <party fullName="&quot;Moan&quot;" lastName="&quot;Moan&quot;" role="Defendant"></party>
+ <party fullName="&quot;Stink&quot;" lastName="&quot;Stink&quot;" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Belton" lastName="Belton" role="Defendant"></party>
+ <party fullName="Bok" lastName="Bok" role="Defendant"></party>
+ <party firstName="Maurice" fullName="Maurice Boston" lastName="Boston" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Byers" lastName="Byers" role="Defendant"></party>
+ <party firstName="Leon" fullName="Leon Coleman" lastName="Coleman" role="Defendant"></party>
+ <party fullName="D-Bone" lastName="D-Bone" role="Defendant"></party>
+ <party fullName="DJ" lastName="DJ" role="Defendant"></party>
+ <party firstName="Dietrick" fullName="Dietrick Fortune" lastName="Fortune" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Glenn" lastName="Glenn" role="Defendant"></party>
+ <party firstName="Darryl" fullName="Darryl E. Hairston" lastName="Hairston" middleName="E." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Joyner" lastName="Joyner" role="Defendant"></party>
+ <party fullName="Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Elijah" fullName="Elijah Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Darryle" fullName="Darryle Edward Robertson" lastName="Robertson" middleName="Edward" role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith Sachwald" lastName="Sachwald" role="Interested Party"></party>
+ <party firstName="William" fullName="William W. Sondervan" lastName="Sondervan" middleName="W." role="Interested Party"></party>
+ <party fullName="Tiger" lastName="Tiger" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Leon" fullName="Leon Walker" lastName="Walker" role="Defendant"></party>
+ <party firstName="Cornell" fullName="Cornell Ward" lastName="Ward" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Coleman, et al</title>
+ <partNumber>1:01-cr-00304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_01-cr-00304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:01-cr-00304;01-304</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>&quot;Little Brian&quot;</displayForm>
+ <namePart type="family">&quot;Little Brian&quot;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>&quot;Manny&quot;</displayForm>
+ <namePart type="family">&quot;Manny&quot;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>&quot;Moan&quot;</displayForm>
+ <namePart type="family">&quot;Moan&quot;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>&quot;Stink&quot;</displayForm>
+ <namePart type="family">&quot;Stink&quot;</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brian Belton</displayForm>
+ <namePart type="family">Belton</namePart>
+ <namePart type="given">Brian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bok</displayForm>
+ <namePart type="family">Bok</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maurice Boston</displayForm>
+ <namePart type="family">Boston</namePart>
+ <namePart type="given">Maurice</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Byers</displayForm>
+ <namePart type="family">Byers</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leon Coleman</displayForm>
+ <namePart type="family">Coleman</namePart>
+ <namePart type="given">Leon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D-Bone</displayForm>
+ <namePart type="family">D-Bone</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DJ</displayForm>
+ <namePart type="family">DJ</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dietrick Fortune</displayForm>
+ <namePart type="family">Fortune</namePart>
+ <namePart type="given">Dietrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Glenn</displayForm>
+ <namePart type="family">Glenn</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darryl E. Hairston</displayForm>
+ <namePart type="family">Hairston</namePart>
+ <namePart type="given">Darryl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Hall</displayForm>
+ <namePart type="family">Hall</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony Joyner</displayForm>
+ <namePart type="family">Joyner</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lee</displayForm>
+ <namePart type="family">Lee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charles Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elijah Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Elijah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darryle Edward Robertson</displayForm>
+ <namePart type="family">Robertson</namePart>
+ <namePart type="given">Darryle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Judith Sachwald</displayForm>
+ <namePart type="family">Sachwald</namePart>
+ <namePart type="given">Judith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>William W. Sondervan</displayForm>
+ <namePart type="family">Sondervan</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Tiger</displayForm>
+ <namePart type="family">Tiger</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leon Walker</displayForm>
+ <namePart type="family">Walker</namePart>
+ <namePart type="given">Leon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cornell Ward</displayForm>
+ <namePart type="family">Ward</namePart>
+ <namePart type="given">Cornell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_01-cr-00304</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:01-cr-00304</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="&quot;Little Brian&quot;" lastName="&quot;Little Brian&quot;" role="Defendant"></party>
+ <party fullName="&quot;Manny&quot;" lastName="&quot;Manny&quot;" role="Defendant"></party>
+ <party fullName="&quot;Moan&quot;" lastName="&quot;Moan&quot;" role="Defendant"></party>
+ <party fullName="&quot;Stink&quot;" lastName="&quot;Stink&quot;" role="Defendant"></party>
+ <party firstName="Brian" fullName="Brian Belton" lastName="Belton" role="Defendant"></party>
+ <party fullName="Bok" lastName="Bok" role="Defendant"></party>
+ <party firstName="Maurice" fullName="Maurice Boston" lastName="Boston" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Byers" lastName="Byers" role="Defendant"></party>
+ <party firstName="Leon" fullName="Leon Coleman" lastName="Coleman" role="Defendant"></party>
+ <party fullName="D-Bone" lastName="D-Bone" role="Defendant"></party>
+ <party fullName="DJ" lastName="DJ" role="Defendant"></party>
+ <party firstName="Dietrick" fullName="Dietrick Fortune" lastName="Fortune" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Glenn" lastName="Glenn" role="Defendant"></party>
+ <party firstName="Darryl" fullName="Darryl E. Hairston" lastName="Hairston" middleName="E." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Hall" lastName="Hall" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony Joyner" lastName="Joyner" role="Defendant"></party>
+ <party fullName="Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Charles" fullName="Charles Lewis" lastName="Lewis" role="Defendant"></party>
+ <party firstName="Elijah" fullName="Elijah Richardson" lastName="Richardson" role="Defendant"></party>
+ <party firstName="Darryle" fullName="Darryle Edward Robertson" lastName="Robertson" middleName="Edward" role="Defendant"></party>
+ <party firstName="Judith" fullName="Judith Sachwald" lastName="Sachwald" role="Interested Party"></party>
+ <party firstName="William" fullName="William W. Sondervan" lastName="Sondervan" middleName="W." role="Interested Party"></party>
+ <party fullName="Tiger" lastName="Tiger" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Leon" fullName="Leon Walker" lastName="Walker" role="Defendant"></party>
+ <party firstName="Cornell" fullName="Cornell Ward" lastName="Ward" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_01-cr-00304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_01-cr-00304/USCOURTS-mdd-1_01-cr-00304-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Coleman, et al</title>
+  <subTitle>MEMORANDUM as to Darryle Edward Robertson. Signed by Judge J. Frederick Motz on 1/19/10. (c/m 1/19/10 mcb, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_01-cr-00304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18106552d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_01-cr-00304/USCOURTS-mdd-1_01-cr-00304-0</identifier>
+ <identifier type="former granule identifier">mdd-1_01-cr-00304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_01-cr-00304/USCOURTS-mdd-1_01-cr-00304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_01-cr-00304/pdf/USCOURTS-mdd-1_01-cr-00304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:01-cr-00304; USA v. Coleman, et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_01-cr-00304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-19</dateIssued>
+  <docketText>MEMORANDUM as to Darryle Edward Robertson. Signed by Judge J. Frederick Motz on 1/19/10. (c/m 1/19/10 mcb, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

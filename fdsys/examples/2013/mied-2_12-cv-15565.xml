@@ -1,0 +1,420 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183a02646">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15565</identifier>
+<identifier type="local">P0b002ee183a02646</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_12-cv-15565</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-15565</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-15565</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="6th Judicial Circuit Judge, Oakland County" lastName="6th Judicial Circuit Judge, Oakland County" role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Ross Adams" lastName="Adams" middleName="Ross" role="Defendant"></party>
+ <party firstName="Moktar" fullName="Moktar Ali Muenda Bey" lastName="Ali Muenda Bey" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Bing" lastName="Bing" role="Defendant"></party>
+ <party firstName="Jessica" fullName="Jessica R Cooper" lastName="Cooper" middleName="R" role="Defendant"></party>
+ <party fullName="Detroit Police Department" lastName="Detroit Police Department" role="Defendant"></party>
+ <party fullName="Detroit, City of" lastName="Detroit, City of" role="Defendant"></party>
+ <party firstName="Charlene" fullName="Charlene Elder" lastName="Elder" role="Defendant"></party>
+ <party fullName="Frank Murphy Hall of Justice" lastName="Frank Murphy Hall of Justice" role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Godbee" lastName="Godbee" role="Defendant"></party>
+ <party firstName="Cheryl" fullName="Cheryl A Matthews" lastName="Matthews" middleName="A" role="Defendant"></party>
+ <party firstName="Wade" fullName="Wade McCree" lastName="McCree" role="Defendant"></party>
+ <party fullName="Michigan, State of" lastName="Michigan, State of" role="Defendant"></party>
+ <party firstName="Anita" fullName="Anita Scott Mitzell" lastName="Mitzell" middleName="Scott" role="Defendant"></party>
+ <party firstName="S" fullName="S Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Bennie" fullName="Bennie Napoleon" lastName="Napoleon" role="Defendant"></party>
+ <party fullName="Oakland County Family Court" lastName="Oakland County Family Court" role="Defendant"></party>
+ <party fullName="Oakland County Friend of the Court" lastName="Oakland County Friend of the Court" role="Defendant"></party>
+ <party fullName="Oakland County Sheriff" lastName="Oakland County Sheriff" role="Defendant"></party>
+ <party firstName="Maria" fullName="Maria Oxholm" lastName="Oxholm" role="Defendant"></party>
+ <party firstName="Shelly" fullName="Shelly Payne" lastName="Payne" role="Defendant"></party>
+ <party fullName="People of the State of Michigan" lastName="People of the State of Michigan" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Petrusha" lastName="Petrusha" role="Defendant"></party>
+ <party firstName="Lorie" fullName="Lorie Savin" lastName="Savin" role="Defendant"></party>
+ <party firstName="Helen" fullName="Helen Simpson" lastName="Simpson" role="Defendant"></party>
+ <party firstName="Virgil" fullName="Virgil Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="State of Michigan Department of Corrections" lastName="State of Michigan Department of Corrections" role="Defendant"></party>
+ <party fullName="Wayne County Family Court" lastName="Wayne County Family Court" role="Defendant"></party>
+ <party fullName="Wayne County Friend of Court" lastName="Wayne County Friend of Court" role="Defendant"></party>
+ <party fullName="Wayne County Sheriff" lastName="Wayne County Sheriff" role="Defendant"></party>
+ <party fullName="Wayne, County of" lastName="Wayne, County of" role="Defendant"></party>
+ <party firstName="Kim" fullName="Kim Worthy" lastName="Worthy" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ali Muenda Bey v. Michigan, State of et al</title>
+ <partNumber>2:12-cv-15565</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15565/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-15565;12-15565</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>6th Judicial Circuit Judge, Oakland County</displayForm>
+ <namePart type="family">6th Judicial Circuit Judge, Oakland County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Deborah Ross Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Deborah</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Moktar Ali Muenda Bey</displayForm>
+ <namePart type="family">Ali Muenda Bey</namePart>
+ <namePart type="given">Moktar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Bing</displayForm>
+ <namePart type="family">Bing</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jessica R Cooper</displayForm>
+ <namePart type="family">Cooper</namePart>
+ <namePart type="given">Jessica</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit Police Department</displayForm>
+ <namePart type="family">Detroit Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Detroit, City of</displayForm>
+ <namePart type="family">Detroit, City of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Charlene Elder</displayForm>
+ <namePart type="family">Elder</namePart>
+ <namePart type="given">Charlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Frank Murphy Hall of Justice</displayForm>
+ <namePart type="family">Frank Murphy Hall of Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ralph Godbee</displayForm>
+ <namePart type="family">Godbee</namePart>
+ <namePart type="given">Ralph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cheryl A Matthews</displayForm>
+ <namePart type="family">Matthews</namePart>
+ <namePart type="given">Cheryl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wade McCree</displayForm>
+ <namePart type="family">McCree</namePart>
+ <namePart type="given">Wade</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan, State of</displayForm>
+ <namePart type="family">Michigan, State of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anita Scott Mitzell</displayForm>
+ <namePart type="family">Mitzell</namePart>
+ <namePart type="given">Anita</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S Murray</displayForm>
+ <namePart type="family">Murray</namePart>
+ <namePart type="given">S</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bennie Napoleon</displayForm>
+ <namePart type="family">Napoleon</namePart>
+ <namePart type="given">Bennie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oakland County Family Court</displayForm>
+ <namePart type="family">Oakland County Family Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oakland County Friend of the Court</displayForm>
+ <namePart type="family">Oakland County Friend of the Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Oakland County Sheriff</displayForm>
+ <namePart type="family">Oakland County Sheriff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maria Oxholm</displayForm>
+ <namePart type="family">Oxholm</namePart>
+ <namePart type="given">Maria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shelly Payne</displayForm>
+ <namePart type="family">Payne</namePart>
+ <namePart type="given">Shelly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>People of the State of Michigan</displayForm>
+ <namePart type="family">People of the State of Michigan</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Petrusha</displayForm>
+ <namePart type="family">Petrusha</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lorie Savin</displayForm>
+ <namePart type="family">Savin</namePart>
+ <namePart type="given">Lorie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Helen Simpson</displayForm>
+ <namePart type="family">Simpson</namePart>
+ <namePart type="given">Helen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Virgil Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Virgil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Michigan Department of Corrections</displayForm>
+ <namePart type="family">State of Michigan Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne County Family Court</displayForm>
+ <namePart type="family">Wayne County Family Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne County Friend of Court</displayForm>
+ <namePart type="family">Wayne County Friend of Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne County Sheriff</displayForm>
+ <namePart type="family">Wayne County Sheriff</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne, County of</displayForm>
+ <namePart type="family">Wayne, County of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kim Worthy</displayForm>
+ <namePart type="family">Worthy</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_12-cv-15565</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:12-cv-15565</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <party fullName="6th Judicial Circuit Judge, Oakland County" lastName="6th Judicial Circuit Judge, Oakland County" role="Defendant"></party>
+ <party firstName="Deborah" fullName="Deborah Ross Adams" lastName="Adams" middleName="Ross" role="Defendant"></party>
+ <party firstName="Moktar" fullName="Moktar Ali Muenda Bey" lastName="Ali Muenda Bey" role="Plaintiff"></party>
+ <party firstName="Dave" fullName="Dave Bing" lastName="Bing" role="Defendant"></party>
+ <party firstName="Jessica" fullName="Jessica R Cooper" lastName="Cooper" middleName="R" role="Defendant"></party>
+ <party fullName="Detroit Police Department" lastName="Detroit Police Department" role="Defendant"></party>
+ <party fullName="Detroit, City of" lastName="Detroit, City of" role="Defendant"></party>
+ <party firstName="Charlene" fullName="Charlene Elder" lastName="Elder" role="Defendant"></party>
+ <party fullName="Frank Murphy Hall of Justice" lastName="Frank Murphy Hall of Justice" role="Defendant"></party>
+ <party firstName="Ralph" fullName="Ralph Godbee" lastName="Godbee" role="Defendant"></party>
+ <party firstName="Cheryl" fullName="Cheryl A Matthews" lastName="Matthews" middleName="A" role="Defendant"></party>
+ <party firstName="Wade" fullName="Wade McCree" lastName="McCree" role="Defendant"></party>
+ <party fullName="Michigan, State of" lastName="Michigan, State of" role="Defendant"></party>
+ <party firstName="Anita" fullName="Anita Scott Mitzell" lastName="Mitzell" middleName="Scott" role="Defendant"></party>
+ <party firstName="S" fullName="S Murray" lastName="Murray" role="Defendant"></party>
+ <party firstName="Bennie" fullName="Bennie Napoleon" lastName="Napoleon" role="Defendant"></party>
+ <party fullName="Oakland County Family Court" lastName="Oakland County Family Court" role="Defendant"></party>
+ <party fullName="Oakland County Friend of the Court" lastName="Oakland County Friend of the Court" role="Defendant"></party>
+ <party fullName="Oakland County Sheriff" lastName="Oakland County Sheriff" role="Defendant"></party>
+ <party firstName="Maria" fullName="Maria Oxholm" lastName="Oxholm" role="Defendant"></party>
+ <party firstName="Shelly" fullName="Shelly Payne" lastName="Payne" role="Defendant"></party>
+ <party fullName="People of the State of Michigan" lastName="People of the State of Michigan" role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Petrusha" lastName="Petrusha" role="Defendant"></party>
+ <party firstName="Lorie" fullName="Lorie Savin" lastName="Savin" role="Defendant"></party>
+ <party firstName="Helen" fullName="Helen Simpson" lastName="Simpson" role="Defendant"></party>
+ <party firstName="Virgil" fullName="Virgil Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="State of Michigan Department of Corrections" lastName="State of Michigan Department of Corrections" role="Defendant"></party>
+ <party fullName="Wayne County Family Court" lastName="Wayne County Family Court" role="Defendant"></party>
+ <party fullName="Wayne County Friend of Court" lastName="Wayne County Friend of Court" role="Defendant"></party>
+ <party fullName="Wayne County Sheriff" lastName="Wayne County Sheriff" role="Defendant"></party>
+ <party fullName="Wayne, County of" lastName="Wayne, County of" role="Defendant"></party>
+ <party firstName="Kim" fullName="Kim Worthy" lastName="Worthy" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_12-cv-15565-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15565/USCOURTS-mied-2_12-cv-15565-0/mods.xml">
+ <titleInfo>
+  <title>Ali Muenda Bey v. Michigan, State of et al</title>
+  <subTitle>ORDER DISMISSING CASE Pursuant to Rule 12(b)(1). Signed by District Judge Nancy G. Edmunds. (CHem)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_12-cv-15565-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183a04e4a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15565/USCOURTS-mied-2_12-cv-15565-0</identifier>
+ <identifier type="former granule identifier">mied-2_12-cv-15565_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_12-cv-15565/USCOURTS-mied-2_12-cv-15565-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_12-cv-15565/pdf/USCOURTS-mied-2_12-cv-15565-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-15565; Ali Muenda Bey v. Michigan, State of et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_12-cv-15565-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER DISMISSING CASE Pursuant to Rule 12(b)(1). Signed by District Judge Nancy G. Edmunds. (CHem)</docketText>
+</extension>
+</relatedItem>
+</mods>

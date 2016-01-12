@@ -1,0 +1,186 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18135900b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04873</identifier>
+<identifier type="local">P0b002ee18135900b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_08-cv-04873</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-04873</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-04873</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="CHASE HOME FINANCE, LLC" lastName="CHASE HOME FINANCE, LLC" role="Defendant"></party>
+ <party firstName="ERIC" fullName="ERIC L. FRANK" lastName="FRANK" middleName="L." role="Notice Only Party"></party>
+ <party firstName="TIMOTHY" fullName="TIMOTHY MCGRATH" lastName="MCGRATH" role="Notice Only Party"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Appellant"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Debtor-in-Possess"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>IN RE: FRANCES SCARBOROUGH</title>
+ <partNumber>2:08-cv-04873</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04873/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-04873;08-4873</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CHASE HOME FINANCE, LLC</displayForm>
+ <namePart type="family">CHASE HOME FINANCE, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ERIC L. FRANK</displayForm>
+ <namePart type="family">FRANK</namePart>
+ <namePart type="given">ERIC</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>TIMOTHY MCGRATH</displayForm>
+ <namePart type="family">MCGRATH</namePart>
+ <namePart type="given">TIMOTHY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice Only Party</description>
+</name>
+<name type="personal">
+ <displayForm>FRANCES SCARBOROUGH</displayForm>
+ <namePart type="family">SCARBOROUGH</namePart>
+ <namePart type="given">FRANCES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>FRANCES SCARBOROUGH</displayForm>
+ <namePart type="family">SCARBOROUGH</namePart>
+ <namePart type="given">FRANCES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor-in-Possess</description>
+</name>
+<name type="personal">
+ <displayForm>FRANCES SCARBOROUGH</displayForm>
+ <namePart type="family">SCARBOROUGH</namePart>
+ <namePart type="given">FRANCES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_08-cv-04873</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:08-cv-04873</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <party fullName="CHASE HOME FINANCE, LLC" lastName="CHASE HOME FINANCE, LLC" role="Defendant"></party>
+ <party firstName="ERIC" fullName="ERIC L. FRANK" lastName="FRANK" middleName="L." role="Notice Only Party"></party>
+ <party firstName="TIMOTHY" fullName="TIMOTHY MCGRATH" lastName="MCGRATH" role="Notice Only Party"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Appellant"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Debtor-in-Possess"></party>
+ <party firstName="FRANCES" fullName="FRANCES SCARBOROUGH" lastName="SCARBOROUGH" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_08-cv-04873-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04873/USCOURTS-paed-2_08-cv-04873-0/mods.xml">
+ <titleInfo>
+  <title>IN RE: FRANCES SCARBOROUGH</title>
+  <subTitle>MEMORANDUM AND ORDER THAT THIS CASE IS REMANDED TO THE BANKRUPTCY COURT FOR FURTHER PROCEEDINGS IN CONFORMITY WITH THE VIEWS EXPRESSED IN THE ACCOMPANYING MEMORANDUM. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/22/09. 1/22/09 ENTERED AND COPIES MAILED, E-MAILED AND CERTIFIED COPY OF ORDER SEND TO THE BANKRUPTCY COURT.(lisad, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_08-cv-04873-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1813a40e3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04873/USCOURTS-paed-2_08-cv-04873-0</identifier>
+ <identifier type="former granule identifier">paed-2_08-cv-04873_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_08-cv-04873/USCOURTS-paed-2_08-cv-04873-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_08-cv-04873/pdf/USCOURTS-paed-2_08-cv-04873-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-04873; IN RE: FRANCES SCARBOROUGH; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_08-cv-04873-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT THIS CASE IS REMANDED TO THE BANKRUPTCY COURT FOR FURTHER PROCEEDINGS IN CONFORMITY WITH THE VIEWS EXPRESSED IN THE ACCOMPANYING MEMORANDUM. SIGNED BY HONORABLE JOHN P. FULLAM ON 1/22/09. 1/22/09 ENTERED AND COPIES MAILED, E-MAILED AND CERTIFIED COPY OF ORDER SEND TO THE BANKRUPTCY COURT.(lisad, )</docketText>
+</extension>
+</relatedItem>
+</mods>

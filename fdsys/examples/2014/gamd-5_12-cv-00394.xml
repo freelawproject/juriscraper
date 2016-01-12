@@ -1,0 +1,411 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18c6208e5">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-05-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-12-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394</identifier>
+<identifier type="local">P0b002ee18c6208e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-05-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-05-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-5_12-cv-00394</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_12-cv-00394</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:12-cv-00394</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>12:1821 Default of Loan by Promissary Note</cause>
+ <party firstName="ROB" fullName="ROB BRASWELL" lastName="BRASWELL" role="Defendant"></party>
+ <party fullName="FEDERAL DEPOSIT INSURANCE CORPORATION" lastName="FEDERAL DEPOSIT INSURANCE CORPORATION" role="Defendant"></party>
+ <party fullName="GEORGIA DEPARTMENT OF BANKING AND FINANCE" lastName="GEORGIA DEPARTMENT OF BANKING AND FINANCE" role="Defendant"></party>
+ <party firstName="DREW" fullName="DREW HULSEY" lastName="HULSEY" role="Defendant"></party>
+ <party fullName="MOUNTAIN HERITAGE BANK" lastName="MOUNTAIN HERITAGE BANK" role="Defendant"></party>
+ <party firstName="MICKEY" fullName="MICKEY PARKER" lastName="PARKER" role="Defendant"></party>
+ <party fullName="PEACH BLOSSOM DEVELOPMENT COMPANY INC" lastName="PEACH BLOSSOM DEVELOPMENT COMPANY INC" role="Plaintiff"></party>
+ <party fullName="PIEDMONT COMMUNITY BANK" lastName="PIEDMONT COMMUNITY BANK" role="Defendant"></party>
+ <party fullName="STATE BANK AND TRUST COMPANY" lastName="STATE BANK AND TRUST COMPANY" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+ <partNumber>5:12-cv-00394</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:12-cv-00394;12-394</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Macon</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ROB BRASWELL</displayForm>
+ <namePart type="family">BRASWELL</namePart>
+ <namePart type="given">ROB</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>FEDERAL DEPOSIT INSURANCE CORPORATION</displayForm>
+ <namePart type="family">FEDERAL DEPOSIT INSURANCE CORPORATION</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>GEORGIA DEPARTMENT OF BANKING AND FINANCE</displayForm>
+ <namePart type="family">GEORGIA DEPARTMENT OF BANKING AND FINANCE</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>DREW HULSEY</displayForm>
+ <namePart type="family">HULSEY</namePart>
+ <namePart type="given">DREW</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MOUNTAIN HERITAGE BANK</displayForm>
+ <namePart type="family">MOUNTAIN HERITAGE BANK</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MICKEY PARKER</displayForm>
+ <namePart type="family">PARKER</namePart>
+ <namePart type="given">MICKEY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PEACH BLOSSOM DEVELOPMENT COMPANY INC</displayForm>
+ <namePart type="family">PEACH BLOSSOM DEVELOPMENT COMPANY INC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PIEDMONT COMMUNITY BANK</displayForm>
+ <namePart type="family">PIEDMONT COMMUNITY BANK</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>STATE BANK AND TRUST COMPANY</displayForm>
+ <namePart type="family">STATE BANK AND TRUST COMPANY</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-5_12-cv-00394</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>5:12-cv-00394</caseNumber>
+ <caseOffice>Macon</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>12:1821 Default of Loan by Promissary Note</cause>
+ <party firstName="ROB" fullName="ROB BRASWELL" lastName="BRASWELL" role="Defendant"></party>
+ <party fullName="FEDERAL DEPOSIT INSURANCE CORPORATION" lastName="FEDERAL DEPOSIT INSURANCE CORPORATION" role="Defendant"></party>
+ <party fullName="GEORGIA DEPARTMENT OF BANKING AND FINANCE" lastName="GEORGIA DEPARTMENT OF BANKING AND FINANCE" role="Defendant"></party>
+ <party firstName="DREW" fullName="DREW HULSEY" lastName="HULSEY" role="Defendant"></party>
+ <party fullName="MOUNTAIN HERITAGE BANK" lastName="MOUNTAIN HERITAGE BANK" role="Defendant"></party>
+ <party firstName="MICKEY" fullName="MICKEY PARKER" lastName="PARKER" role="Defendant"></party>
+ <party fullName="PEACH BLOSSOM DEVELOPMENT COMPANY INC" lastName="PEACH BLOSSOM DEVELOPMENT COMPANY INC" role="Plaintiff"></party>
+ <party fullName="PIEDMONT COMMUNITY BANK" lastName="PIEDMONT COMMUNITY BANK" role="Defendant"></party>
+ <party fullName="STATE BANK AND TRUST COMPANY" lastName="STATE BANK AND TRUST COMPANY" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-0/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER denying as premature 7 Motion to Stay. Ordered by Judge Hugh Lawson on 2/6/2013. (nbp)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-0</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>ORDER denying as premature 7 Motion to Stay. Ordered by Judge Hugh Lawson on 2/6/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-1/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER denying as premature 7 Motion to Stay Discovery. Ordered by Judge Hugh Lawson on 2/6/2013. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-1</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-02-06</dateIssued>
+  <docketText>ORDER denying as premature 7 Motion to Stay Discovery. Ordered by Judge Hugh Lawson on 2/6/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-2/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER granting 5 Motion to Dismiss Party. Ordered by Judge Hugh Lawson on 3/11/2013. (nbp)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63c8a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-2</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-03-11</dateIssued>
+  <docketText>ORDER granting 5 Motion to Dismiss Party. Ordered by Judge Hugh Lawson on 3/11/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-3/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER granting 26 Motion to Stay. Ordered by Judge Hugh Lawson on 6/27/2013. (nbp)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-3</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-06-27</dateIssued>
+  <docketText>ORDER granting 26 Motion to Stay. Ordered by Judge Hugh Lawson on 6/27/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-4/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER directing defense counsel to file written report as to the status of this case not later than 9/13/2013. Ordered by Judge Hugh Lawson on 9/3/2013. (nbp)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-4</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-09-03</dateIssued>
+  <docketText>ORDER directing defense counsel to file written report as to the status of this case not later than 9/13/2013. Ordered by Judge Hugh Lawson on 9/3/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-5/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER for status report. Ordered by U.S. District Judge Hugh Lawson on January 3, 2014. (mbh)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-5</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>ORDER for status report. Ordered by U.S. District Judge Hugh Lawson on January 3, 2014. (mbh)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-6/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER dismissing Georgia Department of Banking and Finance as a party; stay is lifted; parties to proceed with discovery. Ordered by U.S. District Judge HUGH LAWSON on 5/21/2014. (nbp)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63c8a0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-6</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-05-21</dateIssued>
+  <docketText>ORDER dismissing Georgia Department of Banking and Finance as a party; stay is lifted; parties to proceed with discovery. Ordered by U.S. District Judge HUGH LAWSON on 5/21/2014. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-5_12-cv-00394-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-7/mods.xml">
+ <titleInfo>
+  <title>PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al</title>
+  <subTitle>ORDER granting 48 Motion for Summary JudgmentOrdered by U.S. District Judge HUGH LAWSON on 12/17/2014 (aks)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18c63cd26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-7</identifier>
+ <identifier type="former granule identifier">gamd-5_12-cv-00394_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-5_12-cv-00394/USCOURTS-gamd-5_12-cv-00394-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-5_12-cv-00394/pdf/USCOURTS-gamd-5_12-cv-00394-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:12-cv-00394; PEACH BLOSSOM DEVELOPMENT CO INC v. FEDERAL DEPOSIT INSURANCE CORPORATION et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-5_12-cv-00394-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-12-17</dateIssued>
+  <docketText>ORDER granting 48 Motion for Summary JudgmentOrdered by U.S. District Judge HUGH LAWSON on 12/17/2014 (aks)</docketText>
+</extension>
+</relatedItem>
+</mods>

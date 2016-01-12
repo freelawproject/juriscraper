@@ -1,0 +1,258 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817445d2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320</identifier>
+<identifier type="local">P0b002ee1817445d2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cr-00320</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cr-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cr-00320</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Carlos" fullName="Carlos Zuniga-Bonilla" lastName="Zuniga-Bonilla" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Zuniga-Bonilla</title>
+ <partNumber>8:10-cr-00320</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cr-00320;10-320</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Carlos Zuniga-Bonilla</displayForm>
+ <namePart type="family">Zuniga-Bonilla</namePart>
+ <namePart type="given">Carlos</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cr-00320</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cr-00320</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Carlos" fullName="Carlos Zuniga-Bonilla" lastName="Zuniga-Bonilla" role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00320-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Zuniga-Bonilla</title>
+  <subTitle>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as to defendant Carlos Zuniga-Bonilla. Ordered by Magistrate Judge F.A. Gossett. (JAE)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00320-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181772ea8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00320_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/pdf/USCOURTS-ned-8_10-cr-00320-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00320; USA v. Zuniga-Bonilla; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00320-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-04</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - The Federal Public Defender for the District of Nebraska is appointed to represent the above named defendant in this matter as to defendant Carlos Zuniga-Bonilla. Ordered by Magistrate Judge F.A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00320-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Zuniga-Bonilla</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Carlos Zuniga-Bonilla. Ordered by Magistrate Judge F.A. Gossett. (JAE)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00320-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181773004</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00320_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/pdf/USCOURTS-ned-8_10-cr-00320-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00320; USA v. Zuniga-Bonilla; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00320-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-10-04</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Carlos Zuniga-Bonilla. Ordered by Magistrate Judge F.A. Gossett. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00320-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Zuniga-Bonilla</title>
+  <subTitle>ORDER RE: TRIAL PREPARATION (CRIMINAL JURY TRIAL) as to Defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00320-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181773002</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-2</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00320_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/pdf/USCOURTS-ned-8_10-cr-00320-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00320; USA v. Zuniga-Bonilla; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00320-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-11-18</dateIssued>
+  <docketText>ORDER RE: TRIAL PREPARATION (CRIMINAL JURY TRIAL) as to Defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00320-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Zuniga-Bonilla</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Modified Presentence Investigation Report as to Defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00320-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181773003</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-3</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00320_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/pdf/USCOURTS-ned-8_10-cr-00320-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00320; USA v. Zuniga-Bonilla; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00320-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-01-12</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Modified Presentence Investigation Report as to Defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cr-00320-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Zuniga-Bonilla</title>
+  <subTitle>JUDGMENT as to Carlos Zuniga-Bonilla (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of Time Served; 1 year supervised release with special conditions; $100.00 special assessment (remitted) as to defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(ADB, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cr-00320-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181773005</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-4</identifier>
+ <identifier type="former granule identifier">ned-8_10-cr-00320_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cr-00320/USCOURTS-ned-8_10-cr-00320-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cr-00320/pdf/USCOURTS-ned-8_10-cr-00320-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cr-00320; USA v. Zuniga-Bonilla; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cr-00320-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-01-13</dateIssued>
+  <docketText>JUDGMENT as to Carlos Zuniga-Bonilla (1), Count 1 - Defendant pleaded guilty to count I of the Indictment and is committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of Time Served; 1 year supervised release with special conditions; $100.00 special assessment (remitted) as to defendant Carlos Zuniga-Bonilla. Ordered by Judge Laurie Smith Camp. (4 Certified copies to USM)(ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>

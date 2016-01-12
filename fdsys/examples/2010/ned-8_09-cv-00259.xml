@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817b8d65">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00259</identifier>
+<identifier type="local">P0b002ee1817b8d65</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00259</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00259</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00259</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition For Removal--Other Contract</cause>
+ <party fullName="BankEast" lastName="BankEast" role="Plaintiff"></party>
+ <party fullName="BankEast Corporation" lastName="BankEast Corporation" role="Plaintiff"></party>
+ <party fullName="Fiserv, Inc" lastName="Fiserv, Inc" role="Defendant"></party>
+ <party fullName="Information Technology, Inc." lastName="Information Technology, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BankEast v. Information Technology, Inc</title>
+ <partNumber>8:09-cv-00259</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00259/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00259;09-259</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BankEast</displayForm>
+ <namePart type="family">BankEast</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>BankEast Corporation</displayForm>
+ <namePart type="family">BankEast Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Fiserv, Inc</displayForm>
+ <namePart type="family">Fiserv, Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Information Technology, Inc.</displayForm>
+ <namePart type="family">Information Technology, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00259</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00259</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>190</natureSuitCode>
+ <natureSuit>Other Contract Actions</natureSuit>
+ <cause>28:1441 Petition For Removal--Other Contract</cause>
+ <party fullName="BankEast" lastName="BankEast" role="Plaintiff"></party>
+ <party fullName="BankEast Corporation" lastName="BankEast Corporation" role="Plaintiff"></party>
+ <party fullName="Fiserv, Inc" lastName="Fiserv, Inc" role="Defendant"></party>
+ <party fullName="Information Technology, Inc." lastName="Information Technology, Inc." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00259-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-0/mods.xml">
+ <titleInfo>
+  <title>BankEast v. Information Technology, Inc</title>
+  <subTitle>MEMORANDUM AND ORDER - BankEast wishes to withdraw the motion to remand (filing 8) that it filed in this case. See Information Technology, Inc. v. BankEast, Case No. 4:08-cv-3207, CM/ECF Filing 34 (D. Neb. 2008). BankEast&apos;s request will be granted. BankEast&apos;s motion to remand (filing 8) is hereby deemed withdrawn. The parties shall have until November 9, 2009, to show cause as to why this action should not be consolidated with Information Technology, Inc. v. BankEast, Case No. 4:08-cv-3207 (D. Neb. 2008) or, alternatively, to consent to consolidation. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-10-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00259-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d957b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00259_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00259/pdf/USCOURTS-ned-8_09-cv-00259-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00259; BankEast v. Information Technology, Inc; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00259-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-10-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - BankEast wishes to withdraw the motion to remand (filing 8) that it filed in this case. See Information Technology, Inc. v. BankEast, Case No. 4:08-cv-3207, CM/ECF Filing 34 (D. Neb. 2008). BankEast&apos;s request will be granted. BankEast&apos;s motion to remand (filing 8) is hereby deemed withdrawn. The parties shall have until November 9, 2009, to show cause as to why this action should not be consolidated with Information Technology, Inc. v. BankEast, Case No. 4:08-cv-3207 (D. Neb. 2008) or, alternatively, to consent to consolidation. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00259-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-1/mods.xml">
+ <titleInfo>
+  <title>BankEast v. Information Technology, Inc</title>
+  <subTitle>MEMORANDUM AND ORDER - The court has been advised that the parties in the above-captioned matter have reached a settlement of their claims. Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal. This case is removed from the court&apos;s trial docket upon representation by the parties that the case has settled. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00259-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818d957c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00259_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00259/USCOURTS-ned-8_09-cv-00259-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00259/pdf/USCOURTS-ned-8_09-cv-00259-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00259; BankEast v. Information Technology, Inc; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00259-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The court has been advised that the parties in the above-captioned matter have reached a settlement of their claims. Within thirty (30) calendar days of the date of this order, the parties shall file a joint stipulation for dismissal. This case is removed from the court&apos;s trial docket upon representation by the parties that the case has settled. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

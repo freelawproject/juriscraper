@@ -1,0 +1,252 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18afe702e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Eastern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-02-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nyeb-1_13-bk-40083</identifier>
+<identifier type="local">P0b002ee18afe702e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-02-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-02-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nyeb-1_13-bk-40083</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nyeb-1_13-bk-40083</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nyeb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3351</courtSortOrder>
+ <caseNumber>1:13-bk-40083</caseNumber>
+ <caseOffice>Brooklyn</caseOffice>
+ <party fullName="Buckskin Realty Inc" lastName="Buckskin Realty Inc" role="Debtor"></party>
+ <party fullName="Office of the United States Trustee" lastName="Office of the United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Rey" fullName="Rey Olsen" lastName="Olsen" role="Interested Party"></party>
+ <party firstName="Frederick" fullName="Frederick Cains" lastName="Cains" role="Attorney"></party>
+ <party fullName="Windmont Homeowner&apos;s Association" lastName="Windmont Homeowner&apos;s Association" role="Creditor"></party>
+ <party firstName="Rey" fullName="Rey Olsen" lastName="Olsen" role="Creditor"></party>
+ <party firstName="Allyson" fullName="Allyson M. Phillips" lastName="Phillips" middleName="M." role="Interested Party"></party>
+ <party firstName="Sommer" fullName="Sommer Young" lastName="Young" role="Interested Party"></party>
+ <party fullName="Windmont Homeowners Association, Inc." lastName="Windmont Homeowners Association, Inc." role="Interested Party"></party>
+ <party firstName="Cathy" fullName="Cathy Hennessy" lastName="Hennessy" role="Interested Party"></party>
+ <party firstName="Eva" fullName="Eva Halpern" lastName="Halpern" role="Interested Party"></party>
+ <party firstName="Ed" fullName="Ed Lieto" lastName="Lieto" role="Interested Party"></party>
+ <party firstName="Edward" fullName="Edward Kaplan" lastName="Kaplan" role="Interested Party"></party>
+ <party firstName="Barry" fullName="Barry Margolis" lastName="Margolis" role="Attorney"></party>
+</extension>
+<titleInfo>
+ <title>Buckskin Realty Inc</title>
+ <partNumber>1:13-bk-40083</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nyeb-1_13-bk-40083/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:13-bk-40083;13-40083</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Eastern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Brooklyn</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Buckskin Realty Inc</displayForm>
+ <namePart type="family">Buckskin Realty Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Office of the United States Trustee</displayForm>
+ <namePart type="family">Office of the United States Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>U.S. Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Rey Olsen</displayForm>
+ <namePart type="family">Olsen</namePart>
+ <namePart type="given">Rey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Frederick Cains</displayForm>
+ <namePart type="family">Cains</namePart>
+ <namePart type="given">Frederick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<name type="personal">
+ <displayForm>Windmont Homeowner&apos;s Association</displayForm>
+ <namePart type="family">Windmont Homeowner&apos;s Association</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Rey Olsen</displayForm>
+ <namePart type="family">Olsen</namePart>
+ <namePart type="given">Rey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Allyson M. Phillips</displayForm>
+ <namePart type="family">Phillips</namePart>
+ <namePart type="given">Allyson</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Sommer Young</displayForm>
+ <namePart type="family">Young</namePart>
+ <namePart type="given">Sommer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Windmont Homeowners Association, Inc.</displayForm>
+ <namePart type="family">Windmont Homeowners Association, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Cathy Hennessy</displayForm>
+ <namePart type="family">Hennessy</namePart>
+ <namePart type="given">Cathy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Eva Halpern</displayForm>
+ <namePart type="family">Halpern</namePart>
+ <namePart type="given">Eva</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Ed Lieto</displayForm>
+ <namePart type="family">Lieto</namePart>
+ <namePart type="given">Ed</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Edward Kaplan</displayForm>
+ <namePart type="family">Kaplan</namePart>
+ <namePart type="given">Edward</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Barry Margolis</displayForm>
+ <namePart type="family">Margolis</namePart>
+ <namePart type="given">Barry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Attorney</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nyeb-1_13-bk-40083</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nyeb</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>3351</courtSortOrder>
+ <caseNumber>1:13-bk-40083</caseNumber>
+ <caseOffice>Brooklyn</caseOffice>
+ <party fullName="Buckskin Realty Inc" lastName="Buckskin Realty Inc" role="Debtor"></party>
+ <party fullName="Office of the United States Trustee" lastName="Office of the United States Trustee" role="U.S. Trustee"></party>
+ <party firstName="Rey" fullName="Rey Olsen" lastName="Olsen" role="Interested Party"></party>
+ <party firstName="Frederick" fullName="Frederick Cains" lastName="Cains" role="Attorney"></party>
+ <party fullName="Windmont Homeowner&apos;s Association" lastName="Windmont Homeowner&apos;s Association" role="Creditor"></party>
+ <party firstName="Rey" fullName="Rey Olsen" lastName="Olsen" role="Creditor"></party>
+ <party firstName="Allyson" fullName="Allyson M. Phillips" lastName="Phillips" middleName="M." role="Interested Party"></party>
+ <party firstName="Sommer" fullName="Sommer Young" lastName="Young" role="Interested Party"></party>
+ <party fullName="Windmont Homeowners Association, Inc." lastName="Windmont Homeowners Association, Inc." role="Interested Party"></party>
+ <party firstName="Cathy" fullName="Cathy Hennessy" lastName="Hennessy" role="Interested Party"></party>
+ <party firstName="Eva" fullName="Eva Halpern" lastName="Halpern" role="Interested Party"></party>
+ <party firstName="Ed" fullName="Ed Lieto" lastName="Lieto" role="Interested Party"></party>
+ <party firstName="Edward" fullName="Edward Kaplan" lastName="Kaplan" role="Interested Party"></party>
+ <party firstName="Barry" fullName="Barry Margolis" lastName="Margolis" role="Attorney"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nyeb-1_13-bk-40083-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nyeb-1_13-bk-40083/USCOURTS-nyeb-1_13-bk-40083-0/mods.xml">
+ <titleInfo>
+  <title>Buckskin Realty Inc</title>
+  <subTitle>Decision that the Court denies the Movants request to deem the Petition filed at an earlier time, and holds that the foreclosure sale did not violate the automatic stay, because it occurred prior to the filing of the Petition. A separate order will issue (RE: related document(s)54 Motion to Authorize/Direct filed by Debtor Buckskin Realty Inc, 59 Motion for Violation of Automatic Stay filed by Creditor Rey Olsen). Signed on 1/6/2015 (aac)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nyeb-1_13-bk-40083/pdf/USCOURTS-nyeb-1_13-bk-40083-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18affee71</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nyeb-1_13-bk-40083/USCOURTS-nyeb-1_13-bk-40083-0</identifier>
+ <identifier type="former granule identifier">nyeb-1_13-bk-40083_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nyeb-1_13-bk-40083/USCOURTS-nyeb-1_13-bk-40083-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nyeb-1_13-bk-40083/pdf/USCOURTS-nyeb-1_13-bk-40083-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-bk-40083; Buckskin Realty Inc; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nyeb-1_13-bk-40083-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>Decision that the Court denies the Movants request to deem the Petition filed at an earlier time, and holds that the foreclosure sale did not violate the automatic stay, because it occurred prior to the filing of the Petition. A separate order will issue (RE: related document(s)54 Motion to Authorize/Direct filed by Debtor Buckskin Realty Inc, 59 Motion for Violation of Automatic Stay filed by Creditor Rey Olsen). Signed on 1/6/2015 (aac)</docketText>
+</extension>
+</relatedItem>
+</mods>

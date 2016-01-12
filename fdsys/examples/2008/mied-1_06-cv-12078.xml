@@ -1,0 +1,268 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18192e06d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_06-cv-12078</identifier>
+<identifier type="local">P0b002ee18192e06d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-1_06-cv-12078</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_06-cv-12078</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:06-cv-12078</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="B-C-G Town and Country" lastName="B-C-G Town and Country" role="Defendant"></party>
+ <party firstName="Seneca" fullName="Seneca Booth" lastName="Booth" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="S." fullName="S. Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="T." fullName="T. Drury" lastName="Drury" role="Defendant"></party>
+ <party fullName="G and D Goossens, Incorporated" lastName="G and D Goossens, Incorporated" role="Defendant"></party>
+ <party fullName="Gateway Lanes and Peppermint Lounge" lastName="Gateway Lanes and Peppermint Lounge" role="Defendant"></party>
+ <party firstName="James" fullName="James Grawey" lastName="Grawey" role="Plaintiff"></party>
+ <party fullName="J. G. H. Enterprises, Incorporated" lastName="J. G. H. Enterprises, Incorporated" role="Defendant"></party>
+ <party firstName="Kyle" fullName="Kyle Kehn" lastName="Kehn" role="Defendant"></party>
+ <party firstName="David" fullName="David Saad" lastName="Saad" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Wentworth" lastName="Wentworth" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Grawey v. Drury et al</title>
+ <partNumber>1:06-cv-12078</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_06-cv-12078/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:06-cv-12078;06-12078</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Bay City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>B-C-G Town and Country</displayForm>
+ <namePart type="family">B-C-G Town and Country</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Seneca Booth</displayForm>
+ <namePart type="family">Booth</namePart>
+ <namePart type="given">Seneca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brad Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Brad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Drury</displayForm>
+ <namePart type="family">Drury</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G and D Goossens, Incorporated</displayForm>
+ <namePart type="family">G and D Goossens, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gateway Lanes and Peppermint Lounge</displayForm>
+ <namePart type="family">Gateway Lanes and Peppermint Lounge</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Grawey</displayForm>
+ <namePart type="family">Grawey</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>J. G. H. Enterprises, Incorporated</displayForm>
+ <namePart type="family">J. G. H. Enterprises, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kyle Kehn</displayForm>
+ <namePart type="family">Kehn</namePart>
+ <namePart type="given">Kyle</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Saad</displayForm>
+ <namePart type="family">Saad</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dawn Wentworth</displayForm>
+ <namePart type="family">Wentworth</namePart>
+ <namePart type="given">Dawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_06-cv-12078</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:06-cv-12078</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party fullName="B-C-G Town and Country" lastName="B-C-G Town and Country" role="Defendant"></party>
+ <party firstName="Seneca" fullName="Seneca Booth" lastName="Booth" role="Defendant"></party>
+ <party firstName="Brad" fullName="Brad Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="S." fullName="S. Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="T." fullName="T. Drury" lastName="Drury" role="Defendant"></party>
+ <party fullName="G and D Goossens, Incorporated" lastName="G and D Goossens, Incorporated" role="Defendant"></party>
+ <party fullName="Gateway Lanes and Peppermint Lounge" lastName="Gateway Lanes and Peppermint Lounge" role="Defendant"></party>
+ <party firstName="James" fullName="James Grawey" lastName="Grawey" role="Plaintiff"></party>
+ <party fullName="J. G. H. Enterprises, Incorporated" lastName="J. G. H. Enterprises, Incorporated" role="Defendant"></party>
+ <party firstName="Kyle" fullName="Kyle Kehn" lastName="Kehn" role="Defendant"></party>
+ <party firstName="David" fullName="David Saad" lastName="Saad" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Wentworth" lastName="Wentworth" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_06-cv-12078-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-0/mods.xml">
+ <titleInfo>
+  <title>Grawey v. Drury et al</title>
+  <subTitle>MEMORANDUM OPINION and ORDER granting in part and denying in part 44 MOTION to Dismiss MOTION for Summary Judgment, and 43 MOTION for Summary Judgment and Brief in Support of Motion for Summary Judgment and Service Certification Signed by Honorable Thomas L Ludington. (DHam)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_06-cv-12078-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819d4e2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-0</identifier>
+ <identifier type="former granule identifier">mied-1_06-cv-12078_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_06-cv-12078/pdf/USCOURTS-mied-1_06-cv-12078-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-12078; Grawey v. Drury et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_06-cv-12078-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-12-11</dateIssued>
+  <docketText>MEMORANDUM OPINION and ORDER granting in part and denying in part 44 MOTION to Dismiss MOTION for Summary Judgment, and 43 MOTION for Summary Judgment and Brief in Support of Motion for Summary Judgment and Service Certification Signed by Honorable Thomas L Ludington. (DHam)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_06-cv-12078-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-1/mods.xml">
+ <titleInfo>
+  <title>Grawey v. Drury et al</title>
+  <subTitle>ORDER denying 66 Motion to Stay. Signed by Honorable Thomas L Ludington. (SGam)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_06-cv-12078-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819d4e2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-1</identifier>
+ <identifier type="former granule identifier">mied-1_06-cv-12078_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_06-cv-12078/USCOURTS-mied-1_06-cv-12078-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_06-cv-12078/pdf/USCOURTS-mied-1_06-cv-12078-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:06-cv-12078; Grawey v. Drury et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_06-cv-12078-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-01-11</dateIssued>
+  <docketText>ORDER denying 66 Motion to Stay. Signed by Honorable Thomas L Ludington. (SGam)</docketText>
+</extension>
+</relatedItem>
+</mods>

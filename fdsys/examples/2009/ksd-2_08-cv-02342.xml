@@ -1,0 +1,263 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1876699ff">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342</identifier>
+<identifier type="local">P0b002ee1876699ff</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_08-cv-02342</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-cv-02342</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-cv-02342</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Axelacare Health Solutions, LLC" lastName="Axelacare Health Solutions, LLC" role="Defendant"></party>
+ <party firstName="Garth" fullName="Garth Groman" lastName="Groman" role="Defendant"></party>
+ <party fullName="IHS Acquisition XXX, Inc." lastName="IHS Acquisition XXX, Inc." role="Plaintiff"></party>
+ <party firstName="Leticia" fullName="Leticia Lugo" lastName="Lugo" role="Defendant"></party>
+ <party fullName="US Bioservices Corporation" lastName="US Bioservices Corporation" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>US Bioservices Corporation et al v. Lugo et al</title>
+ <partNumber>2:08-cv-02342</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-02342;08-2342</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Axelacare Health Solutions, LLC</displayForm>
+ <namePart type="family">Axelacare Health Solutions, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Garth Groman</displayForm>
+ <namePart type="family">Groman</namePart>
+ <namePart type="given">Garth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>IHS Acquisition XXX, Inc.</displayForm>
+ <namePart type="family">IHS Acquisition XXX, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leticia Lugo</displayForm>
+ <namePart type="family">Lugo</namePart>
+ <namePart type="given">Leticia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>US Bioservices Corporation</displayForm>
+ <namePart type="family">US Bioservices Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_08-cv-02342</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:08-cv-02342</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:1331 Fed. Question</cause>
+ <party fullName="Axelacare Health Solutions, LLC" lastName="Axelacare Health Solutions, LLC" role="Defendant"></party>
+ <party firstName="Garth" fullName="Garth Groman" lastName="Groman" role="Defendant"></party>
+ <party fullName="IHS Acquisition XXX, Inc." lastName="IHS Acquisition XXX, Inc." role="Plaintiff"></party>
+ <party firstName="Leticia" fullName="Leticia Lugo" lastName="Lugo" role="Defendant"></party>
+ <party fullName="US Bioservices Corporation" lastName="US Bioservices Corporation" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-cv-02342-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-0/mods.xml">
+ <titleInfo>
+  <title>US Bioservices Corporation et al v. Lugo et al</title>
+  <subTitle>ORDER granting in part and denying in part 3 Motion for TRO. Signed by District Judge Kathryn H. Vratil on 8/6/2008. (ses)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-08-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187677f65</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-0</identifier>
+ <identifier type="former granule identifier">ksd-2_08-cv-02342_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02342; US Bioservices Corporation et al v. Lugo et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-cv-02342-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-08-06</dateIssued>
+  <docketText>ORDER granting in part and denying in part 3 Motion for TRO. Signed by District Judge Kathryn H. Vratil on 8/6/2008. (ses)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-cv-02342-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-1/mods.xml">
+ <titleInfo>
+  <title>US Bioservices Corporation et al v. Lugo et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting 34 Motion to Amend Complaint; and denying as moot the 27 Motion to Dismiss. Signed by District Judge John W. Lungstrum on 10/9/2008. Plaintiffs shall file their proposed second amended complaint as a separate pleading by the end of the day on October 10, 2008. (ses)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187677f63</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-1</identifier>
+ <identifier type="former granule identifier">ksd-2_08-cv-02342_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02342; US Bioservices Corporation et al v. Lugo et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-cv-02342-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-10-09</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting 34 Motion to Amend Complaint; and denying as moot the 27 Motion to Dismiss. Signed by District Judge John W. Lungstrum on 10/9/2008. Plaintiffs shall file their proposed second amended complaint as a separate pleading by the end of the day on October 10, 2008. (ses)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-cv-02342-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-2/mods.xml">
+ <titleInfo>
+  <title>US Bioservices Corporation et al v. Lugo et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying defendant Garth Groman&apos;s 10 Motion to Dismiss for Lack of Jurisdiction. Signed by District Judge John W. Lungstrum on 10/23/2008. (ses)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187677f64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-2</identifier>
+ <identifier type="former granule identifier">ksd-2_08-cv-02342_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02342; US Bioservices Corporation et al v. Lugo et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-cv-02342-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-10-23</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying defendant Garth Groman&apos;s 10 Motion to Dismiss for Lack of Jurisdiction. Signed by District Judge John W. Lungstrum on 10/23/2008. (ses)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_08-cv-02342-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-3/mods.xml">
+ <titleInfo>
+  <title>US Bioservices Corporation et al v. Lugo et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting in part and denying in part 41 Motion to Dismiss. The motion is granted with respect to plaintiffs claims for violations of section 1030(a)(5) of the CFAA, and those claims are hereby dismissed. The motion is denied in all other respects. Signed by District Judge John W. Lungstrum on 1/21/2009. (ses)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee187677e91</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-3</identifier>
+ <identifier type="former granule identifier">ksd-2_08-cv-02342_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_08-cv-02342/USCOURTS-ksd-2_08-cv-02342-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_08-cv-02342/pdf/USCOURTS-ksd-2_08-cv-02342-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-02342; US Bioservices Corporation et al v. Lugo et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_08-cv-02342-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting in part and denying in part 41 Motion to Dismiss. The motion is granted with respect to plaintiffs claims for violations of section 1030(a)(5) of the CFAA, and those claims are hereby dismissed. The motion is denied in all other respects. Signed by District Judge John W. Lungstrum on 1/21/2009. (ses)</docketText>
+</extension>
+</relatedItem>
+</mods>

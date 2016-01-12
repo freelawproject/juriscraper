@@ -1,0 +1,346 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1849a411a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-04-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083</identifier>
+<identifier type="local">P0b002ee1849a411a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-03083</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-03083</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-03083</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="California Department of Corrections" lastName="California Department of Corrections" role="Defendant"></party>
+ <party fullName="Folsom State Prison" lastName="Folsom State Prison" role="Defendant"></party>
+ <party firstName="N." fullName="N. Fransham" lastName="Fransham" role="Defendant"></party>
+ <party fullName="Granillo" lastName="Granillo" role="Defendant"></party>
+ <party firstName="Johnney" fullName="Johnney Ramey" lastName="Ramey" role="Plaintiff"></party>
+ <party firstName="P." fullName="P. Reyersbach" lastName="Reyersbach" role="Defendant"></party>
+ <party firstName="J." fullName="J. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="T" fullName="T J Vasquez" lastName="Vasquez" middleName="J" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Ramey v. Reyersbach et al</title>
+ <partNumber>2:11-cv-03083</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-03083;11-3083</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>California Department of Corrections</displayForm>
+ <namePart type="family">California Department of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Folsom State Prison</displayForm>
+ <namePart type="family">Folsom State Prison</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>N. Fransham</displayForm>
+ <namePart type="family">Fransham</namePart>
+ <namePart type="given">N.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Granillo</displayForm>
+ <namePart type="family">Granillo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnney Ramey</displayForm>
+ <namePart type="family">Ramey</namePart>
+ <namePart type="given">Johnney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>P. Reyersbach</displayForm>
+ <namePart type="family">Reyersbach</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T J Vasquez</displayForm>
+ <namePart type="family">Vasquez</namePart>
+ <namePart type="given">T</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-03083</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-03083</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="California Department of Corrections" lastName="California Department of Corrections" role="Defendant"></party>
+ <party fullName="Folsom State Prison" lastName="Folsom State Prison" role="Defendant"></party>
+ <party firstName="N." fullName="N. Fransham" lastName="Fransham" role="Defendant"></party>
+ <party fullName="Granillo" lastName="Granillo" role="Defendant"></party>
+ <party firstName="Johnney" fullName="Johnney Ramey" lastName="Ramey" role="Plaintiff"></party>
+ <party firstName="P." fullName="P. Reyersbach" lastName="Reyersbach" role="Defendant"></party>
+ <party firstName="J." fullName="J. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="T" fullName="T J Vasquez" lastName="Vasquez" middleName="J" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Craig M. Kellison on 12/1/11 GRANTING 3 Motion to Proceed IFP. Plaintiff is required to pay the full statutory filing fee of $350.00 for this action.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac892</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Craig M. Kellison on 12/1/11 GRANTING 3 Motion to Proceed IFP. Plaintiff is required to pay the full statutory filing fee of $350.00 for this action.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Craig M. Kellison on 12/1/11 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Johnney Ramey to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac5c1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-12-02</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS signed by Magistrate Judge Craig M. Kellison on 12/1/11 ORDERING the director of the CDC to collect and forward payment from the prison trust account of Johnney Ramey to the clerk until the balance of $350 is paid in full. The clerk is directed to serve a copy of this order and the plaintiff&apos;s IFP on the Director of the CDC. The clerk is directed to serve a copy of this order on the financial department of the court. (cc Financial, CDC Prisoner Payment Orders )(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/17/12 recommending that this action be dismissed. Referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac5c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-18</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/17/12 recommending that this action be dismissed. Referred to Judge Kimberly J. Mueller. Objections due within 14 days. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>ORDER ADOPTING 11 FINDINGS and RECOMMENDATIONS, in part, signed by Judge Kimberly J. Mueller on 12/18/2012. Folsom State Prison and California Department of Corrections and Rehabilitation is DISMISSED as immune from suit and dismissal of due process claims based on alleged property rights and prison grievance process. Findings and Recommendations are NOT adopted in part in that plaintiff is GRANTED leave to amend his retaliation claim only, to allege more specific fact regarding claimed adverse action by defendants Reyersbach, Granillo, and Smith. This includes facts regarding precise materials seized and claimed consequential chilling effect on plaintiff. This case is REFERRED back to Magistrate Judge Kellison for further proceedings. (Marciel, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac5c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-19</dateIssued>
+  <docketText>ORDER ADOPTING 11 FINDINGS and RECOMMENDATIONS, in part, signed by Judge Kimberly J. Mueller on 12/18/2012. Folsom State Prison and California Department of Corrections and Rehabilitation is DISMISSED as immune from suit and dismissal of due process claims based on alleged property rights and prison grievance process. Findings and Recommendations are NOT adopted in part in that plaintiff is GRANTED leave to amend his retaliation claim only, to allege more specific fact regarding claimed adverse action by defendants Reyersbach, Granillo, and Smith. This includes facts regarding precise materials seized and claimed consequential chilling effect on plaintiff. This case is REFERRED back to Magistrate Judge Kellison for further proceedings. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/2/13 RECOMMENDING that plaintiffs in forma pauperis status be revoked; and plaintiff be required to pay the full statutory filing fee before the current action may proceed further, subject to dismissal of the action for failure to do so. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac5c0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Craig M. Kellison on 1/2/13 RECOMMENDING that plaintiffs in forma pauperis status be revoked; and plaintiff be required to pay the full statutory filing fee before the current action may proceed further, subject to dismissal of the action for failure to do so. Referred to Judge Kimberly J. Mueller; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-03083-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Ramey v. Reyersbach et al</title>
+  <subTitle>ORDER signed by Judge Kimberly J. Mueller on 4/30/13 ORDERING that the findings and recommendations filed January 2, 2013 are not adopted;and this case is referred back to the magistrate judge for further proceedings. (Becknal, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-04-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-03083-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1849ac5c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-03083_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-03083/USCOURTS-caed-2_11-cv-03083-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-03083/pdf/USCOURTS-caed-2_11-cv-03083-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-03083; (PC) Ramey v. Reyersbach et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-03083-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-04-30</dateIssued>
+  <docketText>ORDER signed by Judge Kimberly J. Mueller on 4/30/13 ORDERING that the findings and recommendations filed January 2, 2013 are not adopted;and this case is referred back to the magistrate judge for further proceedings. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

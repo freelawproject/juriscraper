@@ -1,0 +1,338 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183f3723a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-19</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777</identifier>
+<identifier type="local">P0b002ee183f3723a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-20</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_12-cv-01777</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01777</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01777</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Deirdre" fullName="Deirdre Bodenhamer" lastName="Bodenhamer" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lawrence Isgrigg III" generation="III" lastName="Isgrigg" middleName="Lawrence" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Ma" lastName="Ma" role="Defendant"></party>
+ <party firstName="Eilya" fullName="Eilya Moghaddam" lastName="Moghaddam" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Isgrigg v. Moghaddam et al</title>
+ <partNumber>2:12-cv-01777</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:12-cv-01777;12-1777</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Deirdre Bodenhamer</displayForm>
+ <namePart type="family">Bodenhamer</namePart>
+ <namePart type="given">Deirdre</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Lawrence Isgrigg III</displayForm>
+ <namePart type="family">Isgrigg</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James Ma</displayForm>
+ <namePart type="family">Ma</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eilya Moghaddam</displayForm>
+ <namePart type="family">Moghaddam</namePart>
+ <namePart type="given">Eilya</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_12-cv-01777</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:12-cv-01777</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Deirdre" fullName="Deirdre Bodenhamer" lastName="Bodenhamer" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Lawrence Isgrigg III" generation="III" lastName="Isgrigg" middleName="Lawrence" role="Plaintiff"></party>
+ <party firstName="James" fullName="James Ma" lastName="Ma" role="Defendant"></party>
+ <party firstName="Eilya" fullName="Eilya Moghaddam" lastName="Moghaddam" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 7/10/2012 ORDERING that plaintiff has 30 days to submit either the filing fee or an ifp application; and the clerk is to mail to plaintiff an ifp application.(Yin, K)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38373</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-0</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-11</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 7/10/2012 ORDERING that plaintiff has 30 days to submit either the filing fee or an ifp application; and the clerk is to mail to plaintiff an ifp application.(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/19/2012 GRANTING plaintiff&apos;s 5 request to proceed IFP; plaintiff to pay the $350.00 filing fee in accordance with the concurrent CDC notice; the complaint is DISMISSED with leave to amend within 30 days. (Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38238</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-1</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-11-19</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 11/19/2012 GRANTING plaintiff&apos;s 5 request to proceed IFP; plaintiff to pay the $350.00 filing fee in accordance with the concurrent CDC notice; the complaint is DISMISSED with leave to amend within 30 days. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Richard Lawrence Isgrigg, III signed by Magistrate Judge Edmund F. Brennan on 11/19/2012. CDC is to collect an initial partial filing fee and thereafter the balance in monthly payments and forward to the clerk until the $350 filing fee is paid in full. The Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDC. The Clerk to also serve Financial with a copy of this order. (cc: CDC, Financial)(Yin, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38237</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-2</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-11-19</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Richard Lawrence Isgrigg, III signed by Magistrate Judge Edmund F. Brennan on 11/19/2012. CDC is to collect an initial partial filing fee and thereafter the balance in monthly payments and forward to the clerk until the $350 filing fee is paid in full. The Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDC. The Clerk to also serve Financial with a copy of this order. (cc: CDC, Financial)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>[VACATED PURSUANT TO 1/02/13 ORDER]ORDER signed by Magistrate Judge Edmund F. Brennan on 12/20/12 ORDERING that this action is DISMISSED for failure to state a claim. CASE CLOSED. (Dillon, M) Modified on 1/2/2013 (Plummer, M).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38236</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-3</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-21</dateIssued>
+  <docketText>[VACATED PURSUANT TO 1/02/13 ORDER]ORDER signed by Magistrate Judge Edmund F. Brennan on 12/20/12 ORDERING that this action is DISMISSED for failure to state a claim. CASE CLOSED. (Dillon, M) Modified on 1/2/2013 (Plummer, M).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/02/13 ordering the order dismissing this action 10 is vacated and the clerk of the court is directed to re-open the case. Plaintiff shall file an amended complaint within 30 days from the date of this order. (Plummer, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38372</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-4</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/02/13 ordering the order dismissing this action 10 is vacated and the clerk of the court is directed to re-open the case. Plaintiff shall file an amended complaint within 30 days from the date of this order. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 2/4/13 ORDERING that Plaintiffs motion for assignment of a new magistrate judge and a district judge 14 is DENIED. Plaintiffs request for an extension of time to file an amended complaint 14 is granted, to the extent that plaintiff has 30 days from the date of this order to file an amended complaint. Absent good cause, no further extensions will be granted. (Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38239</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-5</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-04</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 2/4/13 ORDERING that Plaintiffs motion for assignment of a new magistrate judge and a district judge 14 is DENIED. Plaintiffs request for an extension of time to file an amended complaint 14 is granted, to the extent that plaintiff has 30 days from the date of this order to file an amended complaint. Absent good cause, no further extensions will be granted. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_12-cv-01777-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Isgrigg v. Moghaddam et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/19/13 ORDERING that this action is dismissed for failure to state a claim and for improper joinder of parties, and that the Clerk is directed to close this case. CASE CLOSED. (Dillon, M)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_12-cv-01777-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183f38235</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-6</identifier>
+ <identifier type="former granule identifier">caed-2_12-cv-01777_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_12-cv-01777/USCOURTS-caed-2_12-cv-01777-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_12-cv-01777/pdf/USCOURTS-caed-2_12-cv-01777-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:12-cv-01777; (PC) Isgrigg v. Moghaddam et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_12-cv-01777-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-19</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 3/19/13 ORDERING that this action is dismissed for failure to state a claim and for improper joinder of parties, and that the Clerk is directed to close this case. CASE CLOSED. (Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

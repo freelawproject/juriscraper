@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1819505fe">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961</identifier>
+<identifier type="local">P0b002ee1819505fe</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_09-cv-11961</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-11961</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-11961</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Samuel" fullName="Samuel Burba" lastName="Burba" role="Plaintiff"></party>
+ <party fullName="John Doe" lastName="John Doe" role="Defendant"></party>
+ <party firstName="Nick" fullName="Nick Ludwick" lastName="Ludwick" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Burba v. Ludwick et al</title>
+ <partNumber>2:09-cv-11961</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:09-cv-11961;09-11961</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Samuel Burba</displayForm>
+ <namePart type="family">Burba</namePart>
+ <namePart type="given">Samuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">John Doe</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nick Ludwick</displayForm>
+ <namePart type="family">Ludwick</namePart>
+ <namePart type="given">Nick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_09-cv-11961</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:09-cv-11961</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Samuel" fullName="Samuel Burba" lastName="Burba" role="Plaintiff"></party>
+ <party fullName="John Doe" lastName="John Doe" role="Defendant"></party>
+ <party firstName="Nick" fullName="Nick Ludwick" lastName="Ludwick" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-11961-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-0/mods.xml">
+ <titleInfo>
+  <title>Burba v. Ludwick et al</title>
+  <subTitle>ORDER denying 15 Plaintiff&apos;s Motion to Appoint Counsel. Signed by Magistrate Judge Michael Hluchaniuk. (PPel)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-11961-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0ae31</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-0</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-11961_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/pdf/USCOURTS-mied-2_09-cv-11961-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-11961; Burba v. Ludwick et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-11961-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-08-13</dateIssued>
+  <docketText>ORDER denying 15 Plaintiff&apos;s Motion to Appoint Counsel. Signed by Magistrate Judge Michael Hluchaniuk. (PPel)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-11961-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-1/mods.xml">
+ <titleInfo>
+  <title>Burba v. Ludwick et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 17 MOTION to Dismiss , or Alternatively MOTION for Summary Judgment filed by Nick Ludwick. Signed by Magistrate Judge Michael Hluchaniuk. (THal)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-11961-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0ae45</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-1</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-11961_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/pdf/USCOURTS-mied-2_09-cv-11961-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-11961; Burba v. Ludwick et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-11961-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-02-04</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 17 MOTION to Dismiss , or Alternatively MOTION for Summary Judgment filed by Nick Ludwick. Signed by Magistrate Judge Michael Hluchaniuk. (THal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-11961-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-2/mods.xml">
+ <titleInfo>
+  <title>Burba v. Ludwick et al</title>
+  <subTitle>ORDER granting 17 Motion to Dismiss,, Motion for Summary Judgment, filed by Nick Ludwick, accepting and adopting 24 Report and Recommendation Signed by District Judge Paul D Borman. (DGoo)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-11961-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0ae2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-2</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-11961_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/pdf/USCOURTS-mied-2_09-cv-11961-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-11961; Burba v. Ludwick et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-11961-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-03-01</dateIssued>
+  <docketText>ORDER granting 17 Motion to Dismiss,, Motion for Summary Judgment, filed by Nick Ludwick, accepting and adopting 24 Report and Recommendation Signed by District Judge Paul D Borman. (DGoo)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-11961-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-3/mods.xml">
+ <titleInfo>
+  <title>Burba v. Ludwick et al</title>
+  <subTitle>REPORT AND RECOMMENDATION. Signed by Magistrate Judge Michael Hluchaniuk. (THal)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-11-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-11961-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0ae2f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-3</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-11961_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/pdf/USCOURTS-mied-2_09-cv-11961-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-11961; Burba v. Ludwick et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-11961-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-11-30</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION. Signed by Magistrate Judge Michael Hluchaniuk. (THal)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_09-cv-11961-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-4/mods.xml">
+ <titleInfo>
+  <title>Burba v. Ludwick et al</title>
+  <subTitle>ORDER Adopting for 35 Report and Recommendation, DISMISSING DOE DEFENDANTS, AND DISMISSING THE CASE Signed by District Judge Paul D Borman. (DGoo)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_09-cv-11961-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0ae30</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-4</identifier>
+ <identifier type="former granule identifier">mied-2_09-cv-11961_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_09-cv-11961/USCOURTS-mied-2_09-cv-11961-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_09-cv-11961/pdf/USCOURTS-mied-2_09-cv-11961-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:09-cv-11961; Burba v. Ludwick et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_09-cv-11961-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-01-10</dateIssued>
+  <docketText>ORDER Adopting for 35 Report and Recommendation, DISMISSING DOE DEFENDANTS, AND DISMISSING THE CASE Signed by District Judge Paul D Borman. (DGoo)</docketText>
+</extension>
+</relatedItem>
+</mods>

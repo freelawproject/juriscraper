@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817474c5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117</identifier>
+<identifier type="local">P0b002ee1817474c5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cr-03117</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cr-03117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cr-03117</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Martin" fullName="Martin Orona-Gomez" lastName="Orona-Gomez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Orona-Gomez</title>
+ <partNumber>4:05-cr-03117</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cr-03117;05-3117</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Martin Orona-Gomez</displayForm>
+ <namePart type="family">Orona-Gomez</namePart>
+ <namePart type="given">Martin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cr-03117</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cr-03117</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Martin" fullName="Martin Orona-Gomez" lastName="Orona-Gomez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03117-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Orona-Gomez</title>
+  <subTitle>ORDER signed by Magistrate Judge David L. Piester on 10/12/2005granting [] Oral Motion to Appoint Counsel as to Martin Orona-Gomez (1). (BMH)[4:05-mj-03051-DLP]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03117-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18177665f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03117_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117/pdf/USCOURTS-ned-4_05-cr-03117-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03117; USA v. Orona-Gomez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03117-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-10-12</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge David L. Piester on 10/12/2005granting [] Oral Motion to Appoint Counsel as to Martin Orona-Gomez (1). (BMH)[4:05-mj-03051-DLP]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03117-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Orona-Gomez</title>
+  <subTitle>ORDER of Detention pending trial signed by Magistrate Judge David L. Piester on 10/12/2005 as to defendant(s) Martin Orona-Gomez. (BMH)[4:05-mj-03051-DLP]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-10-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03117-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181776661</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03117_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117/pdf/USCOURTS-ned-4_05-cr-03117-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03117; USA v. Orona-Gomez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03117-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-10-12</dateIssued>
+  <docketText>ORDER of Detention pending trial signed by Magistrate Judge David L. Piester on 10/12/2005 as to defendant(s) Martin Orona-Gomez. (BMH)[4:05-mj-03051-DLP]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03117-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Orona-Gomez</title>
+  <subTitle>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Martin Orona-Gomez. It is ordered that the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects; ETC.Signed by Judge Richard G. Kopf on 1/6/2006. (KLL, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03117-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181776660</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03117_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117/pdf/USCOURTS-ned-4_05-cr-03117-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03117; USA v. Orona-Gomez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03117-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-01-06</dateIssued>
+  <docketText>TENTATIVE FINDINGS OF FACT regarding Revised Presentence Investigation Report as to defendant Martin Orona-Gomez. It is ordered that the parties are herewith notified that my tentative findings are that the presentence report is correct in all respects; ETC.Signed by Judge Richard G. Kopf on 1/6/2006. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cr-03117-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Orona-Gomez</title>
+  <subTitle>JUDGMENT as to Martin Orona-Gomez as to Count 1. Defendant pleaded guilty to Count I of the Indictment and is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of thirty-three (33) months; followed by two (2) years of Supervised Release with Special Conditions; $100 Special Assessment as to defendant(s) Martin Orona-Gomez. 4 CERTIFIED COPIES TO USM. Signed by Judge Richard G. Kopf on 1/31/2006. (GJG, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cr-03117-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181776662</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-3</identifier>
+ <identifier type="former granule identifier">ned-4_05-cr-03117_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cr-03117/USCOURTS-ned-4_05-cr-03117-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cr-03117/pdf/USCOURTS-ned-4_05-cr-03117-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cr-03117; USA v. Orona-Gomez; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cr-03117-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2006-01-31</dateIssued>
+  <docketText>JUDGMENT as to Martin Orona-Gomez as to Count 1. Defendant pleaded guilty to Count I of the Indictment and is hereby committed to the custody of the United States Bureau of Prisons to be imprisoned for a term of thirty-three (33) months; followed by two (2) years of Supervised Release with Special Conditions; $100 Special Assessment as to defendant(s) Martin Orona-Gomez. 4 CERTIFIED COPIES TO USM. Signed by Judge Richard G. Kopf on 1/31/2006. (GJG, )</docketText>
+</extension>
+</relatedItem>
+</mods>

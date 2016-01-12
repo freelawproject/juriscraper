@@ -1,0 +1,225 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181518579">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-01826</identifier>
+<identifier type="local">P0b002ee181518579</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_09-cv-01826</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_09-cv-01826</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:09-cv-01826</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="City of Akron" lastName="City of Akron" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1 through 10" lastName="Does 1 through 10" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael P. Koubek" lastName="Koubek" middleName="P." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael J. Orrand" lastName="Orrand" middleName="J." role="Defendant"></party>
+ <party firstName="Demetrus" fullName="Demetrus Vinson" lastName="Vinson" role="Plaintiff"></party>
+ <party firstName="Horace" fullName="Horace L. Vinson Jr." generation="Jr." lastName="Vinson" middleName="L." role="Plaintiff"></party>
+ <party firstName="Beverly" fullName="Beverly A. Wallace" lastName="Wallace" middleName="A." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Vinson et al v. Koubek et al</title>
+ <partNumber>5:09-cv-01826</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-01826/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:09-cv-01826;09-1826</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Akron</displayForm>
+ <namePart type="family">City of Akron</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does 1 through 10</displayForm>
+ <namePart type="family">Does 1 through 10</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael P. Koubek</displayForm>
+ <namePart type="family">Koubek</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael J. Orrand</displayForm>
+ <namePart type="family">Orrand</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Demetrus Vinson</displayForm>
+ <namePart type="family">Vinson</namePart>
+ <namePart type="given">Demetrus</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Horace L. Vinson Jr.</displayForm>
+ <namePart type="family">Vinson</namePart>
+ <namePart type="given">Horace</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Beverly A. Wallace</displayForm>
+ <namePart type="family">Wallace</namePart>
+ <namePart type="given">Beverly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_09-cv-01826</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:09-cv-01826</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party fullName="City of Akron" lastName="City of Akron" role="Defendant"></party>
+ <party firstName="John" fullName="John Does 1 through 10" lastName="Does 1 through 10" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael P. Koubek" lastName="Koubek" middleName="P." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael J. Orrand" lastName="Orrand" middleName="J." role="Defendant"></party>
+ <party firstName="Demetrus" fullName="Demetrus Vinson" lastName="Vinson" role="Plaintiff"></party>
+ <party firstName="Horace" fullName="Horace L. Vinson Jr." generation="Jr." lastName="Vinson" middleName="L." role="Plaintiff"></party>
+ <party firstName="Beverly" fullName="Beverly A. Wallace" lastName="Wallace" middleName="A." role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_09-cv-01826-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-0/mods.xml">
+ <titleInfo>
+  <title>Vinson et al v. Koubek et al</title>
+  <subTitle>Order: Before the Court is the plaintiffs&apos; motion to dismiss the remaining claims in their entirety. (Doc. No. 19.) Defendants have indicated that they do not oppose the dismissal. Accordingly, the motion is granted and all remaining claims are dismissed, with each party to bear its own costs. Judge Sara Lioi on 1/6/2010.(P,J)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_09-cv-01826-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815bfb05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_09-cv-01826_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-01826/pdf/USCOURTS-ohnd-5_09-cv-01826-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-01826; Vinson et al v. Koubek et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_09-cv-01826-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-01-06</dateIssued>
+  <docketText>Order: Before the Court is the plaintiffs&apos; motion to dismiss the remaining claims in their entirety. (Doc. No. 19.) Defendants have indicated that they do not oppose the dismissal. Accordingly, the motion is granted and all remaining claims are dismissed, with each party to bear its own costs. Judge Sara Lioi on 1/6/2010.(P,J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_09-cv-01826-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-1/mods.xml">
+ <titleInfo>
+  <title>Vinson et al v. Koubek et al</title>
+  <subTitle>Judgment Entry: Upon plaintiffs&apos; motion to dismiss, all remaining claims are dismissed, with each party to bear its own costs. Case closed. (Related Doc # 21). Judge Sara Lioi on 1/6/2010. (P,J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_09-cv-01826-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815bfb04</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-1</identifier>
+ <identifier type="former granule identifier">ohnd-5_09-cv-01826_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_09-cv-01826/USCOURTS-ohnd-5_09-cv-01826-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_09-cv-01826/pdf/USCOURTS-ohnd-5_09-cv-01826-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:09-cv-01826; Vinson et al v. Koubek et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_09-cv-01826-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-01-06</dateIssued>
+  <docketText>Judgment Entry: Upon plaintiffs&apos; motion to dismiss, all remaining claims are dismissed, with each party to bear its own costs. Case closed. (Related Doc # 21). Judge Sara Lioi on 1/6/2010. (P,J)</docketText>
+</extension>
+</relatedItem>
+</mods>

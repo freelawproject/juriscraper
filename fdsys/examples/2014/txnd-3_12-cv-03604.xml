@@ -1,0 +1,280 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189d0d077">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-09-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-09-26</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604</identifier>
+<identifier type="local">P0b002ee189d0d077</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-09-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-09-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_12-cv-03604</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03604</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03604</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:2000 Job Discrimination (Race)</cause>
+ <party firstName="Shannon" fullName="Shannon Brown" lastName="Brown" role="Defendant"></party>
+ <party fullName="Dallas County" lastName="Dallas County" role="Defendant"></party>
+ <party fullName="Dallas County Commissioner&apos;s Court" lastName="Dallas County Commissioner&apos;s Court" role="Defendant"></party>
+ <party firstName="Darian" fullName="Darian Fisher" lastName="Fisher" role="Plaintiff"></party>
+ <party firstName="Darrell" fullName="Darrell Howerton" lastName="Howerton" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Glynn Jones" lastName="Jones" middleName="Glynn" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Lilley" lastName="Lilley" role="Defendant"></party>
+ <party firstName="Mattye" fullName="Mattye Mauldin-Taylor" lastName="Mauldin-Taylor" role="Defendant"></party>
+ <party firstName="LaParker" fullName="LaParker Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Womble" lastName="Womble" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Fisher et al v. Dallas County et al</title>
+ <partNumber>3:12-cv-03604</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-03604;12-3604</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Shannon Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Shannon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County</displayForm>
+ <namePart type="family">Dallas County</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dallas County Commissioner&apos;s Court</displayForm>
+ <namePart type="family">Dallas County Commissioner&apos;s Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darian Fisher</displayForm>
+ <namePart type="family">Fisher</namePart>
+ <namePart type="given">Darian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Darrell Howerton</displayForm>
+ <namePart type="family">Howerton</namePart>
+ <namePart type="given">Darrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Glynn Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Lilley</displayForm>
+ <namePart type="family">Lilley</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mattye Mauldin-Taylor</displayForm>
+ <namePart type="family">Mauldin-Taylor</namePart>
+ <namePart type="given">Mattye</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LaParker Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">LaParker</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>David Womble</displayForm>
+ <namePart type="family">Womble</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_12-cv-03604</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:12-cv-03604</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:2000 Job Discrimination (Race)</cause>
+ <party firstName="Shannon" fullName="Shannon Brown" lastName="Brown" role="Defendant"></party>
+ <party fullName="Dallas County" lastName="Dallas County" role="Defendant"></party>
+ <party fullName="Dallas County Commissioner&apos;s Court" lastName="Dallas County Commissioner&apos;s Court" role="Defendant"></party>
+ <party firstName="Darian" fullName="Darian Fisher" lastName="Fisher" role="Plaintiff"></party>
+ <party firstName="Darrell" fullName="Darrell Howerton" lastName="Howerton" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Glynn Jones" lastName="Jones" middleName="Glynn" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Lilley" lastName="Lilley" role="Defendant"></party>
+ <party firstName="Mattye" fullName="Mattye Mauldin-Taylor" lastName="Mauldin-Taylor" role="Defendant"></party>
+ <party firstName="LaParker" fullName="LaParker Smith" lastName="Smith" role="Plaintiff"></party>
+ <party firstName="David" fullName="David Womble" lastName="Womble" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03604-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-0/mods.xml">
+ <titleInfo>
+  <title>Fisher et al v. Dallas County et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER granting 29 Motion to Amend Scheduling Order filed by Dallas County Commissioners Court, Dallas County. (Ordered by Chief Judge Sidney A Fitzwater on 1/6/2014) (Chief Judge Sidney A Fitzwater)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189d1c2da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-0</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03604_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03604; Fisher et al v. Dallas County et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03604-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER granting 29 Motion to Amend Scheduling Order filed by Dallas County Commissioners Court, Dallas County. (Ordered by Chief Judge Sidney A Fitzwater on 1/6/2014) (Chief Judge Sidney A Fitzwater)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03604-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-1/mods.xml">
+ <titleInfo>
+  <title>Fisher et al v. Dallas County et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER granting in part and denying in part 30 Motion for Judgment filed by David Womble; granting 38 Motion for Rule 7(a) reply filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones; and granting 41 Motion to Stay filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones. (Ordered by Chief Judge Sidney A Fitzwater on 4/18/2014) (Chief Judge Sidney A Fitzwater)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189d1c2db</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-1</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03604_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03604; Fisher et al v. Dallas County et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03604-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-04-18</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER granting in part and denying in part 30 Motion for Judgment filed by David Womble; granting 38 Motion for Rule 7(a) reply filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones; and granting 41 Motion to Stay filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones. (Ordered by Chief Judge Sidney A Fitzwater on 4/18/2014) (Chief Judge Sidney A Fitzwater)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_12-cv-03604-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-2/mods.xml">
+ <titleInfo>
+  <title>Fisher et al v. Dallas County et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER granting 52 Motion for Judgment On The Pleadings filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones; granting in part 48 Second MOTION for Judgment On The Pleadings of David Womble; and granting plaintiffs leave to replead. (Ordered by Chief Judge Sidney A Fitzwater on 9/26/2014) (Chief Judge Sidney A Fitzwater)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189d1c2dc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-2</identifier>
+ <identifier type="former granule identifier">txnd-3_12-cv-03604_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_12-cv-03604/USCOURTS-txnd-3_12-cv-03604-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_12-cv-03604/pdf/USCOURTS-txnd-3_12-cv-03604-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-03604; Fisher et al v. Dallas County et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_12-cv-03604-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-09-26</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER granting 52 Motion for Judgment On The Pleadings filed by Shannon Brown, Mattye Mauldin-Taylor, Darrell Howerton, Dale Lilley, Terry Glynn Jones; granting in part 48 Second MOTION for Judgment On The Pleadings of David Womble; and granting plaintiffs leave to replead. (Ordered by Chief Judge Sidney A Fitzwater on 9/26/2014) (Chief Judge Sidney A Fitzwater)</docketText>
+</extension>
+</relatedItem>
+</mods>

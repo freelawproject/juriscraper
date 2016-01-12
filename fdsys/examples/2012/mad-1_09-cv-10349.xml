@@ -1,0 +1,226 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea093">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-10349</identifier>
+<identifier type="local">P0b002ee1818ea093</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_09-cv-10349</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_09-cv-10349</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:09-cv-10349</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000 Job Discrimination (Age)</cause>
+ <party fullName="HEI Hospitality Management LLC" lastName="HEI Hospitality Management LLC" role="Defendant"></party>
+ <party fullName="HEI Hospitality, LLC" lastName="HEI Hospitality, LLC" role="Defendant"></party>
+ <party fullName="Merritt Hospitality LLC" lastName="Merritt Hospitality LLC" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Trainor" lastName="Trainor" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Trainor v. HEI Hospitality, LLC et al</title>
+ <partNumber>1:09-cv-10349</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-10349/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cv-10349;09-10349</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>HEI Hospitality Management LLC</displayForm>
+ <namePart type="family">HEI Hospitality Management LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>HEI Hospitality, LLC</displayForm>
+ <namePart type="family">HEI Hospitality, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Merritt Hospitality LLC</displayForm>
+ <namePart type="family">Merritt Hospitality LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lawrence Trainor</displayForm>
+ <namePart type="family">Trainor</namePart>
+ <namePart type="given">Lawrence</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_09-cv-10349</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:09-cv-10349</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000 Job Discrimination (Age)</cause>
+ <party fullName="HEI Hospitality Management LLC" lastName="HEI Hospitality Management LLC" role="Defendant"></party>
+ <party fullName="HEI Hospitality, LLC" lastName="HEI Hospitality, LLC" role="Defendant"></party>
+ <party fullName="Merritt Hospitality LLC" lastName="Merritt Hospitality LLC" role="Defendant"></party>
+ <party firstName="Lawrence" fullName="Lawrence Trainor" lastName="Trainor" role="Plaintiff"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_09-cv-10349-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-0/mods.xml">
+ <titleInfo>
+  <title>Trainor v. HEI Hospitality, LLC et al</title>
+  <subTitle>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER re: double damages(Hourihan, Lisa)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_09-cv-10349-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f9389</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-0</identifier>
+ <identifier type="former granule identifier">mad-1_09-cv-10349_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-10349/pdf/USCOURTS-mad-1_09-cv-10349-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-10349; Trainor v. HEI Hospitality, LLC et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_09-cv-10349-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-04-14</dateIssued>
+  <docketText>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER re: double damages(Hourihan, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_09-cv-10349-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-1/mods.xml">
+ <titleInfo>
+  <title>Trainor v. HEI Hospitality, LLC et al</title>
+  <subTitle>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER - grating in part, denying in part 111 and granting in part 106(Hourihan, Lisa)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_09-cv-10349-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f938b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-1</identifier>
+ <identifier type="former granule identifier">mad-1_09-cv-10349_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-10349/pdf/USCOURTS-mad-1_09-cv-10349-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-10349; Trainor v. HEI Hospitality, LLC et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_09-cv-10349-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>Judge Denise J. Casper: ORDER entered. MEMORANDUM AND ORDER - grating in part, denying in part 111 and granting in part 106(Hourihan, Lisa)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_09-cv-10349-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-2/mods.xml">
+ <titleInfo>
+  <title>Trainor v. HEI Hospitality, LLC et al</title>
+  <subTitle>Judge Denise J. Casper: Findings and Order Regarding Plaintiff&apos;s Ownership Units entered. re: motions 66 and 87(Hourihan, Lisa)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_09-cv-10349-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f938a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-2</identifier>
+ <identifier type="former granule identifier">mad-1_09-cv-10349_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_09-cv-10349/USCOURTS-mad-1_09-cv-10349-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_09-cv-10349/pdf/USCOURTS-mad-1_09-cv-10349-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cv-10349; Trainor v. HEI Hospitality, LLC et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_09-cv-10349-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-01-13</dateIssued>
+  <docketText>Judge Denise J. Casper: Findings and Order Regarding Plaintiff&apos;s Ownership Units entered. re: motions 66 and 87(Hourihan, Lisa)</docketText>
+</extension>
+</relatedItem>
+</mods>

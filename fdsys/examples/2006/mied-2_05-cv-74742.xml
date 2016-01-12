@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181959bf8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74742</identifier>
+<identifier type="local">P0b002ee181959bf8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-74742</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74742</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74742</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <party fullName="Environmental Disposal Systems, Incorporated" lastName="Environmental Disposal Systems, Incorporated" role="Intervenor Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas V. Skinner" lastName="Skinner" middleName="V." role="Defendant"></party>
+ <party fullName="Sunoco Partners Marketing and Terminals, L. P." lastName="Sunoco Partners Marketing and Terminals, L. P." role="Plaintiff"></party>
+ <party fullName="United States Environmental Protection Agency" lastName="United States Environmental Protection Agency" role="Defendant"></party>
+ <party fullName="Wayne, Charter County of" lastName="Wayne, Charter County of" role="Intervenor"></party>
+</extension>
+<titleInfo>
+ <title>Sunoco Partners Marketing and Terminals, L. P. v. United States Environmental Protection Agency et al</title>
+ <partNumber>2:05-cv-74742</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74742/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-74742;05-74742</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Environmental Disposal Systems, Incorporated</displayForm>
+ <namePart type="family">Environmental Disposal Systems, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas V. Skinner</displayForm>
+ <namePart type="family">Skinner</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sunoco Partners Marketing and Terminals, L. P.</displayForm>
+ <namePart type="family">Sunoco Partners Marketing and Terminals, L. P.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>United States Environmental Protection Agency</displayForm>
+ <namePart type="family">United States Environmental Protection Agency</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wayne, Charter County of</displayForm>
+ <namePart type="family">Wayne, Charter County of</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74742</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74742</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>893</natureSuitCode>
+ <natureSuit>Environmental Matters</natureSuit>
+ <party fullName="Environmental Disposal Systems, Incorporated" lastName="Environmental Disposal Systems, Incorporated" role="Intervenor Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas V. Skinner" lastName="Skinner" middleName="V." role="Defendant"></party>
+ <party fullName="Sunoco Partners Marketing and Terminals, L. P." lastName="Sunoco Partners Marketing and Terminals, L. P." role="Plaintiff"></party>
+ <party fullName="United States Environmental Protection Agency" lastName="United States Environmental Protection Agency" role="Defendant"></party>
+ <party fullName="Wayne, Charter County of" lastName="Wayne, Charter County of" role="Intervenor"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-74742-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74742/USCOURTS-mied-2_05-cv-74742-0/mods.xml">
+ <titleInfo>
+  <title>Sunoco Partners Marketing and Terminals, L. P. v. United States Environmental Protection Agency et al</title>
+  <subTitle>ORDER denying 3 Motion for Preliminary Injunction- Signed by Honorable Nancy G Edmunds. (CHem, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-74742-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a5422f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74742/USCOURTS-mied-2_05-cv-74742-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-74742_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74742/USCOURTS-mied-2_05-cv-74742-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74742/pdf/USCOURTS-mied-2_05-cv-74742-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-74742; Sunoco Partners Marketing and Terminals, L. P. v. United States Environmental Protection Agency et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-74742-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-20</dateIssued>
+  <docketText>ORDER denying 3 Motion for Preliminary Injunction- Signed by Honorable Nancy G Edmunds. (CHem, )</docketText>
+</extension>
+</relatedItem>
+</mods>

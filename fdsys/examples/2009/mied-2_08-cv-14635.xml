@@ -1,0 +1,177 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181950e4c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-22</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14635</identifier>
+<identifier type="local">P0b002ee181950e4c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_08-cv-14635</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-14635</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-14635</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>423</natureSuitCode>
+ <natureSuit>Bankruptcy Withdrawal 28 USC 157</natureSuit>
+ <party fullName="Charles J Taunt Associates, PC" lastName="Charles J Taunt Associates, PC" role="Defendant"></party>
+ <party fullName="M T G, Incorporated" lastName="M T G, Incorporated" role="In Re"></party>
+ <party fullName="Matrix Technologies Group" lastName="Matrix Technologies Group" role="In Re"></party>
+ <party firstName="Charles" fullName="Charles J Taunt" lastName="Taunt" middleName="J" role="Defendant"></party>
+ <party firstName="Guy" fullName="Guy C Vining" lastName="Vining" middleName="C" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>M T G, Incorporated et al v. Taunt et al</title>
+ <partNumber>2:08-cv-14635</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14635/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:08-cv-14635;08-14635</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Charles J Taunt Associates, PC</displayForm>
+ <namePart type="family">Charles J Taunt Associates, PC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M T G, Incorporated</displayForm>
+ <namePart type="family">M T G, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>In Re</description>
+</name>
+<name type="personal">
+ <displayForm>Matrix Technologies Group</displayForm>
+ <namePart type="family">Matrix Technologies Group</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>In Re</description>
+</name>
+<name type="personal">
+ <displayForm>Charles J Taunt</displayForm>
+ <namePart type="family">Taunt</namePart>
+ <namePart type="given">Charles</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Guy C Vining</displayForm>
+ <namePart type="family">Vining</namePart>
+ <namePart type="given">Guy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_08-cv-14635</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:08-cv-14635</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>423</natureSuitCode>
+ <natureSuit>Bankruptcy Withdrawal 28 USC 157</natureSuit>
+ <party fullName="Charles J Taunt Associates, PC" lastName="Charles J Taunt Associates, PC" role="Defendant"></party>
+ <party fullName="M T G, Incorporated" lastName="M T G, Incorporated" role="In Re"></party>
+ <party fullName="Matrix Technologies Group" lastName="Matrix Technologies Group" role="In Re"></party>
+ <party firstName="Charles" fullName="Charles J Taunt" lastName="Taunt" middleName="J" role="Defendant"></party>
+ <party firstName="Guy" fullName="Guy C Vining" lastName="Vining" middleName="C" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_08-cv-14635-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14635/USCOURTS-mied-2_08-cv-14635-0/mods.xml">
+ <titleInfo>
+  <title>M T G, Incorporated et al v. Taunt et al</title>
+  <subTitle>ORDER ADOPTING UNITED STATES BANKRUPTCY COURT&apos;S MEMORANDUM AND RECOMMENDATION, and Denying 1 Motion to Withdraw Reference filed by Charles J Taunt Associates, PC, Charles J Taunt. Signed by District Judge Anna Diggs Taylor. (JCur)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_08-cv-14635-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a0d731</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14635/USCOURTS-mied-2_08-cv-14635-0</identifier>
+ <identifier type="former granule identifier">mied-2_08-cv-14635_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_08-cv-14635/USCOURTS-mied-2_08-cv-14635-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_08-cv-14635/pdf/USCOURTS-mied-2_08-cv-14635-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:08-cv-14635; M T G, Incorporated et al v. Taunt et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_08-cv-14635-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-22</dateIssued>
+  <docketText>ORDER ADOPTING UNITED STATES BANKRUPTCY COURT&apos;S MEMORANDUM AND RECOMMENDATION, and Denying 1 Motion to Withdraw Reference filed by Charles J Taunt Associates, PC, Charles J Taunt. Signed by District Judge Anna Diggs Taylor. (JCur)</docketText>
+</extension>
+</relatedItem>
+</mods>

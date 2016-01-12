@@ -1,0 +1,342 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a2872e5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-20</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-08-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246</identifier>
+<identifier type="local">P0b002ee18a2872e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-20</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cr-00246</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cr-00246</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cr-00246</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Oganes" fullName="Oganes Serobyan" lastName="Serobyan" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Serobyan</title>
+ <partNumber>2:13-cr-00246</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cr-00246;13-246</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Oganes Serobyan</displayForm>
+ <namePart type="family">Serobyan</namePart>
+ <namePart type="given">Oganes</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cr-00246</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cr-00246</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Oganes" fullName="Oganes Serobyan" lastName="Serobyan" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>RELATED CASE ORDER signed by District Judge Troy L. Nunley on 8/12/13 ORDERING that the action denominated 2:13-cr-0246-JAM is reassigned to Judge Troy L. Nunley for all further proceedings, and any dates currently set in the reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:13-cr-0246-TLN. The Clerk shall make the appropriate adjustment in the assignment of the criminal case to compensate for this reassignment. (Kastilahn, A)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7dbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-13</dateIssued>
+  <docketText>RELATED CASE ORDER signed by District Judge Troy L. Nunley on 8/12/13 ORDERING that the action denominated 2:13-cr-0246-JAM is reassigned to Judge Troy L. Nunley for all further proceedings, and any dates currently set in the reassigned case only are hereby VACATED. Henceforth, the caption on documents filed in the reassigned case shall be shown as 2:13-cr-0246-TLN. The Clerk shall make the appropriate adjustment in the assignment of the criminal case to compensate for this reassignment. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Oganes Serobyan signed by Magistrate Judge Kendall J. Newman on 8/1/2013. (Michel, G)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7db9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-08-15</dateIssued>
+  <docketText>ORDER FOR RELEASE OF PERSON IN CUSTODY as to Oganes Serobyan signed by Magistrate Judge Kendall J. Newman on 8/1/2013. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 8/26/2013 ORDERING the Status Conference CONTINUED to 10/31/2013 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 8/29/2013 Stop: 10/31/2013. (Donati, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7dbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-08-27</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 8/26/2013 ORDERING the Status Conference CONTINUED to 10/31/2013 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 8/29/2013 Stop: 10/31/2013. (Donati, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>STIPULATION and ORDER 14 signed by District Judge Troy L. Nunley on 10/29/2013 ORDERING the Status Conference set for 10/31/2013 CONTINUED to 1/9/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 10/31/2013 - Stop: 1/9/2014. (Krueger, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7db8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-10-29</dateIssued>
+  <docketText>STIPULATION and ORDER 14 signed by District Judge Troy L. Nunley on 10/29/2013 ORDERING the Status Conference set for 10/31/2013 CONTINUED to 1/9/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 10/31/2013 - Stop: 1/9/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>STIPULATION and ORDER 16 signed by District Judge Troy L. Nunley on 1/7/2014 ORDERING the Status Conference set for 1/9/2014 CONTINUED to 2/6/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 1/9/2014 - Stop: 2/6/2014. (Krueger, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7db7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>STIPULATION and ORDER 16 signed by District Judge Troy L. Nunley on 1/7/2014 ORDERING the Status Conference set for 1/9/2014 CONTINUED to 2/6/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 1/9/2014 - Stop: 2/6/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>STIPULATION and ORDER 18 signed by District Judge Troy L. Nunley on 2/4/2014 ORDERING the Status Conference set for 2/6/2014 CONTINUED to 3/20/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 2/6/2014 - Stop: 3/20/2014. (Krueger, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7dbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-02-04</dateIssued>
+  <docketText>STIPULATION and ORDER 18 signed by District Judge Troy L. Nunley on 2/4/2014 ORDERING the Status Conference set for 2/6/2014 CONTINUED to 3/20/2014 at 9:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Excludable started as to Oganes Serobyan: T4 Start: 2/6/2014 - Stop: 3/20/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 3/14/14 ORDERING that the Status Conference hearing is CONTINUED from 3/20/14 to 5/29/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Time is EXCLUDED between 3/20/14 and 5/29/14 under Local Code T4.(Mena-Sanchez, L)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7dbb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-6</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-03-17</dateIssued>
+  <docketText>STIPULATION and ORDER signed by District Judge Troy L. Nunley on 3/14/14 ORDERING that the Status Conference hearing is CONTINUED from 3/20/14 to 5/29/2014 at 09:30 AM in Courtroom 2 (TLN) before District Judge Troy L. Nunley. Time is EXCLUDED between 3/20/14 and 5/29/14 under Local Code T4.(Mena-Sanchez, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cr-00246-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Serobyan</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Oganes Serobyan signed by District Judge Troy L. Nunley on 8/20/2014. (Krueger, M)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a2f7dba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-7</identifier>
+ <identifier type="former granule identifier">caed-2_13-cr-00246_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cr-00246/USCOURTS-caed-2_13-cr-00246-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cr-00246/pdf/USCOURTS-caed-2_13-cr-00246-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cr-00246; USA v. Serobyan; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cr-00246-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2014-08-20</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Oganes Serobyan signed by District Judge Troy L. Nunley on 8/20/2014. (Krueger, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

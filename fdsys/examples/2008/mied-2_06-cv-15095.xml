@@ -1,0 +1,316 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ea5b2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-14</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095</identifier>
+<identifier type="local">P0b002ee1818ea5b2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_06-cv-15095</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-15095</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-15095</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Carpenters Pension Trust Fund, Detroit and Vicinity" lastName="Carpenters Pension Trust Fund, Detroit and Vicinity" role="Plaintiff"></party>
+ <party fullName="Cimarron Services, Incorporated" lastName="Cimarron Services, Incorporated" role="Defendant"></party>
+ <party fullName="Kroger Company" lastName="Kroger Company" role="Garnishee"></party>
+ <party firstName="Judy" fullName="Judy A. Merrill" lastName="Merrill" middleName="A." role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy M. Merrill" lastName="Merrill" middleName="M." role="Defendant"></party>
+ <party fullName="Native American Millworks, Incorporated" lastName="Native American Millworks, Incorporated" role="Defendant"></party>
+ <party fullName="Native Construction, Incorporated" lastName="Native Construction, Incorporated" role="Defendant"></party>
+ <party fullName="Pinnacle Construction Management, Incorporated" lastName="Pinnacle Construction Management, Incorporated" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+ <partNumber>2:06-cv-15095</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-15095;06-15095</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Carpenters Pension Trust Fund, Detroit and Vicinity</displayForm>
+ <namePart type="family">Carpenters Pension Trust Fund, Detroit and Vicinity</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Cimarron Services, Incorporated</displayForm>
+ <namePart type="family">Cimarron Services, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kroger Company</displayForm>
+ <namePart type="family">Kroger Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Garnishee</description>
+</name>
+<name type="personal">
+ <displayForm>Judy A. Merrill</displayForm>
+ <namePart type="family">Merrill</namePart>
+ <namePart type="given">Judy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randy M. Merrill</displayForm>
+ <namePart type="family">Merrill</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Native American Millworks, Incorporated</displayForm>
+ <namePart type="family">Native American Millworks, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Native Construction, Incorporated</displayForm>
+ <namePart type="family">Native Construction, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pinnacle Construction Management, Incorporated</displayForm>
+ <namePart type="family">Pinnacle Construction Management, Incorporated</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_06-cv-15095</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:06-cv-15095</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party fullName="Carpenters Pension Trust Fund, Detroit and Vicinity" lastName="Carpenters Pension Trust Fund, Detroit and Vicinity" role="Plaintiff"></party>
+ <party fullName="Cimarron Services, Incorporated" lastName="Cimarron Services, Incorporated" role="Defendant"></party>
+ <party fullName="Kroger Company" lastName="Kroger Company" role="Garnishee"></party>
+ <party firstName="Judy" fullName="Judy A. Merrill" lastName="Merrill" middleName="A." role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy M. Merrill" lastName="Merrill" middleName="M." role="Defendant"></party>
+ <party fullName="Native American Millworks, Incorporated" lastName="Native American Millworks, Incorporated" role="Defendant"></party>
+ <party fullName="Native Construction, Incorporated" lastName="Native Construction, Incorporated" role="Defendant"></party>
+ <party fullName="Pinnacle Construction Management, Incorporated" lastName="Pinnacle Construction Management, Incorporated" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15095-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-0/mods.xml">
+ <titleInfo>
+  <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+  <subTitle>ORDER setting deadline for filing amended complaint to 4/26/07; answer due 5/3/2007. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15095-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f9989</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-0</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15095_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/pdf/USCOURTS-mied-2_06-cv-15095-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15095; Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15095-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-04-19</dateIssued>
+  <docketText>ORDER setting deadline for filing amended complaint to 4/26/07; answer due 5/3/2007. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15095-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-1/mods.xml">
+ <titleInfo>
+  <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+  <subTitle>ORDER setting deadline for plaintiff to file motion to strike jury demand and extending discovery is required. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-06-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15095-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f998a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-1</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15095_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/pdf/USCOURTS-mied-2_06-cv-15095-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15095; Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15095-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2007-06-19</dateIssued>
+  <docketText>ORDER setting deadline for plaintiff to file motion to strike jury demand and extending discovery is required. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15095-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-2/mods.xml">
+ <titleInfo>
+  <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+  <subTitle>ORDER granting 24 Plaintiff&apos;s Motion to Strike Jury Demand.. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-07-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15095-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f998b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-2</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15095_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/pdf/USCOURTS-mied-2_06-cv-15095-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15095; Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15095-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-07-19</dateIssued>
+  <docketText>ORDER granting 24 Plaintiff&apos;s Motion to Strike Jury Demand.. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15095-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-3/mods.xml">
+ <titleInfo>
+  <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+  <subTitle>ORDER Setting deadline for dispositive motions to 10/31/2007 and setting telephone conference reset for 10/30/07 at 3:00 pm. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-10-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15095-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f9988</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-3</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15095_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/pdf/USCOURTS-mied-2_06-cv-15095-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15095; Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15095-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-10-04</dateIssued>
+  <docketText>ORDER Setting deadline for dispositive motions to 10/31/2007 and setting telephone conference reset for 10/30/07 at 3:00 pm. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_06-cv-15095-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-4/mods.xml">
+ <titleInfo>
+  <title>Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al</title>
+  <subTitle>OPINION AND ORDER granting in part and denying in part 34 Plaintiffs&apos; Motion for Summary Judgment - Proposed Judgment to be submitted to the court by 1/23/2008. Signed by Honorable Robert H Cleland. (LWag)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_06-cv-15095-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818f9a6a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-4</identifier>
+ <identifier type="former granule identifier">mied-2_06-cv-15095_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_06-cv-15095/USCOURTS-mied-2_06-cv-15095-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_06-cv-15095/pdf/USCOURTS-mied-2_06-cv-15095-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-15095; Carpenters Pension Trust Fund, Detroit and Vicinity v. Cimarron Services, Incorporated et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_06-cv-15095-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2008-01-14</dateIssued>
+  <docketText>OPINION AND ORDER granting in part and denying in part 34 Plaintiffs&apos; Motion for Summary Judgment - Proposed Judgment to be submitted to the court by 1/23/2008. Signed by Honorable Robert H Cleland. (LWag)</docketText>
+</extension>
+</relatedItem>
+</mods>

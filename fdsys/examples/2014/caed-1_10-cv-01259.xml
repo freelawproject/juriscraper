@@ -1,0 +1,1150 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18953bde4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-05-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259</identifier>
+<identifier type="local">P0b002ee18953bde4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_10-cv-01259</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01259</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01259</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Deral" fullName="Deral G. Adams" lastName="Adams" middleName="G." role="Defendant"></party>
+ <party firstName="A." fullName="A. Cruz" lastName="Cruz" role="Defendant"></party>
+ <party firstName="T." fullName="T. Sanders" lastName="Sanders" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Joseph Simmons" lastName="Simmons" middleName="Joseph" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Simmons v. Sanders</title>
+ <partNumber>1:10-cv-01259</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01259;10-1259</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Deral G. Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Deral</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. Cruz</displayForm>
+ <namePart type="family">Cruz</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Sanders</displayForm>
+ <namePart type="family">Sanders</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melvin Joseph Simmons</displayForm>
+ <namePart type="family">Simmons</namePart>
+ <namePart type="given">Melvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01259</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01259</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Deral" fullName="Deral G. Adams" lastName="Adams" middleName="G." role="Defendant"></party>
+ <party firstName="A." fullName="A. Cruz" lastName="Cruz" role="Defendant"></party>
+ <party firstName="T." fullName="T. Sanders" lastName="Sanders" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Joseph Simmons" lastName="Simmons" middleName="Joseph" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER to submit application to proceed in forma pauperis or pay filing fee of $350.00, signed by Magistrate Judge Sandra M. Snyder on 7/15/2010. ( Motion for IFP due by 9/1/2010) (Attachments: # (1) IFP Motion)(Marrujo, C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553052</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-0</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-07-15</dateIssued>
+  <docketText>ORDER to submit application to proceed in forma pauperis or pay filing fee of $350.00, signed by Magistrate Judge Sandra M. Snyder on 7/15/2010. ( Motion for IFP due by 9/1/2010) (Attachments: # (1) IFP Motion)(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING Motion to Amend as Premature 11, signed by Magistrate Judge Sandra M. Snyder on 2/1/11: Plaintiff&apos;s amended complaint will be screened in due course. 28 U.S.C. § 1915A. (Hellings, J)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189552f77</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-1</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-02-02</dateIssued>
+  <docketText>ORDER DENYING Motion to Amend as Premature 11, signed by Magistrate Judge Sandra M. Snyder on 2/1/11: Plaintiff&apos;s amended complaint will be screened in due course. 28 U.S.C. § 1915A. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying 15 Motion for Appointment of Counsel, signed by Magistrate Judge Sheila K. Oberto on 4/7/2011. (Gonzalez, R)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553068</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-2</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-04-08</dateIssued>
+  <docketText>ORDER Denying 15 Motion for Appointment of Counsel, signed by Magistrate Judge Sheila K. Oberto on 4/7/2011. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion for Reconsideration 17, signed by District Judge Lawrence J. O&apos;Neill on 4/26/11. (Gonzalez, R)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553055</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-3</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-04-26</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion for Reconsideration 17, signed by District Judge Lawrence J. O&apos;Neill on 4/26/11. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Directing Action to Proceed on Eighth Amendment Claim Against Defendant Sanders, Dismissing Defendant Cruz and Other Claims, and Referring Matter Back to Magistrate Judge for Further Proceedings re 12, 19, 20, signed by District Judge Lawrence J. O&apos;Neill on 8/8/11. A. Cruz terminated. (Gonzalez, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-4</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-08-08</dateIssued>
+  <docketText>ORDER Directing Action to Proceed on Eighth Amendment Claim Against Defendant Sanders, Dismissing Defendant Cruz and Other Claims, and Referring Matter Back to Magistrate Judge for Further Proceedings re 12, 19, 20, signed by District Judge Lawrence J. O&apos;Neill on 8/8/11. A. Cruz terminated. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion To Amend To Add Claims And Parties (Doc. 24), signed by Magistrate Judge Sheila K. Oberto on 9/18/2011. (Fahrney, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553061</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-5</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion To Amend To Add Claims And Parties (Doc. 24), signed by Magistrate Judge Sheila K. Oberto on 9/18/2011. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Motion for Appointment of Counsel 23, signed by Magistrate Judge Sheila K. Oberto on 9/19/11. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189552f79</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-6</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>ORDER Denying Motion for Appointment of Counsel 23, signed by Magistrate Judge Sheila K. Oberto on 9/19/11. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 29 Motion For Reconsideration, With Prejudice, signed by District Judge Lawrence J. O&apos;Neill on 10/6/2011. (Marrujo, C)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553060</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-7</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-10-06</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 29 Motion For Reconsideration, With Prejudice, signed by District Judge Lawrence J. O&apos;Neill on 10/6/2011. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Striking Plaintiff&apos;s 37 Motion for Summary Judgment and/or Reply to Answer, signed by Magistrate Judge Sheila K. Oberto on 12/12/11. (Verduzco, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553065</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-8</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-12-13</dateIssued>
+  <docketText>ORDER Striking Plaintiff&apos;s 37 Motion for Summary Judgment and/or Reply to Answer, signed by Magistrate Judge Sheila K. Oberto on 12/12/11. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER STRIKING Discovery Request 39, signed by Magistrate Judge Sheila K. Oberto on 3/11/12: Plaintiff&apos;s request for the production of documents is STRICKEN from the record. (Hellings, J)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553063</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-9</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>ORDER STRIKING Discovery Request 39, signed by Magistrate Judge Sheila K. Oberto on 3/11/12: Plaintiff&apos;s request for the production of documents is STRICKEN from the record. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Defendant&apos;s Motion To Compel As Moot And Granting Defendant Thirty Days Within Which To Renew Motion (Doc. 41), signed by Magistrate Judge Sheila K. Oberto on 9/26/2012. (Fahrney, E)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-10</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>ORDER Denying Defendant&apos;s Motion To Compel As Moot And Granting Defendant Thirty Days Within Which To Renew Motion (Doc. 41), signed by Magistrate Judge Sheila K. Oberto on 9/26/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Motion (Doc.45), signed by Magistrate Judge Sheila K. Oberto on 9/26/2012. (Fahrney, E)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553067</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-11</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-09-27</dateIssued>
+  <docketText>ORDER Denying Motion (Doc.45), signed by Magistrate Judge Sheila K. Oberto on 9/26/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER STRIKING 50 Pretrial Statement signed by Magistrate Judge Sheila K. Oberto on 10/10/2012. (Sant Agata, S)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553057</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-12</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-10-10</dateIssued>
+  <docketText>ORDER STRIKING 50 Pretrial Statement signed by Magistrate Judge Sheila K. Oberto on 10/10/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING 51 Motion signed by Magistrate Judge Sheila K. Oberto on 10/10/2012. (Sant Agata, S)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-13</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-10-10</dateIssued>
+  <docketText>ORDER DENYING 51 Motion signed by Magistrate Judge Sheila K. Oberto on 10/10/2012. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Striking Filings (Docs. 56 &amp; 57), signed by Magistrate Judge Sheila K. Oberto on 10/17/2012. (Fahrney, E)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-14</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2012-10-18</dateIssued>
+  <docketText>ORDER Striking Filings (Docs. 56 &amp; 57), signed by Magistrate Judge Sheila K. Oberto on 10/17/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER GRANTING IN PART and DENYING IN PART Defendant&apos;s 59 Motion to Compel and DENYING Plaintiff&apos;s Motion for a Protective Order; ORDER REQUIRING Defendant to File a Statement of Reasonable Expenses incurred within Thirty (30)Days and REQUIRING Plaintiff to File a Response within Thirty (30) Days thereafter, signed by Magistrate Judge Sheila K. Oberto on 06/13/2013. ( 30 Day Deadline) (Martin-Gill, S)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553062</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-15</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-06-14</dateIssued>
+  <docketText>ORDER GRANTING IN PART and DENYING IN PART Defendant&apos;s 59 Motion to Compel and DENYING Plaintiff&apos;s Motion for a Protective Order; ORDER REQUIRING Defendant to File a Statement of Reasonable Expenses incurred within Thirty (30)Days and REQUIRING Plaintiff to File a Response within Thirty (30) Days thereafter, signed by Magistrate Judge Sheila K. Oberto on 06/13/2013. ( 30 Day Deadline) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>d by T. Sanders; referred to Judge O&apos;Neill,signed by Magistrate Judge Sheila K. Oberto on 06/13/2013. Objections to F&amp;R due by 7/18/2013 (Martin-Gill, S)FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s Rule 56(d) Motion, raised in his opposition filed on October 9, 2012, be DENIED; Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s Eighth Amendment excessive force claim, filed 09/20/2012, be DENIED; Plaintiff&apos;s declaratory relief claim be DISMISSED, with prejudice, for failure to state a claim re 12 Amended Prisoner Civil Rights Complaint filed by Melvin Joseph Simmons, 46 MOTION for SUMMARY JUDGMENT file</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-06-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189552f78</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-16</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-06-14</dateIssued>
+  <docketText>d by T. Sanders; referred to Judge O&apos;Neill,signed by Magistrate Judge Sheila K. Oberto on 06/13/2013. Objections to F&amp;R due by 7/18/2013 (Martin-Gill, S)FINDINGS and RECOMMENDATIONS recommending that Plaintiff&apos;s Rule 56(d) Motion, raised in his opposition filed on October 9, 2012, be DENIED; Defendant&apos;s Motion for Summary Judgment on Plaintiff&apos;s Eighth Amendment excessive force claim, filed 09/20/2012, be DENIED; Plaintiff&apos;s declaratory relief claim be DISMISSED, with prejudice, for failure to state a claim re 12 Amended Prisoner Civil Rights Complaint filed by Melvin Joseph Simmons, 46 MOTION for SUMMARY JUDGMENT file</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Adopting 66 Findings and Recommendations in Full, Denying Rule 56(d) Motion, Denying Summary Judgment Motion 46, and Dismissing Declaratory Relief Claim, signed by District Judge Lawrence J. O&apos;Neill on 7/23/13. (Gonzalez, R)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553056</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-17</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-07-23</dateIssued>
+  <docketText>ORDER Adopting 66 Findings and Recommendations in Full, Denying Rule 56(d) Motion, Denying Summary Judgment Motion 46, and Dismissing Declaratory Relief Claim, signed by District Judge Lawrence J. O&apos;Neill on 7/23/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-18/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>NOTICE to Parties Regarding Impacted Trial Calendar and Availability of Consent to U.S. Magistrate Judge Jurisdiction, signed by District Judge Lawrence J. O&apos;Neill on 7/26/13. (Gonzalez, R)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553059</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-18</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-07-26</dateIssued>
+  <docketText>NOTICE to Parties Regarding Impacted Trial Calendar and Availability of Consent to U.S. Magistrate Judge Jurisdiction, signed by District Judge Lawrence J. O&apos;Neill on 7/26/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-19/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Striking Discovery Responses 77, signed by Magistrate Judge Sheila K. Oberto on 8/12/13. (Gonzalez, R)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553053</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-19</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2013-08-13</dateIssued>
+  <docketText>ORDER Striking Discovery Responses 77, signed by Magistrate Judge Sheila K. Oberto on 8/12/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-20/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING 81 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 8/22/2013. (Marrujo, C)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553058</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-20</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2013-08-22</dateIssued>
+  <docketText>ORDER DENYING 81 Motion to Appoint Counsel, signed by Magistrate Judge Sheila K. Oberto on 8/22/2013. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-21/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING Motion for Reconsideration of Order Granting In Part and Denying In Part Defendant&apos;s Motion to Compel, With Prejudice 65, 71, signed by District Judge Lawrence J. O&apos;Neill on 9/30/13: Plaintiff&apos;s motion for reconsideration is DENIED with prejudice. (Hellings, J)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-21</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2013-10-01</dateIssued>
+  <docketText>ORDER DENYING Motion for Reconsideration of Order Granting In Part and Denying In Part Defendant&apos;s Motion to Compel, With Prejudice 65, 71, signed by District Judge Lawrence J. O&apos;Neill on 9/30/13: Plaintiff&apos;s motion for reconsideration is DENIED with prejudice. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-22/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Requiring Plaintiff to Pay Reasonable Expenses Incurred in the amount of $444.60 and Staying Order in Light of Plaintiff&apos;s Indigency, signed by Magistrate Judge Sheila K. Oberto on 10/2/13. (Martin-Gill, S)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553069</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-22</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2013-10-03</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to Pay Reasonable Expenses Incurred in the amount of $444.60 and Staying Order in Light of Plaintiff&apos;s Indigency, signed by Magistrate Judge Sheila K. Oberto on 10/2/13. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-23/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER DENYING 83 Motion for Reconsideration of Order Denying Appointment of Counsel with prejudice, signed by District Judge Lawrence J. O&apos;Neill on 10/4/13. (Martin-Gill, S)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-23.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-23</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2013-10-04</dateIssued>
+  <docketText>ORDER DENYING 83 Motion for Reconsideration of Order Denying Appointment of Counsel with prejudice, signed by District Judge Lawrence J. O&apos;Neill on 10/4/13. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-24/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying 85 Discovery Motion as Untimely, signed by Magistrate Judge Sheila K. Oberto on 11/13/13. (Gonzalez, R)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-24.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553051</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-24</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2013-11-14</dateIssued>
+  <docketText>ORDER Denying 85 Discovery Motion as Untimely, signed by Magistrate Judge Sheila K. Oberto on 11/13/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-25/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying 89 Motion for Issuance of Transportation Writ as Unnecessary, signed by Magistrate Judge Sheila K. Oberto on 11/13/13. (Gonzalez, R)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-25.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189552f76</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-25</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2013-11-14</dateIssued>
+  <docketText>ORDER Denying 89 Motion for Issuance of Transportation Writ as Unnecessary, signed by Magistrate Judge Sheila K. Oberto on 11/13/13. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-26/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Directing Clerk&apos;s Office to Change Case Title, signed by District Judge Lawrence J. O&apos;Neill on 12/10/13. (Verduzco, M)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-26.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-26</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2013-12-11</dateIssued>
+  <docketText>ORDER Directing Clerk&apos;s Office to Change Case Title, signed by District Judge Lawrence J. O&apos;Neill on 12/10/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-27/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER &amp; WRIT of Habeas Corpus Ad Testificandum to Transport Plaintiff Melvin Joseph Simmons, CDCR #D-66671, for Trial on 1/22/2014 at 8:00 a.m., signed by District Judge Lawrence J. O&apos;Neill on 12/13/13. (Verduzco, M)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-27.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553064</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-27</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>ORDER &amp; WRIT of Habeas Corpus Ad Testificandum to Transport Plaintiff Melvin Joseph Simmons, CDCR #D-66671, for Trial on 1/22/2014 at 8:00 a.m., signed by District Judge Lawrence J. O&apos;Neill on 12/13/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-28/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Overruling in Part and Sustaining in Part Plaintiff&apos;s Objections 100 to the Pretrial Order 95, signed by District Judge Lawrence J. O&apos;Neill on 1/6/13. (Verduzco, M)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-28.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-28</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>ORDER Overruling in Part and Sustaining in Part Plaintiff&apos;s Objections 100 to the Pretrial Order 95, signed by District Judge Lawrence J. O&apos;Neill on 1/6/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-29/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>AMENDED PRETRIAL ORDER, signed by District Judge Lawrence J. O&apos;Neill on 1/6/14. Motion in Limine Hearing set for 1/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 1/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Verduzco, M)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-29.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955304c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-29</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2014-01-06</dateIssued>
+  <docketText>AMENDED PRETRIAL ORDER, signed by District Judge Lawrence J. O&apos;Neill on 1/6/14. Motion in Limine Hearing set for 1/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill; Jury Trial set for 1/22/2014 at 08:30 AM in Courtroom 4 (LJO) before District Judge Lawrence J. O&apos;Neill. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-30/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Permitting Equipment at Trial 116, signed by District Judge Lawrence J. O&apos;Neill on 1/10/14. (Verduzco, M)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-30.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-30</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2014-01-10</dateIssued>
+  <docketText>ORDER Permitting Equipment at Trial 116, signed by District Judge Lawrence J. O&apos;Neill on 1/10/14. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-31/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>Notice and ORDER that Plaintiff Melvin Joseph Simmons, CDCR #D-66671, Is No Longer Needed as Witness in These Proceedings and the Writ of Habeas Corpus Ad Testificandum is Discharged, signed by District Judge Lawrence J. O&apos;Neill on 1/22/14. (Gonzalez, R)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-31.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553050</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-31</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2014-01-23</dateIssued>
+  <docketText>Notice and ORDER that Plaintiff Melvin Joseph Simmons, CDCR #D-66671, Is No Longer Needed as Witness in These Proceedings and the Writ of Habeas Corpus Ad Testificandum is Discharged, signed by District Judge Lawrence J. O&apos;Neill on 1/22/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-32/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>JUDGMENT dated *02/04/14* pursuant to order, signed by District Judge Lawrence J. O&apos;Neill on 2/4/14. (Gonzalez, R)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-32.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189553066</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-32</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2014-02-05</dateIssued>
+  <docketText>JUDGMENT dated *02/04/14* pursuant to order, signed by District Judge Lawrence J. O&apos;Neill on 2/4/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-33/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>NOTICE and ORDER that Plaintiff is Not Entitled to Proceed In Forma Pauperis on the Appeal Filed on March 10, 2014 re 132; ORDER Directing Clerk&apos;s Office to Serve Copy of Order on Ninth Circuit, signed by District Judge Lawrence J. O&apos;Neill on 4/9/14. (Gonzalez, R)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-33.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-33</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>NOTICE and ORDER that Plaintiff is Not Entitled to Proceed In Forma Pauperis on the Appeal Filed on March 10, 2014 re 132; ORDER Directing Clerk&apos;s Office to Serve Copy of Order on Ninth Circuit, signed by District Judge Lawrence J. O&apos;Neill on 4/9/14. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-34/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Denying Rule 60 Motion And Disregarding Objection To Lodged Proposed Judgment (Docs.129 and 130), signed by District Judge Lawrence J. O&apos;Neill on 4/23/2014. (Fahrney, E)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-34.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189552f75</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-34</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2014-04-23</dateIssued>
+  <docketText>ORDER Denying Rule 60 Motion And Disregarding Objection To Lodged Proposed Judgment (Docs.129 and 130), signed by District Judge Lawrence J. O&apos;Neill on 4/23/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01259-35" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-35/mods.xml">
+ <titleInfo>
+  <title>(PC) Simmons v. Sanders</title>
+  <subTitle>ORDER Directing Clerk&apos;s Office to Send Plaintiff Transcript Designation Form re 139 Motion, signed by Magistrate Judge Sheila K. Oberto on 05/12/14. (Attachments: # (1) Transcript Designation Form)(Gonzalez, R)</subTitle>
+  <partNumber>35</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-35.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18955305e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-35</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01259_35.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01259/USCOURTS-caed-1_10-cv-01259-35/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01259/pdf/USCOURTS-caed-1_10-cv-01259-35.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01259; (PC) Simmons v. Sanders; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01259-35</accessId>
+  <sequenceNumber>35</sequenceNumber>
+  <dateIssued>2014-05-12</dateIssued>
+  <docketText>ORDER Directing Clerk&apos;s Office to Send Plaintiff Transcript Designation Form re 139 Motion, signed by Magistrate Judge Sheila K. Oberto on 05/12/14. (Attachments: # (1) Transcript Designation Form)(Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+</mods>

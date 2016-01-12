@@ -1,0 +1,357 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1813cfa26">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-27</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-05304</identifier>
+<identifier type="local">P0b002ee1813cfa26</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-27</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-27</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_06-cv-05304</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-05304</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-05304</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="ROUZBEH" fullName="ROUZBEH ALIAGHAEI" lastName="ALIAGHAEI" role="Plaintiff"></party>
+ <party firstName="MARY" fullName="MARY AMREZAEI ALIAGHAEI" lastName="ALIAGHAEI" middleName="AMREZAEI" role="Plaintiff"></party>
+ <party firstName="SARA" fullName="SARA BACHMAN" lastName="BACHMAN" role="Plaintiff"></party>
+ <party firstName="MOISEY" fullName="MOISEY BACKMAN" lastName="BACKMAN" role="Plaintiff"></party>
+ <party firstName="JO ANNE" fullName="JO ANNE B. BARNHART" lastName="BARNHART" middleName="B." role="Defendant"></party>
+ <party firstName="JOE" fullName="JOE BEOPLUE" lastName="BEOPLUE" role="Plaintiff"></party>
+ <party firstName="SONYUNOR" fullName="SONYUNOR BEOPLUE" lastName="BEOPLUE" role="Plaintiff"></party>
+ <party firstName="GLAYON" fullName="GLAYON BLOUE" lastName="BLOUE" role="Plaintiff"></party>
+ <party firstName="LIDIYA" fullName="LIDIYA BURTSEVA" lastName="BURTSEVA" role="Plaintiff"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL CHERTOFF" lastName="CHERTOFF" role="Defendant"></party>
+ <party firstName="ALBERTO" fullName="ALBERTO GONZALES" lastName="GONZALES" role="Defendant"></party>
+ <party firstName="EMILIO" fullName="EMILIO T. GONZALEZ" lastName="GONZALEZ" middleName="T." role="Defendant"></party>
+ <party firstName="SHMUL" fullName="SHMUL KAPLAN" lastName="KAPLAN" role="Plaintiff"></party>
+ <party firstName="FERIDE" fullName="FERIDE MANDIJA" lastName="MANDIJA" role="Plaintiff"></party>
+ <party firstName="TASIM" fullName="TASIM MANDIJA" lastName="MANDIJA" role="Plaintiff"></party>
+ <party fullName="MASHAALAH" lastName="MASHAALAH" role="Plaintiff"></party>
+ <party firstName="ESHETU" fullName="ESHETU MERI" lastName="MERI" role="Plaintiff"></party>
+ <party firstName="DONALD" fullName="DONALD MONICA" lastName="MONICA" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT S. MUELLER III" generation="III" lastName="MUELLER" middleName="S." role="Defendant"></party>
+ <party firstName="NELLI" fullName="NELLI OLEVSKAYA" lastName="OLEVSKAYA" role="Plaintiff"></party>
+ <party firstName="IZAAK" fullName="IZAAK ROZENBLIT" lastName="ROZENBLIT" role="Plaintiff"></party>
+ <party firstName="SEMEN" fullName="SEMEN SAVRANSKIY" lastName="SAVRANSKIY" role="Plaintiff"></party>
+ <party firstName="LYUDMILA" fullName="LYUDMILA SHIROKAYA" lastName="SHIROKAYA" role="Plaintiff"></party>
+ <party firstName="IGOR" fullName="IGOR STEPANOV" lastName="STEPANOV" role="Plaintiff"></party>
+ <party firstName="YEVGENIYA" fullName="YEVGENIYA STRIZHEVSKAYA" lastName="STRIZHEVSKAYA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>KAPLAN et al v. CHERTOFF et al</title>
+ <partNumber>2:06-cv-05304</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-05304/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:06-cv-05304;06-5304</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>ROUZBEH ALIAGHAEI</displayForm>
+ <namePart type="family">ALIAGHAEI</namePart>
+ <namePart type="given">ROUZBEH</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MARY AMREZAEI ALIAGHAEI</displayForm>
+ <namePart type="family">ALIAGHAEI</namePart>
+ <namePart type="given">MARY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SARA BACHMAN</displayForm>
+ <namePart type="family">BACHMAN</namePart>
+ <namePart type="given">SARA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MOISEY BACKMAN</displayForm>
+ <namePart type="family">BACKMAN</namePart>
+ <namePart type="given">MOISEY</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>JO ANNE B. BARNHART</displayForm>
+ <namePart type="family">BARNHART</namePart>
+ <namePart type="given">JO ANNE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JOE BEOPLUE</displayForm>
+ <namePart type="family">BEOPLUE</namePart>
+ <namePart type="given">JOE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SONYUNOR BEOPLUE</displayForm>
+ <namePart type="family">BEOPLUE</namePart>
+ <namePart type="given">SONYUNOR</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>GLAYON BLOUE</displayForm>
+ <namePart type="family">BLOUE</namePart>
+ <namePart type="given">GLAYON</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>LIDIYA BURTSEVA</displayForm>
+ <namePart type="family">BURTSEVA</namePart>
+ <namePart type="given">LIDIYA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MICHAEL CHERTOFF</displayForm>
+ <namePart type="family">CHERTOFF</namePart>
+ <namePart type="given">MICHAEL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ALBERTO GONZALES</displayForm>
+ <namePart type="family">GONZALES</namePart>
+ <namePart type="given">ALBERTO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>EMILIO T. GONZALEZ</displayForm>
+ <namePart type="family">GONZALEZ</namePart>
+ <namePart type="given">EMILIO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>SHMUL KAPLAN</displayForm>
+ <namePart type="family">KAPLAN</namePart>
+ <namePart type="given">SHMUL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>FERIDE MANDIJA</displayForm>
+ <namePart type="family">MANDIJA</namePart>
+ <namePart type="given">FERIDE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>TASIM MANDIJA</displayForm>
+ <namePart type="family">MANDIJA</namePart>
+ <namePart type="given">TASIM</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>MASHAALAH</displayForm>
+ <namePart type="family">MASHAALAH</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>ESHETU MERI</displayForm>
+ <namePart type="family">MERI</namePart>
+ <namePart type="given">ESHETU</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>DONALD MONICA</displayForm>
+ <namePart type="family">MONICA</namePart>
+ <namePart type="given">DONALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ROBERT S. MUELLER III</displayForm>
+ <namePart type="family">MUELLER</namePart>
+ <namePart type="given">ROBERT</namePart>
+ <namePart type="termsOfAddress">III</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>NELLI OLEVSKAYA</displayForm>
+ <namePart type="family">OLEVSKAYA</namePart>
+ <namePart type="given">NELLI</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>IZAAK ROZENBLIT</displayForm>
+ <namePart type="family">ROZENBLIT</namePart>
+ <namePart type="given">IZAAK</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SEMEN SAVRANSKIY</displayForm>
+ <namePart type="family">SAVRANSKIY</namePart>
+ <namePart type="given">SEMEN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>LYUDMILA SHIROKAYA</displayForm>
+ <namePart type="family">SHIROKAYA</namePart>
+ <namePart type="given">LYUDMILA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>IGOR STEPANOV</displayForm>
+ <namePart type="family">STEPANOV</namePart>
+ <namePart type="given">IGOR</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>YEVGENIYA STRIZHEVSKAYA</displayForm>
+ <namePart type="family">STRIZHEVSKAYA</namePart>
+ <namePart type="given">YEVGENIYA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_06-cv-05304</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:06-cv-05304</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="ROUZBEH" fullName="ROUZBEH ALIAGHAEI" lastName="ALIAGHAEI" role="Plaintiff"></party>
+ <party firstName="MARY" fullName="MARY AMREZAEI ALIAGHAEI" lastName="ALIAGHAEI" middleName="AMREZAEI" role="Plaintiff"></party>
+ <party firstName="SARA" fullName="SARA BACHMAN" lastName="BACHMAN" role="Plaintiff"></party>
+ <party firstName="MOISEY" fullName="MOISEY BACKMAN" lastName="BACKMAN" role="Plaintiff"></party>
+ <party firstName="JO ANNE" fullName="JO ANNE B. BARNHART" lastName="BARNHART" middleName="B." role="Defendant"></party>
+ <party firstName="JOE" fullName="JOE BEOPLUE" lastName="BEOPLUE" role="Plaintiff"></party>
+ <party firstName="SONYUNOR" fullName="SONYUNOR BEOPLUE" lastName="BEOPLUE" role="Plaintiff"></party>
+ <party firstName="GLAYON" fullName="GLAYON BLOUE" lastName="BLOUE" role="Plaintiff"></party>
+ <party firstName="LIDIYA" fullName="LIDIYA BURTSEVA" lastName="BURTSEVA" role="Plaintiff"></party>
+ <party firstName="MICHAEL" fullName="MICHAEL CHERTOFF" lastName="CHERTOFF" role="Defendant"></party>
+ <party firstName="ALBERTO" fullName="ALBERTO GONZALES" lastName="GONZALES" role="Defendant"></party>
+ <party firstName="EMILIO" fullName="EMILIO T. GONZALEZ" lastName="GONZALEZ" middleName="T." role="Defendant"></party>
+ <party firstName="SHMUL" fullName="SHMUL KAPLAN" lastName="KAPLAN" role="Plaintiff"></party>
+ <party firstName="FERIDE" fullName="FERIDE MANDIJA" lastName="MANDIJA" role="Plaintiff"></party>
+ <party firstName="TASIM" fullName="TASIM MANDIJA" lastName="MANDIJA" role="Plaintiff"></party>
+ <party fullName="MASHAALAH" lastName="MASHAALAH" role="Plaintiff"></party>
+ <party firstName="ESHETU" fullName="ESHETU MERI" lastName="MERI" role="Plaintiff"></party>
+ <party firstName="DONALD" fullName="DONALD MONICA" lastName="MONICA" role="Defendant"></party>
+ <party firstName="ROBERT" fullName="ROBERT S. MUELLER III" generation="III" lastName="MUELLER" middleName="S." role="Defendant"></party>
+ <party firstName="NELLI" fullName="NELLI OLEVSKAYA" lastName="OLEVSKAYA" role="Plaintiff"></party>
+ <party firstName="IZAAK" fullName="IZAAK ROZENBLIT" lastName="ROZENBLIT" role="Plaintiff"></party>
+ <party firstName="SEMEN" fullName="SEMEN SAVRANSKIY" lastName="SAVRANSKIY" role="Plaintiff"></party>
+ <party firstName="LYUDMILA" fullName="LYUDMILA SHIROKAYA" lastName="SHIROKAYA" role="Plaintiff"></party>
+ <party firstName="IGOR" fullName="IGOR STEPANOV" lastName="STEPANOV" role="Plaintiff"></party>
+ <party firstName="YEVGENIYA" fullName="YEVGENIYA STRIZHEVSKAYA" lastName="STRIZHEVSKAYA" role="Plaintiff"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_06-cv-05304-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-05304/USCOURTS-paed-2_06-cv-05304-0/mods.xml">
+ <titleInfo>
+  <title>KAPLAN et al v. CHERTOFF et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT THE JOINT MOTION FOR PRELIMINARY APPROVAL OF THE PROPOSED SETTLEMENT AND APPROVAL OF NOTICE TO THE CLASS MEMBERS IS HEREBY GRANTED. IT IS FURTHER ORDERED THAT THERE WILL BE A HEARING TO CONSIDER WHETHER THE PROPOSED SETTLEMENT SHOULD RECRIVE FINAL APPROVAL UNDER FEDERAL RULE OF CIVIL PROCEDURE 23(e) ON FRIDAY, FEBRUARY 29, 2008, AT 10:30 A.M. IN COURTROOM 11A. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 01/24/08. 01/25/08 ENTERED AND COPIES MAILED AND E-MAILED.(ac, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_06-cv-05304-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814baf95</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-05304/USCOURTS-paed-2_06-cv-05304-0</identifier>
+ <identifier type="former granule identifier">paed-2_06-cv-05304_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_06-cv-05304/USCOURTS-paed-2_06-cv-05304-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_06-cv-05304/pdf/USCOURTS-paed-2_06-cv-05304-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:06-cv-05304; KAPLAN et al v. CHERTOFF et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_06-cv-05304-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-24</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT THE JOINT MOTION FOR PRELIMINARY APPROVAL OF THE PROPOSED SETTLEMENT AND APPROVAL OF NOTICE TO THE CLASS MEMBERS IS HEREBY GRANTED. IT IS FURTHER ORDERED THAT THERE WILL BE A HEARING TO CONSIDER WHETHER THE PROPOSED SETTLEMENT SHOULD RECRIVE FINAL APPROVAL UNDER FEDERAL RULE OF CIVIL PROCEDURE 23(e) ON FRIDAY, FEBRUARY 29, 2008, AT 10:30 A.M. IN COURTROOM 11A. SIGNED BY HONORABLE EDUARDO C. ROBRENO ON 01/24/08. 01/25/08 ENTERED AND COPIES MAILED AND E-MAILED.(ac, )</docketText>
+</extension>
+</relatedItem>
+</mods>

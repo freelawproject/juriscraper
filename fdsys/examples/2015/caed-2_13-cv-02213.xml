@@ -1,0 +1,393 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d99551b">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-09-25</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-09-23</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213</identifier>
+<identifier type="local">P0b002ee18d99551b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-09-25</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-09-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-02213</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02213</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02213</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Linda" fullName="Linda Clayman" lastName="Clayman" role="Plaintiff"></party>
+ <party firstName="Lainie" fullName="Lainie Cohen" lastName="Cohen" role="Plaintiff"></party>
+ <party fullName="Conopco, Inc." lastName="Conopco, Inc." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Drew" lastName="Drew" role="Plaintiff"></party>
+ <party firstName="Alba" fullName="Alba Morales" lastName="Morales" role="Plaintiff"></party>
+ <party fullName="Unilever" lastName="Unilever" role="Defendant"></party>
+ <party fullName="Unilever United States, Inc." lastName="Unilever United States, Inc." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Morales et al v. Unilever United States, Inc.</title>
+ <partNumber>2:13-cv-02213</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02213;13-2213</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Linda Clayman</displayForm>
+ <namePart type="family">Clayman</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lainie Cohen</displayForm>
+ <namePart type="family">Cohen</namePart>
+ <namePart type="given">Lainie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Conopco, Inc.</displayForm>
+ <namePart type="family">Conopco, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kenneth Drew</displayForm>
+ <namePart type="family">Drew</namePart>
+ <namePart type="given">Kenneth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Alba Morales</displayForm>
+ <namePart type="family">Morales</namePart>
+ <namePart type="given">Alba</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Unilever</displayForm>
+ <namePart type="family">Unilever</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Unilever United States, Inc.</displayForm>
+ <namePart type="family">Unilever United States, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02213</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02213</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>370</natureSuitCode>
+ <natureSuit>Other Fraud</natureSuit>
+ <cause>28:1332 Diversity-Fraud</cause>
+ <party firstName="Linda" fullName="Linda Clayman" lastName="Clayman" role="Plaintiff"></party>
+ <party firstName="Lainie" fullName="Lainie Cohen" lastName="Cohen" role="Plaintiff"></party>
+ <party fullName="Conopco, Inc." lastName="Conopco, Inc." role="Defendant"></party>
+ <party firstName="Kenneth" fullName="Kenneth Drew" lastName="Drew" role="Plaintiff"></party>
+ <party firstName="Alba" fullName="Alba Morales" lastName="Morales" role="Plaintiff"></party>
+ <party fullName="Unilever" lastName="Unilever" role="Defendant"></party>
+ <party fullName="Unilever United States, Inc." lastName="Unilever United States, Inc." role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-0/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/12/2013 ORDERING 5 the motion hearing shall be heard on 4/7/2014 at 2:00 PM in Courtroom 5, 14th Floor; Scheduling Conference CONTINUED to 5/27/2014 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; a joint status report shall be filed no later than 5/13/2014.(Reader, L)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59c6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-13</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 11/12/2013 ORDERING 5 the motion hearing shall be heard on 4/7/2014 at 2:00 PM in Courtroom 5, 14th Floor; Scheduling Conference CONTINUED to 5/27/2014 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; a joint status report shall be filed no later than 5/13/2014.(Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-1/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>tent with this Order. (Becknal, R)MEMORANDUM AND ORDER RE: MOTION TO DISMISS signed by Senior Judge William B. Shubb on 4/9/14 ORDERING, because plaintiffs have alleged the &quot;circumstances constituting fraud&quot; with sufficient particularity, see Fed. R. Civ. P. 9(b), the court must deny defendant&apos;s motion to dismiss on this basis. IT IS THEREFORE ORDERED that defendant&apos;s motion to dismiss be, and the same hereby is, GRANTED with respect to plaintiffs&apos; claims on behalf of similarly situated purchasers to the extent that they arise under the laws of states other than California and Massachusetts, and DENIED in all other respects. Plaintiffs have twenty days from the day this Order is signed to file an amended Complaint, if they can do so consis</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59c7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-04-09</dateIssued>
+  <docketText>tent with this Order. (Becknal, R)MEMORANDUM AND ORDER RE: MOTION TO DISMISS signed by Senior Judge William B. Shubb on 4/9/14 ORDERING, because plaintiffs have alleged the &quot;circumstances constituting fraud&quot; with sufficient particularity, see Fed. R. Civ. P. 9(b), the court must deny defendant&apos;s motion to dismiss on this basis. IT IS THEREFORE ORDERED that defendant&apos;s motion to dismiss be, and the same hereby is, GRANTED with respect to plaintiffs&apos; claims on behalf of similarly situated purchasers to the extent that they arise under the laws of states other than California and Massachusetts, and DENIED in all other respects. Plaintiffs have twenty days from the day this Order is signed to file an amended Complaint, if they can do so consis</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-2/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 4/21/2014 ORDERING 28 Defendant&apos;s answer to the First Amended Complaint on or before 4/23/2014; the parties participated in a Rule 26(f) conference on 4/15/2014; the parties&apos; initial disclosures would otherwise be due on or before 4/29/2014; The parties hereby stipulate that they will exchange initial disclosures on or before 5/13/2014; Defendant will answer the First Amended Complaint on or before 5/29/2014; Defendant will answer, move, or otherwise plead in response to the Second Amended Complaint, should Plaintiffs decide to file one, on or before 5/29/2014.(Reader, L)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-04-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a592f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-04-22</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 4/21/2014 ORDERING 28 Defendant&apos;s answer to the First Amended Complaint on or before 4/23/2014; the parties participated in a Rule 26(f) conference on 4/15/2014; the parties&apos; initial disclosures would otherwise be due on or before 4/29/2014; The parties hereby stipulate that they will exchange initial disclosures on or before 5/13/2014; Defendant will answer the First Amended Complaint on or before 5/29/2014; Defendant will answer, move, or otherwise plead in response to the Second Amended Complaint, should Plaintiffs decide to file one, on or before 5/29/2014.(Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-3/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STATUS (PRETRIAL SCHEDULING) ORDER signed by Senior Judge William B. Shubb on 5/9/14 ORDERING that the 5/27/2014 Status (Pretrial Scheduling) Conference is hereby VACATED. The Parties shall serve the initial disclosures by no later than 5/16/2014; all non-expert discovery shall be completed by 2/13/2015; Plaintiffs shall disclose their experts and produce reports by no later than 3/13/2015; Defendant shall conduct any depositions of plaintiffs&apos; expert witnesses by no later than 4/10/2015; Defendant shall disclose its experts and produce reports by no later than 4/10/2015; Plaintiffs shall conduct any depositions of defendant&apos;s expert witnesses by no later than 5/8/2015; Plaintiffs shall disclose any rebuttal expert witnesses and produce rebuttal expert reports by no later than 5/8/2015; Defendant shall conduct any depositions of plaintiffs&apos; rebuttal witnesses by no later than 6/5/2015; all expert discovery shall be completed by 6/12/2015; Plaintiffs motion for class certification shall be filed on or before 7/10/2015; Defendant shall file its opposition on or before 8/21/2015; and plaintiffs shall file their reply on or before 9/18/2015; the court will hear plaintiff&apos;s motion for class certification on 10/5/2015, or on the next available hearing date; all other motions shall be filed on or before 12/7/2015; the Final Pretrial Conference is SET for 2/16/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; a Jury Trial is SET for 4/12/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-05-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59ca</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-05-12</dateIssued>
+  <docketText>STATUS (PRETRIAL SCHEDULING) ORDER signed by Senior Judge William B. Shubb on 5/9/14 ORDERING that the 5/27/2014 Status (Pretrial Scheduling) Conference is hereby VACATED. The Parties shall serve the initial disclosures by no later than 5/16/2014; all non-expert discovery shall be completed by 2/13/2015; Plaintiffs shall disclose their experts and produce reports by no later than 3/13/2015; Defendant shall conduct any depositions of plaintiffs&apos; expert witnesses by no later than 4/10/2015; Defendant shall disclose its experts and produce reports by no later than 4/10/2015; Plaintiffs shall conduct any depositions of defendant&apos;s expert witnesses by no later than 5/8/2015; Plaintiffs shall disclose any rebuttal expert witnesses and produce rebuttal expert reports by no later than 5/8/2015; Defendant shall conduct any depositions of plaintiffs&apos; rebuttal witnesses by no later than 6/5/2015; all expert discovery shall be completed by 6/12/2015; Plaintiffs motion for class certification shall be filed on or before 7/10/2015; Defendant shall file its opposition on or before 8/21/2015; and plaintiffs shall file their reply on or before 9/18/2015; the court will hear plaintiff&apos;s motion for class certification on 10/5/2015, or on the next available hearing date; all other motions shall be filed on or before 12/7/2015; the Final Pretrial Conference is SET for 2/16/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; a Jury Trial is SET for 4/12/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-4/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATED PROTECTIVE ORDER signed by Magistrate Judge Edmund F. Brennan on 10/7/14. (Becknal, R)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59c8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-10-07</dateIssued>
+  <docketText>STIPULATED PROTECTIVE ORDER signed by Magistrate Judge Edmund F. Brennan on 10/7/14. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-5/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 1/5/15. The parties stipulation to modify the Pretrial Scheduling Order is GRANTED; and the Order is modified (see order for details).(Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a5930</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-5</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Magistrate Judge Edmund F. Brennan on 1/5/15. The parties stipulation to modify the Pretrial Scheduling Order is GRANTED; and the Order is modified (see order for details).(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-6/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATION and SECOND ORDER TO MODIFY SCHEDULING ORDER 44 signed by Senior Judge William B. Shubb on 4/28/2015: The Court shall hear oral argument on Plaintiffs&apos; motion for class certification on 4/4/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Court shall hear oral argument on any motions for summary judgment on 7/11/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Final Pretrial Conference is reset for 9/12/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Jury Trial is reset for 11/15/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Counsel shall refer to the attached order for further dates and details.) (Kirksey Smith, K)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-6</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-04-28</dateIssued>
+  <docketText>STIPULATION and SECOND ORDER TO MODIFY SCHEDULING ORDER 44 signed by Senior Judge William B. Shubb on 4/28/2015: The Court shall hear oral argument on Plaintiffs&apos; motion for class certification on 4/4/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Court shall hear oral argument on any motions for summary judgment on 7/11/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. The Final Pretrial Conference is reset for 9/12/2016 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Jury Trial is reset for 11/15/2016 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Counsel shall refer to the attached order for further dates and details.) (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02213-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-7/mods.xml">
+ <titleInfo>
+  <title>Morales et al v. Unilever United States, Inc.</title>
+  <subTitle>STIPULATION and THIRD ORDER TO MODIFY SCHEDULING ORDER signed by Senior Judge William B. Shubb on 9/22/15 46: Discovery due by 2/29/2016; Designation of Expert Witnesses due by 4/29/2016; Dispositive Motions filed by 9/23/2016; Plaintiffs&apos; Motion for Class Certification filed by 7/1/2016; Final Pretrial Conference reset for 2/10/2017 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb, Jury Trial reset for 4/7/2017 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Counsel shall refer to the attached order for further dates and details.)(Meuleman, A) Modified on 9/24/2015 (Meuleman, A).</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d9a59c9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-7</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02213_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02213/USCOURTS-caed-2_13-cv-02213-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02213/pdf/USCOURTS-caed-2_13-cv-02213-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02213; Morales et al v. Unilever United States, Inc.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02213-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-09-23</dateIssued>
+  <docketText>STIPULATION and THIRD ORDER TO MODIFY SCHEDULING ORDER signed by Senior Judge William B. Shubb on 9/22/15 46: Discovery due by 2/29/2016; Designation of Expert Witnesses due by 4/29/2016; Dispositive Motions filed by 9/23/2016; Plaintiffs&apos; Motion for Class Certification filed by 7/1/2016; Final Pretrial Conference reset for 2/10/2017 at 02:00 PM in Courtroom 5 (WBS) before Senior Judge William B. Shubb, Jury Trial reset for 4/7/2017 at 09:00 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. (Counsel shall refer to the attached order for further dates and details.)(Meuleman, A) Modified on 9/24/2015 (Meuleman, A).</docketText>
+</extension>
+</relatedItem>
+</mods>

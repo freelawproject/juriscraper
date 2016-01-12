@@ -1,0 +1,222 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181354efa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-00263</identifier>
+<identifier type="local">P0b002ee181354efa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-paed-2_07-cv-00263</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cv-00263</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cv-00263</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="CAROL" fullName="CAROL BANGURA" lastName="BANGURA" role="Plaintiff"></party>
+ <party fullName="CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES" lastName="CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES" role="Defendant"></party>
+ <party fullName="CORRIGAN" lastName="CORRIGAN" role="Defendant"></party>
+ <party firstName="MARGUERITE" fullName="MARGUERITE DAVILA" lastName="DAVILA" role="Defendant"></party>
+ <party firstName="CARMITA" fullName="CARMITA JOHNSON" lastName="JOHNSON" role="Defendant"></party>
+ <party firstName="JAMES" fullName="JAMES R. LEWIS" lastName="LEWIS" middleName="R." role="Defendant"></party>
+ <party fullName="PHILADELPHIA POLICE DEPARTMENT" lastName="PHILADELPHIA POLICE DEPARTMENT" role="Defendant"></party>
+ <party fullName="QUINN" lastName="QUINN" role="Defendant"></party>
+ <party firstName="CHERYL" fullName="CHERYL RANSOM-GARNER" lastName="RANSOM-GARNER" role="Defendant"></party>
+ <party fullName="REDDING" lastName="REDDING" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>BANGURA v. CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES et al</title>
+ <partNumber>2:07-cv-00263</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-00263/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-00263;07-263</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Philadelphia</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CAROL BANGURA</displayForm>
+ <namePart type="family">BANGURA</namePart>
+ <namePart type="given">CAROL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES</displayForm>
+ <namePart type="family">CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CORRIGAN</displayForm>
+ <namePart type="family">CORRIGAN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>MARGUERITE DAVILA</displayForm>
+ <namePart type="family">DAVILA</namePart>
+ <namePart type="given">MARGUERITE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CARMITA JOHNSON</displayForm>
+ <namePart type="family">JOHNSON</namePart>
+ <namePart type="given">CARMITA</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JAMES R. LEWIS</displayForm>
+ <namePart type="family">LEWIS</namePart>
+ <namePart type="given">JAMES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>PHILADELPHIA POLICE DEPARTMENT</displayForm>
+ <namePart type="family">PHILADELPHIA POLICE DEPARTMENT</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>QUINN</displayForm>
+ <namePart type="family">QUINN</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHERYL RANSOM-GARNER</displayForm>
+ <namePart type="family">RANSOM-GARNER</namePart>
+ <namePart type="given">CHERYL</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>REDDING</displayForm>
+ <namePart type="family">REDDING</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-paed-2_07-cv-00263</accessId>
+ <courtType>District</courtType>
+ <courtCode>paed</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2421</courtSortOrder>
+ <caseNumber>2:07-cv-00263</caseNumber>
+ <caseOffice>Philadelphia</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <party firstName="CAROL" fullName="CAROL BANGURA" lastName="BANGURA" role="Plaintiff"></party>
+ <party fullName="CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES" lastName="CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES" role="Defendant"></party>
+ <party fullName="CORRIGAN" lastName="CORRIGAN" role="Defendant"></party>
+ <party firstName="MARGUERITE" fullName="MARGUERITE DAVILA" lastName="DAVILA" role="Defendant"></party>
+ <party firstName="CARMITA" fullName="CARMITA JOHNSON" lastName="JOHNSON" role="Defendant"></party>
+ <party firstName="JAMES" fullName="JAMES R. LEWIS" lastName="LEWIS" middleName="R." role="Defendant"></party>
+ <party fullName="PHILADELPHIA POLICE DEPARTMENT" lastName="PHILADELPHIA POLICE DEPARTMENT" role="Defendant"></party>
+ <party fullName="QUINN" lastName="QUINN" role="Defendant"></party>
+ <party firstName="CHERYL" fullName="CHERYL RANSOM-GARNER" lastName="RANSOM-GARNER" role="Defendant"></party>
+ <party fullName="REDDING" lastName="REDDING" role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-paed-2_07-cv-00263-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-00263/USCOURTS-paed-2_07-cv-00263-0/mods.xml">
+ <titleInfo>
+  <title>BANGURA v. CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES et al</title>
+  <subTitle>MEMORANDUM AND ORDER THAT THE MOTION FOR SUMMARY JUDGMENT FILED BY DEFENDANT CITY OF PHILADELPGIA (DOCKET NO. 24) IS GRNATED. JUDGMENT IN ENTERED IN FAVOR OF DEFENDANT CITY OF PHILADELPHIA AND AGAINST PLAINTIFF. THE CLERK OF COURT SHALL CLOSE THIS MATTER STATISTICALLY. SIGNED BY HONORABLE JOHN R. PADOVA ON 1/7/09. 1/7/09 ENTERED AND COPIES MAILED, E-MAILED.(lisad, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-paed-2_07-cv-00263-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18138ac5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-00263/USCOURTS-paed-2_07-cv-00263-0</identifier>
+ <identifier type="former granule identifier">paed-2_07-cv-00263_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-paed-2_07-cv-00263/USCOURTS-paed-2_07-cv-00263-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-paed-2_07-cv-00263/pdf/USCOURTS-paed-2_07-cv-00263-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-00263; BANGURA v. CITY OF PHILADELPHIA DEPARTMENT OF HUMAN SERVICES et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-paed-2_07-cv-00263-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER THAT THE MOTION FOR SUMMARY JUDGMENT FILED BY DEFENDANT CITY OF PHILADELPGIA (DOCKET NO. 24) IS GRNATED. JUDGMENT IN ENTERED IN FAVOR OF DEFENDANT CITY OF PHILADELPHIA AND AGAINST PLAINTIFF. THE CLERK OF COURT SHALL CLOSE THIS MATTER STATISTICALLY. SIGNED BY HONORABLE JOHN R. PADOVA ON 1/7/09. 1/7/09 ENTERED AND COPIES MAILED, E-MAILED.(lisad, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,277 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1818ef4e5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-21</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-71605</identifier>
+<identifier type="local">P0b002ee1818ef4e5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_04-cv-71605</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-71605</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-71605</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Daniel" fullName="Daniel Bowman" lastName="Bowman" role="Defendant"></party>
+ <party firstName="Ronely" fullName="Ronely Chambers" lastName="Chambers" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Goetz" lastName="Goetz" role="Defendant"></party>
+ <party firstName="T." fullName="T. Goodin" lastName="Goodin" role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Gordon" lastName="Gordon" role="Defendant"></party>
+ <party firstName="Theodore" fullName="Theodore Hamblin" lastName="Hamblin" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Jacobson" lastName="Jacobson" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Morris" lastName="Morris" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard O&apos;Connell" lastName="O&apos;Connell" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Rohrer" lastName="Rohrer" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Sawyer" lastName="Sawyer" role="Defendant"></party>
+ <party firstName="Kurt" fullName="Kurt Simon" lastName="Simon" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis M. Straub" lastName="Straub" middleName="M." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Chambers v. Straub et al</title>
+ <partNumber>2:04-cv-71605</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-71605/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:04-cv-71605;04-71605</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Daniel Bowman</displayForm>
+ <namePart type="family">Bowman</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronely Chambers</displayForm>
+ <namePart type="family">Chambers</namePart>
+ <namePart type="given">Ronely</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Goetz</displayForm>
+ <namePart type="family">Goetz</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Goodin</displayForm>
+ <namePart type="family">Goodin</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Greg Gordon</displayForm>
+ <namePart type="family">Gordon</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Theodore Hamblin</displayForm>
+ <namePart type="family">Hamblin</namePart>
+ <namePart type="given">Theodore</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dawn Jacobson</displayForm>
+ <namePart type="family">Jacobson</namePart>
+ <namePart type="given">Dawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey Morris</displayForm>
+ <namePart type="family">Morris</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard O&apos;Connell</displayForm>
+ <namePart type="family">O&apos;Connell</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Rohrer</displayForm>
+ <namePart type="family">Rohrer</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mike Sawyer</displayForm>
+ <namePart type="family">Sawyer</namePart>
+ <namePart type="given">Mike</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kurt Simon</displayForm>
+ <namePart type="family">Simon</namePart>
+ <namePart type="given">Kurt</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis M. Straub</displayForm>
+ <namePart type="family">Straub</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_04-cv-71605</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:04-cv-71605</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <party firstName="Daniel" fullName="Daniel Bowman" lastName="Bowman" role="Defendant"></party>
+ <party firstName="Ronely" fullName="Ronely Chambers" lastName="Chambers" role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael Goetz" lastName="Goetz" role="Defendant"></party>
+ <party firstName="T." fullName="T. Goodin" lastName="Goodin" role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Gordon" lastName="Gordon" role="Defendant"></party>
+ <party firstName="Theodore" fullName="Theodore Hamblin" lastName="Hamblin" role="Defendant"></party>
+ <party firstName="Dawn" fullName="Dawn Jacobson" lastName="Jacobson" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey Morris" lastName="Morris" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard O&apos;Connell" lastName="O&apos;Connell" role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Rohrer" lastName="Rohrer" role="Defendant"></party>
+ <party firstName="Mike" fullName="Mike Sawyer" lastName="Sawyer" role="Defendant"></party>
+ <party firstName="Kurt" fullName="Kurt Simon" lastName="Simon" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis M. Straub" lastName="Straub" middleName="M." role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_04-cv-71605-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-0/mods.xml">
+ <titleInfo>
+  <title>Chambers v. Straub et al</title>
+  <subTitle>OPINION AND ORDER denying 15 motion for relief from judgment.. Signed by District Judge Gerald E Rosen. (LSau)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_04-cv-71605-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18192297d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-0</identifier>
+ <identifier type="former granule identifier">mied-2_04-cv-71605_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-71605/pdf/USCOURTS-mied-2_04-cv-71605-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-71605; Chambers v. Straub et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_04-cv-71605-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-07-17</dateIssued>
+  <docketText>OPINION AND ORDER denying 15 motion for relief from judgment.. Signed by District Judge Gerald E Rosen. (LSau)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_04-cv-71605-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-1/mods.xml">
+ <titleInfo>
+  <title>Chambers v. Straub et al</title>
+  <subTitle>ORDER denying 18 Motion for Reconsideration. Signed by District Judge Gerald E Rosen. (LSau)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_04-cv-71605-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18192297c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-1</identifier>
+ <identifier type="former granule identifier">mied-2_04-cv-71605_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_04-cv-71605/USCOURTS-mied-2_04-cv-71605-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_04-cv-71605/pdf/USCOURTS-mied-2_04-cv-71605-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:04-cv-71605; Chambers v. Straub et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_04-cv-71605-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-01-21</dateIssued>
+  <docketText>ORDER denying 18 Motion for Reconsideration. Signed by District Judge Gerald E Rosen. (LSau)</docketText>
+</extension>
+</relatedItem>
+</mods>

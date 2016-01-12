@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a581a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00405</identifier>
+<identifier type="local">P0b002ee1817a581a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_11-cv-00405</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00405</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00405</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael B. Woolman" lastName="Woolman" middleName="B." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Woolman v. State of Nebraska</title>
+ <partNumber>8:11-cv-00405</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00405/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:11-cv-00405;11-405</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jon Bruning</displayForm>
+ <namePart type="family">Bruning</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael B. Woolman</displayForm>
+ <namePart type="family">Woolman</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_11-cv-00405</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:11-cv-00405</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael B. Woolman" lastName="Woolman" middleName="B." role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00405-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-0/mods.xml">
+ <titleInfo>
+  <title>Woolman v. State of Nebraska</title>
+  <subTitle>MEMORANUM AND ORDER provisionally granting the 3 Motion for Leave to Proceed in forma pauperis, and the Complaint shall be filed without payment of fees. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(MKR)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00405-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18184ec3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-0</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00405_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00405/pdf/USCOURTS-ned-8_11-cv-00405-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00405; Woolman v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00405-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-12-07</dateIssued>
+  <docketText>MEMORANUM AND ORDER provisionally granting the 3 Motion for Leave to Proceed in forma pauperis, and the Complaint shall be filed without payment of fees. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_11-cv-00405-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-1/mods.xml">
+ <titleInfo>
+  <title>Woolman v. State of Nebraska</title>
+  <subTitle>MEMORANDUM AND ORDER - Plaintiffs Motion for Leave to Appeal in forma pauperis (Filing No. 15) is granted; Plaintiffs Motion to Compel Discovery (Filing No. 12) and Motion for Leaveto File a Complaint (Filing No. 13) are denied as moot; and The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_11-cv-00405-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18184ec3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-1</identifier>
+ <identifier type="former granule identifier">ned-8_11-cv-00405_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_11-cv-00405/USCOURTS-ned-8_11-cv-00405-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_11-cv-00405/pdf/USCOURTS-ned-8_11-cv-00405-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:11-cv-00405; Woolman v. State of Nebraska; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_11-cv-00405-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Plaintiffs Motion for Leave to Appeal in forma pauperis (Filing No. 15) is granted; Plaintiffs Motion to Compel Discovery (Filing No. 12) and Motion for Leaveto File a Complaint (Filing No. 13) are denied as moot; and The Clerk of the court shall provide the Court of Appeals with a copy of this Memorandum and Order. Ordered by Chief Judge Laurie Smith Camp. (Copy mailed/e-mailed to pro se party)(MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

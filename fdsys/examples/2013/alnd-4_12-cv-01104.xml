@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18694f80a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-12-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-12-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-01104</identifier>
+<identifier type="local">P0b002ee18694f80a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-12-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-12-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-alnd-4_12-cv-01104</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-4_12-cv-01104</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>4:12-cv-01104</caseNumber>
+ <caseOffice>Middle</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Fair Labor Standards Act</cause>
+ <party firstName="Juan" fullName="Juan Ramon Coello" lastName="Coello" middleName="Ramon" role="Plaintiff"></party>
+ <party fullName="La Cabana Mexican Restaurant" lastName="La Cabana Mexican Restaurant" role="Defendant"></party>
+ <party firstName="Andres" fullName="Andres Luna" lastName="Luna" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose C Luna" lastName="Luna" middleName="C" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Coello v. La Cabana Mexican Restaurant et al</title>
+ <partNumber>4:12-cv-01104</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-01104/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cv-01104;12-1104</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Alabama</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Middle</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Juan Ramon Coello</displayForm>
+ <namePart type="family">Coello</namePart>
+ <namePart type="given">Juan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>La Cabana Mexican Restaurant</displayForm>
+ <namePart type="family">La Cabana Mexican Restaurant</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Andres Luna</displayForm>
+ <namePart type="family">Luna</namePart>
+ <namePart type="given">Andres</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose C Luna</displayForm>
+ <namePart type="family">Luna</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-alnd-4_12-cv-01104</accessId>
+ <courtType>District</courtType>
+ <courtCode>alnd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Alabama</courtState>
+ <courtSortOrder>2012</courtSortOrder>
+ <caseNumber>4:12-cv-01104</caseNumber>
+ <caseOffice>Middle</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>710</natureSuitCode>
+ <natureSuit>Fair Labor Standards Act</natureSuit>
+ <cause>29:201 Fair Labor Standards Act</cause>
+ <party firstName="Juan" fullName="Juan Ramon Coello" lastName="Coello" middleName="Ramon" role="Plaintiff"></party>
+ <party fullName="La Cabana Mexican Restaurant" lastName="La Cabana Mexican Restaurant" role="Defendant"></party>
+ <party firstName="Andres" fullName="Andres Luna" lastName="Luna" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose C Luna" lastName="Luna" middleName="C" role="Defendant"></party>
+ <state>Alabama</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-4_12-cv-01104-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-0/mods.xml">
+ <titleInfo>
+  <title>Coello v. La Cabana Mexican Restaurant et al</title>
+  <subTitle>MEMORANDUM OPINION AND ORDER DENYING 19 MOTION to Set Aside Default as set out herein. Signed by Judge Virginia Emerson Hopkins on 1/2/2013. (JLC)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-4_12-cv-01104-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18695ebb8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-0</identifier>
+ <identifier type="former granule identifier">alnd-4_12-cv-01104_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-01104/pdf/USCOURTS-alnd-4_12-cv-01104-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-01104; Coello v. La Cabana Mexican Restaurant et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-4_12-cv-01104-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>MEMORANDUM OPINION AND ORDER DENYING 19 MOTION to Set Aside Default as set out herein. Signed by Judge Virginia Emerson Hopkins on 1/2/2013. (JLC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-alnd-4_12-cv-01104-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-1/mods.xml">
+ <titleInfo>
+  <title>Coello v. La Cabana Mexican Restaurant et al</title>
+  <subTitle>MEMORANDUM OPINION. Signed by Judge Virginia Emerson Hopkins on 12/13/2013. (JLC)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-alnd-4_12-cv-01104-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18695ebb9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-1</identifier>
+ <identifier type="former granule identifier">alnd-4_12-cv-01104_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-alnd-4_12-cv-01104/USCOURTS-alnd-4_12-cv-01104-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-alnd-4_12-cv-01104/pdf/USCOURTS-alnd-4_12-cv-01104-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cv-01104; Coello v. La Cabana Mexican Restaurant et al; </searchTitle>
+  <courtName>United States District Court Northern District of Alabama</courtName>
+  <state>Alabama</state>
+  <accessId>USCOURTS-alnd-4_12-cv-01104-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-13</dateIssued>
+  <docketText>MEMORANDUM OPINION. Signed by Judge Virginia Emerson Hopkins on 12/13/2013. (JLC)</docketText>
+</extension>
+</relatedItem>
+</mods>

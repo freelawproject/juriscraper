@@ -1,0 +1,444 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee184b19e7c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-05-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-05-13</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232</identifier>
+<identifier type="local">P0b002ee184b19e7c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-05-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-05-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_12-cr-00232</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00232</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00232</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cristina" fullName="Cristina Garcia-Hernandez" lastName="Garcia-Hernandez" role="Defendant"></party>
+ <party firstName="Maurelio" fullName="Maurelio Rico-Rios" lastName="Rico-Rios" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Yaneyri" fullName="Yaneyri Zavala-Barrera" lastName="Zavala-Barrera" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Rico-Rios et al</title>
+ <partNumber>1:12-cr-00232</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:12-cr-00232;12-232</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Cristina Garcia-Hernandez</displayForm>
+ <namePart type="family">Garcia-Hernandez</namePart>
+ <namePart type="given">Cristina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Maurelio Rico-Rios</displayForm>
+ <namePart type="family">Rico-Rios</namePart>
+ <namePart type="given">Maurelio</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Yaneyri Zavala-Barrera</displayForm>
+ <namePart type="family">Zavala-Barrera</namePart>
+ <namePart type="given">Yaneyri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_12-cr-00232</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:12-cr-00232</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Cristina" fullName="Cristina Garcia-Hernandez" lastName="Garcia-Hernandez" role="Defendant"></party>
+ <party firstName="Maurelio" fullName="Maurelio Rico-Rios" lastName="Rico-Rios" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Yaneyri" fullName="Yaneyri Zavala-Barrera" lastName="Zavala-Barrera" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>DETENTION ORDER as to Cristina Garcia-Hernandez (6), signed by Magistrate Judge Dennis L. Beck on 7/13/2012. (Gaumnitz, R)[1:12-mj-00155-GSA]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3fe3c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-0</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-07-17</dateIssued>
+  <docketText>DETENTION ORDER as to Cristina Garcia-Hernandez (6), signed by Magistrate Judge Dennis L. Beck on 7/13/2012. (Gaumnitz, R)[1:12-mj-00155-GSA]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>DETENTION ORDER as to Maurelio Rico-Rios (7), signed by Magistrate Judge Dennis L. Beck on 7/19/2012. (Gaumnitz, R)[1:12-mj-00155-GSA]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffd3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-1</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-07-19</dateIssued>
+  <docketText>DETENTION ORDER as to Maurelio Rico-Rios (7), signed by Magistrate Judge Dennis L. Beck on 7/19/2012. (Gaumnitz, R)[1:12-mj-00155-GSA]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>DETENTION ORDER as to Yaneyri Zavala-Barrera signed by Magistrate Judge Dennis L. Beck on 7/25/2012. (Hernandez, M)[1:12-mj-00155-GSA]</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffd2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-2</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-25</dateIssued>
+  <docketText>DETENTION ORDER as to Yaneyri Zavala-Barrera signed by Magistrate Judge Dennis L. Beck on 7/25/2012. (Hernandez, M)[1:12-mj-00155-GSA]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffd1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-3</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-08-01</dateIssued>
+  <docketText>STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)STIPULATION and Discovery Protective Order between Defendants and the United States, signed by Magistrate Judge Dennis L. Beck on 8/1/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffcc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-4</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)Preliminary Order of Forfeiture, as to Maurelio Rico-Rios (1), Yaneyri Zavala-Barrera (2), and Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 12/28/2012. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>STIPULATION and ORDER Advancing Sentencing Hearing Date, signed by District Judge Anthony W. Ishii on 2/4/2013. (Sentencing as to Yaneyri Zavala-Barrera previously set for 3/4/2013, has been ADVANCED to 2/11/2013, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffd0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-5</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-02-05</dateIssued>
+  <docketText>STIPULATION and ORDER Advancing Sentencing Hearing Date, signed by District Judge Anthony W. Ishii on 2/4/2013. (Sentencing as to Yaneyri Zavala-Barrera previously set for 3/4/2013, has been ADVANCED to 2/11/2013, at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii.) (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Yaneyri Zavala-Barrera (2), signed by District Judge Anthony W. Ishii on 2/15/2013. (Gaumnitz, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffcd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-6</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Yaneyri Zavala-Barrera (2), signed by District Judge Anthony W. Ishii on 2/15/2013. (Gaumnitz, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>STIPULATION to ADVANCE Sentencing Hearing ; ORDER, signed by District Judge Anthony W. Ishii on 2/15/2013. (Sentencing as to Maurelio Rico-Rios (1) currently set for 3/4/2013 has now been ADVANCED to 2/25/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3fe3d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-7</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>STIPULATION to ADVANCE Sentencing Hearing ; ORDER, signed by District Judge Anthony W. Ishii on 2/15/2013. (Sentencing as to Maurelio Rico-Rios (1) currently set for 3/4/2013 has now been ADVANCED to 2/25/2013 at 10:00 AM in Courtroom 2 (AWI) before District Judge Anthony W. Ishii) (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Maurelio Rico-Rios (1), signed by District Judge Anthony W. Ishii on 2/28/2013. (Figueroa, O)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffcf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-8</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-02-28</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Maurelio Rico-Rios (1), signed by District Judge Anthony W. Ishii on 2/28/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>JUDGMENT and COMMITMENT, as to Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 3/8/2013. (Figueroa, O)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffcb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-9</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-03-08</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT, as to Cristina Garcia-Hernandez (3), signed by District Judge Anthony W. Ishii on 3/8/2013. (Figueroa, O)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_12-cr-00232-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Rico-Rios et al</title>
+  <subTitle>FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-05-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_12-cr-00232-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee184b3ffce</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-10</identifier>
+ <identifier type="former granule identifier">caed-1_12-cr-00232_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_12-cr-00232/USCOURTS-caed-1_12-cr-00232-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_12-cr-00232/pdf/USCOURTS-caed-1_12-cr-00232-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:12-cr-00232; USA v. Rico-Rios et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_12-cr-00232-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2013-05-13</dateIssued>
+  <docketText>FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)FINAL ORDER OF FORFEITURE as to Maurelio Rico-Rios, Yaneyri Zavala-Barrera, Cristina Garcia-Hernandez signed by District Judge Anthony W. Ishii on 5/10/2013. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

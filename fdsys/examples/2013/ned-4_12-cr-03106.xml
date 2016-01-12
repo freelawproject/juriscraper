@@ -1,0 +1,286 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18567c86b">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-07-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-07-15</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106</identifier>
+<identifier type="local">P0b002ee18567c86b</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-07-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-07-16</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_12-cr-03106</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03106</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03106</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Miguel Ambrocio Solares" lastName="Ambrocio Solares" middleName="Miguel" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Ambrocio Solares</title>
+ <partNumber>4:12-cr-03106</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:12-cr-03106;12-3106</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jose Miguel Ambrocio Solares</displayForm>
+ <namePart type="family">Ambrocio Solares</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_12-cr-03106</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:12-cr-03106</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jose" fullName="Jose Miguel Ambrocio Solares" lastName="Ambrocio Solares" middleName="Miguel" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Jose Miguel Ambrocio Solares. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568ed06</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-0</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-16</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Jose Miguel Ambrocio Solares. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>ORDER of Detention pending trial as to defendant Jose Miguel Ambrocio Solares. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568eca6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-1</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-16</dateIssued>
+  <docketText>ORDER of Detention pending trial as to defendant Jose Miguel Ambrocio Solares. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>ORDER granting 19 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing is reset for 2/6/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568eca8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-2</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER granting 19 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing is reset for 2/6/2013 02:30 PM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>ORDER granting 21 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing reset for 2/14/2013 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568eca7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-3</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-31</dateIssued>
+  <docketText>ORDER granting 21 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing reset for 2/14/2013 10:30 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>ORDER granting 23 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing set for 4/30/2013 11:00 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568ed05</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-4</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-02-12</dateIssued>
+  <docketText>ORDER granting 23 Oral Motion as to Jose Miguel Ambrocio Solares (1). Change of Plea Hearing set for 4/30/2013 11:00 AM in Courtroom 2, Robert V. Denney Federal Building, 100 Centennial Mall North, Lincoln, NE before Magistrate Judge Cheryl R. Zwart. Ordered by Magistrate Judge Cheryl R. Zwart. (DMS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_12-cr-03106-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Ambrocio Solares</title>
+  <subTitle>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Jose Miguel Ambrocio Solares. Ordered by Chief Judge Laurie Smith Camp. (JB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_12-cr-03106-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18568ed07</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-5</identifier>
+ <identifier type="former granule identifier">ned-4_12-cr-03106_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_12-cr-03106/USCOURTS-ned-4_12-cr-03106-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_12-cr-03106/pdf/USCOURTS-ned-4_12-cr-03106-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:12-cr-03106; USA v. Ambrocio Solares; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_12-cr-03106-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-07-15</dateIssued>
+  <docketText>TENTATIVE FINDINGS regarding the Revised Presentence Investigation Report as to Defendant Jose Miguel Ambrocio Solares. Ordered by Chief Judge Laurie Smith Camp. (JB)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,288 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f3aa9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851</identifier>
+<identifier type="local">P0b002ee1839f3aa9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_11-cv-14851</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cv-14851</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cv-14851</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Douglas" fullName="Douglas Benedict" lastName="Benedict" role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="J" fullName="J Drefke" lastName="Drefke" role="Defendant"></party>
+ <party firstName="D" fullName="D L Foster" lastName="Foster" middleName="L" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel H. Heyns" lastName="Heyns" middleName="H." role="Defendant"></party>
+ <party firstName="P." fullName="P. Klee" lastName="Klee" role="Defendant"></party>
+ <party firstName="J." fullName="J. Woodard" lastName="Woodard" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Benedict v. Heyns et al</title>
+ <partNumber>2:11-cv-14851</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-14851;11-14851</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Douglas Benedict</displayForm>
+ <namePart type="family">Benedict</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jane Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">Jane</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J Drefke</displayForm>
+ <namePart type="family">Drefke</namePart>
+ <namePart type="given">J</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D L Foster</displayForm>
+ <namePart type="family">Foster</namePart>
+ <namePart type="given">D</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel H. Heyns</displayForm>
+ <namePart type="family">Heyns</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>P. Klee</displayForm>
+ <namePart type="family">Klee</namePart>
+ <namePart type="given">P.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Woodard</displayForm>
+ <namePart type="family">Woodard</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_11-cv-14851</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:11-cv-14851</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="Douglas" fullName="Douglas Benedict" lastName="Benedict" role="Plaintiff"></party>
+ <party firstName="Jane" fullName="Jane Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe" lastName="Doe" role="Defendant"></party>
+ <party firstName="J" fullName="J Drefke" lastName="Drefke" role="Defendant"></party>
+ <party firstName="D" fullName="D L Foster" lastName="Foster" middleName="L" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel H. Heyns" lastName="Heyns" middleName="H." role="Defendant"></party>
+ <party firstName="P." fullName="P. Klee" lastName="Klee" role="Defendant"></party>
+ <party firstName="J." fullName="J. Woodard" lastName="Woodard" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-14851-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-0/mods.xml">
+ <titleInfo>
+  <title>Benedict v. Heyns et al</title>
+  <subTitle>ORDER granting 33 Motion to Stay Discovery - Signed by Magistrate Judge Mona K. Majzoub. (LBar)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-14851-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f70f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-0</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-14851_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851/pdf/USCOURTS-mied-2_11-cv-14851-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-14851; Benedict v. Heyns et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-14851-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>ORDER granting 33 Motion to Stay Discovery - Signed by Magistrate Judge Mona K. Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-14851-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-1/mods.xml">
+ <titleInfo>
+  <title>Benedict v. Heyns et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 29 MOTION for First Admission from Defendant and Notice of Change of Address, 26 MOTION Dismissal, 31 MOTION for Amended Copy of the Complaint and Exhibits, 20 MOTION for Order, 32 MOTION for Second Admission on Defendants, 38 MOTION Directing Warden Paul Klee to Direct His Staff to Make Photocopies of All Legal Pleadings, 34 MOTION, 25 MOTION for copy of remainder of documents, 27 MOTION for Order and 28 MOTION Pleading Special Matters - Signed by Magistrate Judge Mona K. Majzoub. (LBar)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-14851-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f70f3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-1</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-14851_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851/pdf/USCOURTS-mied-2_11-cv-14851-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-14851; Benedict v. Heyns et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-14851-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-10-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 29 MOTION for First Admission from Defendant and Notice of Change of Address, 26 MOTION Dismissal, 31 MOTION for Amended Copy of the Complaint and Exhibits, 20 MOTION for Order, 32 MOTION for Second Admission on Defendants, 38 MOTION Directing Warden Paul Klee to Direct His Staff to Make Photocopies of All Legal Pleadings, 34 MOTION, 25 MOTION for copy of remainder of documents, 27 MOTION for Order and 28 MOTION Pleading Special Matters - Signed by Magistrate Judge Mona K. Majzoub. (LBar)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-14851-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-2/mods.xml">
+ <titleInfo>
+  <title>Benedict v. Heyns et al</title>
+  <subTitle>OPINION AND ORDER granting 26 Motion TO DISMISS ; adopting 40 Report and Recommendation. Signed by District Judge Patrick J. Duggan. (MOre)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-14851-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f70f4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-2</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-14851_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851/pdf/USCOURTS-mied-2_11-cv-14851-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-14851; Benedict v. Heyns et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-14851-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>OPINION AND ORDER granting 26 Motion TO DISMISS ; adopting 40 Report and Recommendation. Signed by District Judge Patrick J. Duggan. (MOre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_11-cv-14851-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-3/mods.xml">
+ <titleInfo>
+  <title>Benedict v. Heyns et al</title>
+  <subTitle>JUDGMENT in favor of Defendants against Plaintiff Signed by District Judge Patrick J. Duggan. (MOre)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_11-cv-14851-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f70f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-3</identifier>
+ <identifier type="former granule identifier">mied-2_11-cv-14851_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_11-cv-14851/USCOURTS-mied-2_11-cv-14851-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_11-cv-14851/pdf/USCOURTS-mied-2_11-cv-14851-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-14851; Benedict v. Heyns et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_11-cv-14851-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>JUDGMENT in favor of Defendants against Plaintiff Signed by District Judge Patrick J. Duggan. (MOre)</docketText>
+</extension>
+</relatedItem>
+</mods>

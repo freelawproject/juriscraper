@@ -1,0 +1,486 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18e2a99a8">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-12-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-12-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064</identifier>
+<identifier type="local">P0b002ee18e2a99a8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-12-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-12-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_10-cv-01064</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01064</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01064</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="CDC Custody Committe" lastName="CDC Custody Committe" role="Defendant"></party>
+ <party fullName="California Dept. of Corrections" lastName="California Dept. of Corrections" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Hernandez" lastName="Hernandez" role="Plaintiff"></party>
+ <party fullName="IDT Mental Health Committee" lastName="IDT Mental Health Committee" role="Defendant"></party>
+ <party fullName="Legal Law Librarian" lastName="Legal Law Librarian" role="Defendant"></party>
+ <party fullName="Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="M." fullName="M. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="James" fullName="James Yates" lastName="Yates" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Hernandez v. Yates et al</title>
+ <partNumber>1:10-cv-01064</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01064;10-1064</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CDC Custody Committe</displayForm>
+ <namePart type="family">CDC Custody Committe</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>California Dept. of Corrections</displayForm>
+ <namePart type="family">California Dept. of Corrections</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tony Hernandez</displayForm>
+ <namePart type="family">Hernandez</namePart>
+ <namePart type="given">Tony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>IDT Mental Health Committee</displayForm>
+ <namePart type="family">IDT Mental Health Committee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Legal Law Librarian</displayForm>
+ <namePart type="family">Legal Law Librarian</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Martinez</displayForm>
+ <namePart type="family">Martinez</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Yates</displayForm>
+ <namePart type="family">Yates</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01064</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01064</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="CDC Custody Committe" lastName="CDC Custody Committe" role="Defendant"></party>
+ <party fullName="California Dept. of Corrections" lastName="California Dept. of Corrections" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Hernandez" lastName="Hernandez" role="Plaintiff"></party>
+ <party fullName="IDT Mental Health Committee" lastName="IDT Mental Health Committee" role="Defendant"></party>
+ <party fullName="Legal Law Librarian" lastName="Legal Law Librarian" role="Defendant"></party>
+ <party fullName="Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="M." fullName="M. Martinez" lastName="Martinez" role="Defendant"></party>
+ <party firstName="James" fullName="James Yates" lastName="Yates" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-0" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER denying 9 Motion to enter evidence signed by Magistrate Judge Dennis L. Beck on 7/2/2010. (Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-07-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4cad</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-0</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-07-06</dateIssued>
+  <docketText>ORDER denying 9 Motion to enter evidence signed by Magistrate Judge Dennis L. Beck on 7/2/2010. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-1" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>FINDINGS and RECOMMENDATION Recommending Dismissal of Certain Claims and Defendants from Action for Failure to State a Cognizable Claim for Relief 22, signed by Magistrate Judge Stanley A. Boone on 12/20/13. Referred to Judge O&apos;Neill; 14-Day Deadline. (Verduzco, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4cab</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-1</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-12-20</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATION Recommending Dismissal of Certain Claims and Defendants from Action for Failure to State a Cognizable Claim for Relief 22, signed by Magistrate Judge Stanley A. Boone on 12/20/13. Referred to Judge O&apos;Neill; 14-Day Deadline. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-2" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER ADOPTING 23 FINDINGS AND RECOMMENDATIONS, Dismissing Certain Claims and Defendants from Action signed by District Judge Lawrence J. O&apos;Neill on 01/21/2014. M. Martinez Terminated from Action. (Flores, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4c8e</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-2</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-22</dateIssued>
+  <docketText>ORDER ADOPTING 23 FINDINGS AND RECOMMENDATIONS, Dismissing Certain Claims and Defendants from Action signed by District Judge Lawrence J. O&apos;Neill on 01/21/2014. M. Martinez Terminated from Action. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-3" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Regarding Defendant&apos;s Motion for Judgment on the Pleadings re 32, 34 &amp; 41, signed by Magistrate Judge Stanley A. Boone on 11/12/14, referred to Judge O&apos;Neill. Objections to F&amp;R Due Within Thirty Days.(Marrujo, C)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-11-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4c8c</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-3</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-11-12</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Regarding Defendant&apos;s Motion for Judgment on the Pleadings re 32, 34 &amp; 41, signed by Magistrate Judge Stanley A. Boone on 11/12/14, referred to Judge O&apos;Neill. Objections to F&amp;R Due Within Thirty Days.(Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-4" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER ADOPTING 42 Findings and Recommendations, DENYING Defendants; Motion to Strike Surreply, DENYING Motion for Judgment on the Pleadings, DENYING Motion for Severance, and DIRECTING Defendants to File Further Response to Complaint Within Thirty Days, signed by District Judge Lawrence J. O&apos;Neill on 12/31/2014. (Marrujo, C)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4c8d</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-4</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER ADOPTING 42 Findings and Recommendations, DENYING Defendants; Motion to Strike Surreply, DENYING Motion for Judgment on the Pleadings, DENYING Motion for Severance, and DIRECTING Defendants to File Further Response to Complaint Within Thirty Days, signed by District Judge Lawrence J. O&apos;Neill on 12/31/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-5" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER Denying As Premature Plaintiff&apos;s Motion To Expedite Trial Setting Procedures And Directing Clerk Of Court To Send Plaintiff The Order Re Consent Or Request For Reassignment Form (ECF No.48), signed by Magistrate Judge Stanley A. Boone on 5/8/2015. (Fahrney, E)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4caf</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-5</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-05-08</dateIssued>
+  <docketText>ORDER Denying As Premature Plaintiff&apos;s Motion To Expedite Trial Setting Procedures And Directing Clerk Of Court To Send Plaintiff The Order Re Consent Or Request For Reassignment Form (ECF No.48), signed by Magistrate Judge Stanley A. Boone on 5/8/2015. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-6" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER Granting 54 Defendants&apos; Request to Stay Obligation to Oppose Plaintiff&apos;s Motion for Summary Judgment, signed by Magistrate Judge Stanley A. Boone on 5/14/15. (Gonzalez, R)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4ca9</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-6</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2015-05-14</dateIssued>
+  <docketText>ORDER Granting 54 Defendants&apos; Request to Stay Obligation to Oppose Plaintiff&apos;s Motion for Summary Judgment, signed by Magistrate Judge Stanley A. Boone on 5/14/15. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-7" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>FINDINGS And RECOMMENDATIONS Regarding Defendant&apos;s Motion For Summary Judgment Relating To Exhaustion Of The Administrative Remedies (ECF No.50), signed by Magistrate Judge Stanley A. Boone on 9/4/2015. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 10/8/2015.(Fahrney, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4cae</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-7</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-09-04</dateIssued>
+  <docketText>FINDINGS And RECOMMENDATIONS Regarding Defendant&apos;s Motion For Summary Judgment Relating To Exhaustion Of The Administrative Remedies (ECF No.50), signed by Magistrate Judge Stanley A. Boone on 9/4/2015. F&amp;R&apos;s referred to Judge Lawrence J. O&apos;Neill; Objections to F&amp;R due by 10/8/2015.(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-8" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER Adopting Findings And Recommendations, Granting Summary Judgment In Favor Of Defendant On Plaintiff&apos;s March 12, 2010 Claim Of Excessive Force (ECF Nos.50,58), signed by District Judge Lawrence J. O&apos;Neill on 10/22/2015. IT IS HEREBY ORDERED that: The Findings and Recommendations, filed on September 4, 2015, is adopted in full. Defendants motion for summary judgment is GRANTED, judgment shall be entered in favor of Defendant on Plaintiffs excessive force claim arising on March 12, 2010, and this action shall proceed on Plaintiffs separate claim of excessive force arising on May 3, 2011. Within thirty (30) days from the date of service of this order, Defendants shall file a response to Plaintiffs pending motion for summary judgment, filed April 22, 2015 (ECF No. 49.)(Fahrney, E)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-10-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4caa</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-8</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2015-10-22</dateIssued>
+  <docketText>ORDER Adopting Findings And Recommendations, Granting Summary Judgment In Favor Of Defendant On Plaintiff&apos;s March 12, 2010 Claim Of Excessive Force (ECF Nos.50,58), signed by District Judge Lawrence J. O&apos;Neill on 10/22/2015. IT IS HEREBY ORDERED that: The Findings and Recommendations, filed on September 4, 2015, is adopted in full. Defendants motion for summary judgment is GRANTED, judgment shall be entered in favor of Defendant on Plaintiffs excessive force claim arising on March 12, 2010, and this action shall proceed on Plaintiffs separate claim of excessive force arising on May 3, 2011. Within thirty (30) days from the date of service of this order, Defendants shall file a response to Plaintiffs pending motion for summary judgment, filed April 22, 2015 (ECF No. 49.)(Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-9" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Plaintiff&apos;s 49 Motion for Summary Judgment be Denied, signed by Magistrate Judge Stanley A. Boone on 12/4/15. Referred to Judge O&apos;Neill. Objections to F&amp;R Due Within Thirty Days. (Gonzalez, R)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4ca8</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-9</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2015-12-04</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Plaintiff&apos;s 49 Motion for Summary Judgment be Denied, signed by Magistrate Judge Stanley A. Boone on 12/4/15. Referred to Judge O&apos;Neill. Objections to F&amp;R Due Within Thirty Days. (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01064-10" xlink:href="https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Hernandez v. Yates et al</title>
+  <subTitle>ORDER GRANTING Defendant&apos;s 63 Motion to Extend the Dispositive Motion Deadline, signed by Magistrate Judge Stanley A. Boone on 12/18/2015. (Deadline : 01/14/2016) (Martin-Gill, S)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-12-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18e2c4cac</identifier>
+</relatedItem>
+ <identifier type="uri">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-10</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01064_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">https://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01064/USCOURTS-caed-1_10-cv-01064-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">https://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01064/pdf/USCOURTS-caed-1_10-cv-01064-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01064; (PC) Hernandez v. Yates et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01064-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2015-12-18</dateIssued>
+  <docketText>ORDER GRANTING Defendant&apos;s 63 Motion to Extend the Dispositive Motion Deadline, signed by Magistrate Judge Stanley A. Boone on 12/18/2015. (Deadline : 01/14/2016) (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+</mods>

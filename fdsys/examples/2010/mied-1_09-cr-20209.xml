@@ -1,0 +1,248 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18195e752">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-19</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209</identifier>
+<identifier type="local">P0b002ee18195e752</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-19</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-1_09-cr-20209</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_09-cr-20209</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:09-cr-20209</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Skeebo" lastName="Skeebo" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Leo" fullName="Leo Wade" lastName="Wade" role="Defendant"></party>
+ <party firstName="Donovan" fullName="Donovan Lamont Woods" lastName="Woods" middleName="Lamont" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Woods et al</title>
+ <partNumber>1:09-cr-20209</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:09-cr-20209;09-20209</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Bay City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Skeebo</displayForm>
+ <namePart type="family">Skeebo</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Leo Wade</displayForm>
+ <namePart type="family">Wade</namePart>
+ <namePart type="given">Leo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donovan Lamont Woods</displayForm>
+ <namePart type="family">Woods</namePart>
+ <namePart type="given">Donovan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-1_09-cr-20209</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>1:09-cr-20209</caseNumber>
+ <caseOffice>Bay City</caseOffice>
+ <caseType>criminal</caseType>
+ <party fullName="Skeebo" lastName="Skeebo" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Leo" fullName="Leo Wade" lastName="Wade" role="Defendant"></party>
+ <party firstName="Donovan" fullName="Donovan Lamont Woods" lastName="Woods" middleName="Lamont" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_09-cr-20209-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Woods et al</title>
+  <subTitle>ORDER OF DETENTION PENDING TRIAL as to Donovan Lamont Woods. Signed by Magistrate Judge Charles E Binder. (JBro)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_09-cr-20209-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7a94c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-0</identifier>
+ <identifier type="former granule identifier">mied-1_09-cr-20209_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209/pdf/USCOURTS-mied-1_09-cr-20209-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-20209; United States of America v. Woods et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_09-cr-20209-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-05</dateIssued>
+  <docketText>ORDER OF DETENTION PENDING TRIAL as to Donovan Lamont Woods. Signed by Magistrate Judge Charles E Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_09-cr-20209-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Woods et al</title>
+  <subTitle>ORDER OF DETENTION PENDING TRIAL as to Leo Wade. Signed by Magistrate Judge Charles E Binder. (JBro)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_09-cr-20209-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7a94b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-1</identifier>
+ <identifier type="former granule identifier">mied-1_09-cr-20209_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209/pdf/USCOURTS-mied-1_09-cr-20209-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-20209; United States of America v. Woods et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_09-cr-20209-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-06-05</dateIssued>
+  <docketText>ORDER OF DETENTION PENDING TRIAL as to Leo Wade. Signed by Magistrate Judge Charles E Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_09-cr-20209-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Woods et al</title>
+  <subTitle>REPORT AND RECOMMENDATION on Plea of Guilty as to Leo Wade. Signed by Magistrate Judge Charles E Binder. (JBro)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_09-cr-20209-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7a9ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-2</identifier>
+ <identifier type="former granule identifier">mied-1_09-cr-20209_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209/pdf/USCOURTS-mied-1_09-cr-20209-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-20209; United States of America v. Woods et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_09-cr-20209-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-18</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION on Plea of Guilty as to Leo Wade. Signed by Magistrate Judge Charles E Binder. (JBro)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-1_09-cr-20209-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Woods et al</title>
+  <subTitle>ORDER ADOPTING REPORT AND RECOMMENDATION as to Leo Wade for 33 Report and Recommendations on Guilty Plea Signed by District Judge Thomas L Ludington. (DEld)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-1_09-cr-20209-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a7a94d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-3</identifier>
+ <identifier type="former granule identifier">mied-1_09-cr-20209_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-1_09-cr-20209/USCOURTS-mied-1_09-cr-20209-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-1_09-cr-20209/pdf/USCOURTS-mied-1_09-cr-20209-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:09-cr-20209; United States of America v. Woods et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-1_09-cr-20209-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>ORDER ADOPTING REPORT AND RECOMMENDATION as to Leo Wade for 33 Report and Recommendations on Guilty Plea Signed by District Judge Thomas L Ludington. (DEld)</docketText>
+</extension>
+</relatedItem>
+</mods>

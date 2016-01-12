@@ -1,0 +1,273 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817af928">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-10</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009</identifier>
+<identifier type="local">P0b002ee1817af928</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_05-cv-03009</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03009</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03009</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>690</natureSuitCode>
+ <natureSuit>Other Forfeiture and Penalty Suits</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="Collection Associates" lastName="Collection Associates" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Albert" fullName="Albert L. Zook" lastName="Zook" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Zook et al</title>
+ <partNumber>4:05-cv-03009</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:05-cv-03009;05-3009</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Collection Associates</displayForm>
+ <namePart type="family">Collection Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Albert L. Zook</displayForm>
+ <namePart type="family">Zook</namePart>
+ <namePart type="given">Albert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_05-cv-03009</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:05-cv-03009</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>690</natureSuitCode>
+ <natureSuit>Other Forfeiture and Penalty Suits</natureSuit>
+ <cause>28:1345 Foreclosure</cause>
+ <party fullName="Collection Associates" lastName="Collection Associates" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party firstName="Albert" fullName="Albert L. Zook" lastName="Zook" middleName="L." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03009-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Zook et al</title>
+  <subTitle>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE- Plaintiff&apos;s Motion for Default Judgment 8 is granted; Judgment is entered against defendants Albert L. Zook and Collection Associates, a Registered Nebraska Trade name of The Collection Agency, LLC and in favor of the United States of America; the plaintiff shall apply for and the Clerk of the Court shall issue an Order of Sale; the US Marshal shall advertise and sell, according to law. Signed by Judge Laurie Smith Camp on 5/9/2005. 1 cert to USM(MKR, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03009-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818954f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-0</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03009_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/pdf/USCOURTS-ned-4_05-cv-03009-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03009; United States of America v. Zook et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03009-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-09</dateIssued>
+  <docketText>JUDGMENT AND DECREE OF FORECLOSURE AND ORDER OF SALE- Plaintiff&apos;s Motion for Default Judgment 8 is granted; Judgment is entered against defendants Albert L. Zook and Collection Associates, a Registered Nebraska Trade name of The Collection Agency, LLC and in favor of the United States of America; the plaintiff shall apply for and the Clerk of the Court shall issue an Order of Sale; the US Marshal shall advertise and sell, according to law. Signed by Judge Laurie Smith Camp on 5/9/2005. 1 cert to USM(MKR, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03009-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Zook et al</title>
+  <subTitle>ORDER the MOTION for Distribution of Sale Proceeds 20 filed by United States of America is granted; In Court Hearing set for 12/2/2005 at 01:00 PM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. The Clerk is directed to distribute the remaining sale balance of $24,300.72 as directed; Signed by Judge Laurie Smith Camp on 11/3/2005. Copy to financial division.(ETC)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03009-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818954f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-1</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03009_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/pdf/USCOURTS-ned-4_05-cv-03009-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03009; United States of America v. Zook et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03009-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-11-03</dateIssued>
+  <docketText>ORDER the MOTION for Distribution of Sale Proceeds 20 filed by United States of America is granted; In Court Hearing set for 12/2/2005 at 01:00 PM in Courtroom 2 (Omaha) before Judge Laurie Smith Camp. The Clerk is directed to distribute the remaining sale balance of $24,300.72 as directed; Signed by Judge Laurie Smith Camp on 11/3/2005. Copy to financial division.(ETC)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03009-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-2/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Zook et al</title>
+  <subTitle>ORDER that plaintiff shall serve a copy of this order and a copyof the 11/3/05 Order upon Defendant Albert Zook and upon Defendant Collection Associates at their last known addresses, and Plaintiff shall file a certificate of service regarding same. Defendants Albert Zook and Collection Associates are ordered to appear before the undersigned on 12/2/05 at 1:00 p.m., and beprepared to offer evidence concerning their right, if any, to the remainingproceeds of the sale. Signed by Judge Laurie Smith Camp on 11/16/2005. (JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-11-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03009-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818954fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-2</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03009_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/pdf/USCOURTS-ned-4_05-cv-03009-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03009; United States of America v. Zook et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03009-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-11-16</dateIssued>
+  <docketText>ORDER that plaintiff shall serve a copy of this order and a copyof the 11/3/05 Order upon Defendant Albert Zook and upon Defendant Collection Associates at their last known addresses, and Plaintiff shall file a certificate of service regarding same. Defendants Albert Zook and Collection Associates are ordered to appear before the undersigned on 12/2/05 at 1:00 p.m., and beprepared to offer evidence concerning their right, if any, to the remainingproceeds of the sale. Signed by Judge Laurie Smith Camp on 11/16/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03009-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-3/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Zook et al</title>
+  <subTitle>ORDER that by 12/29/05, any person claiming an interest in the proceeds from the sale of the property that is the subject of this action shall file a Notice of claim with this Court. In the event no Notice of Claim is filed and without further notice, the remaining proceeds shall be distributed to Albert L. Zook. Signed by Judge Laurie Smith Camp on 12/19/2005. Copies mailed to Albert Zook and Collection Associates.(JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03009-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818954f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-3</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03009_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/pdf/USCOURTS-ned-4_05-cv-03009-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03009; United States of America v. Zook et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03009-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-19</dateIssued>
+  <docketText>ORDER that by 12/29/05, any person claiming an interest in the proceeds from the sale of the property that is the subject of this action shall file a Notice of claim with this Court. In the event no Notice of Claim is filed and without further notice, the remaining proceeds shall be distributed to Albert L. Zook. Signed by Judge Laurie Smith Camp on 12/19/2005. Copies mailed to Albert Zook and Collection Associates.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_05-cv-03009-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-4/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Zook et al</title>
+  <subTitle>ORDER that the Clerk of the Court is hereby directed to issue a check made payable to Albert L. Zook in the amount of $6,300.04, representing the balance on the account in this matter and to mail it Albert L. Zook at his last known address. Signed by Judge Laurie Smith Camp on 1/10/2006. Copy to Financial.(JSF)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_05-cv-03009-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818954f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-4</identifier>
+ <identifier type="former granule identifier">ned-4_05-cv-03009_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_05-cv-03009/USCOURTS-ned-4_05-cv-03009-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_05-cv-03009/pdf/USCOURTS-ned-4_05-cv-03009-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:05-cv-03009; United States of America v. Zook et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_05-cv-03009-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-10</dateIssued>
+  <docketText>ORDER that the Clerk of the Court is hereby directed to issue a check made payable to Albert L. Zook in the amount of $6,300.04, representing the balance on the account in this matter and to mail it Albert L. Zook at his last known address. Signed by Judge Laurie Smith Camp on 1/10/2006. Copy to Financial.(JSF)</docketText>
+</extension>
+</relatedItem>
+</mods>

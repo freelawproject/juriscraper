@@ -1,0 +1,146 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18761f30e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-02-24</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-B_06-mj-09067</identifier>
+<identifier type="local">P0b002ee18761f30e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-02-24</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-02-24</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-B_06-mj-09067</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-B_06-mj-09067</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>B:06-mj-09067</caseNumber>
+ <caseOffice>Fort Riley</caseOffice>
+ <caseType></caseType>
+ <party firstName="Christy" fullName="Christy N. Saunier" lastName="Saunier" middleName="N." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Saunier</title>
+ <partNumber>B:06-mj-09067</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-B_06-mj-09067/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">B:06-mj-09067;06-9067</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Fort Riley</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Christy N. Saunier</displayForm>
+ <namePart type="family">Saunier</namePart>
+ <namePart type="given">Christy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-B_06-mj-09067</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>B:06-mj-09067</caseNumber>
+ <caseOffice>Fort Riley</caseOffice>
+ <caseType></caseType>
+ <party firstName="Christy" fullName="Christy N. Saunier" lastName="Saunier" middleName="N." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-B_06-mj-09067-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-B_06-mj-09067/USCOURTS-ksd-B_06-mj-09067-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Saunier</title>
+  <subTitle>MEMORANDUM &amp; ORDER as to Christy N Saunier. Defendant is found not guilty of the charges set out in the Information in this case. Signed by Magistrate Judge Donald W. Bostwick on 12/18/07. (bs)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-B_06-mj-09067/pdf/USCOURTS-ksd-B_06-mj-09067-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18764c781</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-B_06-mj-09067/USCOURTS-ksd-B_06-mj-09067-0</identifier>
+ <identifier type="former granule identifier">ksd-B_06-mj-09067_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-B_06-mj-09067/USCOURTS-ksd-B_06-mj-09067-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-B_06-mj-09067/pdf/USCOURTS-ksd-B_06-mj-09067-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS B:06-mj-09067; USA v. Saunier; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-B_06-mj-09067-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-07</dateIssued>
+  <docketText>MEMORANDUM &amp; ORDER as to Christy N Saunier. Defendant is found not guilty of the charges set out in the Information in this case. Signed by Magistrate Judge Donald W. Bostwick on 12/18/07. (bs)</docketText>
+</extension>
+</relatedItem>
+</mods>

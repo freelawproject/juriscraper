@@ -1,0 +1,161 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aac0a">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Western District of Pennsylvania</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-01524</identifier>
+<identifier type="local">P0b002ee18a8aac0a</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-pawd-2_14-cv-01524</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pawd-2_14-cv-01524</accessId>
+ <courtType>District</courtType>
+ <courtCode>pawd</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2424</courtSortOrder>
+ <caseNumber>2:14-cv-01524</caseNumber>
+ <caseOffice>Pittsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="DONALD" fullName="DONALD J. HINKLE" lastName="HINKLE" middleName="J." role="Plaintiff"></party>
+ <party fullName="PACESETTER, INC." lastName="PACESETTER, INC." role="Defendant"></party>
+ <party fullName="ST. JUDE MEDICAL, INC." lastName="ST. JUDE MEDICAL, INC." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>HINKLE v. ST. JUDE MEDICAL, INC. et al</title>
+ <partNumber>2:14-cv-01524</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-01524/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:14-cv-01524;14-1524</identifier>
+<name type="corporate">
+ <namePart>United States District Court Western District of Pennsylvania</namePart>
+ <namePart>3rd Circuit</namePart>
+ <namePart>Pittsburgh</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>DONALD J. HINKLE</displayForm>
+ <namePart type="family">HINKLE</namePart>
+ <namePart type="given">DONALD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>PACESETTER, INC.</displayForm>
+ <namePart type="family">PACESETTER, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>ST. JUDE MEDICAL, INC.</displayForm>
+ <namePart type="family">ST. JUDE MEDICAL, INC.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-pawd-2_14-cv-01524</accessId>
+ <courtType>District</courtType>
+ <courtCode>pawd</courtCode>
+ <courtCircuit>3rd</courtCircuit>
+ <courtState>Pennsylvania</courtState>
+ <courtSortOrder>2424</courtSortOrder>
+ <caseNumber>2:14-cv-01524</caseNumber>
+ <caseOffice>Pittsburgh</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>365</natureSuitCode>
+ <natureSuit>Personal Injury - Product Liability</natureSuit>
+ <cause>28:1332 Diversity-Personal Injury</cause>
+ <party firstName="DONALD" fullName="DONALD J. HINKLE" lastName="HINKLE" middleName="J." role="Plaintiff"></party>
+ <party fullName="PACESETTER, INC." lastName="PACESETTER, INC." role="Defendant"></party>
+ <party fullName="ST. JUDE MEDICAL, INC." lastName="ST. JUDE MEDICAL, INC." role="Defendant"></party>
+ <state>Pennsylvania</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-pawd-2_14-cv-01524-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-01524/USCOURTS-pawd-2_14-cv-01524-0/mods.xml">
+ <titleInfo>
+  <title>HINKLE v. ST. JUDE MEDICAL, INC. et al</title>
+  <subTitle>ORDER. The parties&apos; Joint Motion (Doc. 2) to stay is GRANTED, and this case hereby is STAYED. The Court and parties expect the duration of the stay to be 90 days. For the duration of the stay, this case is and shall remain administratively closed. Administrative closings comprise a familiar way in which courts remove cases from their active files without final adjudication. Administrative closure is a docket control device used by the Court for statistical purposes, and it does not prejudice the rights of the parties in any manner. Within 30 days after the expiration of the 90-day stay period, if the case has not resolved, Plaintiff shall file a motion to lift the stay and restore the case to the Court&apos;s active docket. If the case does resolve, the parties promptly shall notify Chambers by telephone (412.208.7460) and be prepared to file, within a reasonable time, a stipulation of dismissal. Signed by Judge Cathy Bissoon on 1/5/15. (dcd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-01524/pdf/USCOURTS-pawd-2_14-cv-01524-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b3546</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-01524/USCOURTS-pawd-2_14-cv-01524-0</identifier>
+ <identifier type="former granule identifier">pawd-2_14-cv-01524_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-pawd-2_14-cv-01524/USCOURTS-pawd-2_14-cv-01524-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-pawd-2_14-cv-01524/pdf/USCOURTS-pawd-2_14-cv-01524-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:14-cv-01524; HINKLE v. ST. JUDE MEDICAL, INC. et al; </searchTitle>
+  <courtName>United States District Court Western District of Pennsylvania</courtName>
+  <state>Pennsylvania</state>
+  <accessId>USCOURTS-pawd-2_14-cv-01524-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER. The parties&apos; Joint Motion (Doc. 2) to stay is GRANTED, and this case hereby is STAYED. The Court and parties expect the duration of the stay to be 90 days. For the duration of the stay, this case is and shall remain administratively closed. Administrative closings comprise a familiar way in which courts remove cases from their active files without final adjudication. Administrative closure is a docket control device used by the Court for statistical purposes, and it does not prejudice the rights of the parties in any manner. Within 30 days after the expiration of the 90-day stay period, if the case has not resolved, Plaintiff shall file a motion to lift the stay and restore the case to the Court&apos;s active docket. If the case does resolve, the parties promptly shall notify Chambers by telephone (412.208.7460) and be prepared to file, within a reasonable time, a stipulation of dismissal. Signed by Judge Cathy Bissoon on 1/5/15. (dcd)</docketText>
+</extension>
+</relatedItem>
+</mods>

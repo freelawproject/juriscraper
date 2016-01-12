@@ -1,0 +1,165 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8aae02">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223</identifier>
+<identifier type="local">P0b002ee18a8aae02</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca7-14-02223</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-14-02223</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>14-02223</caseNumber>
+ <party firstName="Jesse" fullName="Jesse A. Smith" lastName="Smith" middleName="A." role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Jesse Smith</title>
+ <partNumber>14-02223</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">14-02223;14-2223</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Seventh Circuit</namePart>
+ <namePart>7th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jesse A. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Jesse</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca7-14-02223</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca7</courtCode>
+ <courtCircuit>7th</courtCircuit>
+ <courtSortOrder>1070</courtSortOrder>
+ <caseNumber>14-02223</caseNumber>
+ <party firstName="Jesse" fullName="Jesse A. Smith" lastName="Smith" middleName="A." role="Appellant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Appellee"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca7-14-02223-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Jesse Smith</title>
+  <subTitle>Filed opinion of the court by Judge Posner. We can correct a clear violation of section 455(b)(3) on appeal even if the defendant failed to invoke the statute in the district court. The present record is inadequate to enable us to determine whether there was such a violation. We have therefore decided to suspend our decision of the appeal pending receipt from the parties of supplemental briefs addressing the applicability of section 455(b)(3) to Judge Darrow???s participation in this litigation. We ask that the briefs be submitted within 30 days of the date of this opinion. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and John Daniel Tinder, Circuit Judge. [6615857-1] [6615857] [14-2223]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-10-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223/pdf/USCOURTS-ca7-14-02223-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b354f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-0</identifier>
+ <identifier type="former granule identifier">ca7-14-02223_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223/pdf/USCOURTS-ca7-14-02223-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-02223; USA v. Jesse Smith; </searchTitle>
+  <courtName>United States Court of Appeals for the Seventh Circuit</courtName>
+  <accessId>USCOURTS-ca7-14-02223-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-10-27</dateIssued>
+  <docketText>Filed opinion of the court by Judge Posner. We can correct a clear violation of section 455(b)(3) on appeal even if the defendant failed to invoke the statute in the district court. The present record is inadequate to enable us to determine whether there was such a violation. We have therefore decided to suspend our decision of the appeal pending receipt from the parties of supplemental briefs addressing the applicability of section 455(b)(3) to Judge Darrow???s participation in this litigation. We ask that the briefs be submitted within 30 days of the date of this opinion. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and John Daniel Tinder, Circuit Judge. [6615857-1] [6615857] [14-2223]</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ca7-14-02223-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Jesse Smith</title>
+  <subTitle>Filed opinion of the court by Judge Posner. The district court judgment is VACATED and the case is REMANDED for a do over of the sentencing proceeding before a different district judge. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and John Daniel Tinder, Circuit Judge. [6631792-1] [6631792] [14-2223]</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223/pdf/USCOURTS-ca7-14-02223-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b354e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-1</identifier>
+ <identifier type="former granule identifier">ca7-14-02223_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca7-14-02223/USCOURTS-ca7-14-02223-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca7-14-02223/pdf/USCOURTS-ca7-14-02223-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 14-02223; USA v. Jesse Smith; </searchTitle>
+  <courtName>United States Court of Appeals for the Seventh Circuit</courtName>
+  <accessId>USCOURTS-ca7-14-02223-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>Filed opinion of the court by Judge Posner. The district court judgment is VACATED and the case is REMANDED for a do over of the sentencing proceeding before a different district judge. Richard A. Posner, Circuit Judge; Ilana Diamond Rovner, Circuit Judge and John Daniel Tinder, Circuit Judge. [6631792-1] [6631792] [14-2223]</docketText>
+</extension>
+</relatedItem>
+</mods>

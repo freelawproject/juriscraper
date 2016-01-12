@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f348e">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cv-00145</identifier>
+<identifier type="local">P0b002ee1839f348e</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_11-cv-00145</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_11-cv-00145</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:11-cv-00145</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="CHARLES" fullName="CHARLES B GRADDY" lastName="GRADDY" middleName="B" role="Plaintiff"></party>
+ <party firstName="Shirley" fullName="Shirley Lewis" lastName="Lewis" role="Defendant"></party>
+ <party fullName="Southern Health Partners Inc" lastName="Southern Health Partners Inc" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>GRADDY v. Southern Health Partners Inc et al</title>
+ <partNumber>7:11-cv-00145</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cv-00145/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:11-cv-00145;11-145</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CHARLES B GRADDY</displayForm>
+ <namePart type="family">GRADDY</namePart>
+ <namePart type="given">CHARLES</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Shirley Lewis</displayForm>
+ <namePart type="family">Lewis</namePart>
+ <namePart type="given">Shirley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Southern Health Partners Inc</displayForm>
+ <namePart type="family">Southern Health Partners Inc</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_11-cv-00145</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:11-cv-00145</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>555</natureSuitCode>
+ <natureSuit>Prisoner - Prison Condition</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="CHARLES" fullName="CHARLES B GRADDY" lastName="GRADDY" middleName="B" role="Plaintiff"></party>
+ <party firstName="Shirley" fullName="Shirley Lewis" lastName="Lewis" role="Defendant"></party>
+ <party fullName="Southern Health Partners Inc" lastName="Southern Health Partners Inc" role="Defendant"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_11-cv-00145-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-0/mods.xml">
+ <titleInfo>
+  <title>GRADDY v. Southern Health Partners Inc et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 21 MOTION for Summary Judgment filed by Southern Health Partners Inc, Shirley Lewis. Ordered by US Mag Judge Thomas Q Langstaff on 11/28/2012. (llf)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_11-cv-00145-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f85f2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-0</identifier>
+ <identifier type="former granule identifier">gamd-7_11-cv-00145_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cv-00145/pdf/USCOURTS-gamd-7_11-cv-00145-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:11-cv-00145; GRADDY v. Southern Health Partners Inc et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_11-cv-00145-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 21 MOTION for Summary Judgment filed by Southern Health Partners Inc, Shirley Lewis. Ordered by US Mag Judge Thomas Q Langstaff on 11/28/2012. (llf)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_11-cv-00145-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-1/mods.xml">
+ <titleInfo>
+  <title>GRADDY v. Southern Health Partners Inc et al</title>
+  <subTitle>ORDER adopting Report and Recommendations re 34 Report and Recommendations; granting 21 Motion for Summary Judgment. Ordered by Judge Hugh Lawson on 1/2/2013. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_11-cv-00145-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f85f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-1</identifier>
+ <identifier type="former granule identifier">gamd-7_11-cv-00145_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_11-cv-00145/USCOURTS-gamd-7_11-cv-00145-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_11-cv-00145/pdf/USCOURTS-gamd-7_11-cv-00145-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:11-cv-00145; GRADDY v. Southern Health Partners Inc et al; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_11-cv-00145-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 34 Report and Recommendations; granting 21 Motion for Summary Judgment. Ordered by Judge Hugh Lawson on 1/2/2013. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

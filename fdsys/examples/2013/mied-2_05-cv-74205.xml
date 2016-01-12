@@ -1,0 +1,187 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1839f3ae4">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74205</identifier>
+<identifier type="local">P0b002ee1839f3ae4</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_05-cv-74205</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74205</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74205</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <party firstName="John" fullName="John Presley" lastName="Presley" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636" lastName="Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636</title>
+ <partNumber>2:05-cv-74205</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74205/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-74205;05-74205</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>John Presley</displayForm>
+ <namePart type="family">Presley</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Claimant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636</displayForm>
+ <namePart type="family">Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_05-cv-74205</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:05-cv-74205</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>625</natureSuitCode>
+ <natureSuit>Drug Related Seizure of Property</natureSuit>
+ <party firstName="John" fullName="John Presley" lastName="Presley" role="Claimant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <party fullName="Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636" lastName="Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636" role="Defendant"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-74205-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636</title>
+  <subTitle>OPINION AND ORDER granting 38 Motion to Dismiss. Signed by District Judge Patrick J. Duggan. (MOre)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-74205-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f7055</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-0</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-74205_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74205/pdf/USCOURTS-mied-2_05-cv-74205-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-74205; United States of America v. Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-74205-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-06-28</dateIssued>
+  <docketText>OPINION AND ORDER granting 38 Motion to Dismiss. Signed by District Judge Patrick J. Duggan. (MOre)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_05-cv-74205-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-1/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636</title>
+  <subTitle>OPINION AND ORDER denying re 47 MOTION for Reconsideration filed by John Presley. Signed by District Judge Patrick J. Duggan. (MOre)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_05-cv-74205-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1839f7056</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-1</identifier>
+ <identifier type="former granule identifier">mied-2_05-cv-74205_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_05-cv-74205/USCOURTS-mied-2_05-cv-74205-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_05-cv-74205/pdf/USCOURTS-mied-2_05-cv-74205-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-74205; United States of America v. Vehicle 2003 GMC Sierra 3500 Pickup Truck, VIN 1GTJK33113F208636; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_05-cv-74205-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>OPINION AND ORDER denying re 47 MOTION for Reconsideration filed by John Presley. Signed by District Judge Patrick J. Duggan. (MOre)</docketText>
+</extension>
+</relatedItem>
+</mods>

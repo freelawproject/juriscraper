@@ -1,0 +1,329 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183e3486f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-03-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-03-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737</identifier>
+<identifier type="local">P0b002ee183e3486f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-03-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-03-12</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_11-cv-01737</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01737</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01737</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Manuel" fullName="Manuel Chavez" lastName="Chavez" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Mims" lastName="Mims" role="Defendant"></party>
+ <party firstName="Jared" fullName="Jared M. Ward" lastName="Ward" middleName="M." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Ward v. Mims, et al.</title>
+ <partNumber>1:11-cv-01737</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-01737;11-1737</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Manuel Chavez</displayForm>
+ <namePart type="family">Chavez</namePart>
+ <namePart type="given">Manuel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Margaret Mims</displayForm>
+ <namePart type="family">Mims</namePart>
+ <namePart type="given">Margaret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jared M. Ward</displayForm>
+ <namePart type="family">Ward</namePart>
+ <namePart type="given">Jared</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_11-cv-01737</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:11-cv-01737</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Manuel" fullName="Manuel Chavez" lastName="Chavez" role="Defendant"></party>
+ <party firstName="Margaret" fullName="Margaret Mims" lastName="Mims" role="Defendant"></party>
+ <party firstName="Jared" fullName="Jared M. Ward" lastName="Ward" middleName="M." role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-0/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER Granting Application to Proceed In Forma Pauperis 2 Directing Payment of Inmate Filing Fee Fresno County Jail, signed by Magistrate Judge Gerald B. Cohn on 10/25/11. (Attachments: # (1) IFP Motion) (Gonzalez, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb27</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-0</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-10-25</dateIssued>
+  <docketText>ORDER Granting Application to Proceed In Forma Pauperis 2 Directing Payment of Inmate Filing Fee Fresno County Jail, signed by Magistrate Judge Gerald B. Cohn on 10/25/11. (Attachments: # (1) IFP Motion) (Gonzalez, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-1/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER denying 6 Motion to continue signed by Magistrate Judge Gerald B. Cohn on 3/12/2012. (Lundstrom, T)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb22</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-1</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-03-12</dateIssued>
+  <docketText>ORDER denying 6 Motion to continue signed by Magistrate Judge Gerald B. Cohn on 3/12/2012. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-2/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER Denying Motion For Appointment Of Counsel (Doc. 9), signed by Magistrate Judge Gerald B. Cohn on 6/25/2012. (Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb26</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-2</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-06-25</dateIssued>
+  <docketText>ORDER Denying Motion For Appointment Of Counsel (Doc. 9), signed by Magistrate Judge Gerald B. Cohn on 6/25/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-3/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER signed by Magistrate Judge Gerald B. Cohn on 12/17/2012 directing Clerk of Court to redesignate case as a regular civil action and reassign case. (Lundstrom, T)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb28</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-3</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-12-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gerald B. Cohn on 12/17/2012 directing Clerk of Court to redesignate case as a regular civil action and reassign case. (Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-4/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER Denying 10 Motion for Pretrial Conference signed by Magistrate Judge Gary S. Austin on 12/19/2012. (Martinez, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-12-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb23</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-4</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-12-19</dateIssued>
+  <docketText>ORDER Denying 10 Motion for Pretrial Conference signed by Magistrate Judge Gary S. Austin on 12/19/2012. (Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-5/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>ORDER to SHOW CAUSE signed by Magistrate Judge Gary S. Austin on 1/3/2013. Show Cause Response due by 1/31/2013.(Martinez, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb25</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-5</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-04</dateIssued>
+  <docketText>ORDER to SHOW CAUSE signed by Magistrate Judge Gary S. Austin on 1/3/2013. Show Cause Response due by 1/31/2013.(Martinez, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_11-cv-01737-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-6/mods.xml">
+ <titleInfo>
+  <title>Ward v. Mims, et al.</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS Recommending Dismissal of This Case signed by Magistrate Judge Gary S. Austin on 3/7/2013. Objections to F&amp;R&apos;s due within fifteen (15) days of service.(Martinez, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-03-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-1_11-cv-01737-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183e3eb24</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-6</identifier>
+ <identifier type="former granule identifier">caed-1_11-cv-01737_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_11-cv-01737/USCOURTS-caed-1_11-cv-01737-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_11-cv-01737/pdf/USCOURTS-caed-1_11-cv-01737-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-01737; Ward v. Mims, et al.; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_11-cv-01737-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-03-07</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS Recommending Dismissal of This Case signed by Magistrate Judge Gary S. Austin on 3/7/2013. Objections to F&amp;R&apos;s due within fifteen (15) days of service.(Martinez, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

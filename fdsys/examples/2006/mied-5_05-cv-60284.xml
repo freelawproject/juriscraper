@@ -1,0 +1,204 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1819527ea">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-24</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_05-cv-60284</identifier>
+<identifier type="local">P0b002ee1819527ea</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-19</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-5_05-cv-60284</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-5_05-cv-60284</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>5:05-cv-60284</caseNumber>
+ <caseOffice>Ann Arbor</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party firstName="Brandy" fullName="Brandy Chittle" lastName="Chittle" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Chittle" lastName="Chittle" role="Defendant"></party>
+ <party fullName="D D Decorating" lastName="D D Decorating" role="Defendant"></party>
+ <party fullName="D D Decorating Enterprises, L. L. C." lastName="D D Decorating Enterprises, L. L. C." role="Defendant"></party>
+ <party fullName="International Union of Painters and Allied Trades, Local 1052" lastName="International Union of Painters and Allied Trades, Local 1052" role="Plaintiff"></party>
+ <party fullName="Michigan State Painters Insurance Fund" lastName="Michigan State Painters Insurance Fund" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Minzey" lastName="Minzey" role="Defendant"></party>
+ <party fullName="Painters and Allied Trades Local 1052 Pension Trust Fund" lastName="Painters and Allied Trades Local 1052 Pension Trust Fund" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Michigan State Painters Insurance Fund et al v. D D Decorating Enterprises, L. L. C. et al</title>
+ <partNumber>5:05-cv-60284</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_05-cv-60284/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:05-cv-60284;05-60284</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Ann Arbor</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brandy Chittle</displayForm>
+ <namePart type="family">Chittle</namePart>
+ <namePart type="given">Brandy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Chittle</displayForm>
+ <namePart type="family">Chittle</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D D Decorating</displayForm>
+ <namePart type="family">D D Decorating</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D D Decorating Enterprises, L. L. C.</displayForm>
+ <namePart type="family">D D Decorating Enterprises, L. L. C.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>International Union of Painters and Allied Trades, Local 1052</displayForm>
+ <namePart type="family">International Union of Painters and Allied Trades, Local 1052</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michigan State Painters Insurance Fund</displayForm>
+ <namePart type="family">Michigan State Painters Insurance Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Minzey</displayForm>
+ <namePart type="family">Minzey</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Painters and Allied Trades Local 1052 Pension Trust Fund</displayForm>
+ <namePart type="family">Painters and Allied Trades Local 1052 Pension Trust Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-5_05-cv-60284</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>5:05-cv-60284</caseNumber>
+ <caseOffice>Ann Arbor</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <party firstName="Brandy" fullName="Brandy Chittle" lastName="Chittle" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Chittle" lastName="Chittle" role="Defendant"></party>
+ <party fullName="D D Decorating" lastName="D D Decorating" role="Defendant"></party>
+ <party fullName="D D Decorating Enterprises, L. L. C." lastName="D D Decorating Enterprises, L. L. C." role="Defendant"></party>
+ <party fullName="International Union of Painters and Allied Trades, Local 1052" lastName="International Union of Painters and Allied Trades, Local 1052" role="Plaintiff"></party>
+ <party fullName="Michigan State Painters Insurance Fund" lastName="Michigan State Painters Insurance Fund" role="Plaintiff"></party>
+ <party firstName="Donald" fullName="Donald Minzey" lastName="Minzey" role="Defendant"></party>
+ <party fullName="Painters and Allied Trades Local 1052 Pension Trust Fund" lastName="Painters and Allied Trades Local 1052 Pension Trust Fund" role="Plaintiff"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-5_05-cv-60284-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_05-cv-60284/USCOURTS-mied-5_05-cv-60284-0/mods.xml">
+ <titleInfo>
+  <title>Michigan State Painters Insurance Fund et al v. D D Decorating Enterprises, L. L. C. et al</title>
+  <subTitle>ORDER of partial dismissal re 1 Complaint filed by Michigan State Painters Insurance Fund,, Painters and Allied Trades Local 1052 Pension Trust Fund,, International Union of Painters and Allied Trades, Local 1052,. Signed by Honorable John Corbett O&apos;Meara. (DGoo, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-5_05-cv-60284-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181a1af38</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_05-cv-60284/USCOURTS-mied-5_05-cv-60284-0</identifier>
+ <identifier type="former granule identifier">mied-5_05-cv-60284_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-5_05-cv-60284/USCOURTS-mied-5_05-cv-60284-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-5_05-cv-60284/pdf/USCOURTS-mied-5_05-cv-60284-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:05-cv-60284; Michigan State Painters Insurance Fund et al v. D D Decorating Enterprises, L. L. C. et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-5_05-cv-60284-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-24</dateIssued>
+  <docketText>ORDER of partial dismissal re 1 Complaint filed by Michigan State Painters Insurance Fund,, Painters and Allied Trades Local 1052 Pension Trust Fund,, International Union of Painters and Allied Trades, Local 1052,. Signed by Honorable John Corbett O&apos;Meara. (DGoo, )</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,152 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18159fb8c">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-03023</identifier>
+<identifier type="local">P0b002ee18159fb8c</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-5_06-cv-03023</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-03023</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-03023</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="City of Akron" lastName="City of Akron" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Turner" lastName="Turner" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Turner v. City of Akron</title>
+ <partNumber>5:06-cv-03023</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-03023/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:06-cv-03023;06-3023</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Akron</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Akron</displayForm>
+ <namePart type="family">City of Akron</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Roger Turner</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Roger</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-5_06-cv-03023</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>5:06-cv-03023</caseNumber>
+ <caseOffice>Akron</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1441 Petition for Removal- Civil Rights Act</cause>
+ <party fullName="City of Akron" lastName="City of Akron" role="Defendant"></party>
+ <party firstName="Roger" fullName="Roger Turner" lastName="Turner" role="Plaintiff"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-5_06-cv-03023-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-03023/USCOURTS-ohnd-5_06-cv-03023-0/mods.xml">
+ <titleInfo>
+  <title>Turner v. City of Akron</title>
+  <subTitle>Memorandum Opinion granting defendant&apos;s motion for summary judgment (Related Doc # 20); denying Plaintiff&apos;s motion to strike (Related Doc # 30); and, striking the purported reply brief of defendant (Related Doc # 31). Signed by Judge Sara Lioi on 1/2/08. (B,IE) Modified links on 1/3/2008 (P,G).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-5_06-cv-03023-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18167933e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-03023/USCOURTS-ohnd-5_06-cv-03023-0</identifier>
+ <identifier type="former granule identifier">ohnd-5_06-cv-03023_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-5_06-cv-03023/USCOURTS-ohnd-5_06-cv-03023-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-5_06-cv-03023/pdf/USCOURTS-ohnd-5_06-cv-03023-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:06-cv-03023; Turner v. City of Akron; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-5_06-cv-03023-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-02</dateIssued>
+  <docketText>Memorandum Opinion granting defendant&apos;s motion for summary judgment (Related Doc # 20); denying Plaintiff&apos;s motion to strike (Related Doc # 30); and, striking the purported reply brief of defendant (Related Doc # 31). Signed by Judge Sara Lioi on 1/2/08. (B,IE) Modified links on 1/3/2008 (P,G).</docketText>
+</extension>
+</relatedItem>
+</mods>

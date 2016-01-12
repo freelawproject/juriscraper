@@ -1,0 +1,170 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181564b7f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-30</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2008-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_07-cv-02275</identifier>
+<identifier type="local">P0b002ee181564b7f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-30</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-30</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-4_07-cv-02275</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_07-cv-02275</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:07-cv-02275</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="David" fullName="David Beahr" lastName="Beahr" role="Plaintiff"></party>
+ <party firstName="Evelyn" fullName="Evelyn Beahr" lastName="Beahr" role="Plaintiff"></party>
+ <party fullName="Springfield Township Police Department" lastName="Springfield Township Police Department" role="Defendant"></party>
+ <party fullName="Springfield Township, Ohio" lastName="Springfield Township, Ohio" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Beahr v. Springfield Township, Ohio et al</title>
+ <partNumber>4:07-cv-02275</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_07-cv-02275/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:07-cv-02275;07-2275</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Youngstown</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David Beahr</displayForm>
+ <namePart type="family">Beahr</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Evelyn Beahr</displayForm>
+ <namePart type="family">Beahr</namePart>
+ <namePart type="given">Evelyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Springfield Township Police Department</displayForm>
+ <namePart type="family">Springfield Township Police Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Springfield Township, Ohio</displayForm>
+ <namePart type="family">Springfield Township, Ohio</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-4_07-cv-02275</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>4:07-cv-02275</caseNumber>
+ <caseOffice>Youngstown</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="David" fullName="David Beahr" lastName="Beahr" role="Plaintiff"></party>
+ <party firstName="Evelyn" fullName="Evelyn Beahr" lastName="Beahr" role="Plaintiff"></party>
+ <party fullName="Springfield Township Police Department" lastName="Springfield Township Police Department" role="Defendant"></party>
+ <party fullName="Springfield Township, Ohio" lastName="Springfield Township, Ohio" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-4_07-cv-02275-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_07-cv-02275/USCOURTS-ohnd-4_07-cv-02275-0/mods.xml">
+ <titleInfo>
+  <title>Beahr v. Springfield Township, Ohio et al</title>
+  <subTitle>Order granting defendants&apos; Motion to dismiss Springfield Township, Ohio; Evelyn Beahr and Springfield Township Police Department (Related Doc # 5). Signed by Judge John R. Adams on 1/31/08.(K,C)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-4_07-cv-02275-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18163c7d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_07-cv-02275/USCOURTS-ohnd-4_07-cv-02275-0</identifier>
+ <identifier type="former granule identifier">ohnd-4_07-cv-02275_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-4_07-cv-02275/USCOURTS-ohnd-4_07-cv-02275-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-4_07-cv-02275/pdf/USCOURTS-ohnd-4_07-cv-02275-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:07-cv-02275; Beahr v. Springfield Township, Ohio et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-4_07-cv-02275-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-01-31</dateIssued>
+  <docketText>Order granting defendants&apos; Motion to dismiss Springfield Township, Ohio; Evelyn Beahr and Springfield Township Police Department (Related Doc # 5). Signed by Judge John R. Adams on 1/31/08.(K,C)</docketText>
+</extension>
+</relatedItem>
+</mods>

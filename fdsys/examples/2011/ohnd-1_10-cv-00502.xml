@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181511647">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-12-29</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-00502</identifier>
+<identifier type="local">P0b002ee181511647</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-12-29</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-29</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_10-cv-00502</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-00502</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-00502</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>465</natureSuitCode>
+ <natureSuit>Other Immigration Actions</natureSuit>
+ <cause>46:1156 Administrative Procedure Act</cause>
+ <party firstName="Kim" fullName="Kim Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Amer" fullName="Amer Numan Adi" lastName="Adi" middleName="Numan" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Hansen" lastName="Hansen" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Holder Jr." generation="Jr." lastName="Holder" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Mayorkas" lastName="Mayorkas" role="Defendant"></party>
+ <party firstName="Fidaa" fullName="Fidaa K. Musleh" lastName="Musleh" middleName="K." role="Plaintiff"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Adi et al v. United States of America et al</title>
+ <partNumber>1:10-cv-00502</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-00502/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-00502;10-502</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kim Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Amer Numan Adi</displayForm>
+ <namePart type="family">Adi</namePart>
+ <namePart type="given">Amer</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Hansen</displayForm>
+ <namePart type="family">Hansen</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Holder Jr.</displayForm>
+ <namePart type="family">Holder</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alejandro Mayorkas</displayForm>
+ <namePart type="family">Mayorkas</namePart>
+ <namePart type="given">Alejandro</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fidaa K. Musleh</displayForm>
+ <namePart type="family">Musleh</namePart>
+ <namePart type="given">Fidaa</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Janet Napolitano</displayForm>
+ <namePart type="family">Napolitano</namePart>
+ <namePart type="given">Janet</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_10-cv-00502</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:10-cv-00502</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>465</natureSuitCode>
+ <natureSuit>Other Immigration Actions</natureSuit>
+ <cause>46:1156 Administrative Procedure Act</cause>
+ <party firstName="Kim" fullName="Kim Adams" lastName="Adams" role="Defendant"></party>
+ <party firstName="Amer" fullName="Amer Numan Adi" lastName="Adi" middleName="Numan" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Hansen" lastName="Hansen" role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Holder Jr." generation="Jr." lastName="Holder" role="Defendant"></party>
+ <party firstName="Alejandro" fullName="Alejandro Mayorkas" lastName="Mayorkas" role="Defendant"></party>
+ <party firstName="Fidaa" fullName="Fidaa K. Musleh" lastName="Musleh" middleName="K." role="Plaintiff"></party>
+ <party firstName="Janet" fullName="Janet Napolitano" lastName="Napolitano" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_10-cv-00502-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-00502/USCOURTS-ohnd-1_10-cv-00502-0/mods.xml">
+ <titleInfo>
+  <title>Adi et al v. United States of America et al</title>
+  <subTitle>Memorandum Opinion and Order granting 8 Motion to dismiss or, In the Alternative, Motion for Summary Judgment. Judge Lesley Wells (C,KA)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_10-cv-00502-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1815bd539</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-00502/USCOURTS-ohnd-1_10-cv-00502-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_10-cv-00502_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_10-cv-00502/USCOURTS-ohnd-1_10-cv-00502-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_10-cv-00502/pdf/USCOURTS-ohnd-1_10-cv-00502-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-00502; Adi et al v. United States of America et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_10-cv-00502-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-03</dateIssued>
+  <docketText>Memorandum Opinion and Order granting 8 Motion to dismiss or, In the Alternative, Motion for Summary Judgment. Judge Lesley Wells (C,KA)</docketText>
+</extension>
+</relatedItem>
+</mods>

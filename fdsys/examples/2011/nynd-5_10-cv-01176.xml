@@ -1,0 +1,168 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18118db8f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_10-cv-01176</identifier>
+<identifier type="local">P0b002ee18118db8f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-22</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-5_10-cv-01176</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_10-cv-01176</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:10-cv-01176</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <party firstName="Durvanorte" fullName="Durvanorte Correia" lastName="Correia" role="Defendant"></party>
+ <party fullName="Face of Jesus, LLC" lastName="Face of Jesus, LLC" role="Plaintiff"></party>
+ <party fullName="New City Press" lastName="New City Press" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis C. Pompei" lastName="Pompei" middleName="C." role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Face of Jesus, LLC et al v. New City Press et al</title>
+ <partNumber>5:10-cv-01176</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_10-cv-01176/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:10-cv-01176;10-1176</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Syracuse</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Durvanorte Correia</displayForm>
+ <namePart type="family">Correia</namePart>
+ <namePart type="given">Durvanorte</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Face of Jesus, LLC</displayForm>
+ <namePart type="family">Face of Jesus, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>New City Press</displayForm>
+ <namePart type="family">New City Press</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Francis C. Pompei</displayForm>
+ <namePart type="family">Pompei</namePart>
+ <namePart type="given">Francis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-5_10-cv-01176</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>5:10-cv-01176</caseNumber>
+ <caseOffice>Syracuse</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>820</natureSuitCode>
+ <natureSuit>Copyright</natureSuit>
+ <party firstName="Durvanorte" fullName="Durvanorte Correia" lastName="Correia" role="Defendant"></party>
+ <party fullName="Face of Jesus, LLC" lastName="Face of Jesus, LLC" role="Plaintiff"></party>
+ <party fullName="New City Press" lastName="New City Press" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis C. Pompei" lastName="Pompei" middleName="C." role="Plaintiff"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-5_10-cv-01176-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_10-cv-01176/USCOURTS-nynd-5_10-cv-01176-0/mods.xml">
+ <titleInfo>
+  <title>Face of Jesus, LLC et al v. New City Press et al</title>
+  <subTitle>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED in its entirety without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and in the event that no request is made for reinstatement within thirty (30) days of the date of this judgment, the dismissal of this case shall thereafter be with prejudice. (lmw)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-5_10-cv-01176-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18141561d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_10-cv-01176/USCOURTS-nynd-5_10-cv-01176-0</identifier>
+ <identifier type="former granule identifier">nynd-5_10-cv-01176_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-5_10-cv-01176/USCOURTS-nynd-5_10-cv-01176-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-5_10-cv-01176/pdf/USCOURTS-nynd-5_10-cv-01176-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:10-cv-01176; Face of Jesus, LLC et al v. New City Press et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-5_10-cv-01176-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-06</dateIssued>
+  <docketText>JUDGMENT DISMISSING ACTION BY REASON OF SETTLEMENT: this action is DISMISSED in its entirety without prejudice to the right of the parties to secure reinstatement of the case within thirty (30) days after the date of this judgment by making a showing that the settlement was not, in fact, consummated; and in the event that no request is made for reinstatement within thirty (30) days of the date of this judgment, the dismissal of this case shall thereafter be with prejudice. (lmw)</docketText>
+</extension>
+</relatedItem>
+</mods>

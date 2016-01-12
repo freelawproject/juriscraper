@@ -1,0 +1,164 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180ed9563">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40108</identifier>
+<identifier type="local">P0b002ee180ed9563</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-5_04-cr-40108</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40108</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40108</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Omar" fullName="Omar Aguiluz-Nunez" lastName="Aguiluz-Nunez" role="Defendant"></party>
+ <party firstName="Susana" fullName="Susana Avila-Agramon" lastName="Avila-Agramon" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Renteria-Higuera" lastName="Renteria-Higuera" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Avila-Agramon et al</title>
+ <partNumber>5:04-cr-40108</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40108/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:04-cr-40108;04-40108</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Topeka</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Omar Aguiluz-Nunez</displayForm>
+ <namePart type="family">Aguiluz-Nunez</namePart>
+ <namePart type="given">Omar</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Susana Avila-Agramon</displayForm>
+ <namePart type="family">Avila-Agramon</namePart>
+ <namePart type="given">Susana</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jose Renteria-Higuera</displayForm>
+ <namePart type="family">Renteria-Higuera</namePart>
+ <namePart type="given">Jose</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-5_04-cr-40108</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>5:04-cr-40108</caseNumber>
+ <caseOffice>Topeka</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Omar" fullName="Omar Aguiluz-Nunez" lastName="Aguiluz-Nunez" role="Defendant"></party>
+ <party firstName="Susana" fullName="Susana Avila-Agramon" lastName="Avila-Agramon" role="Defendant"></party>
+ <party firstName="Jose" fullName="Jose Renteria-Higuera" lastName="Renteria-Higuera" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-5_04-cr-40108-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40108/USCOURTS-ksd-5_04-cr-40108-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Avila-Agramon et al</title>
+  <subTitle>JUDGMENT ENTERED as to defendant Jose Renteria-Higuera (2): Count 1 - Sentenced to 65 months imprisonment; 3 years supervised release w/special condtions of supervision; $100 assessment. Count 2 is dismissed. Signed by Senior Judge Richard D. Rogers on 1/3/06. (mb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-5_04-cr-40108-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180edd06f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40108/USCOURTS-ksd-5_04-cr-40108-0</identifier>
+ <identifier type="former granule identifier">ksd-5_04-cr-40108_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-5_04-cr-40108/USCOURTS-ksd-5_04-cr-40108-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-5_04-cr-40108/pdf/USCOURTS-ksd-5_04-cr-40108-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:04-cr-40108; USA v. Avila-Agramon et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-5_04-cr-40108-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-01-03</dateIssued>
+  <docketText>JUDGMENT ENTERED as to defendant Jose Renteria-Higuera (2): Count 1 - Sentenced to 65 months imprisonment; 3 years supervised release w/special condtions of supervision; $100 assessment. Count 2 is dismissed. Signed by Senior Judge Richard D. Rogers on 1/3/06. (mb)</docketText>
+</extension>
+</relatedItem>
+</mods>

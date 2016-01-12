@@ -1,0 +1,151 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a526152">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-12-01</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-03164</identifier>
+<identifier type="local">P0b002ee18a526152</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-12-01</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-12-01</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ca10-12-03164</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-03164</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-03164</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="David" fullName="David McKune" lastName="McKune" role="Appellee"></party>
+ <party firstName="Steve" fullName="Steve Six" lastName="Six" role="Appellee"></party>
+ <party firstName="Michael" fullName="Michael Dean Wilkins" lastName="Wilkins" middleName="Dean" role="Appellant"></party>
+</extension>
+<titleInfo>
+ <title>Wilkins v. Six, et al</title>
+ <partNumber>12-03164</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-03164/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 2.11</classification>
+<identifier type="preferred citation">12-03164;12-3164</identifier>
+<name type="corporate">
+ <namePart>United States Court of Appeals for the Tenth Circuit</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart></namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>David McKune</displayForm>
+ <namePart type="family">McKune</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Six</displayForm>
+ <namePart type="family">Six</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellee</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Dean Wilkins</displayForm>
+ <namePart type="family">Wilkins</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Appellant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ca10-12-03164</accessId>
+ <courtType>Appellate</courtType>
+ <courtCode>ca10</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtSortOrder>1100</courtSortOrder>
+ <caseNumber>12-03164</caseNumber>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="David" fullName="David McKune" lastName="McKune" role="Appellee"></party>
+ <party firstName="Steve" fullName="Steve Six" lastName="Six" role="Appellee"></party>
+ <party firstName="Michael" fullName="Michael Dean Wilkins" lastName="Wilkins" middleName="Dean" role="Appellant"></party>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ca10-12-03164-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-03164/USCOURTS-ca10-12-03164-0/mods.xml">
+ <titleInfo>
+  <title>Wilkins v. Six, et al</title>
+  <subTitle>[10032846] Default; Procedural termination without judicial action; Clerk of the Court. [12-3164]</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-03164/pdf/USCOURTS-ca10-12-03164-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a58f7ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-03164/USCOURTS-ca10-12-03164-0</identifier>
+ <identifier type="former granule identifier">ca10-12-03164_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ca10-12-03164/USCOURTS-ca10-12-03164-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ca10-12-03164/pdf/USCOURTS-ca10-12-03164-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 12-03164; Wilkins v. Six, et al; </searchTitle>
+  <courtName>United States Court of Appeals for the Tenth Circuit</courtName>
+  <accessId>USCOURTS-ca10-12-03164-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>[10032846] Default; Procedural termination without judicial action; Clerk of the Court. [12-3164]</docketText>
+</extension>
+</relatedItem>
+</mods>

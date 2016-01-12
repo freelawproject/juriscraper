@@ -1,0 +1,236 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c7c289">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-08</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-07</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921</identifier>
+<identifier type="local">P0b002ee186c7c289</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-08</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-08</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-00921</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-00921</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-00921</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Ken" fullName="Ken Adams" lastName="Adams" role="Plaintiff"></party>
+ <party fullName="Medical Staffing Network" lastName="Medical Staffing Network" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Adams v. Medical Staffing Network</title>
+ <partNumber>2:13-cv-00921</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-00921;13-921</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ken Adams</displayForm>
+ <namePart type="family">Adams</namePart>
+ <namePart type="given">Ken</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Medical Staffing Network</displayForm>
+ <namePart type="family">Medical Staffing Network</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-00921</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-00921</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>28:1441 Petition for Removal</cause>
+ <party firstName="Ken" fullName="Ken Adams" lastName="Adams" role="Plaintiff"></party>
+ <party fullName="Medical Staffing Network" lastName="Medical Staffing Network" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00921-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-0/mods.xml">
+ <titleInfo>
+  <title>Adams v. Medical Staffing Network</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 7/5/2013 ORDERING that the Status Conference is CONTINUED to 9/16/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. A joint status report shall be filed fourteen days prior to the hearing. (Zignago, K.)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c821c3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00921_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00921; Adams v. Medical Staffing Network; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00921-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-07-08</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr. on 7/5/2013 ORDERING that the Status Conference is CONTINUED to 9/16/2013 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr.. A joint status report shall be filed fourteen days prior to the hearing. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00921-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-1/mods.xml">
+ <titleInfo>
+  <title>Adams v. Medical Staffing Network</title>
+  <subTitle>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 11/25/2013 ORDERING Status Conference CONTINUED TO 2/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. A joing status report shall be filed 14 days prior to the hearing.(Waggoner, D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c821c5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00921_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00921; Adams v. Medical Staffing Network; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00921-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-25</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge Garland E. Burrell, Jr on 11/25/2013 ORDERING Status Conference CONTINUED TO 2/3/2014 at 09:00 AM in Courtroom 10 (GEB) before Judge Garland E. Burrell Jr. A joing status report shall be filed 14 days prior to the hearing.(Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00921-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-2/mods.xml">
+ <titleInfo>
+  <title>Adams v. Medical Staffing Network</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr. on 12/5/2013 ORDERING that Plaintiff&apos;s 10 Motion to Remand is GRANTED. This case is REMANDED to the Superior Court of the State of California in the County of Sacramento, from which it was removed. Copy of remand order sent to other court. CASE CLOSED. (Zignago, K.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c821c2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00921_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00921; Adams v. Medical Staffing Network; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00921-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-12-06</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr. on 12/5/2013 ORDERING that Plaintiff&apos;s 10 Motion to Remand is GRANTED. This case is REMANDED to the Superior Court of the State of California in the County of Sacramento, from which it was removed. Copy of remand order sent to other court. CASE CLOSED. (Zignago, K.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-00921-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-3/mods.xml">
+ <titleInfo>
+  <title>Adams v. Medical Staffing Network</title>
+  <subTitle>ORDER signed by Judge Garland E. Burrell, Jr., signed on 1/6/14 ORDERING that the parties 27 stipulation and proposed order &quot;request(ing) that the Court stay its remand order pending resolution of Defendant&apos;s appeal&quot;, is DENIED. (Kastilahn, A)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee186c821c4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-00921_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-00921/USCOURTS-caed-2_13-cv-00921-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-00921/pdf/USCOURTS-caed-2_13-cv-00921-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00921; Adams v. Medical Staffing Network; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-00921-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-01-07</dateIssued>
+  <docketText>ORDER signed by Judge Garland E. Burrell, Jr., signed on 1/6/14 ORDERING that the parties 27 stipulation and proposed order &quot;request(ing) that the Court stay its remand order pending resolution of Defendant&apos;s appeal&quot;, is DENIED. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

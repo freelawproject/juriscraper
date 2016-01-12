@@ -1,0 +1,206 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18194b8e6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-11350</identifier>
+<identifier type="local">P0b002ee18194b8e6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mied-2_07-cv-11350</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-11350</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-11350</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Jerold" fullName="Jerold Brayboy" lastName="Brayboy" role="Petitioner"></party>
+ <party firstName="Doug" fullName="Doug Vasbinder" lastName="Vasbinder" role="Respondent"></party>
+</extension>
+<titleInfo>
+ <title>Brayboy v. Vasbinder</title>
+ <partNumber>2:07-cv-11350</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-11350/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:07-cv-11350;07-11350</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Michigan</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Detroit</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jerold Brayboy</displayForm>
+ <namePart type="family">Brayboy</namePart>
+ <namePart type="given">Jerold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Vasbinder</displayForm>
+ <namePart type="family">Vasbinder</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mied-2_07-cv-11350</accessId>
+ <courtType>District</courtType>
+ <courtCode>mied</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Michigan</courtState>
+ <courtSortOrder>2251</courtSortOrder>
+ <caseNumber>2:07-cv-11350</caseNumber>
+ <caseOffice>Detroit</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <party firstName="Jerold" fullName="Jerold Brayboy" lastName="Brayboy" role="Petitioner"></party>
+ <party firstName="Doug" fullName="Doug Vasbinder" lastName="Vasbinder" role="Respondent"></party>
+ <state>Michigan</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-11350-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-0/mods.xml">
+ <titleInfo>
+  <title>Brayboy v. Vasbinder</title>
+  <subTitle>ORDER granting 3 Motion for Equitable Tolling; granting 9 Motion for Leave to File an Amended Petition; granting 11 Motion for Production of Additional Materials. Signed by Honorable Arthur J Tarnow. (CPic)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-02-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-11350-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819e62e6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-0</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-11350_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-11350/pdf/USCOURTS-mied-2_07-cv-11350-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-11350; Brayboy v. Vasbinder; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-11350-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-02-12</dateIssued>
+  <docketText>ORDER granting 3 Motion for Equitable Tolling; granting 9 Motion for Leave to File an Amended Petition; granting 11 Motion for Production of Additional Materials. Signed by Honorable Arthur J Tarnow. (CPic)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-11350-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-1/mods.xml">
+ <titleInfo>
+  <title>Brayboy v. Vasbinder</title>
+  <subTitle>ORDER granting an evidentiary hearing, and appointmentof counsel. Signed by District Judge Arthur J Tarnow. (PPau)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-11350-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819e62e8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-1</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-11350_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-11350/pdf/USCOURTS-mied-2_07-cv-11350-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-11350; Brayboy v. Vasbinder; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-11350-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-07-15</dateIssued>
+  <docketText>ORDER granting an evidentiary hearing, and appointmentof counsel. Signed by District Judge Arthur J Tarnow. (PPau)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mied-2_07-cv-11350-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-2/mods.xml">
+ <titleInfo>
+  <title>Brayboy v. Vasbinder</title>
+  <subTitle>OPINION and ORDER denying 1 Petition for Writ of Habeas Corpus, Granting a Certificate of Appealability and Leave to Proceed In Forma Pauperis on Appeal. Signed by District Judge Arthur J Tarnow. (DWor)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mied-2_07-cv-11350-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1819e62e7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-2</identifier>
+ <identifier type="former granule identifier">mied-2_07-cv-11350_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mied-2_07-cv-11350/USCOURTS-mied-2_07-cv-11350-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mied-2_07-cv-11350/pdf/USCOURTS-mied-2_07-cv-11350-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:07-cv-11350; Brayboy v. Vasbinder; </searchTitle>
+  <courtName>United States District Court Eastern District of Michigan</courtName>
+  <state>Michigan</state>
+  <accessId>USCOURTS-mied-2_07-cv-11350-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>OPINION and ORDER denying 1 Petition for Writ of Habeas Corpus, Granting a Certificate of Appealability and Leave to Proceed In Forma Pauperis on Appeal. Signed by District Judge Arthur J Tarnow. (DWor)</docketText>
+</extension>
+</relatedItem>
+</mods>

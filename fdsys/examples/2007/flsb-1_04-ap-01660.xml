@@ -1,0 +1,144 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180e361f0">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-10-12</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_04-ap-01660</identifier>
+<identifier type="local">P0b002ee180e361f0</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-10-12</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-09-25</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-flsb-1_04-ap-01660</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-1_04-ap-01660</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>1:04-ap-01660</caseNumber>
+ <caseOffice>Miami</caseOffice>
+ <party fullName="Universal Finance of Miami, Inc." lastName="Universal Finance of Miami, Inc." role="Plaintiff"></party>
+ <party firstName="Tomas" fullName="Tomas A. Manrique" lastName="Manrique" middleName="A." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Universal Finance of Miami, Inc. v. Manrique</title>
+ <partNumber>1:04-ap-01660</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_04-ap-01660/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">1:04-ap-01660;04-1660</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Southern District of Florida</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Miami</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Universal Finance of Miami, Inc.</displayForm>
+ <namePart type="family">Universal Finance of Miami, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tomas A. Manrique</displayForm>
+ <namePart type="family">Manrique</namePart>
+ <namePart type="given">Tomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-flsb-1_04-ap-01660</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>flsb</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Florida</courtState>
+ <courtSortOrder>3113</courtSortOrder>
+ <caseNumber>1:04-ap-01660</caseNumber>
+ <caseOffice>Miami</caseOffice>
+ <party fullName="Universal Finance of Miami, Inc." lastName="Universal Finance of Miami, Inc." role="Plaintiff"></party>
+ <party firstName="Tomas" fullName="Tomas A. Manrique" lastName="Manrique" middleName="A." role="Defendant"></party>
+ <state>Florida</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-flsb-1_04-ap-01660-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_04-ap-01660/USCOURTS-flsb-1_04-ap-01660-0/mods.xml">
+ <titleInfo>
+  <title>Universal Finance of Miami, Inc. v. Manrique</title>
+  <subTitle>Order Abating for thirty (30) days Motion To Amend Final Judgment (Re: # 100) (Reynolds, Marva)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-30</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_04-ap-01660/pdf/USCOURTS-flsb-1_04-ap-01660-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee189ce53eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_04-ap-01660/USCOURTS-flsb-1_04-ap-01660-0</identifier>
+ <identifier type="former granule identifier">flsb-1_04-ap-01660_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-flsb-1_04-ap-01660/USCOURTS-flsb-1_04-ap-01660-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-flsb-1_04-ap-01660/pdf/USCOURTS-flsb-1_04-ap-01660-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:04-ap-01660; Universal Finance of Miami, Inc. v. Manrique; </searchTitle>
+  <courtName>United States Bankruptcy Court Southern District of Florida</courtName>
+  <state>Florida</state>
+  <accessId>USCOURTS-flsb-1_04-ap-01660-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2007-01-30</dateIssued>
+  <docketText>Order Abating for thirty (30) days Motion To Amend Final Judgment (Re: # 100) (Reynolds, Marva)</docketText>
+</extension>
+</relatedItem>
+</mods>

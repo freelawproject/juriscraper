@@ -1,0 +1,233 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee180f4332f">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Kansas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02191</identifier>
+<identifier type="local">P0b002ee180f4332f</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ksd-2_05-cv-02191</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02191</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02191</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="Albertson&apos;s, Inc." lastName="Albertson&apos;s, Inc." role="Defendant"></party>
+ <party fullName="American Drug Stores, Inc." lastName="American Drug Stores, Inc." role="Defendant"></party>
+ <party fullName="American Stores Company" lastName="American Stores Company" role="Defendant"></party>
+ <party fullName="Osco Drug, Inc." lastName="Osco Drug, Inc." role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Tolle" lastName="Tolle" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Tolle v. American Drug Stores, Inc. et al</title>
+ <partNumber>2:05-cv-02191</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02191/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:05-cv-02191;05-2191</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Kansas</namePart>
+ <namePart>10th Circuit</namePart>
+ <namePart>Kansas City</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Albertson&apos;s, Inc.</displayForm>
+ <namePart type="family">Albertson&apos;s, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Drug Stores, Inc.</displayForm>
+ <namePart type="family">American Drug Stores, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>American Stores Company</displayForm>
+ <namePart type="family">American Stores Company</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Osco Drug, Inc.</displayForm>
+ <namePart type="family">Osco Drug, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randy Tolle</displayForm>
+ <namePart type="family">Tolle</namePart>
+ <namePart type="given">Randy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ksd-2_05-cv-02191</accessId>
+ <courtType>District</courtType>
+ <courtCode>ksd</courtCode>
+ <courtCircuit>10th</courtCircuit>
+ <courtState>Kansas</courtState>
+ <courtSortOrder>2190</courtSortOrder>
+ <caseNumber>2:05-cv-02191</caseNumber>
+ <caseOffice>Kansas City</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <party fullName="Albertson&apos;s, Inc." lastName="Albertson&apos;s, Inc." role="Defendant"></party>
+ <party fullName="American Drug Stores, Inc." lastName="American Drug Stores, Inc." role="Defendant"></party>
+ <party fullName="American Stores Company" lastName="American Stores Company" role="Defendant"></party>
+ <party fullName="Osco Drug, Inc." lastName="Osco Drug, Inc." role="Defendant"></party>
+ <party firstName="Randy" fullName="Randy Tolle" lastName="Tolle" role="Plaintiff"></party>
+ <state>Kansas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02191-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-0/mods.xml">
+ <titleInfo>
+  <title>Tolle v. American Drug Stores, Inc. et al</title>
+  <subTitle>ORDER re 73 Response to Motion, filed by Randy Tolle. On or before June 16, 2006, plaintiff shall file an amended response to defendants&apos; motion for summary judgment. Unless plaintiff seeks and obtains leave of court before June 16, 2006, plaintiff shall limit his response including facts to no more than 40 pages. Plaintiff should also note that under D. Kan. Rule 56.1(b), he must provide a &quot;concise&quot; statement of facts and that he must set forth additional facts in separately numbered paragraphs. On or before July 7, 2006, defendants may file a reply brief. Signed by Judge Kathryn H. Vratil on 6/1/06.(ls)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_05-cv-02191-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f5584b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-0</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02191_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02191/pdf/USCOURTS-ksd-2_05-cv-02191-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02191; Tolle v. American Drug Stores, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02191-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-06-01</dateIssued>
+  <docketText>ORDER re 73 Response to Motion, filed by Randy Tolle. On or before June 16, 2006, plaintiff shall file an amended response to defendants&apos; motion for summary judgment. Unless plaintiff seeks and obtains leave of court before June 16, 2006, plaintiff shall limit his response including facts to no more than 40 pages. Plaintiff should also note that under D. Kan. Rule 56.1(b), he must provide a &quot;concise&quot; statement of facts and that he must set forth additional facts in separately numbered paragraphs. On or before July 7, 2006, defendants may file a reply brief. Signed by Judge Kathryn H. Vratil on 6/1/06.(ls)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02191-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-1/mods.xml">
+ <titleInfo>
+  <title>Tolle v. American Drug Stores, Inc. et al</title>
+  <subTitle>MEMORANDUM AND ORDER sustaining in part and overruling in part 63 Motion for Summary Judgment. Defendant&apos;s motion is sustained as to plaintiff&apos;s age discrimination claim and overruled as to plaintiff&apos;s reverse sex discrimination claim. Signed by Judge Kathryn H. Vratil on 10/11/06. (mg)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-10-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_05-cv-02191-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f5584a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-1</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02191_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02191/pdf/USCOURTS-ksd-2_05-cv-02191-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02191; Tolle v. American Drug Stores, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02191-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-10-11</dateIssued>
+  <docketText>MEMORANDUM AND ORDER sustaining in part and overruling in part 63 Motion for Summary Judgment. Defendant&apos;s motion is sustained as to plaintiff&apos;s age discrimination claim and overruled as to plaintiff&apos;s reverse sex discrimination claim. Signed by Judge Kathryn H. Vratil on 10/11/06. (mg)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ksd-2_05-cv-02191-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-2/mods.xml">
+ <titleInfo>
+  <title>Tolle v. American Drug Stores, Inc. et al</title>
+  <subTitle>ORDER sustaining 196 Motion for Permission to Communicate With Jurors. Signed by Judge Kathryn H. Vratil on 1/3/07. (ls)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ksd-2_05-cv-02191-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee180f5584c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-2</identifier>
+ <identifier type="former granule identifier">ksd-2_05-cv-02191_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ksd-2_05-cv-02191/USCOURTS-ksd-2_05-cv-02191-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ksd-2_05-cv-02191/pdf/USCOURTS-ksd-2_05-cv-02191-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:05-cv-02191; Tolle v. American Drug Stores, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Kansas</courtName>
+  <state>Kansas</state>
+  <accessId>USCOURTS-ksd-2_05-cv-02191-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-03</dateIssued>
+  <docketText>ORDER sustaining 196 Motion for Permission to Communicate With Jurors. Signed by Judge Kathryn H. Vratil on 1/3/07. (ls)</docketText>
+</extension>
+</relatedItem>
+</mods>

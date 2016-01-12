@@ -1,0 +1,200 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1810902de">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Maryland</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-15</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-20</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cr-00415</identifier>
+<identifier type="local">P0b002ee1810902de</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-15</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-11-15</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mdd-1_05-cr-00415</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cr-00415</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cr-00415</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lowell" fullName="Lowell Joseph Braswell" lastName="Braswell" middleName="Joseph" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Maurice Horne Jr." generation="Jr." lastName="Horne" middleName="Maurice" role="Defendant"></party>
+ <party firstName="Laronte" fullName="Laronte Lee Richardson" lastName="Richardson" middleName="Lee" role="Defendant"></party>
+ <party firstName="Calvin" fullName="Calvin Ignatious Savoy" lastName="Savoy" middleName="Ignatious" role="Defendant"></party>
+ <party firstName="Troemaine" fullName="Troemaine Herbert Storey" lastName="Storey" middleName="Herbert" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Eugene Turner Jr." generation="Jr." lastName="Turner" middleName="Eugene" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Jerome" fullName="Jerome Otto Waters Jr." generation="Jr." lastName="Waters" middleName="Otto" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Braswell et al</title>
+ <partNumber>1:05-cr-00415</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cr-00415/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cr-00415;05-415</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Maryland</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Baltimore</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lowell Joseph Braswell</displayForm>
+ <namePart type="family">Braswell</namePart>
+ <namePart type="given">Lowell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tony Maurice Horne Jr.</displayForm>
+ <namePart type="family">Horne</namePart>
+ <namePart type="given">Tony</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Laronte Lee Richardson</displayForm>
+ <namePart type="family">Richardson</namePart>
+ <namePart type="given">Laronte</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Calvin Ignatious Savoy</displayForm>
+ <namePart type="family">Savoy</namePart>
+ <namePart type="given">Calvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Troemaine Herbert Storey</displayForm>
+ <namePart type="family">Storey</namePart>
+ <namePart type="given">Troemaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Eugene Turner Jr.</displayForm>
+ <namePart type="family">Turner</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jerome Otto Waters Jr.</displayForm>
+ <namePart type="family">Waters</namePart>
+ <namePart type="given">Jerome</namePart>
+ <namePart type="termsOfAddress">Jr.</namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mdd-1_05-cr-00415</accessId>
+ <courtType>District</courtType>
+ <courtCode>mdd</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>Maryland</courtState>
+ <courtSortOrder>2230</courtSortOrder>
+ <caseNumber>1:05-cr-00415</caseNumber>
+ <caseOffice>Baltimore</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Lowell" fullName="Lowell Joseph Braswell" lastName="Braswell" middleName="Joseph" role="Defendant"></party>
+ <party firstName="Tony" fullName="Tony Maurice Horne Jr." generation="Jr." lastName="Horne" middleName="Maurice" role="Defendant"></party>
+ <party firstName="Laronte" fullName="Laronte Lee Richardson" lastName="Richardson" middleName="Lee" role="Defendant"></party>
+ <party firstName="Calvin" fullName="Calvin Ignatious Savoy" lastName="Savoy" middleName="Ignatious" role="Defendant"></party>
+ <party firstName="Troemaine" fullName="Troemaine Herbert Storey" lastName="Storey" middleName="Herbert" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Eugene Turner Jr." generation="Jr." lastName="Turner" middleName="Eugene" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <party firstName="Jerome" fullName="Jerome Otto Waters Jr." generation="Jr." lastName="Waters" middleName="Otto" role="Defendant"></party>
+ <state>Maryland</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mdd-1_05-cr-00415-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cr-00415/USCOURTS-mdd-1_05-cr-00415-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Braswell et al</title>
+  <subTitle>MEMORANDUM as to Calvin Ignatious Savoy. Signed by Judge J. Frederick Motz on 1/20/11. (c/m 1/20/11 jnls, Deputy Clerk)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mdd-1_05-cr-00415-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18109410f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cr-00415/USCOURTS-mdd-1_05-cr-00415-0</identifier>
+ <identifier type="former granule identifier">mdd-1_05-cr-00415_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mdd-1_05-cr-00415/USCOURTS-mdd-1_05-cr-00415-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mdd-1_05-cr-00415/pdf/USCOURTS-mdd-1_05-cr-00415-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cr-00415; USA v. Braswell et al; </searchTitle>
+  <courtName>United States District Court District of Maryland</courtName>
+  <state>Maryland</state>
+  <accessId>USCOURTS-mdd-1_05-cr-00415-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-01-20</dateIssued>
+  <docketText>MEMORANDUM as to Calvin Ignatious Savoy. Signed by Judge J. Frederick Motz on 1/20/11. (c/m 1/20/11 jnls, Deputy Clerk)</docketText>
+</extension>
+</relatedItem>
+</mods>

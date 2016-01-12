@@ -1,0 +1,628 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a28b9b6">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-09-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764</identifier>
+<identifier type="local">P0b002ee18a28b9b6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_10-cv-01764</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01764</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01764</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Kevin" fullName="Kevin Fields" lastName="Fields" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Rosenthal" lastName="Rosenthal" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Fields v. Rosenthal</title>
+ <partNumber>1:10-cv-01764</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:10-cv-01764;10-1764</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Kevin Fields</displayForm>
+ <namePart type="family">Fields</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Rosenthal</displayForm>
+ <namePart type="family">Rosenthal</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_10-cv-01764</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:10-cv-01764</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Kevin" fullName="Kevin Fields" lastName="Fields" role="Plaintiff"></party>
+ <party firstName="Richard" fullName="Richard Rosenthal" lastName="Rosenthal" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER signed by Magistrate Judge Gary S. Austin on 9/28/2010 granting request for screening order and granting extension of time to file response to compliant. (Filing Deadline: 11/1/2010).(Lundstrom, T)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-09-28</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-0</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-09-28</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Gary S. Austin on 9/28/2010 granting request for screening order and granting extension of time to file response to compliant. (Filing Deadline: 11/1/2010).(Lundstrom, T)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER DISMISSING Defendants Moser, Van Klavern, Jones and Lopez, signed by Magistrate Judge Gary S. Austin on 5/21/2012. (Marrujo, C)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-21</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-1</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-05-21</dateIssued>
+  <docketText>ORDER DISMISSING Defendants Moser, Van Klavern, Jones and Lopez, signed by Magistrate Judge Gary S. Austin on 5/21/2012. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion For Reconsideration (Doc.13), ORDER For Plaintiff To Either: (1) File A Second Amended Complaint, Or (2) Notify The Court Of His Willingness To Proceed Only On The Claim Found Cognizable By The Court, Thirty-Day Deadline To File Second Amended Complaint Or Notify Court Of Willingness To Proceed, signed by Magistrate Judge Gary S. Austin on 7/26/2012. (Fahrney, E)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-2</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-07-26</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion For Reconsideration (Doc.13), ORDER For Plaintiff To Either: (1) File A Second Amended Complaint, Or (2) Notify The Court Of His Willingness To Proceed Only On The Claim Found Cognizable By The Court, Thirty-Day Deadline To File Second Amended Complaint Or Notify Court Of Willingness To Proceed, signed by Magistrate Judge Gary S. Austin on 7/26/2012. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER DENYING AS MOOT 12 Motion to Dismiss and 14 Motion for Extension of Time, signed by Magistrate Judge Gary S. Austin on 08/24/2012. (Martin-Gill, S)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-3</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-08-24</dateIssued>
+  <docketText>ORDER DENYING AS MOOT 12 Motion to Dismiss and 14 Motion for Extension of Time, signed by Magistrate Judge Gary S. Austin on 08/24/2012. (Martin-Gill, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER For Defendant Rosenthal To File Response To Second Amended Complaint Within Thirty Days (Doc. 17), signed by Magistrate Judge Gary S. Austin on 10/25/2012. (Responses due by 11/30/2012) (Fahrney, E)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d848</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-4</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2012-10-26</dateIssued>
+  <docketText>ORDER For Defendant Rosenthal To File Response To Second Amended Complaint Within Thirty Days (Doc. 17), signed by Magistrate Judge Gary S. Austin on 10/25/2012. (Responses due by 11/30/2012) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER GRANTING 20 Defendant&apos;s Request for the Court to Screen the Second Amended Complaint and for Extension of Time; ORDER Finding that Plaintiff States a Cognizable Claim for Retaliation Against Defendant Rosenthal; and ORDER GRANTING Defendant Rosenthal an Extension of Time Until 12/14/2012 in Which to File a Response to Plaintiff&apos;s Second Amended Complaint, signed by Magistrate Judge Gary S. Austin on 11/6/2012. (Jessen, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-5</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2012-11-06</dateIssued>
+  <docketText>ORDER GRANTING 20 Defendant&apos;s Request for the Court to Screen the Second Amended Complaint and for Extension of Time; ORDER Finding that Plaintiff States a Cognizable Claim for Retaliation Against Defendant Rosenthal; and ORDER GRANTING Defendant Rosenthal an Extension of Time Until 12/14/2012 in Which to File a Response to Plaintiff&apos;s Second Amended Complaint, signed by Magistrate Judge Gary S. Austin on 11/6/2012. (Jessen, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-6/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Granting Defendant Rosenthal&apos;s Request (Doc.37), ORDER Approving Substitution Of Attorneys For Defendant Rosenthal, signed by Magistrate Judge Gary S. Austin on 9/26/2013. Attorney Susan Eileen Coleman terminated. (Fahrney, E)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-6</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2013-09-26</dateIssued>
+  <docketText>ORDER Granting Defendant Rosenthal&apos;s Request (Doc.37), ORDER Approving Substitution Of Attorneys For Defendant Rosenthal, signed by Magistrate Judge Gary S. Austin on 9/26/2013. Attorney Susan Eileen Coleman terminated. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-7/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Granting Motion To Modify Scheduling Order (Doc.36), ORDER Extending Discovery And Dispositive Motions Deadlines For All Parties To This Action New Discovery Cut-Off Date: 11/18/2013, New Dispositive Motions Deadline: 01/17/2014, signed by Magistrate Judge Gary S. Austin on 9/26/2013. (Fahrney, E)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-09-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-7</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2013-09-27</dateIssued>
+  <docketText>ORDER Granting Motion To Modify Scheduling Order (Doc.36), ORDER Extending Discovery And Dispositive Motions Deadlines For All Parties To This Action New Discovery Cut-Off Date: 11/18/2013, New Dispositive Motions Deadline: 01/17/2014, signed by Magistrate Judge Gary S. Austin on 9/26/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-8/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Granting Defendant&apos;s 31 Motion to Compel; ORDER for Plaintiff to Respond to Defendant&apos;s First Set of Interrogatories, First Set of Requests for Production, and Deposition Question, within Thirty Days, signed by Magistrate Judge Gary S. Austin on 10/2/13. (Verduzco, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d847</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-8</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2013-10-03</dateIssued>
+  <docketText>ORDER Granting Defendant&apos;s 31 Motion to Compel; ORDER for Plaintiff to Respond to Defendant&apos;s First Set of Interrogatories, First Set of Requests for Production, and Deposition Question, within Thirty Days, signed by Magistrate Judge Gary S. Austin on 10/2/13. (Verduzco, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-9/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s Request for Judicial Notice 45, signed by Magistrate Judge Gary S. Austin on 12/5/13. (Hellings, J)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-12-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-9</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2013-12-05</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s Request for Judicial Notice 45, signed by Magistrate Judge Gary S. Austin on 12/5/13. (Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-10/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER DENYING Plaintiff&apos;s 47 Motion to Modify Scheduling Order signed by Magistrate Judge Gary S. Austin on 1/2/2014. (Sant Agata, S)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d849</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-10</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER DENYING Plaintiff&apos;s 47 Motion to Modify Scheduling Order signed by Magistrate Judge Gary S. Austin on 1/2/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-11/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Denying Motion As Moot (Doc.52), signed by Magistrate Judge Gary S. Austin on 1/8/2014. (Fahrney, E)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-08</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7af</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-11</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2014-01-08</dateIssued>
+  <docketText>ORDER Denying Motion As Moot (Doc.52), signed by Magistrate Judge Gary S. Austin on 1/8/2014. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-12/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER GRANTING Defendant&apos;s 50 Motion to Strike or Deny Plaintiff&apos;s Request; ORDER DENYING Plaintiff&apos;s 48 Request for Judicial Notice signed by Magistrate Judge Gary S. Austin on 1/30/2014. (Sant Agata, S)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-12</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2014-01-31</dateIssued>
+  <docketText>ORDER GRANTING Defendant&apos;s 50 Motion to Strike or Deny Plaintiff&apos;s Request; ORDER DENYING Plaintiff&apos;s 48 Request for Judicial Notice signed by Magistrate Judge Gary S. Austin on 1/30/2014. (Sant Agata, S)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-13/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Requiring Plaintiff to File Opposition OR Statement of Non-Opposition to Defendants&apos; 54 Motion for Summary Judgment Within Thirty Days, signed by Magistrate Judge Gary S. Austin on 2/14/2014. (Marrujo, C)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-13</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2014-02-14</dateIssued>
+  <docketText>ORDER Requiring Plaintiff to File Opposition OR Statement of Non-Opposition to Defendants&apos; 54 Motion for Summary Judgment Within Thirty Days, signed by Magistrate Judge Gary S. Austin on 2/14/2014. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-14/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS to Dismiss Case, With Prejudice, for Plaintiff&apos;s Failure to Comply With Court Order and Failure to Prosecute, signed by Magistrate Judge Gary S. Austin on 7/17/2014, referred to Judge Ishii. Objections to F&amp;R Due Within Thirty Days. (Marrujo, C)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-14</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2014-07-17</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS to Dismiss Case, With Prejudice, for Plaintiff&apos;s Failure to Comply With Court Order and Failure to Prosecute, signed by Magistrate Judge Gary S. Austin on 7/17/2014, referred to Judge Ishii. Objections to F&amp;R Due Within Thirty Days. (Marrujo, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-15/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER For Defendant Rosenthal To Respond To Plaintiff&apos;s Motion To Dismiss Within Twenty (20) Days (Doc.75), signed by Magistrate Judge Gary S. Austin on 9/13/2014. (Response due by 10/8/2014) (Fahrney, E)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-15</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2014-09-15</dateIssued>
+  <docketText>ORDER For Defendant Rosenthal To Respond To Plaintiff&apos;s Motion To Dismiss Within Twenty (20) Days (Doc.75), signed by Magistrate Judge Gary S. Austin on 9/13/2014. (Response due by 10/8/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-16/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Altering Time For Defendant To Respond To Plaintiff&apos;s Requested Rule 41 Dismissal (Doc.75), signed by District Judge Anthony W. Ishii on 9/22/2014. (Responses due by 9/25/2014) (Fahrney, E)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d7b2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-16</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2014-09-22</dateIssued>
+  <docketText>ORDER Altering Time For Defendant To Respond To Plaintiff&apos;s Requested Rule 41 Dismissal (Doc.75), signed by District Judge Anthony W. Ishii on 9/22/2014. (Responses due by 9/25/2014) (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_10-cv-01764-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-17/mods.xml">
+ <titleInfo>
+  <title>(PC) Fields v. Rosenthal</title>
+  <subTitle>ORDER Closing Case In Light Of Unopposed Request To Dismiss (Doc. Nos.54,72,75), signed by District Judge Anthony W. Ishii on 9/25/2014. IT IS HEREBY ORDERED that: Plaintiffs Rule 41(a)(2) motion for voluntary dismissal (Doc. No. 75) is GRANTED. Defendants motion for summary judgment (Doc. No. 54) is DENIED as moot. The Court declines to adopt the July 17, 2014 Findings and Recommendation (Doc. No. 72) in light of the Rule 41(a) dismissal. The Clerk shall CLOSE this case. (Fahrney, E)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-09-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a32d84f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-17</identifier>
+ <identifier type="former granule identifier">caed-1_10-cv-01764_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_10-cv-01764/USCOURTS-caed-1_10-cv-01764-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_10-cv-01764/pdf/USCOURTS-caed-1_10-cv-01764-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:10-cv-01764; (PC) Fields v. Rosenthal; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_10-cv-01764-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2014-09-25</dateIssued>
+  <docketText>ORDER Closing Case In Light Of Unopposed Request To Dismiss (Doc. Nos.54,72,75), signed by District Judge Anthony W. Ishii on 9/25/2014. IT IS HEREBY ORDERED that: Plaintiffs Rule 41(a)(2) motion for voluntary dismissal (Doc. No. 75) is GRANTED. Defendants motion for summary judgment (Doc. No. 54) is DENIED as moot. The Court declines to adopt the July 17, 2014 Findings and Recommendation (Doc. No. 72) in light of the Rule 41(a) dismissal. The Clerk shall CLOSE this case. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

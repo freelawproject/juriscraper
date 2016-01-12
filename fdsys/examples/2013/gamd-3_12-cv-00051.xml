@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18619dbdd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-08-28</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-08-27</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051</identifier>
+<identifier type="local">P0b002ee18619dbdd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-08-28</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-08-28</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-3_12-cv-00051</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_12-cv-00051</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:12-cv-00051</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWW)</cause>
+ <party firstName="CAROLYN" fullName="CAROLYN W COLVIN" lastName="COLVIN" middleName="W" role="Defendant"></party>
+ <party firstName="JEROLINE" fullName="JEROLINE RUCKER PITTMAN" lastName="PITTMAN" middleName="RUCKER" role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+</extension>
+<titleInfo>
+ <title>PITTMAN v. COLVIN</title>
+ <partNumber>3:12-cv-00051</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:12-cv-00051;12-051</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Athens</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>CAROLYN W COLVIN</displayForm>
+ <namePart type="family">COLVIN</namePart>
+ <namePart type="given">CAROLYN</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>JEROLINE RUCKER PITTMAN</displayForm>
+ <namePart type="family">PITTMAN</namePart>
+ <namePart type="given">JEROLINE</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>SOCIAL SECURITY ADMINISTRATION (NOTICE)</displayForm>
+ <namePart type="family">SOCIAL SECURITY ADMINISTRATION (NOTICE)</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Notice</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-3_12-cv-00051</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>3:12-cv-00051</caseNumber>
+ <caseOffice>Athens</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>863</natureSuitCode>
+ <natureSuit>Social Security - DIWC/DIWW (405(g))</natureSuit>
+ <cause>42:405 Review of HHS Decision (DIWW)</cause>
+ <party firstName="CAROLYN" fullName="CAROLYN W COLVIN" lastName="COLVIN" middleName="W" role="Defendant"></party>
+ <party firstName="JEROLINE" fullName="JEROLINE RUCKER PITTMAN" lastName="PITTMAN" middleName="RUCKER" role="Plaintiff"></party>
+ <party fullName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" lastName="SOCIAL SECURITY ADMINISTRATION (NOTICE)" role="Notice"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_12-cv-00051-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-0/mods.xml">
+ <titleInfo>
+  <title>PITTMAN v. COLVIN</title>
+  <subTitle>REPORT AND RECOMMENDATION re 6 MOTION to Dismiss Complaint re 1 Complaint : filed by MICHAEL J ASTRUE. Ordered by US Mag Judge Stephen Hyles on 11/28/12. (lws)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-11-28</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_12-cv-00051-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1861a7a64</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-0</identifier>
+ <identifier type="former granule identifier">gamd-3_12-cv-00051_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051/pdf/USCOURTS-gamd-3_12-cv-00051-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00051; PITTMAN v. COLVIN; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_12-cv-00051-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-11-28</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 6 MOTION to Dismiss Complaint re 1 Complaint : filed by MICHAEL J ASTRUE. Ordered by US Mag Judge Stephen Hyles on 11/28/12. (lws)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_12-cv-00051-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-1/mods.xml">
+ <titleInfo>
+  <title>PITTMAN v. COLVIN</title>
+  <subTitle>ORDER denying 6 Motion to Dismiss Complaint; adopting 11 Report and Recommendations.Ordered by Judge Clay D. Land on 1/3/2013 (tlf).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_12-cv-00051-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1861a7a65</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-1</identifier>
+ <identifier type="former granule identifier">gamd-3_12-cv-00051_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051/pdf/USCOURTS-gamd-3_12-cv-00051-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00051; PITTMAN v. COLVIN; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_12-cv-00051-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER denying 6 Motion to Dismiss Complaint; adopting 11 Report and Recommendations.Ordered by Judge Clay D. Land on 1/3/2013 (tlf).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_12-cv-00051-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-2/mods.xml">
+ <titleInfo>
+  <title>PITTMAN v. COLVIN</title>
+  <subTitle>REPORT AND RECOMMENDATION re 1 Complaint filed by JEROLINE RUCKER PITTMAN. Ordered by US Mag Judge Stephen Hyles on 7/29/13. (lws)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_12-cv-00051-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1861a797d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-2</identifier>
+ <identifier type="former granule identifier">gamd-3_12-cv-00051_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051/pdf/USCOURTS-gamd-3_12-cv-00051-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00051; PITTMAN v. COLVIN; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_12-cv-00051-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-07-29</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 1 Complaint filed by JEROLINE RUCKER PITTMAN. Ordered by US Mag Judge Stephen Hyles on 7/29/13. (lws)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-3_12-cv-00051-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-3/mods.xml">
+ <titleInfo>
+  <title>PITTMAN v. COLVIN</title>
+  <subTitle>ORDER adopting Report and Recommendations re 19 Report and Recommendations.Ordered by Judge Clay D. Land on 8/27/2013 (ggs)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-3_12-cv-00051-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1861a7a66</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-3</identifier>
+ <identifier type="former granule identifier">gamd-3_12-cv-00051_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-3_12-cv-00051/USCOURTS-gamd-3_12-cv-00051-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-3_12-cv-00051/pdf/USCOURTS-gamd-3_12-cv-00051-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:12-cv-00051; PITTMAN v. COLVIN; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-3_12-cv-00051-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-08-27</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 19 Report and Recommendations.Ordered by Judge Clay D. Land on 8/27/2013 (ggs)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,423 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c31ab9">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Minnesota</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mnd-0_13-cv-02201</identifier>
+<identifier type="local">P0b002ee186c31ab9</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mnd-0_13-cv-02201</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mnd-0_13-cv-02201</accessId>
+ <courtType>District</courtType>
+ <courtCode>mnd</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Minnesota</courtState>
+ <courtSortOrder>2260</courtSortOrder>
+ <caseNumber>0:13-cv-02201</caseNumber>
+ <caseOffice>DMN</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1332 Diversity-Petition to Quiet Title</cause>
+ <party firstName="Larry" fullName="Larry Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Keith" fullName="Keith Myrah" lastName="Myrah" role="Plaintiff"></party>
+ <party firstName="Loren" fullName="Loren Rud" lastName="Rud" role="Plaintiff"></party>
+ <party firstName="Amy" fullName="Amy Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Erik" fullName="Erik Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Ethan" fullName="Ethan Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Jared" fullName="Jared Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Lorri" fullName="Lorri Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Maria" fullName="Maria Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Nathan" fullName="Nathan Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Seth" fullName="Seth Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Tricia" fullName="Tricia Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Trisha" fullName="Trisha Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl F. Solum" lastName="Solum" middleName="F." role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne K. Solum" lastName="Solum" middleName="K." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Todd" fullName="Todd Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Paul" fullName="Paul Zilly" lastName="Zilly" role="Plaintiff"></party>
+ <party firstName="Ann" fullName="Ann Marie Zilly" lastName="Zilly" middleName="Marie" role="Plaintiff"></party>
+ <party firstName="Anne" fullName="Anne Marie Zilly" lastName="Zilly" middleName="Marie" role="Plaintiff"></party>
+ <party fullName="all unknown persons claiming any right, title, estate, or lien in the real estate described herein" lastName="all unknown persons claiming any right, title, estate, or lien in the real estate described herein" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Tollefsrud et al v. Solum et al</title>
+ <partNumber>0:13-cv-02201</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mnd-0_13-cv-02201/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">0:13-cv-02201;13-2201</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Minnesota</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>DMN</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Larry Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Keith Myrah</displayForm>
+ <namePart type="family">Myrah</namePart>
+ <namePart type="given">Keith</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Loren Rud</displayForm>
+ <namePart type="family">Rud</namePart>
+ <namePart type="given">Loren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Amy Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Amy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Erik Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Erik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ethan Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Ethan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>George Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Jared Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Jared</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Laura Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Laura</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lorri Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Lorri</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Maria Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Maria</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Nathan Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Nathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Seth Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Seth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Tricia Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Tricia</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trisha Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Trisha</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Karl F. Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Karl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Suzanne K. Solum</displayForm>
+ <namePart type="family">Solum</namePart>
+ <namePart type="given">Suzanne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Katherine Tollefsrud</displayForm>
+ <namePart type="family">Tollefsrud</namePart>
+ <namePart type="given">Katherine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Tollefsrud</displayForm>
+ <namePart type="family">Tollefsrud</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Todd Tollefsrud</displayForm>
+ <namePart type="family">Tollefsrud</namePart>
+ <namePart type="given">Todd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Zilly</displayForm>
+ <namePart type="family">Zilly</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Ann Marie Zilly</displayForm>
+ <namePart type="family">Zilly</namePart>
+ <namePart type="given">Ann</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Anne Marie Zilly</displayForm>
+ <namePart type="family">Zilly</namePart>
+ <namePart type="given">Anne</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>all unknown persons claiming any right, title, estate, or lien in the real estate described herein</displayForm>
+ <namePart type="family">all unknown persons claiming any right, title, estate, or lien in the real estate described herein</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mnd-0_13-cv-02201</accessId>
+ <courtType>District</courtType>
+ <courtCode>mnd</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Minnesota</courtState>
+ <courtSortOrder>2260</courtSortOrder>
+ <caseNumber>0:13-cv-02201</caseNumber>
+ <caseOffice>DMN</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>290</natureSuitCode>
+ <natureSuit>Other Real Property Actions</natureSuit>
+ <cause>28:1332 Diversity-Petition to Quiet Title</cause>
+ <party firstName="Larry" fullName="Larry Johnson" lastName="Johnson" role="Plaintiff"></party>
+ <party firstName="Keith" fullName="Keith Myrah" lastName="Myrah" role="Plaintiff"></party>
+ <party firstName="Loren" fullName="Loren Rud" lastName="Rud" role="Plaintiff"></party>
+ <party firstName="Amy" fullName="Amy Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Dale" fullName="Dale Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Erik" fullName="Erik Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Ethan" fullName="Ethan Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="George" fullName="George Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Jared" fullName="Jared Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Joseph" fullName="Joseph Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Laura" fullName="Laura Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Lorri" fullName="Lorri Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Maria" fullName="Maria Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Mark" fullName="Mark Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Matthew" fullName="Matthew Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Nathan" fullName="Nathan Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Seth" fullName="Seth Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Tricia" fullName="Tricia Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Trisha" fullName="Trisha Solum" lastName="Solum" role="Plaintiff"></party>
+ <party firstName="Karl" fullName="Karl F. Solum" lastName="Solum" middleName="F." role="Defendant"></party>
+ <party firstName="Suzanne" fullName="Suzanne K. Solum" lastName="Solum" middleName="K." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Thomas" lastName="Thomas" role="Plaintiff"></party>
+ <party firstName="Katherine" fullName="Katherine Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Thomas" fullName="Thomas Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Todd" fullName="Todd Tollefsrud" lastName="Tollefsrud" role="Plaintiff"></party>
+ <party firstName="Paul" fullName="Paul Zilly" lastName="Zilly" role="Plaintiff"></party>
+ <party firstName="Ann" fullName="Ann Marie Zilly" lastName="Zilly" middleName="Marie" role="Plaintiff"></party>
+ <party firstName="Anne" fullName="Anne Marie Zilly" lastName="Zilly" middleName="Marie" role="Plaintiff"></party>
+ <party fullName="all unknown persons claiming any right, title, estate, or lien in the real estate described herein" lastName="all unknown persons claiming any right, title, estate, or lien in the real estate described herein" role="Defendant"></party>
+ <state>Minnesota</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mnd-0_13-cv-02201-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-0/mods.xml">
+ <titleInfo>
+  <title>Tollefsrud et al v. Solum et al</title>
+  <subTitle>REPORT AND RECOMMENDATION re 8 MOTION to Dismiss for Lack of Jurisdiction filed by Suzanne K. Solum, Karl F. Solum Objections to R&amp;R due by 12/4/2013. Signed by Magistrate Judge Jeanne J. Graham on 11/19/13. (kt)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mnd-0_13-cv-02201-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c44e13</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-0</identifier>
+ <identifier type="former granule identifier">mnd-0_13-cv-02201_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mnd-0_13-cv-02201/pdf/USCOURTS-mnd-0_13-cv-02201-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 0:13-cv-02201; Tollefsrud et al v. Solum et al; </searchTitle>
+  <courtName>United States District Court District of Minnesota</courtName>
+  <state>Minnesota</state>
+  <accessId>USCOURTS-mnd-0_13-cv-02201-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-19</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 8 MOTION to Dismiss for Lack of Jurisdiction filed by Suzanne K. Solum, Karl F. Solum Objections to R&amp;R due by 12/4/2013. Signed by Magistrate Judge Jeanne J. Graham on 11/19/13. (kt)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-mnd-0_13-cv-02201-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-1/mods.xml">
+ <titleInfo>
+  <title>Tollefsrud et al v. Solum et al</title>
+  <subTitle>MEMORANDUM OF LAW &amp; ORDER. IT IS HEREBY ORDERED: 1. The Court ADOPTS IN PART and DECLINES TO ADOPT IN PART the Report and Recommendation of United States Magistrate Judge Jeanne J. Graham dated November 19, 2013 25 as follows: the Court DECLINES TO ADOPT Section III(D), entitled &quot;Younger,&quot; and the second paragraph of Section IV, entitled &quot;CONCLUSION;&quot; and the Court ADOPTS the remainder of the Report and Recommendation. 2. Defendants Karl F. Solum and Suzanne K. Solum&apos;s Motion to Dismiss Complaint 8 is DENIED. (Written Opinion). Signed by Chief Judge Michael J. Davis on 1/3/14. (GRR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mnd-0_13-cv-02201-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c44e12</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-1</identifier>
+ <identifier type="former granule identifier">mnd-0_13-cv-02201_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mnd-0_13-cv-02201/USCOURTS-mnd-0_13-cv-02201-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mnd-0_13-cv-02201/pdf/USCOURTS-mnd-0_13-cv-02201-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 0:13-cv-02201; Tollefsrud et al v. Solum et al; </searchTitle>
+  <courtName>United States District Court District of Minnesota</courtName>
+  <state>Minnesota</state>
+  <accessId>USCOURTS-mnd-0_13-cv-02201-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>MEMORANDUM OF LAW &amp; ORDER. IT IS HEREBY ORDERED: 1. The Court ADOPTS IN PART and DECLINES TO ADOPT IN PART the Report and Recommendation of United States Magistrate Judge Jeanne J. Graham dated November 19, 2013 25 as follows: the Court DECLINES TO ADOPT Section III(D), entitled &quot;Younger,&quot; and the second paragraph of Section IV, entitled &quot;CONCLUSION;&quot; and the Court ADOPTS the remainder of the Report and Recommendation. 2. Defendants Karl F. Solum and Suzanne K. Solum&apos;s Motion to Dismiss Complaint 8 is DENIED. (Written Opinion). Signed by Chief Judge Michael J. Davis on 1/3/14. (GRR)</docketText>
+</extension>
+</relatedItem>
+</mods>

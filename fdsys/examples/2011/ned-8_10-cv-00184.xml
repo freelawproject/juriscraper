@@ -1,0 +1,198 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a7ec8">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2011-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00184</identifier>
+<identifier type="local">P0b002ee1817a7ec8</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_10-cv-00184</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00184</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00184</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party fullName="Brown&amp;Associates" lastName="Brown&amp;Associates" role="Plaintiff"></party>
+ <party fullName="Positive Property Management" lastName="Positive Property Management" role="Defendant"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Trustee"></party>
+</extension>
+<titleInfo>
+ <title>Brown&amp;Associates v. Positive Property Management</title>
+ <partNumber>8:10-cv-00184</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00184/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:10-cv-00184;10-184</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Brown&amp;Associates</displayForm>
+ <namePart type="family">Brown&amp;Associates</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Positive Property Management</displayForm>
+ <namePart type="family">Positive Property Management</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Bankruptcy Court</displayForm>
+ <namePart type="family">U.S. Bankruptcy Court</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>U.S. Trustee</displayForm>
+ <namePart type="family">U.S. Trustee</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_10-cv-00184</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:10-cv-00184</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>422</natureSuitCode>
+ <natureSuit>Bankruptcy Appeals Rule 28 USC 158</natureSuit>
+ <cause>28:0158 Notice of Appeal re Bankruptcy Matter (BA</cause>
+ <party fullName="Brown&amp;Associates" lastName="Brown&amp;Associates" role="Plaintiff"></party>
+ <party fullName="Positive Property Management" lastName="Positive Property Management" role="Defendant"></party>
+ <party fullName="U.S. Bankruptcy Court" lastName="U.S. Bankruptcy Court" role="Interested Party"></party>
+ <party fullName="U.S. Trustee" lastName="U.S. Trustee" role="Trustee"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00184-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-0/mods.xml">
+ <titleInfo>
+  <title>Brown&amp;Associates v. Positive Property Management</title>
+  <subTitle>COPY OF JUDGMENT from USBC-Nebraska BK 08-83078-TJM, ADV 09-8003-TJM. Judgment is hereby entered in favor of Brown&amp;Associates, Ltd., and against Positive Property Management, LLC. Positive Property Management, LLC, breached the restrictive use paragraph in the lease and the breach was material, giving rise to a right to terminate the lease by Maple, Inc. Ordered by Bankruptcy Judge Timothy J. Mahoney on March 10, 2010. (JAE)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-05-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00184-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18185fd5c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-0</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00184_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00184/pdf/USCOURTS-ned-8_10-cv-00184-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00184; Brown&amp;Associates v. Positive Property Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00184-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-05-10</dateIssued>
+  <docketText>COPY OF JUDGMENT from USBC-Nebraska BK 08-83078-TJM, ADV 09-8003-TJM. Judgment is hereby entered in favor of Brown&amp;Associates, Ltd., and against Positive Property Management, LLC. Positive Property Management, LLC, breached the restrictive use paragraph in the lease and the breach was material, giving rise to a right to terminate the lease by Maple, Inc. Ordered by Bankruptcy Judge Timothy J. Mahoney on March 10, 2010. (JAE)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_10-cv-00184-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-1/mods.xml">
+ <titleInfo>
+  <title>Brown&amp;Associates v. Positive Property Management</title>
+  <subTitle>MEMORANDUM OPINION- The judgment of the bankruptcy court will be affirmed. A separate Order and Judgment will be entered in accordance with this Memorandum Opinion. Ordered by Judge Laurie Smith Camp. (MKR)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_10-cv-00184-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18185fe41</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-1</identifier>
+ <identifier type="former granule identifier">ned-8_10-cv-00184_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_10-cv-00184/USCOURTS-ned-8_10-cv-00184-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_10-cv-00184/pdf/USCOURTS-ned-8_10-cv-00184-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-cv-00184; Brown&amp;Associates v. Positive Property Management; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_10-cv-00184-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-01-18</dateIssued>
+  <docketText>MEMORANDUM OPINION- The judgment of the bankruptcy court will be affirmed. A separate Order and Judgment will be entered in accordance with this Memorandum Opinion. Ordered by Judge Laurie Smith Camp. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

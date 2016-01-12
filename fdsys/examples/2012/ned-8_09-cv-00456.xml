@@ -1,0 +1,2949 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1836946f5">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-10-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-10-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456</identifier>
+<identifier type="local">P0b002ee1836946f5</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-10-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-10-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00456</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00456</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00456</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Contitutionality of State Statutes</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Sandra" fullName="Sandra J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry L. Archer" lastName="Archer" middleName="L." role="Defendant"></party>
+ <party firstName="Warren" fullName="Warren R. Arganbright" lastName="Arganbright" middleName="R." role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda A. Bauer" lastName="Bauer" middleName="A." role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Becker" lastName="Becker" role="Defendant"></party>
+ <party firstName="Ashley" fullName="Ashley Boettcher" lastName="Boettcher" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis D. Botelho" lastName="Botelho" middleName="D." role="Defendant"></party>
+ <party firstName="Bradley" fullName="Bradley Boyum" lastName="Boyum" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Brouillette" lastName="Brouillette" role="Defendant"></party>
+ <party firstName="William" fullName="William Brueggman" lastName="Brueggman" role="Defendant"></party>
+ <party firstName="James" fullName="James D. Brueggman" lastName="Brueggman" middleName="D." role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party firstName="Vernon" fullName="Vernon Buckminster" lastName="Buckminster" role="Defendant"></party>
+ <party firstName="William" fullName="William Burgess" lastName="Burgess" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas K. Casady" lastName="Casady" middleName="K." role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Chase" lastName="Chase" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Christensen" lastName="Christensen" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald E. Colling" lastName="Colling" middleName="E." role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Cookson" lastName="Cookson" role="Interested Party"></party>
+ <party firstName="Nathan" fullName="Nathan Cox" lastName="Cox" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Crandall" lastName="Crandall" role="Defendant"></party>
+ <party firstName="Jill" fullName="Jill R. Cunningham" lastName="Cunningham" middleName="R." role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven M. Curry" lastName="Curry" middleName="M." role="Defendant"></party>
+ <party firstName="Karl" fullName="Karl Dailey" lastName="Dailey" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Fegler Daiss" lastName="Daiss" middleName="Fegler" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="David" fullName="David Derickson" lastName="Derickson" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 21-23" lastName="Doe 21-23" role="Intervenor"></party>
+ <party firstName="Thomas" fullName="Thomas B. Donner" lastName="Donner" middleName="B." role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry D. Donner" lastName="Donner" middleName="D." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Dow" lastName="Dow" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick A. Duncan" lastName="Duncan" middleName="A." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy F. Dunning" lastName="Dunning" middleName="F." role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn R. Eatherton" lastName="Eatherton" middleName="R." role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick Eberhardt" lastName="Eberhardt" role="Defendant"></party>
+ <party firstName="John" fullName="John Edens" lastName="Edens" role="Defendant"></party>
+ <party firstName="J." fullName="J. Adam Edmund" lastName="Edmund" middleName="Adam" role="Defendant"></party>
+ <party firstName="Blake" fullName="Blake Edwards" lastName="Edwards" role="Defendant"></party>
+ <party firstName="Tad" fullName="Tad D. Eickman" lastName="Eickman" middleName="D." role="Defendant"></party>
+ <party firstName="Wendy" fullName="Wendy L. Elston" lastName="Elston" middleName="L." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Eng" lastName="Eng" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark L. Eurek" lastName="Eurek" middleName="L." role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Faesser" lastName="Faesser" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Franklin" lastName="Franklin" role="Defendant"></party>
+ <party firstName="John" fullName="John Freudenberg" lastName="Freudenberg" role="Interested Party"></party>
+ <party firstName="D." fullName="D. Eugene Garner" lastName="Garner" middleName="Eugene" role="Defendant"></party>
+ <party firstName="Harry" fullName="Harry J. Gillway" lastName="Gillway" middleName="J." role="Defendant"></party>
+ <party firstName="Shurie" fullName="Shurie R. Graeve" lastName="Graeve" middleName="R." role="Defendant"></party>
+ <party firstName="James" fullName="James Gress" lastName="Gress" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted S. Griess" lastName="Griess" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William Gumm" lastName="Gumm" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery L. Gurnsey" lastName="Gurnsey" middleName="L." role="Defendant"></party>
+ <party fullName="Gus" lastName="Gus" role="Defendant"></party>
+ <party firstName="Millard" fullName="Millard Gustafson" lastName="Gustafson" role="Defendant"></party>
+ <party firstName="John" fullName="John Haller" lastName="Haller" role="Defendant"></party>
+ <party firstName="Darrell" fullName="Darrell Hamilton" lastName="Hamilton" role="Defendant"></party>
+ <party firstName="Kirk" fullName="Kirk W. Handrup" lastName="Handrup" middleName="W." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Hapner" lastName="Hapner" role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca R. Harling" lastName="Harling" middleName="R." role="Defendant"></party>
+ <party firstName="John" fullName="John Harms" lastName="Harms" role="Interested Party"></party>
+ <party firstName="Vance" fullName="Vance Haug" lastName="Haug" role="Defendant"></party>
+ <party firstName="Alex" fullName="Alex Hayes" lastName="Hayes" role="Defendant"></party>
+ <party firstName="Willis" fullName="Willis Haynes" lastName="Haynes" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Hebbert" lastName="Hebbert" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Hecker" lastName="Hecker" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Henderson" lastName="Henderson" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas P. Herzog" lastName="Herzog" middleName="P." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Hespen" lastName="Hespen" role="Defendant"></party>
+ <party firstName="George" fullName="George L. Hirschbach" lastName="Hirschbach" middleName="L." role="Defendant"></party>
+ <party firstName="Vern" fullName="Vern Hjorth" lastName="Hjorth" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy E. Hoeft" lastName="Hoeft" middleName="E." role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Smith Hogancamp" lastName="Hogancamp" middleName="Smith" role="Defendant"></party>
+ <party firstName="Kirby" fullName="Kirby Holloway" lastName="Holloway" role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Houloose" lastName="Houloose" role="Defendant"></party>
+ <party firstName="Casey" fullName="Casey D. Hurlburt" lastName="Hurlburt" middleName="D." role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen J. Hutchinson" lastName="Hutchinson" middleName="J." role="Defendant"></party>
+ <party firstName="James" fullName="James F. Janecek" lastName="Janecek" middleName="F." role="Defendant"></party>
+ <party firstName="LeRoy" fullName="LeRoy W. Janssen" lastName="Janssen" middleName="W." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael F. Janulewicz" lastName="Janulewicz" middleName="F." role="Defendant"></party>
+ <party fullName="John Doe and Jane Doe 1 through 20" lastName="John Doe and Jane Doe 1 through 20" role="Plaintiff"></party>
+ <party fullName="John Doe and Jane Doe 1 through 36" lastName="John Doe and Jane Doe 1 through 36" role="Plaintiff"></party>
+ <party fullName="John Doe and Jane Doe A through K" lastName="John Doe and Jane Doe A through K" role="Plaintiff"></party>
+ <party firstName="Darrell" fullName="Darrell Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester E. Johnson" lastName="Johnson" middleName="E." role="Defendant"></party>
+ <party firstName="Kurt" fullName="Kurt Kapperman" lastName="Kapperman" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis King" lastName="King" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Kirsch" lastName="Kirsch" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Kleinberg" lastName="Kleinberg" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald W. Kleine" lastName="Kleine" middleName="W." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Klug" lastName="Klug" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Koranda" lastName="Koranda" role="Defendant"></party>
+ <party firstName="Jerome" fullName="Jerome Kramer" lastName="Kramer" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul J. Kruse" lastName="Kruse" middleName="J." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Lacey" lastName="Lacey" role="Defendant"></party>
+ <party firstName="Dwaine" fullName="Dwaine W. Ladwig" lastName="Ladwig" middleName="W." role="Defendant"></party>
+ <party firstName="W." fullName="W. Bert Lammli" lastName="Lammli" middleName="Bert" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Lautenbaugh" lastName="Lautenbaugh" role="Interested Party"></party>
+ <party firstName="Jim" fullName="Jim K. Lawson" lastName="Lawson" middleName="K." role="Defendant"></party>
+ <party firstName="David" fullName="David Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Leggott" lastName="Leggott" role="Defendant"></party>
+ <party firstName="Louie" fullName="Louie M. Ligouri" lastName="Ligouri" middleName="M." role="Defendant"></party>
+ <party firstName="Adrian" fullName="Adrian Lindsey" lastName="Lindsey" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Long" lastName="Long" role="Defendant"></party>
+ <party firstName="Brent" fullName="Brent Lottman" lastName="Lottman" role="Defendant"></party>
+ <party firstName="Verlyn" fullName="Verlyn Luebbe" lastName="Luebbe" role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Magee" lastName="Magee" role="Defendant"></party>
+ <party firstName="Gene" fullName="Gene Mahon" lastName="Mahon" role="Defendant"></party>
+ <party firstName="James" fullName="James R. Marr" lastName="Marr" middleName="R." role="Defendant"></party>
+ <party firstName="Ben" fullName="Ben Matchett" lastName="Matchett" role="Defendant"></party>
+ <party firstName="Tammy" fullName="Tammy Maul-Bodlak" lastName="Maul-Bodlak" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. McBride" lastName="McBride" middleName="S." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry McDole" lastName="McDole" role="Defendant"></party>
+ <party firstName="James" fullName="James J. McNally" lastName="McNally" middleName="J." role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick McNeil" lastName="McNeil" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony McPhillips" lastName="McPhillips" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan S. McQuay" lastName="McQuay" middleName="S." role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas E. Merz" lastName="Merz" middleName="E." role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Neil" fullName="Neil A. Miller" lastName="Miller" middleName="A." role="Defendant"></party>
+ <party firstName="Leland" fullName="Leland K. Miner" lastName="Miner" middleName="K." role="Defendant"></party>
+ <party firstName="K." fullName="K. Patrick Mooney" lastName="Mooney" middleName="Patrick" role="Defendant"></party>
+ <party firstName="Alan" fullName="Alan Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="Davis" fullName="Davis Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="A." fullName="A. James Moravek" lastName="Moravek" middleName="James" role="Defendant"></party>
+ <party firstName="John" fullName="John Morgan" lastName="Morgan" role="Defendant"></party>
+ <party firstName="Tammy" fullName="Tammy Mowry" lastName="Mowry" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Mueller" lastName="Mueller" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy S. Mullen" lastName="Mullen" middleName="S." role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Murtaugh" lastName="Murtaugh" role="Defendant"></party>
+ <party fullName="Nebraska State Patrol" lastName="Nebraska State Patrol" role="Defendant"></party>
+ <party firstName="Lynn" fullName="Lynn Nichols" lastName="Nichols" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Nutt" lastName="Nutt" role="Defendant"></party>
+ <party firstName="Corey" fullName="Corey O&apos;Brien" lastName="O&apos;Brien" role="Interested Party"></party>
+ <party firstName="Dennis" fullName="Dennis Ocken" lastName="Ocken" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey S. Ortgies" lastName="Ortgies" middleName="S." role="Defendant"></party>
+ <party firstName="James" fullName="James D. Owens" lastName="Owens" middleName="D." role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas D. Palik" lastName="Palik" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David J. Partsch" lastName="Partsch" middleName="J." role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Patterson" lastName="Patterson" role="Defendant"></party>
+ <party firstName="Joel" fullName="Joel W. Phillips" lastName="Phillips" middleName="W." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Pickell" lastName="Pickell" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael E. Pieper" lastName="Pieper" middleName="E." role="Defendant"></party>
+ <party firstName="Philip" fullName="Philip E. Pierce" lastName="Pierce" middleName="E." role="Defendant"></party>
+ <party firstName="Pete" fullName="Pete Pirsch" lastName="Pirsch" role="Interested Party"></party>
+ <party firstName="Lee" fullName="Lee Polikov" lastName="Polikov" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael H. Powell" lastName="Powell" middleName="H." role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Radcliff" lastName="Radcliff" role="Defendant"></party>
+ <party firstName="Jayme" fullName="Jayme Reed" lastName="Reed" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Reiber" lastName="Reiber" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie L. Reiter" lastName="Reiter" middleName="L." role="Defendant"></party>
+ <party firstName="Jean" fullName="Jean Rhodes" lastName="Rhodes" role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall Ritnour" lastName="Ritnour" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Robbins" lastName="Robbins" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard H. Roberts" lastName="Roberts" middleName="H." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Robinson" lastName="Robinson" role="Defendant"></party>
+ <party firstName="William" fullName="William Roe" lastName="Roe" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Rupp" lastName="Rupp" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul B. Schaub" lastName="Schaub" middleName="B." role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Schenck" lastName="Schenck" role="Defendant"></party>
+ <party firstName="Tami" fullName="Tami Schendt" lastName="Schendt" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy S. Schmidt" lastName="Schmidt" middleName="S." role="Defendant"></party>
+ <party firstName="Troy" fullName="Troy Schmitz" lastName="Schmitz" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon S. Schroeder" lastName="Schroeder" middleName="S." role="Defendant"></party>
+ <party firstName="David" fullName="David T. Schroeder" lastName="Schroeder" middleName="T." role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Scott" lastName="Scott" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Sieh" lastName="Sieh" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Sierks" lastName="Sierks" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Simpson" lastName="Simpson" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel A. Smith" lastName="Smith" middleName="A." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph M. Smith" lastName="Smith" middleName="M." role="Defendant"></party>
+ <party firstName="Nels" fullName="Nels Sorensen" lastName="Sorensen" role="Defendant"></party>
+ <party firstName="David" fullName="David Spiegel" lastName="Spiegel" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party firstName="David" fullName="David M. Streich" lastName="Streich" middleName="M." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Stukenholtz" lastName="Stukenholtz" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Sutherland" lastName="Sutherland" role="Defendant"></party>
+ <party firstName="James" fullName="James Swanson" lastName="Swanson" role="Defendant"></party>
+ <party firstName="John" fullName="John Thomas" lastName="Thomas" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott J. Tingelhoff" lastName="Tingelhoff" middleName="J." role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Tuma" lastName="Tuma" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Unger" lastName="Unger" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul J. Vaughan" lastName="Vaughan" middleName="J." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Vinton" lastName="Vinton" role="Defendant"></party>
+ <party firstName="George" fullName="George G. Vinton" lastName="Vinton" middleName="G." role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Wagner" lastName="Wagner" role="Defendant"></party>
+ <party firstName="James" fullName="James L. Wagner" lastName="Wagner" middleName="L." role="Defendant"></party>
+ <party firstName="Tiffany" fullName="Tiffany Wasserburger" lastName="Wasserburger" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth F. Waterman" lastName="Waterman" middleName="F." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Watson" lastName="Watson" role="Defendant"></party>
+ <party firstName="Kim" fullName="Kim W. Watson" lastName="Watson" middleName="W." role="Defendant"></party>
+ <party firstName="David" fullName="David C. Weeks" lastName="Weeks" middleName="C." role="Defendant"></party>
+ <party firstName="James" fullName="James P. Wenzl" lastName="Wenzl" middleName="P." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel L. Werner" lastName="Werner" middleName="L." role="Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Wetovick" lastName="Wetovick" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason White" lastName="White" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott K. White" lastName="White" middleName="K." role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd D. Wilson" lastName="Wilson" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David L. Wilson" lastName="Wilson" middleName="L." role="Defendant"></party>
+ <party firstName="Arlan" fullName="Arlan G. Wine" lastName="Wine" middleName="G." role="Defendant"></party>
+ <party firstName="David" fullName="David G. Wondra" lastName="Wondra" middleName="G." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Wood" lastName="Wood" role="Defendant"></party>
+ <party firstName="Joe" fullName="Joe Yocum" lastName="Yocum" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Young" lastName="Young" role="Defendant"></party>
+ <party firstName="John" fullName="John Zavadil" lastName="Zavadil" role="Defendant"></party>
+ <party firstName="James" fullName="James L. Zimmerman" lastName="Zimmerman" middleName="L." role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+ <partNumber>8:09-cv-00456</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00456;09-456</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Sandra J. Allen</displayForm>
+ <namePart type="family">Allen</namePart>
+ <namePart type="given">Sandra</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry L. Archer</displayForm>
+ <namePart type="family">Archer</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Warren R. Arganbright</displayForm>
+ <namePart type="family">Arganbright</namePart>
+ <namePart type="given">Warren</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Linda A. Bauer</displayForm>
+ <namePart type="family">Bauer</namePart>
+ <namePart type="given">Linda</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Becker</displayForm>
+ <namePart type="family">Becker</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ashley Boettcher</displayForm>
+ <namePart type="family">Boettcher</namePart>
+ <namePart type="given">Ashley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Francis D. Botelho</displayForm>
+ <namePart type="family">Botelho</namePart>
+ <namePart type="given">Francis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bradley Boyum</displayForm>
+ <namePart type="family">Boyum</namePart>
+ <namePart type="given">Bradley</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Brouillette</displayForm>
+ <namePart type="family">Brouillette</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Brueggman</displayForm>
+ <namePart type="family">Brueggman</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James D. Brueggman</displayForm>
+ <namePart type="family">Brueggman</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jon Bruning</displayForm>
+ <namePart type="family">Bruning</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vernon Buckminster</displayForm>
+ <namePart type="family">Buckminster</namePart>
+ <namePart type="given">Vernon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Burgess</displayForm>
+ <namePart type="family">Burgess</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas K. Casady</displayForm>
+ <namePart type="family">Casady</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dean Chase</displayForm>
+ <namePart type="family">Chase</namePart>
+ <namePart type="given">Dean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Melvin Christensen</displayForm>
+ <namePart type="family">Christensen</namePart>
+ <namePart type="given">Melvin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Clark</displayForm>
+ <namePart type="family">Clark</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald E. Colling</displayForm>
+ <namePart type="family">Colling</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dave Cookson</displayForm>
+ <namePart type="family">Cookson</namePart>
+ <namePart type="given">Dave</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Nathan Cox</displayForm>
+ <namePart type="family">Cox</namePart>
+ <namePart type="given">Nathan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Crandall</displayForm>
+ <namePart type="family">Crandall</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jill R. Cunningham</displayForm>
+ <namePart type="family">Cunningham</namePart>
+ <namePart type="given">Jill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steven M. Curry</displayForm>
+ <namePart type="family">Curry</namePart>
+ <namePart type="given">Steven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Karl Dailey</displayForm>
+ <namePart type="family">Dailey</namePart>
+ <namePart type="given">Karl</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donna Fegler Daiss</displayForm>
+ <namePart type="family">Daiss</namePart>
+ <namePart type="given">Donna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Davis</displayForm>
+ <namePart type="family">Davis</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Derickson</displayForm>
+ <namePart type="family">Derickson</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe 21-23</displayForm>
+ <namePart type="family">Doe 21-23</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Intervenor</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas B. Donner</displayForm>
+ <namePart type="family">Donner</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry D. Donner</displayForm>
+ <namePart type="family">Donner</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas Dow</displayForm>
+ <namePart type="family">Dow</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick A. Duncan</displayForm>
+ <namePart type="family">Duncan</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy F. Dunning</displayForm>
+ <namePart type="family">Dunning</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn R. Eatherton</displayForm>
+ <namePart type="family">Eatherton</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rick Eberhardt</displayForm>
+ <namePart type="family">Eberhardt</namePart>
+ <namePart type="given">Rick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Edens</displayForm>
+ <namePart type="family">Edens</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Adam Edmund</displayForm>
+ <namePart type="family">Edmund</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Blake Edwards</displayForm>
+ <namePart type="family">Edwards</namePart>
+ <namePart type="given">Blake</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tad D. Eickman</displayForm>
+ <namePart type="family">Eickman</namePart>
+ <namePart type="given">Tad</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Wendy L. Elston</displayForm>
+ <namePart type="family">Elston</namePart>
+ <namePart type="given">Wendy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Eng</displayForm>
+ <namePart type="family">Eng</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark L. Eurek</displayForm>
+ <namePart type="family">Eurek</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Victor Faesser</displayForm>
+ <namePart type="family">Faesser</namePart>
+ <namePart type="given">Victor</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Franklin</displayForm>
+ <namePart type="family">Franklin</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Freudenberg</displayForm>
+ <namePart type="family">Freudenberg</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>D. Eugene Garner</displayForm>
+ <namePart type="family">Garner</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harry J. Gillway</displayForm>
+ <namePart type="family">Gillway</namePart>
+ <namePart type="given">Harry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shurie R. Graeve</displayForm>
+ <namePart type="family">Graeve</namePart>
+ <namePart type="given">Shurie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Gress</displayForm>
+ <namePart type="family">Gress</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ted S. Griess</displayForm>
+ <namePart type="family">Griess</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Gumm</displayForm>
+ <namePart type="family">Gumm</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Avery L. Gurnsey</displayForm>
+ <namePart type="family">Gurnsey</namePart>
+ <namePart type="given">Avery</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gus</displayForm>
+ <namePart type="family">Gus</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Millard Gustafson</displayForm>
+ <namePart type="family">Gustafson</namePart>
+ <namePart type="given">Millard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Haller</displayForm>
+ <namePart type="family">Haller</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darrell Hamilton</displayForm>
+ <namePart type="family">Hamilton</namePart>
+ <namePart type="given">Darrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kirk W. Handrup</displayForm>
+ <namePart type="family">Handrup</namePart>
+ <namePart type="given">Kirk</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Hapner</displayForm>
+ <namePart type="family">Hapner</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rebecca R. Harling</displayForm>
+ <namePart type="family">Harling</namePart>
+ <namePart type="given">Rebecca</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Harms</displayForm>
+ <namePart type="family">Harms</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Vance Haug</displayForm>
+ <namePart type="family">Haug</namePart>
+ <namePart type="given">Vance</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alex Hayes</displayForm>
+ <namePart type="family">Hayes</namePart>
+ <namePart type="given">Alex</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Willis Haynes</displayForm>
+ <namePart type="family">Haynes</namePart>
+ <namePart type="given">Willis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Shawn Hebbert</displayForm>
+ <namePart type="family">Hebbert</namePart>
+ <namePart type="given">Shawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Hecker</displayForm>
+ <namePart type="family">Hecker</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ted Henderson</displayForm>
+ <namePart type="family">Henderson</namePart>
+ <namePart type="given">Ted</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas P. Herzog</displayForm>
+ <namePart type="family">Herzog</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Hespen</displayForm>
+ <namePart type="family">Hespen</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George L. Hirschbach</displayForm>
+ <namePart type="family">Hirschbach</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Vern Hjorth</displayForm>
+ <namePart type="family">Hjorth</namePart>
+ <namePart type="given">Vern</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy E. Hoeft</displayForm>
+ <namePart type="family">Hoeft</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julie Smith Hogancamp</displayForm>
+ <namePart type="family">Hogancamp</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kirby Holloway</displayForm>
+ <namePart type="family">Holloway</namePart>
+ <namePart type="given">Kirby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonard Houloose</displayForm>
+ <namePart type="family">Houloose</namePart>
+ <namePart type="given">Leonard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casey D. Hurlburt</displayForm>
+ <namePart type="family">Hurlburt</namePart>
+ <namePart type="given">Casey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kathleen J. Hutchinson</displayForm>
+ <namePart type="family">Hutchinson</namePart>
+ <namePart type="given">Kathleen</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James F. Janecek</displayForm>
+ <namePart type="family">Janecek</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LeRoy W. Janssen</displayForm>
+ <namePart type="family">Janssen</namePart>
+ <namePart type="given">LeRoy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael F. Janulewicz</displayForm>
+ <namePart type="family">Janulewicz</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe and Jane Doe 1 through 20</displayForm>
+ <namePart type="family">John Doe and Jane Doe 1 through 20</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe and Jane Doe 1 through 36</displayForm>
+ <namePart type="family">John Doe and Jane Doe 1 through 36</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe and Jane Doe A through K</displayForm>
+ <namePart type="family">John Doe and Jane Doe A through K</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Darrell Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Darrell</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lester E. Johnson</displayForm>
+ <namePart type="family">Johnson</namePart>
+ <namePart type="given">Lester</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kurt Kapperman</displayForm>
+ <namePart type="family">Kapperman</namePart>
+ <namePart type="given">Kurt</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis King</displayForm>
+ <namePart type="family">King</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeff Kirsch</displayForm>
+ <namePart type="family">Kirsch</namePart>
+ <namePart type="given">Jeff</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Chris Kleinberg</displayForm>
+ <namePart type="family">Kleinberg</namePart>
+ <namePart type="given">Chris</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald W. Kleine</displayForm>
+ <namePart type="family">Kleine</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Donald Klug</displayForm>
+ <namePart type="family">Klug</namePart>
+ <namePart type="given">Donald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Koranda</displayForm>
+ <namePart type="family">Koranda</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerome Kramer</displayForm>
+ <namePart type="family">Kramer</namePart>
+ <namePart type="given">Jerome</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul J. Kruse</displayForm>
+ <namePart type="family">Kruse</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Lacey</displayForm>
+ <namePart type="family">Lacey</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dwaine W. Ladwig</displayForm>
+ <namePart type="family">Ladwig</namePart>
+ <namePart type="given">Dwaine</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Bert Lammli</displayForm>
+ <namePart type="family">Lammli</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Lautenbaugh</displayForm>
+ <namePart type="family">Lautenbaugh</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Jim K. Lawson</displayForm>
+ <namePart type="family">Lawson</namePart>
+ <namePart type="given">Jim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Lee</displayForm>
+ <namePart type="family">Lee</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Leggott</displayForm>
+ <namePart type="family">Leggott</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Louie M. Ligouri</displayForm>
+ <namePart type="family">Ligouri</namePart>
+ <namePart type="given">Louie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Adrian Lindsey</displayForm>
+ <namePart type="family">Lindsey</namePart>
+ <namePart type="given">Adrian</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Long</displayForm>
+ <namePart type="family">Long</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brent Lottman</displayForm>
+ <namePart type="family">Lottman</namePart>
+ <namePart type="given">Brent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Verlyn Luebbe</displayForm>
+ <namePart type="family">Luebbe</namePart>
+ <namePart type="given">Verlyn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Greg Magee</displayForm>
+ <namePart type="family">Magee</namePart>
+ <namePart type="given">Greg</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gene Mahon</displayForm>
+ <namePart type="family">Mahon</namePart>
+ <namePart type="given">Gene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James R. Marr</displayForm>
+ <namePart type="family">Marr</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ben Matchett</displayForm>
+ <namePart type="family">Matchett</namePart>
+ <namePart type="given">Ben</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tammy Maul-Bodlak</displayForm>
+ <namePart type="family">Maul-Bodlak</namePart>
+ <namePart type="given">Tammy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert S. McBride</displayForm>
+ <namePart type="family">McBride</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry McDole</displayForm>
+ <namePart type="family">McDole</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James J. McNally</displayForm>
+ <namePart type="family">McNally</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Patrick McNeil</displayForm>
+ <namePart type="family">McNeil</namePart>
+ <namePart type="given">Patrick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Anthony McPhillips</displayForm>
+ <namePart type="family">McPhillips</namePart>
+ <namePart type="given">Anthony</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan S. McQuay</displayForm>
+ <namePart type="family">McQuay</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas E. Merz</displayForm>
+ <namePart type="family">Merz</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Doug Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Doug</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Neil A. Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Neil</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leland K. Miner</displayForm>
+ <namePart type="family">Miner</namePart>
+ <namePart type="given">Leland</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>K. Patrick Mooney</displayForm>
+ <namePart type="family">Mooney</namePart>
+ <namePart type="given">K.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Alan Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Alan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Davis Moore</displayForm>
+ <namePart type="family">Moore</namePart>
+ <namePart type="given">Davis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>A. James Moravek</displayForm>
+ <namePart type="family">Moravek</namePart>
+ <namePart type="given">A.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Morgan</displayForm>
+ <namePart type="family">Morgan</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tammy Mowry</displayForm>
+ <namePart type="family">Mowry</namePart>
+ <namePart type="given">Tammy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Mueller</displayForm>
+ <namePart type="family">Mueller</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy S. Mullen</displayForm>
+ <namePart type="family">Mullen</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ron Murtaugh</displayForm>
+ <namePart type="family">Murtaugh</namePart>
+ <namePart type="given">Ron</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nebraska State Patrol</displayForm>
+ <namePart type="family">Nebraska State Patrol</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lynn Nichols</displayForm>
+ <namePart type="family">Nichols</namePart>
+ <namePart type="given">Lynn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Nutt</displayForm>
+ <namePart type="family">Nutt</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Corey O&apos;Brien</displayForm>
+ <namePart type="family">O&apos;Brien</namePart>
+ <namePart type="given">Corey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Dennis Ocken</displayForm>
+ <namePart type="family">Ocken</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jeffrey S. Ortgies</displayForm>
+ <namePart type="family">Ortgies</namePart>
+ <namePart type="given">Jeffrey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James D. Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Douglas D. Palik</displayForm>
+ <namePart type="family">Palik</namePart>
+ <namePart type="given">Douglas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David J. Partsch</displayForm>
+ <namePart type="family">Partsch</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tom Patterson</displayForm>
+ <namePart type="family">Patterson</namePart>
+ <namePart type="given">Tom</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joel W. Phillips</displayForm>
+ <namePart type="family">Phillips</namePart>
+ <namePart type="given">Joel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Pickell</displayForm>
+ <namePart type="family">Pickell</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael E. Pieper</displayForm>
+ <namePart type="family">Pieper</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Philip E. Pierce</displayForm>
+ <namePart type="family">Pierce</namePart>
+ <namePart type="given">Philip</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Pete Pirsch</displayForm>
+ <namePart type="family">Pirsch</namePart>
+ <namePart type="given">Pete</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Interested Party</description>
+</name>
+<name type="personal">
+ <displayForm>Lee Polikov</displayForm>
+ <namePart type="family">Polikov</namePart>
+ <namePart type="given">Lee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael H. Powell</displayForm>
+ <namePart type="family">Powell</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dale Radcliff</displayForm>
+ <namePart type="family">Radcliff</namePart>
+ <namePart type="given">Dale</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jayme Reed</displayForm>
+ <namePart type="family">Reed</namePart>
+ <namePart type="given">Jayme</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gary Reiber</displayForm>
+ <namePart type="family">Reiber</namePart>
+ <namePart type="given">Gary</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julie L. Reiter</displayForm>
+ <namePart type="family">Reiter</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jean Rhodes</displayForm>
+ <namePart type="family">Rhodes</namePart>
+ <namePart type="given">Jean</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Randall Ritnour</displayForm>
+ <namePart type="family">Ritnour</namePart>
+ <namePart type="given">Randall</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Robbins</displayForm>
+ <namePart type="family">Robbins</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Richard H. Roberts</displayForm>
+ <namePart type="family">Roberts</namePart>
+ <namePart type="given">Richard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>William Roe</displayForm>
+ <namePart type="family">Roe</namePart>
+ <namePart type="given">William</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel Rupp</displayForm>
+ <namePart type="family">Rupp</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul B. Schaub</displayForm>
+ <namePart type="family">Schaub</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Harold Schenck</displayForm>
+ <namePart type="family">Schenck</namePart>
+ <namePart type="given">Harold</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tami Schendt</displayForm>
+ <namePart type="family">Schendt</namePart>
+ <namePart type="given">Tami</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy S. Schmidt</displayForm>
+ <namePart type="family">Schmidt</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Troy Schmitz</displayForm>
+ <namePart type="family">Schmitz</namePart>
+ <namePart type="given">Troy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jon S. Schroeder</displayForm>
+ <namePart type="family">Schroeder</namePart>
+ <namePart type="given">Jon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David T. Schroeder</displayForm>
+ <namePart type="family">Schroeder</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Eric Scott</displayForm>
+ <namePart type="family">Scott</namePart>
+ <namePart type="given">Eric</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Sieh</displayForm>
+ <namePart type="family">Sieh</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tim Sierks</displayForm>
+ <namePart type="family">Sierks</namePart>
+ <namePart type="given">Tim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bill Simpson</displayForm>
+ <namePart type="family">Simpson</namePart>
+ <namePart type="given">Bill</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel A. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joseph M. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Joseph</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nels Sorensen</displayForm>
+ <namePart type="family">Sorensen</namePart>
+ <namePart type="given">Nels</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David Spiegel</displayForm>
+ <namePart type="family">Spiegel</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>State of Nebraska</displayForm>
+ <namePart type="family">State of Nebraska</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David M. Streich</displayForm>
+ <namePart type="family">Streich</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin Stukenholtz</displayForm>
+ <namePart type="family">Stukenholtz</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Timothy Sutherland</displayForm>
+ <namePart type="family">Sutherland</namePart>
+ <namePart type="given">Timothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James Swanson</displayForm>
+ <namePart type="family">Swanson</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Thomas</displayForm>
+ <namePart type="family">Thomas</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott J. Tingelhoff</displayForm>
+ <namePart type="family">Tingelhoff</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bryan Tuma</displayForm>
+ <namePart type="family">Tuma</namePart>
+ <namePart type="given">Bryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Michael Unger</displayForm>
+ <namePart type="family">Unger</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul J. Vaughan</displayForm>
+ <namePart type="family">Vaughan</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Vinton</displayForm>
+ <namePart type="family">Vinton</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>George G. Vinton</displayForm>
+ <namePart type="family">Vinton</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Terry Wagner</displayForm>
+ <namePart type="family">Wagner</namePart>
+ <namePart type="given">Terry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James L. Wagner</displayForm>
+ <namePart type="family">Wagner</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Tiffany Wasserburger</displayForm>
+ <namePart type="family">Wasserburger</namePart>
+ <namePart type="given">Tiffany</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Elizabeth F. Waterman</displayForm>
+ <namePart type="family">Waterman</namePart>
+ <namePart type="given">Elizabeth</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jerry Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Jerry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kim W. Watson</displayForm>
+ <namePart type="family">Watson</namePart>
+ <namePart type="given">Kim</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David C. Weeks</displayForm>
+ <namePart type="family">Weeks</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James P. Wenzl</displayForm>
+ <namePart type="family">Wenzl</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel L. Werner</displayForm>
+ <namePart type="family">Werner</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rodney Wetovick</displayForm>
+ <namePart type="family">Wetovick</namePart>
+ <namePart type="given">Rodney</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason White</displayForm>
+ <namePart type="family">White</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott K. White</displayForm>
+ <namePart type="family">White</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Todd D. Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Todd</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David L. Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Arlan G. Wine</displayForm>
+ <namePart type="family">Wine</namePart>
+ <namePart type="given">Arlan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>David G. Wondra</displayForm>
+ <namePart type="family">Wondra</namePart>
+ <namePart type="given">David</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Paul Wood</displayForm>
+ <namePart type="family">Wood</namePart>
+ <namePart type="given">Paul</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joe Yocum</displayForm>
+ <namePart type="family">Yocum</namePart>
+ <namePart type="given">Joe</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mark Young</displayForm>
+ <namePart type="family">Young</namePart>
+ <namePart type="given">Mark</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Zavadil</displayForm>
+ <namePart type="family">Zavadil</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>James L. Zimmerman</displayForm>
+ <namePart type="family">Zimmerman</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00456</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00456</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>950</natureSuitCode>
+ <natureSuit>Contitutionality of State Statutes</natureSuit>
+ <cause>42:1983 Civil Rights Act</cause>
+ <party firstName="Sandra" fullName="Sandra J. Allen" lastName="Allen" middleName="J." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry L. Archer" lastName="Archer" middleName="L." role="Defendant"></party>
+ <party firstName="Warren" fullName="Warren R. Arganbright" lastName="Arganbright" middleName="R." role="Defendant"></party>
+ <party firstName="Linda" fullName="Linda A. Bauer" lastName="Bauer" middleName="A." role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Becker" lastName="Becker" role="Defendant"></party>
+ <party firstName="Ashley" fullName="Ashley Boettcher" lastName="Boettcher" role="Defendant"></party>
+ <party firstName="Francis" fullName="Francis D. Botelho" lastName="Botelho" middleName="D." role="Defendant"></party>
+ <party firstName="Bradley" fullName="Bradley Boyum" lastName="Boyum" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Brouillette" lastName="Brouillette" role="Defendant"></party>
+ <party firstName="William" fullName="William Brueggman" lastName="Brueggman" role="Defendant"></party>
+ <party firstName="James" fullName="James D. Brueggman" lastName="Brueggman" middleName="D." role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon Bruning" lastName="Bruning" role="Defendant"></party>
+ <party firstName="Vernon" fullName="Vernon Buckminster" lastName="Buckminster" role="Defendant"></party>
+ <party firstName="William" fullName="William Burgess" lastName="Burgess" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas K. Casady" lastName="Casady" middleName="K." role="Defendant"></party>
+ <party firstName="Dean" fullName="Dean Chase" lastName="Chase" role="Defendant"></party>
+ <party firstName="Melvin" fullName="Melvin Christensen" lastName="Christensen" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Clark" lastName="Clark" role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald E. Colling" lastName="Colling" middleName="E." role="Defendant"></party>
+ <party firstName="Dave" fullName="Dave Cookson" lastName="Cookson" role="Interested Party"></party>
+ <party firstName="Nathan" fullName="Nathan Cox" lastName="Cox" role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Crandall" lastName="Crandall" role="Defendant"></party>
+ <party firstName="Jill" fullName="Jill R. Cunningham" lastName="Cunningham" middleName="R." role="Defendant"></party>
+ <party firstName="Steven" fullName="Steven M. Curry" lastName="Curry" middleName="M." role="Defendant"></party>
+ <party firstName="Karl" fullName="Karl Dailey" lastName="Dailey" role="Defendant"></party>
+ <party firstName="Donna" fullName="Donna Fegler Daiss" lastName="Daiss" middleName="Fegler" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Davis" lastName="Davis" role="Defendant"></party>
+ <party firstName="David" fullName="David Derickson" lastName="Derickson" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe 21-23" lastName="Doe 21-23" role="Intervenor"></party>
+ <party firstName="Thomas" fullName="Thomas B. Donner" lastName="Donner" middleName="B." role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry D. Donner" lastName="Donner" middleName="D." role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas Dow" lastName="Dow" role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick A. Duncan" lastName="Duncan" middleName="A." role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy F. Dunning" lastName="Dunning" middleName="F." role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn R. Eatherton" lastName="Eatherton" middleName="R." role="Defendant"></party>
+ <party firstName="Rick" fullName="Rick Eberhardt" lastName="Eberhardt" role="Defendant"></party>
+ <party firstName="John" fullName="John Edens" lastName="Edens" role="Defendant"></party>
+ <party firstName="J." fullName="J. Adam Edmund" lastName="Edmund" middleName="Adam" role="Defendant"></party>
+ <party firstName="Blake" fullName="Blake Edwards" lastName="Edwards" role="Defendant"></party>
+ <party firstName="Tad" fullName="Tad D. Eickman" lastName="Eickman" middleName="D." role="Defendant"></party>
+ <party firstName="Wendy" fullName="Wendy L. Elston" lastName="Elston" middleName="L." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Eng" lastName="Eng" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark L. Eurek" lastName="Eurek" middleName="L." role="Defendant"></party>
+ <party firstName="Victor" fullName="Victor Faesser" lastName="Faesser" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Franklin" lastName="Franklin" role="Defendant"></party>
+ <party firstName="John" fullName="John Freudenberg" lastName="Freudenberg" role="Interested Party"></party>
+ <party firstName="D." fullName="D. Eugene Garner" lastName="Garner" middleName="Eugene" role="Defendant"></party>
+ <party firstName="Harry" fullName="Harry J. Gillway" lastName="Gillway" middleName="J." role="Defendant"></party>
+ <party firstName="Shurie" fullName="Shurie R. Graeve" lastName="Graeve" middleName="R." role="Defendant"></party>
+ <party firstName="James" fullName="James Gress" lastName="Gress" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted S. Griess" lastName="Griess" middleName="S." role="Defendant"></party>
+ <party firstName="William" fullName="William Gumm" lastName="Gumm" role="Defendant"></party>
+ <party firstName="Avery" fullName="Avery L. Gurnsey" lastName="Gurnsey" middleName="L." role="Defendant"></party>
+ <party fullName="Gus" lastName="Gus" role="Defendant"></party>
+ <party firstName="Millard" fullName="Millard Gustafson" lastName="Gustafson" role="Defendant"></party>
+ <party firstName="John" fullName="John Haller" lastName="Haller" role="Defendant"></party>
+ <party firstName="Darrell" fullName="Darrell Hamilton" lastName="Hamilton" role="Defendant"></party>
+ <party firstName="Kirk" fullName="Kirk W. Handrup" lastName="Handrup" middleName="W." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Hapner" lastName="Hapner" role="Defendant"></party>
+ <party firstName="Rebecca" fullName="Rebecca R. Harling" lastName="Harling" middleName="R." role="Defendant"></party>
+ <party firstName="John" fullName="John Harms" lastName="Harms" role="Interested Party"></party>
+ <party firstName="Vance" fullName="Vance Haug" lastName="Haug" role="Defendant"></party>
+ <party firstName="Alex" fullName="Alex Hayes" lastName="Hayes" role="Defendant"></party>
+ <party firstName="Willis" fullName="Willis Haynes" lastName="Haynes" role="Defendant"></party>
+ <party firstName="Shawn" fullName="Shawn Hebbert" lastName="Hebbert" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Hecker" lastName="Hecker" role="Defendant"></party>
+ <party firstName="Ted" fullName="Ted Henderson" lastName="Henderson" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas P. Herzog" lastName="Herzog" middleName="P." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Hespen" lastName="Hespen" role="Defendant"></party>
+ <party firstName="George" fullName="George L. Hirschbach" lastName="Hirschbach" middleName="L." role="Defendant"></party>
+ <party firstName="Vern" fullName="Vern Hjorth" lastName="Hjorth" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy E. Hoeft" lastName="Hoeft" middleName="E." role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Smith Hogancamp" lastName="Hogancamp" middleName="Smith" role="Defendant"></party>
+ <party firstName="Kirby" fullName="Kirby Holloway" lastName="Holloway" role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Houloose" lastName="Houloose" role="Defendant"></party>
+ <party firstName="Casey" fullName="Casey D. Hurlburt" lastName="Hurlburt" middleName="D." role="Defendant"></party>
+ <party firstName="Kathleen" fullName="Kathleen J. Hutchinson" lastName="Hutchinson" middleName="J." role="Defendant"></party>
+ <party firstName="James" fullName="James F. Janecek" lastName="Janecek" middleName="F." role="Defendant"></party>
+ <party firstName="LeRoy" fullName="LeRoy W. Janssen" lastName="Janssen" middleName="W." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael F. Janulewicz" lastName="Janulewicz" middleName="F." role="Defendant"></party>
+ <party fullName="John Doe and Jane Doe 1 through 20" lastName="John Doe and Jane Doe 1 through 20" role="Plaintiff"></party>
+ <party fullName="John Doe and Jane Doe 1 through 36" lastName="John Doe and Jane Doe 1 through 36" role="Plaintiff"></party>
+ <party fullName="John Doe and Jane Doe A through K" lastName="John Doe and Jane Doe A through K" role="Plaintiff"></party>
+ <party firstName="Darrell" fullName="Darrell Johnson" lastName="Johnson" role="Defendant"></party>
+ <party firstName="Lester" fullName="Lester E. Johnson" lastName="Johnson" middleName="E." role="Defendant"></party>
+ <party firstName="Kurt" fullName="Kurt Kapperman" lastName="Kapperman" role="Defendant"></party>
+ <party firstName="Dennis" fullName="Dennis King" lastName="King" role="Defendant"></party>
+ <party firstName="Jeff" fullName="Jeff Kirsch" lastName="Kirsch" role="Defendant"></party>
+ <party firstName="Chris" fullName="Chris Kleinberg" lastName="Kleinberg" role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald W. Kleine" lastName="Kleine" middleName="W." role="Defendant"></party>
+ <party firstName="Donald" fullName="Donald Klug" lastName="Klug" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Koranda" lastName="Koranda" role="Defendant"></party>
+ <party firstName="Jerome" fullName="Jerome Kramer" lastName="Kramer" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul J. Kruse" lastName="Kruse" middleName="J." role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Lacey" lastName="Lacey" role="Defendant"></party>
+ <party firstName="Dwaine" fullName="Dwaine W. Ladwig" lastName="Ladwig" middleName="W." role="Defendant"></party>
+ <party firstName="W." fullName="W. Bert Lammli" lastName="Lammli" middleName="Bert" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Lautenbaugh" lastName="Lautenbaugh" role="Interested Party"></party>
+ <party firstName="Jim" fullName="Jim K. Lawson" lastName="Lawson" middleName="K." role="Defendant"></party>
+ <party firstName="David" fullName="David Lee" lastName="Lee" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Leggott" lastName="Leggott" role="Defendant"></party>
+ <party firstName="Louie" fullName="Louie M. Ligouri" lastName="Ligouri" middleName="M." role="Defendant"></party>
+ <party firstName="Adrian" fullName="Adrian Lindsey" lastName="Lindsey" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Long" lastName="Long" role="Defendant"></party>
+ <party firstName="Brent" fullName="Brent Lottman" lastName="Lottman" role="Defendant"></party>
+ <party firstName="Verlyn" fullName="Verlyn Luebbe" lastName="Luebbe" role="Defendant"></party>
+ <party firstName="Greg" fullName="Greg Magee" lastName="Magee" role="Defendant"></party>
+ <party firstName="Gene" fullName="Gene Mahon" lastName="Mahon" role="Defendant"></party>
+ <party firstName="James" fullName="James R. Marr" lastName="Marr" middleName="R." role="Defendant"></party>
+ <party firstName="Ben" fullName="Ben Matchett" lastName="Matchett" role="Defendant"></party>
+ <party firstName="Tammy" fullName="Tammy Maul-Bodlak" lastName="Maul-Bodlak" role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert S. McBride" lastName="McBride" middleName="S." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry McDole" lastName="McDole" role="Defendant"></party>
+ <party firstName="James" fullName="James J. McNally" lastName="McNally" middleName="J." role="Defendant"></party>
+ <party firstName="Patrick" fullName="Patrick McNeil" lastName="McNeil" role="Defendant"></party>
+ <party firstName="Anthony" fullName="Anthony McPhillips" lastName="McPhillips" role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan S. McQuay" lastName="McQuay" middleName="S." role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas E. Merz" lastName="Merz" middleName="E." role="Defendant"></party>
+ <party firstName="Doug" fullName="Doug Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Neil" fullName="Neil A. Miller" lastName="Miller" middleName="A." role="Defendant"></party>
+ <party firstName="Leland" fullName="Leland K. Miner" lastName="Miner" middleName="K." role="Defendant"></party>
+ <party firstName="K." fullName="K. Patrick Mooney" lastName="Mooney" middleName="Patrick" role="Defendant"></party>
+ <party firstName="Alan" fullName="Alan Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="Davis" fullName="Davis Moore" lastName="Moore" role="Defendant"></party>
+ <party firstName="A." fullName="A. James Moravek" lastName="Moravek" middleName="James" role="Defendant"></party>
+ <party firstName="John" fullName="John Morgan" lastName="Morgan" role="Defendant"></party>
+ <party firstName="Tammy" fullName="Tammy Mowry" lastName="Mowry" role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Mueller" lastName="Mueller" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy S. Mullen" lastName="Mullen" middleName="S." role="Defendant"></party>
+ <party firstName="Ron" fullName="Ron Murtaugh" lastName="Murtaugh" role="Defendant"></party>
+ <party fullName="Nebraska State Patrol" lastName="Nebraska State Patrol" role="Defendant"></party>
+ <party firstName="Lynn" fullName="Lynn Nichols" lastName="Nichols" role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Nutt" lastName="Nutt" role="Defendant"></party>
+ <party firstName="Corey" fullName="Corey O&apos;Brien" lastName="O&apos;Brien" role="Interested Party"></party>
+ <party firstName="Dennis" fullName="Dennis Ocken" lastName="Ocken" role="Defendant"></party>
+ <party firstName="Jeffrey" fullName="Jeffrey S. Ortgies" lastName="Ortgies" middleName="S." role="Defendant"></party>
+ <party firstName="James" fullName="James D. Owens" lastName="Owens" middleName="D." role="Defendant"></party>
+ <party firstName="Douglas" fullName="Douglas D. Palik" lastName="Palik" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David J. Partsch" lastName="Partsch" middleName="J." role="Defendant"></party>
+ <party firstName="Tom" fullName="Tom Patterson" lastName="Patterson" role="Defendant"></party>
+ <party firstName="Joel" fullName="Joel W. Phillips" lastName="Phillips" middleName="W." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Pickell" lastName="Pickell" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael E. Pieper" lastName="Pieper" middleName="E." role="Defendant"></party>
+ <party firstName="Philip" fullName="Philip E. Pierce" lastName="Pierce" middleName="E." role="Defendant"></party>
+ <party firstName="Pete" fullName="Pete Pirsch" lastName="Pirsch" role="Interested Party"></party>
+ <party firstName="Lee" fullName="Lee Polikov" lastName="Polikov" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael H. Powell" lastName="Powell" middleName="H." role="Defendant"></party>
+ <party firstName="Dale" fullName="Dale Radcliff" lastName="Radcliff" role="Defendant"></party>
+ <party firstName="Jayme" fullName="Jayme Reed" lastName="Reed" role="Defendant"></party>
+ <party firstName="Gary" fullName="Gary Reiber" lastName="Reiber" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie L. Reiter" lastName="Reiter" middleName="L." role="Defendant"></party>
+ <party firstName="Jean" fullName="Jean Rhodes" lastName="Rhodes" role="Defendant"></party>
+ <party firstName="Randall" fullName="Randall Ritnour" lastName="Ritnour" role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Robbins" lastName="Robbins" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard Roberts" lastName="Roberts" role="Defendant"></party>
+ <party firstName="Richard" fullName="Richard H. Roberts" lastName="Roberts" middleName="H." role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Robinson" lastName="Robinson" role="Defendant"></party>
+ <party firstName="William" fullName="William Roe" lastName="Roe" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel Rupp" lastName="Rupp" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul B. Schaub" lastName="Schaub" middleName="B." role="Defendant"></party>
+ <party firstName="Harold" fullName="Harold Schenck" lastName="Schenck" role="Defendant"></party>
+ <party firstName="Tami" fullName="Tami Schendt" lastName="Schendt" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy S. Schmidt" lastName="Schmidt" middleName="S." role="Defendant"></party>
+ <party firstName="Troy" fullName="Troy Schmitz" lastName="Schmitz" role="Defendant"></party>
+ <party firstName="Jon" fullName="Jon S. Schroeder" lastName="Schroeder" middleName="S." role="Defendant"></party>
+ <party firstName="David" fullName="David T. Schroeder" lastName="Schroeder" middleName="T." role="Defendant"></party>
+ <party firstName="Eric" fullName="Eric Scott" lastName="Scott" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Sieh" lastName="Sieh" role="Defendant"></party>
+ <party firstName="Tim" fullName="Tim Sierks" lastName="Sierks" role="Defendant"></party>
+ <party firstName="Bill" fullName="Bill Simpson" lastName="Simpson" role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel A. Smith" lastName="Smith" middleName="A." role="Defendant"></party>
+ <party firstName="Joseph" fullName="Joseph M. Smith" lastName="Smith" middleName="M." role="Defendant"></party>
+ <party firstName="Nels" fullName="Nels Sorensen" lastName="Sorensen" role="Defendant"></party>
+ <party firstName="David" fullName="David Spiegel" lastName="Spiegel" role="Defendant"></party>
+ <party fullName="State of Nebraska" lastName="State of Nebraska" role="Defendant"></party>
+ <party firstName="David" fullName="David M. Streich" lastName="Streich" middleName="M." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin Stukenholtz" lastName="Stukenholtz" role="Defendant"></party>
+ <party firstName="Timothy" fullName="Timothy Sutherland" lastName="Sutherland" role="Defendant"></party>
+ <party firstName="James" fullName="James Swanson" lastName="Swanson" role="Defendant"></party>
+ <party firstName="John" fullName="John Thomas" lastName="Thomas" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott J. Tingelhoff" lastName="Tingelhoff" middleName="J." role="Defendant"></party>
+ <party firstName="Bryan" fullName="Bryan Tuma" lastName="Tuma" role="Defendant"></party>
+ <party firstName="Michael" fullName="Michael Unger" lastName="Unger" role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul J. Vaughan" lastName="Vaughan" middleName="J." role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Vinton" lastName="Vinton" role="Defendant"></party>
+ <party firstName="George" fullName="George G. Vinton" lastName="Vinton" middleName="G." role="Defendant"></party>
+ <party firstName="Terry" fullName="Terry Wagner" lastName="Wagner" role="Defendant"></party>
+ <party firstName="James" fullName="James L. Wagner" lastName="Wagner" middleName="L." role="Defendant"></party>
+ <party firstName="Tiffany" fullName="Tiffany Wasserburger" lastName="Wasserburger" role="Defendant"></party>
+ <party firstName="Elizabeth" fullName="Elizabeth F. Waterman" lastName="Waterman" middleName="F." role="Defendant"></party>
+ <party firstName="Jerry" fullName="Jerry Watson" lastName="Watson" role="Defendant"></party>
+ <party firstName="Kim" fullName="Kim W. Watson" lastName="Watson" middleName="W." role="Defendant"></party>
+ <party firstName="David" fullName="David C. Weeks" lastName="Weeks" middleName="C." role="Defendant"></party>
+ <party firstName="James" fullName="James P. Wenzl" lastName="Wenzl" middleName="P." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel L. Werner" lastName="Werner" middleName="L." role="Defendant"></party>
+ <party firstName="Rodney" fullName="Rodney Wetovick" lastName="Wetovick" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason White" lastName="White" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott K. White" lastName="White" middleName="K." role="Defendant"></party>
+ <party firstName="Todd" fullName="Todd D. Wilson" lastName="Wilson" middleName="D." role="Defendant"></party>
+ <party firstName="David" fullName="David L. Wilson" lastName="Wilson" middleName="L." role="Defendant"></party>
+ <party firstName="Arlan" fullName="Arlan G. Wine" lastName="Wine" middleName="G." role="Defendant"></party>
+ <party firstName="David" fullName="David G. Wondra" lastName="Wondra" middleName="G." role="Defendant"></party>
+ <party firstName="Paul" fullName="Paul Wood" lastName="Wood" role="Defendant"></party>
+ <party firstName="Joe" fullName="Joe Yocum" lastName="Yocum" role="Defendant"></party>
+ <party firstName="Mark" fullName="Mark Young" lastName="Young" role="Defendant"></party>
+ <party firstName="John" fullName="John Zavadil" lastName="Zavadil" role="Defendant"></party>
+ <party firstName="James" fullName="James L. Zimmerman" lastName="Zimmerman" middleName="L." role="Defendant"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-0/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER. It is ordered that counsel for the plaintiffs shall immediately contact the Attorney General for the State of Nebraska or one of his deputies and then those lawyers shall call my judicial assistant (Kris Leininger at 402-437-1640) today or tomorrow to schedule a telephone conference with me. My judicial assistant is directed to call the plaintiffs&apos; counsel and advise him of this order. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695376</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-12-17</dateIssued>
+  <docketText>ORDER. It is ordered that counsel for the plaintiffs shall immediately contact the Attorney General for the State of Nebraska or one of his deputies and then those lawyers shall call my judicial assistant (Kris Leininger at 402-437-1640) today or tomorrow to schedule a telephone conference with me. My judicial assistant is directed to call the plaintiffs&apos; counsel and advise him of this order. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-1/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER. After consultation with counsel, IT IS ORDERED that:(1)Counsel for the plaintiffs shall promptly file a notice specifying the particular sections of the legislative bills that are being attacked, including a specification of where those sections are codified. (2)Counsel for the plaintiffs, Mr. Dornan, has represented that to the best of his knowledge none of the plaintiffs are currently the subject of a criminal prosecution or a probation revocation dispute. Mr. Dornan shall be prepared to confirm this representation on December 23, 2009, at the commencement of the hearing described below. (3)A hearing on a preliminary injunction in this case will commence at 11:00 a.m. on Wednesday, December 23, 2009, recess at noon, start again at 1:00 p.m., and adjourn at 5:00 p.m. that day. Without a lunch break, the hearing will commence again at 8:00 a.m. on December 24, 2009, and conclude at 1:00 p.m. During these two days, each side will be given approximately four hours to present their evidence. Evidence may be presented by affidavit or otherwise. Following the presentation of evidence, each side will be given a total of one hour to make their oral argument, with oral argument commencing at approximately 11:00 a.m. Defendants shall confer among themselves and come to an agreement regarding the allocation of evidence and argument time. The defendants may submit one or more responsive briefs at any time between now and the commencement of the hearing on the preliminary injunction. Ordered by Judge Richard G. Kopf. (KLL, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695372</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-12-18</dateIssued>
+  <docketText>ORDER. After consultation with counsel, IT IS ORDERED that:(1)Counsel for the plaintiffs shall promptly file a notice specifying the particular sections of the legislative bills that are being attacked, including a specification of where those sections are codified. (2)Counsel for the plaintiffs, Mr. Dornan, has represented that to the best of his knowledge none of the plaintiffs are currently the subject of a criminal prosecution or a probation revocation dispute. Mr. Dornan shall be prepared to confirm this representation on December 23, 2009, at the commencement of the hearing described below. (3)A hearing on a preliminary injunction in this case will commence at 11:00 a.m. on Wednesday, December 23, 2009, recess at noon, start again at 1:00 p.m., and adjourn at 5:00 p.m. that day. Without a lunch break, the hearing will commence again at 8:00 a.m. on December 24, 2009, and conclude at 1:00 p.m. During these two days, each side will be given approximately four hours to present their evidence. Evidence may be presented by affidavit or otherwise. Following the presentation of evidence, each side will be given a total of one hour to make their oral argument, with oral argument commencing at approximately 11:00 a.m. Defendants shall confer among themselves and come to an agreement regarding the allocation of evidence and argument time. The defendants may submit one or more responsive briefs at any time between now and the commencement of the hearing on the preliminary injunction. Ordered by Judge Richard G. Kopf. (KLL, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-2/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding MOTION for Preliminary Injunction4 filed by John Doe and Jane Doe 1 through 20, John Doe and Jane Doe A through K. To assist counsel as they prepare their arguments for the preliminary injunction hearing, counsel shall give extra attention to the &quot;consent to search&quot; requirement for former offenders who are not on probation or parole. In particular, counsel shall read and be familiar with Doe v. Prosecutor, Marian County, 566 F. Supp.2nd 862 (S.D. Ind. 2008) (granting injunction in favor of former offenders that were not on probation or parole; holding that: (1) consent requirement under statute was not voluntary; (2) scope of search provided for by statute was unconstitutional; and (3) special needs exception did not justify warrantless searches under the statute). Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695373</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding MOTION for Preliminary Injunction4 filed by John Doe and Jane Doe 1 through 20, John Doe and Jane Doe A through K. To assist counsel as they prepare their arguments for the preliminary injunction hearing, counsel shall give extra attention to the &quot;consent to search&quot; requirement for former offenders who are not on probation or parole. In particular, counsel shall read and be familiar with Doe v. Prosecutor, Marian County, 566 F. Supp.2nd 862 (S.D. Ind. 2008) (granting injunction in favor of former offenders that were not on probation or parole; holding that: (1) consent requirement under statute was not voluntary; (2) scope of search provided for by statute was unconstitutional; and (3) special needs exception did not justify warrantless searches under the statute). Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-3/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - To help the lawyers prepare for the preliminary injunction hearing, Counsel shall be prepared to explain in what manner Nebraska&apos;s new laws differ, if at all, from the requirements of the Sex Offender Registration and Notification Act (SORNA), 42 U.S.C. §§ 16901- 16991. Counsel for Plaintiffs shall be prepared to represent whether at least some of the plaintiffs who have been convicted of sexual offenses have served their time and are no longer on probation or parole. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369537a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-12-22</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - To help the lawyers prepare for the preliminary injunction hearing, Counsel shall be prepared to explain in what manner Nebraska&apos;s new laws differ, if at all, from the requirements of the Sex Offender Registration and Notification Act (SORNA), 42 U.S.C. §§ 16901- 16991. Counsel for Plaintiffs shall be prepared to represent whether at least some of the plaintiffs who have been convicted of sexual offenses have served their time and are no longer on probation or parole. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-4/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The motion for a preliminary injunction (filing 4) is denied except as provided below: Defendants are preliminarily enjoined from enforcing the following statutes against persons who have been convicted of sex offenses but who have completed their criminal sentences and who are not on probation, parole, or court-ordered supervision, to wit: (1) Neb. Rev. Stat. § 29-4006(2) (West, Operative January 1, 2010) (requiring consent to search and installation of monitoring hardware and software) and (2) Neb. Rev. Stat. § 28-322.05 (West, Operative January 1, 2010) (making it a crime to use Internet social networking sites accessible by minors by a person required to register under the Sex Offender Registration Act). Within 10 days, Plaintiffs shall post a bond with the Clerk (cash or surety) in the sum of $500. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695366</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-12-30</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The motion for a preliminary injunction (filing 4) is denied except as provided below: Defendants are preliminarily enjoined from enforcing the following statutes against persons who have been convicted of sex offenses but who have completed their criminal sentences and who are not on probation, parole, or court-ordered supervision, to wit: (1) Neb. Rev. Stat. § 29-4006(2) (West, Operative January 1, 2010) (requiring consent to search and installation of monitoring hardware and software) and (2) Neb. Rev. Stat. § 28-322.05 (West, Operative January 1, 2010) (making it a crime to use Internet social networking sites accessible by minors by a person required to register under the Sex Offender Registration Act). Within 10 days, Plaintiffs shall post a bond with the Clerk (cash or surety) in the sum of $500. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-5/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Counsel for Plaintiffs shall advise any state judge before whom they appear seeking similar relief to the relief sought here that I respectfully request that said judge grant no relief. Counsel shall provide the judge with a copy of this order. In addition to the normal electronic notice, the Clerks office shall call Plaintiffs&apos; counsel and counsel for the State of Nebraska and advise them of this order. If a state court enters an order that conflicts with mine, there is high likelihood that I will take further more direct action to stop any such interference. In a spirit of comity and respect, I hope to avoid such an unseemly dispute by issuing this order. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695363</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-04</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Counsel for Plaintiffs shall advise any state judge before whom they appear seeking similar relief to the relief sought here that I respectfully request that said judge grant no relief. Counsel shall provide the judge with a copy of this order. In addition to the normal electronic notice, the Clerks office shall call Plaintiffs&apos; counsel and counsel for the State of Nebraska and advise them of this order. If a state court enters an order that conflicts with mine, there is high likelihood that I will take further more direct action to stop any such interference. In a spirit of comity and respect, I hope to avoid such an unseemly dispute by issuing this order. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-6/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding phone calls with Judges Arterburn and Burns. No substantive legal discussions were held between the aforementioned judges and me. I would characterize the calls from these judges as courtesy calls. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695379</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-05</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding phone calls with Judges Arterburn and Burns. No substantive legal discussions were held between the aforementioned judges and me. I would characterize the calls from these judges as courtesy calls. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-7/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - In 8:09CV456, the State of Nebraska filed a notice advising me that &quot;duplicative actions [have been] filed in State Courts&quot;. I herewith request that the courts of the State of Nebraska refrain from issuing any orders enjoining Nebraska&apos;s Sex Offender Registration Act and related legislative bills while my cases are pending. I desperately hope to avoid a dispute with the state courts, but if push comes to shove and Nebraska files an appropriate motion, I may step in and enjoin state judges from taking any further action in these matters. IT IS ORDERED that counsel for the State of Nebraska shall provide a copy of this memorandum and order to any state court judge considering whether to enjoin enforcement of the Nebraska Sex Offender Registration Act and LB 97 and LB 285. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695365</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-7</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2010-01-07</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - In 8:09CV456, the State of Nebraska filed a notice advising me that &quot;duplicative actions [have been] filed in State Courts&quot;. I herewith request that the courts of the State of Nebraska refrain from issuing any orders enjoining Nebraska&apos;s Sex Offender Registration Act and related legislative bills while my cases are pending. I desperately hope to avoid a dispute with the state courts, but if push comes to shove and Nebraska files an appropriate motion, I may step in and enjoin state judges from taking any further action in these matters. IT IS ORDERED that counsel for the State of Nebraska shall provide a copy of this memorandum and order to any state court judge considering whether to enjoin enforcement of the Nebraska Sex Offender Registration Act and LB 97 and LB 285. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-8/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - Counsel shall review the attachment listing all pending motions in these cases. Counsel shall be prepared to state their positions with respect to the pending motions and with respect to further progression of these cases. (Attachments: # (1) Pending Motions)Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695368</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-8</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2010-01-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Counsel shall review the attachment listing all pending motions in these cases. Counsel shall be prepared to state their positions with respect to the pending motions and with respect to further progression of these cases. (Attachments: # (1) Pending Motions)Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-9/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - These six cases are consolidated for all purposes including trial and discovery. Counsel and the Clerk are ordered to proceed as follows when filing documents and otherwise processing these cases. John Doe, et al., v. State of Nebraska, et al., Case No. 8:09CV456 (D. Neb. 2009) is hereby designated as the &quot;Lead Case.&quot; The other five cases are each designated as a &quot;Member Case&quot;. The motions to consolidate (filings No. 82 and 88 in 8:09CV456; filing 11 in 4:09CV3258; filing 2 in 4:09CV3266) are granted as provided herein but otherwise denied. By agreement of the parties, any demand for a jury is withdrawn. The consolidated cases are designated as non-jury cases. By agreement of the parties, all plaintiffs shall have the benefit of the preliminary injunction previously issued in the &quot;Lead Case.&quot; This matter is referred to Judge Zwart for further progression and the issuance of scheduling packet tailored to the needs of the consolidated cases. Each of the defendants is given until February 8, 2010 to answer or further plead. The motion for extension of time (filing 12 in 4:09CV3266) is granted as provided herein and otherwise denied. The motion to intervene and related motion to use fictitious names (filings 70 and 71 in 8:09CV456) are denied without prejudice because no proposed pleading was filed as required by Fed. R. Civ. P. 24(c). The motions to withdraw as attorneys (filings 94 and 304 in 8:09CV456) are granted. The motion to remand (filing 8 in 4:09CV3266) is denied. Ordered by Judge Richard G. Kopf. (GJG)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695367</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-9</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2010-01-21</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - These six cases are consolidated for all purposes including trial and discovery. Counsel and the Clerk are ordered to proceed as follows when filing documents and otherwise processing these cases. John Doe, et al., v. State of Nebraska, et al., Case No. 8:09CV456 (D. Neb. 2009) is hereby designated as the &quot;Lead Case.&quot; The other five cases are each designated as a &quot;Member Case&quot;. The motions to consolidate (filings No. 82 and 88 in 8:09CV456; filing 11 in 4:09CV3258; filing 2 in 4:09CV3266) are granted as provided herein but otherwise denied. By agreement of the parties, any demand for a jury is withdrawn. The consolidated cases are designated as non-jury cases. By agreement of the parties, all plaintiffs shall have the benefit of the preliminary injunction previously issued in the &quot;Lead Case.&quot; This matter is referred to Judge Zwart for further progression and the issuance of scheduling packet tailored to the needs of the consolidated cases. Each of the defendants is given until February 8, 2010 to answer or further plead. The motion for extension of time (filing 12 in 4:09CV3266) is granted as provided herein and otherwise denied. The motion to intervene and related motion to use fictitious names (filings 70 and 71 in 8:09CV456) are denied without prejudice because no proposed pleading was filed as required by Fed. R. Civ. P. 24(c). The motions to withdraw as attorneys (filings 94 and 304 in 8:09CV456) are granted. The motion to remand (filing 8 in 4:09CV3266) is denied. Ordered by Judge Richard G. Kopf. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-10/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER that a telephonic conference will be held before the undersigned magistrate judge on 3/1/2010 at 3:00 p.m. Counsel for the defendants shall place the call as ordered by Magistrate Judge Cheryl R. Zwart. Member Cases: 8:09-cv-00456-RGK-CRZ et al. (SED)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-02-26</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695377</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-10</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2010-02-26</dateIssued>
+  <docketText>MEMORANDUM AND ORDER that a telephonic conference will be held before the undersigned magistrate judge on 3/1/2010 at 3:00 p.m. Counsel for the defendants shall place the call as ordered by Magistrate Judge Cheryl R. Zwart. Member Cases: 8:09-cv-00456-RGK-CRZ et al. (SED)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-11/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - The unopposed motion to withdraw filed by former Platte County Attorney, Sandra J. Allen, and acting Platte County Attorney, Carl K. Hart, Jr., as counsel of record for Platte County, Nebraska, (filing no. 323), is granted. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-11</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2010-03-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - The unopposed motion to withdraw filed by former Platte County Attorney, Sandra J. Allen, and acting Platte County Attorney, Carl K. Hart, Jr., as counsel of record for Platte County, Nebraska, (filing no. 323), is granted. Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-12/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting (320) Motion to Stay; granting (325) Stipulation in case 8:09-cv-00456-RGK-CRZ; granting (36) Motion to Stay; granting (41) Stipulation in case 4:09-cv-03258-RGK-CRZ; granting (26) Motion to Stay; granting (30) Stipulation in case 4:09-cv-03266-RGK-CRZ; granting (19) Motion to Stay; granting (24) Stipulation in case 4:10-cv-03003-RGK-CRZ; granting (29) Stipulation; granting (25) Motion to Stay in case 4:10-cv-03004-RGK-CRZ; granting (20) Motion to Stay; granting (24) Stipulation in case 4:10-cv-03005-RGK-CRZ. Parties to be added and their Declarations shall be filed on or before March 15, 2010. Any Motion for Certification of State Law Questions to the Nebraska Supreme Court shall be filed by March 15, 2010. Plaintiffs shall file any opposition to Defendants Motion for Summary Judgment or their own Cross Motions for Summary Judgment and supporting briefs by May 1,2010. The deadline for filing the parties Rule 26(f) Report, previously set for March 5, 2010, is continued until thirty days following the courts ruling on defendants&apos; motions for summary judgment. Member Cases: 8:09-cv-00456-RGK-CRZ et al.Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695378</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-12</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2010-03-03</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting (320) Motion to Stay; granting (325) Stipulation in case 8:09-cv-00456-RGK-CRZ; granting (36) Motion to Stay; granting (41) Stipulation in case 4:09-cv-03258-RGK-CRZ; granting (26) Motion to Stay; granting (30) Stipulation in case 4:09-cv-03266-RGK-CRZ; granting (19) Motion to Stay; granting (24) Stipulation in case 4:10-cv-03003-RGK-CRZ; granting (29) Stipulation; granting (25) Motion to Stay in case 4:10-cv-03004-RGK-CRZ; granting (20) Motion to Stay; granting (24) Stipulation in case 4:10-cv-03005-RGK-CRZ. Parties to be added and their Declarations shall be filed on or before March 15, 2010. Any Motion for Certification of State Law Questions to the Nebraska Supreme Court shall be filed by March 15, 2010. Plaintiffs shall file any opposition to Defendants Motion for Summary Judgment or their own Cross Motions for Summary Judgment and supporting briefs by May 1,2010. The deadline for filing the parties Rule 26(f) Report, previously set for March 5, 2010, is continued until thirty days following the courts ruling on defendants&apos; motions for summary judgment. Member Cases: 8:09-cv-00456-RGK-CRZ et al.Ordered by Magistrate Judge Cheryl R. Zwart. (GJG)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-13/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER TO SHOW CAUSE that Attorney Todd D. Wilson is to register for the System. Show Cause Deadline set for 4/9/2010.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed (MKR)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-13</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2010-03-23</dateIssued>
+  <docketText>ORDER TO SHOW CAUSE that Attorney Todd D. Wilson is to register for the System. Show Cause Deadline set for 4/9/2010.Ordered by Magistrate Judge Cheryl R. Zwart. (Copies mailed (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-14/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER denying (331) Motion for Certification of State Law Questions to the Nebraska Supreme Court in case 8:09-cv-00456-RGK-CRZ (filing (43) in case 4:09-cv-03258-RGK-CRZ; filing (32) in case 4:09-cv-03266-RGK-CRZ; filing (26) in case 4:10-cv-03003-RGK-CRZ; filing (31) in case 4:10-cv-03004-RGK-CRZ; filing(26) in case 4:10-cv-03005-RGK-CRZ) Member Cases: 8:09-cv-00456-RGK-CRZ et al.Ordered by Judge Richard G. Kopf. (ADB, )</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-14.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369537c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-14</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2010-04-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER denying (331) Motion for Certification of State Law Questions to the Nebraska Supreme Court in case 8:09-cv-00456-RGK-CRZ (filing (43) in case 4:09-cv-03258-RGK-CRZ; filing (32) in case 4:09-cv-03266-RGK-CRZ; filing (26) in case 4:10-cv-03003-RGK-CRZ; filing (31) in case 4:10-cv-03004-RGK-CRZ; filing(26) in case 4:10-cv-03005-RGK-CRZ) Member Cases: 8:09-cv-00456-RGK-CRZ et al.Ordered by Judge Richard G. Kopf. (ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-15/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER granting (341) Motion to Withdraw as Attorney in case 8:09-cv-00456. Member Cases: 8:09-cv-00456-RGK-CRZ et al. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-15.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-15</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2010-04-19</dateIssued>
+  <docketText>ORDER granting (341) Motion to Withdraw as Attorney in case 8:09-cv-00456. Member Cases: 8:09-cv-00456-RGK-CRZ et al. Ordered by Magistrate Judge Cheryl R. Zwart. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-16/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER- Defendants original motion for summary judgment (Case No. 8:09CV456 filing 317, Case No. 4:09CV3266 filing 23, Case No. 4:10CV3004 filing 22, Case No. 4:10CV3005 filing 17) is denied without prejudice, as moot. Defendants amended motion for summary judgment (Case No. 8:09CV456 filing 336, Case No. 4:09CV3266 filing 35, Case No. 4:10CV3004 filing 34, Case No. 4:10CV3005 filing 29) is granted in part and denied in part, as set forth within the order. Plaintiffs motion for summary judgment (Case No. 8:09CV456 filing 344, Case No. 4:09CV3266 filing 41, Case No. 4:10CV3005 filing 35) is granted in part and denied in part, as set forth within the order. Defendants objections to Plaintiffs exhibits (Case No. 8:09CV456 filing 349, Case No. 4:09CV3266 filing 46, Case No. 4:10CV3005 filing 40) are denied without prejudice. Within 30 days, the parties shall provide me with a stipulation designating those Plaintiffs who fit within this categorysex offenders who were not on probation, parole or court-monitored supervision as of January 1, 2010 together with the date when the offender was no longer under criminal justice supervision. If, for some reason, the parties cannot reach agreement, they shall arrange a telephone conference with me by contacting my judicial assistant. These cases are referred to Magistrate Judge Zwart for further progression, as appropriate. (Attachments: # (1) Attachment A, # (2) Attachment B, # (3) Attachment C) Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03004-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-08-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-16.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695374</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-16</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2010-08-16</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- Defendants original motion for summary judgment (Case No. 8:09CV456 filing 317, Case No. 4:09CV3266 filing 23, Case No. 4:10CV3004 filing 22, Case No. 4:10CV3005 filing 17) is denied without prejudice, as moot. Defendants amended motion for summary judgment (Case No. 8:09CV456 filing 336, Case No. 4:09CV3266 filing 35, Case No. 4:10CV3004 filing 34, Case No. 4:10CV3005 filing 29) is granted in part and denied in part, as set forth within the order. Plaintiffs motion for summary judgment (Case No. 8:09CV456 filing 344, Case No. 4:09CV3266 filing 41, Case No. 4:10CV3005 filing 35) is granted in part and denied in part, as set forth within the order. Defendants objections to Plaintiffs exhibits (Case No. 8:09CV456 filing 349, Case No. 4:09CV3266 filing 46, Case No. 4:10CV3005 filing 40) are denied without prejudice. Within 30 days, the parties shall provide me with a stipulation designating those Plaintiffs who fit within this categorysex offenders who were not on probation, parole or court-monitored supervision as of January 1, 2010 together with the date when the offender was no longer under criminal justice supervision. If, for some reason, the parties cannot reach agreement, they shall arrange a telephone conference with me by contacting my judicial assistant. These cases are referred to Magistrate Judge Zwart for further progression, as appropriate. (Attachments: # (1) Attachment A, # (2) Attachment B, # (3) Attachment C) Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03004-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-17/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER - The defendants unopposed amended motions to extend the expert witnessdeadline, (8:09-cv-00456, filing no. 372; 4:09-cv-03266, filing no. 69; and4:10-cv-03005, filing no. 63) are granted, and a. The defendants expert witness disclosure deadline is extended to January 28, 2011. b. The plaintiffs deadline for filing of any motion to exclude expert testimony on Daubert and related grounds is extended to February 11, 2011. The defendants motions to extend the expert witness deadline, (8:09-cv-00456, filing no. 371; 4:09-cv-03266, filing no. 68; and 4:10-cv-03005, filing no. 62) are denied as moot. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-01-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-17.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695360</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-17</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2011-01-27</dateIssued>
+  <docketText>ORDER - The defendants unopposed amended motions to extend the expert witnessdeadline, (8:09-cv-00456, filing no. 372; 4:09-cv-03266, filing no. 69; and4:10-cv-03005, filing no. 63) are granted, and a. The defendants expert witness disclosure deadline is extended to January 28, 2011. b. The plaintiffs deadline for filing of any motion to exclude expert testimony on Daubert and related grounds is extended to February 11, 2011. The defendants motions to extend the expert witness deadline, (8:09-cv-00456, filing no. 371; 4:09-cv-03266, filing no. 68; and 4:10-cv-03005, filing no. 62) are denied as moot. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-18/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER -The Plaintiffs motion to compel, (filing no. 374), is granted in part and denied in part as set forth within the order. The defendants unopposed motions to continue, (filing no. 383), are granted. The pretrial conference and trial of the above-captioned cases are continued pending further order of the court. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-18.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369537b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-18</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2011-04-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER -The Plaintiffs motion to compel, (filing no. 374), is granted in part and denied in part as set forth within the order. The defendants unopposed motions to continue, (filing no. 383), are granted. The pretrial conference and trial of the above-captioned cases are continued pending further order of the court. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-19/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER granting Motion to Dismiss Party 382. IT IS ORDERED that filing 382, the Unopposed Motion to Dismiss as to John Doe 20 and John Doe C, is granted, and, as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Judge Richard G. Kopf. (TEL)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-04-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-19.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695361</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-19</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2011-04-25</dateIssued>
+  <docketText>ORDER granting Motion to Dismiss Party 382. IT IS ORDERED that filing 382, the Unopposed Motion to Dismiss as to John Doe 20 and John Doe C, is granted, and, as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Judge Richard G. Kopf. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-20/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER adopting (391) Joint Stipulation for Protective Order in case 8:09-cv-00456-RGK -CRZ; adopting (86) Joint Stipulation for Protective Order in case 4:09-cv-03266-RGK -CRZ; adopting (80) Joint Stipulation for Protective Order in case 4:10-cv-03005-RGK -CRZ. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-20.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-20</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2011-05-09</dateIssued>
+  <docketText>ORDER adopting (391) Joint Stipulation for Protective Order in case 8:09-cv-00456-RGK -CRZ; adopting (86) Joint Stipulation for Protective Order in case 4:09-cv-03266-RGK -CRZ; adopting (80) Joint Stipulation for Protective Order in case 4:10-cv-03005-RGK -CRZ. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-21/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER- The Magistrate Judges memorandum and order (filing 384 in Case No. 8:09CV456) shall not be disturbed and is hereby sustained; The defendant&apos;s objection to and appeal from the Magistrate Judge&apos;s memorandum and order 386 in Case No. 8:09cv456) is denied. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. Ordered by Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-21.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369537d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-21</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2011-06-15</dateIssued>
+  <docketText>MEMORANDUM AND ORDER- The Magistrate Judges memorandum and order (filing 384 in Case No. 8:09CV456) shall not be disturbed and is hereby sustained; The defendant&apos;s objection to and appeal from the Magistrate Judge&apos;s memorandum and order 386 in Case No. 8:09cv456) is denied. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. Ordered by Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-22/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting the parties&apos; supplemental Joint [396) Stipulation in case 8:09-cv-00456-RGK -CRZ; granting 91 Stipulation in case 4:09-cv-03266-RGK -CRZ; granting 85 Stipulation in case 4:10-cv-03005-RGK -CRZ. The parties are hereby ordered to comply with the terms and conditions of their Supplemental Joint Stipulation and Protective Order 91,396 and 85. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-06-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-22.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-22</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2011-06-20</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting the parties&apos; supplemental Joint [396) Stipulation in case 8:09-cv-00456-RGK -CRZ; granting 91 Stipulation in case 4:09-cv-03266-RGK -CRZ; granting 85 Stipulation in case 4:10-cv-03005-RGK -CRZ. The parties are hereby ordered to comply with the terms and conditions of their Supplemental Joint Stipulation and Protective Order 91,396 and 85. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-23" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-23/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER granting 401 Motion for Protective Order in Lead Case 8:09-cv-00456-RGK -CRZ and in Member Cases: 4:09-cv-03266-RGK -CRZ, (filing no. 96) and 4:10-cv-03005-RGK -CRZ (filing no. 90).Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>23</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-23.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695375</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-23</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_23.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-23/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-23.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-23</accessId>
+  <sequenceNumber>23</sequenceNumber>
+  <dateIssued>2011-08-21</dateIssued>
+  <docketText>ORDER granting 401 Motion for Protective Order in Lead Case 8:09-cv-00456-RGK -CRZ and in Member Cases: 4:09-cv-03266-RGK -CRZ, (filing no. 96) and 4:10-cv-03005-RGK -CRZ (filing no. 90).Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-24" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-24/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER: The plaintiffs responses to the defendants motions to compel shall be filed on or before September 26, 2011. No reply shall be filed absent leave of the court for good cause shown. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</subTitle>
+  <partNumber>24</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-09-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-24.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1836952da</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-24</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_24.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-24/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-24.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-24</accessId>
+  <sequenceNumber>24</sequenceNumber>
+  <dateIssued>2011-09-19</dateIssued>
+  <docketText>MEMORANDUM AND ORDER: The plaintiffs responses to the defendants motions to compel shall be filed on or before September 26, 2011. No reply shall be filed absent leave of the court for good cause shown. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005-RGK -CRZ.Ordered by Magistrate Judge Cheryl R. Zwart. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-25" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-25/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting (404) Motion to Compel in case 8:09-cv-00456-RGK -CRZ; granting (99) Motion to Compel in case 4:09-cv-03266-RGK -CRZ; granting (93) Motion to Compel in case 4:10-cv-03005-RGK -CRZ. Plaintiffs request for a protective order limiting discovery is granted under the terms set forth in this Memorandum and Order. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</subTitle>
+  <partNumber>25</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-25.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1836952d6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-25</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_25.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-25/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-25.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-25</accessId>
+  <sequenceNumber>25</sequenceNumber>
+  <dateIssued>2011-10-27</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting (404) Motion to Compel in case 8:09-cv-00456-RGK -CRZ; granting (99) Motion to Compel in case 4:09-cv-03266-RGK -CRZ; granting (93) Motion to Compel in case 4:10-cv-03005-RGK -CRZ. Plaintiffs request for a protective order limiting discovery is granted under the terms set forth in this Memorandum and Order. The clerk shall file this memorandum and order in the lead case, 8:09-cv-00456-RGK-CRZ, as a spread text order. Member Cases: 8:09-cv-00456-RGK -CRZ, 4:09-cv-03266-RGK -CRZ, 4:10-cv-03005- RGK -CRZ Ordered by Magistrate Judge Cheryl R. Zwart. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-26" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-26/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER granting the Unopposed 421 Motion to Dismiss Party as to John Does 15, 29, 30, 32 and 34. These five plaintiff&apos;s claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>26</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-10</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-26.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18369536c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-26</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_26.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-26/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-26.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-26</accessId>
+  <sequenceNumber>26</sequenceNumber>
+  <dateIssued>2012-01-10</dateIssued>
+  <docketText>ORDER granting the Unopposed 421 Motion to Dismiss Party as to John Does 15, 29, 30, 32 and 34. These five plaintiff&apos;s claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-27" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-27/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER granting 440 the Unopposed Motion to Dismiss as to Does 8 and A as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>27</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-27.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1836952d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-27</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_27.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-27/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-27.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-27</accessId>
+  <sequenceNumber>27</sequenceNumber>
+  <dateIssued>2012-02-27</dateIssued>
+  <docketText>ORDER granting 440 the Unopposed Motion to Dismiss as to Does 8 and A as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-28" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-28/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER regarding Order on Restricted Motion (442 in 8:09-cv-00456-RGK-CRZ). On February 28, 2012 the undersigned ordered Defendants to submit certain documents for an in camera review to determine whether the documents were shielded from discovery by the attorney/client privilege and/or the deliberative process privilege. After review, IT IS ORDERED: 1) Documents Nos. 1a, 1b, 2&amp;3 of Exhibit C are protected by the deliberative process privilege and shall not be produced. 2) All of the remaining documents listed on Defendants&apos; privilege log shall beproduced to Plaintiffs on or before May 25, 2012. Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</subTitle>
+  <partNumber>28</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-28.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695362</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-28</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_28.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-28/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-28.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-28</accessId>
+  <sequenceNumber>28</sequenceNumber>
+  <dateIssued>2012-05-14</dateIssued>
+  <docketText>MEMORANDUM AND ORDER regarding Order on Restricted Motion (442 in 8:09-cv-00456-RGK-CRZ). On February 28, 2012 the undersigned ordered Defendants to submit certain documents for an in camera review to determine whether the documents were shielded from discovery by the attorney/client privilege and/or the deliberative process privilege. After review, IT IS ORDERED: 1) Documents Nos. 1a, 1b, 2&amp;3 of Exhibit C are protected by the deliberative process privilege and shall not be produced. 2) All of the remaining documents listed on Defendants&apos; privilege log shall beproduced to Plaintiffs on or before May 25, 2012. Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZ. Ordered by Magistrate Judge Cheryl R. Zwart. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-29" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-29/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER - the Magistrate Judges Memorandum and Order (filing 447 in Case No. 8:09CV456) shall not be disturbed and is hereby sustained; Defendants statement of objections to the aforesaid memorandum and order (filing in 448 Case No. 8:09CV456) is denied; and the stay of the Magistrate Judges order is lifted and Defendants shall produce all non-privileged documents on or before June 15, 2012. Ordered by Senior Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>29</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-29.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695371</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-29</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_29.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-29/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-29.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-29</accessId>
+  <sequenceNumber>29</sequenceNumber>
+  <dateIssued>2012-06-01</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - the Magistrate Judges Memorandum and Order (filing 447 in Case No. 8:09CV456) shall not be disturbed and is hereby sustained; Defendants statement of objections to the aforesaid memorandum and order (filing in 448 Case No. 8:09CV456) is denied; and the stay of the Magistrate Judges order is lifted and Defendants shall produce all non-privileged documents on or before June 15, 2012. Ordered by Senior Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-30" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-30/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>FINDINGS AND RECOMMENDATION that the plaintiffs unopposed motion to dismiss, 459, be granted, and that Does 1 and 22 be dismissed without prejudice.Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>30</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-30.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1836952d7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-30</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_30.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-30/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-30.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-30</accessId>
+  <sequenceNumber>30</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>FINDINGS AND RECOMMENDATION that the plaintiffs unopposed motion to dismiss, 459, be granted, and that Does 1 and 22 be dismissed without prejudice.Ordered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-31" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-31/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>MEMORANDUM AND ORDER as to Plaintiffs Motion to Extend the Deposition Deadline, 455, Defendants Motion for Sanctions, 461, and Defendants Motions to Quash, [464, 466, 468, 469, 470, 474 and 481]. The deadline for filing any objections to the orders entered herein is expedited, and any objections shall be filed on or before July 5, 2012.Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</subTitle>
+  <partNumber>31</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-06-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-31.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695369</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-31</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_31.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-31/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-31.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-31</accessId>
+  <sequenceNumber>31</sequenceNumber>
+  <dateIssued>2012-06-29</dateIssued>
+  <docketText>MEMORANDUM AND ORDER as to Plaintiffs Motion to Extend the Deposition Deadline, 455, Defendants Motion for Sanctions, 461, and Defendants Motions to Quash, [464, 466, 468, 469, 470, 474 and 481]. The deadline for filing any objections to the orders entered herein is expedited, and any objections shall be filed on or before July 5, 2012.Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Magistrate Judge Cheryl R. Zwart. (Zwart, Cheryl)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-32" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-32/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER - Filing 485, the Magistrate Judges recommendation, is adopted. Filing 459, the Unopposed Motion to Dismiss as to Does 1 and 22, is granted, and, as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>32</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-32.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1836952d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-32</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_32.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-32/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-32.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-32</accessId>
+  <sequenceNumber>32</sequenceNumber>
+  <dateIssued>2012-07-13</dateIssued>
+  <docketText>ORDER - Filing 485, the Magistrate Judges recommendation, is adopted. Filing 459, the Unopposed Motion to Dismiss as to Does 1 and 22, is granted, and, as to these two plaintiffs only, that their claims are dismissed without prejudice. Ordered by Senior Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-33" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-33/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>ORDER - The Unopposed Motion for Permission to Restrict (filing no. 513) is granted. As provided below, the Unopposed Motion to Redact (filing no. 514) is granted in part and otherwise, to wit: As of approximately 2:21 P.M. on July 23, 2012, the digital audio recording for the morning session of July 18, 2012 of the non jury trial has been restricted so that it may only be accessed by counsel of record and case participants. The transcriber has been notified when preparing the transcript to file the bench conference separately as a restricted document. The motion is otherwise denied. This order pertains to Case Nos. 4:10CV3005 and 4:09CV3266. Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZ Ordered by Senior Judge Richard G. Kopf. (AOA)</subTitle>
+  <partNumber>33</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-23</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-33.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695364</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-33</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_33.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-33/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-33.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-33</accessId>
+  <sequenceNumber>33</sequenceNumber>
+  <dateIssued>2012-07-23</dateIssued>
+  <docketText>ORDER - The Unopposed Motion for Permission to Restrict (filing no. 513) is granted. As provided below, the Unopposed Motion to Redact (filing no. 514) is granted in part and otherwise, to wit: As of approximately 2:21 P.M. on July 23, 2012, the digital audio recording for the morning session of July 18, 2012 of the non jury trial has been restricted so that it may only be accessed by counsel of record and case participants. The transcriber has been notified when preparing the transcript to file the bench conference separately as a restricted document. The motion is otherwise denied. This order pertains to Case Nos. 4:10CV3005 and 4:09CV3266. Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZ Ordered by Senior Judge Richard G. Kopf. (AOA)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00456-34" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-34/mods.xml">
+ <titleInfo>
+  <title>John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al</title>
+  <subTitle>FINDINGS OF FACT AND CONCLUSIONS OF LAW, MEMORANDUM AND ORDER- IT IS ORDERED that: The Clerk of Court shall upload Courts Exhibit 1 to CM/ECF as a restricted document. Except as noted within this order, the Nebraska laws that were enacted by L97 (2009) and LB 285 (2009) are constitutional. The claims of the plaintiffs who are not required to register as sex offenders are dismissed without prejudice as moot. The claims of the plaintiffs who are shown on Courts Exhibit 1 to have withdrawn from participation in this lawsuit are dismissed without prejudice. Final judgment will be withheld pending resolution of the attorney fee issue. Counsel for the plaintiffs shall have until November 1, 2012, to submit anapplication, evidence, evidence index, and brief regarding attorney fees. Counsel for the defendants shall have until November 16, 2012, to respond with evidence, evidence index, and brief. Both sides shall give due attention to the local rules of practice regarding attorney fee applications. Counsel are also encouraged to settle the attorney fee issue, if they can, recognizing that the plaintiffs have been partially, but not wholly, successful.Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Senior Judge Richard G. Kopf. (MKR)</subTitle>
+  <partNumber>34</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00456-34.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183695370</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-34</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00456_34.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00456/USCOURTS-ned-8_09-cv-00456-34/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00456/pdf/USCOURTS-ned-8_09-cv-00456-34.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00456; John Doe and Jane Doe 1 through 20 et al v. State of Nebraska et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00456-34</accessId>
+  <sequenceNumber>34</sequenceNumber>
+  <dateIssued>2012-10-17</dateIssued>
+  <docketText>FINDINGS OF FACT AND CONCLUSIONS OF LAW, MEMORANDUM AND ORDER- IT IS ORDERED that: The Clerk of Court shall upload Courts Exhibit 1 to CM/ECF as a restricted document. Except as noted within this order, the Nebraska laws that were enacted by L97 (2009) and LB 285 (2009) are constitutional. The claims of the plaintiffs who are not required to register as sex offenders are dismissed without prejudice as moot. The claims of the plaintiffs who are shown on Courts Exhibit 1 to have withdrawn from participation in this lawsuit are dismissed without prejudice. Final judgment will be withheld pending resolution of the attorney fee issue. Counsel for the plaintiffs shall have until November 1, 2012, to submit anapplication, evidence, evidence index, and brief regarding attorney fees. Counsel for the defendants shall have until November 16, 2012, to respond with evidence, evidence index, and brief. Both sides shall give due attention to the local rules of practice regarding attorney fee applications. Counsel are also encouraged to settle the attorney fee issue, if they can, recognizing that the plaintiffs have been partially, but not wholly, successful.Member Cases: 8:09-cv-00456-RGK-CRZ, 4:09-cv-03266-RGK-CRZ, 4:10-cv-03005-RGK-CRZOrdered by Senior Judge Richard G. Kopf. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

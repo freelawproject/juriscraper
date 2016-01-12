@@ -1,0 +1,297 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8a9dfa">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_10-bk-05397</identifier>
+<identifier type="local">P0b002ee18a8a9dfa</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nceb-8_10-bk-05397</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_10-bk-05397</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:10-bk-05397</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party firstName="Lee" fullName="Lee E. Evans" lastName="Evans" middleName="E." role="Debtor"></party>
+ <party firstName="Kimberly" fullName="Kimberly Kelley Evans" lastName="Evans" middleName="Kelley" role="Joint Debtor"></party>
+ <party firstName="John" fullName="John F. Logan" lastName="Logan" middleName="F." role="Trustee"></party>
+ <party fullName="Recovery Management Systems Corporation" lastName="Recovery Management Systems Corporation" role="Creditor"></party>
+ <party fullName="HSBC Mortgage Services" lastName="HSBC Mortgage Services" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Assignee"></party>
+ <party fullName="FIA Card Services aka Bank of America" lastName="FIA Card Services aka Bank of America" role="Assignor"></party>
+ <party fullName="FIA Card Services" lastName="FIA Card Services" role="Assignor"></party>
+ <party firstName="Attn: Managing Agent" fullName="Attn: Managing Agent Bank of America" lastName="Bank of America" role="Creditor"></party>
+ <party fullName="East Bay Funding, LLC" lastName="East Bay Funding, LLC" role="Creditor"></party>
+ <party fullName="East Bay Funding, LLC" lastName="East Bay Funding, LLC" role="Assignee"></party>
+ <party fullName="CR Evergreen, LLC" lastName="CR Evergreen, LLC" role="Assignor"></party>
+ <party fullName="InSolve Recovery, LLC by American InfoSource LP" lastName="InSolve Recovery, LLC by American InfoSource LP" role="Creditor"></party>
+ <party fullName="Wells Fargo Bank NA" lastName="Wells Fargo Bank NA" role="Creditor"></party>
+ <party fullName="HSBC Bank USA, N.A." lastName="HSBC Bank USA, N.A." role="Creditor"></party>
+ <party fullName="Vanda, LLC" lastName="Vanda, LLC" role="Creditor"></party>
+ <party fullName="Vanda, LLC" lastName="Vanda, LLC" role="Assignee"></party>
+ <party fullName="Candica, LLC" lastName="Candica, LLC" role="Assignor"></party>
+</extension>
+<titleInfo>
+ <title>Lee E. Evans and Kimberly Kelley Evans</title>
+ <partNumber>8:10-bk-05397</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_10-bk-05397/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 14.15</classification>
+<identifier type="preferred citation">8:10-bk-05397;10-5397</identifier>
+<name type="corporate">
+ <namePart>United States Bankruptcy Court Eastern District of North Carolina</namePart>
+ <namePart>4th Circuit</namePart>
+ <namePart>Wilson</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Lee E. Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Lee</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>Kimberly Kelley Evans</displayForm>
+ <namePart type="family">Evans</namePart>
+ <namePart type="given">Kimberly</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Joint Debtor</description>
+</name>
+<name type="personal">
+ <displayForm>John F. Logan</displayForm>
+ <namePart type="family">Logan</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Trustee</description>
+</name>
+<name type="personal">
+ <displayForm>Recovery Management Systems Corporation</displayForm>
+ <namePart type="family">Recovery Management Systems Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HSBC Mortgage Services</displayForm>
+ <namePart type="family">HSBC Mortgage Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>eCAST Settlement Corporation</displayForm>
+ <namePart type="family">eCAST Settlement Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>eCAST Settlement Corporation</displayForm>
+ <namePart type="family">eCAST Settlement Corporation</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignee</description>
+</name>
+<name type="personal">
+ <displayForm>FIA Card Services aka Bank of America</displayForm>
+ <namePart type="family">FIA Card Services aka Bank of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<name type="personal">
+ <displayForm>FIA Card Services</displayForm>
+ <namePart type="family">FIA Card Services</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<name type="personal">
+ <displayForm>Attn: Managing Agent Bank of America</displayForm>
+ <namePart type="family">Bank of America</namePart>
+ <namePart type="given">Attn: Managing Agent</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>East Bay Funding, LLC</displayForm>
+ <namePart type="family">East Bay Funding, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>East Bay Funding, LLC</displayForm>
+ <namePart type="family">East Bay Funding, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignee</description>
+</name>
+<name type="personal">
+ <displayForm>CR Evergreen, LLC</displayForm>
+ <namePart type="family">CR Evergreen, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<name type="personal">
+ <displayForm>InSolve Recovery, LLC by American InfoSource LP</displayForm>
+ <namePart type="family">InSolve Recovery, LLC by American InfoSource LP</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Wells Fargo Bank NA</displayForm>
+ <namePart type="family">Wells Fargo Bank NA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>HSBC Bank USA, N.A.</displayForm>
+ <namePart type="family">HSBC Bank USA, N.A.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Vanda, LLC</displayForm>
+ <namePart type="family">Vanda, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Creditor</description>
+</name>
+<name type="personal">
+ <displayForm>Vanda, LLC</displayForm>
+ <namePart type="family">Vanda, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignee</description>
+</name>
+<name type="personal">
+ <displayForm>Candica, LLC</displayForm>
+ <namePart type="family">Candica, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Assignor</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nceb-8_10-bk-05397</accessId>
+ <courtType>Bankruptcy</courtType>
+ <courtCode>nceb</courtCode>
+ <courtCircuit>4th</courtCircuit>
+ <courtState>North Carolina</courtState>
+ <courtSortOrder>3361</courtSortOrder>
+ <caseNumber>8:10-bk-05397</caseNumber>
+ <caseOffice>Wilson</caseOffice>
+ <party firstName="Lee" fullName="Lee E. Evans" lastName="Evans" middleName="E." role="Debtor"></party>
+ <party firstName="Kimberly" fullName="Kimberly Kelley Evans" lastName="Evans" middleName="Kelley" role="Joint Debtor"></party>
+ <party firstName="John" fullName="John F. Logan" lastName="Logan" middleName="F." role="Trustee"></party>
+ <party fullName="Recovery Management Systems Corporation" lastName="Recovery Management Systems Corporation" role="Creditor"></party>
+ <party fullName="HSBC Mortgage Services" lastName="HSBC Mortgage Services" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Creditor"></party>
+ <party fullName="eCAST Settlement Corporation" lastName="eCAST Settlement Corporation" role="Assignee"></party>
+ <party fullName="FIA Card Services aka Bank of America" lastName="FIA Card Services aka Bank of America" role="Assignor"></party>
+ <party fullName="FIA Card Services" lastName="FIA Card Services" role="Assignor"></party>
+ <party firstName="Attn: Managing Agent" fullName="Attn: Managing Agent Bank of America" lastName="Bank of America" role="Creditor"></party>
+ <party fullName="East Bay Funding, LLC" lastName="East Bay Funding, LLC" role="Creditor"></party>
+ <party fullName="East Bay Funding, LLC" lastName="East Bay Funding, LLC" role="Assignee"></party>
+ <party fullName="CR Evergreen, LLC" lastName="CR Evergreen, LLC" role="Assignor"></party>
+ <party fullName="InSolve Recovery, LLC by American InfoSource LP" lastName="InSolve Recovery, LLC by American InfoSource LP" role="Creditor"></party>
+ <party fullName="Wells Fargo Bank NA" lastName="Wells Fargo Bank NA" role="Creditor"></party>
+ <party fullName="HSBC Bank USA, N.A." lastName="HSBC Bank USA, N.A." role="Creditor"></party>
+ <party fullName="Vanda, LLC" lastName="Vanda, LLC" role="Creditor"></party>
+ <party fullName="Vanda, LLC" lastName="Vanda, LLC" role="Assignee"></party>
+ <party fullName="Candica, LLC" lastName="Candica, LLC" role="Assignor"></party>
+ <state>North Carolina</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nceb-8_10-bk-05397-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_10-bk-05397/USCOURTS-nceb-8_10-bk-05397-0/mods.xml">
+ <titleInfo>
+  <title>Lee E. Evans and Kimberly Kelley Evans</title>
+  <subTitle>Order Allowing Trustee&apos;s Motion To Modify Plan Judge Entering Opinion: DMW (RE: related document(s)68 Motion to Modify Plan filed by Trustee John F. Logan). Appeal time due 1/20/2015. (Smith, Pamela)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_10-bk-05397/pdf/USCOURTS-nceb-8_10-bk-05397-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b1281</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_10-bk-05397/USCOURTS-nceb-8_10-bk-05397-0</identifier>
+ <identifier type="former granule identifier">nceb-8_10-bk-05397_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nceb-8_10-bk-05397/USCOURTS-nceb-8_10-bk-05397-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nceb-8_10-bk-05397/pdf/USCOURTS-nceb-8_10-bk-05397-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:10-bk-05397; Lee E. Evans and Kimberly Kelley Evans; </searchTitle>
+  <courtName>United States Bankruptcy Court Eastern District of North Carolina</courtName>
+  <state>North Carolina</state>
+  <accessId>USCOURTS-nceb-8_10-bk-05397-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>Order Allowing Trustee&apos;s Motion To Modify Plan Judge Entering Opinion: DMW (RE: related document(s)68 Motion to Modify Plan filed by Trustee John F. Logan). Appeal time due 1/20/2015. (Smith, Pamela)</docketText>
+</extension>
+</relatedItem>
+</mods>

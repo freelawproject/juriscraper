@@ -1,0 +1,534 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1835b1b89">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-09-26</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-09-25</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216</identifier>
+<identifier type="local">P0b002ee1835b1b89</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-09-26</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-09-26</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cv-00216</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00216</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00216</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <cause>15:78m(a) Securities Exchange Act</cause>
+ <party fullName="Envision Financial Group, Inc." lastName="Envision Financial Group, Inc." role="Defendant"></party>
+ <party fullName="Envision Investment Advisors" lastName="Envision Investment Advisors" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan M. Jindra" lastName="Jindra" middleName="M." role="Defendant"></party>
+ <party fullName="Securities and Exchange Commission" lastName="Securities and Exchange Commission" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Securities and Exchange Commission v. Jindra et al</title>
+ <partNumber>8:09-cv-00216</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cv-00216;09-216</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Envision Financial Group, Inc.</displayForm>
+ <namePart type="family">Envision Financial Group, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Envision Investment Advisors</displayForm>
+ <namePart type="family">Envision Investment Advisors</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ryan M. Jindra</displayForm>
+ <namePart type="family">Jindra</namePart>
+ <namePart type="given">Ryan</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Securities and Exchange Commission</displayForm>
+ <namePart type="family">Securities and Exchange Commission</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cv-00216</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cv-00216</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>850</natureSuitCode>
+ <natureSuit>Securities, Commodities, Exchange</natureSuit>
+ <cause>15:78m(a) Securities Exchange Act</cause>
+ <party fullName="Envision Financial Group, Inc." lastName="Envision Financial Group, Inc." role="Defendant"></party>
+ <party fullName="Envision Investment Advisors" lastName="Envision Investment Advisors" role="Defendant"></party>
+ <party firstName="Ryan" fullName="Ryan M. Jindra" lastName="Jindra" middleName="M." role="Defendant"></party>
+ <party fullName="Securities and Exchange Commission" lastName="Securities and Exchange Commission" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-0/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER regarding 5 Motion for TRO (copy of this order mailed to Defendants). Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-06-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b5808</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-06-30</dateIssued>
+  <docketText>ORDER regarding 5 Motion for TRO (copy of this order mailed to Defendants). Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-1/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER FOR PRELIMINARY INJUNCTION, ASSET FREEZE AND OTHER EQUITABLE RELIEF - The SEC&apos;s Motion for a Preliminary Injunction (Filing No. 5) is granted asto Defendants Jindra and Envision Investment Advisors, LLC and ReliefDefendant Envision Financial Group, Inc as set forth in this Order. Ordered by Chief Judge Joseph F. Bataillon. (TCL ) Modified on 7/7/2009 to add Copies mailed to pro se party(TCL ).</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-07</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58ee</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-07-07</dateIssued>
+  <docketText>ORDER FOR PRELIMINARY INJUNCTION, ASSET FREEZE AND OTHER EQUITABLE RELIEF - The SEC&apos;s Motion for a Preliminary Injunction (Filing No. 5) is granted asto Defendants Jindra and Envision Investment Advisors, LLC and ReliefDefendant Envision Financial Group, Inc as set forth in this Order. Ordered by Chief Judge Joseph F. Bataillon. (TCL ) Modified on 7/7/2009 to add Copies mailed to pro se party(TCL ).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-2/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER regarding cashier&apos;s checks in payment of attorney fees. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-07-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58f0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-07-08</dateIssued>
+  <docketText>ORDER regarding cashier&apos;s checks in payment of attorney fees. Ordered by Chief Judge Joseph F. Bataillon. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-3/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER STAYING PROCEEDINGS UNTIL SEPTEMBER 23, 2009 AND ALLOWING THIRD PARTY DISCOVERY - IT IS HEREBY ORDERED that, aside from the exception noted below, the proceedings in this case shall be stayed until September 23, 2009. During the pendency of the stay, Defendants and Relief Defendant shall not be required to answer, respond to discovery, or produce information required by the Order of Preliminary Injunction (Docket No. 16) at paragraphs 9A-E. IT IS HEREBY FURTHER ORDERED that as of the date of this Order, Plaintiff may seek discovery from third parties as provided for under the Federal Rules of Civil Procedure. IT IS HEREBY FURTHER ORDERED that a status conference will be held on September 23, 2009, at 8:30 a.m. Ordered by Chief Judge Joseph F. Bataillon. (TCL)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58e9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-08-25</dateIssued>
+  <docketText>ORDER STAYING PROCEEDINGS UNTIL SEPTEMBER 23, 2009 AND ALLOWING THIRD PARTY DISCOVERY - IT IS HEREBY ORDERED that, aside from the exception noted below, the proceedings in this case shall be stayed until September 23, 2009. During the pendency of the stay, Defendants and Relief Defendant shall not be required to answer, respond to discovery, or produce information required by the Order of Preliminary Injunction (Docket No. 16) at paragraphs 9A-E. IT IS HEREBY FURTHER ORDERED that as of the date of this Order, Plaintiff may seek discovery from third parties as provided for under the Federal Rules of Civil Procedure. IT IS HEREBY FURTHER ORDERED that a status conference will be held on September 23, 2009, at 8:30 a.m. Ordered by Chief Judge Joseph F. Bataillon. (TCL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-4/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER - Steven Lefler&apos;s motion for release of funds (Filing No. 47) is granted. Ordered by Magistrate Judge Thomas D. Thalken. (TCL )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-03-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58ea</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-4</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-03-01</dateIssued>
+  <docketText>ORDER - Steven Lefler&apos;s motion for release of funds (Filing No. 47) is granted. Ordered by Magistrate Judge Thomas D. Thalken. (TCL )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-5/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER on the Motion for Attorney Fees 61, filed by Steven Lefler for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Based upon the accounting filed (Filing No. 62), Mr. Lefler is authorized to disburse $528.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-21</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58ef</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-5</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-12-21</dateIssued>
+  <docketText>ORDER on the Motion for Attorney Fees 61, filed by Steven Lefler for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Based upon the accounting filed (Filing No. 62), Mr. Lefler is authorized to disburse $528.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-6/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER granting 66 Motion for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Based upon the accounting filed 67, Mr. Lefler is authorized to disburse $308.84 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58f1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-6</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-02-04</dateIssued>
+  <docketText>ORDER granting 66 Motion for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Based upon the accounting filed 67, Mr. Lefler is authorized to disburse $308.84 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-7/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER on the 71 Motion for Attorney Fees. Based upon the accounting filed 72, Mr. Lefler is authorized to disburse $88.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-7.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b580b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-7</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-05-09</dateIssued>
+  <docketText>ORDER on the 71 Motion for Attorney Fees. Based upon the accounting filed 72, Mr. Lefler is authorized to disburse $88.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-8/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER granting 79 Motion for Attorney Fees. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-8.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b5809</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-8</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2011-11-04</dateIssued>
+  <docketText>ORDER granting 79 Motion for Attorney Fees. Ordered by Magistrate Judge Thomas D. Thalken. (TRL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-9/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER granting 83 Motion for Authorization to pay for services rendered. Mr. Lefler is authorized to disburse $264.00 for services rendered to Steve Achelpohl. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-9.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58ed</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-9</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2011-12-14</dateIssued>
+  <docketText>ORDER granting 83 Motion for Authorization to pay for services rendered. Mr. Lefler is authorized to disburse $264.00 for services rendered to Steve Achelpohl. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-10/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER granting 89 Motion for Attorney Fees - Pursuant to Order 17, and based on the accounting filed 90, Mr. Lefler is authorized to disburse $155.34 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-10.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58eb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-10</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-01-11</dateIssued>
+  <docketText>ORDER granting 89 Motion for Attorney Fees - Pursuant to Order 17, and based on the accounting filed 90, Mr. Lefler is authorized to disburse $155.34 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (TEL)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-11/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER -Based on the accounting filed 95 and Steven Lefler&apos;s Motion 94 for Authorization to pay Mr. Achelpohl for services rendered, Mr. Lefler is authorized to disburse $198.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-03-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-11.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b5807</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-11</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-03-06</dateIssued>
+  <docketText>ORDER -Based on the accounting filed 95 and Steven Lefler&apos;s Motion 94 for Authorization to pay Mr. Achelpohl for services rendered, Mr. Lefler is authorized to disburse $198.00 to Mr. Achelpohl for services rendered. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-12/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>ORDER granting Motion of Steven Lefler for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Mr. Lefler is authorized to disburse $659.86 to Mr. Achelpohl for services rendered. Mr. Lefler shall file a written request to be relieved of his duties as &quot;stand-by counsel&quot; in these proceedings upon an appropriate showing. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-12.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b580a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-12</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-05-08</dateIssued>
+  <docketText>ORDER granting Motion of Steven Lefler for authorization to pay Mr. Achelpohl for services rendered pursuant to this court&apos;s order of July 8, 2009 17. Mr. Lefler is authorized to disburse $659.86 to Mr. Achelpohl for services rendered. Mr. Lefler shall file a written request to be relieved of his duties as &quot;stand-by counsel&quot; in these proceedings upon an appropriate showing. Ordered by Magistrate Judge Thomas D. Thalken. (MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cv-00216-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-13/mods.xml">
+ <titleInfo>
+  <title>Securities and Exchange Commission v. Jindra et al</title>
+  <subTitle>MEMORANDUM AND ORDER granting the Plaintiff&apos;s 114 Motion for Judgment by consent. The Plaintiff&apos;s unopposed 115 Motion to Dismiss Party is granted. The Plaintiff&apos;s claims against defendant Envision Financial Group, Inc. and Envision Investment Advisors (LLC) are dismissed. Defendant Jindras Consent (Filing No. 114, Attachment 1) is incorporated herein as if fully set forth. Defendant Jindra is liable for disgorgement of $484,235.52, representing profits gained as a result of the conduct alleged in the Complaint, which is deemed satisfied by the order of restitution in United States v. Jindra, No. 8:10CR43, Filing No. 101. By agreement of the parties, no civil penalty is imposed in this case. This courts order for preliminary injunction, asset freeze, and other equitable relief (Filing No. 16) is hereby dissolved. Any frozen funds held in bank accounts as a result of the Temporary Restraining Order and Order of Preliminary Injunction (Filing No. 16) shall be applied to defendant Jindras criminal restitution order in United States v. Jindra, No. 8:10CR43. A Final Judgment and Injunction in accordance with Memorandum and Order and defendant Jindras Consent (Filing No. 114, Attachment 1) will issue this date. This court retains jurisdiction over this matter for the purpose of enforcing the terms of the Final Judgment and Injunction. Ordered by Judge Joseph F. Bataillon. (MKR)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cv-00216-13.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1835b58ec</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-13</identifier>
+ <identifier type="former granule identifier">ned-8_09-cv-00216_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cv-00216/USCOURTS-ned-8_09-cv-00216-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cv-00216/pdf/USCOURTS-ned-8_09-cv-00216-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cv-00216; Securities and Exchange Commission v. Jindra et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cv-00216-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2012-09-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER granting the Plaintiff&apos;s 114 Motion for Judgment by consent. The Plaintiff&apos;s unopposed 115 Motion to Dismiss Party is granted. The Plaintiff&apos;s claims against defendant Envision Financial Group, Inc. and Envision Investment Advisors (LLC) are dismissed. Defendant Jindras Consent (Filing No. 114, Attachment 1) is incorporated herein as if fully set forth. Defendant Jindra is liable for disgorgement of $484,235.52, representing profits gained as a result of the conduct alleged in the Complaint, which is deemed satisfied by the order of restitution in United States v. Jindra, No. 8:10CR43, Filing No. 101. By agreement of the parties, no civil penalty is imposed in this case. This courts order for preliminary injunction, asset freeze, and other equitable relief (Filing No. 16) is hereby dissolved. Any frozen funds held in bank accounts as a result of the Temporary Restraining Order and Order of Preliminary Injunction (Filing No. 16) shall be applied to defendant Jindras criminal restitution order in United States v. Jindra, No. 8:10CR43. A Final Judgment and Injunction in accordance with Memorandum and Order and defendant Jindras Consent (Filing No. 114, Attachment 1) will issue this date. This court retains jurisdiction over this matter for the purpose of enforcing the terms of the Final Judgment and Injunction. Ordered by Judge Joseph F. Bataillon. (MKR)</docketText>
+</extension>
+</relatedItem>
+</mods>

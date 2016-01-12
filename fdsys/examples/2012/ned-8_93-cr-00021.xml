@@ -1,0 +1,155 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817c1106">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-17</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_93-cr-00021</identifier>
+<identifier type="local">P0b002ee1817c1106</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-17</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-17</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_93-cr-00021</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_93-cr-00021</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:93-cr-00021</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Frank" fullName="Frank J. Dean" lastName="Dean" middleName="J." role="Defendant"></party>
+ <party firstName="Bobby" fullName="Bobby Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>United States of America v. Smith et al</title>
+ <partNumber>8:93-cr-00021</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_93-cr-00021/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:93-cr-00021;93-021</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Frank J. Dean</displayForm>
+ <namePart type="family">Dean</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Bobby Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Bobby</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_93-cr-00021</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:93-cr-00021</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Frank" fullName="Frank J. Dean" lastName="Dean" middleName="J." role="Defendant"></party>
+ <party firstName="Bobby" fullName="Bobby Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_93-cr-00021-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_93-cr-00021/USCOURTS-ned-8_93-cr-00021-0/mods.xml">
+ <titleInfo>
+  <title>United States of America v. Smith et al</title>
+  <subTitle>ORDER GRANTING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT313 as to defendant Bobby Smith(1). The defendant&apos;s previously imposed sentence of imprisonment of 360 months is reduced to 324 months. Except as provided above, all provisions of the judgment dated 11/23/1994 shall remain in effect. Effective date: 1/12/2012. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM)(JAB)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_93-cr-00021-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818e58dd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_93-cr-00021/USCOURTS-ned-8_93-cr-00021-0</identifier>
+ <identifier type="former granule identifier">ned-8_93-cr-00021_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_93-cr-00021/USCOURTS-ned-8_93-cr-00021-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_93-cr-00021/pdf/USCOURTS-ned-8_93-cr-00021-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:93-cr-00021; United States of America v. Smith et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_93-cr-00021-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-12</dateIssued>
+  <docketText>ORDER GRANTING MOTION TO REDUCE SENTENCE UNDER 2011 CRACK COCAINE GUIDELINE AMENDMENT313 as to defendant Bobby Smith(1). The defendant&apos;s previously imposed sentence of imprisonment of 360 months is reduced to 324 months. Except as provided above, all provisions of the judgment dated 11/23/1994 shall remain in effect. Effective date: 1/12/2012. Ordered by Judge Joseph F. Bataillon. (1 Certified copy to USM)(JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

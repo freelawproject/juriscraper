@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee189467d15">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-06-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-06-04</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645</identifier>
+<identifier type="local">P0b002ee189467d15</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-06-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-06-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-1_13-cv-00645</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00645</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00645</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Aw" lastName="Aw" role="Defendant"></party>
+ <party fullName="Cherrie" lastName="Cherrie" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Brady Eberhardt" lastName="Eberhardt" middleName="Brady" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Eberhardt v. Aw et al</title>
+ <partNumber>1:13-cv-00645</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:13-cv-00645;13-645</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Fresno</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Aw</displayForm>
+ <namePart type="family">Aw</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cherrie</displayForm>
+ <namePart type="family">Cherrie</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Brady Eberhardt</displayForm>
+ <namePart type="family">Eberhardt</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-1_13-cv-00645</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>1:13-cv-00645</caseNumber>
+ <caseOffice>Fresno</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Aw" lastName="Aw" role="Defendant"></party>
+ <party fullName="Cherrie" lastName="Cherrie" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Brady Eberhardt" lastName="Eberhardt" middleName="Brady" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00645-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Eberhardt v. Aw et al</title>
+  <subTitle>ORDER Denying Plaintiff&apos;s Motion To Attend Court Hearings As Moot (Document 11), signed by Magistrate Judge Dennis L. Beck on 8/23/2013. (Fahrney, E)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18947742e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-0</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00645_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00645; (PC) Eberhardt v. Aw et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00645-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-08-23</dateIssued>
+  <docketText>ORDER Denying Plaintiff&apos;s Motion To Attend Court Hearings As Moot (Document 11), signed by Magistrate Judge Dennis L. Beck on 8/23/2013. (Fahrney, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00645-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Eberhardt v. Aw et al</title>
+  <subTitle>ORDER Denying 13 Motion to Appoint Counsel signed by Magistrate Judge Dennis L. Beck on 11/27/2013. (Flores, E)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-27</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18947742f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-1</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00645_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00645; (PC) Eberhardt v. Aw et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00645-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2013-11-27</dateIssued>
+  <docketText>ORDER Denying 13 Motion to Appoint Counsel signed by Magistrate Judge Dennis L. Beck on 11/27/2013. (Flores, E)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00645-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Eberhardt v. Aw et al</title>
+  <subTitle>ORDER DISMISSING Complaint WITH LEAVE TO AMEND, signed by Magistrate Judge Dennis L. Beck on 12/30/13: Thirty-Day Deadline. (Attachments: # (1) Amended Complaint-blank form)(Hellings, J)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18947742d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-2</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00645_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00645; (PC) Eberhardt v. Aw et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00645-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>ORDER DISMISSING Complaint WITH LEAVE TO AMEND, signed by Magistrate Judge Dennis L. Beck on 12/30/13: Thirty-Day Deadline. (Attachments: # (1) Amended Complaint-blank form)(Hellings, J)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-1_13-cv-00645-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Eberhardt v. Aw et al</title>
+  <subTitle>ORDER DISMISSING First Amended Complaint without Leave to Amend signed by Magistrate Judge Dennis L. Beck on 06/04/2014. CASE CLOSED.(Flores, E)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18947742c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-3</identifier>
+ <identifier type="former granule identifier">caed-1_13-cv-00645_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-1_13-cv-00645/USCOURTS-caed-1_13-cv-00645-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-1_13-cv-00645/pdf/USCOURTS-caed-1_13-cv-00645-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:13-cv-00645; (PC) Eberhardt v. Aw et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-1_13-cv-00645-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-06-04</dateIssued>
+  <docketText>ORDER DISMISSING First Amended Complaint without Leave to Amend signed by Magistrate Judge Dennis L. Beck on 06/04/2014. CASE CLOSED.(Flores, E)</docketText>
+</extension>
+</relatedItem>
+</mods>

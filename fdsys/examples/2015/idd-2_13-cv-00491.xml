@@ -1,0 +1,373 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18ca3bfc2">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Idaho</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-06-10</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-06-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491</identifier>
+<identifier type="local">P0b002ee18ca3bfc2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-06-10</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-06-10</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-idd-2_13-cv-00491</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-2_13-cv-00491</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>2:13-cv-00491</caseNumber>
+ <caseOffice>CDA - Northern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="BMW of North America, LLC" lastName="BMW of North America, LLC" role="Defendant"></party>
+ <party firstName="Casey" fullName="Casey Bryntensen" lastName="Bryntensen" role="Plaintiff"></party>
+ <party firstName="Sheree" fullName="Sheree Bryntensen" lastName="Bryntensen" role="Plaintiff"></party>
+ <party fullName="C.B." lastName="C.B." role="Plaintiff"></party>
+ <party fullName="Camp Automotive, Inc." lastName="Camp Automotive, Inc." role="Defendant"></party>
+ <party firstName="Jane &amp; John" fullName="Jane &amp; John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Grumbly" lastName="Grumbly" role="Defendant"></party>
+ <party fullName="J.B." lastName="J.B." role="Plaintiff"></party>
+ <party fullName="Lithia Motors, Inc." lastName="Lithia Motors, Inc." role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rydman" lastName="Rydman" role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Wilson" lastName="Wilson" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+ <partNumber>2:13-cv-00491</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-00491;13-491</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Idaho</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>CDA - Northern</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>BMW of North America, LLC</displayForm>
+ <namePart type="family">BMW of North America, LLC</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Casey Bryntensen</displayForm>
+ <namePart type="family">Bryntensen</namePart>
+ <namePart type="given">Casey</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Sheree Bryntensen</displayForm>
+ <namePart type="family">Bryntensen</namePart>
+ <namePart type="given">Sheree</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>C.B.</displayForm>
+ <namePart type="family">C.B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Camp Automotive, Inc.</displayForm>
+ <namePart type="family">Camp Automotive, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jane &amp; John Does 1-10</displayForm>
+ <namePart type="family">Does 1-10</namePart>
+ <namePart type="given">Jane &amp; John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Grumbly</displayForm>
+ <namePart type="family">Grumbly</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J.B.</displayForm>
+ <namePart type="family">J.B.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Lithia Motors, Inc.</displayForm>
+ <namePart type="family">Lithia Motors, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Rydman</displayForm>
+ <namePart type="family">Rydman</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Steve Wilson</displayForm>
+ <namePart type="family">Wilson</namePart>
+ <namePart type="given">Steve</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-idd-2_13-cv-00491</accessId>
+ <courtType>District</courtType>
+ <courtCode>idd</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>Idaho</courtState>
+ <courtSortOrder>2150</courtSortOrder>
+ <caseNumber>2:13-cv-00491</caseNumber>
+ <caseOffice>CDA - Northern</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>360</natureSuitCode>
+ <natureSuit>Other Personal Injury</natureSuit>
+ <cause>28:1332 Diversity-(Citizenship)</cause>
+ <party fullName="BMW of North America, LLC" lastName="BMW of North America, LLC" role="Defendant"></party>
+ <party firstName="Casey" fullName="Casey Bryntensen" lastName="Bryntensen" role="Plaintiff"></party>
+ <party firstName="Sheree" fullName="Sheree Bryntensen" lastName="Bryntensen" role="Plaintiff"></party>
+ <party fullName="C.B." lastName="C.B." role="Plaintiff"></party>
+ <party fullName="Camp Automotive, Inc." lastName="Camp Automotive, Inc." role="Defendant"></party>
+ <party firstName="Jane &amp; John" fullName="Jane &amp; John Does 1-10" lastName="Does 1-10" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Grumbly" lastName="Grumbly" role="Defendant"></party>
+ <party fullName="J.B." lastName="J.B." role="Plaintiff"></party>
+ <party fullName="Lithia Motors, Inc." lastName="Lithia Motors, Inc." role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Rydman" lastName="Rydman" role="Defendant"></party>
+ <party firstName="Steve" fullName="Steve Wilson" lastName="Wilson" role="Defendant"></party>
+ <state>Idaho</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-0/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: Defendants shall send a letter in the form set forth above to all customers who entered into a BVA with store nos. 51, 52, or 109 from 5/1/2013 to 7/1/2013. If a customer voluntarily chooses to partake in an interview with one or both of the attorneys for the parties, information obtained through any interview shall be subject to the discovery rules, and the parties shall be required to seasonably supplement any and all discovery pertaining to that customers&apos; statements, per the Federal Rules of Civil Procedure. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-11</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42529</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-0</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2014-07-11</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: Defendants shall send a letter in the form set forth above to all customers who entered into a BVA with store nos. 51, 52, or 109 from 5/1/2013 to 7/1/2013. If a customer voluntarily chooses to partake in an interview with one or both of the attorneys for the parties, information obtained through any interview shall be subject to the discovery rules, and the parties shall be required to seasonably supplement any and all discovery pertaining to that customers&apos; statements, per the Federal Rules of Civil Procedure. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-1/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>ORDER Motion to Seal Docket Nos. 81, 82, 82-1, 82-2, and 82-3 (Dkt. 88) is GRANTED in part and DENIED in part as explained above. Motion to Seal Second Declaration of Michael G. Schmidt in Support of Plaintiffs&apos; Motion to Amend Complaint (Dkt. 103) is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (jp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42527</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-1</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>ORDER Motion to Seal Docket Nos. 81, 82, 82-1, 82-2, and 82-3 (Dkt. 88) is GRANTED in part and DENIED in part as explained above. Motion to Seal Second Declaration of Michael G. Schmidt in Support of Plaintiffs&apos; Motion to Amend Complaint (Dkt. 103) is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (jp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-2/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER. Defendants&apos; Motion 56 is DENIED. Defendants&apos; Motion 63 is GRANTED. Defendants&apos; Motion 70 is DENIED. Defendants&apos; Motion 91 is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-20</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42525</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-2</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-20</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER. Defendants&apos; Motion 56 is DENIED. Defendants&apos; Motion 63 is GRANTED. Defendants&apos; Motion 70 is DENIED. Defendants&apos; Motion 91 is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-3/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER granting in part and denying in part 80 Motion to Amend Complaint. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjs)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-04-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42524</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-3</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-04-16</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER granting in part and denying in part 80 Motion to Amend Complaint. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (cjs)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-4/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: Motion for Fees 143 is GRANTED in part and DENIED in part. Plaintiffs shall pay Defendants $5,853 in fees for the sanctions imposed by the Court in its earlier Order. Ex Parte Motion to Seal BMW of North America, LLC&apos;s Motion for Summary Judgment Materials and Entry of Amended Protective Order 136 is DENIED. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-05-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42526</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-4</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-05-01</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: Motion for Fees 143 is GRANTED in part and DENIED in part. Plaintiffs shall pay Defendants $5,853 in fees for the sanctions imposed by the Court in its earlier Order. Ex Parte Motion to Seal BMW of North America, LLC&apos;s Motion for Summary Judgment Materials and Entry of Amended Protective Order 136 is DENIED. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-idd-2_13-cv-00491-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-5/mods.xml">
+ <titleInfo>
+  <title>Bryntensen et al v. Camp Automotive, Inc. et al</title>
+  <subTitle>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: BMW of North America&apos;s Motion for Summary Judgment of Dismissal 130 is GRANTED. BMW shall be DISMISSED from the case. Camp Automotive, et. al.&apos;s Motion for Partial Summary Judgment 140 is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-06-09</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18ca42528</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-5</identifier>
+ <identifier type="former granule identifier">idd-2_13-cv-00491_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-idd-2_13-cv-00491/USCOURTS-idd-2_13-cv-00491-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-idd-2_13-cv-00491/pdf/USCOURTS-idd-2_13-cv-00491-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-00491; Bryntensen et al v. Camp Automotive, Inc. et al; </searchTitle>
+  <courtName>United States District Court District of Idaho</courtName>
+  <state>Idaho</state>
+  <accessId>USCOURTS-idd-2_13-cv-00491-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2015-06-09</dateIssued>
+  <docketText>MEMORANDUM DECISION AND ORDER. IT IS ORDERED: BMW of North America&apos;s Motion for Summary Judgment of Dismissal 130 is GRANTED. BMW shall be DISMISSED from the case. Camp Automotive, et. al.&apos;s Motion for Partial Summary Judgment 140 is GRANTED in part and DENIED in part. Signed by Judge B. Lynn Winmill. (caused to be mailed to non Registered Participants at the addresses listed on the Notice of Electronic Filing (NEF) by (st)</docketText>
+</extension>
+</relatedItem>
+</mods>

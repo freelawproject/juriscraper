@@ -1,0 +1,189 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee186c2e312">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-01-02</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03649</identifier>
+<identifier type="local">P0b002ee186c2e312</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-txnd-3_13-cv-03649</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-03649</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-03649</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Ronnie" fullName="Ronnie K Ross" lastName="Ross" middleName="K" role="Plaintiff"></party>
+ <party fullName="Texas Board of Pardon and Parole" lastName="Texas Board of Pardon and Parole" role="Defendant"></party>
+ <party fullName="Texas Department of Criminal Justice" lastName="Texas Department of Criminal Justice" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Ross v. Texas Board of Pardon and Parole et al</title>
+ <partNumber>3:13-cv-03649</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03649/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:13-cv-03649;13-3649</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Texas</namePart>
+ <namePart>5th Circuit</namePart>
+ <namePart>Dallas</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Ronnie K Ross</displayForm>
+ <namePart type="family">Ross</namePart>
+ <namePart type="given">Ronnie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Texas Board of Pardon and Parole</displayForm>
+ <namePart type="family">Texas Board of Pardon and Parole</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Texas Department of Criminal Justice</displayForm>
+ <namePart type="family">Texas Department of Criminal Justice</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-txnd-3_13-cv-03649</accessId>
+ <courtType>District</courtType>
+ <courtCode>txnd</courtCode>
+ <courtCircuit>5th</courtCircuit>
+ <courtState>Texas</courtState>
+ <courtSortOrder>2482</courtSortOrder>
+ <caseNumber>3:13-cv-03649</caseNumber>
+ <caseOffice>Dallas</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Ronnie" fullName="Ronnie K Ross" lastName="Ross" middleName="K" role="Plaintiff"></party>
+ <party fullName="Texas Board of Pardon and Parole" lastName="Texas Board of Pardon and Parole" role="Defendant"></party>
+ <party fullName="Texas Department of Criminal Justice" lastName="Texas Department of Criminal Justice" role="Defendant"></party>
+ <state>Texas</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-03649-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-0/mods.xml">
+ <titleInfo>
+  <title>Ross v. Texas Board of Pardon and Parole et al</title>
+  <subTitle>FINDINGS CONCLUSIONS AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE. The Court recommends that Plaintiff&apos;s complaint be dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B). (see order) (Ordered by Magistrate Judge Paul D Stickney on 11/5/2013) (mcrd)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-11-05</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-03649-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3fbba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-0</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-03649_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03649/pdf/USCOURTS-txnd-3_13-cv-03649-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-03649; Ross v. Texas Board of Pardon and Parole et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-03649-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-11-05</dateIssued>
+  <docketText>FINDINGS CONCLUSIONS AND RECOMMENDATION OF THE UNITED STATES MAGISTRATE JUDGE. The Court recommends that Plaintiff&apos;s complaint be dismissed pursuant to 28 U.S.C. § 1915(e)(2)(B). (see order) (Ordered by Magistrate Judge Paul D Stickney on 11/5/2013) (mcrd)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-txnd-3_13-cv-03649-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-1/mods.xml">
+ <titleInfo>
+  <title>Ross v. Texas Board of Pardon and Parole et al</title>
+  <subTitle>Order Accepting Findings and Recommendations 12 of the United States Magistrate Judge. (Ordered by Judge Jane J Boyle on 1/2/2014) (chmb)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-txnd-3_13-cv-03649-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee186c3fbb2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-1</identifier>
+ <identifier type="former granule identifier">txnd-3_13-cv-03649_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-txnd-3_13-cv-03649/USCOURTS-txnd-3_13-cv-03649-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-txnd-3_13-cv-03649/pdf/USCOURTS-txnd-3_13-cv-03649-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:13-cv-03649; Ross v. Texas Board of Pardon and Parole et al; </searchTitle>
+  <courtName>United States District Court Northern District of Texas</courtName>
+  <state>Texas</state>
+  <accessId>USCOURTS-txnd-3_13-cv-03649-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-02</dateIssued>
+  <docketText>Order Accepting Findings and Recommendations 12 of the United States Magistrate Judge. (Ordered by Judge Jane J Boyle on 1/2/2014) (chmb)</docketText>
+</extension>
+</relatedItem>
+</mods>

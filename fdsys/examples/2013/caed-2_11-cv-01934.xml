@@ -1,0 +1,292 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183bf53bd">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-01-31</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-01-30</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934</identifier>
+<identifier type="local">P0b002ee183bf53bd</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-01-31</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-01-31</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01934</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01934</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01934</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Renaldo" fullName="Renaldo E. Gibson" lastName="Gibson" middleName="E." role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael McDonald" lastName="McDonald" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Gibson v. McDonald</title>
+ <partNumber>2:11-cv-01934</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01934;11-1934</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Renaldo E. Gibson</displayForm>
+ <namePart type="family">Gibson</namePart>
+ <namePart type="given">Renaldo</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Michael McDonald</displayForm>
+ <namePart type="family">McDonald</namePart>
+ <namePart type="given">Michael</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01934</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01934</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Renaldo" fullName="Renaldo E. Gibson" lastName="Gibson" middleName="E." role="Plaintiff"></party>
+ <party firstName="Michael" fullName="Michael McDonald" lastName="McDonald" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/01/11 ordering plaintiff has 30 days from the date of service of this order to submit either the filing fee or the application required by section 1915(a). The clerk of the court is directed to mail to plaintiff a form application for leave to proceed in forma pauperis. (Plummer, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-01</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-08-01</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 08/01/11 ordering plaintiff has 30 days from the date of service of this order to submit either the filing fee or the application required by section 1915(a). The clerk of the court is directed to mail to plaintiff a form application for leave to proceed in forma pauperis. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Renaldo E. Gibson signed by Magistrate Judge Edmund F. Brennan on 1/18/2012. CDC is to collect an initial partial filing fee and thereafter the balance and forward to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC, Financial)(Yin, K)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-18</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Renaldo E. Gibson signed by Magistrate Judge Edmund F. Brennan on 1/18/2012. CDC is to collect an initial partial filing fee and thereafter the balance and forward to the clerk until the $350 filing fee is paid in full. Clerk is directed to serve this order and copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC, Financial)(Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER denying 16 Motion signed by Magistrate Judge Edmund F. Brennan on 5/24/12. (Kaminski, H)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-05-24</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-05-24</dateIssued>
+  <docketText>ORDER denying 16 Motion signed by Magistrate Judge Edmund F. Brennan on 5/24/12. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/3/2012, DENYING plaintiff&apos;s 18 request for appointment of counsel. (Yin, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-08-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 8/3/2012, DENYING plaintiff&apos;s 18 request for appointment of counsel. (Yin, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/03/13 ordering that within 21 days of the date of this order, plaintiff shall file either an opposition or a statement of no opposition. (Plummer, M)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-4</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2013-01-03</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Edmund F. Brennan on 1/03/13 ordering that within 21 days of the date of this order, plaintiff shall file either an opposition or a statement of no opposition. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01934-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-5/mods.xml">
+ <titleInfo>
+  <title>(PC) Gibson v. McDonald</title>
+  <subTitle>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/30/13 ORDERING that the Clerk randomly assign a United States District Judge to this case. RECOMMENDING that this action be dismissed without prejudice. Referred to Judge John A. Mendez; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01934-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183bf9ae4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-5</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01934_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01934/USCOURTS-caed-2_11-cv-01934-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01934/pdf/USCOURTS-caed-2_11-cv-01934-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01934; (PC) Gibson v. McDonald; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01934-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2013-01-30</dateIssued>
+  <docketText>ORDER and FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Edmund F. Brennan on 1/30/13 ORDERING that the Clerk randomly assign a United States District Judge to this case. RECOMMENDING that this action be dismissed without prejudice. Referred to Judge John A. Mendez; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+</mods>

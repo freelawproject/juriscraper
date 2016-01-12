@@ -1,0 +1,314 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817ade38">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-11</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023</identifier>
+<identifier type="local">P0b002ee1817ade38</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cr-00023</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00023</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00023</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Malik" fullName="Malik M. Stelly" lastName="Stelly" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Stelly</title>
+ <partNumber>8:04-cr-00023</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cr-00023;04-023</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Malik M. Stelly</displayForm>
+ <namePart type="family">Stelly</namePart>
+ <namePart type="given">Malik</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cr-00023</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cr-00023</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Malik" fullName="Malik M. Stelly" lastName="Stelly" middleName="M." role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>ORDER scheduling resentencing per remand from 8th Circuit; hearing 5/11/2005 10:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; defense counsel reappointedas to defendant(s) Malik M. Stelly. Signed by Judge Joseph F. Bataillon on 5/9/2005. (SMS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b2b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-09</dateIssued>
+  <docketText>ORDER scheduling resentencing per remand from 8th Circuit; hearing 5/11/2005 10:00 AM in Courtroom 3 (Omaha) before Chief Judge Joseph F. Bataillon; defense counsel reappointedas to defendant(s) Malik M. Stelly. Signed by Judge Joseph F. Bataillon on 5/9/2005. (SMS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>JUDGMENT as to Malik M. Stelly (1), Count(s) 1, Defendant pleaded guilty to count I of the Indictment and is committed to the Bureau of Prisons for 57 months; 3 years supervised release with special conditions; $100 special assessment// CORRECTION OF SENTENCE ON REMAND; defendant is resentenced to 46 months in the Bureau of Prisons; supervised release remains 3 years under the same terms and conditions previously set forth; the special assessment in the amount of $100 remains due and payable., as to defendant(s) Malik M. Stelly. Signed by Judge Joseph F. Bataillon on 5/13/2005. (5 certified copies to the US Marshal) (PCV, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b2a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-05-13</dateIssued>
+  <docketText>JUDGMENT as to Malik M. Stelly (1), Count(s) 1, Defendant pleaded guilty to count I of the Indictment and is committed to the Bureau of Prisons for 57 months; 3 years supervised release with special conditions; $100 special assessment// CORRECTION OF SENTENCE ON REMAND; defendant is resentenced to 46 months in the Bureau of Prisons; supervised release remains 3 years under the same terms and conditions previously set forth; the special assessment in the amount of $100 remains due and payable., as to defendant(s) Malik M. Stelly. Signed by Judge Joseph F. Bataillon on 5/13/2005. (5 certified copies to the US Marshal) (PCV, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>JUDGMENT for Revocation of Probation or Supervised Release as to Malik M. Stelly (1), - Defendant admitted guilt to violation of the mandatory condition which states the defendant shall not commit another federal, state or local crime during of the term of supervision ; defendant shall enter and participate in a community confinement program, in the community corrections component with work release for a period of 120 days or until discharged by the United States Probation Office pursuant to 18 U.S.S.G. 3563(b)(11); defendant&apos;s current term of supervised release of three (3) years shall continue and is scheduled to complete February 14, 2010; $100 special assessment has been paid in full as to defendant(s) Malik M. Stelly. Allegations 2 and 3 of the petition dismissed on the motion of the United States as to this defendant only. The defendant is remanded to the custody of the United States Marshal pending placement in a community confinement program. Ordered by Chief Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-11-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b40</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-11-19</dateIssued>
+  <docketText>JUDGMENT for Revocation of Probation or Supervised Release as to Malik M. Stelly (1), - Defendant admitted guilt to violation of the mandatory condition which states the defendant shall not commit another federal, state or local crime during of the term of supervision ; defendant shall enter and participate in a community confinement program, in the community corrections component with work release for a period of 120 days or until discharged by the United States Probation Office pursuant to 18 U.S.S.G. 3563(b)(11); defendant&apos;s current term of supervised release of three (3) years shall continue and is scheduled to complete February 14, 2010; $100 special assessment has been paid in full as to defendant(s) Malik M. Stelly. Allegations 2 and 3 of the petition dismissed on the motion of the United States as to this defendant only. The defendant is remanded to the custody of the United States Marshal pending placement in a community confinement program. Ordered by Chief Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>ORDER TO WITHDRAW EXHIBITS as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b2d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2008-12-04</dateIssued>
+  <docketText>ORDER TO WITHDRAW EXHIBITS as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (TJS)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>ORDER APPOINTING COUNSEL as to defendant Malik M. Stelly - Jay W. Mez is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-02-13</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b2e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-02-13</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL as to defendant Malik M. Stelly - Jay W. Mez is appointed to represent the defendant. Ordered by Magistrate Judge Thomas D. Thalken. (MBB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>JUDGMENT (Revocation of Probation or Supervised Release) Defendant admitted guilt to violation of the court&apos;s order dated November 19, 2008 which states the defendant shall enter and participate in a community confinement program and Special condition 1. Defendant is hereby committed to the custody of the United States Bureau of Prisons for a total term of 6 months; 30 months supervised release with special conditions; $100 Special Assessment (paid); Allegations 2 and 3 of the petition is dismissed on the motion of the United States as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)(MKR)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-03-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b3f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-5</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2009-03-09</dateIssued>
+  <docketText>JUDGMENT (Revocation of Probation or Supervised Release) Defendant admitted guilt to violation of the court&apos;s order dated November 19, 2008 which states the defendant shall enter and participate in a community confinement program and Special condition 1. Defendant is hereby committed to the custody of the United States Bureau of Prisons for a total term of 6 months; 30 months supervised release with special conditions; $100 Special Assessment (paid); Allegations 2 and 3 of the petition is dismissed on the motion of the United States as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM)(MKR)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cr-00023-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Stelly</title>
+  <subTitle>ORDER APPOINTING COUNSEL - Jay W. Mez is appointed as attorney of record for the above-named defendant in this matter as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed as directed)(JAE)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cr-00023-6.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181889b2c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-6</identifier>
+ <identifier type="former granule identifier">ned-8_04-cr-00023_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cr-00023/USCOURTS-ned-8_04-cr-00023-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cr-00023/pdf/USCOURTS-ned-8_04-cr-00023-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cr-00023; USA v. Stelly; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cr-00023-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2010-01-11</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - Jay W. Mez is appointed as attorney of record for the above-named defendant in this matter as to defendant Malik M. Stelly. Ordered by Chief Judge Joseph F. Bataillon. (Copies mailed as directed)(JAE)</docketText>
+</extension>
+</relatedItem>
+</mods>

@@ -1,0 +1,291 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18d71b0b6">
+<name type="corporate">
+ <namePart>United States Government Publishing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">publisher</roleTerm>
+  <roleTerm type="code" authority="marcrelator">pbl</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-09-02</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-09-01</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066</identifier>
+<identifier type="local">P0b002ee18d71b0b6</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-09-02</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-09-02</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_13-cv-02066</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02066</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02066</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Frank" fullName="Frank Lee Dearwester" lastName="Dearwester" middleName="Lee" role="Plaintiff"></party>
+ <party fullName="Gil" lastName="Gil" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="Sacramento County Sheriff&apos;s Department" lastName="Sacramento County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Toliver" lastName="Toliver" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+ <partNumber>2:13-cv-02066</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:13-cv-02066;13-2066</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Frank Lee Dearwester</displayForm>
+ <namePart type="family">Dearwester</namePart>
+ <namePart type="given">Frank</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Gil</displayForm>
+ <namePart type="family">Gil</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Scott Jones</displayForm>
+ <namePart type="family">Jones</namePart>
+ <namePart type="given">Scott</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sacramento County Sheriff&apos;s Department</displayForm>
+ <namePart type="family">Sacramento County Sheriff&apos;s Department</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Toliver</displayForm>
+ <namePart type="family">Toliver</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_13-cv-02066</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:13-cv-02066</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party firstName="Frank" fullName="Frank Lee Dearwester" lastName="Dearwester" middleName="Lee" role="Plaintiff"></party>
+ <party fullName="Gil" lastName="Gil" role="Defendant"></party>
+ <party firstName="Scott" fullName="Scott Jones" lastName="Jones" role="Defendant"></party>
+ <party fullName="Sacramento County Sheriff&apos;s Department" lastName="Sacramento County Sheriff&apos;s Department" role="Defendant"></party>
+ <party fullName="Toliver" lastName="Toliver" role="Defendant"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02066-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-0/mods.xml">
+ <titleInfo>
+  <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 10/17/13 denying 2 Motion to Proceed IFP without prejudice; Plaintiff shall submit, within thirty days from the date of this order, a completed and current affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court; The Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within thirty days from the date of this order, a certified copy of his prison trust account statement for the six month period immediately preceding the filing of the complaint.(Dillon, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d72e8a6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-0</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02066_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02066; (PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02066-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-18</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 10/17/13 denying 2 Motion to Proceed IFP without prejudice; Plaintiff shall submit, within thirty days from the date of this order, a completed and current affidavit in support of his request to proceed in forma pauperis on the form provided by the Clerk of Court; The Clerk of the Court is directed to send plaintiff a new Application to Proceed In Forma Pauperis By a Prisoner; and Plaintiff shall submit, within thirty days from the date of this order, a certified copy of his prison trust account statement for the six month period immediately preceding the filing of the complaint.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02066-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-1/mods.xml">
+ <titleInfo>
+  <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Frank Lee Dearwester signed by Magistrate Judge Dale A. Drozd on 07/31/14. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-08-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d72e8f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-1</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02066_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02066; (PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02066-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-08-01</dateIssued>
+  <docketText>ORDER DIRECTING MONTHLY PAYMENTS be made from Prison Account of Frank Lee Dearwester signed by Magistrate Judge Dale A. Drozd on 07/31/14. CDC is to collect payments from plaintiff&apos;s account and forward to the clerk until the $350.00 filing fee is paid in full. Clerk to serve this order and a copy of plaintiff&apos;s IFP on the Director of CDC. Clerk to also serve Financial with a copy of this order. (cc: CDC Director and Financial)(Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02066-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-2/mods.xml">
+ <titleInfo>
+  <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER signed by Magistrate Judge Dale A. Drozd on 1/06/15 granting 22 Motion for Extension of time. Plaintiff is granted 30 days from the date of service of this order in which to file an opposition to defendants&apos; motion to dismiss. Defendants shall file any reply in accordance with Local Rule 230(l). Plaintiff&apos;s motion for appointment of counsel 23 is denied. (Plummer, M)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-06</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d72e8a8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-2</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02066_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02066; (PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02066-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2015-01-06</dateIssued>
+  <docketText>ORDER signed by Magistrate Judge Dale A. Drozd on 1/06/15 granting 22 Motion for Extension of time. Plaintiff is granted 30 days from the date of service of this order in which to file an opposition to defendants&apos; motion to dismiss. Defendants shall file any reply in accordance with Local Rule 230(l). Plaintiff&apos;s motion for appointment of counsel 23 is denied. (Plummer, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02066-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-3/mods.xml">
+ <titleInfo>
+  <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+  <subTitle>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Dale A. Drozd on 7/22/15 RECOMMENDING that Defendants&apos; motion to dismiss (Doc. No. 21) be granted in part and denied in part as follows: a. Defendants&apos; motion to dismiss plaintiff&apos;s RLUIPA claims be granted; b. Defendants&apos; motion to dismiss plaintiff&apos;s First Amendment claims be denied; and Defendants be directed to file an answer to plaintiff&apos;s First Amendment claims for damages based on their denial of his kosher diet at the Sacramento County Main Jail within 30 days of any order adopting these findings and recommendations. Referred to Judge Morrison C. England, Jr.; Objections to F&amp;R due within 14 days.(Dillon, M)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-07-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d72e8a7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-3</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02066_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02066; (PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02066-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2015-07-23</dateIssued>
+  <docketText>FINDINGS and RECOMMENDATIONS signed by Magistrate Judge Dale A. Drozd on 7/22/15 RECOMMENDING that Defendants&apos; motion to dismiss (Doc. No. 21) be granted in part and denied in part as follows: a. Defendants&apos; motion to dismiss plaintiff&apos;s RLUIPA claims be granted; b. Defendants&apos; motion to dismiss plaintiff&apos;s First Amendment claims be denied; and Defendants be directed to file an answer to plaintiff&apos;s First Amendment claims for damages based on their denial of his kosher diet at the Sacramento County Main Jail within 30 days of any order adopting these findings and recommendations. Referred to Judge Morrison C. England, Jr.; Objections to F&amp;R due within 14 days.(Dillon, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_13-cv-02066-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-4/mods.xml">
+ <titleInfo>
+  <title>(PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al</title>
+  <subTitle>ORDER adopting in full 30 FINDINGS AND RECOMMENDATIONS, signed by Chief Judge Morrison C. England, Jr., on 8/31/15. Defendants&apos; Motion to Dismiss 21 is GRANTED as to Plaintiff&apos;s Religious Land Use Institutionalized Persons Act claims and DENIED as to Plaintiff&apos;s First Amendment claims. Defendants shall file an answer to Plaintiff&apos;s First Amendment claims for damages based on their denial of his kosher diet at the Sacramento County Main Jail within 30 days of the date that this Order is electronically filed. (Kastilahn, A)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-09-01</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18d72e8a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-4</identifier>
+ <identifier type="former granule identifier">caed-2_13-cv-02066_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_13-cv-02066/USCOURTS-caed-2_13-cv-02066-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_13-cv-02066/pdf/USCOURTS-caed-2_13-cv-02066-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:13-cv-02066; (PC) Dearwester v. Sacramento County Sheriff&apos;s Department et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_13-cv-02066-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2015-09-01</dateIssued>
+  <docketText>ORDER adopting in full 30 FINDINGS AND RECOMMENDATIONS, signed by Chief Judge Morrison C. England, Jr., on 8/31/15. Defendants&apos; Motion to Dismiss 21 is GRANTED as to Plaintiff&apos;s Religious Land Use Institutionalized Persons Act claims and DENIED as to Plaintiff&apos;s First Amendment claims. Defendants shall file an answer to Plaintiff&apos;s First Amendment claims for damages based on their denial of his kosher diet at the Sacramento County Main Jail within 30 days of the date that this Order is electronically filed. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+</mods>

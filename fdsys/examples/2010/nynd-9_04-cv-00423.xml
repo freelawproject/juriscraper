@@ -1,0 +1,658 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181159664">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of New York</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2011-11-16</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423</identifier>
+<identifier type="local">P0b002ee181159664</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2011-11-16</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2011-12-23</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-nynd-9_04-cv-00423</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00423</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00423</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="E." fullName="E. Amberman" lastName="Amberman" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Baranska" lastName="Baranska" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Benitez" lastName="Benitez" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Bradt" lastName="Bradt" role="Defendant"></party>
+ <party firstName="J." fullName="J. Burge" lastName="Burge" role="Defendant"></party>
+ <party firstName="J." fullName="J. Burns" lastName="Burns" role="Defendant"></party>
+ <party firstName="W." fullName="W. Chilson" lastName="Chilson" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Christopher" lastName="Christopher" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Colon" lastName="Colon" role="Defendant"></party>
+ <party firstName="S." fullName="S. Conaughty" lastName="Conaughty" role="Defendant"></party>
+ <party firstName="R." fullName="R. Considine" lastName="Considine" role="Defendant"></party>
+ <party firstName="T." fullName="T. Covert" lastName="Covert" role="Defendant"></party>
+ <party firstName="S." fullName="S. Crozier" lastName="Crozier" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe XII" generation="XII" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="T." fullName="T. Eagen" lastName="Eagen" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. Easterbrook" lastName="Easterbrook" role="Defendant"></party>
+ <party firstName="C." fullName="C. Gummerson" lastName="Gummerson" role="Defendant"></party>
+ <party firstName="M." fullName="M. Kessel" lastName="Kessel" role="Defendant"></party>
+ <party firstName="Psych." fullName="Psych. Kneeland" lastName="Kneeland" role="Defendant"></party>
+ <party firstName="V." fullName="V. Konecny" lastName="Konecny" role="Defendant"></party>
+ <party firstName="S." fullName="S. Lennox" lastName="Lennox" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Leonello" lastName="Leonello" role="Defendant"></party>
+ <party firstName="J." fullName="J. Locastro" lastName="Locastro" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Loomis" lastName="Loomis" role="Defendant"></party>
+ <party firstName="G." fullName="G. Maccucci" lastName="Maccucci" role="Defendant"></party>
+ <party firstName="B." fullName="B. Maher" lastName="Maher" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Martens" lastName="Martens" role="Defendant"></party>
+ <party firstName="J." fullName="J. McNamara" lastName="McNamara" role="Defendant"></party>
+ <party firstName="M." fullName="M. Melindez" lastName="Melindez" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Meyers" lastName="Meyers" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Murley" lastName="Murley" role="Defendant"></party>
+ <party firstName="C." fullName="C. Parmiter" lastName="Parmiter" role="Defendant"></party>
+ <party firstName="J." fullName="J. Porten" lastName="Porten" role="Defendant"></party>
+ <party firstName="T." fullName="T. Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="J." fullName="J. Rourke" lastName="Rourke" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Roux" lastName="Roux" role="Defendant"></party>
+ <party firstName="D." fullName="D. Selsky" lastName="Selsky" role="Defendant"></party>
+ <party firstName="R." fullName="R. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="J." fullName="J. Wilkinson" lastName="Wilkinson" role="Defendant"></party>
+ <party firstName="CHO" fullName="CHO Wolczyk" lastName="Wolczyk" role="Defendant"></party>
+ <party firstName="S." fullName="S. Yorkey" lastName="Yorkey" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Benitez v. Locastro et al</title>
+ <partNumber>9:04-cv-00423</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">9:04-cv-00423;04-423</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of New York</namePart>
+ <namePart>2nd Circuit</namePart>
+ <namePart>Prisoner</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>E. Amberman</displayForm>
+ <namePart type="family">Amberman</namePart>
+ <namePart type="given">E.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Baranska</displayForm>
+ <namePart type="family">Baranska</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Henry Benitez</displayForm>
+ <namePart type="family">Benitez</namePart>
+ <namePart type="given">Henry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>M. Bradt</displayForm>
+ <namePart type="family">Bradt</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Burge</displayForm>
+ <namePart type="family">Burge</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Burns</displayForm>
+ <namePart type="family">Burns</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>W. Chilson</displayForm>
+ <namePart type="family">Chilson</namePart>
+ <namePart type="given">W.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sgt. Christopher</displayForm>
+ <namePart type="family">Christopher</namePart>
+ <namePart type="given">Sgt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Clarke</displayForm>
+ <namePart type="family">Clarke</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sergeant Colon</displayForm>
+ <namePart type="family">Colon</namePart>
+ <namePart type="given">Sergeant</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Conaughty</displayForm>
+ <namePart type="family">Conaughty</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Considine</displayForm>
+ <namePart type="family">Considine</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Covert</displayForm>
+ <namePart type="family">Covert</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Crozier</displayForm>
+ <namePart type="family">Crozier</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Doe XII</displayForm>
+ <namePart type="family">Doe</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress">XII</namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Does</displayForm>
+ <namePart type="family">Does</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Eagen</displayForm>
+ <namePart type="family">Eagen</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lt. Easterbrook</displayForm>
+ <namePart type="family">Easterbrook</namePart>
+ <namePart type="given">Lt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Gummerson</displayForm>
+ <namePart type="family">Gummerson</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Kessel</displayForm>
+ <namePart type="family">Kessel</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Psych. Kneeland</displayForm>
+ <namePart type="family">Kneeland</namePart>
+ <namePart type="given">Psych.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>V. Konecny</displayForm>
+ <namePart type="family">Konecny</namePart>
+ <namePart type="given">V.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Lennox</displayForm>
+ <namePart type="family">Lennox</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Leonello</displayForm>
+ <namePart type="family">Leonello</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Locastro</displayForm>
+ <namePart type="family">Locastro</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Loomis</displayForm>
+ <namePart type="family">Loomis</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>G. Maccucci</displayForm>
+ <namePart type="family">Maccucci</namePart>
+ <namePart type="given">G.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>B. Maher</displayForm>
+ <namePart type="family">Maher</namePart>
+ <namePart type="given">B.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sgt. Martens</displayForm>
+ <namePart type="family">Martens</namePart>
+ <namePart type="given">Sgt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. McNamara</displayForm>
+ <namePart type="family">McNamara</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>M. Melindez</displayForm>
+ <namePart type="family">Melindez</namePart>
+ <namePart type="given">M.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Meyers</displayForm>
+ <namePart type="family">Meyers</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Lt. Miller</displayForm>
+ <namePart type="family">Miller</namePart>
+ <namePart type="given">Lt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sgt. Murley</displayForm>
+ <namePart type="family">Murley</namePart>
+ <namePart type="given">Sgt.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C. Parmiter</displayForm>
+ <namePart type="family">Parmiter</namePart>
+ <namePart type="given">C.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Porten</displayForm>
+ <namePart type="family">Porten</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>T. Quinn</displayForm>
+ <namePart type="family">Quinn</namePart>
+ <namePart type="given">T.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Rourke</displayForm>
+ <namePart type="family">Rourke</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>C.O. Roux</displayForm>
+ <namePart type="family">Roux</namePart>
+ <namePart type="given">C.O.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>D. Selsky</displayForm>
+ <namePart type="family">Selsky</namePart>
+ <namePart type="given">D.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>R. Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">R.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Sergeant Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Sergeant</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>J. Wilkinson</displayForm>
+ <namePart type="family">Wilkinson</namePart>
+ <namePart type="given">J.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>CHO Wolczyk</displayForm>
+ <namePart type="family">Wolczyk</namePart>
+ <namePart type="given">CHO</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>S. Yorkey</displayForm>
+ <namePart type="family">Yorkey</namePart>
+ <namePart type="given">S.</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-nynd-9_04-cv-00423</accessId>
+ <courtType>District</courtType>
+ <courtCode>nynd</courtCode>
+ <courtCircuit>2nd</courtCircuit>
+ <courtState>New York</courtState>
+ <courtSortOrder>2352</courtSortOrder>
+ <caseNumber>9:04-cv-00423</caseNumber>
+ <caseOffice>Prisoner</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <party firstName="E." fullName="E. Amberman" lastName="Amberman" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Baranska" lastName="Baranska" role="Defendant"></party>
+ <party firstName="Henry" fullName="Henry Benitez" lastName="Benitez" role="Plaintiff"></party>
+ <party firstName="M." fullName="M. Bradt" lastName="Bradt" role="Defendant"></party>
+ <party firstName="J." fullName="J. Burge" lastName="Burge" role="Defendant"></party>
+ <party firstName="J." fullName="J. Burns" lastName="Burns" role="Defendant"></party>
+ <party firstName="W." fullName="W. Chilson" lastName="Chilson" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Christopher" lastName="Christopher" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Clarke" lastName="Clarke" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Colon" lastName="Colon" role="Defendant"></party>
+ <party firstName="S." fullName="S. Conaughty" lastName="Conaughty" role="Defendant"></party>
+ <party firstName="R." fullName="R. Considine" lastName="Considine" role="Defendant"></party>
+ <party firstName="T." fullName="T. Covert" lastName="Covert" role="Defendant"></party>
+ <party firstName="S." fullName="S. Crozier" lastName="Crozier" role="Defendant"></party>
+ <party firstName="John" fullName="John Doe XII" generation="XII" lastName="Doe" role="Defendant"></party>
+ <party firstName="John" fullName="John Does" lastName="Does" role="Defendant"></party>
+ <party firstName="T." fullName="T. Eagen" lastName="Eagen" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. Easterbrook" lastName="Easterbrook" role="Defendant"></party>
+ <party firstName="C." fullName="C. Gummerson" lastName="Gummerson" role="Defendant"></party>
+ <party firstName="M." fullName="M. Kessel" lastName="Kessel" role="Defendant"></party>
+ <party firstName="Psych." fullName="Psych. Kneeland" lastName="Kneeland" role="Defendant"></party>
+ <party firstName="V." fullName="V. Konecny" lastName="Konecny" role="Defendant"></party>
+ <party firstName="S." fullName="S. Lennox" lastName="Lennox" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Leonello" lastName="Leonello" role="Defendant"></party>
+ <party firstName="J." fullName="J. Locastro" lastName="Locastro" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Loomis" lastName="Loomis" role="Defendant"></party>
+ <party firstName="G." fullName="G. Maccucci" lastName="Maccucci" role="Defendant"></party>
+ <party firstName="B." fullName="B. Maher" lastName="Maher" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Martens" lastName="Martens" role="Defendant"></party>
+ <party firstName="J." fullName="J. McNamara" lastName="McNamara" role="Defendant"></party>
+ <party firstName="M." fullName="M. Melindez" lastName="Melindez" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Meyers" lastName="Meyers" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Lt." fullName="Lt. Miller" lastName="Miller" role="Defendant"></party>
+ <party firstName="Sgt." fullName="Sgt. Murley" lastName="Murley" role="Defendant"></party>
+ <party firstName="C." fullName="C. Parmiter" lastName="Parmiter" role="Defendant"></party>
+ <party firstName="J." fullName="J. Porten" lastName="Porten" role="Defendant"></party>
+ <party firstName="T." fullName="T. Quinn" lastName="Quinn" role="Defendant"></party>
+ <party firstName="J." fullName="J. Rourke" lastName="Rourke" role="Defendant"></party>
+ <party firstName="C.O." fullName="C.O. Roux" lastName="Roux" role="Defendant"></party>
+ <party firstName="D." fullName="D. Selsky" lastName="Selsky" role="Defendant"></party>
+ <party firstName="R." fullName="R. Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="Sergeant" fullName="Sergeant Smith" lastName="Smith" role="Defendant"></party>
+ <party firstName="J." fullName="J. Wilkinson" lastName="Wilkinson" role="Defendant"></party>
+ <party firstName="CHO" fullName="CHO Wolczyk" lastName="Wolczyk" role="Defendant"></party>
+ <party firstName="S." fullName="S. Yorkey" lastName="Yorkey" role="Defendant"></party>
+ <state>New York</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00423-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-0/mods.xml">
+ <titleInfo>
+  <title>Benitez v. Locastro et al</title>
+  <subTitle>ORDER granting in part and denying in part 51 Motion for service. The Clerk is directed to reissue summonses. ORDERED that the clerk of the court serve a copy of this Order on General Counsel&apos;s Office, NYS Dept of Corr. Services. ORDERED that plaintiff&apos;s request for an order directing defendants&apos; counsel to ascertain and disclose the identity of the individuals referred to in the complaint as John Doe 1 through 7 is denied without prejudice. Signed by Judge Randolph F. Treece on 5/20/05. (nas)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00423-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814362a1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-0</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00423_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/pdf/USCOURTS-nynd-9_04-cv-00423-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00423; Benitez v. Locastro et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00423-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-20</dateIssued>
+  <docketText>ORDER granting in part and denying in part 51 Motion for service. The Clerk is directed to reissue summonses. ORDERED that the clerk of the court serve a copy of this Order on General Counsel&apos;s Office, NYS Dept of Corr. Services. ORDERED that plaintiff&apos;s request for an order directing defendants&apos; counsel to ascertain and disclose the identity of the individuals referred to in the complaint as John Doe 1 through 7 is denied without prejudice. Signed by Judge Randolph F. Treece on 5/20/05. (nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00423-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-1/mods.xml">
+ <titleInfo>
+  <title>Benitez v. Locastro et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 94 MOTION for Judgment on the Pleadings be GRANTED IN PART AND DENIED IN PART. RECOMMENDED that should the District Court adopt this Report-Recommendation, the Clerk be ordered to dismiss the defendants set forth in this order. ORDERED that plaintiff&apos;s motion for sanctions (dkt no. 978) is DENIED. Defendants should continue to make their responnsive documents available for plaintiff to review and copy at his own expense. ORDERED, that to the extent defendants have not responded to any of plaintiff&apos;s discovery requests, they are ordered to do so within 30 days of the filing date of this report-recommendation and order. ORDERED that the dispositive motion deadline is extended to 12/28/08. Signed by Magistrate Judge Randolph F. Treece on 9/25/08. case review deadline for objections is 10/15/08.(nas)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00423-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814362a3</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-1</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00423_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/pdf/USCOURTS-nynd-9_04-cv-00423-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00423; Benitez v. Locastro et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00423-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2008-09-25</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 94 MOTION for Judgment on the Pleadings be GRANTED IN PART AND DENIED IN PART. RECOMMENDED that should the District Court adopt this Report-Recommendation, the Clerk be ordered to dismiss the defendants set forth in this order. ORDERED that plaintiff&apos;s motion for sanctions (dkt no. 978) is DENIED. Defendants should continue to make their responnsive documents available for plaintiff to review and copy at his own expense. ORDERED, that to the extent defendants have not responded to any of plaintiff&apos;s discovery requests, they are ordered to do so within 30 days of the filing date of this report-recommendation and order. ORDERED that the dispositive motion deadline is extended to 12/28/08. Signed by Magistrate Judge Randolph F. Treece on 9/25/08. case review deadline for objections is 10/15/08.(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00423-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-2/mods.xml">
+ <titleInfo>
+  <title>Benitez v. Locastro et al</title>
+  <subTitle>ORDER adopting 106 Report and Recommendations; granting in part and denying in part 94 Motion for Judgment on the Pleadings; ORDERED that the clerk is ordered to dismiss the following defendants: Amberman, Christopher,Colon, Easterbrook, Kessel, Konecny, Lennox, Leonello, Loomis, Maccucci, McNamara, Melindez, Meyers, (C.O.) Miller, Murley, Parmiter, Porten, Quinn, Roux, Sgt. Smith, Wilkinson, and Yorkey. ORDERED that Discovery is closed and the dispositive motion deadline is extended to December 28, 2008. Signed by Chief Judge Norman A. Mordue on 10/29/08. {order mailed to all non-ecf parties}(nas)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-10-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00423-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814362a2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-2</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00423_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/pdf/USCOURTS-nynd-9_04-cv-00423-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00423; Benitez v. Locastro et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00423-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2008-10-29</dateIssued>
+  <docketText>ORDER adopting 106 Report and Recommendations; granting in part and denying in part 94 Motion for Judgment on the Pleadings; ORDERED that the clerk is ordered to dismiss the following defendants: Amberman, Christopher,Colon, Easterbrook, Kessel, Konecny, Lennox, Leonello, Loomis, Maccucci, McNamara, Melindez, Meyers, (C.O.) Miller, Murley, Parmiter, Porten, Quinn, Roux, Sgt. Smith, Wilkinson, and Yorkey. ORDERED that Discovery is closed and the dispositive motion deadline is extended to December 28, 2008. Signed by Chief Judge Norman A. Mordue on 10/29/08. {order mailed to all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00423-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-3/mods.xml">
+ <titleInfo>
+  <title>Benitez v. Locastro et al</title>
+  <subTitle>REPORT AND RECOMMENDATIONS. RECOMMENDED that 118 MOTION for Summary Judgment be GRANTED IN PART AND DENIED IN PART. RECOMMENDED, that should the District Court adopt this Report-Recommendation, the only remaining Defendants will be Rourke and John Does Nos. 1-6; ORDERED, that should the District Court adopt this Report-Recommendation, Plaintiff shall be afforded thirty (30) days from the date of such adoption to file a motion to amend his Amended Complaint in order to identify John Does Nos. 1-6, which shall include a proposed Second Amended Complaint attached thereto. Objections to R&amp;R due by 10/15/2009 Case Review Deadline 10/20/2009. Signed by Magistrate Judge Randolph F. Treece on 9/30/09. {report-recommendations served via regular mail on all non-ecf parties}(nas)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-30</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00423-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814362a5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-3</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00423_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/pdf/USCOURTS-nynd-9_04-cv-00423-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00423; Benitez v. Locastro et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00423-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-30</dateIssued>
+  <docketText>REPORT AND RECOMMENDATIONS. RECOMMENDED that 118 MOTION for Summary Judgment be GRANTED IN PART AND DENIED IN PART. RECOMMENDED, that should the District Court adopt this Report-Recommendation, the only remaining Defendants will be Rourke and John Does Nos. 1-6; ORDERED, that should the District Court adopt this Report-Recommendation, Plaintiff shall be afforded thirty (30) days from the date of such adoption to file a motion to amend his Amended Complaint in order to identify John Does Nos. 1-6, which shall include a proposed Second Amended Complaint attached thereto. Objections to R&amp;R due by 10/15/2009 Case Review Deadline 10/20/2009. Signed by Magistrate Judge Randolph F. Treece on 9/30/09. {report-recommendations served via regular mail on all non-ecf parties}(nas)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-nynd-9_04-cv-00423-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-4/mods.xml">
+ <titleInfo>
+  <title>Benitez v. Locastro et al</title>
+  <subTitle>MEMORANDUM-DECISION AND ORDER: ORDERED, that the 139 Report and Recommendation is accepted in its entirety. ORDERED, that the defendants&apos; 118 Motion for Summary Judgment is granted to the extent of dismissing all claims except the Eighth Amendment excessive force claims against Rourke and John Does 1-6 stemming from the events of July 9, 2002. ORDERED, that plaintiff is granted 30 days from the date of this Memorandum-Decision and Order to file a motion to amend his amended complaint in order to identify John Does Nos. 1-6, which shall include a proposed second amended complaint attached thereto. Signed by Chief Judge Norman A. Mordue on 1/29/10. (Memorandum-Decision and Order served on plaintiff by regular mail) (alh, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-nynd-9_04-cv-00423-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1814362a4</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-4</identifier>
+ <identifier type="former granule identifier">nynd-9_04-cv-00423_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-nynd-9_04-cv-00423/USCOURTS-nynd-9_04-cv-00423-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-nynd-9_04-cv-00423/pdf/USCOURTS-nynd-9_04-cv-00423-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 9:04-cv-00423; Benitez v. Locastro et al; </searchTitle>
+  <courtName>United States District Court Northern District of New York</courtName>
+  <state>New York</state>
+  <accessId>USCOURTS-nynd-9_04-cv-00423-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2010-01-29</dateIssued>
+  <docketText>MEMORANDUM-DECISION AND ORDER: ORDERED, that the 139 Report and Recommendation is accepted in its entirety. ORDERED, that the defendants&apos; 118 Motion for Summary Judgment is granted to the extent of dismissing all claims except the Eighth Amendment excessive force claims against Rourke and John Does 1-6 stemming from the events of July 9, 2002. ORDERED, that plaintiff is granted 30 days from the date of this Memorandum-Decision and Order to file a motion to amend his amended complaint in order to identify John Does Nos. 1-6, which shall include a proposed second amended complaint attached thereto. Signed by Chief Judge Norman A. Mordue on 1/29/10. (Memorandum-Decision and Order served on plaintiff by regular mail) (alh, )</docketText>
+</extension>
+</relatedItem>
+</mods>

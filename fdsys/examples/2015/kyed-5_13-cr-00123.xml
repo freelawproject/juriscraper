@@ -1,0 +1,459 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a8ab461">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2015-01-06</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2015-01-05</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123</identifier>
+<identifier type="local">P0b002ee18a8ab461</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2015-01-06</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2015-01-06</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-kyed-5_13-cr-00123</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_13-cr-00123</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:13-cr-00123</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thomas" fullName="Thomas Dajuan Brown" lastName="Brown" middleName="Dajuan" role="Defendant"></party>
+ <party firstName="Nina" fullName="Nina Mary Calloway-Lovett" lastName="Calloway-Lovett" middleName="Mary" role="Defendant"></party>
+ <party fullName="Dequawn Hopkins" lastName="Dequawn Hopkins" role="Defendant"></party>
+ <party fullName="Fat Boy" lastName="Fat Boy" role="Defendant"></party>
+ <party firstName="Raven" fullName="Raven Elise Fish" lastName="Fish" middleName="Elise" role="Defendant"></party>
+ <party fullName="Hawk" lastName="Hawk" role="Defendant"></party>
+ <party firstName="LaShawn" fullName="LaShawn Dewayne Hopkins" lastName="Hopkins" middleName="Dewayne" role="Defendant"></party>
+ <party firstName="Dequawn" fullName="Dequawn Lamar Hopkins" lastName="Hopkins" middleName="Lamar" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Edward McGowan" lastName="McGowan" middleName="Edward" role="Defendant"></party>
+ <party firstName="Khaaliq" fullName="Khaaliq Alim Owens" lastName="Owens" middleName="Alim" role="Defendant"></party>
+ <party firstName="Johnny James" fullName="Johnny James Verdelle Payne" lastName="Payne" middleName="Verdelle" role="Defendant"></party>
+ <party firstName="Brandon" fullName="Brandon Hendrick James Pressley" lastName="Pressley" middleName="Hendrick James" role="Defendant"></party>
+ <party fullName="Q" lastName="Q" role="Defendant"></party>
+ <party fullName="Rock" lastName="Rock" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Owens et al</title>
+ <partNumber>5:13-cr-00123</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">5:13-cr-00123;13-123</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of Kentucky</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Lexington</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Thomas Dajuan Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nina Mary Calloway-Lovett</displayForm>
+ <namePart type="family">Calloway-Lovett</namePart>
+ <namePart type="given">Nina</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dequawn Hopkins</displayForm>
+ <namePart type="family">Dequawn Hopkins</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Fat Boy</displayForm>
+ <namePart type="family">Fat Boy</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Raven Elise Fish</displayForm>
+ <namePart type="family">Fish</namePart>
+ <namePart type="given">Raven</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Hawk</displayForm>
+ <namePart type="family">Hawk</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>LaShawn Dewayne Hopkins</displayForm>
+ <namePart type="family">Hopkins</namePart>
+ <namePart type="given">LaShawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Dequawn Lamar Hopkins</displayForm>
+ <namePart type="family">Hopkins</namePart>
+ <namePart type="given">Dequawn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Glenn Edward McGowan</displayForm>
+ <namePart type="family">McGowan</namePart>
+ <namePart type="given">Glenn</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Khaaliq Alim Owens</displayForm>
+ <namePart type="family">Owens</namePart>
+ <namePart type="given">Khaaliq</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Johnny James Verdelle Payne</displayForm>
+ <namePart type="family">Payne</namePart>
+ <namePart type="given">Johnny James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Brandon Hendrick James Pressley</displayForm>
+ <namePart type="family">Pressley</namePart>
+ <namePart type="given">Brandon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Q</displayForm>
+ <namePart type="family">Q</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Rock</displayForm>
+ <namePart type="family">Rock</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-kyed-5_13-cr-00123</accessId>
+ <courtType>District</courtType>
+ <courtCode>kyed</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Kentucky</courtState>
+ <courtSortOrder>2201</courtSortOrder>
+ <caseNumber>5:13-cr-00123</caseNumber>
+ <caseOffice>Lexington</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Thomas" fullName="Thomas Dajuan Brown" lastName="Brown" middleName="Dajuan" role="Defendant"></party>
+ <party firstName="Nina" fullName="Nina Mary Calloway-Lovett" lastName="Calloway-Lovett" middleName="Mary" role="Defendant"></party>
+ <party fullName="Dequawn Hopkins" lastName="Dequawn Hopkins" role="Defendant"></party>
+ <party fullName="Fat Boy" lastName="Fat Boy" role="Defendant"></party>
+ <party firstName="Raven" fullName="Raven Elise Fish" lastName="Fish" middleName="Elise" role="Defendant"></party>
+ <party fullName="Hawk" lastName="Hawk" role="Defendant"></party>
+ <party firstName="LaShawn" fullName="LaShawn Dewayne Hopkins" lastName="Hopkins" middleName="Dewayne" role="Defendant"></party>
+ <party firstName="Dequawn" fullName="Dequawn Lamar Hopkins" lastName="Hopkins" middleName="Lamar" role="Defendant"></party>
+ <party firstName="Glenn" fullName="Glenn Edward McGowan" lastName="McGowan" middleName="Edward" role="Defendant"></party>
+ <party firstName="Khaaliq" fullName="Khaaliq Alim Owens" lastName="Owens" middleName="Alim" role="Defendant"></party>
+ <party firstName="Johnny James" fullName="Johnny James Verdelle Payne" lastName="Payne" middleName="Verdelle" role="Defendant"></party>
+ <party firstName="Brandon" fullName="Brandon Hendrick James Pressley" lastName="Pressley" middleName="Hendrick James" role="Defendant"></party>
+ <party fullName="Q" lastName="Q" role="Defendant"></party>
+ <party fullName="Rock" lastName="Rock" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Kentucky</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>ORDER as to Glenn Edward McGowan (2): For all reasons stated by the magistrate judge in his 67 Order dated 9/23/2013, the Court finds by clear and convincing evidence that there are no conditions of McGowan&apos;s release that could assure the safety of the community. Thus, the Court ORDERS that McGowan&apos;s 83 MOTION to Revoke Detention Order and set bond is DENIED. Signed by Judge Karen K. Caldwell on 10/23/2013. (KLB) cc: COR,USM,USP</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74f9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-0</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2013-10-23</dateIssued>
+  <docketText>ORDER as to Glenn Edward McGowan (2): For all reasons stated by the magistrate judge in his 67 Order dated 9/23/2013, the Court finds by clear and convincing evidence that there are no conditions of McGowan&apos;s release that could assure the safety of the community. Thus, the Court ORDERS that McGowan&apos;s 83 MOTION to Revoke Detention Order and set bond is DENIED. Signed by Judge Karen K. Caldwell on 10/23/2013. (KLB) cc: COR,USM,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7): The Court ORDERS that the 95 Joint Motion to Suppress is DENIED. Signed by Judge Karen K. Caldwell on 01/13/2014. (KLB) cc: COR,USM,USPOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7): The Court ORDERS that the 95 Joint Motion to Suppress is DENIED. Signed by Judge Karen K. Caldwell on 01/13/2014. (KLB) cc: COR,USM,USP</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-13</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74fa</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-1</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2014-01-13</dateIssued>
+  <docketText>OPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7): The Court ORDERS that the 95 Joint Motion to Suppress is DENIED. Signed by Judge Karen K. Caldwell on 01/13/2014. (KLB) cc: COR,USM,USPOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7): The Court ORDERS that the 95 Joint Motion to Suppress is DENIED. Signed by Judge Karen K. Caldwell on 01/13/2014. (KLB) cc: COR,USM,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US MailOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US MailOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US Mail</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b73d9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-2</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2014-02-10</dateIssued>
+  <docketText>OPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US MailOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US MailOPINION AND ORDER as to Dequawn Lamar Hopkins (6), LaShawn Dewayne Hopkins (7), AND Khaaliq Alim Owens (1): Dft Owens&apos; 154 MOTION to Dismiss for Lack of Jurisdiction and the 143 MOTION to Change Venue filed by Dfts Dequawn and LaShawn Hopkins are DENIED. Signed by Judge Karen K. Caldwell on 02/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft Owens via US Mail</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74f5</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-3</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2014-02-24</dateIssued>
+  <docketText>OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).OPINION AND ORDER as to Dequawn Lamar Hopkins, LaShawn Dewayne Hopkins, Khaaliq Alim Owens, Brandon Hendrick James Pressley, Thomas Dajuan Brown: 1) Dft Pressley&apos;s 97 MOTION to Exclude Evidence is DENIED as explained. 2) Dft Pressley&apos;s 98 MOTION to Sever Defendant is DENIED. 3) The 96 MOTION to Sever Defendant and 101 MOTION to Sever Defendant are DENIED as moot; and 4) The 103 MOTION for Extension of Time for Rearraignment and 104 MOTION for Extension of Time to File Motion for Rearraignment are GRANTED and their motions for rearraignment will be deemed timely filed. Signed by Judge Karen K. Caldwell on 2/24/2014. (KLB) cc: COR,USM,USP Modified text on 2/24/2014 (KLB).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Khaaliq Alim Owens (1): For reasons listed within, Owens&apos; 208 Motion to Dismiss the indictment and to sever his trial from that of his co-defendants is DENIED. Signed by Judge Karen K. Caldwell on 06/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft via US Mail.</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74f6</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-4</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2014-06-10</dateIssued>
+  <docketText>OPINION AND ORDER as to Khaaliq Alim Owens (1): For reasons listed within, Owens&apos; 208 Motion to Dismiss the indictment and to sever his trial from that of his co-defendants is DENIED. Signed by Judge Karen K. Caldwell on 06/10/2014. (KLB) cc: COR,USM,USP,Pro se Dft via US Mail.</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Khaaliq Alim Owens: the Court ORDERS that the 230 MOTION for a Bill of Particulars is DENIED. Signed by Judge Karen K. Caldwell on June 16, 2014. (MWZ) cc: COR (Dft via U.S. Mail),USM,USP</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74f7</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-5</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2014-06-16</dateIssued>
+  <docketText>OPINION AND ORDER as to Khaaliq Alim Owens: the Court ORDERS that the 230 MOTION for a Bill of Particulars is DENIED. Signed by Judge Karen K. Caldwell on June 16, 2014. (MWZ) cc: COR (Dft via U.S. Mail),USM,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Khaaliq Alim Owens: The Court ORDERS as follows: 1) Dft&apos;s 237 MOTION to Reconsider is GRANTED in part and DENIED in part as follows: a) Court clarifies that, if government has in its possession, custody/control any IRS Forms that 1) are material to preparing the defense of this matter; 2) the government intends to use in its case-in-chief at trial; or 3) were obtained from or belonged to dft, then it SHALL produce those items to dft&apos;s counsel w/in 48 hours of receipt of this order; &amp; 2) the 237 motion for reconsideration is otherwise DENIED. Signed by Judge Karen K. Caldwell on June 18, 2014. (MWZ) cc: COR (Dft via U.S. Mail),USM,USP</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-06-18</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b73d8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-6</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2014-06-18</dateIssued>
+  <docketText>OPINION AND ORDER as to Khaaliq Alim Owens: The Court ORDERS as follows: 1) Dft&apos;s 237 MOTION to Reconsider is GRANTED in part and DENIED in part as follows: a) Court clarifies that, if government has in its possession, custody/control any IRS Forms that 1) are material to preparing the defense of this matter; 2) the government intends to use in its case-in-chief at trial; or 3) were obtained from or belonged to dft, then it SHALL produce those items to dft&apos;s counsel w/in 48 hours of receipt of this order; &amp; 2) the 237 motion for reconsideration is otherwise DENIED. Signed by Judge Karen K. Caldwell on June 18, 2014. (MWZ) cc: COR (Dft via U.S. Mail),USM,USP</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-kyed-5_13-cr-00123-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Owens et al</title>
+  <subTitle>OPINION AND ORDER as to Khaaliq Alim Owens (1): The Court ORDERS that the 377 Motion to Dismiss is DENIED. Signed by Judge Karen K. Caldwell on 1/5/2015. (SCD)cc: COR,USP,Dft(via US Mail)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2015-01-05</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a8b74f8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-7</identifier>
+ <identifier type="former granule identifier">kyed-5_13-cr-00123_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-kyed-5_13-cr-00123/USCOURTS-kyed-5_13-cr-00123-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-kyed-5_13-cr-00123/pdf/USCOURTS-kyed-5_13-cr-00123-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 5:13-cr-00123; USA v. Owens et al; </searchTitle>
+  <courtName>United States District Court Eastern District of Kentucky</courtName>
+  <state>Kentucky</state>
+  <accessId>USCOURTS-kyed-5_13-cr-00123-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2015-01-05</dateIssued>
+  <docketText>OPINION AND ORDER as to Khaaliq Alim Owens (1): The Court ORDERS that the 377 Motion to Dismiss is DENIED. Signed by Judge Karen K. Caldwell on 1/5/2015. (SCD)cc: COR,USP,Dft(via US Mail)</docketText>
+</extension>
+</relatedItem>
+</mods>

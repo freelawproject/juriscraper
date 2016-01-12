@@ -1,0 +1,284 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18179da98">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-31</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090</identifier>
+<identifier type="local">P0b002ee18179da98</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_94-cr-00090</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_94-cr-00090</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:94-cr-00090</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James L. Anzalone" lastName="Anzalone" middleName="L." role="Defendant"></party>
+ <party firstName="Teddy" fullName="Teddy Carroll" lastName="Carroll" role="Defendant"></party>
+ <party firstName="Theodore" fullName="Theodore Carroll" lastName="Carroll" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas E. Craig" lastName="Craig" middleName="E." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel J. Erlewine" lastName="Erlewine" middleName="J." role="Defendant"></party>
+ <party firstName="Nick" fullName="Nick M. Hoier" lastName="Hoier" middleName="M." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin L. Tilson" lastName="Tilson" middleName="L." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Hoier, et al</title>
+ <partNumber>8:94-cr-00090</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:94-cr-00090;94-090</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>James L. Anzalone</displayForm>
+ <namePart type="family">Anzalone</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Teddy Carroll</displayForm>
+ <namePart type="family">Carroll</namePart>
+ <namePart type="given">Teddy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Theodore Carroll</displayForm>
+ <namePart type="family">Carroll</namePart>
+ <namePart type="given">Theodore</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Thomas E. Craig</displayForm>
+ <namePart type="family">Craig</namePart>
+ <namePart type="given">Thomas</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Daniel J. Erlewine</displayForm>
+ <namePart type="family">Erlewine</namePart>
+ <namePart type="given">Daniel</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Nick M. Hoier</displayForm>
+ <namePart type="family">Hoier</namePart>
+ <namePart type="given">Nick</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Kevin L. Tilson</displayForm>
+ <namePart type="family">Tilson</namePart>
+ <namePart type="given">Kevin</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>United States of America</displayForm>
+ <namePart type="family">United States of America</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_94-cr-00090</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:94-cr-00090</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="James" fullName="James L. Anzalone" lastName="Anzalone" middleName="L." role="Defendant"></party>
+ <party firstName="Teddy" fullName="Teddy Carroll" lastName="Carroll" role="Defendant"></party>
+ <party firstName="Theodore" fullName="Theodore Carroll" lastName="Carroll" role="Defendant"></party>
+ <party firstName="Thomas" fullName="Thomas E. Craig" lastName="Craig" middleName="E." role="Defendant"></party>
+ <party firstName="Daniel" fullName="Daniel J. Erlewine" lastName="Erlewine" middleName="J." role="Defendant"></party>
+ <party firstName="Nick" fullName="Nick M. Hoier" lastName="Hoier" middleName="M." role="Defendant"></party>
+ <party firstName="Kevin" fullName="Kevin L. Tilson" lastName="Tilson" middleName="L." role="Defendant"></party>
+ <party fullName="United States of America" lastName="United States of America" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_94-cr-00090-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Hoier, et al</title>
+  <subTitle>ORDER - The Federal Public Defender for the District of Nebraska is appointed torepresent defendant Thomas E. Craig (4). Signed by Magistrate Judge Thomas D. Thalken on 6/14/2006. (JAE, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_94-cr-00090-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c21</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-0</identifier>
+ <identifier type="former granule identifier">ned-8_94-cr-00090_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090/pdf/USCOURTS-ned-8_94-cr-00090-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:94-cr-00090; USA v. Hoier, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_94-cr-00090-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-06-14</dateIssued>
+  <docketText>ORDER - The Federal Public Defender for the District of Nebraska is appointed torepresent defendant Thomas E. Craig (4). Signed by Magistrate Judge Thomas D. Thalken on 6/14/2006. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_94-cr-00090-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Hoier, et al</title>
+  <subTitle>GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-06-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_94-cr-00090-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c1e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-1</identifier>
+ <identifier type="former granule identifier">ned-8_94-cr-00090_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090/pdf/USCOURTS-ned-8_94-cr-00090-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:94-cr-00090; USA v. Hoier, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_94-cr-00090-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-06-15</dateIssued>
+  <docketText>GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )GENERAL ORDER 2003-03 - all cases previously assigned to Magistrate Judge Jaudzemis are herewith reassigned to Magistrate Judge Gossett, as to defendants Nick M. Hoier, Daniel J. Erlewine, James L. Anzalone, Thomas E. Craig, Kevin L. Tilson, and Theodore Carroll. Signed by Judge Richard G. Kopf on 5/29/03. (JAE, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_94-cr-00090-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Hoier, et al</title>
+  <subTitle>ORDER granting 435 Motion to Amend the Conditions of Supervised Release as to Thomas E. Craig (4). Condition 6 of the Defendant&apos;s supervised release is amended to require 40 hours of community service. Ordered by Judge Laurie Smith Camp.(JSF)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-08-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_94-cr-00090-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c1f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-2</identifier>
+ <identifier type="former granule identifier">ned-8_94-cr-00090_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090/pdf/USCOURTS-ned-8_94-cr-00090-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:94-cr-00090; USA v. Hoier, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_94-cr-00090-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2006-08-22</dateIssued>
+  <docketText>ORDER granting 435 Motion to Amend the Conditions of Supervised Release as to Thomas E. Craig (4). Condition 6 of the Defendant&apos;s supervised release is amended to require 40 hours of community service. Ordered by Judge Laurie Smith Camp.(JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_94-cr-00090-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Hoier, et al</title>
+  <subTitle>PETITION AND ORDER to Modify the Conditions of Supervision with Consent of the Offender, as to defendant Thomas E. Craig. Ordered by Judge Laurie Smith Camp.(JAE, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-31</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_94-cr-00090-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181817c20</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-3</identifier>
+ <identifier type="former granule identifier">ned-8_94-cr-00090_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_94-cr-00090/USCOURTS-ned-8_94-cr-00090-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_94-cr-00090/pdf/USCOURTS-ned-8_94-cr-00090-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:94-cr-00090; USA v. Hoier, et al; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_94-cr-00090-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2007-01-31</dateIssued>
+  <docketText>PETITION AND ORDER to Modify the Conditions of Supervision with Consent of the Offender, as to defendant Thomas E. Craig. Ordered by Judge Laurie Smith Camp.(JAE, )</docketText>
+</extension>
+</relatedItem>
+</mods>

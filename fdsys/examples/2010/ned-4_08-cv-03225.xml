@@ -1,0 +1,301 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181795e9d">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2010-01-12</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225</identifier>
+<identifier type="local">P0b002ee181795e9d</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-13</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-4_08-cv-03225</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03225</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03225</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="Goldenrod Printing, Inc." lastName="Goldenrod Printing, Inc." role="Defendant"></party>
+ <party fullName="Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund" lastName="Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund" role="Plaintiff"></party>
+ <party fullName="Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund" lastName="Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+ <partNumber>4:08-cv-03225</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">4:08-cv-03225;08-3225</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>4 Lincoln</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Goldenrod Printing, Inc.</displayForm>
+ <namePart type="family">Goldenrod Printing, Inc.</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund</displayForm>
+ <namePart type="family">Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund</displayForm>
+ <namePart type="family">Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-4_08-cv-03225</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>4:08-cv-03225</caseNumber>
+ <caseOffice>4 Lincoln</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>791</natureSuitCode>
+ <natureSuit>Employee Retirement Income Security Act (ERISA)</natureSuit>
+ <cause>29:1132 E.R.I.S.A.-Employee Benefits</cause>
+ <party fullName="Goldenrod Printing, Inc." lastName="Goldenrod Printing, Inc." role="Defendant"></party>
+ <party fullName="Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund" lastName="Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund" role="Plaintiff"></party>
+ <party fullName="Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund" lastName="Trustees Of the Printing Specialties and Paper Products Joint Employer and Union Health&amp;Welfare Fund" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-0/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>ORDER: Upon the parties joint oral motion, the deadline for filing the report of parties planning conference is continued to January 14, 2009. Ordered by Magistrate Judge David L. Piester. (CRZ)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2008-12-29</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f98bc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-0</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2008-12-29</dateIssued>
+  <docketText>ORDER: Upon the parties joint oral motion, the deadline for filing the report of parties planning conference is continued to January 14, 2009. Ordered by Magistrate Judge David L. Piester. (CRZ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-1/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>PRETRIAL ORDER - estimated length of trial is 2 hours. Court strikes jury demand of defendant without objection by the plaintiff. Non-Jury Trial set for 9/28/2009 at 10:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf.Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-08-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f98b8</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-1</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-08-11</dateIssued>
+  <docketText>PRETRIAL ORDER - estimated length of trial is 2 hours. Court strikes jury demand of defendant without objection by the plaintiff. Non-Jury Trial set for 9/28/2009 at 10:00 AM in Courtroom 1, Federal Building, 100 Centennial Mall North, Lincoln, NE before Judge Richard G. Kopf.Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-2/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>ORDER granting 25 Defendant&apos;s Motion to Extend time in which to file initial trial briefs. The parties are given until September 16, 2009, to file their trial briefs in the above captioned matter. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f9879</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-2</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-09-15</dateIssued>
+  <docketText>ORDER granting 25 Defendant&apos;s Motion to Extend time in which to file initial trial briefs. The parties are given until September 16, 2009, to file their trial briefs in the above captioned matter. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-3/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>ORDER granting 32 Plaintiff&apos;s Motion to Extend. The parties have until September 23, 2009, in which to file their responsive trial briefs. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f98ba</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-3</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2009-09-22</dateIssued>
+  <docketText>ORDER granting 32 Plaintiff&apos;s Motion to Extend. The parties have until September 23, 2009, in which to file their responsive trial briefs. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-4/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>MEMORANDUM AND ORDER - Upon the notice provided by defense counsel, this case has settled and is removed from the trial docket. Within 30 days, counsel shall provide the undersigned with the appropriate settlement papers. If those papers are not provided within that time, this matter may be dismissed without further notice. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-25</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f98b9</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-4</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2009-09-25</dateIssued>
+  <docketText>MEMORANDUM AND ORDER - Upon the notice provided by defense counsel, this case has settled and is removed from the trial docket. Within 30 days, counsel shall provide the undersigned with the appropriate settlement papers. If those papers are not provided within that time, this matter may be dismissed without further notice. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-4_08-cv-03225-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-5/mods.xml">
+ <titleInfo>
+  <title>Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.</title>
+  <subTitle>JUDGMENT - Pursuant to the parties&apos; joint stipulation for dismissal with prejudice (filing 38) and Fed. R. Civ. P. 41, IT IS ORDERED that the above-captioned case is dismissed with prejudice, with each party to pay its own costs. Ordered by Judge Richard G. Kopf. (JAB)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-01-12</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-4_08-cv-03225-5.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1817f98bb</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-5</identifier>
+ <identifier type="former granule identifier">ned-4_08-cv-03225_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-4_08-cv-03225/USCOURTS-ned-4_08-cv-03225-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-4_08-cv-03225/pdf/USCOURTS-ned-4_08-cv-03225-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 4:08-cv-03225; Printing Specialties&amp;Paper Products Joint Employer and Union Health and Welfare Fund et al v. Goldenrod Printing, Inc.; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-4_08-cv-03225-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2010-01-12</dateIssued>
+  <docketText>JUDGMENT - Pursuant to the parties&apos; joint stipulation for dismissal with prejudice (filing 38) and Fed. R. Civ. P. 41, IT IS ORDERED that the above-captioned case is dismissed with prejudice, with each party to pay its own costs. Ordered by Judge Richard G. Kopf. (JAB)</docketText>
+</extension>
+</relatedItem>
+</mods>

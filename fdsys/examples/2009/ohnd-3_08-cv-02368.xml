@@ -1,0 +1,242 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815cb9e2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-03</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2009-01-09</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02368</identifier>
+<identifier type="local">P0b002ee1815cb9e2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-03</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-03</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-3_08-cv-02368</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02368</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02368</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Admed" lastName="Admed" role="Defendant"></party>
+ <party fullName="Cloutier" lastName="Cloutier" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Daily" lastName="Daily" role="Defendant"></party>
+ <party firstName="John" fullName="John F. Gardner" lastName="Gardner" middleName="F." role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Jenkins" lastName="Jenkins" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Kerschner" lastName="Kerschner" role="Defendant"></party>
+ <party firstName="Gordon" fullName="Gordon A. Lane" lastName="Lane" middleName="A." role="Defendant"></party>
+ <party firstName="Mona" fullName="Mona Parks" lastName="Parks" role="Defendant"></party>
+ <party firstName="Becky" fullName="Becky Roggio" lastName="Roggio" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Southall" lastName="Southall" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Yoder" lastName="Yoder" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Jenkins v. Daily et al</title>
+ <partNumber>3:08-cv-02368</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02368/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">3:08-cv-02368;08-2368</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Toledo</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Admed</displayForm>
+ <namePart type="family">Admed</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cloutier</displayForm>
+ <namePart type="family">Cloutier</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Julie Daily</displayForm>
+ <namePart type="family">Daily</namePart>
+ <namePart type="given">Julie</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John F. Gardner</displayForm>
+ <namePart type="family">Gardner</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Leonard Jenkins</displayForm>
+ <namePart type="family">Jenkins</namePart>
+ <namePart type="given">Leonard</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>John Kerschner</displayForm>
+ <namePart type="family">Kerschner</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gordon A. Lane</displayForm>
+ <namePart type="family">Lane</namePart>
+ <namePart type="given">Gordon</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Mona Parks</displayForm>
+ <namePart type="family">Parks</namePart>
+ <namePart type="given">Mona</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Becky Roggio</displayForm>
+ <namePart type="family">Roggio</namePart>
+ <namePart type="given">Becky</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Darlene Smith</displayForm>
+ <namePart type="family">Smith</namePart>
+ <namePart type="given">Darlene</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Southall</displayForm>
+ <namePart type="family">Southall</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Larry Yoder</displayForm>
+ <namePart type="family">Yoder</namePart>
+ <namePart type="given">Larry</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-3_08-cv-02368</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>3:08-cv-02368</caseNumber>
+ <caseOffice>Toledo</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>550</natureSuitCode>
+ <natureSuit>Prisoner - Civil Rights (U.S. defendant)</natureSuit>
+ <cause>42:1983 Prisoner Civil Rights</cause>
+ <party fullName="Admed" lastName="Admed" role="Defendant"></party>
+ <party fullName="Cloutier" lastName="Cloutier" role="Defendant"></party>
+ <party firstName="Julie" fullName="Julie Daily" lastName="Daily" role="Defendant"></party>
+ <party firstName="John" fullName="John F. Gardner" lastName="Gardner" middleName="F." role="Defendant"></party>
+ <party firstName="Leonard" fullName="Leonard Jenkins" lastName="Jenkins" role="Plaintiff"></party>
+ <party firstName="John" fullName="John Kerschner" lastName="Kerschner" role="Defendant"></party>
+ <party firstName="Gordon" fullName="Gordon A. Lane" lastName="Lane" middleName="A." role="Defendant"></party>
+ <party firstName="Mona" fullName="Mona Parks" lastName="Parks" role="Defendant"></party>
+ <party firstName="Becky" fullName="Becky Roggio" lastName="Roggio" role="Defendant"></party>
+ <party firstName="Darlene" fullName="Darlene Smith" lastName="Smith" role="Defendant"></party>
+ <party fullName="Southall" lastName="Southall" role="Defendant"></party>
+ <party firstName="Larry" fullName="Larry Yoder" lastName="Yoder" role="Defendant"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-3_08-cv-02368-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02368/USCOURTS-ohnd-3_08-cv-02368-0/mods.xml">
+ <titleInfo>
+  <title>Jenkins v. Daily et al</title>
+  <subTitle>CJ)Memorandum Opinion and Order. This action is hereby dismissed pursuant to 28 USC 1915(e). The Court certifies pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith. Judge Jack Zouhary on 1/9/09. (B,</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-01-09</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-3_08-cv-02368-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1816a8c6c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02368/USCOURTS-ohnd-3_08-cv-02368-0</identifier>
+ <identifier type="former granule identifier">ohnd-3_08-cv-02368_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-3_08-cv-02368/USCOURTS-ohnd-3_08-cv-02368-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-3_08-cv-02368/pdf/USCOURTS-ohnd-3_08-cv-02368-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 3:08-cv-02368; Jenkins v. Daily et al; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-3_08-cv-02368-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-01-09</dateIssued>
+  <docketText>CJ)Memorandum Opinion and Order. This action is hereby dismissed pursuant to 28 USC 1915(e). The Court certifies pursuant to 28 USC 1915(a)(3), that an appeal from this decision could not be taken in good faith. Judge Jack Zouhary on 1/9/09. (B,</docketText>
+</extension>
+</relatedItem>
+</mods>

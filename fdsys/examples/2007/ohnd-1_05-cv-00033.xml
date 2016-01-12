@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1815d70f2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2007-01-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00033</identifier>
+<identifier type="local">P0b002ee1815d70f2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ohnd-1_05-cv-00033</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00033</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00033</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Margaret" fullName="Margaret Bradshaw" lastName="Bradshaw" role="Respondent"></party>
+ <party firstName="George" fullName="George Keeton" lastName="Keeton" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Keeton v. Bradshaw</title>
+ <partNumber>1:05-cv-00033</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00033/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:05-cv-00033;05-033</identifier>
+<name type="corporate">
+ <namePart>United States District Court Northern District of Ohio</namePart>
+ <namePart>6th Circuit</namePart>
+ <namePart>Cleveland</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Margaret Bradshaw</displayForm>
+ <namePart type="family">Bradshaw</namePart>
+ <namePart type="given">Margaret</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>George Keeton</displayForm>
+ <namePart type="family">Keeton</namePart>
+ <namePart type="given">George</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ohnd-1_05-cv-00033</accessId>
+ <courtType>District</courtType>
+ <courtCode>ohnd</courtCode>
+ <courtCircuit>6th</courtCircuit>
+ <courtState>Ohio</courtState>
+ <courtSortOrder>2392</courtSortOrder>
+ <caseNumber>1:05-cv-00033</caseNumber>
+ <caseOffice>Cleveland</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Margaret" fullName="Margaret Bradshaw" lastName="Bradshaw" role="Respondent"></party>
+ <party firstName="George" fullName="George Keeton" lastName="Keeton" role="Petitioner"></party>
+ <state>Ohio</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00033-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-0/mods.xml">
+ <titleInfo>
+  <title>Keeton v. Bradshaw</title>
+  <subTitle>Report and Recommendation that Petitioner Keeton&apos;s petition be granted in part, solely with respect to Ground Two and the petition be denied in part on the remaining grounds. The Magistrate recommends that the case be remanded for resentencing consistent with Blakey and Foster. Signed by Magistrate Judge Nancy A. Vecchiarelli on 07/20/2006. (G, W). Text Modified on 7/20/2006 (G, W).</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-07-20</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00033-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170446f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-0</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00033_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00033/pdf/USCOURTS-ohnd-1_05-cv-00033-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00033; Keeton v. Bradshaw; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00033-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2006-07-20</dateIssued>
+  <docketText>Report and Recommendation that Petitioner Keeton&apos;s petition be granted in part, solely with respect to Ground Two and the petition be denied in part on the remaining grounds. The Magistrate recommends that the case be remanded for resentencing consistent with Blakey and Foster. Signed by Magistrate Judge Nancy A. Vecchiarelli on 07/20/2006. (G, W). Text Modified on 7/20/2006 (G, W).</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00033-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-1/mods.xml">
+ <titleInfo>
+  <title>Keeton v. Bradshaw</title>
+  <subTitle>Memorandum Opinion and Order: The Report and Recommendation of Magistrate Judge Vecchiarelli is adopted and the objections are overruled; the Petitioner&apos;s Writ of Habeas Corpus is granted in part with respect to Ground Two, and denied in part on the remaining grounds; this case is remanded to the Court of Common Pleas, Richland County, Ohio for resentencing; the Court certifies that an appeal from this decision could not be taken in good faith, and that there is no basis upon which to issue a certificate of appealability (related documents 1, 22, 23, 25). Signed by Judge Peter C. Economus on 9/8/06. (R, Li)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-09-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00033-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee18170446e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-1</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00033_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00033/pdf/USCOURTS-ohnd-1_05-cv-00033-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00033; Keeton v. Bradshaw; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00033-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2006-09-08</dateIssued>
+  <docketText>Memorandum Opinion and Order: The Report and Recommendation of Magistrate Judge Vecchiarelli is adopted and the objections are overruled; the Petitioner&apos;s Writ of Habeas Corpus is granted in part with respect to Ground Two, and denied in part on the remaining grounds; this case is remanded to the Court of Common Pleas, Richland County, Ohio for resentencing; the Court certifies that an appeal from this decision could not be taken in good faith, and that there is no basis upon which to issue a certificate of appealability (related documents 1, 22, 23, 25). Signed by Judge Peter C. Economus on 9/8/06. (R, Li)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ohnd-1_05-cv-00033-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-2/mods.xml">
+ <titleInfo>
+  <title>Keeton v. Bradshaw</title>
+  <subTitle>Memorandum, Opinion and Order dismissing Petitioner&apos;s Motion for a New Trial or to Alter and Amend Judgment for lack of jurisdiction (Related Doc # 30). Signed by Judge Peter C. Economus on 1/17/07 (BR,S). Modified text on 2/15/2007 (H, SP).</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2007-01-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ohnd-1_05-cv-00033-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181704470</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-2</identifier>
+ <identifier type="former granule identifier">ohnd-1_05-cv-00033_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ohnd-1_05-cv-00033/USCOURTS-ohnd-1_05-cv-00033-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ohnd-1_05-cv-00033/pdf/USCOURTS-ohnd-1_05-cv-00033-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:05-cv-00033; Keeton v. Bradshaw; </searchTitle>
+  <courtName>United States District Court Northern District of Ohio</courtName>
+  <state>Ohio</state>
+  <accessId>USCOURTS-ohnd-1_05-cv-00033-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2007-01-17</dateIssued>
+  <docketText>Memorandum, Opinion and Order dismissing Petitioner&apos;s Motion for a New Trial or to Alter and Amend Judgment for lack of jurisdiction (Related Doc # 30). Signed by Judge Peter C. Economus on 1/17/07 (BR,S). Modified text on 2/15/2007 (H, SP).</docketText>
+</extension>
+</relatedItem>
+</mods>

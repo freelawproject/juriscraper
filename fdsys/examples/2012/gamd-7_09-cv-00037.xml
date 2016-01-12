@@ -1,0 +1,208 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181f10245">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-02-18</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-02-17</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_09-cv-00037</identifier>
+<identifier type="local">P0b002ee181f10245</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-02-18</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-02-18</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-gamd-7_09-cv-00037</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_09-cv-00037</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:09-cv-00037</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Dennis" fullName="Dennis Brown" lastName="Brown" role="Respondent"></party>
+ <party firstName="RICHARD" fullName="RICHARD C COLVIN" lastName="COLVIN" middleName="C" role="Petitioner"></party>
+</extension>
+<titleInfo>
+ <title>Colvin v. Brown</title>
+ <partNumber>7:09-cv-00037</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_09-cv-00037/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">7:09-cv-00037;09-037</identifier>
+<name type="corporate">
+ <namePart>United States District Court Middle District of Georgia</namePart>
+ <namePart>11th Circuit</namePart>
+ <namePart>Valdosta</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Dennis Brown</displayForm>
+ <namePart type="family">Brown</namePart>
+ <namePart type="given">Dennis</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Respondent</description>
+</name>
+<name type="personal">
+ <displayForm>RICHARD C COLVIN</displayForm>
+ <namePart type="family">COLVIN</namePart>
+ <namePart type="given">RICHARD</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Petitioner</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-gamd-7_09-cv-00037</accessId>
+ <courtType>District</courtType>
+ <courtCode>gamd</courtCode>
+ <courtCircuit>11th</courtCircuit>
+ <courtState>Georgia</courtState>
+ <courtSortOrder>2125</courtSortOrder>
+ <caseNumber>7:09-cv-00037</caseNumber>
+ <caseOffice>Valdosta</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>530</natureSuitCode>
+ <natureSuit>Prisoner Petitions - Habeas Corpus</natureSuit>
+ <cause>28:2254 Petition for Writ of Habeas Corpus (State)</cause>
+ <party firstName="Dennis" fullName="Dennis Brown" lastName="Brown" role="Respondent"></party>
+ <party firstName="RICHARD" fullName="RICHARD C COLVIN" lastName="COLVIN" middleName="C" role="Petitioner"></party>
+ <state>Georgia</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_09-cv-00037-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-0/mods.xml">
+ <titleInfo>
+  <title>Colvin v. Brown</title>
+  <subTitle>REPORT AND RECOMMENDATION re 10 Supplement to Complaint filed by Richard C Colvin, 2 Petition for Writ of Habeas Corpus filed by Richard C Colvin. Ordered by US Mag Judge Thomas Q Langstaff on 11/15/2011. (asb)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-11-15</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_09-cv-00037-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f12964</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-0</identifier>
+ <identifier type="former granule identifier">gamd-7_09-cv-00037_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_09-cv-00037/pdf/USCOURTS-gamd-7_09-cv-00037-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:09-cv-00037; Colvin v. Brown; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_09-cv-00037-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-11-15</dateIssued>
+  <docketText>REPORT AND RECOMMENDATION re 10 Supplement to Complaint filed by Richard C Colvin, 2 Petition for Writ of Habeas Corpus filed by Richard C Colvin. Ordered by US Mag Judge Thomas Q Langstaff on 11/15/2011. (asb)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_09-cv-00037-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-1/mods.xml">
+ <titleInfo>
+  <title>Colvin v. Brown</title>
+  <subTitle>ORDER adopting Report and Recommendations re 35 Report and Recommendations. Ordered by Judge Hugh Lawson on 1/04/2012. (nbp)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_09-cv-00037-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f12965</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-1</identifier>
+ <identifier type="former granule identifier">gamd-7_09-cv-00037_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_09-cv-00037/pdf/USCOURTS-gamd-7_09-cv-00037-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:09-cv-00037; Colvin v. Brown; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_09-cv-00037-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2012-01-04</dateIssued>
+  <docketText>ORDER adopting Report and Recommendations re 35 Report and Recommendations. Ordered by Judge Hugh Lawson on 1/04/2012. (nbp)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-gamd-7_09-cv-00037-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-2/mods.xml">
+ <titleInfo>
+  <title>Colvin v. Brown</title>
+  <subTitle>ORDER finding as moot 43 Motion for Leave to Appeal in forma pauperis. Ordered by Judge Hugh Lawson on 2/17/2012. (nbp)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-02-17</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-gamd-7_09-cv-00037-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181f12963</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-2</identifier>
+ <identifier type="former granule identifier">gamd-7_09-cv-00037_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-gamd-7_09-cv-00037/USCOURTS-gamd-7_09-cv-00037-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-gamd-7_09-cv-00037/pdf/USCOURTS-gamd-7_09-cv-00037-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 7:09-cv-00037; Colvin v. Brown; </searchTitle>
+  <courtName>United States District Court Middle District of Georgia</courtName>
+  <state>Georgia</state>
+  <accessId>USCOURTS-gamd-7_09-cv-00037-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2012-02-17</dateIssued>
+  <docketText>ORDER finding as moot 43 Motion for Leave to Appeal in forma pauperis. Ordered by Judge Hugh Lawson on 2/17/2012. (nbp)</docketText>
+</extension>
+</relatedItem>
+</mods>

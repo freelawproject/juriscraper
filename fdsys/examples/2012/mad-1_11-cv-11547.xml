@@ -1,0 +1,260 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee181706463">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-04</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-03</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11547</identifier>
+<identifier type="local">P0b002ee181706463</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-04</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-04</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-mad-1_11-cv-11547</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-11547</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-11547</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party fullName="Accreditation Council for Pharmacy Education" lastName="Accreditation Council for Pharmacy Education" role="Defendant"></party>
+ <party fullName="Albany College of Pharmacy and Health Sciences" lastName="Albany College of Pharmacy and Health Sciences" role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter J. Cornish" lastName="Cornish" middleName="J." role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald A. DeBellis" lastName="DeBellis" middleName="A." role="Defendant"></party>
+ <party firstName="John" fullName="John Denio" lastName="Denio" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Gabriel" lastName="Gabriel" role="Plaintiff"></party>
+ <party firstName="James" fullName="James J. Gozzo" lastName="Gozzo" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Hamilton" lastName="Hamilton" role="Defendant"></party>
+ <party firstName="Gerald" fullName="Gerald Katzman" lastName="Katzman" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Long" lastName="Long" role="Defendant"></party>
+ <party fullName="Matta Ghobreyal" lastName="Matta Ghobreyal" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Pumo" lastName="Pumo" role="Defendant"></party>
+ <party firstName="Joanna" fullName="Joanna Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Gail" fullName="Gail Goodman Snitkoff" lastName="Snitkoff" middleName="Goodman" role="Defendant"></party>
+</extension>
+<titleInfo>
+ <title>Gabriel v. Albany College of Pharmacy and Health Sciences et al</title>
+ <partNumber>1:11-cv-11547</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11547/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">1:11-cv-11547;11-11547</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Massachusetts</namePart>
+ <namePart>1st Circuit</namePart>
+ <namePart>Boston</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Accreditation Council for Pharmacy Education</displayForm>
+ <namePart type="family">Accreditation Council for Pharmacy Education</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Albany College of Pharmacy and Health Sciences</displayForm>
+ <namePart type="family">Albany College of Pharmacy and Health Sciences</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Peter J. Cornish</displayForm>
+ <namePart type="family">Cornish</namePart>
+ <namePart type="given">Peter</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Ronald A. DeBellis</displayForm>
+ <namePart type="family">DeBellis</namePart>
+ <namePart type="given">Ronald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>John Denio</displayForm>
+ <namePart type="family">Denio</namePart>
+ <namePart type="given">John</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matthew Gabriel</displayForm>
+ <namePart type="family">Gabriel</namePart>
+ <namePart type="given">Matthew</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>James J. Gozzo</displayForm>
+ <namePart type="family">Gozzo</namePart>
+ <namePart type="given">James</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Robert Hamilton</displayForm>
+ <namePart type="family">Hamilton</namePart>
+ <namePart type="given">Robert</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gerald Katzman</displayForm>
+ <namePart type="family">Katzman</namePart>
+ <namePart type="given">Gerald</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Jason Long</displayForm>
+ <namePart type="family">Long</namePart>
+ <namePart type="given">Jason</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Matta Ghobreyal</displayForm>
+ <namePart type="family">Matta Ghobreyal</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<name type="personal">
+ <displayForm>Dorothy Pumo</displayForm>
+ <namePart type="family">Pumo</namePart>
+ <namePart type="given">Dorothy</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Joanna Schwartz</displayForm>
+ <namePart type="family">Schwartz</namePart>
+ <namePart type="given">Joanna</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Gail Goodman Snitkoff</displayForm>
+ <namePart type="family">Snitkoff</namePart>
+ <namePart type="given">Gail</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-mad-1_11-cv-11547</accessId>
+ <courtType>District</courtType>
+ <courtCode>mad</courtCode>
+ <courtCircuit>1st</courtCircuit>
+ <courtState>Massachusetts</courtState>
+ <courtSortOrder>2240</courtSortOrder>
+ <caseNumber>1:11-cv-11547</caseNumber>
+ <caseOffice>Boston</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>440</natureSuitCode>
+ <natureSuit>Other Civil Rights</natureSuit>
+ <cause>28:1331 Federal Question: Other Civil Rights</cause>
+ <party fullName="Accreditation Council for Pharmacy Education" lastName="Accreditation Council for Pharmacy Education" role="Defendant"></party>
+ <party fullName="Albany College of Pharmacy and Health Sciences" lastName="Albany College of Pharmacy and Health Sciences" role="Defendant"></party>
+ <party firstName="Peter" fullName="Peter J. Cornish" lastName="Cornish" middleName="J." role="Defendant"></party>
+ <party firstName="Ronald" fullName="Ronald A. DeBellis" lastName="DeBellis" middleName="A." role="Defendant"></party>
+ <party firstName="John" fullName="John Denio" lastName="Denio" role="Defendant"></party>
+ <party firstName="Matthew" fullName="Matthew Gabriel" lastName="Gabriel" role="Plaintiff"></party>
+ <party firstName="James" fullName="James J. Gozzo" lastName="Gozzo" middleName="J." role="Defendant"></party>
+ <party firstName="Robert" fullName="Robert Hamilton" lastName="Hamilton" role="Defendant"></party>
+ <party firstName="Gerald" fullName="Gerald Katzman" lastName="Katzman" role="Defendant"></party>
+ <party firstName="Jason" fullName="Jason Long" lastName="Long" role="Defendant"></party>
+ <party fullName="Matta Ghobreyal" lastName="Matta Ghobreyal" role="Plaintiff"></party>
+ <party firstName="Dorothy" fullName="Dorothy Pumo" lastName="Pumo" role="Defendant"></party>
+ <party firstName="Joanna" fullName="Joanna Schwartz" lastName="Schwartz" role="Defendant"></party>
+ <party firstName="Gail" fullName="Gail Goodman Snitkoff" lastName="Snitkoff" middleName="Goodman" role="Defendant"></party>
+ <state>Massachusetts</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-mad-1_11-cv-11547-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11547/USCOURTS-mad-1_11-cv-11547-0/mods.xml">
+ <titleInfo>
+  <title>Gabriel v. Albany College of Pharmacy and Health Sciences et al</title>
+  <subTitle>Judge Richard G. Stearns: Memorandum and ORDER on Defendants&apos; Motions to Dismiss, entered granting 18 Motion to Dismiss; granting 11 Motion to Dismiss (Flaherty, Elaine)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-03</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-mad-1_11-cv-11547-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee181707b37</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11547/USCOURTS-mad-1_11-cv-11547-0</identifier>
+ <identifier type="former granule identifier">mad-1_11-cv-11547_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-mad-1_11-cv-11547/USCOURTS-mad-1_11-cv-11547-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-mad-1_11-cv-11547/pdf/USCOURTS-mad-1_11-cv-11547-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 1:11-cv-11547; Gabriel v. Albany College of Pharmacy and Health Sciences et al; </searchTitle>
+  <courtName>United States District Court District of Massachusetts</courtName>
+  <state>Massachusetts</state>
+  <accessId>USCOURTS-mad-1_11-cv-11547-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2012-01-03</dateIssued>
+  <docketText>Judge Richard G. Stearns: Memorandum and ORDER on Defendants&apos; Motions to Dismiss, entered granting 18 Motion to Dismiss; granting 11 Motion to Dismiss (Flaherty, Elaine)</docketText>
+</extension>
+</relatedItem>
+</mods>

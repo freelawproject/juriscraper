@@ -1,0 +1,245 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee183cbb8e1">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2013-02-09</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2013-02-08</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345</identifier>
+<identifier type="local">P0b002ee183cbb8e1</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2013-02-09</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2013-02-09</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_11-cv-01345</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01345</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01345</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Board of Trustees of the California State University" lastName="Board of Trustees of the California State University" role="Defendant"></party>
+ <party firstName="Emir" fullName="Emir Jose Macari" lastName="Macari" middleName="Jose" role="Defendant"></party>
+ <party firstName="Cici" fullName="Cici Mattiuzzi" lastName="Mattiuzzi" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Mattiuzzi v. Board of Trustees of the California State University et al</title>
+ <partNumber>2:11-cv-01345</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:11-cv-01345;11-1345</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Board of Trustees of the California State University</displayForm>
+ <namePart type="family">Board of Trustees of the California State University</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Emir Jose Macari</displayForm>
+ <namePart type="family">Macari</namePart>
+ <namePart type="given">Emir</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Cici Mattiuzzi</displayForm>
+ <namePart type="family">Mattiuzzi</namePart>
+ <namePart type="given">Cici</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_11-cv-01345</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:11-cv-01345</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>442</natureSuitCode>
+ <natureSuit>Civil Rights Employment</natureSuit>
+ <cause>42:2000e Job Discrimination (Employment)</cause>
+ <party fullName="Board of Trustees of the California State University" lastName="Board of Trustees of the California State University" role="Defendant"></party>
+ <party firstName="Emir" fullName="Emir Jose Macari" lastName="Macari" middleName="Jose" role="Defendant"></party>
+ <party firstName="Cici" fullName="Cici Mattiuzzi" lastName="Mattiuzzi" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01345-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-0/mods.xml">
+ <titleInfo>
+  <title>Mattiuzzi v. Board of Trustees of the California State University et al</title>
+  <subTitle>STIPULATION and ORDER signed by Judge William B. Shubb on 7/21/11 ORDERING the status (pretrial scheduling) conference reset for 10/31/11 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. (Becknal, R)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-22</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01345-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183cbbfbe</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-0</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01345_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345/pdf/USCOURTS-caed-2_11-cv-01345-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01345; Mattiuzzi v. Board of Trustees of the California State University et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01345-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2011-07-22</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Judge William B. Shubb on 7/21/11 ORDERING the status (pretrial scheduling) conference reset for 10/31/11 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. (Becknal, R)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01345-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-1/mods.xml">
+ <titleInfo>
+  <title>Mattiuzzi v. Board of Trustees of the California State University et al</title>
+  <subTitle>STATUS (PRETRIAL SCHEDULING) ORDER signed by Judge William B. Shubb on 10/18/11: Discovery due by 11/21/2011. Dispositive Motions filed by 11/1/2012. Final Pretrial Conference set for 1/7/2013 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. Jury Trial set for 3/19/2013 at 09:00 AM in Courtroom 5 (WBS) before Judge William B. Shubb. (Kaminski, H)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-10-19</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01345-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183cbbfbc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-1</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01345_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345/pdf/USCOURTS-caed-2_11-cv-01345-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01345; Mattiuzzi v. Board of Trustees of the California State University et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01345-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2011-10-19</dateIssued>
+  <docketText>STATUS (PRETRIAL SCHEDULING) ORDER signed by Judge William B. Shubb on 10/18/11: Discovery due by 11/21/2011. Dispositive Motions filed by 11/1/2012. Final Pretrial Conference set for 1/7/2013 at 02:00 PM in Courtroom 5 (WBS) before Judge William B. Shubb. Jury Trial set for 3/19/2013 at 09:00 AM in Courtroom 5 (WBS) before Judge William B. Shubb. (Kaminski, H)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01345-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-2/mods.xml">
+ <titleInfo>
+  <title>Mattiuzzi v. Board of Trustees of the California State University et al</title>
+  <subTitle>ORDER signed by Senior Judge William B. Shubb on 1/2/2013 that this action be, and the same hereby is, STAYED pending the bankruptcy proceedings of defendant Emir Macari. All pending dates are vacated.(Kirksey Smith, K)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-01-02</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01345-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183cbbfbd</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-2</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01345_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345/pdf/USCOURTS-caed-2_11-cv-01345-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01345; Mattiuzzi v. Board of Trustees of the California State University et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01345-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2013-01-02</dateIssued>
+  <docketText>ORDER signed by Senior Judge William B. Shubb on 1/2/2013 that this action be, and the same hereby is, STAYED pending the bankruptcy proceedings of defendant Emir Macari. All pending dates are vacated.(Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_11-cv-01345-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-3/mods.xml">
+ <titleInfo>
+  <title>Mattiuzzi v. Board of Trustees of the California State University et al</title>
+  <subTitle>ORDER upon 35 Stipulation for Dismissal of Defendant Emir Jose Macari signed by Senior Judge William B. Shubb on 2/8/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-08</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-caed-2_11-cv-01345-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee183cbbfbf</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-3</identifier>
+ <identifier type="former granule identifier">caed-2_11-cv-01345_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_11-cv-01345/USCOURTS-caed-2_11-cv-01345-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_11-cv-01345/pdf/USCOURTS-caed-2_11-cv-01345-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:11-cv-01345; Mattiuzzi v. Board of Trustees of the California State University et al; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_11-cv-01345-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2013-02-08</dateIssued>
+  <docketText>ORDER upon 35 Stipulation for Dismissal of Defendant Emir Jose Macari signed by Senior Judge William B. Shubb on 2/8/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+</mods>

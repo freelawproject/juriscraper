@@ -1,0 +1,264 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817a5b91">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-13</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2006-01-18</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219</identifier>
+<identifier type="local">P0b002ee1817a5b91</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-13</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_04-cv-00219</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00219</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00219</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Defendant"></party>
+ <party fullName="Time Warner Entertainment" lastName="Time Warner Entertainment" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>Time Warner Entertainment v. City of Lincoln</title>
+ <partNumber>8:04-cv-00219</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:04-cv-00219;04-219</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>City of Lincoln</displayForm>
+ <namePart type="family">City of Lincoln</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>Time Warner Entertainment</displayForm>
+ <namePart type="family">Time Warner Entertainment</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_04-cv-00219</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:04-cv-00219</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>civil</caseType>
+ <natureSuitCode>890</natureSuitCode>
+ <natureSuit>Other Statutory Actions</natureSuit>
+ <cause>28:2201 Declaratory Judgement</cause>
+ <party fullName="City of Lincoln" lastName="City of Lincoln" role="Defendant"></party>
+ <party fullName="Time Warner Entertainment" lastName="Time Warner Entertainment" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00219-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-0/mods.xml">
+ <titleInfo>
+  <title>Time Warner Entertainment v. City of Lincoln</title>
+  <subTitle>ORDER granting 74 Motion to Extend Stay. The stay previously entered is extended through July 5, 2005. The planning conference now set for May 9, 2005 is continued to July 11, 2005 at 9:30 a.m. Signed by Magistrate Judge F. A. Gossett on 5/4/2005. (CLS, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-05-04</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00219-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818503e0</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-0</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00219_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/pdf/USCOURTS-ned-8_04-cv-00219-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00219; Time Warner Entertainment v. City of Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00219-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2005-05-04</dateIssued>
+  <docketText>ORDER granting 74 Motion to Extend Stay. The stay previously entered is extended through July 5, 2005. The planning conference now set for May 9, 2005 is continued to July 11, 2005 at 9:30 a.m. Signed by Magistrate Judge F. A. Gossett on 5/4/2005. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00219-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-1/mods.xml">
+ <titleInfo>
+  <title>Time Warner Entertainment v. City of Lincoln</title>
+  <subTitle>ORDER granting 76 Motion to Extend Stay and Continue Status Conference. The stay previously entered is extended through 9/30/2005. The planning conference now set for 7/11/2005 is continued to 9/30/2005 at 9:30 a.m. Signed by Magistrate Judge F. A. Gossett on 7/6/2005. (CLS, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-07-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00219-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818503e1</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-1</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00219_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/pdf/USCOURTS-ned-8_04-cv-00219-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00219; Time Warner Entertainment v. City of Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00219-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2005-07-06</dateIssued>
+  <docketText>ORDER granting 76 Motion to Extend Stay and Continue Status Conference. The stay previously entered is extended through 9/30/2005. The planning conference now set for 7/11/2005 is continued to 9/30/2005 at 9:30 a.m. Signed by Magistrate Judge F. A. Gossett on 7/6/2005. (CLS, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00219-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-2/mods.xml">
+ <titleInfo>
+  <title>Time Warner Entertainment v. City of Lincoln</title>
+  <subTitle>ORDER dismissing 69 and 70 Plaintiff&apos;s Motions for Summary Judgment without prejudice to re-filing at a later date; and granting 78 Joint Motion. Case is stayed through December 29, 2005. Planning conference previously scheduled for Friday, September 30, 2005, is continued until 9 a.m., on Thursday, December 29, 2005. Signed by Judge Laurie Smith Camp on 9/27/2005. (POK)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-09-27</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00219-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818503e2</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-2</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00219_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/pdf/USCOURTS-ned-8_04-cv-00219-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00219; Time Warner Entertainment v. City of Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00219-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2005-09-27</dateIssued>
+  <docketText>ORDER dismissing 69 and 70 Plaintiff&apos;s Motions for Summary Judgment without prejudice to re-filing at a later date; and granting 78 Joint Motion. Case is stayed through December 29, 2005. Planning conference previously scheduled for Friday, September 30, 2005, is continued until 9 a.m., on Thursday, December 29, 2005. Signed by Judge Laurie Smith Camp on 9/27/2005. (POK)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00219-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-3/mods.xml">
+ <titleInfo>
+  <title>Time Warner Entertainment v. City of Lincoln</title>
+  <subTitle>ORDER that upon notice of settlement given to the magistrate judge by David Buntain, counsel for plaintiff, the parties shall electronically file a joint stipulation for dismissal by 1/13/2006. Absent compliance with this order, this case may be dismissed without further notice. The Rule 16 planning conference set for 12/29/05 is cancelled upon the representation that this case is settled. Signed by Magistrate Judge F. A. Gossett on 12/14/2005. (JSF)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2005-12-14</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00219-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818503de</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-3</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00219_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/pdf/USCOURTS-ned-8_04-cv-00219-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00219; Time Warner Entertainment v. City of Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00219-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2005-12-14</dateIssued>
+  <docketText>ORDER that upon notice of settlement given to the magistrate judge by David Buntain, counsel for plaintiff, the parties shall electronically file a joint stipulation for dismissal by 1/13/2006. Absent compliance with this order, this case may be dismissed without further notice. The Rule 16 planning conference set for 12/29/05 is cancelled upon the representation that this case is settled. Signed by Magistrate Judge F. A. Gossett on 12/14/2005. (JSF)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_04-cv-00219-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-4/mods.xml">
+ <titleInfo>
+  <title>Time Warner Entertainment v. City of Lincoln</title>
+  <subTitle>ORDER OF DISMISSAL that the joint motion 81 to dismiss is granted; the complaint and all claims in this matter are dismissed without prejudice each party to bear its own costs. Signed by Judge Laurie Smith Camp on 1/18/2006. (MKR, )</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2006-01-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_04-cv-00219-4.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818503df</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-4</identifier>
+ <identifier type="former granule identifier">ned-8_04-cv-00219_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_04-cv-00219/USCOURTS-ned-8_04-cv-00219-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_04-cv-00219/pdf/USCOURTS-ned-8_04-cv-00219-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:04-cv-00219; Time Warner Entertainment v. City of Lincoln; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_04-cv-00219-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2006-01-18</dateIssued>
+  <docketText>ORDER OF DISMISSAL that the joint motion 81 to dismiss is granted; the complaint and all claims in this matter are dismissed without prejudice each party to bear its own costs. Signed by Judge Laurie Smith Camp on 1/18/2006. (MKR, )</docketText>
+</extension>
+</relatedItem>
+</mods>

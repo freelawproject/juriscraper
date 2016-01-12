@@ -1,0 +1,762 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee18a314f97">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court Eastern District of California</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2014-11-21</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2014-07-29</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390</identifier>
+<identifier type="local">P0b002ee18a314f97</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2014-11-21</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2014-11-21</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-caed-2_10-cr-00390</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cr-00390</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cr-00390</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Arellano-Rodriguez" lastName="Arellano-Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Arellano-Rodriguez</title>
+ <partNumber>2:10-cr-00390</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">2:10-cr-00390;10-390</identifier>
+<name type="corporate">
+ <namePart>United States District Court Eastern District of California</namePart>
+ <namePart>9th Circuit</namePart>
+ <namePart>Sacramento</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Francisco Arellano-Rodriguez</displayForm>
+ <namePart type="family">Arellano-Rodriguez</namePart>
+ <namePart type="given">Francisco</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-caed-2_10-cr-00390</accessId>
+ <courtType>District</courtType>
+ <courtCode>caed</courtCode>
+ <courtCircuit>9th</courtCircuit>
+ <courtState>California</courtState>
+ <courtSortOrder>2061</courtSortOrder>
+ <caseNumber>2:10-cr-00390</caseNumber>
+ <caseOffice>Sacramento</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Francisco" fullName="Francisco Arellano-Rodriguez" lastName="Arellano-Rodriguez" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>California</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>DETENTION ORDER for defendant Francisco Arellano-Rodriguez signed by Magistrate Judge Edmund F. Brennan on 10/1/2010. (Marciel, M)</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-10-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-0.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c332</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-0</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2010-10-04</dateIssued>
+  <docketText>DETENTION ORDER for defendant Francisco Arellano-Rodriguez signed by Magistrate Judge Edmund F. Brennan on 10/1/2010. (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 12/15/10 Status Conference re-set for 2/4/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT-4 Start: 12/15/10 Stop: 02/04/11. (Williams, D)</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2010-12-17</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-1.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c330</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-1</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2010-12-17</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 12/15/10 Status Conference re-set for 2/4/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT-4 Start: 12/15/10 Stop: 02/04/11. (Williams, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 02/03/11 ORDERING that the Status Conference is CONTINUED to 03/25/11 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. TIME EXCLUDED: 02/03/11-03/25/11 per T-4. (Benson, A.)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-02-04</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-2.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38a</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-2</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2011-02-04</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 02/03/11 ORDERING that the Status Conference is CONTINUED to 03/25/11 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. TIME EXCLUDED: 02/03/11-03/25/11 per T-4. (Benson, A.)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 3/23/11 ORDERING Status Conference RE-SET for 5/6/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia; time is EXCLUDED pursuant to Local Code T4 from 3/25/11 to 5/6/11. (Carlos, K)</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-03-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-3.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38b</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-3</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2011-03-23</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 3/23/11 ORDERING Status Conference RE-SET for 5/6/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia; time is EXCLUDED pursuant to Local Code T4 from 3/25/11 to 5/6/11. (Carlos, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-4" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-4/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 5/5/2011 re 14 ORDERING that Status Conference set for 7/15/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 5/5/11 Stop: 7/15/11. (Duong, D)</subTitle>
+  <partNumber>4</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-05-10</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-4.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c391</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-4</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_4.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-4/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-4.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-4</accessId>
+  <sequenceNumber>4</sequenceNumber>
+  <dateIssued>2011-05-10</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 5/5/2011 re 14 ORDERING that Status Conference set for 7/15/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 5/5/11 Stop: 7/15/11. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-5" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-5/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 7/12/11 ORDERING Status Conference reset for 8/12/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia as to defendant Francisco Arellano-Rodriguez. Excludable started: XT4 Start: 7/14/11 Stop: 8/12/11. (Meuleman, A)</subTitle>
+  <partNumber>5</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-07-14</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-5.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c393</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-5</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_5.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-5/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-5.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-5</accessId>
+  <sequenceNumber>5</sequenceNumber>
+  <dateIssued>2011-07-14</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 7/12/11 ORDERING Status Conference reset for 8/12/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia as to defendant Francisco Arellano-Rodriguez. Excludable started: XT4 Start: 7/14/11 Stop: 8/12/11. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-6" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-6/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER 18 signed by Senior Judge Edward J. Garcia on 8/10/11 ORDERING that the 8/12/11 status conf is VACATED, and a Further Status Conference and possible change of plea is SET for 10/14/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 8/10/11, Stop: 10/14/11. (Kastilahn, A)</subTitle>
+  <partNumber>6</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-08-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-6.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c385</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-6</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_6.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-6/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-6.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-6</accessId>
+  <sequenceNumber>6</sequenceNumber>
+  <dateIssued>2011-08-12</dateIssued>
+  <docketText>STIPULATION and ORDER 18 signed by Senior Judge Edward J. Garcia on 8/10/11 ORDERING that the 8/12/11 status conf is VACATED, and a Further Status Conference and possible change of plea is SET for 10/14/2011 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 8/10/11, Stop: 10/14/11. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-7" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-7/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 12/15/2011 re 21 ORDERING that the Status Conference is CONTINUED to 1/27/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 12/14/2011 Stop: 1/27/2012. (Duong, D)</subTitle>
+  <partNumber>7</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2011-12-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-7.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c394</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-7</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_7.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-7/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-7.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-7</accessId>
+  <sequenceNumber>7</sequenceNumber>
+  <dateIssued>2011-12-16</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 12/15/2011 re 21 ORDERING that the Status Conference is CONTINUED to 1/27/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 12/14/2011 Stop: 1/27/2012. (Duong, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-8" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-8/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER 24 for continuance signed by Senior Judge Edward J. Garcia on 1/25/2012. Status Conference, as to Francisco Arellano-Rodriguez, is RE-SCHEDULED for 3/9/2012 at 10:00 AM in Courtroom 8 (EJG). Excludable Time (T4): Start Date - 1/24/2012 through Stop Date - 3/9/2012 (Marciel, M)</subTitle>
+  <partNumber>8</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-8.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-8</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_8.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-8/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-8.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-8</accessId>
+  <sequenceNumber>8</sequenceNumber>
+  <dateIssued>2012-01-26</dateIssued>
+  <docketText>STIPULATION and ORDER 24 for continuance signed by Senior Judge Edward J. Garcia on 1/25/2012. Status Conference, as to Francisco Arellano-Rodriguez, is RE-SCHEDULED for 3/9/2012 at 10:00 AM in Courtroom 8 (EJG). Excludable Time (T4): Start Date - 1/24/2012 through Stop Date - 3/9/2012 (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-9" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-9/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER for competency hearing signed by Senior Judge Edward J. Garcia on 7/6/12. (Manzer, C)</subTitle>
+  <partNumber>9</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-07</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-9.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c390</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-9</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_9.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-9/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-9.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-9</accessId>
+  <sequenceNumber>9</sequenceNumber>
+  <dateIssued>2012-07-07</dateIssued>
+  <docketText>STIPULATION and ORDER for competency hearing signed by Senior Judge Edward J. Garcia on 7/6/12. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-10" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-10/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 7/26/2012 ORDERING 31 Status Conference Reset for 8/24/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 7/31/2012 Stop: 8/24/2012. (Reader, L)</subTitle>
+  <partNumber>10</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-07-26</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-10.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38e</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-10</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_10.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-10/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-10.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-10</accessId>
+  <sequenceNumber>10</sequenceNumber>
+  <dateIssued>2012-07-26</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 7/26/2012 ORDERING 31 Status Conference Reset for 8/24/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 7/31/2012 Stop: 8/24/2012. (Reader, L)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-11" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-11/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 8/23/12: Status Conference set for 10/12/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 8/24/12 Stop: 10/12/12. (Manzer, C)</subTitle>
+  <partNumber>11</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-08-23</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-11.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c335</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-11</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_11.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-11/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-11.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-11</accessId>
+  <sequenceNumber>11</sequenceNumber>
+  <dateIssued>2012-08-23</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge Edward J. Garcia on 8/23/12: Status Conference set for 10/12/2012 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 8/24/12 Stop: 10/12/12. (Manzer, C)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-12" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-12/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>ORDER signed by Senior Judge Edward J. Garcia on 10/30/2012 as to Francisco Arellano-Rodriguez ORDERING defendant is committed to the custody of the Attorney General for treatment in a suitable facility for such a reasonable time, not to exceed 4 months, as is necessary to determine whether there is a substantial probability that the defendant will attain capacity to permit the proceedings to go forward; the director of such facility shall submit a report regarding the defendant&apos;s compentency to counsel and the court by 1/31/2013; Status Conference SET for 2/15/2013 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XA Start: 10/26/2012 Stop: 2/15/2013. (Waggoner, D)</subTitle>
+  <partNumber>12</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-10-31</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-12.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c334</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-12</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_12.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-12/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-12.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-12</accessId>
+  <sequenceNumber>12</sequenceNumber>
+  <dateIssued>2012-10-31</dateIssued>
+  <docketText>ORDER signed by Senior Judge Edward J. Garcia on 10/30/2012 as to Francisco Arellano-Rodriguez ORDERING defendant is committed to the custody of the Attorney General for treatment in a suitable facility for such a reasonable time, not to exceed 4 months, as is necessary to determine whether there is a substantial probability that the defendant will attain capacity to permit the proceedings to go forward; the director of such facility shall submit a report regarding the defendant&apos;s compentency to counsel and the court by 1/31/2013; Status Conference SET for 2/15/2013 at 10:00 AM in Courtroom 8 (EJG) before Senior Judge Edward J. Garcia. Excludable started as to Francisco Arellano-Rodriguez: XA Start: 10/26/2012 Stop: 2/15/2013. (Waggoner, D)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-13" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-13/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 2/15/13: The defendant be committed to the custody of the Attorney General for treatment. Status Conference RESET for 6/10/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: Start: 2/15/13 Stop: 6/10/13. (Kaminski, H)(order hand delivered to USM)</subTitle>
+  <partNumber>13</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-15</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-13.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38d</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-13</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_13.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-13/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-13.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-13</accessId>
+  <sequenceNumber>13</sequenceNumber>
+  <dateIssued>2013-02-15</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 2/15/13: The defendant be committed to the custody of the Attorney General for treatment. Status Conference RESET for 6/10/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: Start: 2/15/13 Stop: 6/10/13. (Kaminski, H)(order hand delivered to USM)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-14" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-14/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER as to Francisco Arellano-Rodriguez signed by Senior Judge William B. Shubb on 2/22/2013 ORDERING that the defendant be committed to the custody of the Attorney General for treatment in a suitable facility, not to exceed 4 months, as is necessary to determine whether there is a substantial probability that the defendant will attain capacity to permit the proceedings to go forward; ORDERING the director of such facility to submit a report regarding the defendant&apos;s competency to counsel and to the Court by 6/28/2013; EXCLUDING TIME as to Francisco Arellano-Rodriguez: XA/N Start: 2/21/2013 Stop: 7/15/2013; SETTING a Status Conference for 7/15/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; ORDERING the U.S. Attoreny to deliver a copy of this Order to the U.S. Marshal for this District. (Michel, G)</subTitle>
+  <partNumber>14</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-02-22</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-14.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c32f</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-14</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_14.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-14/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-14.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-14</accessId>
+  <sequenceNumber>14</sequenceNumber>
+  <dateIssued>2013-02-22</dateIssued>
+  <docketText>STIPULATION and ORDER as to Francisco Arellano-Rodriguez signed by Senior Judge William B. Shubb on 2/22/2013 ORDERING that the defendant be committed to the custody of the Attorney General for treatment in a suitable facility, not to exceed 4 months, as is necessary to determine whether there is a substantial probability that the defendant will attain capacity to permit the proceedings to go forward; ORDERING the director of such facility to submit a report regarding the defendant&apos;s competency to counsel and to the Court by 6/28/2013; EXCLUDING TIME as to Francisco Arellano-Rodriguez: XA/N Start: 2/21/2013 Stop: 7/15/2013; SETTING a Status Conference for 7/15/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; ORDERING the U.S. Attoreny to deliver a copy of this Order to the U.S. Marshal for this District. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-15" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-15/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER for continuance 49 signed by Senior Judge William B. Shubb on 7/12/2013 resetting the Status Conference for 8/19/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez under Local Codes A, N and T4 Start: 7/15/2013 Stop: 8/19/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>15</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-07-12</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-15.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c38c</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-15</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_15.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-15/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-15.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-15</accessId>
+  <sequenceNumber>15</sequenceNumber>
+  <dateIssued>2013-07-12</dateIssued>
+  <docketText>STIPULATION and ORDER for continuance 49 signed by Senior Judge William B. Shubb on 7/12/2013 resetting the Status Conference for 8/19/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez under Local Codes A, N and T4 Start: 7/15/2013 Stop: 8/19/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-16" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-16/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER for continuance 51 signed by Senior Judge William B. Shubb on 8/16/2013 resetting the Status Conference for 9/16/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: Local Codes A, N and T4 Start: 8/19/2013 Stop: 9/16/2013. (Kirksey Smith, K)</subTitle>
+  <partNumber>16</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-08-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-16.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c389</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-16</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_16.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-16/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-16.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-16</accessId>
+  <sequenceNumber>16</sequenceNumber>
+  <dateIssued>2013-08-16</dateIssued>
+  <docketText>STIPULATION and ORDER for continuance 51 signed by Senior Judge William B. Shubb on 8/16/2013 resetting the Status Conference for 9/16/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: Local Codes A, N and T4 Start: 8/19/2013 Stop: 9/16/2013. (Kirksey Smith, K)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-17" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-17/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/15/13 as to Francisco Arellano-Rodriguez CONTINUING Status Conference to 10/28/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started : XT-4 Start: 10/15/13 Stop: 10/28/13. (Meuleman, A)</subTitle>
+  <partNumber>17</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-16</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-17.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c386</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-17</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_17.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-17/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-17.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-17</accessId>
+  <sequenceNumber>17</sequenceNumber>
+  <dateIssued>2013-10-16</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/15/13 as to Francisco Arellano-Rodriguez CONTINUING Status Conference to 10/28/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started : XT-4 Start: 10/15/13 Stop: 10/28/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-18" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-18/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/24/13 as to Francisco Arellano-Rodriguez CONTINUING Status Conference to 11/18/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started : XT-4 Start: 10/28/13 Stop: 11/18/13. (Meuleman, A)</subTitle>
+  <partNumber>18</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2013-10-25</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-18.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c388</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-18</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_18.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-18/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-18.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-18</accessId>
+  <sequenceNumber>18</sequenceNumber>
+  <dateIssued>2013-10-25</dateIssued>
+  <docketText>STIPULATION and ORDER signed by Senior Judge William B. Shubb on 10/24/13 as to Francisco Arellano-Rodriguez CONTINUING Status Conference to 11/18/2013 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started : XT-4 Start: 10/28/13 Stop: 11/18/13. (Meuleman, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-19" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-19/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER 62 signed by Senior Judge William B. Shubb on 1/3/14 ORDERING the Status Conference CONTINUED to 2/24/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 1/6/14, Stop: 2/24/14. (Kastilahn, A)</subTitle>
+  <partNumber>19</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-01-03</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-19.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c387</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-19</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_19.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-19/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-19.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-19</accessId>
+  <sequenceNumber>19</sequenceNumber>
+  <dateIssued>2014-01-03</dateIssued>
+  <docketText>STIPULATION and ORDER 62 signed by Senior Judge William B. Shubb on 1/3/14 ORDERING the Status Conference CONTINUED to 2/24/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb. Excludable started as to Francisco Arellano-Rodriguez: XT4 Start: 1/6/14, Stop: 2/24/14. (Kastilahn, A)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-20" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-20/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 2/21/2014 CONTINUING the Status Conference for Francisco Arellano-Rodriguez to 3/24/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; EXCLUDING TIME for Francisco Arellano-Rodriguez: XT4 Start: 2/24/2014 Stop: 3/24/2014. (Michel, G)</subTitle>
+  <partNumber>20</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-02-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-20.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c331</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-20</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_20.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-20/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-20.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-20</accessId>
+  <sequenceNumber>20</sequenceNumber>
+  <dateIssued>2014-02-24</dateIssued>
+  <docketText>STIPULATION AND ORDER signed by Senior Judge William B. Shubb on 2/21/2014 CONTINUING the Status Conference for Francisco Arellano-Rodriguez to 3/24/2014 at 09:30 AM in Courtroom 5 (WBS) before Senior Judge William B. Shubb; EXCLUDING TIME for Francisco Arellano-Rodriguez: XT4 Start: 2/24/2014 Stop: 3/24/2014. (Michel, G)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-21" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-21/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>STIPULATION and ORDER 66 for continuance signed by Senior Judge William B. Shubb on 3/21/2014. Status Conference, as to defenant Francisco Arellano-Rodriguez, is RE-SET for 3/31/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 3/21/2014 through Stop Date - 3/31/2014 (Marciel, M)</subTitle>
+  <partNumber>21</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-03-24</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-21.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c333</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-21</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_21.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-21/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-21.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-21</accessId>
+  <sequenceNumber>21</sequenceNumber>
+  <dateIssued>2014-03-24</dateIssued>
+  <docketText>STIPULATION and ORDER 66 for continuance signed by Senior Judge William B. Shubb on 3/21/2014. Status Conference, as to defenant Francisco Arellano-Rodriguez, is RE-SET for 3/31/2014 at 9:30 AM in Courtroom 5 (WBS). Excludable Time (T4): Start Date - 3/21/2014 through Stop Date - 3/31/2014 (Marciel, M)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-caed-2_10-cr-00390-22" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-22/mods.xml">
+ <titleInfo>
+  <title>USA v. Arellano-Rodriguez</title>
+  <subTitle>JUDGMENT and COMMITMENT as to Francisco Arellano-Rodriguez signed by Senior Judge William B. Shubb on 07/29/2014. (Streeter, J)</subTitle>
+  <partNumber>22</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2014-07-29</dateIssued>
+</originInfo>
+ <relatedItem type="otherFormat" xlink:href="http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-22.pdf">
+  <identifier type="FDsys Unique ID">D09002ee18a35c392</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-22</identifier>
+ <identifier type="former granule identifier">caed-2_10-cr-00390_22.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-caed-2_10-cr-00390/USCOURTS-caed-2_10-cr-00390-22/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-caed-2_10-cr-00390/pdf/USCOURTS-caed-2_10-cr-00390-22.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 2:10-cr-00390; USA v. Arellano-Rodriguez; </searchTitle>
+  <courtName>United States District Court Eastern District of California</courtName>
+  <state>California</state>
+  <accessId>USCOURTS-caed-2_10-cr-00390-22</accessId>
+  <sequenceNumber>22</sequenceNumber>
+  <dateIssued>2014-07-29</dateIssued>
+  <docketText>JUDGMENT and COMMITMENT as to Francisco Arellano-Rodriguez signed by Senior Judge William B. Shubb on 07/29/2014. (Streeter, J)</docketText>
+</extension>
+</relatedItem>
+</mods>

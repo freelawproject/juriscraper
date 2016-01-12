@@ -1,0 +1,230 @@
+<mods xmlns="http://www.loc.gov/mods/v3" xmlns:exslt="http://exslt.org/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" version="3.3" ID="P0b002ee1817afac2">
+<name type="corporate">
+ <namePart>United States Government Printing Office</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">printer</roleTerm>
+  <roleTerm type="code" authority="marcrelator">prt</roleTerm>
+</role>
+ <role>
+  <roleTerm type="text" authority="marcrelator">distributor</roleTerm>
+  <roleTerm type="code" authority="marcrelator">dst</roleTerm>
+</role>
+</name>
+<name type="corporate">
+ <namePart>United States</namePart>
+ <namePart>United States District Court District of Nebraska</namePart>
+ <role>
+  <roleTerm type="text" authority="marcrelator">author</roleTerm>
+  <roleTerm type="code" authority="marcrelator">aut</roleTerm>
+</role>
+ <description>Government Organization</description>
+</name>
+<typeOfResource>text</typeOfResource>
+<genre authority="marcgt">government publication</genre>
+<language>
+ <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</language>
+<extension>
+ <collectionCode>USCOURTS</collectionCode>
+ <category>Judicial Publications</category>
+ <branch>judicial</branch>
+ <dateIngested>2012-01-14</dateIngested>
+</extension>
+<originInfo>
+ <publisher>Administrative Office of the United States Courts</publisher>
+ <dateIssued encoding="w3cdtf">2012-01-06</dateIssued>
+ <issuance>monographic</issuance>
+</originInfo>
+<physicalDescription>
+ <note type="source content type">deposited</note>
+ <digitalOrigin>born digital</digitalOrigin>
+</physicalDescription>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="uri">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080</identifier>
+<identifier type="local">P0b002ee1817afac2</identifier>
+<recordInfo>
+ <recordContentSource authority="marcorg">DGPO</recordContentSource>
+ <recordCreationDate encoding="w3cdtf">2012-01-14</recordCreationDate>
+ <recordChangeDate encoding="w3cdtf">2012-01-14</recordChangeDate>
+ <recordIdentifier source="DGPO">USCOURTS-ned-8_09-cr-00080</recordIdentifier>
+ <recordOrigin>machine generated</recordOrigin>
+ <languageOfCataloging>
+  <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+</languageOfCataloging>
+</recordInfo>
+<accessCondition type="GPO scope determination">fdlp</accessCondition>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00080</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00080</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jamison" fullName="Jamison Robinson" lastName="Robinson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+</extension>
+<titleInfo>
+ <title>USA v. Robinson</title>
+ <partNumber>8:09-cr-00080</partNumber>
+</titleInfo>
+<location>
+ <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080/content-detail.html</url>
+</location>
+<classification authority="sudocs">JU 4.15</classification>
+<identifier type="preferred citation">8:09-cr-00080;09-080</identifier>
+<name type="corporate">
+ <namePart>United States District Court District of Nebraska</namePart>
+ <namePart>8th Circuit</namePart>
+ <namePart>8 Omaha</namePart>
+ <affiliation>U.S. Courts</affiliation>
+ <role>
+  <roleTerm authority="marcrelator" type="text">author</roleTerm>
+  <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+</role>
+</name>
+<name type="personal">
+ <displayForm>Jamison Robinson</displayForm>
+ <namePart type="family">Robinson</namePart>
+ <namePart type="given">Jamison</namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Defendant</description>
+</name>
+<name type="personal">
+ <displayForm>USA</displayForm>
+ <namePart type="family">USA</namePart>
+ <namePart type="given"></namePart>
+ <namePart type="termsOfAddress"></namePart>
+ <description>Plaintiff</description>
+</name>
+<extension>
+ <docClass>USCOURTS</docClass>
+ <accessId>USCOURTS-ned-8_09-cr-00080</accessId>
+ <courtType>District</courtType>
+ <courtCode>ned</courtCode>
+ <courtCircuit>8th</courtCircuit>
+ <courtState>Nebraska</courtState>
+ <courtSortOrder>2300</courtSortOrder>
+ <caseNumber>8:09-cr-00080</caseNumber>
+ <caseOffice>8 Omaha</caseOffice>
+ <caseType>criminal</caseType>
+ <party firstName="Jamison" fullName="Jamison Robinson" lastName="Robinson" role="Defendant"></party>
+ <party fullName="USA" lastName="USA" role="Plaintiff"></party>
+ <state>Nebraska</state>
+</extension>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00080-0" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-0/mods.xml">
+ <titleInfo>
+  <title>USA v. Robinson</title>
+  <subTitle>ORDER APPOINTING COUNSEL - James E. Reisinger appointed as counsel for the defendant Jamison Robinson. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</subTitle>
+  <partNumber>0</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-16</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00080-0.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818966ac</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-0</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00080_0.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-0/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080/pdf/USCOURTS-ned-8_09-cr-00080-0.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00080; USA v. Robinson; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00080-0</accessId>
+  <sequenceNumber>0</sequenceNumber>
+  <dateIssued>2009-09-16</dateIssued>
+  <docketText>ORDER APPOINTING COUNSEL - James E. Reisinger appointed as counsel for the defendant Jamison Robinson. Ordered by Magistrate Judge F. A. Gossett. (MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00080-1" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-1/mods.xml">
+ <titleInfo>
+  <title>USA v. Robinson</title>
+  <subTitle>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 2 as to defendant Jamison Robinson. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on October 23, 2009 at 2:30 p.m. Defendant must be present in person. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</subTitle>
+  <partNumber>1</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-09-18</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00080-1.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818966cc</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-1</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00080_1.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-1/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080/pdf/USCOURTS-ned-8_09-cr-00080-1.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00080; USA v. Robinson; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00080-1</accessId>
+  <sequenceNumber>1</sequenceNumber>
+  <dateIssued>2009-09-18</dateIssued>
+  <docketText>ORDER regarding PETITION FOR OFFENDER UNDER SUPERVISION 2 as to defendant Jamison Robinson. The defendant should be held to answer for a final dispositional hearing before Judge Bataillon. A final dispositional hearing will be held before Chief Judge Joseph F. Bataillon in Courtroom No.3, Third Floor, Roman L. Hruska U.S. Courthouse, 111 South 18th Plaza, Omaha, Nebraska, on October 23, 2009 at 2:30 p.m. Defendant must be present in person. The defendant is committed to the custody of the Attorney General or his designated representative for confinement in a correctional facility. Ordered by Magistrate Judge F. A. Gossett. (1 Certified copy to USM)(MLF, )</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00080-2" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-2/mods.xml">
+ <titleInfo>
+  <title>USA v. Robinson</title>
+  <subTitle>JUDGMENT (For Revocation of Supervised Release) as to defendant Jamison Robinson. Defendant admitted guilt to violation of the mandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision; Allegations 1,5, and 6 are dismissed on the motion of the United States as to this defendant only. Defendant is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow. The Special Assessment of $100.00 is paid in full as to defendant Jamison Robinson. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM) (KBJ)</subTitle>
+  <partNumber>2</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2009-12-11</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00080-2.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818966ae</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-2</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00080_2.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-2/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080/pdf/USCOURTS-ned-8_09-cr-00080-2.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00080; USA v. Robinson; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00080-2</accessId>
+  <sequenceNumber>2</sequenceNumber>
+  <dateIssued>2009-12-11</dateIssued>
+  <docketText>JUDGMENT (For Revocation of Supervised Release) as to defendant Jamison Robinson. Defendant admitted guilt to violation of the mandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision; Allegations 1,5, and 6 are dismissed on the motion of the United States as to this defendant only. Defendant is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow. The Special Assessment of $100.00 is paid in full as to defendant Jamison Robinson. Ordered by Chief Judge Joseph F. Bataillon. (1 Certified copy to USM) (KBJ)</docketText>
+</extension>
+</relatedItem>
+<relatedItem type="constituent" ID="id-USCOURTS-ned-8_09-cr-00080-3" xlink:href="http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-3/mods.xml">
+ <titleInfo>
+  <title>USA v. Robinson</title>
+  <subTitle>AMENDED JUDGMENT for Clerical Mistake for Revocation of Supervised Release as to Jamison Nachez Robinson (3), Defendant admitted guilt to violation of themandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision and is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow; $100 special assessment (paid) as to defendant Jamison Robinson. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</subTitle>
+  <partNumber>3</partNumber>
+</titleInfo>
+ <originInfo>
+  <dateIssued>2012-01-06</dateIssued>
+</originInfo>
+ <relatedItem xlink:href="http://www.gpo.gov/fdsys/pkg/pdf/USCOURTS-ned-8_09-cr-00080-3.pdf" type="otherFormat">
+  <identifier type="FDsys Unique ID">D09002ee1818966ad</identifier>
+</relatedItem>
+ <identifier type="uri">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-3</identifier>
+ <identifier type="former granule identifier">ned-8_09-cr-00080_3.pdf</identifier>
+ <location>
+  <url access="object in context" displayLabel="Content Detail">http://www.gpo.gov/fdsys/granule/USCOURTS-ned-8_09-cr-00080/USCOURTS-ned-8_09-cr-00080-3/content-detail.html</url>
+  <url access="raw object" displayLabel="PDF rendition">http://www.gpo.gov/fdsys/pkg/USCOURTS-ned-8_09-cr-00080/pdf/USCOURTS-ned-8_09-cr-00080-3.pdf</url>
+</location>
+ <extension>
+  <searchTitle>USCOURTS 8:09-cr-00080; USA v. Robinson; </searchTitle>
+  <courtName>United States District Court District of Nebraska</courtName>
+  <state>Nebraska</state>
+  <accessId>USCOURTS-ned-8_09-cr-00080-3</accessId>
+  <sequenceNumber>3</sequenceNumber>
+  <dateIssued>2012-01-06</dateIssued>
+  <docketText>AMENDED JUDGMENT for Clerical Mistake for Revocation of Supervised Release as to Jamison Nachez Robinson (3), Defendant admitted guilt to violation of themandatory condition which states the defendant shall not unlawfully possess a controlled substance, standard condition #2 and special condition #1 of the term of supervision and is committed to the custody of the Bureau of Prisons for 12 months and 1 day with no supervised release to follow; $100 special assessment (paid) as to defendant Jamison Robinson. Ordered by Judge Joseph F. Bataillon. (4 Certified copies to USM)(ADB, )</docketText>
+</extension>
+</relatedItem>
+</mods>
